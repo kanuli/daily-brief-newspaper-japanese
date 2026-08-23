@@ -1,0 +1,350 @@
+{
+  "version": 3,
+  "duration": 145.11,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 488,
+  "charactersPerMinute": 201.8,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 10.546,
+      "text": "リバプールは99分で追いつき、ニューカッスルは2 -2でキックインした。"
+    },
+    {
+      "key": "dek",
+      "start": 10.546,
+      "end": 27.714,
+      "text": "Dominik Szoboszlaiは超ロングメイクの間に均等化し、プレミアリーグの最初のラウンドは劇的な結果をもたらしました。"
+    },
+    {
+      "key": "body-0",
+      "start": 27.714,
+      "end": 60.095,
+      "text": "リバプール・プレミアリーグのファーストラウンドビジター、ニューカッスル・ユナイテッドが2 -2でキックした。試合が残業に入ってから99分でドミニク・スゾボシュライがレベリングゴールを決め、アウェイチームがポイントを獲得することができました。"
+    },
+    {
+      "key": "body-1",
+      "start": 60.095,
+      "end": 106.891,
+      "text": "同じプレミアリーグのラウンドでも、ヒューストンが2 -0でマンチェスター・ユナイテッドに敗北したこと、ブレントフォードがトッテナムに3 -0で勝利したこと、マンチェスター・シティがボーンマスに2 -1で勝利したことなど、多くの予想外の結果が得られました。最初のラウンドの結果は、複数の新規または再構築チームがまだ試運転期間にあることを示しています。"
+    },
+    {
+      "key": "why",
+      "start": 106.891,
+      "end": 129.784,
+      "text": "リバプールとニューカッスルの両方が欧州選手権の席を争っており、初期の展開は最初のラウンドの敗北と防御パフォーマンスの影響を受けます。"
+    },
+    {
+      "key": "watch",
+      "start": 129.784,
+      "end": 145.11,
+      "text": "両チームの次のチームの最終ステージ、負傷ストップ、移籍ウィンドウの調整に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.738,
+      "end": 4.968,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "リバプールは99分で追いつき、"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.968,
+      "speechEnd": 9.846,
+      "end": 10.546,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "ニューカッスルは2 -2でキックインした。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 10.546,
+      "speechEnd": 13.96,
+      "end": 14.24,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "Dominik Szoboszlaiは"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.24,
+      "speechEnd": 18.351,
+      "end": 18.581,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "超ロングメイクの間に均等化し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.581,
+      "speechEnd": 22.971,
+      "end": 23.251,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "プレミアリーグの最初のラウンドは"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.251,
+      "speechEnd": 27.014,
+      "end": 27.714,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "劇的な結果をもたらしました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 27.714,
+      "speechEnd": 33.567,
+      "end": 33.797,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "リバプール・プレミアリーグのファーストラウンドビジター、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 33.797,
+      "speechEnd": 39.511,
+      "end": 40.011,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "ニューカッスル・ユナイテッドが2 -2でキックした。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.011,
+      "speechEnd": 43.564,
+      "end": 43.704,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "試合が残業に入ってから"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.704,
+      "speechEnd": 45.864,
+      "end": 46.004,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "99分"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.004,
+      "speechEnd": 49.558,
+      "end": 49.838,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "after-key-number",
+      "text": "でドミニク・スゾボシュライが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.838,
+      "speechEnd": 53.113,
+      "end": 53.343,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "レベリングゴールを決め、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.343,
+      "speechEnd": 59.475,
+      "end": 60.095,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "アウェイチームがポイントを獲得することができました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 60.095,
+      "speechEnd": 64.415,
+      "end": 64.645,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同じプレミアリーグのラウンドでも、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 64.645,
+      "speechEnd": 72.24,
+      "end": 72.47,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ヒューストンが2 -0でマンチェスター・ユナイテッドに敗北したこと、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 72.47,
+      "speechEnd": 78.741,
+      "end": 78.971,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ブレントフォードがトッテナムに3 -0で勝利したこと、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 78.971,
+      "speechEnd": 86.915,
+      "end": 87.145,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "マンチェスター・シティがボーンマスに2 -1で勝利したことなど、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 87.145,
+      "speechEnd": 92.161,
+      "end": 92.662,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "多くの予想外の結果が得られました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.662,
+      "speechEnd": 96.215,
+      "end": 96.445,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "最初のラウンドの結果は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 96.445,
+      "speechEnd": 100.626,
+      "end": 100.906,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "複数の新規または再構築チームが"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 100.906,
+      "speechEnd": 106.271,
+      "end": 106.891,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "まだ試運転期間にあることを示しています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 106.891,
+      "speechEnd": 110.863,
+      "end": 111.363,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 111.363,
+      "speechEnd": 115.474,
+      "end": 115.754,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "リバプールとニューカッスルの両方が"
+    },
+    {
+      "parentKey": "why",
+      "start": 115.754,
+      "speechEnd": 119.378,
+      "end": 119.608,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "欧州選手権の席を争っており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 119.608,
+      "speechEnd": 129.084,
+      "end": 129.784,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "初期の展開は最初のラウンドの敗北と防御パフォーマンスの影響を受けます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 129.784,
+      "speechEnd": 131.874,
+      "end": 132.105,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 132.105,
+      "speechEnd": 136.564,
+      "end": 136.794,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "両チームの次のチームの最終ステージ、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 136.794,
+      "speechEnd": 139.024,
+      "end": 139.254,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "負傷ストップ、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 139.254,
+      "speechEnd": 144.41,
+      "end": 145.11,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "移籍ウィンドウの調整に注目してください。"
+    }
+  ]
+}
