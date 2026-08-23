@@ -8,13 +8,21 @@ SOURCE_BASE="https://raw.githubusercontent.com/kanuli/daily-brief-newspaper/main
 OUT=Path("data")
 CACHE_PATH=OUT/"translation-cache.json"
 FILES=("latest.json","live.json","archive.json")
-TRANSLATE_KEYS={"dateLabel","tagline","section","title","dek","summary","body","context","why","watchNext","timeLabel","lastUpdatedLabel","nextUpdateLabel","windowLabel","subtitle","description","label","note","statusLabel"}
+TRANSLATE_KEYS={"dateLabel","tagline","section","title","dek","summary","body","context","why","watchNext","timeLabel","lastUpdatedLabel","nextUpdateLabel","windowLabel","subtitle","description","label","note","statusLabel","headline","shortDate"}
 KEEP_KEYS={"id","desk","slug","sourceName","sourceUrl","url","image","imageAlt","date","editionNumber","status","leadId","editorialStandardVersion","contentVersion","createdAt","updatedAt","lastUpdated"}
 DESK_NAMES={"world":"世界","asia":"アジア","hong-kong":"香港","japan":"日本","market-economy":"経済・世界市場","finance":"経済・世界市場","stocks":"株式ニュース","stock-news":"株式ニュース","ai-tech":"AI・テクノロジー","science-new-tech":"科学・新技術","cybersecurity":"サイバーセキュリティ","software-apps":"ソフトウェア・アプリ・消費者向け技術","manga-anime":"漫画・アニメ","manchester-united":"マンチェスター・ユナイテッド","football":"サッカー","breaking-news":"速報","worth-following":"きょうの注目","upcoming-events":"今後の予定"}
+ARCHIVE_TOPIC_NAMES={
+    "世界":"世界","亞洲":"アジア","香港":"香港","日本":"日本",
+    "財經 / 全球市場":"経済・世界市場","市場 / 經濟":"市場・経済","AI / 科技":"AI・テクノロジー",
+    "漫畫 / Anime":"漫画・アニメ","Manchester United":"マンチェスター・ユナイテッド","Football":"サッカー",
+    "日語學習":"日本語学習","科學 / 新技術":"科学・新技術","網絡安全":"サイバーセキュリティ",
+    "軟件 / App":"ソフトウェア・アプリ","今日值得跟進":"きょうの注目","Upcoming events":"今後の予定",
+    "香港 / 亞洲":"香港・アジア"
+}
 
 HAN_RE=re.compile(r"[\u3400-\u9fff]")
 KANA_RE=re.compile(r"[\u3040-\u30ff]")
-CACHE_VERSION="ja-v2-explicit-zh-tw"
+CACHE_VERSION="ja-v3-archive-visible-fields"
 
 def source_fingerprint(obj):
     raw=json.dumps(obj,ensure_ascii=False,sort_keys=True,separators=(",",":"))
@@ -76,16 +84,26 @@ def translate_text(text):
     CACHE[key]=value
     return value
 
+def japanese_short_date(value):
+    if not isinstance(value,str):return value
+    m=re.fullmatch(r"(\d{4})-(\d{2})-(\d{2})",value.strip())
+    if not m:return None
+    y,mo,d=m.groups();return f"{y}年{int(mo)}月{int(d)}日"
+
 def convert(obj,parent_key=""):
     if isinstance(obj,list):return [convert(x,parent_key) for x in obj]
     if isinstance(obj,dict):
         out={}
         for k,v in obj.items():
             if k in KEEP_KEYS:out[k]=v
+            elif k=="topics" and isinstance(v,list):
+                out[k]=[ARCHIVE_TOPIC_NAMES.get(str(x),translate_text(str(x))) for x in v]
             elif k=="sections" and isinstance(v,list):out[k]=convert(v,k)
             elif k in TRANSLATE_KEYS:out[k]=translate_text(v) if isinstance(v,str) else convert(v,k)
             else:out[k]=convert(v,k)
         if isinstance(out.get("slug"),str) and out["slug"] in DESK_NAMES:out["title"]=DESK_NAMES[out["slug"]]
+        if "shortDate" in out and isinstance(out.get("date"),str):
+            out["shortDate"]=japanese_short_date(out["date"]) or out["shortDate"]
         return out
     if isinstance(obj,str) and parent_key in TRANSLATE_KEYS:return translate_text(obj)
     return obj
