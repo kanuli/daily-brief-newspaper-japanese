@@ -40,11 +40,13 @@ jobs:
           first=(latest.get('articles') or [{}])[0]
           print('HAS_FURIGANA', isinstance(first.get('furigana'),dict))
           print('AUDIO_SPEED', first.get('audioSpeed'))
+          print('DELIVERY_PROFILE',first.get('audioDeliveryProfile'))
           print('TIMING_PATH', first.get('timing'))
           timing=Path(str(first.get('timing') or ''))
           print('TIMING_EXISTS', timing.is_file())
           if timing.is_file():
               t=json.loads(timing.read_text(encoding='utf-8'))
-              print('TIMING_SPEED',t.get('speed'),'SEGMENTS',len(t.get('segments') or []),'DURATION',t.get('duration'))
+              print('TIMING_SPEED',t.get('speed'),'PROFILE',t.get('deliveryProfile'),'CPM',t.get('charactersPerMinute'),'TARGET',t.get('targetMaxCharactersPerMinute'),'SEGMENTS',len(t.get('segments') or []),'UNITS',len(t.get('semanticUnits') or []),'DURATION',t.get('duration'))
+              reasons=sorted({str(u.get('reason')) for u in (t.get('semanticUnits') or [])})
+              print('PAUSE_REASONS',','.join(reasons))
           PY
-      # refresh after production bot commit
