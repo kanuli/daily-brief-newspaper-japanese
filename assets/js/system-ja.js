@@ -3,7 +3,7 @@
 
   const NAV = [
     ['live.html','速報','live-nav'],
-    ['index.html','トップ',''],
+    ['index.html','一面トップ',''],
     ['world.html','世界',''],
     ['asia.html','アジア',''],
     ['hong-kong.html','香港',''],
@@ -39,6 +39,12 @@
       const current=href.toLowerCase()===page;
       return `<a${cls?` class="${cls}"`:''} href="${href}"${current?' aria-current="page"':''}>${label}</a>`;
     }).join('');
+
+    document.querySelectorAll('a[href="index.html"]').forEach(a=>{
+      if(a.closest('.section-nav')) return;
+      if(a.textContent.trim()==='トップへ') a.textContent='一面トップへ';
+      else if(a.textContent.trim()==='トップ') a.textContent='一面トップ';
+    });
   }
 
   function row(id,title,detail){
