@@ -1,0 +1,72 @@
+name: F3ニュース読み再生成
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/generate_supertonic_f3.py'
+      - 'scripts/validate_site.py'
+      - '.github/workflows/rebuild-f3-pacing.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: f3-semantic-pacing-rebuild
+  cancel-in-progress: true
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: リポジトリを取得
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 5
+
+      - name: Pythonを設定
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: FFmpegを準備
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+
+      - name: 依存パッケージをインストール
+        run: pip install -r requirements.txt
+
+      - name: F3ニュース読みを意味区切りで再生成
+        run: python scripts/generate_supertonic_f3.py
+
+      - name: 音声・速度・意味区切りQA
+        run: python scripts/validate_site.py --data-only
+
+      - name: JavaScript構文チェック
+        run: node --check assets/js/newspaper-ja.js
+
+      - name: 生成物をmainへ保存
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'japanese-voice-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add data audio
+          if git diff --cached --quiet; then
+            echo 'F3 pacing output is already current.'
+            exit 0
+          fi
+          git commit -m 'F3日本語ニュース読みを意味区切りで更新'
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then
+              echo 'F3_PACING_PUSH_OK'
+              exit 0
+            fi
+            git pull --rebase origin main
+            sleep $((attempt * 2))
+          done
+          echo 'F3 pacing output could not push after retries.' >&2
+          exit 1
