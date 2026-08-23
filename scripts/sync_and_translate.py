@@ -22,7 +22,7 @@ ARCHIVE_TOPIC_NAMES={
 
 HAN_RE=re.compile(r"[\u3400-\u9fff]")
 KANA_RE=re.compile(r"[\u3040-\u30ff]")
-CACHE_VERSION="ja-v3-archive-visible-fields"
+CACHE_VERSION="ja-v2-explicit-zh-tw"
 
 def source_fingerprint(obj):
     raw=json.dumps(obj,ensure_ascii=False,sort_keys=True,separators=(",",":"))
