@@ -15,10 +15,11 @@ jobs:
       - name: Show Japanese sync, Pages and maintenance workers
         env:
           GH_TOKEN: ${{ github.token }}
+          REPO: kanuli/daily-brief-newspaper-japanese
         run: |
           echo '=== sync-japanese-news ==='
-          gh run list --workflow sync-japanese-news.yml --branch main --limit 10 --json databaseId,status,conclusion,createdAt,updatedAt,headSha
+          gh run list --repo "$REPO" --workflow sync-japanese-news.yml --branch main --limit 10 --json databaseId,status,conclusion,createdAt,updatedAt,headSha
           echo '=== pages ==='
-          gh run list --workflow pages.yml --branch main --limit 10 --json databaseId,status,conclusion,createdAt,updatedAt,headSha
+          gh run list --repo "$REPO" --workflow pages.yml --branch main --limit 10 --json databaseId,status,conclusion,createdAt,updatedAt,headSha
           echo '=== auto-maintenance ==='
-          gh run list --workflow auto-maintenance.yml --branch main --limit 10 --json databaseId,status,conclusion,createdAt,updatedAt,headSha
+          gh run list --repo "$REPO" --workflow auto-maintenance.yml --branch main --limit 10 --json databaseId,status,conclusion,createdAt,updatedAt,headSha
