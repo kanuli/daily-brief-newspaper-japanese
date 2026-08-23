@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import re,subprocess
+import hashlib,re,subprocess
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -12,9 +12,10 @@ STATIC_CRITICAL=HTML_PAGES+[
     'assets/css/newspaper.css','assets/css/system-ja.css',
     'assets/js/newspaper-ja.js','assets/js/system-ja.js','scripts/validate_site.py'
 ]
+VERSIONED_ASSETS=['assets/css/newspaper.css','assets/css/system-ja.css','assets/js/newspaper-ja.js','assets/js/system-ja.js']
 REPLACEMENTS={
     '載入中…':'読み込み中…','亞洲':'アジア','財經':'経済','廣東話':'広東語',
-    '頭版':'トップ','歷史日報':'アーカイブ','新聞分版':'ニュース分野','關閉':'閉じる'
+    '頭版':'一面トップ','歷史日報':'アーカイブ','新聞分版':'ニュース分野','關閉':'閉じる'
 }
 
 def write_if_changed(path,text):
@@ -22,6 +23,19 @@ def write_if_changed(path,text):
     if text!=old:
         path.parent.mkdir(parents=True,exist_ok=True);path.write_text(text,encoding='utf-8');return True
     return False
+
+def asset_version(rel):
+    path=ROOT/rel
+    if not path.is_file():return None
+    return hashlib.sha256(path.read_bytes()).hexdigest()[:10]
+
+def normalize_asset_versions(text):
+    for rel in VERSIONED_ASSETS:
+        version=asset_version(rel)
+        if not version:continue
+        pattern=re.escape(rel)+r'(?:\?v=[^"\']*)?'
+        text=re.sub(pattern,f'{rel}?v={version}',text)
+    return text
 
 def normalize_html(rel):
     path=ROOT/rel
@@ -42,6 +56,7 @@ def normalize_html(rel):
     if 'assets/js/system-ja.js' not in text:
         text=text.replace('</body>','<script src="assets/js/system-ja.js" defer></script>\n</body>',1)
     for old,new in REPLACEMENTS.items():text=text.replace(old,new)
+    text=normalize_asset_versions(text)
     return write_if_changed(path,text)
 
 def repair_css():
@@ -66,9 +81,9 @@ def restore_from_golden(ref='origin/maintenance-known-good'):
 
 def main():
     changed=[]
+    if repair_css():changed.append('assets/css/newspaper.css')
     for rel in HTML_PAGES:
         if normalize_html(rel):changed.append(rel)
-    if repair_css():changed.append('assets/css/newspaper.css')
     print('STATIC_REPAIR_CHANGED',','.join(changed) if changed else 'none')
 
 if __name__=='__main__':main()
