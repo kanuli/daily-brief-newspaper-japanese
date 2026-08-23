@@ -1,0 +1,74 @@
+#!/usr/bin/env python3
+import re,subprocess
+from pathlib import Path
+
+ROOT=Path(__file__).resolve().parents[1]
+HTML_PAGES=[
+    'index.html','live.html','world.html','asia.html','hong-kong.html','japan.html',
+    'finance.html','stocks.html','technology.html','manga-anime.html',
+    'manchester-united.html','football.html','archive.html'
+]
+STATIC_CRITICAL=HTML_PAGES+[
+    'assets/css/newspaper.css','assets/css/system-ja.css',
+    'assets/js/newspaper-ja.js','assets/js/system-ja.js','scripts/validate_site.py'
+]
+REPLACEMENTS={
+    '載入中…':'読み込み中…','亞洲':'アジア','財經':'経済','廣東話':'広東語',
+    '頭版':'トップ','歷史日報':'アーカイブ','新聞分版':'ニュース分野','關閉':'閉じる'
+}
+
+def write_if_changed(path,text):
+    old=path.read_text(encoding='utf-8') if path.exists() else ''
+    if text!=old:
+        path.parent.mkdir(parents=True,exist_ok=True);path.write_text(text,encoding='utf-8');return True
+    return False
+
+def normalize_html(rel):
+    path=ROOT/rel
+    if not path.exists():return False
+    text=path.read_text(encoding='utf-8')
+    text=re.sub(r'<html\s+lang="[^"]*"','<html lang="ja"',text,count=1,flags=re.I)
+    if re.search(r'<html(?:\s|>)',text,re.I) and 'lang="ja"' not in text[:200]:
+        text=re.sub(r'<html>', '<html lang="ja">', text, count=1, flags=re.I)
+    if 'assets/css/newspaper.css' not in text:
+        text=text.replace('</head>','<link rel="stylesheet" href="assets/css/newspaper.css">\n</head>',1)
+    if 'assets/css/system-ja.css' not in text:
+        text=text.replace('</head>','<link rel="stylesheet" href="assets/css/system-ja.css">\n</head>',1)
+    nav='<nav class="section-nav" aria-label="ニュース分野"></nav>'
+    if re.search(r'<nav[^>]*class="section-nav"[^>]*>.*?</nav>',text,re.I|re.S):
+        text=re.sub(r'<nav[^>]*class="section-nav"[^>]*>.*?</nav>',nav,text,count=1,flags=re.I|re.S)
+    elif '</header>' in text:
+        text=text.replace('</header>','</header>'+nav,1)
+    if 'assets/js/system-ja.js' not in text:
+        text=text.replace('</body>','<script src="assets/js/system-ja.js" defer></script>\n</body>',1)
+    for old,new in REPLACEMENTS.items():text=text.replace(old,new)
+    return write_if_changed(path,text)
+
+def repair_css():
+    path=ROOT/'assets/css/newspaper.css'
+    if not path.exists():return False
+    text=path.read_text(encoding='utf-8')
+    if 'white-space:nowrap' not in text:
+        text+='\n/* Auto-maintenance: keep masthead on one line. */\n.brand h1{white-space:nowrap;font-size:clamp(28px,4.6vw,52px)}\n@media(max-width:760px){.brand h1{font-size:clamp(25px,8.8vw,38px)}}\n'
+    return write_if_changed(path,text)
+
+def restore_from_golden(ref='origin/maintenance-known-good'):
+    restored=[]
+    for rel in STATIC_CRITICAL:
+        p=subprocess.run(['git','show',f'{ref}:{rel}'],cwd=ROOT,stdout=subprocess.PIPE,stderr=subprocess.DEVNULL)
+        if p.returncode:continue
+        target=ROOT/rel
+        current=target.read_bytes() if target.exists() else b''
+        if current!=p.stdout:
+            target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(p.stdout);restored.append(rel)
+    print('GOLDEN_STATIC_RESTORED',','.join(restored) if restored else 'none')
+    return restored
+
+def main():
+    changed=[]
+    for rel in HTML_PAGES:
+        if normalize_html(rel):changed.append(rel)
+    if repair_css():changed.append('assets/css/newspaper.css')
+    print('STATIC_REPAIR_CHANGED',','.join(changed) if changed else 'none')
+
+if __name__=='__main__':main()
