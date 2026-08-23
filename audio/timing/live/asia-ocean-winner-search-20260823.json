@@ -1,38 +1,173 @@
 {
-  "version": 1,
-  "duration": 49.659,
+  "version": 3,
+  "duration": 75.755,
   "voice": "F3",
   "language": "ja",
-  "speed": 0.9,
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 260,
+  "charactersPerMinute": 205.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
   "segments": [
     {
       "key": "title",
       "start": 0.0,
-      "end": 10.539,
+      "end": 17.602,
       "text": "インド東海岸沖で貨物船が沈没し、乗組員22名が今も行方不明となっている。沿岸警備隊と海軍は捜索と救助を続けている"
     },
     {
       "key": "dek",
-      "start": 10.539,
-      "end": 18.842,
+      "start": 17.602,
+      "end": 32.891,
       "text": "乗組員２４人のうち中国人乗組員２人が救出されたが、残り２２人は依然として行方不明となっている。"
     },
     {
       "key": "body-0",
-      "start": 18.842,
-      "end": 34.33,
+      "start": 32.891,
+      "end": 50.531,
       "text": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know."
     },
     {
       "key": "why",
-      "start": 34.33,
-      "end": 44.709,
+      "start": 50.531,
+      "end": 66.53,
       "text": "依然として22人が行方不明となっており、捜索・救助の時間枠は狭まり続けている。"
     },
     {
       "key": "watch",
-      "start": 44.709,
-      "end": 49.659,
+      "start": 66.53,
+      "end": 75.755,
+      "text": "捜索救助や海上捜査の結果に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.879,
+      "end": 5.109,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "インド東海岸沖で貨物船が沈没し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 5.109,
+      "speechEnd": 10.755,
+      "end": 11.256,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "乗組員22名が今も行方不明となっている。"
+    },
+    {
+      "parentKey": "title",
+      "start": 11.256,
+      "speechEnd": 16.901,
+      "end": 17.602,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "沿岸警備隊と海軍は捜索と救助を続けている。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.602,
+      "speechEnd": 25.478,
+      "end": 25.708,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "乗組員２４人のうち中国人乗組員２人が救出されたが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.708,
+      "speechEnd": 32.191,
+      "end": 32.891,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "残り２２人は依然として行方不明となっている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 32.891,
+      "speechEnd": 37.491,
+      "end": 37.992,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "Error 500 (Server Error)!"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.992,
+      "speechEnd": 49.911,
+      "end": 50.531,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "clause",
+      "text": "1500.That’s an error.There was an error. Please try again later.That’s all we know."
+    },
+    {
+      "parentKey": "why",
+      "start": 50.531,
+      "speechEnd": 54.504,
+      "end": 55.005,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 55.005,
+      "speechEnd": 61.069,
+      "end": 61.299,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "依然として22人が行方不明となっており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 61.299,
+      "speechEnd": 65.83,
+      "end": 66.53,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "捜索・救助の時間枠は狭まり続けている。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 66.53,
+      "speechEnd": 68.621,
+      "end": 68.851,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 68.851,
+      "speechEnd": 75.055,
+      "end": 75.755,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
       "text": "捜索救助や海上捜査の結果に注目してください。"
     }
   ]

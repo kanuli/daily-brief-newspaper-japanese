@@ -1,39 +1,224 @@
 {
-  "version": 1,
-  "duration": 74.789,
+  "version": 3,
+  "duration": 108.382,
   "voice": "F3",
   "language": "ja",
-  "speed": 0.9,
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 440,
+  "charactersPerMinute": 243.6,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
   "segments": [
     {
       "key": "title",
       "start": 0.0,
-      "end": 17.862,
+      "end": 29.735,
       "text": "マンチェスター・ユナイテッドはプレミアリーグのシーズン初めに後城に0対2で敗れた。彼らはボールの72％をコントロールしていましたが、それでも得点することができませんでした。失点はどちらもデッドボールからだった。"
     },
     {
       "key": "dek",
-      "start": 17.862,
-      "end": 31.949,
+      "start": 29.735,
+      "end": 47.449,
       "text": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know."
     },
     {
       "key": "body-0",
-      "start": 31.949,
-      "end": 46.035,
+      "start": 47.449,
+      "end": 65.084,
       "text": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know."
     },
     {
       "key": "why",
-      "start": 46.035,
-      "end": 59.976,
+      "start": 65.084,
+      "end": 88.347,
       "text": "ボールポゼッションのアドバンテージを脅威に変えることができず、デッドボールディフェンスで失点が続き、シーズン序盤に構造的な問題が露呈した。"
     },
     {
       "key": "watch",
-      "start": 59.976,
-      "end": 74.789,
+      "start": 88.347,
+      "end": 108.382,
       "text": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know."
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.275,
+      "end": 3.555,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "マンチェスター・ユナイテッドは"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.555,
+      "speechEnd": 10.384,
+      "end": 10.884,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "プレミアリーグのシーズン初めに後城に0対2で敗れた。"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.884,
+      "speechEnd": 18.131,
+      "end": 18.361,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "彼らはボールの72％をコントロールしていましたが、"
+    },
+    {
+      "parentKey": "title",
+      "start": 18.361,
+      "speechEnd": 23.726,
+      "end": 24.226,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "それでも得点することができませんでした。"
+    },
+    {
+      "parentKey": "title",
+      "start": 24.226,
+      "speechEnd": 29.034,
+      "end": 29.735,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "失点はどちらもデッドボールからだった。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 29.735,
+      "speechEnd": 34.333,
+      "end": 34.834,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "Error 500 (Server Error)!"
+    },
+    {
+      "parentKey": "dek",
+      "start": 34.834,
+      "speechEnd": 46.749,
+      "end": 47.449,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "clause",
+      "text": "1500.That’s an error.There was an error. Please try again later.That’s all we know."
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.449,
+      "speechEnd": 52.048,
+      "end": 52.548,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "Error 500 (Server Error)!"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.548,
+      "speechEnd": 64.464,
+      "end": 65.084,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "clause",
+      "text": "1500.That’s an error.There was an error. Please try again later.That’s all we know."
+    },
+    {
+      "parentKey": "why",
+      "start": 65.084,
+      "speechEnd": 69.056,
+      "end": 69.556,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 69.556,
+      "speechEnd": 73.806,
+      "end": 74.087,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ボールポゼッションのアドバンテージを"
+    },
+    {
+      "parentKey": "why",
+      "start": 74.087,
+      "speechEnd": 77.78,
+      "end": 78.01,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "脅威に変えることができず、"
+    },
+    {
+      "parentKey": "why",
+      "start": 78.01,
+      "speechEnd": 82.539,
+      "end": 82.769,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "デッドボールディフェンスで失点が続き、"
+    },
+    {
+      "parentKey": "why",
+      "start": 82.769,
+      "speechEnd": 87.647,
+      "end": 88.347,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "シーズン序盤に構造的な問題が露呈した。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 88.347,
+      "speechEnd": 90.437,
+      "end": 90.667,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 90.667,
+      "speechEnd": 95.266,
+      "end": 95.766,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "Error 500 (Server Error)!"
+    },
+    {
+      "parentKey": "watch",
+      "start": 95.766,
+      "speechEnd": 107.682,
+      "end": 108.382,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "clause",
+      "text": "1500.That’s an error.There was an error. Please try again later.That’s all we know."
     }
   ]
 }

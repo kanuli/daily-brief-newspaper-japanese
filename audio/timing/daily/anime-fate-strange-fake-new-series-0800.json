@@ -1,45 +1,330 @@
 {
-  "version": 1,
-  "duration": 32.836,
+  "version": 3,
+  "duration": 151.144,
   "voice": "F3",
   "language": "ja",
-  "speed": 0.9,
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 476,
+  "charactersPerMinute": 189.0,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
   "segments": [
     {
       "key": "title",
       "start": 0.0,
-      "end": 2.99,
+      "end": 11.661,
       "text": "『Fate/strange Fake』新シリーズ制作発表、第1弾PVとティザービジュアル公開"
     },
     {
       "key": "dek",
-      "start": 2.99,
-      "end": 6.743,
+      "start": 11.661,
+      "end": 29.454,
       "text": "アニプレックスは8月22日に新シリーズの制作ニュースを発表し、同時にプロモーションビデオとビジュアルを正式に公開した。"
     },
     {
       "key": "body-0",
-      "start": 6.743,
-      "end": 15.304,
+      "start": 29.454,
+      "end": 66.671,
       "text": "アニプレックスは8月22日、『Fate/strange Fake』新シリーズの制作決定を発表し、公式ニュースページに新シリーズPVとティザービジュアルを同時掲載した。このニュースは、Fate シリーズの重要な部門の 1 つにおけるアニメーション開発の次の段階を裏付けるものです。"
     },
     {
       "key": "body-1",
-      "start": 15.304,
-      "end": 23.454,
+      "start": 66.671,
+      "end": 107.706,
       "text": "現時点で最も重要な確定情報は「新シリーズ制作決定」です。その後の放送形式、日付、およびより完全な制作計画については、まだ正式に発表されていません。新しいPVとビジュアルは、視聴者がストーリーや演出の方向性を判断するための最初の公式資料にもなった。"
     },
     {
       "key": "why",
-      "start": 23.454,
-      "end": 29.435,
+      "start": 107.706,
+      "end": 133.348,
       "text": "新しいシリーズがプロジェクトの継続的な前進を表していることが公式に確認されており、フォローアップスケジュールと制作ラインナップは追跡する価値があります。"
     },
     {
       "key": "watch",
-      "start": 29.435,
-      "end": 32.836,
+      "start": 133.348,
+      "end": 151.144,
       "text": "アニプレックスによる放送日、放送形式、制作陣、プラットフォームの取り決めなどの発表に注目だ。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 6.062,
+      "end": 6.342,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "『Fate/strange Fake』新シリーズ制作発表、"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.342,
+      "speechEnd": 10.801,
+      "end": 11.661,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "第1弾PVとティザービジュアル公開。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 11.661,
+      "speechEnd": 20.858,
+      "end": 21.138,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アニプレックスは8月22日に新シリーズの制作ニュースを発表し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.138,
+      "speechEnd": 28.593,
+      "end": 29.454,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "同時にプロモーションビデオとビジュアルを正式に公開した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 29.454,
+      "speechEnd": 33.982,
+      "end": 34.262,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アニプレックスは8月22日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.262,
+      "speechEnd": 41.857,
+      "end": 42.137,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "『Fate/strange Fake』新シリーズの制作決定を発表し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.137,
+      "speechEnd": 50.707,
+      "end": 51.327,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "公式ニュースページに新シリーズPVとティザービジュアルを同時掲載した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.327,
+      "speechEnd": 53.696,
+      "end": 53.976,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "このニュースは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.976,
+      "speechEnd": 65.89,
+      "end": 66.671,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "Fate シリーズの重要な部門の 1 つにおけるアニメーション開発の次の段階を裏付けるものです。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 66.671,
+      "speechEnd": 75.171,
+      "end": 75.791,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "現時点で最も重要な確定情報は「新シリーズ制作決定」です。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 75.791,
+      "speechEnd": 78.996,
+      "end": 79.276,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "その後の放送形式、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 79.276,
+      "speechEnd": 81.297,
+      "end": 81.577,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日付、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 81.577,
+      "speechEnd": 87.29,
+      "end": 87.57,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "およびより完全な制作計画については、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 87.57,
+      "speechEnd": 91.89,
+      "end": 92.51,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "まだ正式に発表されていません。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.51,
+      "speechEnd": 95.994,
+      "end": 96.274,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "新しいPVとビジュアルは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 96.274,
+      "speechEnd": 102.475,
+      "end": 102.815,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "視聴者がストーリーや演出の方向性を判断するため"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.815,
+      "speechEnd": 106.926,
+      "end": 107.706,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "の最初の公式資料にもなった。"
+    },
+    {
+      "parentKey": "why",
+      "start": 107.706,
+      "speechEnd": 111.677,
+      "end": 112.297,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 112.297,
+      "speechEnd": 120.31,
+      "end": 120.65,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "新しいシリーズがプロジェクトの継続的な前進を表していることが"
+    },
+    {
+      "parentKey": "why",
+      "start": 120.65,
+      "speechEnd": 124.064,
+      "end": 124.344,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "公式に確認されており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 124.344,
+      "speechEnd": 129.082,
+      "end": 129.422,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "フォローアップスケジュールと制作ラインナップは"
+    },
+    {
+      "parentKey": "why",
+      "start": 129.422,
+      "speechEnd": 132.488,
+      "end": 133.348,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "追跡する価値があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 133.348,
+      "speechEnd": 135.438,
+      "end": 135.718,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 135.718,
+      "speechEnd": 139.411,
+      "end": 139.691,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アニプレックスによる放送日、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 139.691,
+      "speechEnd": 141.99,
+      "end": 142.27,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "放送形式、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 142.27,
+      "speechEnd": 144.43,
+      "end": 144.71,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "制作陣、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 144.71,
+      "speechEnd": 150.284,
+      "end": 151.144,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "プラットフォームの取り決めなどの発表に注目だ。"
     }
   ]
 }

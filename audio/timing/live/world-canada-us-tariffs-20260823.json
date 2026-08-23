@@ -1,45 +1,380 @@
 {
-  "version": 1,
-  "duration": 32.705,
+  "version": 3,
+  "duration": 156.16,
   "voice": "F3",
   "language": "ja",
-  "speed": 0.9,
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 426,
+  "charactersPerMinute": 163.7,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
   "segments": [
     {
       "key": "title",
       "start": 0.0,
-      "end": 3.833,
+      "end": 17.108,
       "text": "米国とカナダの貿易交渉は決裂し、米国の50％関税が発効した。カナダは9月8日から同額の報復を開始する"
     },
     {
       "key": "dek",
-      "start": 3.833,
-      "end": 6.963,
+      "start": 17.108,
+      "end": 32.462,
       "text": "カナダは、鉄鋼や電子製品などの米国製品に影響を与える米国の新たな関税にも同様に対応する。"
     },
     {
       "key": "body-0",
-      "start": 6.963,
-      "end": 14.947,
+      "start": 32.462,
+      "end": 70.874,
       "text": "米国とカナダの間の最新通商交渉は合意に至らず、その後米国は約200億ドル相当のカナダ製品に50％の関税を課した。カナダのカーニー首相は、オタワは９月８日から米国の鉄鋼、電子製品、その他の製品を対象に同等の措置を講じると述べた。"
     },
     {
       "key": "body-1",
-      "start": 14.947,
-      "end": 23.699,
+      "start": 70.874,
+      "end": 114.188,
       "text": "カナダ政府は、完全な対策リストと影響を受ける企業と労働者への支援策は後日発表すると述べた。今回の交渉決裂は北米自由貿易協定の将来についても不確実性を高めており、自動車、金属、食品、国境を越えた製造サプライチェーンはコスト上昇に直面する可能性が高い。"
     },
     {
       "key": "why",
-      "start": 23.699,
-      "end": 28.809,
+      "start": 114.188,
+      "end": 137.051,
       "text": "50%の関税とカナダの同等の対抗措置は、企業のコスト、価格、投資決定にすぐに反映される可能性があります。"
     },
     {
       "key": "watch",
-      "start": 28.809,
-      "end": 32.705,
+      "start": 137.051,
+      "end": 156.16,
       "text": "カナダの完全な対抗措置リスト、米国の対応、産業支援策、そして両国が交渉を再開するかどうかに注目だ。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.599,
+      "end": 4.829,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国とカナダの貿易交渉は決裂し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.829,
+      "speechEnd": 9.288,
+      "end": 9.788,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "米国の50％関税が発効した。"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.788,
+      "speechEnd": 16.407,
+      "end": 17.108,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "カナダは9月8日から同額の報復を開始する。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.108,
+      "speechEnd": 19.268,
+      "end": 19.498,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "カナダは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.498,
+      "speechEnd": 25.211,
+      "end": 25.491,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "鉄鋼や電子製品などの米国製品に影響を"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.491,
+      "speechEnd": 31.762,
+      "end": 32.462,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "与える米国の新たな関税にも同様に対応する。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 32.462,
+      "speechEnd": 40.057,
+      "end": 40.287,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国とカナダの間の最新通商交渉は合意に至らず、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.287,
+      "speechEnd": 50.599,
+      "end": 51.099,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "その後米国は約200億ドル相当のカナダ製品に50％の関税を課した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.099,
+      "speechEnd": 54.583,
+      "end": 54.813,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "カナダのカーニー首相は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.813,
+      "speechEnd": 60.248,
+      "end": 60.478,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "オタワは９月８日から米国の鉄鋼、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.478,
+      "speechEnd": 62.708,
+      "end": 62.938,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "電子製品、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.938,
+      "speechEnd": 70.254,
+      "end": 70.874,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "その他の製品を対象に同等の措置を講じると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 70.874,
+      "speechEnd": 73.521,
+      "end": 73.751,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "カナダ政府は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 73.751,
+      "speechEnd": 81.207,
+      "end": 81.487,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "完全な対策リストと影響を受ける企業と労働者への支援策は"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 81.487,
+      "speechEnd": 84.831,
+      "end": 85.332,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "後日発表すると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 85.332,
+      "speechEnd": 92.787,
+      "end": 93.067,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "今回の交渉決裂は北米自由貿易協定の将来について"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.067,
+      "speechEnd": 96.969,
+      "end": 97.199,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "も不確実性を高めており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.199,
+      "speechEnd": 99.289,
+      "end": 99.519,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "自動車、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.519,
+      "speechEnd": 101.54,
+      "end": 101.77,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "金属、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.77,
+      "speechEnd": 103.791,
+      "end": 104.021,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "食品、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.021,
+      "speechEnd": 108.689,
+      "end": 108.969,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "国境を越えた製造サプライチェーンは"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.969,
+      "speechEnd": 113.568,
+      "end": 114.188,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "コスト上昇に直面する可能性が高い。"
+    },
+    {
+      "parentKey": "why",
+      "start": 114.188,
+      "speechEnd": 118.159,
+      "end": 118.659,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 118.659,
+      "speechEnd": 125.279,
+      "end": 125.509,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "50%の関税とカナダの同等の対抗措置は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 125.509,
+      "speechEnd": 127.947,
+      "end": 128.177,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "企業のコスト、"
+    },
+    {
+      "parentKey": "why",
+      "start": 128.177,
+      "speechEnd": 130.198,
+      "end": 130.428,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "価格、"
+    },
+    {
+      "parentKey": "why",
+      "start": 130.428,
+      "speechEnd": 136.351,
+      "end": 137.051,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "投資決定にすぐに反映される可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 137.051,
+      "speechEnd": 139.141,
+      "end": 139.371,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 139.371,
+      "speechEnd": 143.621,
+      "end": 143.851,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "カナダの完全な対抗措置リスト、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 143.851,
+      "speechEnd": 146.22,
+      "end": 146.451,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国の対応、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 146.451,
+      "speechEnd": 148.75,
+      "end": 148.98,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "産業支援策、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 148.98,
+      "speechEnd": 155.46,
+      "end": 156.16,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "そして両国が交渉を再開するかどうかに注目だ。"
     }
   ]
 }

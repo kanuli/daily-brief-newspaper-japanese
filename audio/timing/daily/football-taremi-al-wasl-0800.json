@@ -1,45 +1,310 @@
 {
-  "version": 1,
-  "duration": 32.836,
+  "version": 3,
+  "duration": 154.906,
   "voice": "F3",
   "language": "ja",
-  "speed": 0.9,
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 505,
+  "charactersPerMinute": 195.6,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
   "segments": [
     {
       "key": "title",
       "start": 0.0,
-      "end": 2.627,
+      "end": 12.419,
       "text": "イラン代表フォワードのメフディ・タレミがアル・ワスルに加入し、UAEプロリーグへ移籍"
     },
     {
       "key": "dek",
-      "start": 2.627,
-      "end": 6.129,
+      "start": 12.419,
+      "end": 30.002,
       "text": "34歳のフォワードはオリンピアコスから現在リーグ首位のアル・ワスルに移籍し、契約は2027年まであると報じられている。"
     },
     {
       "key": "body-0",
-      "start": 6.129,
-      "end": 14.612,
+      "start": 30.002,
+      "end": 71.248,
       "text": "UAEプロリーグのアル・ワスルは、34歳のイラン人フォワード、メフディ・タレミとの契約を発表した。オリンピアコスから現在のリーグ首位のチームに移籍した。ロイター通信は、取引の財務詳細は発表されていないと報じた。データによると、契約期間は2027年6月末までとなっている。"
     },
     {
       "key": "body-1",
-      "start": 14.612,
-      "end": 24.08,
+      "start": 71.248,
+      "end": 115.356,
       "text": "タレミはかつてポルトやインテル・ミラノなどの欧州クラブでプレーし、イラン代表チームの代表としても長くプレーしていた。アル・ワスルは開幕戦で2勝を挙げ、今季はAFCチャンピオンズリーグエリートにも出場する。ヨーロッパや国際大会での経験を持つセンターを追加することで、地元やアジアの大会でのフォワードの層が強化されます。"
     },
     {
       "key": "why",
-      "start": 24.08,
-      "end": 29.169,
+      "start": 115.356,
+      "end": 137.739,
       "text": "タレミはアジアを代表するフォワードの一人であり、今回の移籍はアル・ワスルのAFCチャンピオンズリーグ出場権にも影響を与えることになる。"
     },
     {
       "key": "watch",
-      "start": 29.169,
-      "end": 32.836,
+      "start": 137.739,
+      "end": 154.906,
       "text": "タレミの登録と最初の試合時間、アル・ワスル・リーグとAFCチャンピオンズ・リーグのスケジュールに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.877,
+      "end": 5.217,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "イラン代表フォワードのメフディ・タレミが"
+    },
+    {
+      "parentKey": "title",
+      "start": 5.217,
+      "speechEnd": 8.283,
+      "end": 8.563,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アル・ワスルに加入し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.563,
+      "speechEnd": 11.559,
+      "end": 12.419,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "UAEプロリーグへ移籍。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.419,
+      "speechEnd": 22.522,
+      "end": 22.802,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "34歳のフォワードはオリンピアコスから現在リーグ首位のアル・ワスルに移籍し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.802,
+      "speechEnd": 29.142,
+      "end": 30.002,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "契約は2027年まであると報じられている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 30.002,
+      "speechEnd": 33.835,
+      "end": 34.115,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "UAEプロリーグのアル・ワスルは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.115,
+      "speechEnd": 38.156,
+      "end": 38.436,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "34歳のイラン人フォワード、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.436,
+      "speechEnd": 43.383,
+      "end": 44.003,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "メフディ・タレミとの契約を発表した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.003,
+      "speechEnd": 50.761,
+      "end": 51.381,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "オリンピアコスから現在のリーグ首位のチームに移籍した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.381,
+      "speechEnd": 53.89,
+      "end": 54.17,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.17,
+      "speechEnd": 59.953,
+      "end": 60.573,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "取引の財務詳細は発表されていないと報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.573,
+      "speechEnd": 63.011,
+      "end": 63.291,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "データによると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.291,
+      "speechEnd": 70.468,
+      "end": 71.248,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "契約期間は2027年6月末までとなっている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 71.248,
+      "speechEnd": 79.539,
+      "end": 79.819,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "タレミはかつてポルトやインテル・ミラノなどの欧州クラブでプレーし、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 79.819,
+      "speechEnd": 86.717,
+      "end": 87.337,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "イラン代表チームの代表としても長くプレーしていた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 87.337,
+      "speechEnd": 92.493,
+      "end": 92.773,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アル・ワスルは開幕戦で2勝を挙げ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.773,
+      "speechEnd": 98.347,
+      "end": 98.967,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "今季はAFCチャンピオンズリーグエリートにも出場する。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 98.967,
+      "speechEnd": 107.119,
+      "end": 107.399,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ヨーロッパや国際大会での経験を持つセンターを追加することで、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.399,
+      "speechEnd": 114.575,
+      "end": 115.356,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "地元やアジアの大会でのフォワードの層が強化されます。"
+    },
+    {
+      "parentKey": "why",
+      "start": 115.356,
+      "speechEnd": 119.327,
+      "end": 119.947,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 119.947,
+      "speechEnd": 126.427,
+      "end": 126.707,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "タレミはアジアを代表するフォワードの一人であり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 126.707,
+      "speechEnd": 136.879,
+      "end": 137.739,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "今回の移籍はアル・ワスルのAFCチャンピオンズリーグ出場権にも影響を与えることになる。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 137.739,
+      "speechEnd": 139.83,
+      "end": 140.11,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 140.11,
+      "speechEnd": 144.778,
+      "end": 145.058,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "タレミの登録と最初の試合時間、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 145.058,
+      "speechEnd": 154.046,
+      "end": 154.906,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "アル・ワスル・リーグとAFCチャンピオンズ・リーグのスケジュールに注目してください。"
     }
   ]
 }

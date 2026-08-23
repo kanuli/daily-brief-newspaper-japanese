@@ -1,45 +1,410 @@
 {
-  "version": 1,
-  "duration": 32.784,
+  "version": 3,
+  "duration": 159.791,
   "voice": "F3",
   "language": "ja",
-  "speed": 0.9,
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 475,
+  "charactersPerMinute": 178.4,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
   "segments": [
     {
       "key": "title",
       "start": 0.0,
-      "end": 3.827,
+      "end": 17.366,
       "text": "債券金利の上昇で評価圧力が増幅される中、来週のNVDAのパフォーマンスはAIトレーディングにとって重要な試金石となるだろう"
     },
     {
       "key": "dek",
-      "start": 3.827,
-      "end": 7.939,
+      "start": 17.366,
+      "end": 38.148,
       "text": "Nvidia は 8 月 26 日に四半期決算を発表します。市場はデータセンターの需要、粗利益、ガイダンスを注意深く監視するでしょう。"
     },
     {
       "key": "body-0",
-      "start": 7.939,
-      "end": 16.62,
+      "start": 38.148,
+      "end": 78.772,
       "text": "Nvidiaは8月26日に第2四半期決算を発表し、新しい週のAIと半導体取引の中核となるイベントとなる。世界的な長期債利回りの上昇により、AIインフラストラクチャーの資金調達コストが増加し、高価値株の許容度が低下しました。半導体セクターも今週、大きな圧力にさらされている。"
     },
     {
       "key": "body-1",
-      "start": 16.62,
-      "end": 24.445,
+      "start": 78.772,
+      "end": 117.317,
       "text": "市場の焦点は、単一四半期の収益だけでなく、データセンターの需要、製品のペース、顧客の資本支出、経営見通しにも向けられています。同週にはジャクソンホールが開催され、金利予想が再びタカ派になれば、NVDAの決算後の価格の反応が増幅する可能性がある。"
     },
     {
       "key": "why",
-      "start": 24.445,
-      "end": 29.699,
+      "start": 117.317,
+      "end": 141.018,
       "text": "パフォーマンスは、半導体、クラウド、AIインフラストラクチャのトランザクションチェーン全体の評価に影響を与える可能性があります。"
     },
     {
       "key": "watch",
-      "start": 29.699,
-      "end": 32.784,
+      "start": 141.018,
+      "end": 159.791,
       "text": "8月26日の業績、データセンター収益、売上総利益率、次四半期見通し、長期債務金利。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 5.434,
+      "end": 5.714,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "債券金利の上昇で評価圧力が増幅される中、"
+    },
+    {
+      "parentKey": "title",
+      "start": 5.714,
+      "speechEnd": 9.686,
+      "end": 10.026,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "来週のNVDAのパフォーマンスは"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.026,
+      "speechEnd": 16.505,
+      "end": 17.366,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "AIトレーディングにとって重要な試金石となるだろう。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.366,
+      "speechEnd": 25.656,
+      "end": 26.277,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "Nvidia は 8 月 26 日に四半期決算を発表します。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.277,
+      "speechEnd": 29.621,
+      "end": 29.901,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "市場はデータセンターの需要、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 29.901,
+      "speechEnd": 31.921,
+      "end": 32.201,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "粗利益、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.201,
+      "speechEnd": 37.288,
+      "end": 38.148,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ガイダンスを注意深く監視するでしょう。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.148,
+      "speechEnd": 46.299,
+      "end": 46.579,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Nvidiaは8月26日に第2四半期決算を発表し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.579,
+      "speechEnd": 53.616,
+      "end": 54.236,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "新しい週のAIと半導体取引の中核となるイベントとなる。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.236,
+      "speechEnd": 59.253,
+      "end": 59.533,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "世界的な長期債利回りの上昇により、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.533,
+      "speechEnd": 65.316,
+      "end": 65.596,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "AIインフラストラクチャーの資金調達コストが増加し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.596,
+      "speechEnd": 70.264,
+      "end": 70.884,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "高価値株の許容度が低下しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.884,
+      "speechEnd": 73.949,
+      "end": 74.229,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "半導体セクターも今週、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.229,
+      "speechEnd": 77.992,
+      "end": 78.772,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "大きな圧力にさらされている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 78.772,
+      "speechEnd": 81.28,
+      "end": 81.56,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "市場の焦点は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 81.56,
+      "speechEnd": 85.671,
+      "end": 85.951,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "単一四半期の収益だけでなく、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 85.951,
+      "speechEnd": 88.807,
+      "end": 89.087,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "データセンターの需要、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 89.087,
+      "speechEnd": 91.456,
+      "end": 91.736,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "製品のペース、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.736,
+      "speechEnd": 94.454,
+      "end": 94.734,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "顧客の資本支出、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.734,
+      "speechEnd": 98.914,
+      "end": 99.534,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "経営見通しにも向けられています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.534,
+      "speechEnd": 104.063,
+      "end": 104.343,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同週にはジャクソンホールが開催され、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.343,
+      "speechEnd": 109.15,
+      "end": 109.43,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "金利予想が再びタカ派になれば、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.43,
+      "speechEnd": 116.537,
+      "end": 117.317,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "NVDAの決算後の価格の反応が増幅する可能性がある。"
+    },
+    {
+      "parentKey": "why",
+      "start": 117.317,
+      "speechEnd": 121.288,
+      "end": 121.908,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 121.908,
+      "speechEnd": 124.486,
+      "end": 124.766,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "パフォーマンスは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 124.766,
+      "speechEnd": 126.856,
+      "end": 127.136,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "半導体、"
+    },
+    {
+      "parentKey": "why",
+      "start": 127.136,
+      "speechEnd": 129.227,
+      "end": 129.507,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "クラウド、"
+    },
+    {
+      "parentKey": "why",
+      "start": 129.507,
+      "speechEnd": 136.404,
+      "end": 136.744,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "AIインフラストラクチャのトランザクションチェーン全体の評価に影響を"
+    },
+    {
+      "parentKey": "why",
+      "start": 136.744,
+      "speechEnd": 140.158,
+      "end": 141.018,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "与える可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 141.018,
+      "speechEnd": 143.108,
+      "end": 143.389,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 143.389,
+      "speechEnd": 147.29,
+      "end": 147.57,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "8月26日の業績、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 147.57,
+      "speechEnd": 150.287,
+      "end": 150.567,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "データセンター収益、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 150.567,
+      "speechEnd": 153.076,
+      "end": 153.356,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "売上総利益率、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 153.356,
+      "speechEnd": 156.212,
+      "end": 156.492,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "次四半期見通し、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 156.492,
+      "speechEnd": 158.931,
+      "end": 159.791,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "長期債務金利。"
     }
   ]
 }

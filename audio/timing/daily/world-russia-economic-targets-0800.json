@@ -1,45 +1,360 @@
 {
-  "version": 1,
-  "duration": 32.705,
+  "version": 3,
+  "duration": 162.847,
   "voice": "F3",
   "language": "ja",
-  "speed": 0.9,
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 485,
+  "charactersPerMinute": 178.7,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
   "segments": [
     {
       "key": "title",
       "start": 0.0,
-      "end": 3.71,
+      "end": 16.956,
       "text": "ロシアとウクライナの経済施設への相互攻撃がエスカレート、ロシア政府はウクライナのデリケートな経済目標への攻撃拡大を警告"
     },
     {
       "key": "dek",
-      "start": 3.71,
-      "end": 8.562,
+      "start": 16.956,
+      "end": 39.339,
       "text": "ウクライナ軍がロシアの石油精製・貯蔵施設への攻撃を続けたことを受け、ロシアは報復を強化すると発表した。黒海の穀物と物流インフラのリスクが同時に増大した。"
     },
     {
       "key": "body-0",
-      "start": 8.562,
-      "end": 18.036,
+      "start": 39.339,
+      "end": 87.348,
       "text": "ロシアのウラジーミル・プーチン大統領は8月22日、ウクライナがここ数カ月間、ロシアの製油所や倉庫、その他の経済インフラへの無人機による攻撃を強化し、長距離攻撃をさらに相手国の経済力を弱体化させるレベルまで押し上げていると述べた。同氏は、ロシアがウクライナの「最も敏感な」経済部門に応じて対応すると警告した。"
     },
     {
       "key": "body-1",
-      "start": 18.036,
-      "end": 25.114,
+      "start": 87.348,
+      "end": 124.908,
       "text": "ウクライナは常にロシアのエネルギーと物流施設を戦争支援の重要な標的とみなしている。両国がエネルギー、港湾、倉庫、穀物インフラへの攻撃を拡大し続ければ、黒海の輸出、エネルギー供給、世界の穀物市場が再び混乱する可能性もある。"
     },
     {
       "key": "why",
-      "start": 25.114,
-      "end": 29.966,
+      "start": 124.908,
+      "end": 147.282,
       "text": "黒海の穀物輸出とエネルギー施設に対する攻撃が続けば、世界の商品供給と欧州のリスクプレミアムが影響を受ける可能性がある。"
     },
     {
       "key": "watch",
-      "start": 29.966,
-      "end": 32.705,
+      "start": 147.282,
+      "end": 162.847,
       "text": "次の長距離攻撃目標、黒海の港湾作戦、欧州の対ロシア制裁に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.246,
+      "end": 7.526,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロシアとウクライナの経済施設への相互攻撃がエスカレート、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.526,
+      "speechEnd": 16.096,
+      "end": 16.956,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ロシア政府はウクライナのデリケートな経済目標への攻撃拡大を警告。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.956,
+      "speechEnd": 26.222,
+      "end": 26.502,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ウクライナ軍がロシアの石油精製・貯蔵施設への攻撃を続けたことを受け、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.502,
+      "speechEnd": 31.031,
+      "end": 31.651,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ロシアは報復を強化すると発表した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 31.651,
+      "speechEnd": 38.479,
+      "end": 39.339,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "黒海の穀物と物流インフラのリスクが同時に増大した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.339,
+      "speechEnd": 46.933,
+      "end": 47.213,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロシアのウラジーミル・プーチン大統領は8月22日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.213,
+      "speechEnd": 51.184,
+      "end": 51.464,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ウクライナがここ数カ月間、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.464,
+      "speechEnd": 54.46,
+      "end": 54.74,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロシアの製油所や倉庫、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.74,
+      "speechEnd": 61.707,
+      "end": 61.988,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "その他の経済インフラへの無人機による攻撃を強化し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.988,
+      "speechEnd": 67.77,
+      "end": 68.11,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "長距離攻撃をさらに相手国の経済力を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.11,
+      "speechEnd": 74.102,
+      "end": 74.722,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "弱体化させるレベルまで押し上げていると述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.722,
+      "speechEnd": 76.882,
+      "end": 77.162,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同氏は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 77.162,
+      "speechEnd": 86.568,
+      "end": 87.348,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "ロシアがウクライナの「最も敏感な」経済部門に応じて対応すると警告した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 87.348,
+      "speechEnd": 93.758,
+      "end": 94.098,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ウクライナは常にロシアのエネルギーと物流施設を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.098,
+      "speechEnd": 98.905,
+      "end": 99.525,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "戦争支援の重要な標的とみなしている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.525,
+      "speechEnd": 102.242,
+      "end": 102.522,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "両国がエネルギー、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.522,
+      "speechEnd": 104.543,
+      "end": 104.823,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "港湾、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.823,
+      "speechEnd": 106.774,
+      "end": 107.054,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "倉庫、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.054,
+      "speechEnd": 112.279,
+      "end": 112.559,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "穀物インフラへの攻撃を拡大し続ければ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.559,
+      "speechEnd": 114.858,
+      "end": 115.138,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "黒海の輸出、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.138,
+      "speechEnd": 117.577,
+      "end": 117.857,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "エネルギー供給、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.857,
+      "speechEnd": 124.127,
+      "end": 124.908,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "世界の穀物市場が再び混乱する可能性もある。"
+    },
+    {
+      "parentKey": "why",
+      "start": 124.908,
+      "speechEnd": 128.879,
+      "end": 129.499,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 129.499,
+      "speechEnd": 136.396,
+      "end": 136.677,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "黒海の穀物輸出とエネルギー施設に対する攻撃が続けば、"
+    },
+    {
+      "parentKey": "why",
+      "start": 136.677,
+      "speechEnd": 142.599,
+      "end": 142.939,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "世界の商品供給と欧州のリスクプレミアムが"
+    },
+    {
+      "parentKey": "why",
+      "start": 142.939,
+      "speechEnd": 146.422,
+      "end": 147.282,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "影響を受ける可能性がある。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 147.282,
+      "speechEnd": 149.373,
+      "end": 149.653,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 149.653,
+      "speechEnd": 153.345,
+      "end": 153.625,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "次の長距離攻撃目標、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 153.625,
+      "speechEnd": 156.412,
+      "end": 156.692,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "黒海の港湾作戦、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 156.692,
+      "speechEnd": 161.987,
+      "end": 162.847,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "欧州の対ロシア制裁に注目してください。"
     }
   ]
 }

@@ -1,45 +1,290 @@
 {
-  "version": 1,
-  "duration": 47.83,
+  "version": 3,
+  "duration": 161.123,
   "voice": "F3",
   "language": "ja",
-  "speed": 0.9,
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 599,
+  "charactersPerMinute": 223.1,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
   "segments": [
     {
       "key": "title",
       "start": 0.0,
-      "end": 7.04,
+      "end": 18.132,
       "text": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know."
     },
     {
       "key": "dek",
-      "start": 7.04,
-      "end": 12.63,
+      "start": 18.132,
+      "end": 39.351,
       "text": "バーンリーはタヴェルニエが先制ゴールを決め、マンチェスター・シティは試合終了間際に２ゴールを決めた。マレスカがプレミアリーグ監督初勝利を収めた。"
     },
     {
       "key": "body-0",
-      "start": 12.63,
-      "end": 24.502,
+      "start": 39.351,
+      "end": 82.682,
       "text": "マンチェスター・シティは、プレミアリーグの新シーズン第1ラウンドでホームでバニーマスに一度は抑えられた。 26分にマルクス・タヴェルニエが先制ゴールを決めた。ホームチームは85分にマルク・ゲヒがコーナーキックのヘディングシュートで反応するまで同点にならなかったが、アディショナルタイムに追加点を決めて2対1で逆転した。"
     },
     {
       "key": "body-1",
-      "start": 24.502,
-      "end": 34.302,
+      "start": 82.682,
+      "end": 117.061,
       "text": "エンツォ・マレスカ監督にとってマンチェスター・シティ監督就任後初のプレミアリーグ勝利となった。チームは大規模な見直し後もディフェンストランジションの問題を露呈したが、後半のカウンターアタックはラインナップの層の厚さが依然としてゲームを変える可能性があることを示した。"
     },
     {
       "key": "why",
-      "start": 34.302,
-      "end": 40.79,
+      "start": 117.061,
+      "end": 141.089,
       "text": "ビハインドから逆転することで、シーズン序盤の新監督へのプレッシャーは軽減されるかもしれないが、守備構造にはまだ大きな改善の余地がある。"
     },
     {
       "key": "watch",
-      "start": 40.79,
-      "end": 47.83,
+      "start": 141.089,
+      "end": 161.123,
       "text": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know."
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.599,
+      "end": 5.099,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "Error 500 (Server Error)!"
+    },
+    {
+      "parentKey": "title",
+      "start": 5.099,
+      "speechEnd": 17.432,
+      "end": 18.132,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "1500.That’s an error.There was an error. Please try again later.That’s all we know.。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.132,
+      "speechEnd": 23.636,
+      "end": 23.867,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "バーンリーはタヴェルニエが先制ゴールを決め、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.867,
+      "speechEnd": 31.531,
+      "end": 32.031,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "マンチェスター・シティは試合終了間際に２ゴールを決めた。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.031,
+      "speechEnd": 38.651,
+      "end": 39.351,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "マレスカがプレミアリーグ監督初勝利を収めた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.351,
+      "speechEnd": 42.347,
+      "end": 42.577,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "マンチェスター・シティは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.577,
+      "speechEnd": 52.611,
+      "end": 53.111,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "プレミアリーグの新シーズン第1ラウンドでホームでバニーマスに一度は抑えられた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.111,
+      "speechEnd": 60.496,
+      "end": 60.997,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "26分にマルクス・タヴェルニエが先制ゴールを決めた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.997,
+      "speechEnd": 66.153,
+      "end": 66.433,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ホームチームは85分にマルク・ゲヒが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.433,
+      "speechEnd": 74.585,
+      "end": 74.815,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "コーナーキックのヘディングシュートで反応するまで同点にならなかったが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.815,
+      "speechEnd": 82.062,
+      "end": 82.682,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "アディショナルタイムに追加点を決めて2対1で逆転した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.682,
+      "speechEnd": 93.97,
+      "end": 94.47,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "エンツォ・マレスカ監督にとってマンチェスター・シティ監督就任後初のプレミアリーグ勝利となった。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.47,
+      "speechEnd": 103.249,
+      "end": 103.479,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "チームは大規模な見直し後もディフェンストランジションの問題を露呈したが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.479,
+      "speechEnd": 106.684,
+      "end": 106.964,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "後半のカウンターアタックは"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 106.964,
+      "speechEnd": 116.441,
+      "end": 117.061,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ラインナップの層の厚さが依然としてゲームを変える可能性があることを示した。"
+    },
+    {
+      "parentKey": "why",
+      "start": 117.061,
+      "speechEnd": 121.032,
+      "end": 121.532,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 121.532,
+      "speechEnd": 125.434,
+      "end": 125.664,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ビハインドから逆転することで、"
+    },
+    {
+      "parentKey": "why",
+      "start": 125.664,
+      "speechEnd": 130.542,
+      "end": 130.822,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "シーズン序盤の新監督へのプレッシャーは"
+    },
+    {
+      "parentKey": "why",
+      "start": 130.822,
+      "speechEnd": 134.306,
+      "end": 134.536,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "軽減されるかもしれないが、"
+    },
+    {
+      "parentKey": "why",
+      "start": 134.536,
+      "speechEnd": 140.389,
+      "end": 141.089,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "守備構造にはまだ大きな改善の余地がある。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 141.089,
+      "speechEnd": 143.179,
+      "end": 143.409,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 143.409,
+      "speechEnd": 148.008,
+      "end": 148.508,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "Error 500 (Server Error)!"
+    },
+    {
+      "parentKey": "watch",
+      "start": 148.508,
+      "speechEnd": 160.423,
+      "end": 161.123,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "clause",
+      "text": "1500.That’s an error.There was an error. Please try again later.That’s all we know."
     }
   ]
 }
