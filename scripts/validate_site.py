@@ -10,7 +10,7 @@ SUSPICIOUS_UI=('載入','亞洲','財經','廣東話','頭版','歷史日報','�
 OLD_ARCHIVE_TOPICS={'亞洲','財經 / 全球市場','市場 / 經濟','AI / 科技','漫畫 / Anime','Manchester United','Football','日語學習','科學 / 新技術','網絡安全','軟件 / App','今日值得跟進','Upcoming events','香港 / 亞洲'}
 KANA=re.compile(r'[\u3040-\u30ff]');HAN=re.compile(r'[\u3400-\u9fff]');JP_DATE=re.compile(r'^\d{4}年\d{1,2}月\d{1,2}日$')
 EXPECTED_AUDIO_SPEED=0.72
-EXPECTED_DELIVERY_PROFILE='jp-tv-news-semantic-v3'
+EXPECTED_DELIVERY_PROFILE='jp-tv-news-semantic-v4'
 MAX_CPM={'daily':345.0,'live':365.0}
 
 class LocalRefParser(HTMLParser):
@@ -96,6 +96,9 @@ def validate_timing(group,aid,path):
         if float(pauses.get(required,0))<=0:fail(f'{group}:{aid}: pause profile missing {required}')
     reasons={str(u.get('reason','')) for u in units}
     if not any(r.startswith('punctuation-') for r in reasons):fail(f'{group}:{aid}: punctuation pacing evidence missing')
+    for u in units:
+        pause=float(u.get('pause',0));intended=float(u.get('intendedPause',pause))
+        if intended>0 and abs(pause-intended)>0.08:fail(f'{group}:{aid}: semantic pause drifted from intended length')
     prev=0.0
     for seg in segments:
         key=str(seg.get('key','')).strip();start=float(seg.get('start',-1));end=float(seg.get('end',-1))
