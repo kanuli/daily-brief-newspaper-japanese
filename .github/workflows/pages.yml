@@ -37,6 +37,7 @@ jobs:
           node --check assets/js/live-guard.js
           grep -q 'ensureIntegrityGuard' assets/js/system-ja.js
           grep -q 'sanitizeCards' assets/js/live-guard.js
+          grep -q 'node.textContent === label' assets/js/live-guard.js
           grep -q 'live-next-update' live.html
 
       - name: コンテンツとF3の状態を判定
