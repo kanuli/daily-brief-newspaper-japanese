@@ -12,14 +12,14 @@ jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
-      - name: Show Japanese sync, Pages and maintenance workers
+      - name: Show final Japanese sync, Pages and maintenance workers
         env:
           GH_TOKEN: ${{ github.token }}
           REPO: kanuli/daily-brief-newspaper-japanese
         run: |
-          echo '=== sync-japanese-news ==='
+          echo '=== final sync-japanese-news ==='
           gh run list --repo "$REPO" --workflow sync-japanese-news.yml --branch main --limit 10 --json databaseId,status,conclusion,createdAt,updatedAt,headSha
-          echo '=== pages ==='
+          echo '=== final pages ==='
           gh run list --repo "$REPO" --workflow pages.yml --branch main --limit 10 --json databaseId,status,conclusion,createdAt,updatedAt,headSha
-          echo '=== auto-maintenance ==='
+          echo '=== final auto-maintenance ==='
           gh run list --repo "$REPO" --workflow auto-maintenance.yml --branch main --limit 10 --json databaseId,status,conclusion,createdAt,updatedAt,headSha
