@@ -249,4 +249,8 @@ jobs:
           echo "Static recovered: ${{ steps.static_qa.outputs.recovered || 'false' }}"
           echo "Data/F3 healthy: ${{ steps.data_qa.outputs.healthy }}"
           echo "Source drift: ${{ steps.drift.outputs.drift || 'unknown' }}"
+          echo "Sync active: ${{ steps.workers.outputs.sync_active_count || '0' }}"
+          echo "Sync latest: ${{ steps.workers.outputs.sync_latest_conclusion || 'unknown' }} @ ${{ steps.workers.outputs.sync_latest_head || 'none' }}"
+          echo "Pages active: ${{ steps.workers.outputs.pages_active_count || '0' }}"
+          echo "Pages latest: ${{ steps.workers.outputs.pages_latest_conclusion || 'unknown' }} @ ${{ steps.workers.outputs.pages_latest_head || 'none' }}"
           echo 'Japanese site auto maintenance cycle completed.'
