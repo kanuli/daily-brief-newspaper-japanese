@@ -24,6 +24,7 @@ ARCHIVE_TOPIC_NAMES={
 HAN_RE=re.compile(r"[\u3400-\u9fff]")
 KANA_RE=re.compile(r"[\u3040-\u30ff]")
 CACHE_VERSION="ja-v2-explicit-zh-tw"
+TRANSLATION_SCHEMA="ja-furigana-v1"
 KKS=pykakasi.kakasi()
 RUBY_FIELDS=("section","title","dek","summary","context","why","watchNext")
 
@@ -110,8 +111,7 @@ def convert(obj,parent_key=""):
             elif k in TRANSLATE_KEYS:out[k]=translate_text(v) if isinstance(v,str) else convert(v,k)
             else:out[k]=convert(v,k)
         if isinstance(out.get("slug"),str) and out["slug"] in DESK_NAMES:out["title"]=DESK_NAMES[out["slug"]]
-        if "shortDate" in out and isinstance(out.get("date"),str):
-            out["shortDate"]=japanese_short_date(out["date"]) or out["shortDate"]
+        if "shortDate" in out and isinstance(out.get("date"),str):out["shortDate"]=japanese_short_date(out["date"]) or out["shortDate"]
         return out
     if isinstance(obj,str) and parent_key in TRANSLATE_KEYS:return translate_text(obj)
     return obj
@@ -124,32 +124,19 @@ def kata_to_hira_char(ch):
 def ruby_piece(orig,reading):
     orig=str(orig or "");reading=str(reading or "")
     if not orig:return ""
-    if not HAN_RE.search(orig) or not reading:
-        return html.escape(orig,quote=False)
+    if not HAN_RE.search(orig) or not reading:return html.escape(orig,quote=False)
     op=hp=0;os=len(orig);hs=len(reading)
-    while op<os and hp<hs and not HAN_RE.match(orig[op]) and kata_to_hira_char(orig[op])==reading[hp]:
-        op+=1;hp+=1
-    while os>op and hs>hp and not HAN_RE.match(orig[os-1]) and kata_to_hira_char(orig[os-1])==reading[hs-1]:
-        os-=1;hs-=1
+    while op<os and hp<hs and not HAN_RE.match(orig[op]) and kata_to_hira_char(orig[op])==reading[hp]:op+=1;hp+=1
+    while os>op and hs>hp and not HAN_RE.match(orig[os-1]) and kata_to_hira_char(orig[os-1])==reading[hs-1]:os-=1;hs-=1
     base=orig[op:os];yomi=reading[hp:hs]
-    if not base or not yomi or not HAN_RE.search(base):
-        return html.escape(orig,quote=False)
-    return (
-        html.escape(orig[:op],quote=False)
-        +f"<ruby>{html.escape(base,quote=False)}<rt>{html.escape(yomi,quote=False)}</rt></ruby>"
-        +html.escape(orig[os:],quote=False)
-    )
+    if not base or not yomi or not HAN_RE.search(base):return html.escape(orig,quote=False)
+    return html.escape(orig[:op],quote=False)+f"<ruby>{html.escape(base,quote=False)}<rt>{html.escape(yomi,quote=False)}</rt></ruby>"+html.escape(orig[os:],quote=False)
 
 def ruby_html(text):
     value=str(text or "")
     if not value:return ""
-    try:
-        parts=[]
-        for token in KKS.convert(value):
-            parts.append(ruby_piece(token.get("orig",""),token.get("hira","")))
-        return "".join(parts)
-    except Exception:
-        return html.escape(value,quote=False)
+    try:return "".join(ruby_piece(token.get("orig",""),token.get("hira","")) for token in KKS.convert(value))
+    except Exception:return html.escape(value,quote=False)
 
 def body_paragraphs(item):
     raw=str(item.get("body") or item.get("summary") or "")
@@ -182,35 +169,56 @@ def attach_daily_audio(data):
     if isinstance(data,dict):
         for a in data.get("articles",[]):
             if a.get("id"):
-                a["audio"]=f"audio/daily/{a['id']}.mp3"
-                a["timing"]=f"audio/timing/daily/{a['id']}.json"
+                a["audio"]=f"audio/daily/{a['id']}.mp3";a["timing"]=f"audio/timing/daily/{a['id']}.json"
     return data
 
 def attach_live_audio(data):
     if isinstance(data,dict):
         for a in data.get("items",[]):
             if a.get("id"):
-                a["audio"]=f"audio/live/{a['id']}.mp3"
-                a["timing"]=f"audio/timing/live/{a['id']}.json"
+                a["audio"]=f"audio/live/{a['id']}.mp3";a["timing"]=f"audio/timing/live/{a['id']}.json"
     return data
 
+def load_existing(name):
+    path=OUT/name
+    if not path.exists():return None
+    try:return json.loads(path.read_text(encoding="utf-8"))
+    except Exception:return None
+
+def existing_features_ok(name,data):
+    if not isinstance(data,dict) or data.get("language")!="ja":return False
+    if name=="latest.json":
+        items=data.get("articles") or []
+        return bool(items) and all(isinstance(x.get("furigana"),dict) and x.get("audio") and x.get("timing") for x in items)
+    if name=="live.json":
+        items=data.get("items") or []
+        return all(isinstance(x.get("furigana"),dict) and x.get("audio") and x.get("timing") for x in items)
+    if name=="archive.json":
+        editions=data.get("editions") or []
+        return bool(editions) and all((not e.get("headline") or e.get("furiganaHeadline")) and isinstance(e.get("furiganaTopics"),list) for e in editions)
+    return False
+
 def main():
-    OUT.mkdir(exist_ok=True);done=[]
+    OUT.mkdir(exist_ok=True);done=[];skipped=[]
     for name in FILES:
         src=fetch(name)
         if src is None:continue
+        fingerprint=source_fingerprint(src);existing=load_existing(name)
+        if existing and existing.get("sourceFingerprint")==fingerprint and existing_features_ok(name,existing):
+            existing["translationSchemaVersion"]=TRANSLATION_SCHEMA
+            (OUT/name).write_text(json.dumps(existing,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+            skipped.append(name);continue
         translated=convert(src)
         if name=="latest.json":translated=add_furigana(attach_daily_audio(translated),"articles")
         if name=="live.json":translated=add_furigana(attach_live_audio(translated),"items")
         if name=="archive.json":translated=add_archive_furigana(translated)
         if isinstance(translated,dict):
-            translated["language"]="ja"
-            translated["translationSource"]="kanuli/daily-brief-newspaper"
-            translated["sourceFile"]=name
-            translated["sourceFingerprint"]=source_fingerprint(src)
+            translated["language"]="ja";translated["translationSource"]="kanuli/daily-brief-newspaper";translated["sourceFile"]=name
+            translated["sourceFingerprint"]=fingerprint;translated["translationSchemaVersion"]=TRANSLATION_SCHEMA
         (OUT/name).write_text(json.dumps(translated,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
         done.append(name)
     CACHE_PATH.write_text(json.dumps(CACHE,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-    print("Japanese data updated:",", ".join(done))
+    print("Japanese data updated:",", ".join(done) if done else "none")
+    print("Fingerprint fast-path:",", ".join(skipped) if skipped else "none")
 
 if __name__=="__main__":main()
