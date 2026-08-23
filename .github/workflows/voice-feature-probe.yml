@@ -47,3 +47,4 @@ jobs:
               t=json.loads(timing.read_text(encoding='utf-8'))
               print('TIMING_SPEED',t.get('speed'),'SEGMENTS',len(t.get('segments') or []),'DURATION',t.get('duration'))
           PY
+      # refresh after production bot commit
