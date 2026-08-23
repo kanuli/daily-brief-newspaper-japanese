@@ -9,26 +9,34 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  actions: read
 
 concurrency:
   group: pages
   cancel-in-progress: true
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: リポジトリを取得
         uses: actions/checkout@v4
+
       - name: Pagesを設定
         uses: actions/configure-pages@v5
-      - name: 公開ファイルを準備
-        uses: actions/upload-pages-artifact@v4
+
+      - name: 公開ファイルをアップロード
+        uses: actions/upload-pages-artifact@v5
         with:
           path: '.'
-      - name: 公開
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: GitHub Pagesへ公開
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
