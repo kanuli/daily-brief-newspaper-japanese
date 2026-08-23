@@ -12,7 +12,9 @@ TRANSLATE_KEYS={"dateLabel","tagline","section","title","dek","summary","body","
 KEEP_KEYS={"id","desk","slug","sourceName","sourceUrl","url","image","imageAlt","date","editionNumber","status","leadId","editorialStandardVersion","contentVersion","createdAt","updatedAt","lastUpdated"}
 DESK_NAMES={"world":"世界","asia":"アジア","hong-kong":"香港","japan":"日本","market-economy":"経済・世界市場","finance":"経済・世界市場","stocks":"株式ニュース","stock-news":"株式ニュース","ai-tech":"AI・テクノロジー","science-new-tech":"科学・新技術","cybersecurity":"サイバーセキュリティ","software-apps":"ソフトウェア・アプリ・消費者向け技術","manga-anime":"漫画・アニメ","manchester-united":"マンチェスター・ユナイテッド","football":"サッカー","breaking-news":"速報","worth-following":"きょうの注目","upcoming-events":"今後の予定"}
 
-translator=GoogleTranslator(source="auto",target="ja")
+HAN_RE=re.compile(r"[\u3400-\u9fff]")
+KANA_RE=re.compile(r"[\u3040-\u30ff]")
+CACHE_VERSION="ja-v2-explicit-zh-tw"
 
 def load_cache():
     if CACHE_PATH.exists():
@@ -37,26 +39,43 @@ def chunks(text,limit=3800):
         if buf:parts.append(buf)
     return parts
 
+def likely_chinese_source(text):
+    return bool(HAN_RE.search(text)) and not bool(KANA_RE.search(text))
+
+def translate_part(part):
+    # The source newspaper is primarily Traditional Chinese. Google auto-detection
+    # occasionally returns Chinese text unchanged, so explicitly try zh-TW first
+    # for Han-only prose, then fall back to auto/zh-CN before declaring failure.
+    sources=("zh-TW","auto","zh-CN") if likely_chinese_source(part) else ("auto",)
+    last_error=None
+    for source in sources:
+        for attempt in range(4):
+            try:
+                value=GoogleTranslator(source=source,target="ja").translate(part)
+                if not value:
+                    raise RuntimeError("empty translation")
+                unchanged=value.strip()==part.strip()
+                if unchanged and likely_chinese_source(part) and len(part.strip())>18:
+                    last_error=RuntimeError(f"{source} returned source text unchanged")
+                    break
+                return value
+            except Exception as exc:
+                last_error=exc
+                time.sleep(1.2*(attempt+1))
+    raise RuntimeError(f"Japanese translation failed after zh-TW/auto fallbacks: {part[:100]!r}; last={last_error}")
+
 def translate_text(text):
     if not isinstance(text,str) or not text.strip():return text
     if re.match(r"^https?://",text):return text
-    key=hashlib.sha256(text.encode("utf-8")).hexdigest()
+    key=hashlib.sha256(f"{CACHE_VERSION}|{text}".encode("utf-8")).hexdigest()
     if key in CACHE:return CACHE[key]
     out=[]
     for part in chunks(text):
         if not part.strip():out.append(part);continue
-        last=None
-        for attempt in range(4):
-            try:
-                last=translator.translate(part)
-                if last:break
-            except Exception:
-                time.sleep(1.5*(attempt+1))
-        if not last:raise RuntimeError(f"Japanese translation failed: {part[:100]!r}")
-        out.append(last);time.sleep(0.08)
+        out.append(translate_part(part));time.sleep(0.08)
     value="".join(out)
-    if value.strip()==text.strip() and len(text.strip())>18 and re.search(r"[\u3400-\u9fff]",text):
-        raise RuntimeError(f"Translator returned source text unchanged: {text[:100]!r}")
+    if value.strip()==text.strip() and likely_chinese_source(text) and len(text.strip())>18:
+        raise RuntimeError(f"Chinese source remained untranslated after fallback: {text[:100]!r}")
     CACHE[key]=value
     return value
 
