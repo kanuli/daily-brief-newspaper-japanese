@@ -9,6 +9,14 @@ on:
       - 'scripts/**'
       - 'requirements.txt'
       - '.github/workflows/**'
+  pull_request:
+    branches: [main]
+    paths:
+      - '*.html'
+      - 'assets/**'
+      - 'scripts/**'
+      - 'requirements.txt'
+      - '.github/workflows/**'
   workflow_run:
     workflows: ['日本語ニュース同期とF3音声生成', '日本語版をGitHub Pagesへ公開']
     types: [completed]
@@ -73,6 +81,7 @@ jobs:
           echo 'recovered=true' >> "$GITHUB_OUTPUT"
 
       - name: Save automatic static repairs
+        if: github.event_name != 'pull_request'
         shell: bash
         run: |
           set -euo pipefail
@@ -152,7 +161,7 @@ jobs:
           PY
 
       - name: Recover Japanese translation and F3 pipeline
-        if: steps.data_qa.outputs.healthy != 'true' || steps.drift.outputs.drift == 'true'
+        if: github.event_name != 'pull_request' && (steps.data_qa.outputs.healthy != 'true' || steps.drift.outputs.drift == 'true')
         env:
           GH_TOKEN: ${{ github.token }}
           ACTIVE_COUNT: ${{ steps.workers.outputs.sync_active_count }}
@@ -178,7 +187,7 @@ jobs:
           echo 'JAPANESE_SYNC_AUTO_RECOVERY_DISPATCHED'
 
       - name: Recover GitHub Pages deployment
-        if: steps.data_qa.outputs.healthy == 'true' && steps.drift.outputs.drift != 'true'
+        if: github.event_name != 'pull_request' && steps.data_qa.outputs.healthy == 'true' && steps.drift.outputs.drift != 'true'
         env:
           GH_TOKEN: ${{ github.token }}
           ACTIVE_COUNT: ${{ steps.workers.outputs.pages_active_count }}
@@ -212,6 +221,7 @@ jobs:
           echo "PAGES_AUTO_RECOVERY_DISPATCHED main=${MAIN_SHA}"
 
       - name: Refresh last-known-good after verified health
+        if: github.event_name != 'pull_request'
         shell: bash
         run: |
           set -euo pipefail
@@ -235,6 +245,7 @@ jobs:
 
       - name: Maintenance summary
         run: |
+          echo "Mode: ${{ github.event_name }}"
           echo "Static recovered: ${{ steps.static_qa.outputs.recovered || 'false' }}"
           echo "Data/F3 healthy: ${{ steps.data_qa.outputs.healthy }}"
           echo "Source drift: ${{ steps.drift.outputs.drift || 'unknown' }}"
