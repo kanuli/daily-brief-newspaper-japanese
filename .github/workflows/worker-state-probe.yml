@@ -1,0 +1,24 @@
+name: Temporary Worker State Probe
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show Japanese sync, Pages and maintenance workers
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          echo '=== sync-japanese-news ==='
+          gh run list --workflow sync-japanese-news.yml --branch main --limit 10 --json databaseId,status,conclusion,createdAt,updatedAt,headSha
+          echo '=== pages ==='
+          gh run list --workflow pages.yml --branch main --limit 10 --json databaseId,status,conclusion,createdAt,updatedAt,headSha
+          echo '=== auto-maintenance ==='
+          gh run list --workflow auto-maintenance.yml --branch main --limit 10 --json databaseId,status,conclusion,createdAt,updatedAt,headSha
