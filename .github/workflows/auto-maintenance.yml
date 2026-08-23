@@ -50,7 +50,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          python -m py_compile scripts/validate_site.py scripts/auto_repair_site.py scripts/check_source_drift.py
+          python -m py_compile scripts/validate_site.py scripts/auto_repair_site.py scripts/check_source_drift.py scripts/validate_content_integrity.py
 
       - name: Deterministic static repair
         run: python scripts/auto_repair_site.py
@@ -63,17 +63,18 @@ jobs:
           check_static() {
             python scripts/validate_site.py --static-only && \
             node --check assets/js/newspaper-ja.js && \
-            node --check assets/js/system-ja.js
+            node --check assets/js/system-ja.js && \
+            node --check assets/js/live-guard.js
           }
           if check_static; then
             echo 'recovered=false' >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
-          echo 'Static QA failed; restoring verified static files from maintenance-known-good.'
+          echo 'Static QA failed; restoring presentation files from maintenance-known-good without downgrading the current QA rules.'
           FILES=(
             index.html live.html world.html asia.html hong-kong.html japan.html finance.html stocks.html technology.html manga-anime.html manchester-united.html football.html archive.html
-            assets/css/newspaper.css assets/css/system-ja.css assets/js/newspaper-ja.js assets/js/system-ja.js scripts/validate_site.py
+            assets/css/newspaper.css assets/css/system-ja.css assets/js/newspaper-ja.js assets/js/system-ja.js
           )
           git checkout origin/maintenance-known-good -- "${FILES[@]}"
           python scripts/auto_repair_site.py
@@ -87,7 +88,7 @@ jobs:
           set -euo pipefail
           git config user.name 'japanese-maintenance-bot'
           git config user.email 'actions@users.noreply.github.com'
-          git add -- '*.html' assets scripts/validate_site.py
+          git add -- '*.html' assets
           if git diff --cached --quiet; then
             echo 'No static repair commit required.'
             exit 0
