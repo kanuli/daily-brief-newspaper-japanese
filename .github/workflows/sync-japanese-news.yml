@@ -1,0 +1,75 @@
+name: 日本語ニュース同期とF3音声生成
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '7 * * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+      - 'requirements.txt'
+      - '.github/workflows/sync-japanese-news.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: japanese-news-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: リポジトリを取得
+        uses: actions/checkout@v4
+
+      - name: Pythonを設定
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: FFmpegを準備
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: 依存パッケージをインストール
+        run: pip install -r requirements.txt
+
+      - name: 原版を同期して全表示項目を日本語化
+        run: python scripts/sync_and_translate.py
+
+      - name: Supertonic 3 F3で日本語ニュース音声を生成
+        run: python scripts/generate_supertonic_f3.py
+
+      - name: 日本語版のみを公開するための検査
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          for name in ('latest.json','live.json'):
+              p=Path('data')/name
+              data=json.loads(p.read_text(encoding='utf-8'))
+              assert data.get('language')=='ja', f'{name}: language is not ja'
+          latest=json.loads(Path('data/latest.json').read_text(encoding='utf-8'))
+          required=('title','summary')
+          for a in latest.get('articles',[]):
+              for key in required:
+                  assert str(a.get(key,'')).strip(), f"{a.get('id')}: missing {key}"
+              assert a.get('audio','').startswith('audio/'), f"{a.get('id')}: missing F3 audio path"
+          print('Japanese publication gate: OK')
+          PY
+
+      - name: 更新を保存
+        run: |
+          git config user.name 'daily-brief-japanese-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add data audio
+          if git diff --cached --quiet; then
+            echo '変更なし'
+            exit 0
+          fi
+          git commit -m '日本語ニュースとSupertonic F3音声を更新'
+          git push
