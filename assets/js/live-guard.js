@@ -6,6 +6,7 @@
   const HIRA_RE = /[\u3040-\u309f]/;
   const HAN_RE = /[\u3400-\u9fff]/;
   const CRITICAL_FIELDS = ['title','dek','summary','body','context','why','watchNext','timeLabel'];
+  const PROSE_FIELDS = ['dek','summary','body','context','why','watchNext'];
 
   function badError(value='') {
     return ERROR_RE.test(String(value || ''));
@@ -20,7 +21,14 @@
 
   function unsafeItem(item={}) {
     return CRITICAL_FIELDS.some(key => badError(item[key])) ||
-      ['dek','summary','body','context','why','watchNext'].some(key => mixedProse(item[key]));
+      PROSE_FIELDS.some(key => mixedProse(item[key]));
+  }
+
+  function hasErrorPayload(value) {
+    if (typeof value === 'string') return badError(value);
+    if (Array.isArray(value)) return value.some(hasErrorPayload);
+    if (value && typeof value === 'object') return Object.values(value).some(hasErrorPayload);
+    return false;
   }
 
   function hktParts(date = new Date()) {
@@ -35,6 +43,7 @@
   function nextPublicationLabel() {
     const p = hktParts();
     const minutes = Number(p.hour) * 60 + Number(p.minute) + Number(p.second) / 60;
+    // Same Live timetable as daily-brief-newspaper. 08:00 is the Daily Edition.
     const slots = [360, 420, 540, 600, 660, 720, 780, 840, 900, 960, 1020, 1080, 1140, 1200, 1260, 1320, 1380, 1440];
     const next = slots.find(v => v > minutes) ?? 360;
     if (next === 1440) return '24:00 HKT';
@@ -54,59 +63,96 @@
     if (node) node.textContent = nextPublicationLabel();
   }
 
-  function sanitizeRendered(itemsById = new Map(), liveData = null) {
+  function quarantineNotice() {
+    const main = document.querySelector('main');
+    if (!main || document.getElementById('integrity-quarantine-notice')) return;
+    const notice = document.createElement('p');
+    notice.id = 'integrity-quarantine-notice';
+    notice.className = 'notice';
+    notice.textContent = '一部の記事は翻訳検証中のため一時的に保護表示しています。エラー文字列や未検証音声は表示・再生しません。';
+    main.insertBefore(notice, main.firstChild);
+  }
+
+  function disableAudio(container) {
+    if (!container) return;
+    container.querySelectorAll('.audio-block, .audio-row').forEach(block => {
+      if (block.dataset.integrityBlocked === '1') return;
+      block.dataset.integrityBlocked = '1';
+      block.innerHTML = '<button class="audio-btn" disabled>音声再生成中</button><span class="audio-note">翻訳検証後にSupertonic 3 F3音声を再公開します</span>';
+    });
+  }
+
+  function sanitizeTextNode(node, heading=false) {
+    if (!node) return false;
+    const text = String(node.textContent || '').trim();
+    const unsafe = badError(text) || (!heading && mixedProse(text));
+    if (!unsafe) return false;
+    const replacement = heading ? '翻訳を再処理中' : '翻訳を再処理中です。次の同期後に自動更新されます。';
+    if (node.textContent !== replacement) node.textContent = replacement;
+    return true;
+  }
+
+  function articleId(container) {
+    return container?.querySelector('.synced-audio')?.dataset?.syncArticle || '';
+  }
+
+  function sanitizeCards(unsafeIds = new Set()) {
+    document.querySelectorAll('.lead-story,.story-card,.section-block,.live-card').forEach(card => {
+      let changed = false;
+      card.querySelectorAll('h2,h3').forEach(node => { if (sanitizeTextNode(node, true)) changed = true; });
+      card.querySelectorAll('p,.lead-deck,.why-box,.watch-box').forEach(node => { if (sanitizeTextNode(node, false)) changed = true; });
+      const id = articleId(card);
+      if (changed || (id && unsafeIds.has(id))) disableAudio(card);
+    });
+  }
+
+  function sanitizeLiveMetadata(data) {
     const updated = document.getElementById('live-updated');
     if (updated && (badError(updated.textContent) || !updated.textContent.trim() || updated.textContent.trim() === '—')) {
-      updated.textContent = formatUpdated(liveData?.lastUpdated);
+      updated.textContent = formatUpdated(data?.lastUpdated);
     }
-
-    document.querySelectorAll('.live-card').forEach(card => {
-      const audio = card.querySelector('.synced-audio');
-      const id = audio?.dataset?.syncArticle || '';
-      const item = id ? itemsById.get(id) : null;
-      const title = card.querySelector('h3');
-      const summary = card.querySelector('p');
-
-      if (title && badError(title.textContent)) title.textContent = '翻訳を再処理中';
-      if (summary && (badError(summary.textContent) || mixedProse(summary.textContent))) summary.textContent = '翻訳を再処理中です。次の同期後に自動更新されます。';
-
-      if (item && unsafeItem(item)) {
-        const block = card.querySelector('.audio-block, .audio-row');
-        if (block) block.innerHTML = '<button class="audio-btn" disabled>音声再生成中</button><span class="audio-note">翻訳検証後にSupertonic 3 F3音声を再公開します</span>';
-      }
+    document.querySelectorAll('.live-time').forEach(node => {
+      if (badError(node.textContent)) node.textContent = '更新時刻を再確認中';
     });
+  }
+
+  async function loadPublicationData() {
+    const isLive = document.body?.dataset?.page === 'live';
+    const path = isLive ? 'data/live.json' : 'data/latest.json';
+    try {
+      const r = await fetch(`${path}?integrity=${Date.now()}`, {cache:'no-store'});
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      return await r.json();
+    } catch (err) {
+      console.warn('publication integrity guard data check failed', err);
+      return null;
+    }
   }
 
   async function bootGuard() {
     setNextPublication();
-    setInterval(setNextPublication, 30000);
+    if (document.getElementById('live-next-update')) setInterval(setNextPublication, 30000);
 
-    const target = document.getElementById('live-items');
-    let data = null;
-    let map = new Map();
-    try {
-      const r = await fetch(`data/live.json?integrity=${Date.now()}`, {cache:'no-store'});
-      if (r.ok) {
-        data = await r.json();
-        map = new Map((Array.isArray(data?.items) ? data.items : []).map(item => [String(item.id || ''), item]));
-      }
-    } catch (err) {
-      console.warn('live integrity guard data check failed', err);
-    }
+    const data = await loadPublicationData();
+    const items = document.body?.dataset?.page === 'live' ? (data?.items || []) : (data?.articles || []);
+    const unsafeIds = new Set((Array.isArray(items) ? items : []).filter(unsafeItem).map(item => String(item.id || '')));
+    const dirty = hasErrorPayload(data) || unsafeIds.size > 0;
+    if (dirty) quarantineNotice();
 
-    const run = () => sanitizeRendered(map, data);
+    const run = () => {
+      sanitizeCards(unsafeIds);
+      sanitizeLiveMetadata(data);
+      setNextPublication();
+    };
+
     run();
-    if (target) {
+    const main = document.querySelector('main');
+    if (main) {
       const observer = new MutationObserver(run);
-      observer.observe(target, {childList:true, subtree:true, characterData:true});
+      observer.observe(main, {childList:true, subtree:true, characterData:true});
     }
-    const updated = document.getElementById('live-updated');
-    if (updated) {
-      const observer = new MutationObserver(run);
-      observer.observe(updated, {childList:true, subtree:true, characterData:true});
-    }
-    setTimeout(run, 400);
-    setTimeout(run, 1500);
+    setTimeout(run, 300);
+    setTimeout(run, 1200);
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', bootGuard, {once:true});
