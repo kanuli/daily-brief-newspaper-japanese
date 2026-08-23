@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-import hashlib,json,re,time
+import hashlib,html,json,re,time
 from pathlib import Path
 import requests
 from deep_translator import GoogleTranslator
+import pykakasi
 
 SOURCE_BASE="https://raw.githubusercontent.com/kanuli/daily-brief-newspaper/main/data"
 OUT=Path("data")
@@ -23,6 +24,8 @@ ARCHIVE_TOPIC_NAMES={
 HAN_RE=re.compile(r"[\u3400-\u9fff]")
 KANA_RE=re.compile(r"[\u3040-\u30ff]")
 CACHE_VERSION="ja-v2-explicit-zh-tw"
+KKS=pykakasi.kakasi()
+RUBY_FIELDS=("section","title","dek","summary","context","why","watchNext")
 
 def source_fingerprint(obj):
     raw=json.dumps(obj,ensure_ascii=False,sort_keys=True,separators=(",",":"))
@@ -113,6 +116,63 @@ def convert(obj,parent_key=""):
     if isinstance(obj,str) and parent_key in TRANSLATE_KEYS:return translate_text(obj)
     return obj
 
+def kata_to_hira_char(ch):
+    code=ord(ch)
+    if 0x30A1<=code<=0x30F6:return chr(code-0x60)
+    return ch
+
+def ruby_piece(orig,reading):
+    orig=str(orig or "");reading=str(reading or "")
+    if not orig:return ""
+    if not HAN_RE.search(orig) or not reading:
+        return html.escape(orig,quote=False)
+    op=hp=0;os=len(orig);hs=len(reading)
+    while op<os and hp<hs and not HAN_RE.match(orig[op]) and kata_to_hira_char(orig[op])==reading[hp]:
+        op+=1;hp+=1
+    while os>op and hs>hp and not HAN_RE.match(orig[os-1]) and kata_to_hira_char(orig[os-1])==reading[hs-1]:
+        os-=1;hs-=1
+    base=orig[op:os];yomi=reading[hp:hs]
+    if not base or not yomi or not HAN_RE.search(base):
+        return html.escape(orig,quote=False)
+    return (
+        html.escape(orig[:op],quote=False)
+        +f"<ruby>{html.escape(base,quote=False)}<rt>{html.escape(yomi,quote=False)}</rt></ruby>"
+        +html.escape(orig[os:],quote=False)
+    )
+
+def ruby_html(text):
+    value=str(text or "")
+    if not value:return ""
+    try:
+        parts=[]
+        for token in KKS.convert(value):
+            parts.append(ruby_piece(token.get("orig",""),token.get("hira","")))
+        return "".join(parts)
+    except Exception:
+        return html.escape(value,quote=False)
+
+def body_paragraphs(item):
+    raw=str(item.get("body") or item.get("summary") or "")
+    return [p.strip() for p in re.split(r"\n\s*\n",raw) if p.strip()]
+
+def add_furigana(data,list_key):
+    if not isinstance(data,dict):return data
+    for item in data.get(list_key,[]):
+        furigana={}
+        for field in RUBY_FIELDS:
+            value=item.get(field)
+            if isinstance(value,str) and value.strip():furigana[field]=ruby_html(value)
+        furigana["bodyParagraphs"]=[ruby_html(p) for p in body_paragraphs(item)]
+        item["furigana"]=furigana
+    return data
+
+def add_archive_furigana(data):
+    if not isinstance(data,dict):return data
+    for edition in data.get("editions",[]):
+        if edition.get("headline"):edition["furiganaHeadline"]=ruby_html(edition["headline"])
+        edition["furiganaTopics"]=[ruby_html(x) for x in edition.get("topics",[])]
+    return data
+
 def fetch(name):
     r=requests.get(f"{SOURCE_BASE}/{name}",timeout=40,headers={"User-Agent":"daily-brief-newspaper-japanese"})
     if r.status_code==404:return None
@@ -121,13 +181,17 @@ def fetch(name):
 def attach_daily_audio(data):
     if isinstance(data,dict):
         for a in data.get("articles",[]):
-            if a.get("id"):a["audio"]=f"audio/daily/{a['id']}.mp3"
+            if a.get("id"):
+                a["audio"]=f"audio/daily/{a['id']}.mp3"
+                a["timing"]=f"audio/timing/daily/{a['id']}.json"
     return data
 
 def attach_live_audio(data):
     if isinstance(data,dict):
         for a in data.get("items",[]):
-            if a.get("id"):a["audio"]=f"audio/live/{a['id']}.mp3"
+            if a.get("id"):
+                a["audio"]=f"audio/live/{a['id']}.mp3"
+                a["timing"]=f"audio/timing/live/{a['id']}.json"
     return data
 
 def main():
@@ -136,8 +200,9 @@ def main():
         src=fetch(name)
         if src is None:continue
         translated=convert(src)
-        if name=="latest.json":translated=attach_daily_audio(translated)
-        if name=="live.json":translated=attach_live_audio(translated)
+        if name=="latest.json":translated=add_furigana(attach_daily_audio(translated),"articles")
+        if name=="live.json":translated=add_furigana(attach_live_audio(translated),"items")
+        if name=="archive.json":translated=add_archive_furigana(translated)
         if isinstance(translated,dict):
             translated["language"]="ja"
             translated["translationSource"]="kanuli/daily-brief-newspaper"
