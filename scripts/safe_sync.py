@@ -2,7 +2,7 @@
 """Hardened wrapper around sync_and_translate.
 
 Rejects translator error pages and partially untranslated Traditional Chinese,
-uses a second free translation backend as fallback, normalizes Live schedule
+uses multiple free translation backends as fallbacks, normalizes Live schedule
 metadata deterministically, and only hands clean Japanese data to the existing
 furigana/audio pipeline.
 """
@@ -10,6 +10,7 @@ import hashlib
 import re
 import time
 
+import requests
 from deep_translator import MyMemoryTranslator
 import sync_and_translate as base
 import validate_content_integrity as integrity
@@ -52,6 +53,39 @@ def target_quality_ok(source_text, value, strict=False):
     return True
 
 
+def google_gtx_translate(part, strict=False):
+    """Use Google's lightweight translate endpoint before HTML-scraping backends.
+
+    The endpoint returns JSON rather than an HTML page, so upstream 4xx/5xx pages
+    cannot be mistaken for translated article text. No API key is required.
+    """
+    sources = ("zh-TW", "auto", "zh-CN") if base.likely_chinese_source(part) else ("auto",)
+    last_error = None
+    for source in sources:
+        for attempt in range(3):
+            try:
+                response = requests.get(
+                    "https://translate.googleapis.com/translate_a/single",
+                    params={"client": "gtx", "sl": source, "tl": "ja", "dt": "t", "q": part},
+                    headers={"User-Agent": "Mozilla/5.0 daily-brief-newspaper-japanese"},
+                    timeout=25,
+                )
+                response.raise_for_status()
+                payload = response.json()
+                segments = payload[0] if isinstance(payload, list) and payload else []
+                value = "".join(
+                    str(segment[0]) for segment in segments
+                    if isinstance(segment, list) and segment and segment[0]
+                )
+                if not target_quality_ok(part, value, strict=strict):
+                    raise RuntimeError(f"GTX {source} returned invalid/non-Japanese payload")
+                return value
+            except Exception as exc:
+                last_error = exc
+                time.sleep(0.6 * (attempt + 1))
+    raise RuntimeError(str(last_error or "Google GTX translation failed"))
+
+
 def google_translate(part, strict=False):
     sources = ("zh-TW", "auto", "zh-CN") if base.likely_chinese_source(part) else ("auto",)
     last_error = None
@@ -89,17 +123,21 @@ def mymemory_translate(part, strict=False):
 
 
 def safe_translate_part(part, strict=False):
+    errors = []
+    try:
+        return google_gtx_translate(part, strict=strict)
+    except Exception as exc:
+        errors.append(f"gtx={exc}")
     try:
         return google_translate(part, strict=strict)
-    except Exception as google_error:
-        if base.likely_chinese_source(part):
-            try:
-                return mymemory_translate(part, strict=strict)
-            except Exception as memory_error:
-                raise RuntimeError(
-                    f"All free Japanese translation backends failed; google={google_error}; mymemory={memory_error}"
-                ) from memory_error
-        raise
+    except Exception as exc:
+        errors.append(f"deep_google={exc}")
+    if base.likely_chinese_source(part):
+        try:
+            return mymemory_translate(part, strict=strict)
+        except Exception as exc:
+            errors.append(f"mymemory={exc}")
+    raise RuntimeError("All free Japanese translation backends failed; " + "; ".join(errors))
 
 
 def safe_translate_text(text, strict=False):
@@ -107,6 +145,8 @@ def safe_translate_text(text, strict=False):
         return text
     if re.match(r"^https?://", text):
         return text
+    if bad_error_text(text):
+        raise RuntimeError(f"Source field contains an upstream error payload: {text[:100]!r}")
     key = hashlib.sha256(f"{base.CACHE_VERSION}|{text}".encode("utf-8")).hexdigest()
     cached = base.CACHE.get(key)
     if cached is not None:
