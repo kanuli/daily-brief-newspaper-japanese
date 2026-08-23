@@ -7,6 +7,7 @@ on:
     paths:
       - 'scripts/generate_supertonic_f3.py'
       - 'scripts/validate_site.py'
+      - 'scripts/validate_content_integrity.py'
       - '.github/workflows/rebuild-f3-pacing.yml'
 
 permissions:
@@ -39,6 +40,9 @@ jobs:
       - name: 依存パッケージをインストール
         run: pip install -r requirements.txt
 
+      - name: 音声生成前に日本語コンテンツ完全性を検証
+        run: python scripts/validate_content_integrity.py
+
       - name: F3ニュース読みを意味区切りで再生成
         run: python scripts/generate_supertonic_f3.py
 
@@ -46,7 +50,10 @@ jobs:
         run: python scripts/validate_site.py --data-only
 
       - name: JavaScript構文チェック
-        run: node --check assets/js/newspaper-ja.js
+        run: |
+          node --check assets/js/newspaper-ja.js
+          node --check assets/js/system-ja.js
+          node --check assets/js/live-guard.js
 
       - name: 生成物をmainへ保存
         shell: bash

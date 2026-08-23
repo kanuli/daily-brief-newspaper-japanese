@@ -2,6 +2,7 @@
 import argparse,json,re
 from html.parser import HTMLParser
 from pathlib import Path
+import validate_content_integrity as content_integrity
 
 ROOT=Path(__file__).resolve().parents[1]
 HTML_PAGES=['index.html','live.html','world.html','asia.html','hong-kong.html','japan.html','finance.html','stocks.html','technology.html','manga-anime.html','manchester-united.html','football.html','archive.html']
@@ -29,13 +30,15 @@ def load_json(rel):
     except Exception as exc:fail(f'invalid JSON {rel}: {exc}')
 
 def validate_html():
-    system_js=ROOT/'assets/js/system-ja.js';system_css=ROOT/'assets/css/system-ja.css';newspaper_css=ROOT/'assets/css/newspaper.css';news_js=ROOT/'assets/js/newspaper-ja.js'
-    for path in (system_js,system_css,newspaper_css,news_js):
+    system_js=ROOT/'assets/js/system-ja.js';system_css=ROOT/'assets/css/system-ja.css';newspaper_css=ROOT/'assets/css/newspaper.css';news_js=ROOT/'assets/js/newspaper-ja.js';live_guard=ROOT/'assets/js/live-guard.js'
+    for path in (system_js,system_css,newspaper_css,news_js,live_guard):
         if not path.is_file():fail(f'missing {path.relative_to(ROOT)}')
-    css=newspaper_css.read_text(encoding='utf-8');renderer=news_js.read_text(encoding='utf-8');nav_js=system_js.read_text(encoding='utf-8')
+    css=newspaper_css.read_text(encoding='utf-8');renderer=news_js.read_text(encoding='utf-8');nav_js=system_js.read_text(encoding='utf-8');guard=live_guard.read_text(encoding='utf-8')
     if 'white-space:nowrap' not in css:fail('masthead title is not protected from wrapping')
     if '.sync-text.is-speaking' not in css or 'audio-transcript' not in css:fail('playback highlight/transcript styles missing')
     if 'synced-audio' not in renderer or 'data-timing' not in renderer or 'furigana' not in renderer:fail('furigana/playback synchronization renderer missing')
+    if 'live-next-update' not in (ROOT/'live.html').read_text(encoding='utf-8'):fail('live page next publication field missing')
+    if 'nextPublicationLabel' not in guard or 'Error 500' not in guard:fail('live publication/error quarantine guard missing')
     for href in NAV_HREFS:
         if href not in nav_js:fail(f'unified navigation missing {href}')
     if '<ruby>一面' not in nav_js or '<ruby>速報' not in nav_js:fail('navigation furigana missing')
@@ -55,7 +58,7 @@ def validate_html():
             if re.match(r'^(?:https?:|mailto:|tel:|#|javascript:)',ref):continue
             clean=ref.split('?',1)[0].split('#',1)[0]
             if clean and not (ROOT/clean).exists():fail(f'{rel}: broken local reference {ref}')
-    print(f'HTML_OK {len(HTML_PAGES)} pages; unified navigation {len(NAV_HREFS)} links; furigana/sync UI present')
+    print(f'HTML_OK {len(HTML_PAGES)} pages; unified navigation {len(NAV_HREFS)} links; furigana/sync UI and Live guard present')
 
 def japanese_copy_ok(item):
     visible=' '.join(str(item.get(k,'') or '') for k in ('title','dek','summary','body','context','why','watchNext'))
@@ -109,6 +112,9 @@ def validate_timing(group,aid,path):
 
 def validate_news_and_audio():
     latest=load_json('data/latest.json');live=load_json('data/live.json');archive=load_json('data/archive.json')
+    for name,data in (('latest.json',latest),('live.json',live),('archive.json',archive)):
+        issues=content_integrity.collect_issues(name,data)
+        if issues:fail(f'content integrity {issues[0]}')
     if latest.get('language')!='ja':fail('data/latest.json language != ja')
     if live.get('language')!='ja':fail('data/live.json language != ja')
     validate_archive(archive)
@@ -143,7 +149,7 @@ def validate_news_and_audio():
     manifest_keys=set(manifest)
     if expected-manifest_keys:fail(f'manifest missing keys: {sorted(expected-manifest_keys)}')
     if manifest_keys-expected:fail(f'manifest has stale keys: {sorted(manifest_keys-expected)}')
-    print(f'DATA_AUDIO_OK {checked} Japanese Daily/Live items with furigana, semantic news-anchor pauses and capped speaking rate')
+    print(f'DATA_AUDIO_OK {checked} Japanese Daily/Live items with clean content, furigana, semantic news-anchor pauses and capped speaking rate')
 
 def main():
     p=argparse.ArgumentParser();g=p.add_mutually_exclusive_group();g.add_argument('--static-only',action='store_true');g.add_argument('--data-only',action='store_true');args=p.parse_args()

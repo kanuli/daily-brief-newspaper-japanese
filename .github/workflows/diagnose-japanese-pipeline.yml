@@ -17,9 +17,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: 全サイトQA
-        run: python scripts/validate_site.py
+        run: |
+          python scripts/validate_content_integrity.py
+          python scripts/validate_site.py
 
       - name: JavaScript構文チェック
         run: |
           node --check assets/js/newspaper-ja.js
           node --check assets/js/system-ja.js
+          node --check assets/js/live-guard.js
