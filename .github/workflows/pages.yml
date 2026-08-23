@@ -27,21 +27,13 @@ jobs:
         with:
           ref: main
 
-      - name: 公開前の基本チェック
-        shell: bash
+      - name: 全サイト公開前QA
+        run: python scripts/validate_site.py
+
+      - name: JavaScript構文チェック
         run: |
-          test -f index.html
-          test -f data/latest.json
-          test -f data/live.json
-          python - <<'PY'
-          import json
-          from pathlib import Path
-          for name in ('data/latest.json','data/live.json'):
-              data=json.loads(Path(name).read_text(encoding='utf-8'))
-              if data.get('language') != 'ja':
-                  raise SystemExit(f'{name}: language must be ja')
-          print('JAPANESE_STATIC_SITE_GATE_OK')
-          PY
+          node --check assets/js/newspaper-ja.js
+          node --check assets/js/system-ja.js
 
       - name: Pagesを設定
         uses: actions/configure-pages@v5
