@@ -44,7 +44,7 @@ jobs:
       - name: Supertonic 3 F3で日本語ニュース音声を生成
         run: python scripts/generate_supertonic_f3.py
 
-      - name: 日本語版のみを公開するための検査
+      - name: 日本語版とF3音声を公開前に検査
         run: |
           python - <<'PY'
           import json
@@ -55,11 +55,22 @@ jobs:
               assert data.get('language')=='ja', f'{name}: language is not ja'
           latest=json.loads(Path('data/latest.json').read_text(encoding='utf-8'))
           required=('title','summary')
-          for a in latest.get('articles',[]):
+          articles=latest.get('articles',[])
+          assert articles, 'latest.json has no articles'
+          for a in articles:
+              aid=a.get('id')
               for key in required:
-                  assert str(a.get(key,'')).strip(), f"{a.get('id')}: missing {key}"
-              assert a.get('audio','').startswith('audio/'), f"{a.get('id')}: missing F3 audio path"
-          print('Japanese publication gate: OK')
+                  assert str(a.get(key,'')).strip(), f'{aid}: missing {key}'
+              audio=a.get('audio','')
+              assert audio.startswith('audio/'), f'{aid}: missing F3 audio path'
+              audio_path=Path(audio)
+              assert audio_path.exists(), f'{aid}: F3 audio file was not generated: {audio}'
+              assert audio_path.stat().st_size > 1024, f'{aid}: F3 audio is unexpectedly small: {audio}'
+          manifest_path=Path('audio/manifest.json')
+          assert manifest_path.exists(), 'audio/manifest.json is missing'
+          manifest=json.loads(manifest_path.read_text(encoding='utf-8'))
+          assert all(a.get('id') in manifest for a in articles), 'F3 manifest does not cover every article'
+          print(f'Japanese publication gate: OK ({len(articles)} articles with F3 audio)')
           PY
 
       - name: 更新を保存
