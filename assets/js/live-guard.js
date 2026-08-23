@@ -60,7 +60,13 @@
 
   function setNextPublication() {
     const node = document.getElementById('live-next-update');
-    if (node) node.textContent = nextPublicationLabel();
+    if (!node) return false;
+    const label = nextPublicationLabel();
+    // Idempotent write: this element sits inside the observed <main>. Rewriting an
+    // unchanged value would retrigger the MutationObserver forever and freeze Live.
+    if (node.textContent === label) return false;
+    node.textContent = label;
+    return true;
   }
 
   function quarantineNotice() {
@@ -109,10 +115,11 @@
   function sanitizeLiveMetadata(data) {
     const updated = document.getElementById('live-updated');
     if (updated && (badError(updated.textContent) || !updated.textContent.trim() || updated.textContent.trim() === '—')) {
-      updated.textContent = formatUpdated(data?.lastUpdated);
+      const replacement = formatUpdated(data?.lastUpdated);
+      if (updated.textContent !== replacement) updated.textContent = replacement;
     }
     document.querySelectorAll('.live-time').forEach(node => {
-      if (badError(node.textContent)) node.textContent = '更新時刻を再確認中';
+      if (badError(node.textContent) && node.textContent !== '更新時刻を再確認中') node.textContent = '更新時刻を再確認中';
     });
   }
 
@@ -148,7 +155,15 @@
     run();
     const main = document.querySelector('main');
     if (main) {
-      const observer = new MutationObserver(run);
+      let framePending = false;
+      const observer = new MutationObserver(() => {
+        if (framePending) return;
+        framePending = true;
+        requestAnimationFrame(() => {
+          framePending = false;
+          run();
+        });
+      });
       observer.observe(main, {childList:true, subtree:true, characterData:true});
     }
     setTimeout(run, 300);
