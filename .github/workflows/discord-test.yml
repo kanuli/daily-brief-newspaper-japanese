@@ -1,5 +1,6 @@
 name: Discord Japanese End-to-End Test
 
+# Triggered after initial workflow registration so GitHub Actions sees it on the default branch.
 on:
   push:
     branches: ["main"]
