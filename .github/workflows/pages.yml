@@ -27,6 +27,9 @@ jobs:
         with:
           ref: main
 
+      - name: コンテンツ完全性を検証
+        run: python scripts/validate_content_integrity.py
+
       - name: 全サイト公開前QA
         run: python scripts/validate_site.py
 
@@ -34,6 +37,7 @@ jobs:
         run: |
           node --check assets/js/newspaper-ja.js
           node --check assets/js/system-ja.js
+          node --check assets/js/live-guard.js
 
       - name: Pagesを設定
         uses: actions/configure-pages@v5

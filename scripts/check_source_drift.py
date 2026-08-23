@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import hashlib,json,os,sys,urllib.request
 from pathlib import Path
+import validate_content_integrity as integrity
 
 ROOT=Path(__file__).resolve().parents[1]
 SOURCE_BASE="https://raw.githubusercontent.com/kanuli/daily-brief-newspaper/main/data"
@@ -27,7 +28,7 @@ def emit(key,value):
         with open(path,"a",encoding="utf-8") as f:f.write(f"{key}={value}\n")
 
 def main():
-    drift=[];errors=[]
+    drift=[];errors=[];integrity_bad=[]
     for name in FILES:
         try:src=remote_json(name)
         except Exception as exc:
@@ -36,15 +37,24 @@ def main():
         expected=fingerprint(src)
         actual=str((local or {}).get("sourceFingerprint") or "")
         if expected!=actual:drift.append(name)
+        if local is None:
+            integrity_bad.append(name)
+        else:
+            issues=integrity.collect_issues(name,local)
+            if issues:integrity_bad.append(name)
+    dirty=sorted(set(drift)|set(integrity_bad))
     available=not errors
     emit("available",str(available).lower())
-    emit("drift",str(bool(drift)).lower())
-    emit("files",",".join(drift))
+    emit("drift",str(bool(dirty)).lower())
+    emit("files",",".join(dirty))
+    emit("integrity",",".join(sorted(set(integrity_bad))))
     emit("errors",",".join(errors))
     if errors:
         print("SOURCE_DRIFT_CHECK_DEGRADED",",".join(errors))
-    if drift:
-        print("SOURCE_DRIFT_DETECTED",",".join(drift));return 10
+    if integrity_bad:
+        print("LOCAL_CONTENT_INTEGRITY_FAIL",",".join(sorted(set(integrity_bad))))
+    if dirty:
+        print("SOURCE_DRIFT_DETECTED",",".join(dirty));return 10
     print("SOURCE_DRIFT_OK" if available else "SOURCE_DRIFT_UNKNOWN")
     return 0
 

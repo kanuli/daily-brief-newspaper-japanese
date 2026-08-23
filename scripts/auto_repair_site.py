@@ -10,9 +10,10 @@ HTML_PAGES=[
 ]
 STATIC_CRITICAL=HTML_PAGES+[
     'assets/css/newspaper.css','assets/css/system-ja.css',
-    'assets/js/newspaper-ja.js','assets/js/system-ja.js','scripts/validate_site.py'
+    'assets/js/newspaper-ja.js','assets/js/system-ja.js','assets/js/live-guard.js',
+    'scripts/validate_site.py'
 ]
-VERSIONED_ASSETS=['assets/css/newspaper.css','assets/css/system-ja.css','assets/js/newspaper-ja.js','assets/js/system-ja.js']
+VERSIONED_ASSETS=['assets/css/newspaper.css','assets/css/system-ja.css','assets/js/newspaper-ja.js','assets/js/system-ja.js','assets/js/live-guard.js']
 REPLACEMENTS={
     '載入中…':'読み込み中…','亞洲':'アジア','財經':'経済','廣東話':'広東語',
     '頭版':'一面トップ','歷史日報':'アーカイブ','新聞分版':'ニュース分野','關閉':'閉じる'
@@ -79,11 +80,22 @@ def restore_from_golden(ref='origin/maintenance-known-good'):
     print('GOLDEN_STATIC_RESTORED',','.join(restored) if restored else 'none')
     return restored
 
+def restore_missing_from_golden(ref='origin/maintenance-known-good'):
+    restored=[]
+    for rel in STATIC_CRITICAL:
+        target=ROOT/rel
+        if target.exists():continue
+        p=subprocess.run(['git','show',f'{ref}:{rel}'],cwd=ROOT,stdout=subprocess.PIPE,stderr=subprocess.DEVNULL)
+        if p.returncode:continue
+        target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(p.stdout);restored.append(rel)
+    print('GOLDEN_MISSING_RESTORED',','.join(restored) if restored else 'none')
+    return restored
+
 def main():
-    changed=[]
+    changed=restore_missing_from_golden()
     if repair_css():changed.append('assets/css/newspaper.css')
     for rel in HTML_PAGES:
         if normalize_html(rel):changed.append(rel)
-    print('STATIC_REPAIR_CHANGED',','.join(changed) if changed else 'none')
+    print('STATIC_REPAIR_CHANGED',','.join(dict.fromkeys(changed)) if changed else 'none')
 
 if __name__=='__main__':main()
