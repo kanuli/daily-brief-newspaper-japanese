@@ -50,5 +50,9 @@ jobs:
               t=json.loads(timing.read_text(encoding='utf-8'))
               print('TIMING_SPEED',t.get('speed'),'PROFILE',t.get('deliveryProfile'),'CPM',t.get('charactersPerMinute'),'TARGET',t.get('targetMaxCharactersPerMinute'),'SEGMENTS',len(t.get('segments') or []),'UNITS',len(t.get('semanticUnits') or []),'DURATION',t.get('duration'))
               reasons=sorted({str(u.get('reason')) for u in (t.get('semanticUnits') or [])})
+              pauses=[(u.get('pause'),u.get('intendedPause')) for u in (t.get('semanticUnits') or []) if float(u.get('intendedPause') or 0)>0]
+              max_drift=max((abs(float(a)-float(b)) for a,b in pauses),default=0)
               print('PAUSE_REASONS',','.join(reasons))
+              print('MAX_PAUSE_DRIFT',round(max_drift,4))
           PY
+      # v4 fixed-pause refresh
