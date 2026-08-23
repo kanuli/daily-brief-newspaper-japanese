@@ -2,16 +2,16 @@
   'use strict';
 
   const NAV = [
-    ['live.html','速報','live-nav'],
-    ['index.html','一面トップ',''],
-    ['world.html','世界',''],
+    ['live.html','<ruby>速報<rt>そくほう</rt></ruby>','live-nav'],
+    ['index.html','<ruby>一面<rt>いちめん</rt></ruby>トップ',''],
+    ['world.html','<ruby>世界<rt>せかい</rt></ruby>',''],
     ['asia.html','アジア',''],
-    ['hong-kong.html','香港',''],
-    ['japan.html','日本',''],
-    ['finance.html','経済',''],
-    ['stocks.html','株式ニュース',''],
+    ['hong-kong.html','<ruby>香港<rt>ほんこん</rt></ruby>',''],
+    ['japan.html','<ruby>日本<rt>にほん</rt></ruby>',''],
+    ['finance.html','<ruby>経済<rt>けいざい</rt></ruby>',''],
+    ['stocks.html','<ruby>株式<rt>かぶしき</rt></ruby>ニュース',''],
     ['technology.html','AI・テクノロジー',''],
-    ['manga-anime.html','漫画・アニメ',''],
+    ['manga-anime.html','<ruby>漫画<rt>まんが</rt></ruby>・アニメ',''],
     ['manchester-united.html','マンチェスター・U',''],
     ['football.html','サッカー',''],
     ['archive.html','アーカイブ','']
@@ -42,8 +42,15 @@
 
     document.querySelectorAll('a[href="index.html"]').forEach(a=>{
       if(a.closest('.section-nav')) return;
-      if(a.textContent.trim()==='トップへ') a.textContent='一面トップへ';
-      else if(a.textContent.trim()==='トップ') a.textContent='一面トップ';
+      const text=a.textContent.trim();
+      if(text==='トップへ'||text==='一面トップへ') a.innerHTML='<ruby>一面<rt>いちめん</rt></ruby>トップへ';
+      else if(text==='トップ'||text==='一面トップ') a.innerHTML='<ruby>一面<rt>いちめん</rt></ruby>トップ';
+    });
+  }
+
+  function applyStaticRuby(){
+    document.querySelectorAll('.brand h1').forEach(h=>{
+      if(h.textContent.trim()==='日刊速報')h.innerHTML='<ruby>日刊速報<rt>にっかんそくほう</rt></ruby>';
     });
   }
 
@@ -91,7 +98,7 @@
     panel.id='system-status-panel';
     panel.className='system-status-panel';
     panel.hidden=true;
-    panel.innerHTML=`<div class="system-panel-head"><div><strong>システム状態</strong><span>日本語版・稼働確認</span></div><button type="button" class="system-panel-close" aria-label="閉じる">×</button></div>${row('status-site','ウェブサイト','確認中')}${row('status-daily','デイリー版','確認中')}${row('status-live','速報','確認中')}${row('status-audio','日本語音声','確認中')}<div class="system-panel-links"><a href="https://github.com/kanuli/daily-brief-newspaper-japanese/actions" target="_blank" rel="noopener noreferrer">GitHub Actions ↗</a><a href="https://github.com/kanuli/daily-brief-newspaper-japanese" target="_blank" rel="noopener noreferrer">Repository ↗</a></div>`;
+    panel.innerHTML=`<div class="system-panel-head"><div><strong><ruby>システム状態<rt>じょうたい</rt></ruby></strong><span><ruby>日本語版<rt>にほんごばん</rt></ruby>・<ruby>稼働確認<rt>かどうかくにん</rt></ruby></span></div><button type="button" class="system-panel-close" aria-label="閉じる">×</button></div>${row('status-site','ウェブサイト','確認中')}${row('status-daily','デイリー版','確認中')}${row('status-live','<ruby>速報<rt>そくほう</rt></ruby>','確認中')}${row('status-audio','<ruby>日本語音声<rt>にほんごおんせい</rt></ruby>','確認中')}<div class="system-panel-links"><a href="https://github.com/kanuli/daily-brief-newspaper-japanese/actions" target="_blank" rel="noopener noreferrer">GitHub Actions ↗</a><a href="https://github.com/kanuli/daily-brief-newspaper-japanese" target="_blank" rel="noopener noreferrer">Repository ↗</a></div>`;
 
     const setOpen=open=>{panel.hidden=!open;button.setAttribute('aria-expanded',String(open));if(open)refreshHealth();};
     button.addEventListener('click',()=>setOpen(panel.hidden));
@@ -100,7 +107,7 @@
     document.body.append(button,panel);
   }
 
-  function boot(){ensureStyle();normalizeNav();mountSystemPanel();}
+  function boot(){ensureStyle();normalizeNav();applyStaticRuby();mountSystemPanel();}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
-  window.addEventListener('pageshow',normalizeNav);
+  window.addEventListener('pageshow',()=>{normalizeNav();applyStaticRuby();});
 })();
