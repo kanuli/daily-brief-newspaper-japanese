@@ -1,0 +1,61 @@
+name: Temporary Actions Status Snapshot
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/status-snapshot.yml'
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 20
+
+      - name: Capture workflow state
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh run list --workflow sync-japanese-news.yml --branch main --limit 15 --json databaseId,status,conclusion,createdAt,updatedAt,headSha,event,url > /tmp/sync.json
+          gh run list --workflow pages.yml --branch main --limit 15 --json databaseId,status,conclusion,createdAt,updatedAt,headSha,event,url > /tmp/pages.json
+          gh run list --workflow auto-maintenance.yml --branch main --limit 15 --json databaseId,status,conclusion,createdAt,updatedAt,headSha,event,url > /tmp/maintenance.json
+          mkdir -p diagnostics
+          python - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          out={
+            'capturedAt': datetime.now(timezone.utc).isoformat(),
+            'sync': json.load(open('/tmp/sync.json', encoding='utf-8')),
+            'pages': json.load(open('/tmp/pages.json', encoding='utf-8')),
+            'maintenance': json.load(open('/tmp/maintenance.json', encoding='utf-8')),
+          }
+          with open('diagnostics/actions-status.json','w',encoding='utf-8') as f:
+            json.dump(out,f,ensure_ascii=False,indent=2)
+            f.write('\n')
+          PY
+
+      - name: Commit snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'japanese-status-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add diagnostics/actions-status.json
+          git commit -m 'Record temporary Actions status snapshot'
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git pull --rebase origin main
+            sleep $((attempt * 2))
+          done
+          exit 1
