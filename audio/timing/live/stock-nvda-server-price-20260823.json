@@ -1,0 +1,410 @@
+{
+  "version": 3,
+  "duration": 184.268,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 589,
+  "charactersPerMinute": 191.8,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 17.306,
+      "text": "データセンターに送られるメモリコストの上昇により、Huida AI サーバーは 15% 以上の値上げを計画していると伝えられている"
+    },
+    {
+      "key": "dek",
+      "start": 17.306,
+      "end": 32.89,
+      "text": "一部の出荷システムは、チップの生成とメモリ割り当てに応じて、来年初めに価格を引き上げると伝えられています。"
+    },
+    {
+      "key": "body-0",
+      "start": 32.89,
+      "end": 82.544,
+      "text": "ロイター通信はブルームバーグの報道を引用し、フイダが大手顧客に対し、主にメモリチップのコストの高騰により、同社の人工知能チップを搭載した一部のサーバーの価格が15％以上上昇するだろうと伝えたと伝えた。価格上昇は、2027 年初頭に出荷されるシステムに影響を与えると予想されており、実際の規模はチップの世代とメモリ構成によって異なります。"
+    },
+    {
+      "key": "body-1",
+      "start": 82.544,
+      "end": 135.855,
+      "text": "レポートによると、Microsoft、Google、Oracle などの大規模データセンター顧客に製品を供給しているサーバー メーカーが、新しい価格情報を顧客に伝え始めています。 Huidaは8月26日に四半期決算を発表する予定である。市場は、高コストがスムーズに転嫁できるかどうか、また大規模なクラウド顧客の人工知能設備投資が堅調に推移するかどうかに注目するだろう。"
+    },
+    {
+      "key": "why",
+      "start": 135.855,
+      "end": 164.204,
+      "text": "この値上げは、サプライチェーンのコスト圧力とフィデリティの価格設定力の両方を反映しており、顧客の資本支出のペースと市場の粗利益率の期待に影響を与える可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 164.204,
+      "end": 184.268,
+      "text": "注意 8 月 26 日の業績、管理層記憶領域全体の定期的なコメント、およびクラウドエンドの顧客資本開放支持率。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 5.574,
+      "end": 5.804,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "データセンターに送られるメモリコストの上昇により、"
+    },
+    {
+      "parentKey": "title",
+      "start": 5.804,
+      "speechEnd": 8.8,
+      "end": 9.081,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "Huida AI サーバーは"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.081,
+      "speechEnd": 16.606,
+      "end": 17.306,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "15% 以上の値上げを計画していると伝えられている。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.306,
+      "speechEnd": 20.372,
+      "end": 20.602,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "一部の出荷システムは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.602,
+      "speechEnd": 25.688,
+      "end": 25.918,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "チップの生成とメモリ割り当てに応じて、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.918,
+      "speechEnd": 32.189,
+      "end": 32.89,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "来年初めに価格を引き上げると伝えられています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 32.89,
+      "speechEnd": 38.394,
+      "end": 38.624,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信はブルームバーグの報道を引用し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.624,
+      "speechEnd": 42.038,
+      "end": 42.269,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "フイダが大手顧客に対し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.269,
+      "speechEnd": 47.216,
+      "end": 47.446,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "主にメモリチップのコストの高騰により、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.446,
+      "speechEnd": 54.344,
+      "end": 54.624,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "同社の人工知能チップを搭載した一部のサーバーの価格が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.624,
+      "speechEnd": 61.104,
+      "end": 61.604,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "15％以上上昇するだろうと伝えたと伝えた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.604,
+      "speechEnd": 63.904,
+      "end": 64.134,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "価格上昇は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.134,
+      "speechEnd": 70.683,
+      "end": 70.963,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "2027 年初頭に出荷されるシステムに影響を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.963,
+      "speechEnd": 74.726,
+      "end": 74.956,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "与えると予想されており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.956,
+      "speechEnd": 81.924,
+      "end": 82.544,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "実際の規模はチップの世代とメモリ構成によって異なります。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.544,
+      "speechEnd": 85.192,
+      "end": 85.422,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "レポートによると、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 85.422,
+      "speechEnd": 87.791,
+      "end": 88.021,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Microsoft、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.021,
+      "speechEnd": 90.111,
+      "end": 90.341,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Google、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.341,
+      "speechEnd": 96.264,
+      "end": 96.544,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "Oracle などの大規模データセンター顧客に製品を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 96.544,
+      "speechEnd": 100.516,
+      "end": 100.746,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "供給しているサーバー メーカーが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 100.746,
+      "speechEnd": 106.459,
+      "end": 106.96,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "新しい価格情報を顧客に伝え始めています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 106.96,
+      "speechEnd": 115.53,
+      "end": 116.03,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "Huidaは8月26日に四半期決算を発表する予定である。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 116.03,
+      "speechEnd": 118.12,
+      "end": 118.351,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "市場は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.351,
+      "speechEnd": 123.716,
+      "end": 123.946,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "高コストがスムーズに転嫁できるかどうか、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 123.946,
+      "speechEnd": 129.868,
+      "end": 130.148,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "また大規模なクラウド顧客の人工知能設備投資が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 130.148,
+      "speechEnd": 135.235,
+      "end": 135.855,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "堅調に推移するかどうかに注目するだろう。"
+    },
+    {
+      "parentKey": "why",
+      "start": 135.855,
+      "speechEnd": 139.827,
+      "end": 140.327,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 140.327,
+      "speechEnd": 142.766,
+      "end": 142.996,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この値上げは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 142.996,
+      "speechEnd": 152.333,
+      "end": 152.563,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "サプライチェーンのコスト圧力とフィデリティの価格設定力の両方を反映しており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 152.563,
+      "speechEnd": 159.809,
+      "end": 160.089,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "顧客の資本支出のペースと市場の粗利益率の期待に影響を"
+    },
+    {
+      "parentKey": "why",
+      "start": 160.089,
+      "speechEnd": 163.503,
+      "end": 164.204,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "与える可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 164.204,
+      "speechEnd": 166.294,
+      "end": 166.524,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 166.524,
+      "speechEnd": 171.541,
+      "end": 171.771,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "注意 8 月 26 日の業績、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 171.771,
+      "speechEnd": 177.345,
+      "end": 177.575,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "管理層記憶領域全体の定期的なコメント、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 177.575,
+      "speechEnd": 183.568,
+      "end": 184.268,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "およびクラウドエンドの顧客資本開放支持率。"
+    }
+  ]
+}

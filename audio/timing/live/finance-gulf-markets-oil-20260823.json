@@ -1,0 +1,390 @@
+{
+  "version": 3,
+  "duration": 186.54,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 551,
+  "charactersPerMinute": 177.2,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 17.184,
+      "text": "原油価格の上昇は、サウジアラビアの主要指数が1.1 ％上昇したことで、湾岸諸国の株式市場を構築するのに役立った"
+    },
+    {
+      "key": "dek",
+      "start": 17.184,
+      "end": 39.665,
+      "text": "イランの貿易相手国に対する米国の制裁の脅威は、金曜日にブレント原油が1バレル94.39ドルで終わったことで、供給の懸念を高めた。"
+    },
+    {
+      "key": "body-0",
+      "start": 39.665,
+      "end": 87.828,
+      "text": "主要な湾岸諸国の株式は8月23日に概ね確立され、市場は原油価格の上昇と中東の供給リスクに焦点を当てていた。ロイター通信によると、米国がイランの貿易相手国に課した経済制裁の脅威により、投資家は原油供給が引き締まる可能性のあるリスクを再評価するようになったため、ブレントは金曜日に1バレル94.39ドルで終わった。"
+    },
+    {
+      "key": "body-1",
+      "start": 87.828,
+      "end": 137.208,
+      "text": "サウジアラビアの主要な株式市場指数は、金融と原材料を中心に1.1 ％上昇し、カタールの指数は0.1 ％上昇した。地域外では、エジプトのEGX 30指数も1.1 ％上昇した。高い原油価格を維持することは、一方で石油生産国の財政・エネルギー資本を支え、他方で世界的なインフレと金利圧力を長引かせる可能性がある。"
+    },
+    {
+      "key": "why",
+      "start": 137.208,
+      "end": 162.835,
+      "text": "供給リスクが資産価格設定に再び入り込み、世界のインフレ期待に影響を与える可能性があることを反映して、原油価格は中東市場と連動して上昇している。"
+    },
+    {
+      "key": "watch",
+      "start": 162.835,
+      "end": 186.54,
+      "text": "月曜日のブレント原油価格、米国とイラン関連の制裁、ホルムズ海峡の海運、そして世界市場がエネルギーリスクにどのように反応するかに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.135,
+      "end": 3.365,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "原油価格の上昇は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.365,
+      "speechEnd": 10.68,
+      "end": 10.911,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "サウジアラビアの主要指数が1.1 ％上昇したことで、"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.911,
+      "speechEnd": 16.484,
+      "end": 17.184,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "湾岸諸国の株式市場を構築するのに役立った。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.184,
+      "speechEnd": 24.151,
+      "end": 24.381,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "イランの貿易相手国に対する米国の制裁の脅威は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.381,
+      "speechEnd": 29.049,
+      "end": 29.189,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "金曜日にブレント原油が1バレル"
+    },
+    {
+      "parentKey": "dek",
+      "start": 29.189,
+      "speechEnd": 32.533,
+      "end": 32.673,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "94.39ドル"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.673,
+      "speechEnd": 35.53,
+      "end": 35.76,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "で終わったことで、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 35.76,
+      "speechEnd": 38.965,
+      "end": 39.665,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "供給の懸念を高めた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.665,
+      "speechEnd": 47.607,
+      "end": 47.837,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "主要な湾岸諸国の株式は8月23日に概ね確立され、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.837,
+      "speechEnd": 56.337,
+      "end": 56.837,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "市場は原油価格の上昇と中東の供給リスクに焦点を当てていた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.837,
+      "speechEnd": 59.833,
+      "end": 60.063,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.063,
+      "speechEnd": 67.866,
+      "end": 68.096,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国がイランの貿易相手国に課した経済制裁の脅威により、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.096,
+      "speechEnd": 75.202,
+      "end": 75.482,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "投資家は原油供給が引き締まる可能性のあるリスクを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.482,
+      "speechEnd": 79.035,
+      "end": 79.265,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "再評価するようになったため、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 79.265,
+      "speechEnd": 87.207,
+      "end": 87.828,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ブレントは金曜日に1バレル94.39ドルで終わった。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 87.828,
+      "speechEnd": 93.053,
+      "end": 93.283,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "サウジアラビアの主要な株式市場指数は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.283,
+      "speechEnd": 99.901,
+      "end": 100.131,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "金融と原材料を中心に1.1 ％上昇し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 100.131,
+      "speechEnd": 104.939,
+      "end": 105.439,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "カタールの指数は0.1 ％上昇した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 105.439,
+      "speechEnd": 107.877,
+      "end": 108.107,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "地域外では、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.107,
+      "speechEnd": 115.283,
+      "end": 115.783,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "エジプトのEGX 30指数も1.1 ％上昇した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.783,
+      "speechEnd": 120.242,
+      "end": 120.472,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "高い原油価格を維持することは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.472,
+      "speechEnd": 127.718,
+      "end": 127.948,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "一方で石油生産国の財政・エネルギー資本を支え、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 127.948,
+      "speechEnd": 132.825,
+      "end": 133.105,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "他方で世界的なインフレと金利圧力を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 133.105,
+      "speechEnd": 136.588,
+      "end": 137.208,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "長引かせる可能性がある。"
+    },
+    {
+      "parentKey": "why",
+      "start": 137.208,
+      "speechEnd": 141.179,
+      "end": 141.68,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 141.68,
+      "speechEnd": 146.905,
+      "end": 147.135,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "供給リスクが資産価格設定に再び入り込み、"
+    },
+    {
+      "parentKey": "why",
+      "start": 147.135,
+      "speechEnd": 155.635,
+      "end": 155.865,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "世界のインフレ期待に影響を与える可能性があることを反映して、"
+    },
+    {
+      "parentKey": "why",
+      "start": 155.865,
+      "speechEnd": 162.135,
+      "end": 162.835,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "原油価格は中東市場と連動して上昇している。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 162.835,
+      "speechEnd": 164.925,
+      "end": 165.155,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 165.155,
+      "speechEnd": 169.266,
+      "end": 169.496,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "月曜日のブレント原油価格、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 169.496,
+      "speechEnd": 172.979,
+      "end": 173.209,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国とイラン関連の制裁、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 173.209,
+      "speechEnd": 176.414,
+      "end": 176.644,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ホルムズ海峡の海運、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 176.644,
+      "speechEnd": 185.84,
+      "end": 186.54,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "そして世界市場がエネルギーリスクにどのように反応するかに注目してください。"
+    }
+  ]
+}

@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 75.755,
+  "duration": 170.136,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 360.0,
-  "characters": 260,
-  "charactersPerMinute": 205.9,
+  "characters": 506,
+  "charactersPerMinute": 178.4,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.14,
@@ -21,110 +21,306 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 17.602,
-      "text": "インド東海岸沖で貨物船が沈没し、乗組員22名が今も行方不明となっている。沿岸警備隊と海軍は捜索と救助を続けている"
+      "end": 17.097,
+      "text": "インド東海岸沖で貨物船が沈没した後も22人が行方不明となっており、沿岸警備隊と海軍は捜索救助を続けています"
     },
     {
       "key": "dek",
-      "start": 17.602,
-      "end": 32.891,
-      "text": "乗組員２４人のうち中国人乗組員２人が救出されたが、残り２２人は依然として行方不明となっている。"
+      "start": 17.097,
+      "end": 36.584,
+      "text": "パナマの貨物船Ocean Winnerには24人の乗組員が乗船しており、そのうち2人は救助され、22人はまだ回収されていません。"
     },
     {
       "key": "body-0",
-      "start": 32.891,
-      "end": 50.531,
-      "text": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know."
+      "start": 36.584,
+      "end": 84.818,
+      "text": "パナマの貨物船「オーシャン・ウィナー」がインド・オリッサ州のパラディップ港から約４４０キロ離れた地点で沈没した。船には中国人20人、ミャンマー人3人、バングラデシュ人1人を含む24人の乗組員が乗っている。乗組員2名が救命いかだから救出され治療を受けているが、残りの22名は依然として行方不明となっている。"
+    },
+    {
+      "key": "body-1",
+      "start": 84.818,
+      "end": 124.211,
+      "text": "インド沿岸警備隊と海軍は捜索を続けるために複数の船を派遣しており、近くの商船にも支援を要請している。事件前、貨物船はパラディップから中国へ鉄鉱石を輸送していた。当局は遭難信号を受信した後、一時的に連絡が取れなくなった。沈没の原因はまだ特定されていない。"
     },
     {
       "key": "why",
-      "start": 50.531,
-      "end": 66.53,
-      "text": "依然として22人が行方不明となっており、捜索・救助の時間枠は狭まり続けている。"
+      "start": 124.211,
+      "end": 151.465,
+      "text": "22名の乗組員の所在は不明であり、多国籍市民が関与しており、捜索救助の進捗状況と事故の原因は、公共の安全と船舶に関する直接的な懸念事項である。"
     },
     {
       "key": "watch",
-      "start": 66.53,
-      "end": 75.755,
-      "text": "捜索救助や海上捜査の結果に注目してください。"
+      "start": 151.465,
+      "end": 170.136,
+      "text": "インド当局が発表した新しい捜索救助結果、行方不明者の特定、貨物船の沈没原因の調査に注意してください。"
     }
   ],
   "semanticUnits": [
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 4.879,
-      "end": 5.109,
-      "pause": 0.23,
-      "intendedPause": 0.23,
-      "reason": "punctuation-comma",
-      "text": "インド東海岸沖で貨物船が沈没し、"
+      "speechEnd": 7.038,
+      "end": 7.318,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "インド東海岸沖で貨物船が沈没した後も22人が"
     },
     {
       "parentKey": "title",
-      "start": 5.109,
-      "speechEnd": 10.755,
-      "end": 11.256,
-      "pause": 0.5,
-      "intendedPause": 0.5,
-      "reason": "punctuation-sentence",
-      "text": "乗組員22名が今も行方不明となっている。"
-    },
-    {
-      "parentKey": "title",
-      "start": 11.256,
-      "speechEnd": 16.901,
-      "end": 17.602,
-      "pause": 0.7,
-      "intendedPause": 0.7,
-      "reason": "punctuation-sentence",
-      "text": "沿岸警備隊と海軍は捜索と救助を続けている。"
-    },
-    {
-      "parentKey": "dek",
-      "start": 17.602,
-      "speechEnd": 25.478,
-      "end": 25.708,
+      "start": 7.318,
+      "speechEnd": 10.593,
+      "end": 10.823,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
-      "text": "乗組員２４人のうち中国人乗組員２人が救出されたが、"
+      "text": "行方不明となっており、"
     },
     {
-      "parentKey": "dek",
-      "start": 25.708,
-      "speechEnd": 32.191,
-      "end": 32.891,
+      "parentKey": "title",
+      "start": 10.823,
+      "speechEnd": 16.397,
+      "end": 17.097,
       "pause": 0.7,
       "intendedPause": 0.7,
       "reason": "punctuation-sentence",
-      "text": "残り２２人は依然として行方不明となっている。"
+      "text": "沿岸警備隊と海軍は捜索救助を続けています。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.097,
+      "speechEnd": 21.975,
+      "end": 22.255,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "パナマの貨物船Ocean Winnerには"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.255,
+      "speechEnd": 26.784,
+      "end": 27.014,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "24人の乗組員が乗船しており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.014,
+      "speechEnd": 30.707,
+      "end": 30.937,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "そのうち2人は救助され、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 30.937,
+      "speechEnd": 35.884,
+      "end": 36.584,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "22人はまだ回収されていません。"
     },
     {
       "parentKey": "body-0",
-      "start": 32.891,
-      "speechEnd": 37.491,
-      "end": 37.992,
+      "start": 36.584,
+      "speechEnd": 41.741,
+      "end": 42.021,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "パナマの貨物船「オーシャン・ウィナー」が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.021,
+      "speechEnd": 46.55,
+      "end": 46.69,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "インド・オリッサ州のパラディップ港から約"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.69,
+      "speechEnd": 49.129,
+      "end": 49.269,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "４４０キロ"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.269,
+      "speechEnd": 52.544,
+      "end": 53.044,
       "pause": 0.5,
       "intendedPause": 0.5,
       "reason": "punctuation-sentence",
-      "text": "Error 500 (Server Error)!"
+      "text": "離れた地点で沈没した。"
     },
     {
       "parentKey": "body-0",
-      "start": 37.992,
-      "speechEnd": 49.911,
-      "end": 50.531,
+      "start": 53.044,
+      "speechEnd": 56.737,
+      "end": 56.967,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "船には中国人20人、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.967,
+      "speechEnd": 60.033,
+      "end": 60.263,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ミャンマー人3人、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.263,
+      "speechEnd": 64.165,
+      "end": 64.305,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "バングラデシュ人1人を含む"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.305,
+      "speechEnd": 66.534,
+      "end": 66.675,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "24人"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.675,
+      "speechEnd": 69.531,
+      "end": 70.031,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "の乗組員が乗っている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.031,
+      "speechEnd": 77.208,
+      "end": 77.438,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "乗組員2名が救命いかだから救出され治療を受けているが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 77.438,
+      "speechEnd": 84.197,
+      "end": 84.818,
       "pause": 0.62,
       "intendedPause": 0.62,
-      "reason": "clause",
-      "text": "1500.That’s an error.There was an error. Please try again later.That’s all we know."
+      "reason": "punctuation-sentence",
+      "text": "残りの22名は依然として行方不明となっている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.818,
+      "speechEnd": 90.462,
+      "end": 90.742,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "インド沿岸警備隊と海軍は捜索を続けるため"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.742,
+      "speechEnd": 94.574,
+      "end": 94.804,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "に複数の船を派遣しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.804,
+      "speechEnd": 99.472,
+      "end": 99.973,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "近くの商船にも支援を要請している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.973,
+      "speechEnd": 102.063,
+      "end": 102.293,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "事件前、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.293,
+      "speechEnd": 109.331,
+      "end": 109.831,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "貨物船はパラディップから中国へ鉄鉱石を輸送していた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.831,
+      "speechEnd": 114.29,
+      "end": 114.52,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "当局は遭難信号を受信した後、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.52,
+      "speechEnd": 118.353,
+      "end": 118.853,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "一時的に連絡が取れなくなった。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.853,
+      "speechEnd": 123.591,
+      "end": 124.211,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "沈没の原因はまだ特定されていない。"
     },
     {
       "parentKey": "why",
-      "start": 50.531,
-      "speechEnd": 54.504,
-      "end": 55.005,
+      "start": 124.211,
+      "speechEnd": 128.183,
+      "end": 128.683,
       "pause": 0.5,
       "intendedPause": 0.5,
       "reason": "punctuation-sentence",
@@ -132,29 +328,49 @@
     },
     {
       "parentKey": "why",
-      "start": 55.005,
-      "speechEnd": 61.069,
-      "end": 61.299,
+      "start": 128.683,
+      "speechEnd": 134.257,
+      "end": 134.487,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
-      "text": "依然として22人が行方不明となっており、"
+      "text": "22名の乗組員の所在は不明であり、"
     },
     {
       "parentKey": "why",
-      "start": 61.299,
-      "speechEnd": 65.83,
-      "end": 66.53,
+      "start": 134.487,
+      "speechEnd": 138.32,
+      "end": 138.55,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "多国籍市民が関与しており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 138.55,
+      "speechEnd": 143.636,
+      "end": 143.866,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "捜索救助の進捗状況と事故の原因は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 143.866,
+      "speechEnd": 150.765,
+      "end": 151.465,
       "pause": 0.7,
       "intendedPause": 0.7,
       "reason": "punctuation-sentence",
-      "text": "捜索・救助の時間枠は狭まり続けている。"
+      "text": "公共の安全と船舶に関する直接的な懸念事項である。"
     },
     {
       "parentKey": "watch",
-      "start": 66.53,
-      "speechEnd": 68.621,
-      "end": 68.851,
+      "start": 151.465,
+      "speechEnd": 153.555,
+      "end": 153.785,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
@@ -162,13 +378,33 @@
     },
     {
       "parentKey": "watch",
-      "start": 68.851,
-      "speechEnd": 75.055,
-      "end": 75.755,
+      "start": 153.785,
+      "speechEnd": 159.569,
+      "end": 159.799,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "インド当局が発表した新しい捜索救助結果、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 159.799,
+      "speechEnd": 163.074,
+      "end": 163.304,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "行方不明者の特定、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 163.304,
+      "speechEnd": 169.435,
+      "end": 170.136,
       "pause": 0.7,
       "intendedPause": 0.7,
       "reason": "punctuation-sentence",
-      "text": "捜索救助や海上捜査の結果に注目してください。"
+      "text": "貨物船の沈没原因の調査に注意してください。"
     }
   ]
 }

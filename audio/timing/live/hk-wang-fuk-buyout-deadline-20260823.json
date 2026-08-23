@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 90.436,
+  "duration": 182.57,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 360.0,
-  "characters": 293,
-  "charactersPerMinute": 194.4,
+  "characters": 521,
+  "charactersPerMinute": 171.2,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.14,
@@ -21,120 +21,276 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 19.203,
-      "text": "ワン・フック・コートの買収期限は1週間後だが、約100人の所有者が未だに買収を受け入れていない。政府は延長しないと繰り返した"
+      "end": 20.381,
+      "text": "王福裁判所の買収計画は8月31日に終了するが、政府は延長しないことを改めて表明した。まだ約100世帯が受け入れていない。"
     },
     {
       "key": "dek",
-      "start": 19.203,
-      "end": 38.057,
-      "text": "所有者の94％以上が買収提案を受け入れたが、約100世帯がまだ決定を下していない。 8月31日が回答期限です。"
+      "start": 20.381,
+      "end": 45.11,
+      "text": "金曜日の時点で、家主の94 ％以上が承諾書を返却し、約74 ％が売買契約に署名しており、当局は残りの家主にできるだけ早く決定するよう促した。"
     },
     {
       "key": "body-0",
-      "start": 38.057,
-      "end": 55.695,
-      "text": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know."
+      "start": 45.11,
+      "end": 90.298,
+      "text": "王外倫財政副長官は8月23日、王福裁判所の所有権取得取り決めは8月31日に終了し、政府は期限を延長しないと述べた。当局の最新の統計によると、所有者の94％以上が承諾書を返送し、約74％が売買契約に署名したが、まだ約100世帯が買収提案を受け入れていない。"
+    },
+    {
+      "key": "body-1",
+      "start": 90.298,
+      "end": 143.589,
+      "text": "政府はこれまで、火災の影響を受けた不動産所有者に対し、現金取得や「フラット・フォー・フラット」などの長期再定住オプションを提供してきた。黄偉倫氏は、今後法的手続きに従って残りのユニットを取得する必要がある場合、補償金はその時点の市場価格に基づいて計算され、現在の計画よりも大幅に低くなる可能性があると述べ、未定の所有者に対し期限までに対処するよう呼び掛けた。"
     },
     {
       "key": "why",
-      "start": 55.695,
-      "end": 72.249,
-      "text": "取得期限が迫っており、応じない所有者は異なる補償や再定住の道に直面することになる。"
+      "start": 143.589,
+      "end": 163.135,
+      "text": "期限は迫っており、応じなかった所有者への補償や再定住の道筋は期限後に大きく変わる可能性がある。"
     },
     {
       "key": "watch",
-      "start": 72.249,
-      "end": 90.436,
-      "text": "最終合格率、8月31日までの建物選定手配、不合格所有者のその後の処理に注意してください。"
+      "start": 163.135,
+      "end": 182.57,
+      "text": "8月31日までの最終受入割合、売買完了の進捗状況、その後の未受入ユニットの法定取り決めにご注意ください。"
     }
   ],
   "semanticUnits": [
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 6.203,
-      "end": 6.433,
+      "speechEnd": 8.012,
+      "end": 8.242,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
-      "text": "ワン・フック・コートの買収期限は1週間後だが、"
+      "text": "王福裁判所の買収計画は8月31日に終了するが、"
     },
     {
       "parentKey": "title",
-      "start": 6.433,
-      "speechEnd": 13.542,
-      "end": 14.042,
+      "start": 8.242,
+      "speechEnd": 14.512,
+      "end": 15.013,
       "pause": 0.5,
       "intendedPause": 0.5,
       "reason": "punctuation-sentence",
-      "text": "約100人の所有者が未だに買収を受け入れていない。"
+      "text": "政府は延長しないことを改めて表明した。"
     },
     {
       "parentKey": "title",
-      "start": 14.042,
-      "speechEnd": 18.502,
-      "end": 19.203,
+      "start": 15.013,
+      "speechEnd": 19.68,
+      "end": 20.381,
       "pause": 0.7,
       "intendedPause": 0.7,
       "reason": "punctuation-sentence",
-      "text": "政府は延長しないと繰り返した。"
+      "text": "まだ約100世帯が受け入れていない。"
     },
     {
       "parentKey": "dek",
-      "start": 19.203,
-      "speechEnd": 26.939,
-      "end": 27.169,
+      "start": 20.381,
+      "speechEnd": 23.307,
+      "end": 23.537,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
-      "text": "所有者の94％以上が買収提案を受け入れたが、"
+      "text": "金曜日の時点で、"
     },
     {
       "parentKey": "dek",
-      "start": 27.169,
-      "speechEnd": 32.117,
-      "end": 32.617,
-      "pause": 0.5,
-      "intendedPause": 0.5,
-      "reason": "punctuation-sentence",
-      "text": "約100世帯がまだ決定を下していない。"
+      "start": 23.537,
+      "speechEnd": 30.573,
+      "end": 30.803,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "家主の94 ％以上が承諾書を返却し、"
     },
     {
       "parentKey": "dek",
-      "start": 32.617,
-      "speechEnd": 37.356,
-      "end": 38.057,
+      "start": 30.803,
+      "speechEnd": 36.865,
+      "end": 37.095,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "約74 ％が売買契約に署名しており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 37.095,
+      "speechEnd": 44.41,
+      "end": 45.11,
       "pause": 0.7,
       "intendedPause": 0.7,
       "reason": "punctuation-sentence",
-      "text": "8月31日が回答期限です。"
+      "text": "当局は残りの家主にできるだけ早く決定するよう促した。"
     },
     {
       "parentKey": "body-0",
-      "start": 38.057,
-      "speechEnd": 42.657,
-      "end": 43.157,
+      "start": 45.11,
+      "speechEnd": 51.311,
+      "end": 51.541,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "王外倫財政副長官は8月23日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.541,
+      "speechEnd": 60.529,
+      "end": 60.759,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "王福裁判所の所有権取得取り決めは8月31日に終了し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.759,
+      "speechEnd": 65.775,
+      "end": 66.275,
       "pause": 0.5,
       "intendedPause": 0.5,
       "reason": "punctuation-sentence",
-      "text": "Error 500 (Server Error)!"
+      "text": "政府は期限を延長しないと述べた。"
     },
     {
       "parentKey": "body-0",
-      "start": 43.157,
-      "speechEnd": 55.074,
-      "end": 55.695,
+      "start": 66.275,
+      "speechEnd": 70.246,
+      "end": 70.476,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "当局の最新の統計によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.476,
+      "speechEnd": 77.165,
+      "end": 77.395,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "所有者の94％以上が承諾書を返送し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 77.395,
+      "speechEnd": 83.177,
+      "end": 83.407,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "約74％が売買契約に署名したが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 83.407,
+      "speechEnd": 89.678,
+      "end": 90.298,
       "pause": 0.62,
       "intendedPause": 0.62,
-      "reason": "clause",
-      "text": "1500.That’s an error.There was an error. Please try again later.That’s all we know."
+      "reason": "punctuation-sentence",
+      "text": "まだ約100世帯が買収提案を受け入れていない。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.298,
+      "speechEnd": 93.224,
+      "end": 93.454,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "政府はこれまで、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.454,
+      "speechEnd": 99.027,
+      "end": 99.257,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "火災の影響を受けた不動産所有者に対し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.257,
+      "speechEnd": 109.569,
+      "end": 110.069,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "現金取得や「フラット・フォー・フラット」などの長期再定住オプションを提供してきた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 110.069,
+      "speechEnd": 112.438,
+      "end": 112.668,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "黄偉倫氏は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.668,
+      "speechEnd": 117.614,
+      "end": 117.894,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "今後法的手続きに従って残りのユニットを"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.894,
+      "speechEnd": 121.378,
+      "end": 121.608,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "取得する必要がある場合、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.608,
+      "speechEnd": 128.087,
+      "end": 128.317,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "補償金はその時点の市場価格に基づいて計算され、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 128.317,
+      "speechEnd": 135.563,
+      "end": 135.793,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "現在の計画よりも大幅に低くなる可能性があると述べ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 135.793,
+      "speechEnd": 142.969,
+      "end": 143.589,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "未定の所有者に対し期限までに対処するよう呼び掛けた。"
     },
     {
       "parentKey": "why",
-      "start": 55.695,
-      "speechEnd": 59.667,
-      "end": 60.168,
+      "start": 143.589,
+      "speechEnd": 147.56,
+      "end": 148.06,
       "pause": 0.5,
       "intendedPause": 0.5,
       "reason": "punctuation-sentence",
@@ -142,29 +298,39 @@
     },
     {
       "parentKey": "why",
-      "start": 60.168,
-      "speechEnd": 63.234,
-      "end": 63.464,
+      "start": 148.06,
+      "speechEnd": 150.708,
+      "end": 150.938,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
-      "text": "取得期限が迫っており、"
+      "text": "期限は迫っており、"
     },
     {
       "parentKey": "why",
-      "start": 63.464,
-      "speechEnd": 71.549,
-      "end": 72.249,
+      "start": 150.938,
+      "speechEnd": 157.278,
+      "end": 157.558,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "応じなかった所有者への補償や再定住の道筋は"
+    },
+    {
+      "parentKey": "why",
+      "start": 157.558,
+      "speechEnd": 162.435,
+      "end": 163.135,
       "pause": 0.7,
       "intendedPause": 0.7,
       "reason": "punctuation-sentence",
-      "text": "応じない所有者は異なる補償や再定住の道に直面することになる。"
+      "text": "期限後に大きく変わる可能性がある。"
     },
     {
       "parentKey": "watch",
-      "start": 72.249,
-      "speechEnd": 74.34,
-      "end": 74.57,
+      "start": 163.135,
+      "speechEnd": 165.225,
+      "end": 165.455,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
@@ -172,33 +338,33 @@
     },
     {
       "parentKey": "watch",
-      "start": 74.57,
-      "speechEnd": 77.079,
-      "end": 77.309,
+      "start": 165.455,
+      "speechEnd": 171.168,
+      "end": 171.398,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
-      "text": "最終合格率、"
+      "text": "8月31日までの最終受入割合、"
     },
     {
       "parentKey": "watch",
-      "start": 77.309,
-      "speechEnd": 82.885,
-      "end": 83.115,
+      "start": 171.398,
+      "speechEnd": 174.742,
+      "end": 174.972,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
-      "text": "8月31日までの建物選定手配、"
+      "text": "売買完了の進捗状況、"
     },
     {
       "parentKey": "watch",
-      "start": 83.115,
-      "speechEnd": 89.736,
-      "end": 90.436,
+      "start": 174.972,
+      "speechEnd": 181.87,
+      "end": 182.57,
       "pause": 0.7,
       "intendedPause": 0.7,
       "reason": "punctuation-sentence",
-      "text": "不合格所有者のその後の処理に注意してください。"
+      "text": "その後の未受入ユニットの法定取り決めにご注意ください。"
     }
   ]
 }

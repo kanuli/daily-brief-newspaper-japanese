@@ -1,0 +1,370 @@
+{
+  "version": 3,
+  "duration": 171.18,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 540,
+  "charactersPerMinute": 189.3,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 13.612,
+      "text": "The Pirate Kingは、2027年夏と2029年の2つの新しい劇場公開を発表します"
+    },
+    {
+      "key": "dek",
+      "start": 13.612,
+      "end": 32.939,
+      "text": "『The Pirate King Movie: Valley of God』は2027年夏、『The Pirate King Movie: BAAD』は2029年に公開予定です。"
+    },
+    {
+      "key": "body-0",
+      "start": 32.939,
+      "end": 78.161,
+      "text": "8月23日に幕張展示場で開催された毎年恒例のメガイベントのメインステージの後、Pirate Kingは2つの新しい劇場版の正式な制作を発表しました。海賊王ムービー：神の谷は、2027年夏に日本で公開される予定で、2022年の海賊王ムービー：レッドから5年後の新しいシリーズになります。"
+    },
+    {
+      "key": "body-1",
+      "start": 78.161,
+      "end": 126.86,
+      "text": "2作目の『The Pirate King: BAAD』は2029年公開予定。2027年はオリジナルコミックシリーズの30周年を迎え、2029年はテレビアニメーションの重要な記念日にも近づいており、現在、作品の公式ロゴや予告編情報が公開されており、より多くのプロデューサー、サウンドエクセレンス、ストーリーの詳細はまだ発表されていません。"
+    },
+    {
+      "key": "why",
+      "start": 126.86,
+      "end": 150.099,
+      "text": "一度に2つの主要な複数年の映画プロジェクトを発表することは、近年のシリーズの中で最も重要なアニメーション映画の開発の1つです。"
+    },
+    {
+      "key": "watch",
+      "start": 150.099,
+      "end": 171.18,
+      "text": "公式パブリックディレクター、プロダクションラインナップ、リリース日、ストーリー設定、および最初の公式ビデオに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.857,
+      "end": 3.087,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "The Pirate Kingは、"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.087,
+      "speechEnd": 12.911,
+      "end": 13.612,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "2027年夏と2029年の2つの新しい劇場公開を発表します。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.612,
+      "speechEnd": 17.026,
+      "end": 17.306,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-semantic",
+      "text": "『The Pirate King Movie:"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.306,
+      "speechEnd": 22.601,
+      "end": 22.831,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Valley of God』は2027年夏、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.831,
+      "speechEnd": 26.246,
+      "end": 26.526,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-semantic",
+      "text": "『The Pirate King Movie:"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.526,
+      "speechEnd": 32.239,
+      "end": 32.939,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "BAAD』は2029年に公開予定です。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 32.939,
+      "speechEnd": 43.948,
+      "end": 44.178,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "8月23日に幕張展示場で開催された毎年恒例のメガイベントのメインステージの後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.178,
+      "speechEnd": 53.515,
+      "end": 54.015,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "Pirate Kingは2つの新しい劇場版の正式な制作を発表しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.015,
+      "speechEnd": 56.872,
+      "end": 57.152,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-semantic",
+      "text": "海賊王ムービー："
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.152,
+      "speechEnd": 59.312,
+      "end": 59.542,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "神の谷は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.542,
+      "speechEnd": 66.092,
+      "end": 66.322,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "2027年夏に日本で公開される予定で、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.322,
+      "speechEnd": 71.269,
+      "end": 71.549,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-semantic",
+      "text": "2022年の海賊王ムービー："
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.549,
+      "speechEnd": 77.541,
+      "end": 78.161,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "レッドから5年後の新しいシリーズになります。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 78.161,
+      "speechEnd": 82.133,
+      "end": 82.413,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-semantic",
+      "text": "2作目の『The Pirate King:"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.413,
+      "speechEnd": 87.36,
+      "end": 87.86,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "BAAD』は2029年公開予定。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 87.86,
+      "speechEnd": 96.013,
+      "end": 96.243,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "2027年はオリジナルコミックシリーズの30周年を迎え、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 96.243,
+      "speechEnd": 105.231,
+      "end": 105.461,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "2029年はテレビアニメーションの重要な記念日にも近づいており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 105.461,
+      "speechEnd": 107.482,
+      "end": 107.712,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "現在、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.712,
+      "speechEnd": 114.401,
+      "end": 114.631,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "作品の公式ロゴや予告編情報が公開されており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.631,
+      "speechEnd": 117.906,
+      "end": 118.136,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "より多くのプロデューサー、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.136,
+      "speechEnd": 120.923,
+      "end": 121.153,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "サウンドエクセレンス、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.153,
+      "speechEnd": 126.239,
+      "end": 126.86,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ストーリーの詳細はまだ発表されていません。"
+    },
+    {
+      "parentKey": "why",
+      "start": 126.86,
+      "speechEnd": 130.831,
+      "end": 131.331,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 131.331,
+      "speechEnd": 139.971,
+      "end": 140.201,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "一度に2つの主要な複数年の映画プロジェクトを発表することは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 140.201,
+      "speechEnd": 149.399,
+      "end": 150.099,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "近年のシリーズの中で最も重要なアニメーション映画の開発の1つです。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 150.099,
+      "speechEnd": 152.189,
+      "end": 152.419,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 152.419,
+      "speechEnd": 155.694,
+      "end": 155.924,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "公式パブリックディレクター、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 155.924,
+      "speechEnd": 158.99,
+      "end": 159.22,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "プロダクションラインナップ、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 159.22,
+      "speechEnd": 161.31,
+      "end": 161.541,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "リリース日、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 161.541,
+      "speechEnd": 163.84,
+      "end": 164.07,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ストーリー設定、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 164.07,
+      "speechEnd": 170.48,
+      "end": 171.18,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "および最初の公式ビデオに注意してください。"
+    }
+  ]
+}
