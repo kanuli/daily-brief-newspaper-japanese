@@ -36,7 +36,7 @@
     const present=[...document.scripts].some(s=>String(s.src||'').includes('assets/js/live-guard.js'));
     if(present||document.querySelector('script[data-integrity-guard]'))return;
     const script=document.createElement('script');
-    script.src='assets/js/live-guard.js?v=20260824-guard2';
+    script.src='assets/js/live-guard.js?v=20260824-guard3';
     script.dataset.integrityGuard='true';
     document.head.appendChild(script);
   }
