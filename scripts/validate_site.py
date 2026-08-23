@@ -7,7 +7,12 @@ ROOT=Path(__file__).resolve().parents[1]
 HTML_PAGES=['index.html','live.html','world.html','asia.html','hong-kong.html','japan.html','finance.html','stocks.html','technology.html','manga-anime.html','manchester-united.html','football.html','archive.html']
 NAV_HREFS=['live.html','index.html','world.html','asia.html','hong-kong.html','japan.html','finance.html','stocks.html','technology.html','manga-anime.html','manchester-united.html','football.html','archive.html']
 SUSPICIOUS_UI=('載入','亞洲','財經','廣東話','頭版','歷史日報','個 人 化 電 子 報','新聞分版','關閉')
+OLD_ARCHIVE_TOPICS={
+    '亞洲','財經 / 全球市場','市場 / 經濟','AI / 科技','漫畫 / Anime','Manchester United','Football',
+    '日語學習','科學 / 新技術','網絡安全','軟件 / App','今日值得跟進','Upcoming events','香港 / 亞洲'
+}
 KANA=re.compile(r'[\u3040-\u30ff]')
+JP_DATE=re.compile(r'^\d{4}年\d{1,2}月\d{1,2}日$')
 
 class LocalRefParser(HTMLParser):
     def __init__(self):super().__init__();self.refs=[]
@@ -55,11 +60,30 @@ def japanese_copy_ok(item):
     visible=' '.join(str(item.get(k,'') or '') for k in ('title','dek','summary','body','context','why','watchNext'))
     return len(visible.strip())>=10 and bool(KANA.search(visible))
 
+def validate_archive(archive):
+    if not isinstance(archive,dict):fail('data/archive.json must be an object')
+    if archive.get('language')!='ja':fail('data/archive.json language != ja')
+    editions=archive.get('editions') or []
+    if not editions:fail('Archive editions are empty')
+    for i,edition in enumerate(editions,1):
+        headline=str(edition.get('headline','')).strip()
+        if not headline:fail(f'archive edition {i}: missing headline')
+        if not KANA.search(headline):fail(f'archive edition {i}: headline does not look Japanese')
+        short_date=str(edition.get('shortDate','')).strip()
+        if not JP_DATE.fullmatch(short_date):fail(f'archive edition {i}: shortDate is not Japanese: {short_date}')
+        topics=edition.get('topics') or []
+        if not topics:fail(f'archive edition {i}: topics are empty')
+        for topic in topics:
+            value=str(topic).strip()
+            if not value:fail(f'archive edition {i}: empty topic')
+            if value in OLD_ARCHIVE_TOPICS:fail(f'archive edition {i}: untranslated archive topic remains: {value}')
+    print(f'ARCHIVE_OK {len(editions)} Japanese editions')
+
 def validate_news_and_audio():
     latest=load_json('data/latest.json');live=load_json('data/live.json');archive=load_json('data/archive.json')
     if latest.get('language')!='ja':fail('data/latest.json language != ja')
     if live.get('language')!='ja':fail('data/live.json language != ja')
-    if isinstance(archive,dict) and archive.get('language') not in (None,'ja'):fail('data/archive.json language is not ja')
+    validate_archive(archive)
     manifest=load_json('audio/manifest.json');expected=set();checked=0
     groups=(('daily',latest.get('articles',[])),('live',live.get('items',[])))
     if not groups[0][1]:fail('Daily articles are empty')
