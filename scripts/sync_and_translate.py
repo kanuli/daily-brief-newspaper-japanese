@@ -8,7 +8,7 @@ SOURCE_BASE="https://raw.githubusercontent.com/kanuli/daily-brief-newspaper/main
 OUT=Path("data")
 CACHE_PATH=OUT/"translation-cache.json"
 FILES=("latest.json","live.json","archive.json")
-TRANSLATE_KEYS={"dateLabel","tagline","section","title","dek","summary","body","context","why","watchNext","timeLabel","lastUpdatedLabel","nextUpdateLabel","windowLabel","subtitle","description","label","note","statusLabel","headline","shortDate"}
+TRANSLATE_KEYS={"dateLabel","tagline","section","title","dek","summary","body","context","why","watchNext","timeLabel","lastUpdatedLabel","nextUpdateLabel","windowLabel","subtitle","description","label","note","statusLabel","headline"}
 KEEP_KEYS={"id","desk","slug","sourceName","sourceUrl","url","image","imageAlt","date","editionNumber","status","leadId","editorialStandardVersion","contentVersion","createdAt","updatedAt","lastUpdated"}
 DESK_NAMES={"world":"世界","asia":"アジア","hong-kong":"香港","japan":"日本","market-economy":"経済・世界市場","finance":"経済・世界市場","stocks":"株式ニュース","stock-news":"株式ニュース","ai-tech":"AI・テクノロジー","science-new-tech":"科学・新技術","cybersecurity":"サイバーセキュリティ","software-apps":"ソフトウェア・アプリ・消費者向け技術","manga-anime":"漫画・アニメ","manchester-united":"マンチェスター・ユナイテッド","football":"サッカー","breaking-news":"速報","worth-following":"きょうの注目","upcoming-events":"今後の予定"}
 ARCHIVE_TOPIC_NAMES={
@@ -84,6 +84,11 @@ def translate_text(text):
     CACHE[key]=value
     return value
 
+def translate_archive_topic(value):
+    text=str(value)
+    if text in ARCHIVE_TOPIC_NAMES:return ARCHIVE_TOPIC_NAMES[text]
+    return translate_text(text)
+
 def japanese_short_date(value):
     if not isinstance(value,str):return value
     m=re.fullmatch(r"(\d{4})-(\d{2})-(\d{2})",value.strip())
@@ -96,8 +101,8 @@ def convert(obj,parent_key=""):
         out={}
         for k,v in obj.items():
             if k in KEEP_KEYS:out[k]=v
-            elif k=="topics" and isinstance(v,list):
-                out[k]=[ARCHIVE_TOPIC_NAMES.get(str(x),translate_text(str(x))) for x in v]
+            elif k=="topics" and isinstance(v,list):out[k]=[translate_archive_topic(x) for x in v]
+            elif k=="shortDate":out[k]=v
             elif k=="sections" and isinstance(v,list):out[k]=convert(v,k)
             elif k in TRANSLATE_KEYS:out[k]=translate_text(v) if isinstance(v,str) else convert(v,k)
             else:out[k]=convert(v,k)
