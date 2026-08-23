@@ -140,18 +140,17 @@
     setNextPublication();
     if (document.getElementById('live-next-update')) setInterval(setNextPublication, 30000);
 
-    const data = await loadPublicationData();
-    const items = document.body?.dataset?.page === 'live' ? (data?.items || []) : (data?.articles || []);
-    const unsafeIds = new Set((Array.isArray(items) ? items : []).filter(unsafeItem).map(item => String(item.id || '')));
-    const dirty = hasErrorPayload(data) || unsafeIds.size > 0;
-    if (dirty) quarantineNotice();
-
+    const unsafeIds = new Set();
+    let data = null;
     const run = () => {
       sanitizeCards(unsafeIds);
       sanitizeLiveMetadata(data);
       setNextPublication();
     };
 
+    // Observe before the network validation finishes. The article renderer can insert
+    // cards while our no-store integrity fetch is still in flight; DOM-level checks
+    // must quarantine error-page text immediately instead of allowing a visible flash.
     run();
     const main = document.querySelector('main');
     if (main) {
@@ -166,6 +165,13 @@
       });
       observer.observe(main, {childList:true, subtree:true, characterData:true});
     }
+
+    data = await loadPublicationData();
+    const items = document.body?.dataset?.page === 'live' ? (data?.items || []) : (data?.articles || []);
+    (Array.isArray(items) ? items : []).filter(unsafeItem).forEach(item => unsafeIds.add(String(item.id || '')));
+    const dirty = hasErrorPayload(data) || unsafeIds.size > 0;
+    if (dirty) quarantineNotice();
+    run();
     setTimeout(run, 300);
     setTimeout(run, 1200);
   }
