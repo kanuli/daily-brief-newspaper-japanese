@@ -27,6 +27,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: main
+          fetch-depth: 30
 
       - name: Pythonを設定
         uses: actions/setup-python@v5
@@ -55,7 +56,9 @@ jobs:
           node --check assets/js/system-ja.js
 
       - name: 更新を保存
+        shell: bash
         run: |
+          set -euo pipefail
           git config user.name 'daily-brief-japanese-bot'
           git config user.email 'actions@users.noreply.github.com'
           git add data audio
@@ -63,5 +66,26 @@ jobs:
             echo '変更なし'
             exit 0
           fi
+
           git commit -m '日本語ニュースとSupertonic F3音声を更新'
-          git push
+
+          # main may advance while translation/F3 generation is running (for example,
+          # auto-maintenance can repair static files). Never force-push generated data.
+          # Rebase this data/audio-only bot commit onto the newest main and retry safely.
+          for attempt in 1 2 3 4 5; do
+            echo "push attempt ${attempt}/5"
+            git fetch origin main
+            if ! git rebase origin/main; then
+              echo 'Rebase conflict detected; aborting rather than overwriting newer production content.' >&2
+              git rebase --abort || true
+              exit 1
+            fi
+            if git push origin HEAD:main; then
+              echo 'JAPANESE_DATA_F3_PUSH_OK'
+              exit 0
+            fi
+            sleep $((attempt * 2))
+          done
+
+          echo 'Could not publish Japanese data/F3 after 5 safe retries.' >&2
+          exit 1
