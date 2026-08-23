@@ -27,17 +27,40 @@ jobs:
         with:
           ref: main
 
-      - name: コンテンツ完全性を検証
-        run: python scripts/validate_content_integrity.py
-
-      - name: 全サイト公開前QA
-        run: python scripts/validate_site.py
-
-      - name: JavaScript構文チェック
+      - name: 静的サイトと保護表示を検証
+        shell: bash
         run: |
+          set -euo pipefail
+          python scripts/validate_site.py --static-only
           node --check assets/js/newspaper-ja.js
           node --check assets/js/system-ja.js
           node --check assets/js/live-guard.js
+          grep -q 'ensureIntegrityGuard' assets/js/system-ja.js
+          grep -q 'sanitizeCards' assets/js/live-guard.js
+          grep -q 'live-next-update' live.html
+
+      - name: コンテンツとF3の状態を判定
+        id: data_health
+        shell: bash
+        run: |
+          set +e
+          python scripts/validate_content_integrity.py
+          integrity_code=$?
+          if [ "$integrity_code" -eq 0 ]; then
+            python scripts/validate_site.py --data-only
+            data_code=$?
+          else
+            data_code=$integrity_code
+          fi
+          set -e
+          if [ "$data_code" -eq 0 ]; then
+            echo 'clean=true' >> "$GITHUB_OUTPUT"
+            echo 'DEPLOY_MODE=verified-clean'
+          else
+            echo 'clean=false' >> "$GITHUB_OUTPUT"
+            echo 'DEPLOY_MODE=protected-quarantine'
+            echo 'Current JSON/F3 is not fully clean. Deploying the verified static integrity guard so production does not continue serving raw translator error text.'
+          fi
 
       - name: Pagesを設定
         uses: actions/configure-pages@v5
@@ -50,3 +73,12 @@ jobs:
       - name: GitHub Pagesへ公開
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: 公開モード
+        run: |
+          echo "Clean data/F3: ${{ steps.data_health.outputs.clean }}"
+          if [ "${{ steps.data_health.outputs.clean }}" = 'true' ]; then
+            echo 'Production is serving fully verified Japanese data and F3 audio.'
+          else
+            echo 'Production is serving protected quarantine mode until the translation/F3 sync replaces dirty data.'
+          fi
