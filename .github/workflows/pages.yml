@@ -1,42 +1,56 @@
 name: 日本語版をGitHub Pagesへ公開
 
 on:
-  workflow_dispatch:
   push:
-    branches: [main]
+    branches: ["main"]
+  workflow_dispatch:
 
 permissions:
   contents: read
   pages: write
   id-token: write
-  actions: read
 
 concurrency:
-  group: pages
+  group: "pages"
   cancel-in-progress: true
 
 jobs:
-  build:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
-      - name: リポジトリを取得
+      - name: 最新のmainを取得
         uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: 公開前の基本チェック
+        shell: bash
+        run: |
+          test -f index.html
+          test -f data/latest.json
+          test -f data/live.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          for name in ('data/latest.json','data/live.json'):
+              data=json.loads(Path(name).read_text(encoding='utf-8'))
+              if data.get('language') != 'ja':
+                  raise SystemExit(f'{name}: language must be ja')
+          print('JAPANESE_STATIC_SITE_GATE_OK')
+          PY
 
       - name: Pagesを設定
         uses: actions/configure-pages@v5
 
-      - name: 公開ファイルをアップロード
-        uses: actions/upload-pages-artifact@v5
+      - name: 静的サイトをアップロード
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: .
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
       - name: GitHub Pagesへ公開
         id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@v4
