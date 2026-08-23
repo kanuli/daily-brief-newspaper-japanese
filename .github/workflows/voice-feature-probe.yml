@@ -23,6 +23,8 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           REPO: kanuli/daily-brief-newspaper-japanese
         run: |
+          echo '=== F3 REBUILD ==='
+          gh run list --repo "$REPO" --workflow rebuild-f3-pacing.yml --branch main --limit 8 --json databaseId,status,conclusion,headSha,createdAt,updatedAt
           echo '=== SYNC ==='
           gh run list --repo "$REPO" --workflow sync-japanese-news.yml --branch main --limit 8 --json databaseId,status,conclusion,headSha,createdAt,updatedAt
           echo '=== PAGES ==='
