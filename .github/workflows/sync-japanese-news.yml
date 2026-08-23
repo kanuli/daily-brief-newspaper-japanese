@@ -41,7 +41,7 @@ jobs:
       - name: 原版を同期して全表示項目を日本語化
         run: python scripts/sync_and_translate.py
 
-      - name: Supertonic 3 F3で日本語ニュース音声を生成
+      - name: Supertonic 3 F3でDailyとLiveの日本語音声を生成
         run: python scripts/generate_supertonic_f3.py
 
       - name: 日本語版とF3音声を公開前に検査
@@ -49,28 +49,34 @@ jobs:
           python - <<'PY'
           import json
           from pathlib import Path
-          for name in ('latest.json','live.json'):
-              p=Path('data')/name
-              data=json.loads(p.read_text(encoding='utf-8'))
-              assert data.get('language')=='ja', f'{name}: language is not ja'
+
           latest=json.loads(Path('data/latest.json').read_text(encoding='utf-8'))
-          required=('title','summary')
-          articles=latest.get('articles',[])
-          assert articles, 'latest.json has no articles'
-          for a in articles:
-              aid=a.get('id')
-              for key in required:
-                  assert str(a.get(key,'')).strip(), f'{aid}: missing {key}'
-              audio=a.get('audio','')
-              assert audio.startswith('audio/'), f'{aid}: missing F3 audio path'
-              audio_path=Path(audio)
-              assert audio_path.exists(), f'{aid}: F3 audio file was not generated: {audio}'
-              assert audio_path.stat().st_size > 1024, f'{aid}: F3 audio is unexpectedly small: {audio}'
+          live=json.loads(Path('data/live.json').read_text(encoding='utf-8'))
+          assert latest.get('language')=='ja', 'latest.json: language is not ja'
+          assert live.get('language')=='ja', 'live.json: language is not ja'
+
+          groups=(('daily',latest.get('articles',[])),('live',live.get('items',[])))
+          assert groups[0][1], 'latest.json has no articles'
           manifest_path=Path('audio/manifest.json')
           assert manifest_path.exists(), 'audio/manifest.json is missing'
           manifest=json.loads(manifest_path.read_text(encoding='utf-8'))
-          assert all(a.get('id') in manifest for a in articles), 'F3 manifest does not cover every article'
-          print(f'Japanese publication gate: OK ({len(articles)} articles with F3 audio)')
+
+          checked=0
+          for group,items in groups:
+              for a in items:
+                  aid=a.get('id')
+                  assert aid, f'{group}: item missing id'
+                  assert str(a.get('title','')).strip(), f'{group}:{aid}: missing title'
+                  assert str(a.get('summary','')).strip(), f'{group}:{aid}: missing summary'
+                  audio=a.get('audio','')
+                  expected_prefix=f'audio/{group}/'
+                  assert audio.startswith(expected_prefix), f'{group}:{aid}: wrong F3 audio path: {audio}'
+                  audio_path=Path(audio)
+                  assert audio_path.exists(), f'{group}:{aid}: F3 audio file was not generated: {audio}'
+                  assert audio_path.stat().st_size > 1024, f'{group}:{aid}: F3 audio is unexpectedly small: {audio}'
+                  assert f'{group}:{aid}' in manifest, f'{group}:{aid}: missing from F3 manifest'
+                  checked+=1
+          print(f'Japanese publication gate: OK ({checked} Daily/Live items with F3 audio)')
           PY
 
       - name: 更新を保存
