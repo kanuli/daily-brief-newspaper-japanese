@@ -7,7 +7,6 @@ from deep_translator import GoogleTranslator
 SOURCE_BASE="https://raw.githubusercontent.com/kanuli/daily-brief-newspaper/main/data"
 OUT=Path("data")
 CACHE_PATH=OUT/"translation-cache.json"
-# These are the only source data files consumed by the Japanese static site.
 FILES=("latest.json","live.json","archive.json")
 TRANSLATE_KEYS={"dateLabel","tagline","section","title","dek","summary","body","context","why","watchNext","timeLabel","lastUpdatedLabel","nextUpdateLabel","windowLabel","subtitle","description","label","note","statusLabel"}
 KEEP_KEYS={"id","desk","slug","sourceName","sourceUrl","url","image","imageAlt","date","editionNumber","status","leadId","editorialStandardVersion","contentVersion","createdAt","updatedAt","lastUpdated"}
@@ -16,6 +15,10 @@ DESK_NAMES={"world":"世界","asia":"アジア","hong-kong":"香港","japan":"�
 HAN_RE=re.compile(r"[\u3400-\u9fff]")
 KANA_RE=re.compile(r"[\u3040-\u30ff]")
 CACHE_VERSION="ja-v2-explicit-zh-tw"
+
+def source_fingerprint(obj):
+    raw=json.dumps(obj,ensure_ascii=False,sort_keys=True,separators=(",",":"))
+    return hashlib.sha256(raw.encode("utf-8")).hexdigest()
 
 def load_cache():
     if CACHE_PATH.exists():
@@ -44,25 +47,18 @@ def likely_chinese_source(text):
     return bool(HAN_RE.search(text)) and not bool(KANA_RE.search(text))
 
 def translate_part(part):
-    # The source newspaper is primarily Traditional Chinese. Google auto-detection
-    # occasionally returns Chinese text unchanged, so explicitly try zh-TW first
-    # for Han-only prose, then fall back to auto/zh-CN before declaring failure.
     sources=("zh-TW","auto","zh-CN") if likely_chinese_source(part) else ("auto",)
     last_error=None
     for source in sources:
         for attempt in range(4):
             try:
                 value=GoogleTranslator(source=source,target="ja").translate(part)
-                if not value:
-                    raise RuntimeError("empty translation")
-                unchanged=value.strip()==part.strip()
-                if unchanged and likely_chinese_source(part) and len(part.strip())>18:
-                    last_error=RuntimeError(f"{source} returned source text unchanged")
-                    break
+                if not value:raise RuntimeError("empty translation")
+                if value.strip()==part.strip() and likely_chinese_source(part) and len(part.strip())>18:
+                    last_error=RuntimeError(f"{source} returned source text unchanged");break
                 return value
             except Exception as exc:
-                last_error=exc
-                time.sleep(1.2*(attempt+1))
+                last_error=exc;time.sleep(1.2*(attempt+1))
     raise RuntimeError(f"Japanese translation failed after zh-TW/auto fallbacks: {part[:100]!r}; last={last_error}")
 
 def translate_text(text):
@@ -100,15 +96,15 @@ def fetch(name):
     r.raise_for_status();return r.json()
 
 def attach_daily_audio(data):
-    if not isinstance(data,dict):return data
-    for a in data.get("articles",[]):
-        if a.get("id"):a["audio"]=f"audio/daily/{a['id']}.mp3"
+    if isinstance(data,dict):
+        for a in data.get("articles",[]):
+            if a.get("id"):a["audio"]=f"audio/daily/{a['id']}.mp3"
     return data
 
 def attach_live_audio(data):
-    if not isinstance(data,dict):return data
-    for a in data.get("items",[]):
-        if a.get("id"):a["audio"]=f"audio/live/{a['id']}.mp3"
+    if isinstance(data,dict):
+        for a in data.get("items",[]):
+            if a.get("id"):a["audio"]=f"audio/live/{a['id']}.mp3"
     return data
 
 def main():
@@ -122,6 +118,8 @@ def main():
         if isinstance(translated,dict):
             translated["language"]="ja"
             translated["translationSource"]="kanuli/daily-brief-newspaper"
+            translated["sourceFile"]=name
+            translated["sourceFingerprint"]=source_fingerprint(src)
         (OUT/name).write_text(json.dumps(translated,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
         done.append(name)
     CACHE_PATH.write_text(json.dumps(CACHE,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
