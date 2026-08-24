@@ -1,6 +1,7 @@
 (() => {
   'use strict';
 
+  const BUILD='20260825-parity3';
   const NAV = [
     ['live.html','<ruby>速報<rt>そくほう</rt></ruby>','live-nav'],
     ['index.html','<ruby>一面<rt>いちめん</rt></ruby>トップ',''],
@@ -41,18 +42,29 @@
   function addScript(path,key){ if(hasAsset(path))return;const script=document.createElement('script');script.src=path;script.defer=true;script.dataset[key||'jpAsset']='true';document.body.appendChild(script); }
 
   function ensureBaseStyles(){
-    const newspaper=[...document.querySelectorAll('link[rel="stylesheet"]')].find(link=>String(link.href||'').includes('assets/css/newspaper.css'));
-    if(newspaper && !String(newspaper.getAttribute('href')||'').includes('20260825-parity')) newspaper.setAttribute('href','assets/css/newspaper.css?v=20260825-parity');
-    if(!newspaper)addCss('assets/css/newspaper.css?v=20260825-parity','newspaperJa');
-    if(!hasAsset('assets/css/system-ja.css'))addCss('assets/css/system-ja.css?v=20260825-parity','systemJa');
+    if(!hasAsset('assets/css/newspaper.css'))addCss('assets/css/newspaper.css','newspaperJa');
+    if(!hasAsset('assets/css/system-ja.css'))addCss('assets/css/system-ja.css','systemJa');
   }
 
   function ensurePageAssets(){
     const page=document.body.dataset.page||'home',desk=document.body.dataset.desk||'';
-    if(page==='home'){addCss('assets/css/live-ja.css?v=20260825-1');addScript('assets/js/home-extras-ja.js?v=20260825-1');}
-    if(page==='live'){addCss('assets/css/live-ja.css?v=20260825-1');addScript('assets/js/live-article-ja.js?v=20260825-1');}
-    if(page==='topic'&&desk!=='stocks'){addCss('assets/css/topic-ja-rolling.css?v=20260825-parity');addScript('assets/js/topic-ja-rolling.js?v=20260825-parity');}
-    if(page==='stocks'||(page==='topic'&&desk==='stocks')){addCss('assets/css/stocks-ja.css?v=20260825-1');addScript('assets/js/stocks-ja.js?v=20260825-1');}
+    if(page==='home'){
+      addCss(`assets/css/live-ja.css?v=${BUILD}`);
+      addCss(`assets/css/home-parity-ja.css?v=${BUILD}`);
+      addScript(`assets/js/home-extras-ja.js?v=${BUILD}`);
+    }
+    if(page==='live'){
+      addCss(`assets/css/live-ja.css?v=${BUILD}`);
+      addScript(`assets/js/live-article-ja.js?v=${BUILD}`);
+    }
+    if(page==='topic'&&desk!=='stocks'){
+      addCss(`assets/css/topic-ja-rolling.css?v=${BUILD}`);
+      addScript(`assets/js/topic-ja-rolling.js?v=${BUILD}`);
+    }
+    if(page==='stocks'||(page==='topic'&&desk==='stocks')){
+      addCss(`assets/css/stocks-ja.css?v=${BUILD}`);
+      addScript(`assets/js/stocks-ja.js?v=${BUILD}`);
+    }
   }
 
   function normalizeNav(){
@@ -73,14 +85,15 @@
       if(existingFatal?.textContent)document.querySelector('#fatal').textContent=existingFatal.textContent;
       if(existingItems?.innerHTML&&existingItems.children.length)document.querySelector('#topic-items').innerHTML=existingItems.innerHTML;
     }else{
-      const title=document.querySelector('#topic-title');if(title)title.textContent=meta.title;const subtitle=document.querySelector('#topic-subtitle');if(subtitle&&!subtitle.textContent.trim())subtitle.textContent=meta.description;
+      const title=document.querySelector('#topic-title');if(title)title.textContent=meta.title;
+      const subtitle=document.querySelector('#topic-subtitle');if(subtitle&&!subtitle.textContent.trim())subtitle.textContent=meta.description;
     }
     const footer=document.querySelector('.footer');if(footer)footer.innerHTML=`<span>日刊速報 · ${meta.title}</span><span><a href="live.html">速報</a> · <a href="index.html">一面トップ</a> · <a href="archive.html">アーカイブ</a></span>`;
   }
 
   function applyStaticRuby(){document.querySelectorAll('.brand h1').forEach(h=>{if(h.textContent.trim()==='日刊速報')h.innerHTML='<ruby>日刊速報<rt>にっかんそくほう</rt></ruby>';});}
 
-  function ensureIntegrityGuard(){if(hasAsset('assets/js/live-guard.js'))return;addScript('assets/js/live-guard.js?v=20260825-guard','integrityGuard');}
+  function ensureIntegrityGuard(){if(hasAsset('assets/js/live-guard.js'))return;addScript(`assets/js/live-guard.js?v=${BUILD}`,'integrityGuard');}
   function row(id,title,detail){return `<div id="${id}" class="system-panel-row status-check"><span class="status-dot" aria-hidden="true"></span><div><strong>${title}</strong><small>${detail}</small></div></div>`;}
   function mark(id,state,detail){const el=document.getElementById(id);if(!el)return;el.className=`system-panel-row status-${state}`;if(detail){const small=el.querySelector('small');if(small)small.textContent=detail;}}
   function mixedJapaneseProse(value=''){const text=String(value||'').trim();if(!text)return false;if(CHINESE_PROSE_RE.test(text))return true;if(text.length<28)return false;const han=(text.match(HAN_RE)||[]).length,hira=(text.match(HIRA_RE)||[]).length;return han>=8&&hira<Math.max(2,Math.floor(han*.06));}
@@ -88,7 +101,12 @@
   function publicationDataHealthy(data,mode){if(!data||data.language!=='ja'||hasErrorPayload(data))return false;const items=mode==='live'?data.items:data.articles;if(!Array.isArray(items)||!items.length)return false;if(items.some(item=>PROSE_FIELDS.some(key=>mixedJapaneseProse(item?.[key]))))return false;if(mode==='live'&&!/^次回発行予定 (?:[01]\d|2[0-4]):[0-5]\d HKT$/.test(String(data.nextUpdateLabel||'')))return false;return true;}
   async function jsonData(path){try{const r=await fetch(`${path}?health=${Date.now()}`,{cache:'no-store'});if(!r.ok)throw new Error(`HTTP ${r.status}`);return await r.json();}catch(e){return null;}}
   async function refreshHealth(){mark('status-site','ok','共通新聞レイアウトとナビゲーションを正常に表示中');const latestData=await jsonData('data/latest.json'),latest=publicationDataHealthy(latestData,'daily');mark('status-daily',latest?'ok':'fail',latest?'デイリー版：日本語本文チェック正常':'デイリー版：翻訳またはデータ異常を検出');const liveData=await jsonData('data/live.json'),live=publicationDataHealthy(liveData,'live');mark('status-live',live?'ok':'fail',live?'速報：日本語本文・次回発行時刻正常':'速報：翻訳、データ、または発行時刻異常');const manifest=await jsonData('audio/manifest.json'),audio=latest&&live&&manifest&&typeof manifest==='object'&&Object.keys(manifest).length>0;mark('status-audio',audio?'ok':'fail',audio?'Supertonic 3 F3：音声manifest確認':'Supertonic 3 F3：再確認が必要');}
-  function mountSystemPanel(){if(document.getElementById('system-status-button'))return;const button=document.createElement('button');button.id='system-status-button';button.className='system-status-button';button.type='button';button.setAttribute('aria-label','システム状態');button.setAttribute('aria-expanded','false');button.innerHTML='<span class="system-status-dot" aria-hidden="true"></span><span class="system-status-label">SYSTEM</span>';const panel=document.createElement('aside');panel.id='system-status-panel';panel.className='system-status-panel';panel.hidden=true;panel.innerHTML=`<div class="system-panel-head"><div><strong><ruby>システム状態<rt>じょうたい</rt></ruby></strong><span><ruby>日本語版<rt>にほんごばん</rt></ruby>・<ruby>稼働確認<rt>かどうかくにん</rt></ruby></span></div><button type="button" class="system-panel-close" aria-label="閉じる">×</button></div>${row('status-site','ウェブサイト','確認中')}${row('status-daily','デイリー版','確認中')}${row('status-live','<ruby>速報<rt>そくほう</rt></ruby>','確認中')}${row('status-audio','<ruby>日本語音声<rt>にほんごおんせい</rt></ruby>','確認中')}<div class="system-panel-links"><a href="https://github.com/kanuli/daily-brief-newspaper-japanese/actions" target="_blank" rel="noopener noreferrer">GitHub Actions ↗</a><a href="https://github.com/kanuli/daily-brief-newspaper-japanese" target="_blank" rel="noopener noreferrer">Repository ↗</a></div>`;const setOpen=open=>{panel.hidden=!open;button.setAttribute('aria-expanded',String(open));if(open)refreshHealth();};button.addEventListener('click',()=>setOpen(panel.hidden));panel.querySelector('.system-panel-close')?.addEventListener('click',()=>setOpen(false));document.addEventListener('keydown',e=>{if(e.key==='Escape')setOpen(false);});document.body.append(button,panel);}
+  function mountSystemPanel(){
+    if(document.getElementById('system-status-button'))return;
+    const button=document.createElement('button');button.id='system-status-button';button.className='system-status-button';button.type='button';button.setAttribute('aria-label','システム状態');button.setAttribute('aria-expanded','false');button.innerHTML='<span class="system-status-dot" aria-hidden="true"></span><span class="system-status-label">SYSTEM</span>';
+    const panel=document.createElement('aside');panel.id='system-status-panel';panel.className='system-status-panel';panel.hidden=true;panel.innerHTML=`<div class="system-panel-head"><div><strong><ruby>システム状態<rt>じょうたい</rt></ruby></strong><span><ruby>日本語版<rt>にほんごばん</rt></ruby>・<ruby>稼働確認<rt>かどうかくにん</rt></ruby></span></div><button type="button" class="system-panel-close" aria-label="閉じる">×</button></div>${row('status-site','ウェブサイト','確認中')}${row('status-daily','デイリー版','確認中')}${row('status-live','<ruby>速報<rt>そくほう</rt></ruby>','確認中')}${row('status-audio','<ruby>日本語音声<rt>にほんごおんせい</rt></ruby>','確認中')}<div class="system-panel-links"><a href="https://github.com/kanuli/daily-brief-newspaper-japanese/actions" target="_blank" rel="noopener noreferrer">GitHub Actions ↗</a><a href="https://github.com/kanuli/daily-brief-newspaper-japanese" target="_blank" rel="noopener noreferrer">Repository ↗</a></div>`;
+    const setOpen=open=>{panel.hidden=!open;button.setAttribute('aria-expanded',String(open));if(open)refreshHealth();};button.addEventListener('click',()=>setOpen(panel.hidden));panel.querySelector('.system-panel-close')?.addEventListener('click',()=>setOpen(false));document.addEventListener('keydown',e=>{if(e.key==='Escape')setOpen(false);});document.body.append(button,panel);
+  }
 
   function boot(){ensureBaseStyles();normalizeNav();normalizeTopicShell();applyStaticRuby();ensurePageAssets();mountSystemPanel();ensureIntegrityGuard();}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
