@@ -243,12 +243,42 @@ def prune_cache():
     print(f"TRANSLATION_CACHE_POISON_REMOVED {removed}")
 
 
+def furigana_matches_current_engine(name, data):
+    """Prevent fingerprint fast-path from preserving stale contextual readings."""
+    if name in ("latest.json", "live.json"):
+        list_key = "articles" if name == "latest.json" else "items"
+        for item in data.get(list_key, []):
+            furigana = item.get("furigana") or {}
+            for field in base.RUBY_FIELDS:
+                value = item.get(field)
+                if isinstance(value, str) and value.strip():
+                    if furigana.get(field) != base.ruby_html(value):
+                        return False
+            expected_body = [base.ruby_html(p) for p in base.body_paragraphs(item)]
+            if furigana.get("bodyParagraphs") != expected_body:
+                return False
+        return True
+    if name == "archive.json":
+        for edition in data.get("editions", []):
+            headline = edition.get("headline")
+            if headline and edition.get("furiganaHeadline") != base.ruby_html(headline):
+                return False
+            topics = edition.get("topics") or []
+            if edition.get("furiganaTopics") != [base.ruby_html(x) for x in topics]:
+                return False
+        return True
+    return True
+
+
 def safe_existing_features_ok(name, data):
     if not _ORIGINAL_EXISTING_FEATURES_OK(name, data):
         return False
     issues = integrity.collect_issues(name, data)
     if issues:
         print(f"FAST_PATH_REJECTED {name}: {len(issues)} integrity issue(s)")
+        return False
+    if not furigana_matches_current_engine(name, data):
+        print(f"FAST_PATH_REJECTED {name}: contextual furigana rules changed")
         return False
     return True
 
