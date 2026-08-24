@@ -1,0 +1,370 @@
+{
+  "version": 3,
+  "duration": 167.001,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 559,
+  "charactersPerMinute": 200.8,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 20.811,
+      "text": "伝えられるところによると、Huida 人工知能サーバーは 15% 以上の値上げを計画しており、メモリコストの上昇はデータセンターに波及することになる"
+    },
+    {
+      "key": "dek",
+      "start": 20.811,
+      "end": 40.555,
+      "text": "新世代チップを使用する一部のサーバーは来年初めに価格を値上げする予定であると報告されていますが、その範囲はチップとメモリ構成によって異なります。"
+    },
+    {
+      "key": "body-0",
+      "start": 40.555,
+      "end": 84.754,
+      "text": "報告によると、Huida の一部の主要顧客は、主にメモリチップのコストの高騰により、同社の人工知能チップを搭載したサーバーの価格が多くの場合 15% 以上値上がりする可能性があると通告されている。この調整は来年初めに出荷されるシステムに影響を与えると予想されており、新世代のチッププラットフォームが関係する。"
+    },
+    {
+      "key": "body-1",
+      "start": 84.754,
+      "end": 123.098,
+      "text": "Huida サーバーは大規模な人工知能データセンターにとって重要なインフラストラクチャであるため、価格の上昇により、クラウド サービス プロバイダー、モデルのトレーニング、エンタープライズ人工知能の導入のコストがさらに上昇する可能性があります。ホイダは関連報道に対してまだ正式な返答をしていない。"
+    },
+    {
+      "key": "why",
+      "start": 123.098,
+      "end": 147.006,
+      "text": "価格引き上げが実施されると、世界のデータセンターの設備投資、クラウドサービスのコスト、人工知能の投資収益に影響を与えることになります。"
+    },
+    {
+      "key": "watch",
+      "start": 147.006,
+      "end": 167.001,
+      "text": "Huidaの8月26日の決算、価格と供給に関する同社の公式回答、主要サーバーメーカーの見積り変更に注目してほしい。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.554,
+      "end": 3.784,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "伝えられるところによると、"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.784,
+      "speechEnd": 7.198,
+      "end": 7.478,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "Huida 人工知能サーバーは"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.478,
+      "speechEnd": 13.191,
+      "end": 13.422,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "15% 以上の値上げを計画しており、"
+    },
+    {
+      "parentKey": "title",
+      "start": 13.422,
+      "speechEnd": 20.111,
+      "end": 20.811,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "メモリコストの上昇はデータセンターに波及することになる。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.811,
+      "speechEnd": 26.037,
+      "end": 26.317,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "新世代チップを使用する一部のサーバーは"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.317,
+      "speechEnd": 34.19,
+      "end": 34.42,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "来年初めに価格を値上げする予定であると報告されていますが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 34.42,
+      "speechEnd": 39.855,
+      "end": 40.555,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "その範囲はチップとメモリ構成によって異なります。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.555,
+      "speechEnd": 42.924,
+      "end": 43.155,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "報告によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.155,
+      "speechEnd": 47.056,
+      "end": 47.287,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Huida の一部の主要顧客は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.287,
+      "speechEnd": 52.234,
+      "end": 52.464,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "主にメモリチップのコストの高騰により、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.464,
+      "speechEnd": 58.386,
+      "end": 58.666,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "同社の人工知能チップを搭載したサーバーの価格が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.666,
+      "speechEnd": 67.864,
+      "end": 68.364,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "多くの場合 15% 以上値上がりする可能性があると通告されている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.364,
+      "speechEnd": 75.123,
+      "end": 75.403,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "この調整は来年初めに出荷されるシステムに影響を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.403,
+      "speechEnd": 79.165,
+      "end": 79.396,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "与えると予想されており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 79.396,
+      "speechEnd": 84.134,
+      "end": 84.754,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "新世代のチッププラットフォームが関係する。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.754,
+      "speechEnd": 95.136,
+      "end": 95.366,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Huida サーバーは大規模な人工知能データセンターにとって重要なインフラストラクチャであるため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 95.366,
+      "speechEnd": 98.153,
+      "end": 98.383,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "価格の上昇により、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 98.383,
+      "speechEnd": 102.146,
+      "end": 102.376,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "クラウド サービス プロバイダー、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.376,
+      "speechEnd": 105.302,
+      "end": 105.532,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "モデルのトレーニング、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 105.532,
+      "speechEnd": 110.828,
+      "end": 111.108,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "エンタープライズ人工知能の導入のコストが"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.108,
+      "speechEnd": 115.219,
+      "end": 115.719,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "さらに上昇する可能性があります。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.719,
+      "speechEnd": 122.478,
+      "end": 123.098,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ホイダは関連報道に対してまだ正式な返答をしていない。"
+    },
+    {
+      "parentKey": "why",
+      "start": 123.098,
+      "speechEnd": 127.069,
+      "end": 127.57,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 127.57,
+      "speechEnd": 131.472,
+      "end": 131.702,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "価格引き上げが実施されると、"
+    },
+    {
+      "parentKey": "why",
+      "start": 131.702,
+      "speechEnd": 135.743,
+      "end": 135.973,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "世界のデータセンターの設備投資、"
+    },
+    {
+      "parentKey": "why",
+      "start": 135.973,
+      "speechEnd": 139.248,
+      "end": 139.478,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "クラウドサービスのコスト、"
+    },
+    {
+      "parentKey": "why",
+      "start": 139.478,
+      "speechEnd": 146.306,
+      "end": 147.006,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "人工知能の投資収益に影響を与えることになります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 147.006,
+      "speechEnd": 149.097,
+      "end": 149.327,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 149.327,
+      "speechEnd": 154.344,
+      "end": 154.574,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Huidaの8月26日の決算、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 154.574,
+      "speechEnd": 159.73,
+      "end": 159.96,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "価格と供給に関する同社の公式回答、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 159.96,
+      "speechEnd": 166.301,
+      "end": 167.001,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "主要サーバーメーカーの見積り変更に注目してほしい。"
+    }
+  ]
+}

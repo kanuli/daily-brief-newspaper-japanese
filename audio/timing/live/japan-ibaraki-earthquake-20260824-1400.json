@@ -1,0 +1,380 @@
+{
+  "version": 3,
+  "duration": 161.045,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 439,
+  "charactersPerMinute": 163.6,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 17.164,
+      "text": "茨城県南部で発生したマグニチュード5.9の地震で少なくとも37人が負傷、首都圏は余震への警戒が続いている。"
+    },
+    {
+      "key": "dek",
+      "start": 17.164,
+      "end": 33.504,
+      "text": "地震の震源の深さは約70キロで、津波の恐れはなかった。一部の交通機関と給水が一時的に影響を受けた。"
+    },
+    {
+      "key": "body-0",
+      "start": 33.504,
+      "end": 82.674,
+      "text": "8月23日未明、関東地方でマグニチュード5.9の地震が発生した。震源地は茨城県南部、震源の深さは約70キロ。東京、埼玉、千葉、神奈川、茨城で大きな揺れが記録されました。 ５県で少なくとも３７人が負傷し、大半が軽傷だった。高齢者の1人は腰に重傷を負った。"
+    },
+    {
+      "key": "body-1",
+      "start": 82.674,
+      "end": 119.612,
+      "text": "この地震では津波警報は発令されず、原子力施設にも異常は報告されなかった。東京都江東区では一部の鉄道に遅れが発生し、地中管が破損した。政府は災害とインフラの点検を開始しており、住民は依然として来週も余震に注意するよう呼び掛けられている。"
+    },
+    {
+      "key": "why",
+      "start": 119.612,
+      "end": 144.396,
+      "text": "地震により多くの負傷者が発生し、交通機関や給水にも影響が出ました。その後の余震とインフラ点検は依然として公共の安全にとって重要です。"
+    },
+    {
+      "key": "watch",
+      "start": 144.396,
+      "end": 161.045,
+      "text": "死傷者の数、鉄道や水道の完全復旧、気象庁の最新の余震活動の評価に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 11.496,
+      "end": 11.726,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "茨城県南部で発生したマグニチュード5.9の地震で少なくとも37人が負傷、"
+    },
+    {
+      "parentKey": "title",
+      "start": 11.726,
+      "speechEnd": 16.464,
+      "end": 17.164,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "首都圏は余震への警戒が続いている。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.164,
+      "speechEnd": 22.738,
+      "end": 22.968,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "地震の震源の深さは約70キロで、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.968,
+      "speechEnd": 26.033,
+      "end": 26.534,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "津波の恐れはなかった。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.534,
+      "speechEnd": 32.804,
+      "end": 33.504,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "一部の交通機関と給水が一時的に影響を受けた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 33.504,
+      "speechEnd": 37.058,
+      "end": 37.288,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "8月23日未明、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.288,
+      "speechEnd": 44.464,
+      "end": 44.964,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "関東地方でマグニチュード5.9の地震が発生した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.964,
+      "speechEnd": 48.587,
+      "end": 48.817,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "震源地は茨城県南部、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.817,
+      "speechEnd": 52.928,
+      "end": 53.428,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "震源の深さは約70キロ。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.428,
+      "speechEnd": 55.448,
+      "end": 55.678,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "東京、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.678,
+      "speechEnd": 57.699,
+      "end": 57.929,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "埼玉、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.929,
+      "speechEnd": 59.949,
+      "end": 60.179,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "千葉、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.179,
+      "speechEnd": 62.27,
+      "end": 62.5,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "神奈川、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.5,
+      "speechEnd": 67.028,
+      "end": 67.529,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "茨城で大きな揺れが記録されました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.529,
+      "speechEnd": 73.381,
+      "end": 73.611,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "５県で少なくとも３７人が負傷し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.611,
+      "speechEnd": 76.468,
+      "end": 76.968,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "大半が軽傷だった。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.968,
+      "speechEnd": 82.054,
+      "end": 82.674,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "高齢者の1人は腰に重傷を負った。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.674,
+      "speechEnd": 88.039,
+      "end": 88.269,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この地震では津波警報は発令されず、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.269,
+      "speechEnd": 93.773,
+      "end": 94.273,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "原子力施設にも異常は報告されなかった。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.273,
+      "speechEnd": 101.171,
+      "end": 101.401,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "東京都江東区では一部の鉄道に遅れが発生し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.401,
+      "speechEnd": 104.397,
+      "end": 104.897,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "地中管が破損した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.897,
+      "speechEnd": 110.889,
+      "end": 111.119,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "政府は災害とインフラの点検を開始しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.119,
+      "speechEnd": 118.992,
+      "end": 119.612,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "住民は依然として来週も余震に注意するよう呼び掛けられている。"
+    },
+    {
+      "parentKey": "why",
+      "start": 119.612,
+      "speechEnd": 123.583,
+      "end": 124.083,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 124.083,
+      "speechEnd": 128.751,
+      "end": 128.981,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "地震により多くの負傷者が発生し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 128.981,
+      "speechEnd": 133.65,
+      "end": 134.15,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "交通機関や給水にも影響が出ました。"
+    },
+    {
+      "parentKey": "why",
+      "start": 134.15,
+      "speechEnd": 137.982,
+      "end": 138.262,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "その後の余震とインフラ点検は"
+    },
+    {
+      "parentKey": "why",
+      "start": 138.262,
+      "speechEnd": 143.696,
+      "end": 144.396,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "依然として公共の安全にとって重要です。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 144.396,
+      "speechEnd": 146.486,
+      "end": 146.717,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 146.717,
+      "speechEnd": 149.085,
+      "end": 149.315,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "死傷者の数、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 149.315,
+      "speechEnd": 153.008,
+      "end": 153.238,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "鉄道や水道の完全復旧、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 153.238,
+      "speechEnd": 160.345,
+      "end": 161.045,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "気象庁の最新の余震活動の評価に注目してください。"
+    }
+  ]
+}

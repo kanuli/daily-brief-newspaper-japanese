@@ -1,0 +1,300 @@
+{
+  "version": 3,
+  "duration": 132.545,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 426,
+  "charactersPerMinute": 192.8,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 12.775,
+      "text": "アニメ「Fate/strange Fake」新シーズン制作決定、最新プロモーションコンテンツ公開"
+    },
+    {
+      "key": "dek",
+      "start": 12.775,
+      "end": 29.73,
+      "text": "公式はファーストシーズンの続報プロモーションで新シーズンの制作を認めており、作品の関連情報は継続的に更新されている。"
+    },
+    {
+      "key": "body-0",
+      "start": 29.73,
+      "end": 64.288,
+      "text": "TVアニメ『Fate/strange Fake』はこのほど新シーズンの制作が決定し、公式より最新プロモーションコンテンツも公開された。この作品は、成田良悟による同名シリーズを原作としており、アメリカの都市を舞台にした特殊な聖杯戦争が続きます。"
+    },
+    {
+      "key": "body-1",
+      "start": 64.288,
+      "end": 98.788,
+      "text": "新シーズンの現在の焦点は、依然として制作の確認とフォローアッププロモーションです。正式な放送日やその他の情報は今後正式に発表されます。シーズン1を見続けている視聴者にとって、次に注目すべきは制作陣や声優ラインナップ、放送スケジュールだろう。"
+    },
+    {
+      "key": "why",
+      "start": 98.788,
+      "end": 118.683,
+      "text": "アニメ続編の制作が正式に決定しており、シリーズ視聴者や日本のアニメ市場から直接注目を集める作品となるだろう。"
+    },
+    {
+      "key": "watch",
+      "start": 118.683,
+      "end": 132.545,
+      "text": "放送日や制作陣、キービジュアル、新予告などの正式発表に注目だ。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.385,
+      "end": 7.615,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "アニメ「Fate/strange Fake」新シーズン制作決定、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.615,
+      "speechEnd": 12.075,
+      "end": 12.775,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "最新プロモーションコンテンツ公開。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.775,
+      "speechEnd": 22.947,
+      "end": 23.177,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "公式はファーストシーズンの続報プロモーションで新シーズンの制作を認めており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.177,
+      "speechEnd": 29.03,
+      "end": 29.73,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "作品の関連情報は継続的に更新されている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 29.73,
+      "speechEnd": 33.701,
+      "end": 33.981,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "TVアニメ『Fate/strange Fake』は"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 33.981,
+      "speechEnd": 39.277,
+      "end": 39.507,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "このほど新シーズンの制作が決定し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.507,
+      "speechEnd": 46.265,
+      "end": 46.765,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "公式より最新プロモーションコンテンツも公開された。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.765,
+      "speechEnd": 49.134,
+      "end": 49.364,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この作品は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.364,
+      "speechEnd": 55.844,
+      "end": 56.074,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "成田良悟による同名シリーズを原作としており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.074,
+      "speechEnd": 63.668,
+      "end": 64.288,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "アメリカの都市を舞台にした特殊な聖杯戦争が続きます。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 64.288,
+      "speechEnd": 68.19,
+      "end": 68.42,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "新シーズンの現在の焦点は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 68.42,
+      "speechEnd": 75.388,
+      "end": 75.888,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "依然として制作の確認とフォローアッププロモーションです。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 75.888,
+      "speechEnd": 84.179,
+      "end": 84.679,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "正式な放送日やその他の情報は今後正式に発表されます。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.679,
+      "speechEnd": 88.859,
+      "end": 89.089,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "シーズン1を見続けている視聴者にとって、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 89.089,
+      "speechEnd": 94.733,
+      "end": 94.963,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "次に注目すべきは制作陣や声優ラインナップ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.963,
+      "speechEnd": 98.168,
+      "end": 98.788,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "放送スケジュールだろう。"
+    },
+    {
+      "parentKey": "why",
+      "start": 98.788,
+      "speechEnd": 102.76,
+      "end": 103.26,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 103.26,
+      "speechEnd": 108.555,
+      "end": 108.785,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "アニメ続編の制作が正式に決定しており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 108.785,
+      "speechEnd": 114.289,
+      "end": 114.569,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "シリーズ視聴者や日本のアニメ市場から直接注目を"
+    },
+    {
+      "parentKey": "why",
+      "start": 114.569,
+      "speechEnd": 117.983,
+      "end": 118.683,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "集める作品となるだろう。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 118.683,
+      "speechEnd": 120.774,
+      "end": 121.004,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 121.004,
+      "speechEnd": 124.069,
+      "end": 124.299,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "放送日や制作陣、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 124.299,
+      "speechEnd": 126.738,
+      "end": 126.968,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "キービジュアル、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 126.968,
+      "speechEnd": 131.845,
+      "end": 132.545,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "新予告などの正式発表に注目だ。"
+    }
+  ]
+}

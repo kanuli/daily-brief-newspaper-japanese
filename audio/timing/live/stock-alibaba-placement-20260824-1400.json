@@ -1,0 +1,330 @@
+{
+  "version": 3,
+  "duration": 164.676,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 492,
+  "charactersPerMinute": 179.3,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 12.845,
+      "text": "アリババは株式割当で約102億ドルを調達、香港株は一時10％近く下落した"
+    },
+    {
+      "key": "dek",
+      "start": 12.845,
+      "end": 34.581,
+      "text": "同社は1株当たり112.70香港ドルで7億1000万株を発行し、その収益は人工知能チップ、インフラストラクチャー、モデルに投資される予定だ。"
+    },
+    {
+      "key": "body-0",
+      "start": 34.581,
+      "end": 77.065,
+      "text": "アリババは月曜日の香港市場で圧力にさらされた。同社は1株当たり112.70香港ドルで7億1000万株の新株を発行し、約102億米ドルに相当する約800億香港ドルを調達した。価格は先週金曜日の香港終値に比べて8.4％割引だった。株価は序盤で約１０％下落した。"
+    },
+    {
+      "key": "body-1",
+      "start": 77.065,
+      "end": 116.893,
+      "text": "同社は、収益はチップ、コンピューティングインフラストラクチャ、モデルなどの人工知能関連の開発に使用されると述べた。この募集には多数の機関投資家が応募したが、市場は依然として株式の希薄化や、人工知能による大規模な設備投資が計画通りの収益をもたらすかどうかを懸念している。"
+    },
+    {
+      "key": "why",
+      "start": 116.893,
+      "end": 144.731,
+      "text": "これは香港の上場企業によるこれまでで最大規模の後続株式資金調達の1つであり、アリババの評価と香港テクノロジー株に対するセンチメントに直接的な影響を与える。"
+    },
+    {
+      "key": "watch",
+      "start": 144.731,
+      "end": 164.676,
+      "text": "配置の完了、株価が安定するかどうか、資金の使用の詳細、人工知能への投資収益率のガイダンスに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 6.55,
+      "end": 6.78,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "アリババは株式割当で約102億ドルを調達、"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.78,
+      "speechEnd": 12.145,
+      "end": 12.845,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "香港株は一時10％近く下落した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.845,
+      "speechEnd": 23.087,
+      "end": 23.317,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同社は1株当たり112.70香港ドルで7億1000万株を発行し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.317,
+      "speechEnd": 27.08,
+      "end": 27.31,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "その収益は人工知能チップ、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.31,
+      "speechEnd": 29.888,
+      "end": 30.118,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "インフラストラクチャー、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 30.118,
+      "speechEnd": 33.881,
+      "end": 34.581,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "モデルに投資される予定だ。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.581,
+      "speechEnd": 41.758,
+      "end": 42.258,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "アリババは月曜日の香港市場で圧力にさらされた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.258,
+      "speechEnd": 53.615,
+      "end": 53.845,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同社は1株当たり112.70香港ドルで7億1000万株の新株を発行し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.845,
+      "speechEnd": 62.555,
+      "end": 63.055,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "約102億米ドルに相当する約800億香港ドルを調達した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.055,
+      "speechEnd": 71.555,
+      "end": 72.055,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "価格は先週金曜日の香港終値に比べて8.4％割引だった。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.055,
+      "speechEnd": 76.445,
+      "end": 77.065,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "株価は序盤で約１０％下落した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 77.065,
+      "speechEnd": 79.155,
+      "end": 79.386,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同社は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 79.386,
+      "speechEnd": 81.755,
+      "end": 81.985,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "収益はチップ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 81.985,
+      "speechEnd": 85.608,
+      "end": 85.838,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "コンピューティングインフラストラクチャ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 85.838,
+      "speechEnd": 93.084,
+      "end": 93.584,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "モデルなどの人工知能関連の開発に使用されると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.584,
+      "speechEnd": 99.507,
+      "end": 99.737,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この募集には多数の機関投資家が応募したが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.737,
+      "speechEnd": 104.823,
+      "end": 105.053,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "市場は依然として株式の希薄化や、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 105.053,
+      "speechEnd": 109.652,
+      "end": 109.932,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "人工知能による大規模な設備投資が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.932,
+      "speechEnd": 116.273,
+      "end": 116.893,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "計画通りの収益をもたらすかどうかを懸念している。"
+    },
+    {
+      "parentKey": "why",
+      "start": 116.893,
+      "speechEnd": 120.864,
+      "end": 121.364,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 121.364,
+      "speechEnd": 133.349,
+      "end": 133.579,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "これは香港の上場企業によるこれまでで最大規模の後続株式資金調達の1つであり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 133.579,
+      "speechEnd": 144.03,
+      "end": 144.731,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "アリババの評価と香港テクノロジー株に対するセンチメントに直接的な影響を与える。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 144.731,
+      "speechEnd": 146.821,
+      "end": 147.051,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 147.051,
+      "speechEnd": 149.49,
+      "end": 149.72,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "配置の完了、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 149.72,
+      "speechEnd": 153.134,
+      "end": 153.364,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "株価が安定するかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 153.364,
+      "speechEnd": 156.151,
+      "end": 156.381,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "資金の使用の詳細、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 156.381,
+      "speechEnd": 163.976,
+      "end": 164.676,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "人工知能への投資収益率のガイダンスに注意してください。"
+    }
+  ]
+}

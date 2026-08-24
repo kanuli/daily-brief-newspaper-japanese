@@ -1,0 +1,350 @@
+{
+  "version": 3,
+  "duration": 159.634,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 503,
+  "charactersPerMinute": 189.1,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 13.981,
+      "text": "UEFA会長、FIFA会長選挙と戦うことを拒否したが、エンフェンティーノ氏の辞任を公に要求"
+    },
+    {
+      "key": "dek",
+      "start": 13.981,
+      "end": 29.544,
+      "text": "シフェリアン氏はFIFA会長に立候補しないと述べたが、エンフェンティーノ氏はサッカー界で広範な支持を失ったと述べた。"
+    },
+    {
+      "key": "body-0",
+      "start": 29.544,
+      "end": 72.828,
+      "text": "UEFAのシフェリアン会長は、FIFA会長選に立候補するつもりはなく、来年3月の選挙でエンフェンティーノ現会長に直接対決するつもりもないと述べた。しかし、エンフティーノ氏はファン、選手、コーチ、複数のサッカー団体からの広範な支持を失っており、相手は辞任すべきだと考えていると公言した。"
+    },
+    {
+      "key": "body-1",
+      "start": 72.828,
+      "end": 112.245,
+      "text": "この論争は、将来のワールドカップ収益の権益を民間資本に売却するというFIFAによる計画が以前に放棄されたことに端を発している。いくつかの大陸サッカー連盟と北欧サッカー連盟は独立した調査を求めており、争われなかったかもしれない大統領選挙の不確実性がさらに高まっている。"
+    },
+    {
+      "key": "why",
+      "start": 112.245,
+      "end": 137.478,
+      "text": "この事件は、FIFA会長選挙、主要な大陸サッカー連盟との関係、ワールドカップの商業および統治の取り決めに影響を与える可能性がある。"
+    },
+    {
+      "key": "watch",
+      "start": 137.478,
+      "end": 159.634,
+      "text": "他の候補者が出馬するかどうか、独立した調査の取り決め、さらに多くの各国サッカー連盟が公的声明を発表するかどうかに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.578,
+      "end": 2.808,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "UEFA会長、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.808,
+      "speechEnd": 8.592,
+      "end": 8.822,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "FIFA会長選挙と戦うことを拒否したが、"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.822,
+      "speechEnd": 13.281,
+      "end": 13.981,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "エンフェンティーノ氏の辞任を公に要求。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.981,
+      "speechEnd": 21.088,
+      "end": 21.319,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "シフェリアン氏はFIFA会長に立候補しないと述べたが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.319,
+      "speechEnd": 28.844,
+      "end": 29.544,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "エンフェンティーノ氏はサッカー界で広範な支持を失ったと述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 29.544,
+      "speechEnd": 33.655,
+      "end": 33.885,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "UEFAのシフェリアン会長は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 33.885,
+      "speechEnd": 39.111,
+      "end": 39.341,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "FIFA会長選に立候補するつもりはなく、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.341,
+      "speechEnd": 49.375,
+      "end": 49.875,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "来年3月の選挙でエンフェンティーノ現会長に直接対決するつもりもないと述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.875,
+      "speechEnd": 51.896,
+      "end": 52.126,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "しかし、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.126,
+      "speechEnd": 55.192,
+      "end": 55.422,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "エンフティーノ氏はファン、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.422,
+      "speechEnd": 57.442,
+      "end": 57.672,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "選手、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.672,
+      "speechEnd": 59.693,
+      "end": 59.923,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "コーチ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.923,
+      "speechEnd": 66.194,
+      "end": 66.424,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "複数のサッカー団体からの広範な支持を失っており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.424,
+      "speechEnd": 72.208,
+      "end": 72.828,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "相手は辞任すべきだと考えていると公言した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 72.828,
+      "speechEnd": 75.127,
+      "end": 75.357,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この論争は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 75.357,
+      "speechEnd": 91.453,
+      "end": 91.953,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "将来のワールドカップ収益の権益を民間資本に売却するというFIFAによる計画が以前に放棄されたことに端を発している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.953,
+      "speechEnd": 97.667,
+      "end": 97.947,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "いくつかの大陸サッカー連盟と北欧サッカー連盟は"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.947,
+      "speechEnd": 102.128,
+      "end": 102.358,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "独立した調査を求めており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.358,
+      "speechEnd": 111.625,
+      "end": 112.245,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "争われなかったかもしれない大統領選挙の不確実性がさらに高まっている。"
+    },
+    {
+      "parentKey": "why",
+      "start": 112.245,
+      "speechEnd": 116.217,
+      "end": 116.717,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 116.717,
+      "speechEnd": 119.017,
+      "end": 119.247,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この事件は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 119.247,
+      "speechEnd": 122.173,
+      "end": 122.403,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "FIFA会長選挙、"
+    },
+    {
+      "parentKey": "why",
+      "start": 122.403,
+      "speechEnd": 126.584,
+      "end": 126.814,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "主要な大陸サッカー連盟との関係、"
+    },
+    {
+      "parentKey": "why",
+      "start": 126.814,
+      "speechEnd": 136.778,
+      "end": 137.478,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "ワールドカップの商業および統治の取り決めに影響を与える可能性がある。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 137.478,
+      "speechEnd": 139.569,
+      "end": 139.799,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 139.799,
+      "speechEnd": 143.979,
+      "end": 144.209,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "他の候補者が出馬するかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 144.209,
+      "speechEnd": 147.763,
+      "end": 147.993,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "独立した調査の取り決め、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 147.993,
+      "speechEnd": 152.104,
+      "end": 152.384,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "さらに多くの各国サッカー連盟が"
+    },
+    {
+      "parentKey": "watch",
+      "start": 152.384,
+      "speechEnd": 158.934,
+      "end": 159.634,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "公的声明を発表するかどうかに注目してください。"
+    }
+  ]
+}

@@ -1,0 +1,300 @@
+{
+  "version": 3,
+  "duration": 125.048,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 371,
+  "charactersPerMinute": 178.0,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 8.783,
+      "text": "クワイチョン・エステートでのカップルの殺人と自殺事件に対する警察の捜査"
+    },
+    {
+      "key": "dek",
+      "start": 8.783,
+      "end": 25.266,
+      "text": "警察が80歳の男性宅を訪ねると、妻がビルから転落して死亡しているのを発見した。この事件はまだ捜査中です。"
+    },
+    {
+      "key": "body-0",
+      "start": 25.266,
+      "end": 55.995,
+      "text": "香港警察は葵涌団地で起きた殺人自殺の疑いで捜査を進めている。地元報道によると、80歳の男性が建物から転落して死亡した後、警察官が自宅に捜査に出向き、妻が部隊内で死亡しているのが発見された。"
+    },
+    {
+      "key": "body-1",
+      "start": 55.995,
+      "end": 88.119,
+      "text": "警察は２人の死因や発生順序、他の要因が関与していたかどうかなどを確認している。事件はまだ進行中であるため、動機について根拠のない推測を避けるために、現段階では警察の公式発表を基礎として考慮する必要があります。"
+    },
+    {
+      "key": "why",
+      "start": 88.119,
+      "end": 108.515,
+      "text": "この事件では2名が死亡し、犯罪者の可能性もあった。これは香港の公安と司法に関する緊急ニュースです。"
+    },
+    {
+      "key": "watch",
+      "start": 108.515,
+      "end": 125.048,
+      "text": "警察の記者会見、解剖結果、死亡者の身元確認、事件の最終分類に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 8.083,
+      "end": 8.783,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "クワイチョン・エステートでのカップルの殺人と自殺事件に対する警察の捜査。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 8.783,
+      "speechEnd": 13.243,
+      "end": 13.473,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "警察が80歳の男性宅を訪ねると、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.473,
+      "speechEnd": 20.093,
+      "end": 20.593,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "妻がビルから転落して死亡しているのを発見した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.593,
+      "speechEnd": 24.565,
+      "end": 25.266,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "この事件はまだ捜査中です。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 25.266,
+      "speechEnd": 33.976,
+      "end": 34.476,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "香港警察は葵涌団地で起きた殺人自殺の疑いで捜査を進めている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.476,
+      "speechEnd": 37.333,
+      "end": 37.563,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "地元報道によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.563,
+      "speechEnd": 44.392,
+      "end": 44.622,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "80歳の男性が建物から転落して死亡した後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.622,
+      "speechEnd": 49.012,
+      "end": 49.242,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "警察官が自宅に捜査に出向き、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.242,
+      "speechEnd": 55.374,
+      "end": 55.995,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "妻が部隊内で死亡しているのが発見された。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 55.995,
+      "speechEnd": 60.385,
+      "end": 60.615,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "警察は２人の死因や発生順序、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 60.615,
+      "speechEnd": 67.235,
+      "end": 67.735,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "他の要因が関与していたかどうかなどを確認している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 67.735,
+      "speechEnd": 72.125,
+      "end": 72.355,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "事件はまだ進行中であるため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 72.355,
+      "speechEnd": 77.79,
+      "end": 78.02,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "動機について根拠のない推測を避けるために、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 78.02,
+      "speechEnd": 84.013,
+      "end": 84.293,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "現段階では警察の公式発表を基礎として"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.293,
+      "speechEnd": 87.499,
+      "end": 88.119,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "考慮する必要があります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 88.119,
+      "speechEnd": 92.091,
+      "end": 92.591,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 92.591,
+      "speechEnd": 96.842,
+      "end": 97.072,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この事件では2名が死亡し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 97.072,
+      "speechEnd": 100.556,
+      "end": 101.056,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "犯罪者の可能性もあった。"
+    },
+    {
+      "parentKey": "why",
+      "start": 101.056,
+      "speechEnd": 107.815,
+      "end": 108.515,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "これは香港の公安と司法に関する緊急ニュースです。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 108.515,
+      "speechEnd": 110.606,
+      "end": 110.836,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 110.836,
+      "speechEnd": 113.414,
+      "end": 113.644,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "警察の記者会見、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 113.644,
+      "speechEnd": 115.735,
+      "end": 115.965,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "解剖結果、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 115.965,
+      "speechEnd": 119.24,
+      "end": 119.47,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "死亡者の身元確認、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 119.47,
+      "speechEnd": 124.348,
+      "end": 125.048,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "事件の最終分類に注目してください。"
+    }
+  ]
+}

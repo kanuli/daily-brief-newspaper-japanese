@@ -1,0 +1,380 @@
+{
+  "version": 3,
+  "duration": 164.911,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 554,
+  "charactersPerMinute": 201.6,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 15.444,
+      "text": "マンチェスター・ユナイテッドは後成に0対2で敗れた後、攻撃効率に疑問が生じ、シュートの質の低さの問題が再発した"
+    },
+    {
+      "key": "dek",
+      "start": 15.444,
+      "end": 31.237,
+      "text": "マンチェスター・ユナイテッドはシュート21本、期待ゴール数約1.83を記録したが、ほとんどのチャンスの質は低かった。"
+    },
+    {
+      "key": "body-0",
+      "start": 31.237,
+      "end": 78.431,
+      "text": "プレミアリーグのシーズン初めにマンチェスター・ユナイテッドが昇格したばかりのホウ・シティに0対2で敗れた後、彼らの攻撃効率がレビューの主な焦点となった。チームは21本のシュートを放ち、予想ゴール数は約1.83ゴールを記録したが、ほとんどのシュートの脅威が低く、ボールポゼッションのアドバンテージを質の高いチャンスに効果的に変えることができなかった。"
+    },
+    {
+      "key": "body-1",
+      "start": 78.431,
+      "end": 119.126,
+      "text": "ホウ・チェンは深い5人のディフェンスラインを使って中央のスペースを圧縮し、マンチェスター・ユナイテッドは角度の悪いキックオフやゴールから遠いキックオフを何度も強いられた。 ２つのデッドボールを許したほか、ペナルティエリア内での連携やラストパス、シュート選択をどう改善するかが次節までの重要な修正課題となる。"
+    },
+    {
+      "key": "why",
+      "start": 119.126,
+      "end": 147.056,
+      "text": "シーズン序盤での敗戦、そして攻撃面での問題は昨シーズンの弱点と同様であり、次の展開とチーム再建の進捗状況に対する市場の判断に直接影響を与えることになるだろう。"
+    },
+    {
+      "key": "watch",
+      "start": 147.056,
+      "end": 164.911,
+      "text": "次戦でのフォワードの構成、中盤の創造性、デッドボール守備の調整、そして更なる移籍の有無に注目だ。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 6.271,
+      "end": 6.501,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "マンチェスター・ユナイテッドは後成に0対2で敗れた後、"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.501,
+      "speechEnd": 9.846,
+      "end": 10.076,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "攻撃効率に疑問が生じ、"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.076,
+      "speechEnd": 14.744,
+      "end": 15.444,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "シュートの質の低さの問題が再発した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.444,
+      "speechEnd": 20.6,
+      "end": 20.83,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "マンチェスター・ユナイテッドはシュート21本、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.83,
+      "speechEnd": 26.474,
+      "end": 26.704,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "期待ゴール数約1.83を記録したが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.704,
+      "speechEnd": 30.537,
+      "end": 31.237,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "ほとんどのチャンスの質は低かった。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 31.237,
+      "speechEnd": 37.926,
+      "end": 38.206,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "プレミアリーグのシーズン初めにマンチェスター・ユナイテッドが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.206,
+      "speechEnd": 44.198,
+      "end": 44.428,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "昇格したばかりのホウ・シティに0対2で敗れた後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.428,
+      "speechEnd": 50.351,
+      "end": 50.851,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "彼らの攻撃効率がレビューの主な焦点となった。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.851,
+      "speechEnd": 55.38,
+      "end": 55.61,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "チームは21本のシュートを放ち、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.61,
+      "speechEnd": 62.647,
+      "end": 62.877,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "予想ゴール数は約1.83ゴールを記録したが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.877,
+      "speechEnd": 66.988,
+      "end": 67.218,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ほとんどのシュートの脅威が低く、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.218,
+      "speechEnd": 71.469,
+      "end": 71.749,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ボールポゼッションのアドバンテージを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.749,
+      "speechEnd": 77.811,
+      "end": 78.431,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "質の高いチャンスに効果的に変えることができなかった。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 78.431,
+      "speechEnd": 84.145,
+      "end": 84.425,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ホウ・チェンは深い5人のディフェンスラインを"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.425,
+      "speechEnd": 88.396,
+      "end": 88.626,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "使って中央のスペースを圧縮し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.626,
+      "speechEnd": 91.901,
+      "end": 92.181,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "マンチェスター・ユナイテッドは"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.181,
+      "speechEnd": 99.985,
+      "end": 100.485,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "角度の悪いキックオフやゴールから遠いキックオフを何度も強いられた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 100.485,
+      "speechEnd": 104.875,
+      "end": 105.105,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "２つのデッドボールを許したほか、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 105.105,
+      "speechEnd": 109.634,
+      "end": 109.864,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ペナルティエリア内での連携やラストパス、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.864,
+      "speechEnd": 113.905,
+      "end": 114.185,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "シュート選択をどう改善するかが"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.185,
+      "speechEnd": 118.505,
+      "end": 119.126,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "次節までの重要な修正課題となる。"
+    },
+    {
+      "parentKey": "why",
+      "start": 119.126,
+      "speechEnd": 123.097,
+      "end": 123.597,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 123.597,
+      "speechEnd": 126.663,
+      "end": 126.893,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "シーズン序盤での敗戦、"
+    },
+    {
+      "parentKey": "why",
+      "start": 126.893,
+      "speechEnd": 134.07,
+      "end": 134.3,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "そして攻撃面での問題は昨シーズンの弱点と同様であり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 134.3,
+      "speechEnd": 142.731,
+      "end": 143.011,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "次の展開とチーム再建の進捗状況に対する市場の判断に直接影響を"
+    },
+    {
+      "parentKey": "why",
+      "start": 143.011,
+      "speechEnd": 146.356,
+      "end": 147.056,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "与えることになるだろう。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 147.056,
+      "speechEnd": 149.146,
+      "end": 149.376,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 149.376,
+      "speechEnd": 153.069,
+      "end": 153.299,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "次戦でのフォワードの構成、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 153.299,
+      "speechEnd": 155.947,
+      "end": 156.177,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中盤の創造性、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 156.177,
+      "speechEnd": 159.521,
+      "end": 159.751,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "デッドボール守備の調整、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 159.751,
+      "speechEnd": 164.211,
+      "end": 164.911,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "そして更なる移籍の有無に注目だ。"
+    }
+  ]
+}
