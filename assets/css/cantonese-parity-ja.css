@@ -1,0 +1,60 @@
+/* Page-specific parity fixes layered after the shared Cantonese-reference newspaper CSS. */
+
+body[data-page="archive"] #archive-items {
+  padding: 4px 0 30px;
+}
+body[data-page="archive"] #archive-items .top-card {
+  counter-increment: none;
+  display: block;
+  padding: 14px 0;
+  border-bottom: 1px solid #777;
+}
+body[data-page="archive"] #archive-items .top-card::before {
+  content: none;
+  display: none;
+}
+body[data-page="archive"] #archive-items .top-card h3 {
+  margin: 0 0 4px;
+  font-family: Georgia, "Noto Serif JP", serif;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.25;
+}
+body[data-page="archive"] #archive-items .top-card p {
+  margin: 0 0 5px;
+  line-height: 1.65;
+}
+body[data-page="archive"] #archive-items .top-card p strong {
+  font-family: "Noto Serif JP", "Yu Mincho", serif;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+/* Keep the front-page ranking treatment isolated to the Top Five module. */
+.top-five .top-card {
+  counter-increment: top;
+}
+.top-five .top-card::before {
+  content: counter(top);
+}
+
+/* Topic mastheads keep the same visual hierarchy as the Cantonese rolling desks. */
+body[data-page="topic"] .topic-page-head {
+  padding-top: 20px;
+}
+body[data-page="topic"] .topic-page-kicker {
+  color: var(--red);
+}
+
+/* Live page uses the same strong editorial rules as the daily front page. */
+body[data-page="live"] main > .topic-title {
+  margin-top: 20px;
+}
+body[data-page="live"] #live-items {
+  margin-top: 14px;
+  border-top: 4px solid var(--ink);
+}
+
+@media (max-width: 720px) {
+  body[data-page="archive"] #archive-items .top-card p strong { font-size: 18px; }
+}
