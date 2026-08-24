@@ -3,7 +3,8 @@ name: 日本語ニュース同期・Discord即時配信
 on:
   workflow_dispatch:
   schedule:
-    # 広東語版の毎時ニュース公開後に待ち時間を確保し、取得・日本語翻訳してから公開する。
+    # 広東語版の毎時公開を唯一のニュース源として、15分後に日本語版を処理する。
+    # 例: 10:00 Cantonese -> 10:15 Japanese / 08:00 Daily -> 08:15 Japanese.
     - cron: '15 * * * *'
   push:
     branches: [main]
@@ -39,27 +40,27 @@ jobs:
       - name: 依存パッケージをインストール
         run: pip install -r requirements.txt
 
-      - name: 翻訳・Discord・ふりがなコードを構文検査
-        run: python -m py_compile scripts/sync_and_translate.py scripts/safe_sync.py scripts/sync_cantonese_layers.py scripts/sync_vocab_ja.py scripts/furigana_context.py scripts/validate_furigana_readings.py scripts/validate_content_integrity.py scripts/validate_extra_layers.py scripts/check_source_drift.py scripts/notify_discord.py
+      - name: 広東語版下流パイプラインを構文検査
+        run: python -m py_compile scripts/sync_and_translate.py scripts/safe_sync.py scripts/sync_cantonese_layers.py scripts/furigana_context.py scripts/validate_furigana_readings.py scripts/validate_content_integrity.py scripts/validate_extra_layers.py scripts/check_source_drift.py scripts/notify_discord.py
 
-      - name: 広東語版のデイリー・速報を同期して日本語化
+      - name: 広東語版のデイリー・速報・アーカイブをそのまま取得して日本語化
         run: python scripts/safe_sync.py
 
-      - name: 広東語版の追加・ローリング・株式ニュースも日本語化
+      - name: 広東語版の追加・ローリング・株式ニュースを全件保持して日本語化
         run: python scripts/sync_cantonese_layers.py
 
-      - name: 広東語版の毎日10語も日本語化
-        run: python scripts/sync_vocab_ja.py
+      - name: 広東語版とのソース一致を検証
+        run: python scripts/check_source_drift.py
 
       - name: Discord配信前にニュース完全性を検証
         run: |
           python scripts/validate_content_integrity.py
           python scripts/validate_extra_layers.py
 
-      - name: 文脈依存のふりがなを全件検証
+      - name: ニュース本文のふりがなを全件検証
         run: python scripts/validate_furigana_readings.py
 
-      - name: ニュースデータを公開
+      - name: 日本語ニュースデータを公開
         id: publish_news
         shell: bash
         run: |
@@ -80,12 +81,12 @@ jobs:
           echo "live_changed=${live_changed}" >> "$GITHUB_OUTPUT"
 
           if git diff --cached --quiet; then
-            echo 'ニュースデータ変更なし'
+            echo '広東語版からの実効ニュース変更なし'
             echo 'published=false' >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
-          git commit -m '日本語ニュースデータを更新'
+          git commit -m '広東語版ニュースを日本語版へ同期'
 
           for attempt in 1 2 3 4 5; do
             echo "news push attempt ${attempt}/5"
@@ -96,7 +97,7 @@ jobs:
               exit 1
             fi
             if git push origin HEAD:main; then
-              echo 'JAPANESE_NEWS_DATA_PUSH_OK'
+              echo 'JAPANESE_CANTONESE_DOWNSTREAM_PUSH_OK'
               echo 'published=true' >> "$GITHUB_OUTPUT"
               exit 0
             fi
@@ -106,7 +107,7 @@ jobs:
           echo 'Could not publish Japanese news data after 5 retries.' >&2
           exit 1
 
-      - name: 公開ニュースをDiscordへ即時配信
+      - name: 15分後の日本語版をDiscordへ配信
         if: steps.publish_news.outputs.published == 'true' && (steps.publish_news.outputs.latest_changed == 'true' || steps.publish_news.outputs.live_changed == 'true')
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
