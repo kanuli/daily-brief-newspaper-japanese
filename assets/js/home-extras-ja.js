@@ -4,6 +4,7 @@
   const ST3_CATALOG = "https://raw.githubusercontent.com/kanuli/japanese-vocab-game/main/word-supertonic3-catalog.json";
   const ST3_F1_INDEX = "https://raw.githubusercontent.com/kanuli/japanese-vocab-game/main/word-supertonic3-F1-index.json";
   let catalogPromise = null, f1IndexPromise = null, activeAudio = null, activeBlobUrl = "", activeButton = null;
+  let topAudio = null, topButton = null;
 
   async function json(url, cache = "no-store") {
     const response = await fetch(url, { cache });
@@ -40,6 +41,11 @@
     if (activeAudio) { try { activeAudio.pause(); activeAudio.currentTime = 0; } catch (_) {} activeAudio = null; }
     if (activeBlobUrl) { try { URL.revokeObjectURL(activeBlobUrl); } catch (_) {} activeBlobUrl = ""; }
     if (activeButton) { activeButton.disabled = false; activeButton.textContent = "🔊"; activeButton.classList.remove("is-playing", "is-loading"); activeButton = null; }
+  }
+
+  function stopTopAudio() {
+    if (topAudio) { try { topAudio.pause(); topAudio.currentTime = 0; } catch (_) {} topAudio = null; }
+    if (topButton) { topButton.classList.remove("is-playing"); topButton.textContent = "🔊 日本語朗読"; topButton = null; }
   }
 
   async function rangeBytes(bundle, offset, size) {
@@ -91,11 +97,76 @@
     const groups = levels.map((level) => ({ level, words: (data.words || []).filter((word) => word.level === level).slice(0, 2) }));
     host.className = "daily-vocab";
     host.innerHTML = `<div class="section-heading daily-vocab-heading"><h2>きょうの日本語10語</h2><span>N1–N5 ・ 各レベル2語</span></div><p class="daily-vocab-intro">広東語版と同じ毎日の語彙セットを日本語表示へ同期しています。🔊でSupertonic 3 F1の録音発音を再生できます。</p><div class="vocab-level-grid">${groups.map((group) => `<section class="vocab-level-block"><div class="vocab-level-title">${group.level}</div>${group.words.length ? group.words.map((word) => `<article class="vocab-card"><div class="vocab-card-head"><div><div class="vocab-reading">${esc(word.reading || "")}</div><div class="vocab-kanji">${esc(word.kanji || word.reading || "")}</div></div><button class="vocab-play" type="button" data-reading="${esc(word.reading || "")}" data-kanji="${esc(word.kanji || "")}" title="Supertonic 3 F1 発音">🔊</button></div><div class="vocab-meaning">${esc(word.meaning || "")}</div><div class="vocab-pos">${esc(word.partOfSpeech || "")}</div></article>`).join("") : `<p class="vocab-missing">このレベルの有効な語彙をまだ取得できません。</p>`}</section>`).join("")}</div><div class="vocab-source-note"><span>${esc(data.levelNote || "一部のJLPTレベルは推定です。")} ・ Voice: Supertonic 3 F1</span><a href="${esc(data.sourceUrl || "https://github.com/kanuli/daily-brief-newspaper")}" target="_blank" rel="noopener noreferrer">語彙ソースを見る ↗</a></div>`;
-    host.addEventListener("click", (event) => { const button = event.target.closest(".vocab-play"); if (button) playF1(button); }, { once: false });
+    host.addEventListener("click", (event) => { const button = event.target.closest(".vocab-play"); if (button) playF1(button); });
+  }
+
+  function waitForDailyRender(callback, tries = 80) {
+    const lead = document.querySelector("#lead-story h2");
+    const top = document.querySelector("#top-five .top-card");
+    if (lead && top) { callback(); return; }
+    if (tries > 0) window.setTimeout(() => waitForDailyRender(callback, tries - 1), 100);
+  }
+
+  function addLeadMedia(data) {
+    const articles = Array.isArray(data.articles) ? data.articles : [];
+    const story = articles.find((item) => item.id === data.leadId) || articles[0];
+    const host = document.querySelector("#lead-story");
+    if (!story || !host || host.querySelector(".media-frame")) return;
+    const figure = document.createElement("figure");
+    figure.className = "media-frame";
+    figure.dataset.label = story.section || "DAILY BRIEF";
+    const image = story.image ? `<img src="${esc(story.image)}" alt="${esc(story.imageAlt || story.title || "")}" loading="eager">` : "";
+    const caption = story.imageCaption ? esc(story.imageCaption) : "ニュース画像枠：公式配布または合法的に再利用できる画像のみ表示します。";
+    figure.innerHTML = `${image}<figcaption>${caption}</figcaption>`;
+    const anchor = host.querySelector(".story-meta") || host.querySelector(".audio-block") || null;
+    host.insertBefore(figure, anchor);
+  }
+
+  function playTopStory(button) {
+    const src = button.dataset.audio || "";
+    if (!src) return;
+    if (topButton === button && topAudio && !topAudio.paused) { stopTopAudio(); return; }
+    stopTopAudio();
+    stopVocabAudio();
+    topButton = button;
+    topAudio = new Audio(src);
+    button.classList.add("is-playing");
+    button.textContent = "■ 停止";
+    topAudio.onended = stopTopAudio;
+    topAudio.onerror = stopTopAudio;
+    topAudio.play().catch((error) => { console.warn("Top Five F3 audio unavailable", error); stopTopAudio(); });
+  }
+
+  function addTopFiveAudio(data) {
+    const articles = Array.isArray(data.articles) ? data.articles : [];
+    const ids = Array.isArray(data.topFive) && data.topFive.length ? data.topFive : articles.slice(0, 5).map((item) => item.id);
+    const cards = [...document.querySelectorAll("#top-five .top-card")];
+    cards.forEach((card, index) => {
+      if (card.querySelector(".top-audio-btn")) return;
+      const story = articles.find((item) => item.id === ids[index]);
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "top-audio-btn";
+      if (story?.audio) {
+        button.dataset.audio = story.audio;
+        button.textContent = "🔊 日本語朗読";
+        button.title = "Supertonic 3 F3 日本語ニュース朗読";
+        button.addEventListener("click", () => playTopStory(button));
+      } else {
+        button.textContent = "音声準備中";
+        button.disabled = true;
+      }
+      card.appendChild(button);
+    });
+  }
+
+  function decorateDaily(data) {
+    waitForDailyRender(() => { addLeadMedia(data); addTopFiveAudio(data); });
   }
 
   async function init() {
     const tasks = [];
+    if (document.querySelector("#lead-story")) tasks.push(json("data/latest.json").then(decorateDaily).catch((error) => console.warn("Daily parity extras unavailable", error)));
     if (document.querySelector("#live-summary")) tasks.push(json("data/live.json").then(renderLiveSummary).catch((error) => console.warn("Home Live summary unavailable", error)));
     if (document.querySelector("#study-desk")) tasks.push(json("data/vocab/latest.json").then(renderVocab).catch((error) => {
       console.warn("Japanese daily vocab unavailable", error);
@@ -105,7 +176,7 @@
     await Promise.all(tasks);
   }
 
-  window.addEventListener("pagehide", stopVocabAudio, { once: true });
+  window.addEventListener("pagehide", () => { stopVocabAudio(); stopTopAudio(); }, { once: true });
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, { once: true });
   else init();
 })();
