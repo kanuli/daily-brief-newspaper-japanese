@@ -54,6 +54,7 @@
     const nav = document.querySelector("#stock-ticker-nav");
     const updated = document.querySelector("#stock-updated");
     const sections = document.querySelector("#stock-sections");
+    document.title = "株式ニュース｜日刊速報 Daily Brief";
     if (updated) updated.textContent = data.lastUpdatedLabel || data.generatedAt || "—";
     if (nav) nav.innerHTML = tracked.map((ticker) => `<a href="#stock-${esc(ticker.toLowerCase())}">${esc(ticker)}</a>`).join("");
     if (!sections) return;
