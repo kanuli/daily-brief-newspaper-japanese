@@ -24,9 +24,15 @@ ARCHIVE_TOPIC_NAMES={
 HAN_RE=re.compile(r"[\u3400-\u9fff]")
 KANA_RE=re.compile(r"[\u3040-\u30ff]")
 CACHE_VERSION="ja-v2-explicit-zh-tw"
-TRANSLATION_SCHEMA="ja-furigana-v1"
+TRANSLATION_SCHEMA="ja-furigana-v2-calendar-day"
 KKS=pykakasi.kakasi()
 RUBY_FIELDS=("section","title","dek","summary","context","why","watchNext")
+CALENDAR_DAY_READINGS={
+    1:"ついたち",2:"ふつか",3:"みっか",4:"よっか",5:"いつか",6:"むいか",7:"なのか",8:"ようか",9:"ここのか",10:"とおか",
+    11:"じゅういちにち",12:"じゅうににち",13:"じゅうさんにち",14:"じゅうよっか",15:"じゅうごにち",16:"じゅうろくにち",17:"じゅうしちにち",18:"じゅうはちにち",19:"じゅうくにち",20:"はつか",
+    21:"にじゅういちにち",22:"にじゅうににち",23:"にじゅうさんにち",24:"にじゅうよっか",25:"にじゅうごにち",26:"にじゅうろくにち",27:"にじゅうしちにち",28:"にじゅうはちにち",29:"にじゅうくにち",30:"さんじゅうにち",31:"さんじゅういちにち"
+}
+CALENDAR_DAY_RUBY_RE=re.compile(r'(\d{1,2}<ruby>月<rt>がつ</rt></ruby>)(\d{1,2})<ruby>日<rt>にち</rt></ruby>')
 
 def source_fingerprint(obj):
     raw=json.dumps(obj,ensure_ascii=False,sort_keys=True,separators=(",",":"))
@@ -132,10 +138,19 @@ def ruby_piece(orig,reading):
     if not base or not yomi or not HAN_RE.search(base):return html.escape(orig,quote=False)
     return html.escape(orig[:op],quote=False)+f"<ruby>{html.escape(base,quote=False)}<rt>{html.escape(yomi,quote=False)}</rt></ruby>"+html.escape(orig[os:],quote=False)
 
+def normalize_calendar_day_ruby(rendered):
+    def repl(match):
+        day=int(match.group(2));reading=CALENDAR_DAY_READINGS.get(day)
+        if not reading:return match.group(0)
+        return f'{match.group(1)}<ruby>{match.group(2)}日<rt>{reading}</rt></ruby>'
+    return CALENDAR_DAY_RUBY_RE.sub(repl,rendered)
+
 def ruby_html(text):
     value=str(text or "")
     if not value:return ""
-    try:return "".join(ruby_piece(token.get("orig",""),token.get("hira","")) for token in KKS.convert(value))
+    try:
+        rendered="".join(ruby_piece(token.get("orig",""),token.get("hira","")) for token in KKS.convert(value))
+        return normalize_calendar_day_ruby(rendered)
     except Exception:return html.escape(value,quote=False)
 
 def body_paragraphs(item):
@@ -204,8 +219,7 @@ def main():
         src=fetch(name)
         if src is None:continue
         fingerprint=source_fingerprint(src);existing=load_existing(name)
-        if existing and existing.get("sourceFingerprint")==fingerprint and existing_features_ok(name,existing):
-            existing["translationSchemaVersion"]=TRANSLATION_SCHEMA
+        if existing and existing.get("sourceFingerprint")==fingerprint and existing.get("translationSchemaVersion")==TRANSLATION_SCHEMA and existing_features_ok(name,existing):
             (OUT/name).write_text(json.dumps(existing,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
             skipped.append(name);continue
         translated=convert(src)
