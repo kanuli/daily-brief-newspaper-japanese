@@ -1,11 +1,10 @@
 (() => {
   'use strict';
   if (document.body.dataset.page !== 'topic') return;
-  if (!document.querySelector('link[data-topic-ja-rolling]')) {
+  if (![...document.querySelectorAll('link[rel="stylesheet"]')].some(link => String(link.href || '').includes('assets/css/topic-ja-rolling.css'))) {
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = 'assets/css/topic-ja-rolling.css?v=20260824-1';
-    link.dataset.topicJaRolling = 'true';
+    link.href = 'assets/css/topic-ja-rolling.css';
     document.head.appendChild(link);
   }
 
@@ -127,6 +126,30 @@
     return `<article class="topic-story ${featured ? 'topic-feature' : ''} ${article._jpLayer === 'live' ? 'topic-live-story' : ''}"><div class="tag">${badge(article)}${section}</div><h2>${syncSpan(article, 'title', ruby(article, 'title', article.title || ''))}</h2>${article.dek ? `<p class="topic-dek">${syncSpan(article, 'dek', ruby(article, 'dek', article.dek))}</p>` : ''}<div class="story-meta">${esc(article.timeLabel || '')}${article.sourceName ? ` ・ ${esc(article.sourceName)}` : ''}</div>${audio(article)}<div class="topic-article-body">${article.summary ? paragraph('最新：', article, 'summary', 'topic-summary') : ''}${bodyMarkup(article)}${paragraph('背景：', article, 'context', 'topic-context')}${paragraph('重要な理由：', article, 'why', 'why-mini')}${paragraph('今後の注目：', article, 'watchNext', 'topic-next')}</div>${source(article)}</article>`;
   }
 
+  function formatEditionDate(daily) {
+    let value = String(daily?.dateLabel || daily?.date || '').trim();
+    value = value.replace(/(\d{1,2}日)([月火水木金土日]曜日)/, '$1 $2');
+    if (/^\d{4}-\d{2}-\d{2}$/.test(value)) {
+      const [y,m,d] = value.split('-').map(Number);
+      const weekday = ['日曜日','月曜日','火曜日','水曜日','木曜日','金曜日','土曜日'][new Date(Date.UTC(y,m-1,d)).getUTCDay()];
+      value = `${y}年${m}月${d}日 ${weekday}`;
+    }
+    return value;
+  }
+
+  function ensureMetaBar() {
+    const head = document.querySelector('.topic-page-head');
+    if (!head) return {};
+    let bar = document.querySelector('.topic-page-meta');
+    if (!bar) {
+      bar = document.createElement('div');
+      bar.className = 'topic-page-meta';
+      bar.innerHTML = '<span id="topic-date">読み込み中…</span><span id="topic-count">本版を整理中…</span>';
+      head.insertAdjacentElement('afterend', bar);
+    }
+    return { date: document.querySelector('#topic-date'), count: document.querySelector('#topic-count') };
+  }
+
   async function renderRollingTopic() {
     const wanted = document.body.dataset.desk;
     const daily = await getJson('data/latest.json');
@@ -136,13 +159,20 @@
     const title = document.querySelector('#topic-title');
     const subtitle = document.querySelector('#topic-subtitle');
     const host = document.querySelector('#topic-items');
+    const metaBar = ensureMetaBar();
     if (title) { title.classList.add('topic-page-title'); title.innerHTML = uiRuby(meta[0]); }
     if (subtitle) { subtitle.classList.add('topic-page-description'); if (!subtitle.textContent.trim()) subtitle.textContent = meta[1]; }
+    if (metaBar.date) metaBar.date.textContent = formatEditionDate(daily);
+    if (metaBar.count) metaBar.count.textContent = `${stories.length} stories · Daily + Rolling Desk + 速報`;
     if (!host) return;
-    host.innerHTML = stories.length ? `<div class="topic-page-meta"><span>${esc(daily.dateLabel || daily.date || '')}</span><span>${stories.length}件・デイリー＋追加記事＋ローリング＋速報</span></div><div class="topic-story-grid">${stories.map((article, index) => articleMarkup(article, index === 0)).join('')}</div>` : '<p class="empty">現在、この分野に掲載できる確認済み記事はありません。</p>';
+    host.innerHTML = stories.length ? `<div class="topic-story-grid">${stories.map((article, index) => articleMarkup(article, index === 0)).join('')}</div>` : '<p class="empty">現在、この分野に掲載できる確認済み記事はありません。</p>';
     document.title = `${meta[0]}｜日刊速報`;
     initAudioSync();
   }
 
-  renderRollingTopic().catch(error => console.error('rolling topic render failed', error));
+  renderRollingTopic().catch(error => {
+    console.error('rolling topic render failed', error);
+    const metaBar = ensureMetaBar();
+    if (metaBar.count) metaBar.count.textContent = '記事数を取得できませんでした';
+  });
 })();
