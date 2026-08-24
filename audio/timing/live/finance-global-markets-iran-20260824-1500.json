@@ -1,0 +1,360 @@
+{
+  "version": 3,
+  "duration": 139.337,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 404,
+  "charactersPerMinute": 174.0,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.866,
+      "text": "市場が米国の新たな対イラン制裁の詳細発表を待つ中、アジアの株式市場と原油価格は軟調だった。"
+    },
+    {
+      "key": "dek",
+      "start": 14.866,
+      "end": 31.475,
+      "text": "北海ブレント原油先物は長期債務金利と地政学リスクによりリスク選好が抑制され、９３ドル付近となっている。"
+    },
+    {
+      "key": "body-0",
+      "start": 31.475,
+      "end": 69.8,
+      "text": "月曜日のアジアの株式市場と原油価格は軟調で、ブレント原油先物は１バレル＝９３ドル付近で推移している。市場の焦点は、米国の対イラン制裁の新たな段階と、ホルムズ海峡のリスクが引き続き世界のエネルギー供給に影響を与えるかどうかにある。"
+    },
+    {
+      "key": "body-1",
+      "start": 69.8,
+      "end": 100.409,
+      "text": "米長期国債利回りは依然として高水準で、市場はジャクソンホール中銀とホイダの今週の決算からのシグナルを待っている。エネルギー、長期債券金利、大型ハイテク株の利益期待が重なると、短期的なボラティリティのリスクが高まります。"
+    },
+    {
+      "key": "why",
+      "start": 100.409,
+      "end": 122.945,
+      "text": "制裁の詳細は、原油価格、インフレ期待、アジアの資産、世界のリスク選好に直接影響を与える可能性がある。"
+    },
+    {
+      "key": "watch",
+      "start": 122.945,
+      "end": 139.337,
+      "text": "制裁の範囲、ブレント原油価格、ホルムズ作戦、長期米国債利回りに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.804,
+      "end": 8.034,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "市場が米国の新たな対イラン制裁の詳細発表を待つ中、"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.034,
+      "speechEnd": 14.166,
+      "end": 14.866,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "アジアの株式市場と原油価格は軟調だった。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.866,
+      "speechEnd": 23.297,
+      "end": 23.577,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "北海ブレント原油先物は長期債務金利と地政学リスクにより"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.577,
+      "speechEnd": 26.713,
+      "end": 26.943,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "リスク選好が抑制され、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.943,
+      "speechEnd": 30.775,
+      "end": 31.475,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "９３ドル付近となっている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 31.475,
+      "speechEnd": 38.861,
+      "end": 39.091,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "月曜日のアジアの株式市場と原油価格は軟調で、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.091,
+      "speechEnd": 43.829,
+      "end": 43.969,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "ブレント原油先物は１バレル＝"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.969,
+      "speechEnd": 46.338,
+      "end": 46.478,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "９３ドル"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.478,
+      "speechEnd": 49.335,
+      "end": 49.835,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "付近で推移している。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.835,
+      "speechEnd": 52.344,
+      "end": 52.574,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "市場の焦点は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.574,
+      "speechEnd": 58.078,
+      "end": 58.309,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国の対イラン制裁の新たな段階と、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.309,
+      "speechEnd": 65.764,
+      "end": 66.044,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ホルムズ海峡のリスクが引き続き世界のエネルギー供給に影響を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.044,
+      "speechEnd": 69.18,
+      "end": 69.8,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "与えるかどうかにある。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 69.8,
+      "speechEnd": 75.513,
+      "end": 75.744,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米長期国債利回りは依然として高水準で、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 75.744,
+      "speechEnd": 84.523,
+      "end": 85.023,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "市場はジャクソンホール中銀とホイダの今週の決算からのシグナルを待っている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 85.023,
+      "speechEnd": 87.114,
+      "end": 87.344,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "エネルギー、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 87.344,
+      "speechEnd": 89.713,
+      "end": 89.943,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "長期債券金利、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 89.943,
+      "speechEnd": 94.751,
+      "end": 94.981,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "大型ハイテク株の利益期待が重なると、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.981,
+      "speechEnd": 99.788,
+      "end": 100.409,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "短期的なボラティリティのリスクが高まります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 100.409,
+      "speechEnd": 104.38,
+      "end": 104.88,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 104.88,
+      "speechEnd": 107.389,
+      "end": 107.619,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "制裁の詳細は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 107.619,
+      "speechEnd": 109.918,
+      "end": 110.148,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "原油価格、"
+    },
+    {
+      "parentKey": "why",
+      "start": 110.148,
+      "speechEnd": 112.378,
+      "end": 112.608,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "インフレ期待、"
+    },
+    {
+      "parentKey": "why",
+      "start": 112.608,
+      "speechEnd": 115.047,
+      "end": 115.277,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "アジアの資産、"
+    },
+    {
+      "parentKey": "why",
+      "start": 115.277,
+      "speechEnd": 122.245,
+      "end": 122.945,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "世界のリスク選好に直接影響を与える可能性がある。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 122.945,
+      "speechEnd": 125.035,
+      "end": 125.265,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 125.265,
+      "speechEnd": 127.565,
+      "end": 127.795,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "制裁の範囲、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 127.795,
+      "speechEnd": 130.791,
+      "end": 131.021,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ブレント原油価格、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 131.021,
+      "speechEnd": 133.46,
+      "end": 133.69,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ホルムズ作戦、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 133.69,
+      "speechEnd": 138.637,
+      "end": 139.337,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "長期米国債利回りに注目してください。"
+    }
+  ]
+}

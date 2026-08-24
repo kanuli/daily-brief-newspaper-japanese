@@ -1,0 +1,350 @@
+{
+  "version": 3,
+  "duration": 133.512,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 360,
+  "charactersPerMinute": 161.8,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.24,
+      "text": "台風ナラが広西チワン族自治区を大雨で襲い、数万人の住民が避難し洪水の危険を防ぎ続けている"
+    },
+    {
+      "key": "dek",
+      "start": 14.24,
+      "end": 30.779,
+      "text": "中国南西部では多くの場所で冠水や交通の遮断が発生しており、大雨の危険性はまだ完全には解消されていない。"
+    },
+    {
+      "key": "body-0",
+      "start": 30.779,
+      "end": 62.924,
+      "text": "台風ナラによる大雨が広西チワン族自治区を襲い、各地で洪水や交通障害が発生した。当局は数万人の住民を避難させ、鉄砲水、地滑り、低地での水溜まりのリスクを軽減するための治水対策を開始した。"
+    },
+    {
+      "key": "body-1",
+      "start": 62.924,
+      "end": 99.549,
+      "text": "地域によっては依然として大雨が続く恐れがあり、地元自治体は河川の水位監視や住民移転、道路点検などを強化している。今後の焦点は、降雨帯の移動、交通の復旧、さらに広範囲にわたる洪水が発生するかどうかに焦点が当てられるだろう。"
+    },
+    {
+      "key": "why",
+      "start": 99.549,
+      "end": 116.77,
+      "text": "数万人が避難し、この事件は公安、交通、農業に直接影響を与えた。"
+    },
+    {
+      "key": "watch",
+      "start": 116.77,
+      "end": 133.512,
+      "text": "最新の降雨量、水位、死傷者の情報、交通と電力の復旧状況に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 6.411,
+      "end": 6.641,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "台風ナラが広西チワン族自治区を大雨で襲い、"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.641,
+      "speechEnd": 13.539,
+      "end": 14.24,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "数万人の住民が避難し洪水の危険を防ぎ続けている。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.24,
+      "speechEnd": 23.577,
+      "end": 23.807,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中国南西部では多くの場所で冠水や交通の遮断が発生しており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.807,
+      "speechEnd": 30.079,
+      "end": 30.779,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "大雨の危険性はまだ完全には解消されていない。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 30.779,
+      "speechEnd": 37.538,
+      "end": 37.768,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "台風ナラによる大雨が広西チワン族自治区を襲い、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.768,
+      "speechEnd": 42.785,
+      "end": 43.285,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "各地で洪水や交通障害が発生した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.285,
+      "speechEnd": 48.303,
+      "end": 48.533,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "当局は数万人の住民を避難させ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.533,
+      "speechEnd": 50.623,
+      "end": 50.853,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "鉄砲水、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.853,
+      "speechEnd": 52.944,
+      "end": 53.174,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "地滑り、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.174,
+      "speechEnd": 58.4,
+      "end": 58.68,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "低地での水溜まりのリスクを軽減するため"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.68,
+      "speechEnd": 62.304,
+      "end": 62.924,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "の治水対策を開始した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 62.924,
+      "speechEnd": 69.683,
+      "end": 69.913,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "地域によっては依然として大雨が続く恐れがあり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 69.913,
+      "speechEnd": 76.672,
+      "end": 76.902,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "地元自治体は河川の水位監視や住民移転、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 76.902,
+      "speechEnd": 80.805,
+      "end": 81.305,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "道路点検などを強化している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 81.305,
+      "speechEnd": 83.813,
+      "end": 84.043,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後の焦点は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.043,
+      "speechEnd": 86.552,
+      "end": 86.782,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "降雨帯の移動、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 86.782,
+      "speechEnd": 89.151,
+      "end": 89.381,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "交通の復旧、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 89.381,
+      "speechEnd": 93.075,
+      "end": 93.355,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "さらに広範囲にわたる洪水が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.355,
+      "speechEnd": 98.929,
+      "end": 99.549,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "発生するかどうかに焦点が当てられるだろう。"
+    },
+    {
+      "parentKey": "why",
+      "start": 99.549,
+      "speechEnd": 103.521,
+      "end": 104.021,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 104.021,
+      "speechEnd": 106.878,
+      "end": 107.109,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "数万人が避難し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 107.109,
+      "speechEnd": 109.896,
+      "end": 110.126,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この事件は公安、"
+    },
+    {
+      "parentKey": "why",
+      "start": 110.126,
+      "speechEnd": 112.147,
+      "end": 112.377,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "交通、"
+    },
+    {
+      "parentKey": "why",
+      "start": 112.377,
+      "speechEnd": 116.07,
+      "end": 116.77,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "農業に直接影響を与えた。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 116.77,
+      "speechEnd": 118.861,
+      "end": 119.091,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 119.091,
+      "speechEnd": 121.878,
+      "end": 122.108,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "最新の降雨量、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 122.108,
+      "speechEnd": 124.129,
+      "end": 124.359,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "水位、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 124.359,
+      "speechEnd": 126.937,
+      "end": 127.167,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "死傷者の情報、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 127.167,
+      "speechEnd": 132.812,
+      "end": 133.512,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "交通と電力の復旧状況に注意してください。"
+    }
+  ]
+}

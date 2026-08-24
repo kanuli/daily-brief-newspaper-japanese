@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 125.048,
+  "duration": 117.081,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 360.0,
-  "characters": 371,
-  "charactersPerMinute": 178.0,
+  "characters": 342,
+  "charactersPerMinute": 175.3,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.14,
@@ -27,32 +27,32 @@
     {
       "key": "dek",
       "start": 8.783,
-      "end": 25.266,
-      "text": "警察が80歳の男性宅を訪ねると、妻がビルから転落して死亡しているのを発見した。この事件はまだ捜査中です。"
+      "end": 23.941,
+      "text": "80歳の男性が建物から転落し、住宅内で妻が死亡しているのが発見された。警察は捜査を続けている。"
     },
     {
       "key": "body-0",
-      "start": 25.266,
-      "end": 55.995,
-      "text": "香港警察は葵涌団地で起きた殺人自殺の疑いで捜査を進めている。地元報道によると、80歳の男性が建物から転落して死亡した後、警察官が自宅に捜査に出向き、妻が部隊内で死亡しているのが発見された。"
+      "start": 23.941,
+      "end": 50.746,
+      "text": "香港警察は葵涌団地で起きた殺人自殺の疑いで捜査を進めている。 80歳の男性が建物から転落して死亡した後、警察官が自宅を捜索し、妻が部隊内で死亡しているのが発見された。"
     },
     {
       "key": "body-1",
-      "start": 55.995,
-      "end": 88.119,
-      "text": "警察は２人の死因や発生順序、他の要因が関与していたかどうかなどを確認している。事件はまだ進行中であるため、動機について根拠のない推測を避けるために、現段階では警察の公式発表を基礎として考慮する必要があります。"
+      "start": 50.746,
+      "end": 79.016,
+      "text": "警察は２人の死因や発生順序、他の要因が関与していたかどうかなどを確認している。この事件はまだ捜査中であり、動機と詳細なスケジュールは警察と法医学的手続きを通じてまだ明らかにされていない。"
     },
     {
       "key": "why",
-      "start": 88.119,
-      "end": 108.515,
-      "text": "この事件では2名が死亡し、犯罪者の可能性もあった。これは香港の公安と司法に関する緊急ニュースです。"
+      "start": 79.016,
+      "end": 101.803,
+      "text": "この事件では2名が死亡し、犯罪者の可能性もあった。これは、地元の司法および公安に関する主要なニュースです。"
     },
     {
       "key": "watch",
-      "start": 108.515,
-      "end": 125.048,
-      "text": "警察の記者会見、解剖結果、死亡者の身元確認、事件の最終分類に注目してください。"
+      "start": 101.803,
+      "end": 117.081,
+      "text": "警察の発表、検死結果、身元確認、事件の最終分類に注目してください。"
     }
   ],
   "semanticUnits": [
@@ -69,38 +69,38 @@
     {
       "parentKey": "dek",
       "start": 8.783,
-      "speechEnd": 13.243,
-      "end": 13.473,
+      "speechEnd": 13.87,
+      "end": 14.1,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
-      "text": "警察が80歳の男性宅を訪ねると、"
+      "text": "80歳の男性が建物から転落し、"
     },
     {
       "parentKey": "dek",
-      "start": 13.473,
-      "speechEnd": 20.093,
-      "end": 20.593,
+      "start": 14.1,
+      "speechEnd": 19.744,
+      "end": 20.245,
       "pause": 0.5,
       "intendedPause": 0.5,
       "reason": "punctuation-sentence",
-      "text": "妻がビルから転落して死亡しているのを発見した。"
+      "text": "住宅内で妻が死亡しているのが発見された。"
     },
     {
       "parentKey": "dek",
-      "start": 20.593,
-      "speechEnd": 24.565,
-      "end": 25.266,
+      "start": 20.245,
+      "speechEnd": 23.241,
+      "end": 23.941,
       "pause": 0.7,
       "intendedPause": 0.7,
       "reason": "punctuation-sentence",
-      "text": "この事件はまだ捜査中です。"
+      "text": "警察は捜査を続けている。"
     },
     {
       "parentKey": "body-0",
-      "start": 25.266,
-      "speechEnd": 33.976,
-      "end": 34.476,
+      "start": 23.941,
+      "speechEnd": 32.651,
+      "end": 33.151,
       "pause": 0.5,
       "intendedPause": 0.5,
       "reason": "punctuation-sentence",
@@ -108,19 +108,9 @@
     },
     {
       "parentKey": "body-0",
-      "start": 34.476,
-      "speechEnd": 37.333,
-      "end": 37.563,
-      "pause": 0.23,
-      "intendedPause": 0.23,
-      "reason": "punctuation-comma",
-      "text": "地元報道によると、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 37.563,
-      "speechEnd": 44.392,
-      "end": 44.622,
+      "start": 33.151,
+      "speechEnd": 39.98,
+      "end": 40.21,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
@@ -128,19 +118,19 @@
     },
     {
       "parentKey": "body-0",
-      "start": 44.622,
-      "speechEnd": 49.012,
-      "end": 49.242,
+      "start": 40.21,
+      "speechEnd": 43.764,
+      "end": 43.994,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
-      "text": "警察官が自宅に捜査に出向き、"
+      "text": "警察官が自宅を捜索し、"
     },
     {
       "parentKey": "body-0",
-      "start": 49.242,
-      "speechEnd": 55.374,
-      "end": 55.995,
+      "start": 43.994,
+      "speechEnd": 50.126,
+      "end": 50.746,
       "pause": 0.62,
       "intendedPause": 0.62,
       "reason": "punctuation-sentence",
@@ -148,9 +138,9 @@
     },
     {
       "parentKey": "body-1",
-      "start": 55.995,
-      "speechEnd": 60.385,
-      "end": 60.615,
+      "start": 50.746,
+      "speechEnd": 55.136,
+      "end": 55.366,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
@@ -158,9 +148,9 @@
     },
     {
       "parentKey": "body-1",
-      "start": 60.615,
-      "speechEnd": 67.235,
-      "end": 67.735,
+      "start": 55.366,
+      "speechEnd": 61.986,
+      "end": 62.486,
       "pause": 0.5,
       "intendedPause": 0.5,
       "reason": "punctuation-sentence",
@@ -168,49 +158,39 @@
     },
     {
       "parentKey": "body-1",
-      "start": 67.735,
-      "speechEnd": 72.125,
-      "end": 72.355,
+      "start": 62.486,
+      "speechEnd": 66.876,
+      "end": 67.106,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
-      "text": "事件はまだ進行中であるため、"
+      "text": "この事件はまだ捜査中であり、"
     },
     {
       "parentKey": "body-1",
-      "start": 72.355,
-      "speechEnd": 77.79,
-      "end": 78.02,
-      "pause": 0.23,
-      "intendedPause": 0.23,
-      "reason": "punctuation-comma",
-      "text": "動機について根拠のない推測を避けるために、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 78.02,
-      "speechEnd": 84.013,
-      "end": 84.293,
+      "start": 67.106,
+      "speechEnd": 70.381,
+      "end": 70.661,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "semantic-boundary",
-      "text": "現段階では警察の公式発表を基礎として"
+      "text": "動機と詳細なスケジュールは"
     },
     {
       "parentKey": "body-1",
-      "start": 84.293,
-      "speechEnd": 87.499,
-      "end": 88.119,
+      "start": 70.661,
+      "speechEnd": 78.396,
+      "end": 79.016,
       "pause": 0.62,
       "intendedPause": 0.62,
       "reason": "punctuation-sentence",
-      "text": "考慮する必要があります。"
+      "text": "警察と法医学的手続きを通じてまだ明らかにされていない。"
     },
     {
       "parentKey": "why",
-      "start": 88.119,
-      "speechEnd": 92.091,
-      "end": 92.591,
+      "start": 79.016,
+      "speechEnd": 82.988,
+      "end": 83.488,
       "pause": 0.5,
       "intendedPause": 0.5,
       "reason": "punctuation-sentence",
@@ -218,9 +198,9 @@
     },
     {
       "parentKey": "why",
-      "start": 92.591,
-      "speechEnd": 96.842,
-      "end": 97.072,
+      "start": 83.488,
+      "speechEnd": 87.739,
+      "end": 87.969,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
@@ -228,9 +208,9 @@
     },
     {
       "parentKey": "why",
-      "start": 97.072,
-      "speechEnd": 100.556,
-      "end": 101.056,
+      "start": 87.969,
+      "speechEnd": 91.453,
+      "end": 91.953,
       "pause": 0.5,
       "intendedPause": 0.5,
       "reason": "punctuation-sentence",
@@ -238,19 +218,29 @@
     },
     {
       "parentKey": "why",
-      "start": 101.056,
-      "speechEnd": 107.815,
-      "end": 108.515,
+      "start": 91.953,
+      "speechEnd": 94.044,
+      "end": 94.274,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "これは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 94.274,
+      "speechEnd": 101.102,
+      "end": 101.803,
       "pause": 0.7,
       "intendedPause": 0.7,
       "reason": "punctuation-sentence",
-      "text": "これは香港の公安と司法に関する緊急ニュースです。"
+      "text": "地元の司法および公安に関する主要なニュースです。"
     },
     {
       "parentKey": "watch",
-      "start": 108.515,
-      "speechEnd": 110.606,
-      "end": 110.836,
+      "start": 101.803,
+      "speechEnd": 103.893,
+      "end": 104.123,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
@@ -258,39 +248,39 @@
     },
     {
       "parentKey": "watch",
-      "start": 110.836,
-      "speechEnd": 113.414,
-      "end": 113.644,
+      "start": 104.123,
+      "speechEnd": 106.492,
+      "end": 106.722,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
-      "text": "警察の記者会見、"
+      "text": "警察の発表、"
     },
     {
       "parentKey": "watch",
-      "start": 113.644,
-      "speechEnd": 115.735,
-      "end": 115.965,
+      "start": 106.722,
+      "speechEnd": 108.813,
+      "end": 109.043,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
-      "text": "解剖結果、"
+      "text": "検死結果、"
     },
     {
       "parentKey": "watch",
-      "start": 115.965,
-      "speechEnd": 119.24,
-      "end": 119.47,
+      "start": 109.043,
+      "speechEnd": 111.273,
+      "end": 111.503,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
-      "text": "死亡者の身元確認、"
+      "text": "身元確認、"
     },
     {
       "parentKey": "watch",
-      "start": 119.47,
-      "speechEnd": 124.348,
-      "end": 125.048,
+      "start": 111.503,
+      "speechEnd": 116.381,
+      "end": 117.081,
       "pause": 0.7,
       "intendedPause": 0.7,
       "reason": "punctuation-sentence",

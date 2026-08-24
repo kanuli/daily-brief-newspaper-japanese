@@ -1,0 +1,370 @@
+{
+  "version": 3,
+  "duration": 135.105,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 376,
+  "charactersPerMinute": 167.0,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 11.613,
+      "text": "ギニア首都のゴミ捨て場で地滑り、30人死亡、捜索救助と住民避難続く"
+    },
+    {
+      "key": "dek",
+      "start": 11.613,
+      "end": 26.5,
+      "text": "大雨の後、コナクリで大規模なゴミ捨て場が崩壊し、救助隊は埋まった可能性のある住民の捜索を続けた。"
+    },
+    {
+      "key": "body-0",
+      "start": 26.5,
+      "end": 61.034,
+      "text": "ギニアの首都コナクリ・ダルサラームで大雨の後、大規模なゴミ捨て場が崩壊し、近くの小屋や家々が大量のゴミで覆われた。政府は、死者数が30人に増え、他にも多数が負傷し、救助隊が重機を使って捜索を続けていることを確認した。"
+    },
+    {
+      "key": "body-1",
+      "start": 61.034,
+      "end": 97.471,
+      "text": "事故前、当局は雨季に土砂崩れの危険があるため、ゴミ捨て場を閉鎖し、近くの家族を移転させる準備をしていた。この事故は、廃棄物処理、住宅の安全性、人口密集都市における極端な降雨への耐性の問題を改めて浮き彫りにした。"
+    },
+    {
+      "key": "why",
+      "start": 97.471,
+      "end": 117.737,
+      "text": "死者数は多く、捜索救助活動はまだ終わっていないため、最終的な死傷者数は今後も変わる可能性がある。"
+    },
+    {
+      "key": "watch",
+      "start": 117.737,
+      "end": 135.105,
+      "text": "最終的な死傷者、行方不明者の捜索、住民の移転、ゴミ捨て場の閉鎖手配に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.39,
+      "end": 4.62,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ギニア首都のゴミ捨て場で地滑り、"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.62,
+      "speechEnd": 7.129,
+      "end": 7.359,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "30人死亡、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.359,
+      "speechEnd": 10.912,
+      "end": 11.613,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "捜索救助と住民避難続く。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 11.613,
+      "speechEnd": 13.842,
+      "end": 14.073,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "大雨の後、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.073,
+      "speechEnd": 18.741,
+      "end": 18.971,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "コナクリで大規模なゴミ捨て場が崩壊し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.971,
+      "speechEnd": 25.8,
+      "end": 26.5,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "救助隊は埋まった可能性のある住民の捜索を続けた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 26.5,
+      "speechEnd": 32.563,
+      "end": 32.793,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ギニアの首都コナクリ・ダルサラームで大雨の後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 32.793,
+      "speechEnd": 36.416,
+      "end": 36.646,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "大規模なゴミ捨て場が崩壊し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.646,
+      "speechEnd": 43.405,
+      "end": 43.906,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "近くの小屋や家々が大量のゴミで覆われた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.906,
+      "speechEnd": 46.066,
+      "end": 46.296,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "政府は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.296,
+      "speechEnd": 49.919,
+      "end": 50.149,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "死者数が30人に増え、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.149,
+      "speechEnd": 53.215,
+      "end": 53.445,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "他にも多数が負傷し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.445,
+      "speechEnd": 60.414,
+      "end": 61.034,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "救助隊が重機を使って捜索を続けていることを確認した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 61.034,
+      "speechEnd": 63.124,
+      "end": 63.354,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "事故前、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 63.354,
+      "speechEnd": 68.859,
+      "end": 69.089,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "当局は雨季に土砂崩れの危険があるため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 69.089,
+      "speechEnd": 72.016,
+      "end": 72.246,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ゴミ捨て場を閉鎖し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 72.246,
+      "speechEnd": 77.612,
+      "end": 78.112,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "近くの家族を移転させる準備をしていた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 78.112,
+      "speechEnd": 80.411,
+      "end": 80.641,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この事故は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 80.641,
+      "speechEnd": 82.941,
+      "end": 83.171,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "廃棄物処理、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 83.171,
+      "speechEnd": 85.819,
+      "end": 86.049,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "住宅の安全性、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 86.049,
+      "speechEnd": 93.644,
+      "end": 93.924,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "人口密集都市における極端な降雨への耐性の問題を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.924,
+      "speechEnd": 96.851,
+      "end": 97.471,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "改めて浮き彫りにした。"
+    },
+    {
+      "parentKey": "why",
+      "start": 97.471,
+      "speechEnd": 101.443,
+      "end": 101.943,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 101.943,
+      "speechEnd": 104.452,
+      "end": 104.682,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "死者数は多く、"
+    },
+    {
+      "parentKey": "why",
+      "start": 104.682,
+      "speechEnd": 109.908,
+      "end": 110.138,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "捜索救助活動はまだ終わっていないため、"
+    },
+    {
+      "parentKey": "why",
+      "start": 110.138,
+      "speechEnd": 117.036,
+      "end": 117.737,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "最終的な死傷者数は今後も変わる可能性がある。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 117.737,
+      "speechEnd": 119.827,
+      "end": 120.057,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 120.057,
+      "speechEnd": 122.984,
+      "end": 123.214,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "最終的な死傷者、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 123.214,
+      "speechEnd": 126.419,
+      "end": 126.649,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "行方不明者の捜索、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 126.649,
+      "speechEnd": 129.019,
+      "end": 129.249,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "住民の移転、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 129.249,
+      "speechEnd": 134.405,
+      "end": 135.105,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "ゴミ捨て場の閉鎖手配に注意してください。"
+    }
+  ]
+}

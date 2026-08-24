@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 161.045,
+  "duration": 138.893,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 360.0,
-  "characters": 439,
-  "charactersPerMinute": 163.6,
+  "characters": 382,
+  "charactersPerMinute": 165.0,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.14,
@@ -27,32 +27,32 @@
     {
       "key": "dek",
       "start": 17.164,
-      "end": 33.504,
-      "text": "地震の震源の深さは約70キロで、津波の恐れはなかった。一部の交通機関と給水が一時的に影響を受けた。"
+      "end": 32.46,
+      "text": "震源の深さは約70キロで、津波の脅威はなかった。一部の交通機関と給水が一時的に影響を受けた。"
     },
     {
       "key": "body-0",
-      "start": 33.504,
-      "end": 82.674,
-      "text": "8月23日未明、関東地方でマグニチュード5.9の地震が発生した。震源地は茨城県南部、震源の深さは約70キロ。東京、埼玉、千葉、神奈川、茨城で大きな揺れが記録されました。 ５県で少なくとも３７人が負傷し、大半が軽傷だった。高齢者の1人は腰に重傷を負った。"
+      "start": 32.46,
+      "end": 73.175,
+      "text": "8月23日未明、関東地方でマグニチュード5.9の地震が発生した。震源地は茨城県南部、震源の深さは約70キロだった。東京、埼玉、千葉、神奈川、茨城で大きな揺れが記録され、５都県で少なくとも３７人が負傷した。"
     },
     {
       "key": "body-1",
-      "start": 82.674,
-      "end": 119.612,
-      "text": "この地震では津波警報は発令されず、原子力施設にも異常は報告されなかった。東京都江東区では一部の鉄道に遅れが発生し、地中管が破損した。政府は災害とインフラの点検を開始しており、住民は依然として来週も余震に注意するよう呼び掛けられている。"
+      "start": 73.175,
+      "end": 102.498,
+      "text": "この地震では津波警報は発令されず、原子力施設にも異常は報告されなかった。一部の鉄道は一時遅れ、東京の江東区では地下のパイプが破損した。住民らは引き続き来週の余震に注意するよう呼び掛けた。"
     },
     {
       "key": "why",
-      "start": 119.612,
-      "end": 144.396,
-      "text": "地震により多くの負傷者が発生し、交通機関や給水にも影響が出ました。その後の余震とインフラ点検は依然として公共の安全にとって重要です。"
+      "start": 102.498,
+      "end": 125.54,
+      "text": "地震により多くの負傷者が発生し、交通機関や給水にも影響が出ました。余震とインフラ点検は依然として公共の安全にとって重要です。"
     },
     {
       "key": "watch",
-      "start": 144.396,
-      "end": 161.045,
-      "text": "死傷者の数、鉄道や水道の完全復旧、気象庁の最新の余震活動の評価に注目してください。"
+      "start": 125.54,
+      "end": 138.893,
+      "text": "負傷者の数や交通・水道の復旧状況、気象庁の余震評価に注目してください。"
     }
   ],
   "semanticUnits": [
@@ -79,28 +79,28 @@
     {
       "parentKey": "dek",
       "start": 17.164,
-      "speechEnd": 22.738,
-      "end": 22.968,
+      "speechEnd": 21.763,
+      "end": 21.993,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
-      "text": "地震の震源の深さは約70キロで、"
+      "text": "震源の深さは約70キロで、"
     },
     {
       "parentKey": "dek",
-      "start": 22.968,
-      "speechEnd": 26.033,
-      "end": 26.534,
+      "start": 21.993,
+      "speechEnd": 24.989,
+      "end": 25.489,
       "pause": 0.5,
       "intendedPause": 0.5,
       "reason": "punctuation-sentence",
-      "text": "津波の恐れはなかった。"
+      "text": "津波の脅威はなかった。"
     },
     {
       "parentKey": "dek",
-      "start": 26.534,
-      "speechEnd": 32.804,
-      "end": 33.504,
+      "start": 25.489,
+      "speechEnd": 31.76,
+      "end": 32.46,
       "pause": 0.7,
       "intendedPause": 0.7,
       "reason": "punctuation-sentence",
@@ -108,9 +108,9 @@
     },
     {
       "parentKey": "body-0",
-      "start": 33.504,
-      "speechEnd": 37.058,
-      "end": 37.288,
+      "start": 32.46,
+      "speechEnd": 36.013,
+      "end": 36.243,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
@@ -118,9 +118,9 @@
     },
     {
       "parentKey": "body-0",
-      "start": 37.288,
-      "speechEnd": 44.464,
-      "end": 44.964,
+      "start": 36.243,
+      "speechEnd": 43.42,
+      "end": 43.92,
       "pause": 0.5,
       "intendedPause": 0.5,
       "reason": "punctuation-sentence",
@@ -128,9 +128,9 @@
     },
     {
       "parentKey": "body-0",
-      "start": 44.964,
-      "speechEnd": 48.587,
-      "end": 48.817,
+      "start": 43.92,
+      "speechEnd": 47.543,
+      "end": 47.773,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
@@ -138,19 +138,19 @@
     },
     {
       "parentKey": "body-0",
-      "start": 48.817,
-      "speechEnd": 52.928,
-      "end": 53.428,
+      "start": 47.773,
+      "speechEnd": 52.511,
+      "end": 53.011,
       "pause": 0.5,
       "intendedPause": 0.5,
       "reason": "punctuation-sentence",
-      "text": "震源の深さは約70キロ。"
+      "text": "震源の深さは約70キロだった。"
     },
     {
       "parentKey": "body-0",
-      "start": 53.428,
-      "speechEnd": 55.448,
-      "end": 55.678,
+      "start": 53.011,
+      "speechEnd": 55.031,
+      "end": 55.261,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
@@ -158,9 +158,9 @@
     },
     {
       "parentKey": "body-0",
-      "start": 55.678,
-      "speechEnd": 57.699,
-      "end": 57.929,
+      "start": 55.261,
+      "speechEnd": 57.282,
+      "end": 57.512,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
@@ -168,9 +168,9 @@
     },
     {
       "parentKey": "body-0",
-      "start": 57.929,
-      "speechEnd": 59.949,
-      "end": 60.179,
+      "start": 57.512,
+      "speechEnd": 59.533,
+      "end": 59.763,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
@@ -178,9 +178,9 @@
     },
     {
       "parentKey": "body-0",
-      "start": 60.179,
-      "speechEnd": 62.27,
-      "end": 62.5,
+      "start": 59.763,
+      "speechEnd": 61.853,
+      "end": 62.083,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
@@ -188,49 +188,29 @@
     },
     {
       "parentKey": "body-0",
-      "start": 62.5,
-      "speechEnd": 67.028,
-      "end": 67.529,
-      "pause": 0.5,
-      "intendedPause": 0.5,
-      "reason": "punctuation-sentence",
-      "text": "茨城で大きな揺れが記録されました。"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 67.529,
-      "speechEnd": 73.381,
-      "end": 73.611,
+      "start": 62.083,
+      "speechEnd": 65.985,
+      "end": 66.215,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
-      "text": "５県で少なくとも３７人が負傷し、"
+      "text": "茨城で大きな揺れが記録され、"
     },
     {
       "parentKey": "body-0",
-      "start": 73.611,
-      "speechEnd": 76.468,
-      "end": 76.968,
-      "pause": 0.5,
-      "intendedPause": 0.5,
-      "reason": "punctuation-sentence",
-      "text": "大半が軽傷だった。"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 76.968,
-      "speechEnd": 82.054,
-      "end": 82.674,
+      "start": 66.215,
+      "speechEnd": 72.555,
+      "end": 73.175,
       "pause": 0.62,
       "intendedPause": 0.62,
       "reason": "punctuation-sentence",
-      "text": "高齢者の1人は腰に重傷を負った。"
+      "text": "５都県で少なくとも３７人が負傷した。"
     },
     {
       "parentKey": "body-1",
-      "start": 82.674,
-      "speechEnd": 88.039,
-      "end": 88.269,
+      "start": 73.175,
+      "speechEnd": 78.54,
+      "end": 78.77,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
@@ -238,9 +218,9 @@
     },
     {
       "parentKey": "body-1",
-      "start": 88.269,
-      "speechEnd": 93.773,
-      "end": 94.273,
+      "start": 78.77,
+      "speechEnd": 84.274,
+      "end": 84.774,
       "pause": 0.5,
       "intendedPause": 0.5,
       "reason": "punctuation-sentence",
@@ -248,49 +228,39 @@
     },
     {
       "parentKey": "body-1",
-      "start": 94.273,
-      "speechEnd": 101.171,
-      "end": 101.401,
+      "start": 84.774,
+      "speechEnd": 88.328,
+      "end": 88.558,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
-      "text": "東京都江東区では一部の鉄道に遅れが発生し、"
+      "text": "一部の鉄道は一時遅れ、"
     },
     {
       "parentKey": "body-1",
-      "start": 101.401,
-      "speechEnd": 104.397,
-      "end": 104.897,
+      "start": 88.558,
+      "speechEnd": 94.62,
+      "end": 95.12,
       "pause": 0.5,
       "intendedPause": 0.5,
       "reason": "punctuation-sentence",
-      "text": "地中管が破損した。"
+      "text": "東京の江東区では地下のパイプが破損した。"
     },
     {
       "parentKey": "body-1",
-      "start": 104.897,
-      "speechEnd": 110.889,
-      "end": 111.119,
-      "pause": 0.23,
-      "intendedPause": 0.23,
-      "reason": "punctuation-comma",
-      "text": "政府は災害とインフラの点検を開始しており、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 111.119,
-      "speechEnd": 118.992,
-      "end": 119.612,
+      "start": 95.12,
+      "speechEnd": 101.878,
+      "end": 102.498,
       "pause": 0.62,
       "intendedPause": 0.62,
       "reason": "punctuation-sentence",
-      "text": "住民は依然として来週も余震に注意するよう呼び掛けられている。"
+      "text": "住民らは引き続き来週の余震に注意するよう呼び掛けた。"
     },
     {
       "parentKey": "why",
-      "start": 119.612,
-      "speechEnd": 123.583,
-      "end": 124.083,
+      "start": 102.498,
+      "speechEnd": 106.47,
+      "end": 106.97,
       "pause": 0.5,
       "intendedPause": 0.5,
       "reason": "punctuation-sentence",
@@ -298,9 +268,9 @@
     },
     {
       "parentKey": "why",
-      "start": 124.083,
-      "speechEnd": 128.751,
-      "end": 128.981,
+      "start": 106.97,
+      "speechEnd": 111.638,
+      "end": 111.868,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
@@ -308,9 +278,9 @@
     },
     {
       "parentKey": "why",
-      "start": 128.981,
-      "speechEnd": 133.65,
-      "end": 134.15,
+      "start": 111.868,
+      "speechEnd": 116.536,
+      "end": 117.036,
       "pause": 0.5,
       "intendedPause": 0.5,
       "reason": "punctuation-sentence",
@@ -318,29 +288,19 @@
     },
     {
       "parentKey": "why",
-      "start": 134.15,
-      "speechEnd": 137.982,
-      "end": 138.262,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "semantic-boundary",
-      "text": "その後の余震とインフラ点検は"
-    },
-    {
-      "parentKey": "why",
-      "start": 138.262,
-      "speechEnd": 143.696,
-      "end": 144.396,
+      "start": 117.036,
+      "speechEnd": 124.84,
+      "end": 125.54,
       "pause": 0.7,
       "intendedPause": 0.7,
       "reason": "punctuation-sentence",
-      "text": "依然として公共の安全にとって重要です。"
+      "text": "余震とインフラ点検は依然として公共の安全にとって重要です。"
     },
     {
       "parentKey": "watch",
-      "start": 144.396,
-      "speechEnd": 146.486,
-      "end": 146.717,
+      "start": 125.54,
+      "speechEnd": 127.63,
+      "end": 127.86,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
@@ -348,33 +308,23 @@
     },
     {
       "parentKey": "watch",
-      "start": 146.717,
-      "speechEnd": 149.085,
-      "end": 149.315,
+      "start": 127.86,
+      "speechEnd": 133.225,
+      "end": 133.455,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
-      "text": "死傷者の数、"
+      "text": "負傷者の数や交通・水道の復旧状況、"
     },
     {
       "parentKey": "watch",
-      "start": 149.315,
-      "speechEnd": 153.008,
-      "end": 153.238,
-      "pause": 0.23,
-      "intendedPause": 0.23,
-      "reason": "punctuation-comma",
-      "text": "鉄道や水道の完全復旧、"
-    },
-    {
-      "parentKey": "watch",
-      "start": 153.238,
-      "speechEnd": 160.345,
-      "end": 161.045,
+      "start": 133.455,
+      "speechEnd": 138.193,
+      "end": 138.893,
       "pause": 0.7,
       "intendedPause": 0.7,
       "reason": "punctuation-sentence",
-      "text": "気象庁の最新の余震活動の評価に注目してください。"
+      "text": "気象庁の余震評価に注目してください。"
     }
   ]
 }
