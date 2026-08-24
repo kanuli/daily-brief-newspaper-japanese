@@ -40,13 +40,18 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: 翻訳・Discord・ふりがなコードを構文検査
-        run: python -m py_compile scripts/sync_and_translate.py scripts/safe_sync.py scripts/furigana_context.py scripts/validate_furigana_readings.py scripts/validate_content_integrity.py scripts/check_source_drift.py scripts/notify_discord.py
+        run: python -m py_compile scripts/sync_and_translate.py scripts/safe_sync.py scripts/sync_cantonese_layers.py scripts/furigana_context.py scripts/validate_furigana_readings.py scripts/validate_content_integrity.py scripts/validate_extra_layers.py scripts/check_source_drift.py scripts/notify_discord.py
 
-      - name: 広東語版を同期して日本語ニュースを生成
+      - name: 広東語版のデイリー・速報を同期して日本語化
         run: python scripts/safe_sync.py
 
+      - name: 広東語版の追加・ローリング・株式ニュースも日本語化
+        run: python scripts/sync_cantonese_layers.py
+
       - name: Discord配信前にニュース完全性を検証
-        run: python scripts/validate_content_integrity.py
+        run: |
+          python scripts/validate_content_integrity.py
+          python scripts/validate_extra_layers.py
 
       - name: 文脈依存のふりがなを全件検証
         run: python scripts/validate_furigana_readings.py

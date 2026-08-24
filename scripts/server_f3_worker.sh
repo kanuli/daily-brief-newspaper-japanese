@@ -15,8 +15,11 @@ git checkout "$BRANCH"
 git reset --hard "origin/$BRANCH"
 
 python scripts/validate_content_integrity.py
+python scripts/validate_extra_layers.py
 python scripts/generate_supertonic_f3.py
+python scripts/generate_supertonic_f3_rolling.py
 python scripts/validate_content_integrity.py
+python scripts/validate_extra_layers.py
 python scripts/validate_site.py
 
 git config user.name "daily-brief-japanese-audio-server"
