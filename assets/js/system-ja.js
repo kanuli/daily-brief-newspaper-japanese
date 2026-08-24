@@ -17,11 +17,24 @@
     ['archive.html','アーカイブ','']
   ];
 
+  const NEWSPAPER_CSS='assets/css/newspaper.css?v=20260825-cantonese-layout2';
   const ERROR_RE=/(?:error\s*(?:4\d\d|5\d\d)|server error|that[’']s an error|please try again later|bad gateway|service unavailable|too many requests|internal server error|<!doctype|<html)/i;
   const CHINESE_PROSE_RE=/(?:，|；|分鐘|小時|仍然|目前|進一步|將於|已經|對於|相關消息|賽事|球隊|球員|當局|白禮頓|阿士東|維拉)/;
   const HIRA_RE=/[\u3040-\u309f]/g;
   const HAN_RE=/[\u3400-\u9fff]/g;
   const PROSE_FIELDS=['dek','summary','body','context','why','watchNext'];
+
+  function ensureNewspaperStyle(){
+    const current=[...document.querySelectorAll('link[rel="stylesheet"]')].find(link=>String(link.getAttribute('href')||'').includes('assets/css/newspaper.css'));
+    if(current){
+      if(current.getAttribute('href')!==NEWSPAPER_CSS)current.setAttribute('href',NEWSPAPER_CSS);
+      return;
+    }
+    const link=document.createElement('link');
+    link.rel='stylesheet';
+    link.href=NEWSPAPER_CSS;
+    document.head.prepend(link);
+  }
 
   function ensureStyle(){
     if(document.querySelector('link[data-system-ja]')) return;
@@ -150,7 +163,7 @@
     document.body.append(button,panel);
   }
 
-  function boot(){ensureStyle();normalizeNav();applyStaticRuby();mountSystemPanel();ensureIntegrityGuard();}
+  function boot(){ensureNewspaperStyle();ensureStyle();normalizeNav();applyStaticRuby();mountSystemPanel();ensureIntegrityGuard();}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
-  window.addEventListener('pageshow',()=>{normalizeNav();applyStaticRuby();ensureIntegrityGuard();});
+  window.addEventListener('pageshow',()=>{ensureNewspaperStyle();normalizeNav();applyStaticRuby();ensureIntegrityGuard();});
 })();
