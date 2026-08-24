@@ -29,15 +29,58 @@ def load_json(rel):
     try:return json.loads(path.read_text(encoding='utf-8'))
     except Exception as exc:fail(f'invalid JSON {rel}: {exc}')
 
+def require_file(rel):
+    path=ROOT/rel
+    if not path.is_file():fail(f'missing {rel}')
+    return path
+
+def validate_parity(css,system_css,system_js):
+    # Cantonese repository is the master layout reference. These invariants stop
+    # the Japanese watchdog from accepting the old stripped-down presentation.
+    if not re.search(r'\.section-nav\s*\{[^}]*background\s*:\s*var\(--ink\)',css,re.S):
+        fail('Cantonese-parity black navigation rail missing')
+    if not re.search(r'\.section-nav[^\n{]*a\[aria-current="page"\][^\{]*\{[^}]*background\s*:\s*var\(--red\)',css,re.S) and '#b00016' not in system_css:
+        fail('Cantonese-parity red active navigation tab missing')
+    if not re.search(r'white-space\s*:\s*nowrap',css,re.I):
+        fail('masthead title is not protected from wrapping')
+    if '--max:1240px' not in css and '--max: 1240px' not in css:
+        fail('Cantonese-parity newspaper width missing')
+    if 'counter-reset:top' not in css.replace(' ','') or 'counter(top)' not in css:
+        fail('Cantonese-parity numbered Top Five styling missing')
+    if '.archive-list' not in css or '.archive-item' not in css:
+        fail('Cantonese-parity archive newspaper-list styling missing')
+    if 'normalizeTopicShell' not in system_js or 'topic-ja-rolling.js' not in system_js:
+        fail('shared Cantonese-parity topic shell/rolling renderer missing')
+
+    index=(ROOT/'index.html').read_text(encoding='utf-8')
+    for token in ('id="live-summary"','id="study-desk"','08:00 DAILY EDITION','home-extras-ja.js'):
+        if token not in index:fail(f'index.html Cantonese-parity block missing: {token}')
+
+    live=(ROOT/'live.html').read_text(encoding='utf-8')
+    for token in ('live-page-head','live-page-stats','live-audit','live-next-update','live-ja.css','live-article-ja.js'):
+        if token not in live:fail(f'live.html Cantonese-parity structure missing: {token}')
+
+    archive=(ROOT/'archive.html').read_text(encoding='utf-8')
+    for token in ('class="archive-list"','archive-item','DAILY BRIEF ARCHIVE'):
+        if token not in archive:fail(f'archive.html Cantonese-parity structure missing: {token}')
+
+    stocks=(ROOT/'stocks.html').read_text(encoding='utf-8')
+    for token in ('stock-page-head','stock-ticker-nav','stock-sections','stocks-ja.css','stocks-ja.js'):
+        if token not in stocks:fail(f'stocks.html Cantonese-parity structure missing: {token}')
+
+
 def validate_html():
-    system_js=ROOT/'assets/js/system-ja.js';system_css=ROOT/'assets/css/system-ja.css';newspaper_css=ROOT/'assets/css/newspaper.css';news_js=ROOT/'assets/js/newspaper-ja.js';live_guard=ROOT/'assets/js/live-guard.js'
-    for path in (system_js,system_css,newspaper_css,news_js,live_guard):
-        if not path.is_file():fail(f'missing {path.relative_to(ROOT)}')
-    css=newspaper_css.read_text(encoding='utf-8');renderer=news_js.read_text(encoding='utf-8');nav_js=system_js.read_text(encoding='utf-8');guard=live_guard.read_text(encoding='utf-8')
-    if 'white-space:nowrap' not in css:fail('masthead title is not protected from wrapping')
+    required=[
+        'assets/js/system-ja.js','assets/css/system-ja.css','assets/css/newspaper.css','assets/js/newspaper-ja.js','assets/js/live-guard.js',
+        'assets/css/live-ja.css','assets/js/live-article-ja.js','assets/css/topic-ja-rolling.css','assets/js/topic-ja-rolling.js',
+        'assets/css/stocks-ja.css','assets/js/stocks-ja.js','assets/js/home-extras-ja.js'
+    ]
+    paths=[require_file(rel) for rel in required]
+    system_js,system_css,newspaper_css,news_js,live_guard=paths[0],paths[1],paths[2],paths[3],paths[4]
+    css=newspaper_css.read_text(encoding='utf-8');renderer=news_js.read_text(encoding='utf-8');nav_js=system_js.read_text(encoding='utf-8');guard=live_guard.read_text(encoding='utf-8');syscss=system_css.read_text(encoding='utf-8')
+    validate_parity(css,syscss,nav_js)
     if '.sync-text.is-speaking' not in css or 'audio-transcript' not in css:fail('playback highlight/transcript styles missing')
     if 'synced-audio' not in renderer or 'data-timing' not in renderer or 'furigana' not in renderer:fail('furigana/playback synchronization renderer missing')
-    if 'live-next-update' not in (ROOT/'live.html').read_text(encoding='utf-8'):fail('live page next publication field missing')
     if 'nextPublicationLabel' not in guard or 'ERROR_RE' not in guard:fail('live publication/error quarantine guard missing')
     for href in NAV_HREFS:
         if href not in nav_js:fail(f'unified navigation missing {href}')
@@ -58,7 +101,7 @@ def validate_html():
             if re.match(r'^(?:https?:|mailto:|tel:|#|javascript:)',ref):continue
             clean=ref.split('?',1)[0].split('#',1)[0]
             if clean and not (ROOT/clean).exists():fail(f'{rel}: broken local reference {ref}')
-    print(f'HTML_OK {len(HTML_PAGES)} pages; unified navigation {len(NAV_HREFS)} links; furigana/sync UI and Live guard present')
+    print(f'HTML_OK {len(HTML_PAGES)} pages; Cantonese-layout parity, unified navigation, furigana/sync UI and Live guard present')
 
 def japanese_copy_ok(item):
     visible=' '.join(str(item.get(k,'') or '') for k in ('title','dek','summary','body','context','why','watchNext'))
