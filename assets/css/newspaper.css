@@ -422,3 +422,7 @@ rt { font-family: "Noto Sans JP", system-ui, sans-serif; font-size: .52em; font-
   .footer, .live-summary-head { flex-direction: column; }
   .audio-transcript-body { max-height: 210px; }
 }
+
+/* Auto-maintenance: keep masthead on one line. */
+.brand h1{white-space:nowrap;font-size:clamp(28px,4.6vw,52px)}
+@media(max-width:760px){.brand h1{font-size:clamp(25px,8.8vw,38px)}}
