@@ -211,4 +211,8 @@ def apply_contextual_readings(original, rendered):
     rendered=US_PREFIX_RE.sub("<ruby>米<rt>べい</rt></ruby>",rendered)
     rendered=COUNTRY_SUFFIX_RE.sub(lambda m:m.group(1)+"<ruby>国<rt>こく</rt></ruby>",rendered)
     rendered=re.sub(r"<ruby>厳<rt>いかめ</rt></ruby>(?=し(?:い|く|さ|かった|ければ))","<ruby>厳<rt>きび</rt></ruby>",rendered)
+
+    # 数 is すう when it is a productive suffix (犠牲者数, エピソード数, 件数, etc.).
+    rendered=rendered.replace("</ruby><ruby>数<rt>かず</rt></ruby>","</ruby><ruby>数<rt>すう</rt></ruby>")
+    rendered=re.sub(r"(?<=[ァ-ヶーA-Za-z])<ruby>数<rt>かず</rt></ruby>","<ruby>数<rt>すう</rt></ruby>",rendered)
     return rendered
