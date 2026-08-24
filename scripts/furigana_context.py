@@ -24,6 +24,7 @@ DIGIT_READINGS = {0:"れい",1:"いち",2:"に",3:"さん",4:"よん",5:"ご",6:
 MINUTE_ENDINGS = {1:"いっぷん",2:"にふん",3:"さんぷん",4:"よんぷん",5:"ごふん",6:"ろっぷん",7:"ななふん",8:"はっぷん",9:"きゅうふん"}
 PERSON_SPECIAL = {1:"ひとり",2:"ふたり",4:"よにん",7:"ななにん"}
 HOUR_SPECIAL = {0:"れいじ",4:"よじ",7:"しちじ",9:"くじ"}
+MONTH_DURATION_ONES = {1:"いっ",2:"に",3:"さん",4:"よん",5:"ご",6:"ろっ",7:"なな",8:"はっ",9:"きゅう"}
 
 COUNTER_SPECS = {
     "本":({1:"いっぽん",2:"にほん",3:"さんぼん",4:"よんほん",5:"ごほん",6:"ろっぽん",7:"ななほん",8:"はっぽん",9:"きゅうほん"},"じゅっぽん",{}),
@@ -57,12 +58,16 @@ CALENDAR_DATE_RE = re.compile(
 DURATION_DAY_RE = re.compile(
     r"(?<!\d)(\d{1,2})(?:<ruby>日間<rt>[^<]+</rt></ruby>|<ruby>日<rt>[^<]+</rt></ruby><ruby>間<rt>[^<]+</rt></ruby>)"
 )
+MONTH_DURATION_RE = re.compile(r"(?<!\d)(\d{1,2})([カかケヶヵ])<ruby>月<rt>[^<]+</rt></ruby>")
 SCORE_TAI_RE = re.compile(r"(?<=\d)<ruby>対<rt>[^<]+</rt></ruby>(?=\d)")
 PREFIX_TAI_RE = re.compile(r"<ruby>対<rt>つい</rt></ruby>(?=(?:[ァ-ヶーA-Za-z]|<ruby>[\u3400-\u9fff]))")
 PAST_AFTER_RE = re.compile(r"(?<=た)<ruby>後<rt>[^<]+</rt></ruby>(?=(?:の|に|で|を|、|。|が|は|$))")
 YUKUE_RE = re.compile(r"<ruby>行方<rt>なめがた</rt></ruby>(?=(?:は|が|を|の|に|も|<ruby>不明))")
 US_PREFIX_RE = re.compile(
     r"<ruby>米<rt>こめ</rt></ruby>(?=(?:ドル|<ruby>(?:軍|政府|企業|市場|株|大統領|当局|連邦|議会|司法|商務|財務|国防|銀行)))"
+)
+COUNTRY_SUFFIX_RE = re.compile(
+    r"(<ruby>(?:輸入|輸出|加盟|参加|先進|途上|対象|同盟|敵|友好)<rt>[^<]+</rt></ruby>)<ruby>国<rt>くに</rt></ruby>"
 )
 
 def number_reading(n):
@@ -105,6 +110,19 @@ def person_reading(n):
         return None
     return PERSON_SPECIAL.get(n, number_reading(n)+"にん")
 
+def month_duration_reading(n):
+    n=int(n)
+    if not (1 <= n <= 99):
+        return None
+    tens,ones=divmod(n,10)
+    if tens==0:
+        return MONTH_DURATION_ONES[ones]+"かげつ"
+    if ones==0:
+        prefix="" if tens==1 else DIGIT_READINGS[tens]
+        return prefix+"じゅっかげつ"
+    prefix="じゅう" if tens==1 else DIGIT_READINGS[tens]+"じゅう"
+    return prefix+MONTH_DURATION_ONES[ones]+"かげつ"
+
 def counter_reading(n, unit):
     n=int(n)
     ones_map, ten_form, specials = COUNTER_SPECS[unit]
@@ -145,6 +163,13 @@ def apply_contextual_readings(original, rendered):
         return ruby(f"{day}日間",dr+"かん") if dr else m.group(0)
     rendered=DURATION_DAY_RE.sub(duration_repl,rendered)
 
+    def month_duration_repl(m):
+        n=int(m.group(1)); reading=month_duration_reading(n)
+        return ruby(f"{m.group(1)}{m.group(2)}月",reading) if reading else m.group(0)
+    rendered=MONTH_DURATION_RE.sub(month_duration_repl,rendered)
+    rendered=rendered.replace("<ruby>数<rt>かず</rt></ruby>カ<ruby>月<rt>がつ</rt></ruby>",ruby("数カ月","すうかげつ"))
+    rendered=rendered.replace("<ruby>数<rt>かず</rt></ruby>か<ruby>月<rt>がつ</rt></ruby>",ruby("数か月","すうかげつ"))
+
     def month_repl(m):
         month=int(m.group(1)); reading=MONTH_READINGS.get(month)
         return ruby(f"{month}月",reading) if reading else m.group(0)
@@ -181,7 +206,9 @@ def apply_contextual_readings(original, rendered):
     rendered=rendered.replace("</ruby><ruby>後<rt>のち</rt></ruby>","</ruby><ruby>後<rt>ご</rt></ruby>")
     rendered=re.sub(r"(?<=[ァ-ヶーA-Za-z])<ruby>後<rt>のち</rt></ruby>","<ruby>後<rt>ご</rt></ruby>",rendered)
 
-    # Common news homographs that pykakasi may choose as a place/food reading.
+    # Common news homographs that pykakasi may choose as a place/food/literal reading.
     rendered=YUKUE_RE.sub("<ruby>行方<rt>ゆくえ</rt></ruby>",rendered)
     rendered=US_PREFIX_RE.sub("<ruby>米<rt>べい</rt></ruby>",rendered)
+    rendered=COUNTRY_SUFFIX_RE.sub(lambda m:m.group(1)+"<ruby>国<rt>こく</rt></ruby>",rendered)
+    rendered=re.sub(r"<ruby>厳<rt>いかめ</rt></ruby>(?=し(?:い|く|さ|かった|ければ))","<ruby>厳<rt>きび</rt></ruby>",rendered)
     return rendered
