@@ -1,0 +1,400 @@
+{
+  "version": 3,
+  "duration": 193.149,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 623,
+  "charactersPerMinute": 193.5,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 18.211,
+      "text": "マンチェスター・シティがアディショナルタイムでバーンリーを2対1で破り、マレスカは劇的な勝利でプレミアリーグの監督キャリアをスタートさせた"
+    },
+    {
+      "key": "dek",
+      "start": 18.211,
+      "end": 39.711,
+      "text": "マンチェスター・シティは80分以上劣勢に立たされたが、マルク・ゲヒが同点に追いつくと、アディショナルタイムにグヴァルディオルが決勝ゴールを決めた。"
+    },
+    {
+      "key": "body-0",
+      "start": 39.711,
+      "end": 91.478,
+      "text": "エンツォ・マレスカ新監督の下、プレミアリーグ初戦でマンチェスター・シティがバーンリーを２－１で破った。ホームチームは84分にマルク・ゲヒが同点に追いつくまで、ほとんどの時間で劣勢に立たされた。ロスタイムにジョスコ・グヴァルディオルが追加ゴールを決め、このゴールはVARによって有効であることが確認され、マンチェスター・シティが新時代の初戦で勝ち点3を獲得した。"
+    },
+    {
+      "key": "body-1",
+      "start": 91.478,
+      "end": 151.166,
+      "text": "この試合は、ジョゼップ・グアルディオラ監督が10年間の任期を終えて以来、マンチェスター・シティがプレミアリーグで新たな監督サイクルを開始する初めての試合となる。チームも今夏、多くの主力メンバーがチームを離れる。マレスカ監督は、ワールドカップ後に復帰した選手の中には完全には回復していない選手もいると認めた。終盤の反撃で好スタートを切ったものの、布陣の調整と攻撃効率には引き続き注意が必要だ。"
+    },
+    {
+      "key": "why",
+      "start": 151.166,
+      "end": 174.449,
+      "text": "アディショナルタイムでの逆転劇は新監督に早い段階で自信をもたらし、逆境に直面したシティの新システムの最初の公式テストとなった。"
+    },
+    {
+      "key": "watch",
+      "start": 174.449,
+      "end": 193.149,
+      "text": "次節でのマレスカの主力選考調整とハーランドのステータス、そして中盤とフロントコートにおける新加入選手の役割に注目だ。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 8.152,
+      "end": 8.432,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マンチェスター・シティがアディショナルタイムでバーンリーを2対1で破り、"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.432,
+      "speechEnd": 17.351,
+      "end": 18.211,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "マレスカは劇的な勝利でプレミアリーグの監督キャリアをスタートさせた。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.211,
+      "speechEnd": 21.068,
+      "end": 21.248,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "マンチェスター・シティは"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.248,
+      "speechEnd": 23.338,
+      "end": 23.518,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "80分"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.518,
+      "speechEnd": 27.142,
+      "end": 27.422,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "以上劣勢に立たされたが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.422,
+      "speechEnd": 31.602,
+      "end": 31.883,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マルク・ゲヒが同点に追いつくと、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 31.883,
+      "speechEnd": 38.85,
+      "end": 39.711,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "アディショナルタイムにグヴァルディオルが決勝ゴールを決めた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.711,
+      "speechEnd": 44.17,
+      "end": 44.45,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "エンツォ・マレスカ新監督の下、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.45,
+      "speechEnd": 49.815,
+      "end": 50.155,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "プレミアリーグ初戦でマンチェスター・シティが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.155,
+      "speechEnd": 53.848,
+      "end": 54.468,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "バーンリーを２－１で破った。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.468,
+      "speechEnd": 62.133,
+      "end": 62.413,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ホームチームは84分にマルク・ゲヒが同点に追いつくまで、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.413,
+      "speechEnd": 67.43,
+      "end": 68.05,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ほとんどの時間で劣勢に立たされた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.05,
+      "speechEnd": 75.018,
+      "end": 75.298,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロスタイムにジョスコ・グヴァルディオルが追加ゴールを決め、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.298,
+      "speechEnd": 82.196,
+      "end": 82.476,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "このゴールはVARによって有効であることが確認され、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 82.476,
+      "speechEnd": 90.698,
+      "end": 91.478,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "マンチェスター・シティが新時代の初戦で勝ち点3を獲得した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.478,
+      "speechEnd": 93.847,
+      "end": 94.127,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この試合は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.127,
+      "speechEnd": 97.959,
+      "end": 98.299,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ジョゼップ・グアルディオラ監督が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 98.299,
+      "speechEnd": 102.898,
+      "end": 103.178,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "10年間の任期を終えて以来、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.178,
+      "speechEnd": 110.564,
+      "end": 110.904,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "マンチェスター・シティがプレミアリーグで新たな監督サイクルを"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 110.904,
+      "speechEnd": 114.945,
+      "end": 115.566,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "開始する初めての試合となる。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.566,
+      "speechEnd": 117.935,
+      "end": 118.215,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "チームも今夏、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.215,
+      "speechEnd": 122.744,
+      "end": 123.364,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "多くの主力メンバーがチームを離れる。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 123.364,
+      "speechEnd": 126.151,
+      "end": 126.431,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マレスカ監督は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 126.431,
+      "speechEnd": 131.518,
+      "end": 131.858,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ワールドカップ後に復帰した選手の中には"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 131.858,
+      "speechEnd": 137.292,
+      "end": 137.913,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "完全には回復していない選手もいると認めた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 137.913,
+      "speechEnd": 143.557,
+      "end": 143.837,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "終盤の反撃で好スタートを切ったものの、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 143.837,
+      "speechEnd": 150.386,
+      "end": 151.166,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "布陣の調整と攻撃効率には引き続き注意が必要だ。"
+    },
+    {
+      "parentKey": "why",
+      "start": 151.166,
+      "speechEnd": 155.138,
+      "end": 155.758,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 155.758,
+      "speechEnd": 159.73,
+      "end": 160.07,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "アディショナルタイムでの逆転劇は"
+    },
+    {
+      "parentKey": "why",
+      "start": 160.07,
+      "speechEnd": 165.574,
+      "end": 165.855,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "新監督に早い段階で自信をもたらし、"
+    },
+    {
+      "parentKey": "why",
+      "start": 165.855,
+      "speechEnd": 173.589,
+      "end": 174.449,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "逆境に直面したシティの新システムの最初の公式テストとなった。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 174.449,
+      "speechEnd": 176.539,
+      "end": 176.819,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 176.819,
+      "speechEnd": 184.136,
+      "end": 184.416,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "次節でのマレスカの主力選考調整とハーランドのステータス、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 184.416,
+      "speechEnd": 192.289,
+      "end": 193.149,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "そして中盤とフロントコートにおける新加入選手の役割に注目だ。"
+    }
+  ]
+}

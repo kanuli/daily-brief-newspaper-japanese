@@ -1,0 +1,390 @@
+{
+  "version": 3,
+  "duration": 192.993,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 547,
+  "charactersPerMinute": 170.1,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 15.494,
+      "text": "アリババは約800億香港ドル相当の株式発行を開始し、純利益はすべて人工知能機能に投資される"
+    },
+    {
+      "key": "dek",
+      "start": 15.494,
+      "end": 42.555,
+      "text": "同社は7億1000万株を1株当たり112.70香港ドルで発行する予定で、これは最近の終値から3.6％割引され、香港の上場企業による大規模なその後の発行の記録を樹立する。"
+    },
+    {
+      "key": "body-0",
+      "start": 42.555,
+      "end": 97.398,
+      "text": "アリババは8月23日、約800億香港ドル（102億米ドルに相当）の株式発行を開始した。7億1000万株を1株当たり112.70香港ドルで売却する予定で、最近の終値から3.6％割引される。同社は、純収益の100％が、チップ、コンピューティングインフラストラクチャ、モデルの開発と展開を含む「フルスタック」人工知能機能に投資されると述べた。"
+    },
+    {
+      "key": "body-1",
+      "start": 97.398,
+      "end": 144.586,
+      "text": "この取引が完了すれば、香港の上場企業によるこれまでで最大規模の後続取引となる。アリババは以前、主に人工知能の設備投資の急増により、四半期純利益が前年同期比で75％減少したと発表した。新しいファンドはコンピューティング能力への投資を拡大できるが、新株は短期的な希薄化圧力も増大させるだろう。"
+    },
+    {
+      "key": "why",
+      "start": 144.586,
+      "end": 173.385,
+      "text": "大規模な株式の発行は、会社の資本構造と人工知能への投資能力を同時に変化させ、株価、利益の希薄化、テクノロジーセクターの評価に直接影響を与えます。"
+    },
+    {
+      "key": "watch",
+      "start": 173.385,
+      "end": 192.993,
+      "text": "株主割当の完了、香港市場開場後の株価の反応、その後の同社の人工知能設備投資配分の開示に注目してほしい。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 8.849,
+      "end": 9.129,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アリババは約800億香港ドル相当の株式発行を開始し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.129,
+      "speechEnd": 14.633,
+      "end": 15.494,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "純利益はすべて人工知能機能に投資される。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.494,
+      "speechEnd": 26.642,
+      "end": 26.922,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同社は7億1000万株を1株当たり112.70香港ドルで発行する予定で、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.922,
+      "speechEnd": 33.123,
+      "end": 33.403,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "これは最近の終値から3.6％割引され、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 33.403,
+      "speechEnd": 41.695,
+      "end": 42.555,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "香港の上場企業による大規模なその後の発行の記録を樹立する。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.555,
+      "speechEnd": 46.805,
+      "end": 47.085,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アリババは8月23日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.085,
+      "speechEnd": 57.328,
+      "end": 57.948,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "約800億香港ドル（102億米ドルに相当）の株式発行を開始した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.948,
+      "speechEnd": 68.19,
+      "end": 68.47,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "7億1000万株を1株当たり112.70香港ドルで売却する予定で、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.47,
+      "speechEnd": 73.766,
+      "end": 74.386,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "最近の終値から3.6％割引される。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.386,
+      "speechEnd": 76.476,
+      "end": 76.756,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同社は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.756,
+      "speechEnd": 80.101,
+      "end": 80.381,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "純収益の100％が、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 80.381,
+      "speechEnd": 82.401,
+      "end": 82.682,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "チップ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 82.682,
+      "speechEnd": 86.305,
+      "end": 86.585,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "コンピューティングインフラストラクチャ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 86.585,
+      "speechEnd": 96.618,
+      "end": 97.398,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "モデルの開発と展開を含む「フルスタック」人工知能機能に投資されると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.398,
+      "speechEnd": 100.952,
+      "end": 101.232,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この取引が完了すれば、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.232,
+      "speechEnd": 109.523,
+      "end": 110.144,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "香港の上場企業によるこれまでで最大規模の後続取引となる。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 110.144,
+      "speechEnd": 112.791,
+      "end": 113.071,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アリババは以前、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 113.071,
+      "speechEnd": 118.088,
+      "end": 118.368,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "主に人工知能の設備投資の急増により、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.368,
+      "speechEnd": 122.688,
+      "end": 122.868,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "四半期純利益が前年同期比で"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 122.868,
+      "speechEnd": 125.167,
+      "end": 125.348,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "75％"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 125.348,
+      "speechEnd": 128.483,
+      "end": 129.103,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "減少したと発表した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 129.103,
+      "speechEnd": 137.046,
+      "end": 137.326,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "新しいファンドはコンピューティング能力への投資を拡大できるが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 137.326,
+      "speechEnd": 143.806,
+      "end": 144.586,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "新株は短期的な希薄化圧力も増大させるだろう。"
+    },
+    {
+      "parentKey": "why",
+      "start": 144.586,
+      "speechEnd": 148.558,
+      "end": 149.178,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 149.178,
+      "speechEnd": 152.732,
+      "end": 153.012,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "大規模な株式の発行は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 153.012,
+      "speechEnd": 161.024,
+      "end": 161.305,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "会社の資本構造と人工知能への投資能力を同時に変化させ、"
+    },
+    {
+      "parentKey": "why",
+      "start": 161.305,
+      "speechEnd": 163.325,
+      "end": 163.605,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "株価、"
+    },
+    {
+      "parentKey": "why",
+      "start": 163.605,
+      "speechEnd": 166.114,
+      "end": 166.394,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "利益の希薄化、"
+    },
+    {
+      "parentKey": "why",
+      "start": 166.394,
+      "speechEnd": 172.525,
+      "end": 173.385,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "テクノロジーセクターの評価に直接影響を与えます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 173.385,
+      "speechEnd": 175.476,
+      "end": 175.756,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 175.756,
+      "speechEnd": 178.682,
+      "end": 178.962,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "株主割当の完了、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 178.962,
+      "speechEnd": 183.561,
+      "end": 183.841,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "香港市場開場後の株価の反応、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 183.841,
+      "speechEnd": 192.132,
+      "end": 192.993,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "その後の同社の人工知能設備投資配分の開示に注目してほしい。"
+    }
+  ]
+}

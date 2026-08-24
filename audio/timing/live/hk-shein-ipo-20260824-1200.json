@@ -1,0 +1,340 @@
+{
+  "version": 3,
+  "duration": 169.77,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 486,
+  "charactersPerMinute": 171.8,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 15.674,
+      "text": "Shein、香港でIPOを開始、最大約138億6,000万香港ドルの資金を調達"
+    },
+    {
+      "key": "dek",
+      "start": 15.674,
+      "end": 39.111,
+      "text": "ファストファッションプラットフォームは2億8000万株を1株当たり47.60香港ドルから49.50香港ドルで売却する予定で、9月1日に上場する予定だ。"
+    },
+    {
+      "key": "body-0",
+      "start": 39.111,
+      "end": 103.943,
+      "text": "オンラインファストファッションプラットフォームのSheinは月曜日、香港で新規株式公開を開始し、クラスB株2億8000万株を1株当たり47.60香港ドルから49.50香港ドルの価格帯で売却する計画だ。最大約138億6000万香港ドル（約17億7000万米ドル）を調達できる可能性があり、企業評価額の上限は約270億米ドルに相当する。同社は8月31日に価格を決定し、9月1日に香港証券取引所に上場する予定だ。"
+    },
+    {
+      "key": "body-1",
+      "start": 103.943,
+      "end": 133.344,
+      "text": "シェイン氏は以前に米国と英国での上場を検討しており、最終的に上場場所として香港を選択した。市場は最終的な評価額、加入状況、成長見通しに対する貿易コストや規制圧力の影響に注目するだろう。"
+    },
+    {
+      "key": "why",
+      "start": 133.344,
+      "end": 152.89,
+      "text": "シェインの上場は大規模で、香港の新しい株式市場と消費者向けテクノロジーの評価の指標として機能する。"
+    },
+    {
+      "key": "watch",
+      "start": 152.89,
+      "end": 169.77,
+      "text": "最終価格、公募倍率、基礎投資家、そして9月1日の取引初日に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.09,
+      "end": 2.32,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Shein、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.32,
+      "speechEnd": 5.734,
+      "end": 5.964,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "香港でIPOを開始、"
+    },
+    {
+      "parentKey": "title",
+      "start": 5.964,
+      "speechEnd": 10.006,
+      "end": 10.236,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "最大約138億6,"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.236,
+      "speechEnd": 14.974,
+      "end": 15.674,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "000万香港ドルの資金を調達。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.674,
+      "speechEnd": 19.297,
+      "end": 19.577,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ファストファッションプラットフォームは"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.577,
+      "speechEnd": 33.861,
+      "end": 34.091,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "2億8000万株を1株当たり47.60香港ドルから49.50香港ドルで売却する予定で、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 34.091,
+      "speechEnd": 38.41,
+      "end": 39.111,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "9月1日に上場する予定だ。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.111,
+      "speechEnd": 45.381,
+      "end": 45.611,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "オンラインファストファッションプラットフォームのSheinは月曜日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.611,
+      "speechEnd": 50.767,
+      "end": 50.998,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "香港で新規株式公開を開始し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.998,
+      "speechEnd": 67.929,
+      "end": 68.429,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "クラスB株2億8000万株を1株当たり47.60香港ドルから49.50香港ドルの価格帯で売却する計画だ。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.429,
+      "speechEnd": 78.95,
+      "end": 79.23,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "最大約138億6000万香港ドル（約17億7000万米ドル）を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 79.23,
+      "speechEnd": 82.644,
+      "end": 82.874,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "調達できる可能性があり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 82.874,
+      "speechEnd": 90.051,
+      "end": 90.551,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "企業評価額の上限は約270億米ドルに相当する。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 90.551,
+      "speechEnd": 96.334,
+      "end": 96.564,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同社は8月31日に価格を決定し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 96.564,
+      "speechEnd": 103.322,
+      "end": 103.943,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "9月1日に香港証券取引所に上場する予定だ。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.943,
+      "speechEnd": 111.398,
+      "end": 111.628,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "シェイン氏は以前に米国と英国での上場を検討しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.628,
+      "speechEnd": 117.62,
+      "end": 118.12,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "最終的に上場場所として香港を選択した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.12,
+      "speechEnd": 121.395,
+      "end": 121.625,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "市場は最終的な評価額、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.625,
+      "speechEnd": 123.855,
+      "end": 124.085,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "加入状況、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 124.085,
+      "speechEnd": 132.724,
+      "end": 133.344,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "成長見通しに対する貿易コストや規制圧力の影響に注目するだろう。"
+    },
+    {
+      "parentKey": "why",
+      "start": 133.344,
+      "speechEnd": 137.316,
+      "end": 137.816,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 137.816,
+      "speechEnd": 141.509,
+      "end": 141.739,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "シェインの上場は大規模で、"
+    },
+    {
+      "parentKey": "why",
+      "start": 141.739,
+      "speechEnd": 152.19,
+      "end": 152.89,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "香港の新しい株式市場と消費者向けテクノロジーの評価の指標として機能する。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 152.89,
+      "speechEnd": 154.981,
+      "end": 155.211,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 155.211,
+      "speechEnd": 157.371,
+      "end": 157.601,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "最終価格、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 157.601,
+      "speechEnd": 159.691,
+      "end": 159.921,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "公募倍率、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 159.921,
+      "speechEnd": 162.22,
+      "end": 162.45,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "基礎投資家、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 162.45,
+      "speechEnd": 169.07,
+      "end": 169.77,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "そして9月1日の取引初日に注目してください。"
+    }
+  ]
+}

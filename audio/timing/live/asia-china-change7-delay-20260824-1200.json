@@ -1,0 +1,350 @@
+{
+  "version": 3,
+  "duration": 169.064,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 509,
+  "charactersPerMinute": 180.6,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.447,
+      "text": "中国の嫦娥7号月南極ミッション延期、当局者は現時点で打ち上げ条件を満たしていないと発表"
+    },
+    {
+      "key": "dek",
+      "start": 14.447,
+      "end": 33.007,
+      "text": "当初今年打ち上げ予定だった無人月探査ミッションは予定されていた打ち上げ期間を中止し、新たな日付はまだ発表されていない。"
+    },
+    {
+      "key": "body-0",
+      "start": 33.007,
+      "end": 83.119,
+      "text": "中国は、当初今年実施予定だった嫦娥7号の無人月探査ミッションが延期され、予定されていた打ち上げ期間がキャンセルされたと発表した。当局者らは、現時点ではこのミッションは打ち上げ条件を満たしていないと述べたが、ロケット、探知機、発射場のどの部分が関係しているかについては詳しく述べず、新たな打ち上げ日も発表しなかった。"
+    },
+    {
+      "key": "body-1",
+      "start": 83.119,
+      "end": 120.326,
+      "text": "嫦娥7号の目標には、月の南極環境と水の氷の検出が含まれており、これは中国のその後の月科学研究ステーション計画の重要な準備課題である。この遅れにより、外の世界は中国の月南極探査とその後のミッションスケジュールを再評価することになるだろう。"
+    },
+    {
+      "key": "why",
+      "start": 120.326,
+      "end": 145.516,
+      "text": "このミッションは月の南極における中国の科学研究計画の重要な部分を占めており、遅れはその後の月探査のペースに影響を及ぼす可能性がある。"
+    },
+    {
+      "key": "watch",
+      "start": 145.516,
+      "end": 169.064,
+      "text": "中国国家航天局の遅延の理由、新たな打ち上げ期間、その後の嫦娥ミッションのスケジュールが調整されるかどうかについての発表に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 5.783,
+      "end": 6.013,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中国の嫦娥7号月南極ミッション延期、"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.013,
+      "speechEnd": 13.747,
+      "end": 14.447,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "当局者は現時点で打ち上げ条件を満たしていないと発表。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.447,
+      "speechEnd": 21.624,
+      "end": 21.904,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "当初今年打ち上げ予定だった無人月探査ミッションは"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.904,
+      "speechEnd": 27.199,
+      "end": 27.43,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "予定されていた打ち上げ期間を中止し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.43,
+      "speechEnd": 32.307,
+      "end": 33.007,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "新たな日付はまだ発表されていない。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 33.007,
+      "speechEnd": 35.167,
+      "end": 35.397,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中国は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 35.397,
+      "speechEnd": 45.361,
+      "end": 45.591,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "当初今年実施予定だった嫦娥7号の無人月探査ミッションが延期され、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.591,
+      "speechEnd": 53.046,
+      "end": 53.546,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "予定されていた打ち上げ期間がキャンセルされたと発表した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.546,
+      "speechEnd": 55.915,
+      "end": 56.145,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "当局者らは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.145,
+      "speechEnd": 59.838,
+      "end": 60.118,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "現時点ではこのミッションは"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.118,
+      "speechEnd": 65.414,
+      "end": 65.644,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "打ち上げ条件を満たしていないと述べたが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.644,
+      "speechEnd": 67.734,
+      "end": 67.964,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロケット、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.964,
+      "speechEnd": 70.054,
+      "end": 70.284,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "探知機、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.284,
+      "speechEnd": 77.6,
+      "end": 77.83,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "発射場のどの部分が関係しているかについては詳しく述べず、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 77.83,
+      "speechEnd": 82.499,
+      "end": 83.119,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "新たな打ち上げ日も発表しなかった。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 83.119,
+      "speechEnd": 86.463,
+      "end": 86.693,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "嫦娥7号の目標には、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 86.693,
+      "speechEnd": 93.173,
+      "end": 93.403,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "月の南極環境と水の氷の検出が含まれており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.403,
+      "speechEnd": 103.437,
+      "end": 103.937,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "これは中国のその後の月科学研究ステーション計画の重要な準備課題である。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.937,
+      "speechEnd": 106.584,
+      "end": 106.814,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この遅れにより、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 106.814,
+      "speechEnd": 115.872,
+      "end": 116.152,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "外の世界は中国の月南極探査とその後のミッションスケジュールを"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 116.152,
+      "speechEnd": 119.706,
+      "end": 120.326,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "再評価することになるだろう。"
+    },
+    {
+      "parentKey": "why",
+      "start": 120.326,
+      "speechEnd": 124.297,
+      "end": 124.798,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 124.798,
+      "speechEnd": 136.294,
+      "end": 136.524,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "このミッションは月の南極における中国の科学研究計画の重要な部分を占めており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 136.524,
+      "speechEnd": 144.816,
+      "end": 145.516,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "遅れはその後の月探査のペースに影響を及ぼす可能性がある。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 145.516,
+      "speechEnd": 147.606,
+      "end": 147.836,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 147.836,
+      "speechEnd": 152.923,
+      "end": 153.153,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中国国家航天局の遅延の理由、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 153.153,
+      "speechEnd": 156.358,
+      "end": 156.588,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "新たな打ち上げ期間、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 156.588,
+      "speechEnd": 161.117,
+      "end": 161.397,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "その後の嫦娥ミッションのスケジュールが"
+    },
+    {
+      "parentKey": "watch",
+      "start": 161.397,
+      "speechEnd": 168.364,
+      "end": 169.064,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "調整されるかどうかについての発表に注目してください。"
+    }
+  ]
+}

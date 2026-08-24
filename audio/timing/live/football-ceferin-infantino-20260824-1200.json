@@ -1,0 +1,390 @@
+{
+  "version": 3,
+  "duration": 172.095,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 537,
+  "charactersPerMinute": 187.2,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 21.577,
+      "text": "UEFAのチェフェリン会長は、インファンティーノは2027年に挑戦者と対戦する可能性があり、FIFA会長に立候補するつもりはないと述べた"
+    },
+    {
+      "key": "dek",
+      "start": 21.577,
+      "end": 39.37,
+      "text": "FIFAのガバナンスと財政配分をめぐる論争は続いており、最近いくつかのサッカー連盟が現指導部に公の場で疑問を呈している。"
+    },
+    {
+      "key": "body-0",
+      "start": 39.37,
+      "end": 88.624,
+      "text": "UEFAのアレクサンダー・チェフェリン会長は、FIFA会長のジャンニ・インファンティーノ氏が2027年の会長選挙で他の候補者と対戦する可能性があるが、出馬するつもりはないと述べた。最近、多くの国や地域のサッカー連盟がFIFAのガバナンス、事業取り決め、財政配分に公の場で疑問を呈しており、次期会長選挙で競合する可能性が高まっている。"
+    },
+    {
+      "key": "body-1",
+      "start": 88.624,
+      "end": 126.101,
+      "text": "まだ主要な候補者は正式に立候補を表明していない。チェフェリン氏の声明は、欧州サッカー界がインファンティーノ氏の再選にまったく競争力がないとは考えていないことを示している。今後数カ月間、さまざまな大陸サッカー協会の提携や候補者の動向にさらなる注目が集まるだろう。"
+    },
+    {
+      "key": "why",
+      "start": 126.101,
+      "end": 148.854,
+      "text": "信頼できる挑戦者が現れれば、2027年のFIFA会長選挙は手続き上の再選挙から本当の選挙に変わる可能性がある。"
+    },
+    {
+      "key": "watch",
+      "start": 148.854,
+      "end": 172.095,
+      "text": "正式に立候補を表明した候補者がいるかどうか、またUEFA、アフリカ、アジア、アメリカンフットボール連盟の公的立場に注目してほしい。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.902,
+      "end": 4.132,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "UEFAのチェフェリン会長は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.132,
+      "speechEnd": 6.64,
+      "end": 6.78,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "インファンティーノは"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.78,
+      "speechEnd": 9.498,
+      "end": 9.638,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "2027年"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.638,
+      "speechEnd": 14.515,
+      "end": 14.745,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "に挑戦者と対戦する可能性があり、"
+    },
+    {
+      "parentKey": "title",
+      "start": 14.745,
+      "speechEnd": 20.876,
+      "end": 21.577,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "FIFA会長に立候補するつもりはないと述べた。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.577,
+      "speechEnd": 29.311,
+      "end": 29.541,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "FIFAのガバナンスと財政配分をめぐる論争は続いており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 29.541,
+      "speechEnd": 33.303,
+      "end": 33.583,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "最近いくつかのサッカー連盟が"
+    },
+    {
+      "parentKey": "dek",
+      "start": 33.583,
+      "speechEnd": 38.67,
+      "end": 39.37,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "現指導部に公の場で疑問を呈している。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.37,
+      "speechEnd": 44.804,
+      "end": 45.035,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "UEFAのアレクサンダー・チェフェリン会長は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.035,
+      "speechEnd": 50.33,
+      "end": 50.61,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "FIFA会長のジャンニ・インファンティーノ氏が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.61,
+      "speechEnd": 59.459,
+      "end": 59.689,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "2027年の会長選挙で他の候補者と対戦する可能性があるが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.689,
+      "speechEnd": 63.521,
+      "end": 64.021,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "出馬するつもりはないと述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.021,
+      "speechEnd": 66.042,
+      "end": 66.272,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "最近、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.272,
+      "speechEnd": 73.448,
+      "end": 73.678,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "多くの国や地域のサッカー連盟がFIFAのガバナンス、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.678,
+      "speechEnd": 76.187,
+      "end": 76.417,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "事業取り決め、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.417,
+      "speechEnd": 81.921,
+      "end": 82.151,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "財政配分に公の場で疑問を呈しており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 82.151,
+      "speechEnd": 88.004,
+      "end": 88.624,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "次期会長選挙で競合する可能性が高まっている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.624,
+      "speechEnd": 95.661,
+      "end": 96.162,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "まだ主要な候補者は正式に立候補を表明していない。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 96.162,
+      "speechEnd": 99.367,
+      "end": 99.597,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "チェフェリン氏の声明は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.597,
+      "speechEnd": 106.704,
+      "end": 106.984,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "欧州サッカー界がインファンティーノ氏の再選にまったく競争力が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 106.984,
+      "speechEnd": 111.582,
+      "end": 112.082,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "ないとは考えていないことを示している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.082,
+      "speechEnd": 114.73,
+      "end": 114.96,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後数カ月間、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.96,
+      "speechEnd": 125.481,
+      "end": 126.101,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "さまざまな大陸サッカー協会の提携や候補者の動向にさらなる注目が集まるだろう。"
+    },
+    {
+      "parentKey": "why",
+      "start": 126.101,
+      "speechEnd": 130.073,
+      "end": 130.573,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 130.573,
+      "speechEnd": 135.102,
+      "end": 135.332,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "信頼できる挑戦者が現れれば、"
+    },
+    {
+      "parentKey": "why",
+      "start": 135.332,
+      "speechEnd": 140.558,
+      "end": 140.838,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "2027年のFIFA会長選挙は"
+    },
+    {
+      "parentKey": "why",
+      "start": 140.838,
+      "speechEnd": 148.154,
+      "end": 148.854,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "手続き上の再選挙から本当の選挙に変わる可能性がある。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 148.854,
+      "speechEnd": 150.944,
+      "end": 151.174,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 151.174,
+      "speechEnd": 157.584,
+      "end": 157.814,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "正式に立候補を表明した候補者がいるかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 157.814,
+      "speechEnd": 160.114,
+      "end": 160.344,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "またUEFA、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 160.344,
+      "speechEnd": 162.434,
+      "end": 162.664,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "アフリカ、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 162.664,
+      "speechEnd": 164.754,
+      "end": 164.984,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "アジア、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 164.984,
+      "speechEnd": 171.395,
+      "end": 172.095,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "アメリカンフットボール連盟の公的立場に注目してほしい。"
+    }
+  ]
+}
