@@ -50,6 +50,25 @@
     if (tries > 0) window.setTimeout(() => waitForDailyRender(callback, tries - 1), 100);
   }
 
+  function renderCantoneseSectionParity(data) {
+    const host = document.querySelector("#dynamic-sections");
+    const articles = Array.isArray(data?.articles) ? data.articles : [];
+    const sections = Array.isArray(data?.sections) ? data.sections : [];
+    if (!host || !sections.length || !articles.length) return;
+    const byId = new Map(articles.filter((item) => item?.id).map((item) => [item.id, item]));
+    host.innerHTML = sections.map((section) => {
+      const ids = [...new Set((section?.articleIds || []).filter(Boolean))];
+      const stories = ids.map((id) => byId.get(id)).filter(Boolean);
+      if (!stories.length) return "";
+      const cards = stories.map((article, index) => {
+        const markup = card(article);
+        return index === 0 && stories.length > 1 ? markup.replace('class="story-card"', 'class="story-card feature"') : markup;
+      }).join("");
+      return `<section class="section-block" id="${esc(section.slug || "")}"><div class="section-heading"><h2>${esc(section.title || section.slug || "ニュース")}</h2><span>${esc(section.subtitle || `${stories.length}件`)}</span></div><div class="story-grid">${cards}</div></section>`;
+    }).join("");
+    initAudioSync();
+  }
+
   function addLeadMedia(data) {
     const articles = Array.isArray(data.articles) ? data.articles : [];
     const story = articles.find((item) => item.id === data.leadId) || articles[0];
@@ -83,8 +102,8 @@
     const articles = Array.isArray(data.articles) ? data.articles : [];
     const ids = Array.isArray(data.topFive) && data.topFive.length ? data.topFive : articles.slice(0, 5).map((item) => item.id);
     const cards = [...document.querySelectorAll("#top-five .top-card")];
-    cards.forEach((card, index) => {
-      if (card.querySelector(".top-audio-btn")) return;
+    cards.forEach((cardNode, index) => {
+      if (cardNode.querySelector(".top-audio-btn")) return;
       const story = articles.find((item) => item.id === ids[index]);
       const button = document.createElement("button");
       button.type = "button";
@@ -98,12 +117,16 @@
         button.textContent = "音声準備中";
         button.disabled = true;
       }
-      card.appendChild(button);
+      cardNode.appendChild(button);
     });
   }
 
   function decorateDaily(data) {
-    waitForDailyRender(() => { addLeadMedia(data); addTopFiveAudio(data); });
+    waitForDailyRender(() => {
+      renderCantoneseSectionParity(data);
+      addLeadMedia(data);
+      addTopFiveAudio(data);
+    });
   }
 
   async function init() {
