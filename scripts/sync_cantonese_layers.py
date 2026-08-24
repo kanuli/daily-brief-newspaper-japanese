@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Translate the Cantonese edition's rolling/topic data layers into Japanese.
+"""Translate Cantonese rolling/topic data into Japanese without editorial drift.
 
-The Cantonese repository remains the news-collection source of truth. This
-script only compacts duplicate rolling snapshots, translates the user-facing
-text, adds furigana metadata, and attaches paths for server-side F3 audio.
+The Cantonese repository is the only news-collection source of truth. This
+script preserves the complete source structure and story set, translates only
+user-facing text, adds furigana metadata for news content, and attaches paths
+for server-side Supertonic 3 F3 audio.
 """
 import hashlib
 import json
@@ -17,45 +18,13 @@ import sync_and_translate as base
 
 OUT = Path("data")
 SOURCE_BASE = base.SOURCE_BASE
-SCHEMA = "ja-cantonese-extra-v1"
+SCHEMA = "ja-cantonese-extra-v2-full-parity"
 STATIC_FILES = ("desk-latest.json", "stocks-latest.json")
-MAX_UNIQUE_PER_DESK = 10
 
 
 def fingerprint(value):
     raw = json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
     return hashlib.sha256(raw.encode("utf-8")).hexdigest()
-
-
-def title_key(value):
-    text = str(value or "").lower()
-    text = re.sub(r"\d+(?:[.,]\d+)?", "", text)
-    text = re.sub(r"[\W_]+", "", text, flags=re.UNICODE)
-    return text[:180]
-
-
-def compact_desk_latest(data):
-    if not isinstance(data, dict) or not isinstance(data.get("desks"), dict):
-        return data
-    compact = dict(data)
-    desks = {}
-    for slug, stories in data["desks"].items():
-        seen = set()
-        kept = []
-        for story in stories if isinstance(stories, list) else []:
-            if not isinstance(story, dict):
-                continue
-            key = title_key(story.get("title")) or str(story.get("id") or "")
-            if key and key in seen:
-                continue
-            if key:
-                seen.add(key)
-            kept.append(story)
-            if len(kept) >= MAX_UNIQUE_PER_DESK:
-                break
-        desks[slug] = kept
-    compact["desks"] = desks
-    return compact
 
 
 def story_like(value):
@@ -100,7 +69,7 @@ def fetch_source(name, optional=False):
     response = requests.get(
         f"{SOURCE_BASE}/{name}",
         timeout=40,
-        headers={"User-Agent": "daily-brief-newspaper-japanese-extra-layers"},
+        headers={"User-Agent": "daily-brief-newspaper-japanese-cantonese-parity"},
     )
     if optional and response.status_code == 404:
         return None
@@ -124,8 +93,9 @@ def existing_current(path, source_hash):
 
 
 def translate_file(name, source):
-    if name == "desk-latest.json":
-        source = compact_desk_latest(source)
+    # IMPORTANT: never compact, cap, rank, drop, or independently select stories
+    # here. The Cantonese source structure is preserved exactly before Japanese
+    # text decoration so both editions share the same collected news resources.
     source_hash = fingerprint(source)
     path = OUT / name
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -141,8 +111,9 @@ def translate_file(name, source):
         translated["sourceFile"] = name
         translated["sourceFingerprint"] = source_hash
         translated["translationSchemaVersion"] = SCHEMA
+        translated["sourceParityMode"] = "full-source-preserved"
     path.write_text(json.dumps(translated, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print("EXTRA_TRANSLATED", name)
+    print("EXTRA_TRANSLATED_FULL_PARITY", name)
     return True
 
 
@@ -167,9 +138,6 @@ def prune_old_topic_more(today):
 
 
 def main():
-    # safe_sync.py runs in a separate process before this script, so repeat its
-    # monkey-patch here to guarantee that every extra field uses the hardened
-    # Japanese translator and the same shared translation cache.
     base.translate_part = lambda part: safe.safe_translate_part(part, strict=False)
     base.translate_text = lambda text: safe.safe_translate_text(text, strict=False)
     base.convert = safe.safe_convert
@@ -189,7 +157,7 @@ def main():
 
     prune_old_topic_more(date)
     base.CACHE_PATH.write_text(json.dumps(base.CACHE, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print("EXTRA_LAYER_SYNC_OK", ", ".join(changed) if changed else "no effective changes")
+    print("EXTRA_LAYER_FULL_PARITY_OK", ", ".join(changed) if changed else "no effective changes")
 
 
 if __name__ == "__main__":
