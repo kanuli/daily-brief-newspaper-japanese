@@ -42,7 +42,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: 翻訳ガードを構文検査
-        run: python -m py_compile scripts/sync_and_translate.py scripts/safe_sync.py scripts/validate_content_integrity.py scripts/check_source_drift.py
+        run: python -m py_compile scripts/sync_and_translate.py scripts/safe_sync.py scripts/validate_content_integrity.py scripts/check_source_drift.py scripts/notify_discord.py
 
       - name: 原版を同期して全表示項目を安全に日本語化
         run: python scripts/safe_sync.py
@@ -65,14 +65,28 @@ jobs:
           node --check assets/js/live-guard.js
 
       - name: 更新を保存
+        id: publish
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'daily-brief-japanese-bot'
           git config user.email 'actions@users.noreply.github.com'
           git add data audio
+
+          latest_changed=false
+          live_changed=false
+          if git diff --cached --name-only | grep -Fxq 'data/latest.json'; then
+            latest_changed=true
+          fi
+          if git diff --cached --name-only | grep -Fxq 'data/live.json'; then
+            live_changed=true
+          fi
+          echo "latest_changed=${latest_changed}" >> "$GITHUB_OUTPUT"
+          echo "live_changed=${live_changed}" >> "$GITHUB_OUTPUT"
+
           if git diff --cached --quiet; then
             echo '変更なし'
+            echo 'published=false' >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
@@ -91,6 +105,7 @@ jobs:
             fi
             if git push origin HEAD:main; then
               echo 'JAPANESE_DATA_F3_PUSH_OK'
+              echo 'published=true' >> "$GITHUB_OUTPUT"
               exit 0
             fi
             sleep $((attempt * 2))
@@ -98,3 +113,21 @@ jobs:
 
           echo 'Could not publish Japanese data/F3 after 5 safe retries.' >&2
           exit 1
+
+      - name: 公開したニュースをDiscordへ直接配信
+        if: steps.publish.outputs.published == 'true' && (steps.publish.outputs.latest_changed == 'true' || steps.publish.outputs.live_changed == 'true')
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          LATEST_CHANGED: ${{ steps.publish.outputs.latest_changed }}
+          LIVE_CHANGED: ${{ steps.publish.outputs.live_changed }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          args=()
+          if [ "$LATEST_CHANGED" = "true" ]; then
+            args+=(--daily)
+          fi
+          if [ "$LIVE_CHANGED" = "true" ]; then
+            args+=(--live)
+          fi
+          python scripts/notify_discord.py "${args[@]}"
