@@ -1,4 +1,5 @@
-name: 日本語版をGitHub Pagesへ公開
+name: 日本語版 Pages 公開・広東語版レイアウト同期
+run-name: 広東語版レイアウト同期・Pages公開 @ ${{ github.sha }}
 
 on:
   push:
@@ -27,10 +28,11 @@ jobs:
         with:
           ref: main
 
-      - name: 静的サイトと広東語版レイアウトパリティを検証
+      - name: 広東語版レイアウトパリティを必須検証
         shell: bash
         run: |
           set -euo pipefail
+          echo "LAYOUT_DEPLOY_SHA=${GITHUB_SHA}"
           python scripts/validate_site.py --static-only
           python scripts/validate_layout_parity.py
           node --check assets/js/newspaper-ja.js
@@ -52,6 +54,7 @@ jobs:
           grep -q 'stocks-ja.js' stocks.html
           grep -q 'stock-page-head' stocks.html
           grep -q 'archive-list' archive.html
+          grep -q 'layoutVersion' data/layout-deployment.json
 
       - name: コンテンツとF3の状態を判定
         id: data_health
@@ -94,8 +97,10 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-      - name: 公開モード
+      - name: 広東語版レイアウト公開結果
         run: |
+          echo "Published SHA: ${GITHUB_SHA}"
+          echo "Page URL: ${{ steps.deployment.outputs.page_url }}"
           echo "Clean data/F3: ${{ steps.data_health.outputs.clean }}"
           if [ "${{ steps.data_health.outputs.clean }}" = 'true' ]; then
             echo 'Production is serving fully verified Japanese data, Cantonese-derived rolling layers, F3 audio, and Cantonese-layout parity.'
