@@ -4,4 +4,12 @@
 .section-nav a,.section-nav a:link,.section-nav a:visited{display:flex!important;align-items:center!important;background:#111!important;color:#fff!important;text-decoration:none!important;font-weight:800!important;border-right:1px solid #444!important}
 .section-nav a:hover,.section-nav a:focus-visible,.section-nav a[aria-current="page"],.section-nav .live-nav[aria-current="page"]{background:#b00016!important;color:#fff!important}
 .section-nav ruby,.section-nav rt{color:#ddd!important}.section-nav a[aria-current="page"] ruby,.section-nav a[aria-current="page"] rt{color:#fff!important}
+
+/* Furigana is for news headlines and article copy only, never for site chrome. */
+.section-nav rt,.masthead rt,.utility-bar rt,.date-strip rt,.footer rt,.system-status-panel rt,.system-status-button rt{display:none!important}
+.section-nav ruby,.masthead ruby,.utility-bar ruby,.date-strip ruby,.footer ruby,.system-status-panel ruby,.system-status-button ruby{display:inline!important}
+
+/* The empty fatal placeholder is not a UI bar. Keep it invisible outside the Live page until it contains an actual error. */
+body:not([data-page="live"]) #fatal:empty{display:none!important;margin:0!important;padding:0!important;border:0!important;background:transparent!important;min-height:0!important}
+
 @media(max-width:620px){.system-status-button{right:10px;bottom:10px;width:42px;justify-content:center;padding:8px}.system-status-label{display:none}.system-status-panel{right:10px;bottom:62px;width:min(360px,calc(100vw - 20px))}.section-nav{display:grid!important;grid-template-columns:repeat(7,minmax(0,1fr))!important;overflow-x:visible!important;overflow-y:visible!important;flex-wrap:initial!important;width:100%!important;background:#111!important}.section-nav a{min-width:0!important;padding:7px 2px!important;border-right:1px solid #444!important;border-bottom:1px solid #444!important;white-space:normal!important;overflow-wrap:anywhere!important;word-break:normal!important;text-align:center!important;display:grid!important;place-items:center!important;font-size:9px!important;line-height:1.15!important}.section-nav a:nth-child(7),.section-nav a:last-child{border-right:0!important}}@media(max-width:390px){.section-nav a{padding:6px 1px!important;font-size:8px!important;line-height:1.12!important}}
