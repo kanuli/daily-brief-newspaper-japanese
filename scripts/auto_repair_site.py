@@ -9,11 +9,14 @@ HTML_PAGES=[
     'manchester-united.html','football.html','archive.html'
 ]
 STATIC_CRITICAL=HTML_PAGES+[
-    'assets/css/newspaper.css','assets/css/system-ja.css',
-    'assets/js/newspaper-ja.js','assets/js/system-ja.js','assets/js/live-guard.js',
+    'assets/css/newspaper.css','assets/css/system-ja.css','assets/css/live-ja.css','assets/css/topic-ja-rolling.css',
+    'assets/js/newspaper-ja.js','assets/js/system-ja.js','assets/js/live-guard.js','assets/js/live-article-ja.js','assets/js/topic-ja-rolling.js',
     'scripts/validate_site.py'
 ]
-VERSIONED_ASSETS=['assets/css/newspaper.css','assets/css/system-ja.css','assets/js/newspaper-ja.js','assets/js/system-ja.js','assets/js/live-guard.js']
+VERSIONED_ASSETS=[
+    'assets/css/newspaper.css','assets/css/system-ja.css','assets/css/live-ja.css','assets/css/topic-ja-rolling.css',
+    'assets/js/newspaper-ja.js','assets/js/system-ja.js','assets/js/live-guard.js','assets/js/live-article-ja.js','assets/js/topic-ja-rolling.js'
+]
 REPLACEMENTS={
     '載入中…':'読み込み中…','亞洲':'アジア','財經':'経済','廣東話':'広東語',
     '頭版':'一面トップ','歷史日報':'アーカイブ','新聞分版':'ニュース分野','關閉':'閉じる'
@@ -61,11 +64,12 @@ def normalize_html(rel):
     return write_if_changed(path,text)
 
 def repair_css():
+    """Only protect the masthead from wrapping; never resize/replace the approved layout."""
     path=ROOT/'assets/css/newspaper.css'
     if not path.exists():return False
     text=path.read_text(encoding='utf-8')
-    if 'white-space:nowrap' not in text:
-        text+='\n/* Auto-maintenance: keep masthead on one line. */\n.brand h1{white-space:nowrap;font-size:clamp(28px,4.6vw,52px)}\n@media(max-width:760px){.brand h1{font-size:clamp(25px,8.8vw,38px)}}\n'
+    if not re.search(r'white-space\s*:\s*nowrap',text,re.I):
+        text+='\n/* Auto-maintenance: preserve the approved masthead without changing its scale. */\n.brand h1{white-space:nowrap}\n'
     return write_if_changed(path,text)
 
 def restore_from_golden(ref='origin/maintenance-known-good'):
