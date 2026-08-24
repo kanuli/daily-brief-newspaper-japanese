@@ -50,7 +50,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          python -m py_compile scripts/validate_site.py scripts/auto_repair_site.py scripts/check_source_drift.py scripts/validate_content_integrity.py scripts/sync_vocab_ja.py
+          python -m py_compile scripts/validate_site.py scripts/validate_layout_parity.py scripts/auto_repair_site.py scripts/check_source_drift.py scripts/validate_content_integrity.py scripts/sync_vocab_ja.py
 
       - name: Deterministic static repair
         run: python scripts/auto_repair_site.py
@@ -62,6 +62,7 @@ jobs:
           set -euo pipefail
           check_static() {
             python scripts/validate_site.py --static-only && \
+            python scripts/validate_layout_parity.py && \
             node --check assets/js/newspaper-ja.js && \
             node --check assets/js/system-ja.js && \
             node --check assets/js/live-guard.js && \
@@ -75,8 +76,6 @@ jobs:
             exit 0
           fi
 
-          # Run deterministic repair once more in case a generated cache/version
-          # reference was stale. Never restore the pre-parity visual baseline.
           echo 'Static QA failed; retrying deterministic repair without legacy layout rollback.'
           python scripts/auto_repair_site.py
           if check_static; then
@@ -236,6 +235,10 @@ jobs:
           git reset --hard origin/main
           if ! python scripts/validate_site.py; then
             echo 'Current main is not fully healthy; known-good reference not advanced.'
+            exit 0
+          fi
+          if ! python scripts/validate_layout_parity.py; then
+            echo 'Current main lost Cantonese layout parity; known-good reference not advanced.'
             exit 0
           fi
           set +e
