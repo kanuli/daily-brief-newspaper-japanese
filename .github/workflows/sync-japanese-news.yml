@@ -38,14 +38,17 @@ jobs:
       - name: 依存パッケージをインストール
         run: pip install -r requirements.txt
 
-      - name: 翻訳・Discordコードを構文検査
-        run: python -m py_compile scripts/sync_and_translate.py scripts/safe_sync.py scripts/validate_content_integrity.py scripts/check_source_drift.py scripts/notify_discord.py
+      - name: 翻訳・Discord・ふりがなコードを構文検査
+        run: python -m py_compile scripts/sync_and_translate.py scripts/safe_sync.py scripts/furigana_context.py scripts/validate_furigana_readings.py scripts/validate_content_integrity.py scripts/check_source_drift.py scripts/notify_discord.py
 
       - name: 原版を同期して日本語ニュースを生成
         run: python scripts/safe_sync.py
 
       - name: Discord配信前にニュース完全性を検証
         run: python scripts/validate_content_integrity.py
+
+      - name: 文脈依存のふりがなを全件検証
+        run: python scripts/validate_furigana_readings.py
 
       - name: ニュースデータを公開
         id: publish_news
