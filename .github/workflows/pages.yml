@@ -32,6 +32,7 @@ jobs:
         run: |
           set -euo pipefail
           python scripts/validate_site.py --static-only
+          python scripts/validate_layout_parity.py
           node --check assets/js/newspaper-ja.js
           node --check assets/js/topic-ja-rolling.js
           node --check assets/js/system-ja.js
