@@ -1,0 +1,380 @@
+{
+  "version": 3,
+  "duration": 152.895,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 494,
+  "charactersPerMinute": 193.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 22.743,
+      "text": "マンチェスター・シティとリールはブアディの獲得に最大1億ユーロの契約枠組みに達しており、18歳のミッドフィールダーはその手続きを完了する必要がある"
+    },
+    {
+      "key": "dek",
+      "start": 22.743,
+      "end": 35.867,
+      "text": "移籍金は固定額9500万ユーロで、さらに500万ユーロが上乗せされると報じられている。"
+    },
+    {
+      "key": "body-0",
+      "start": 35.867,
+      "end": 80.534,
+      "text": "マンチェスター・シティは、18歳のモロッコ人ミッドフィールダー、アイユーブ・ブアディの獲得にリールと合意に達し、固定金9,500万ユーロ、追加料金500万ユーロと報じられている。ブアディは主に守備的ミッドフィールダーとしてプレーする。昨シーズンはリーグアンのリールで30試合に出場し、モロッコ代表としてワールドカップに出場した。"
+    },
+    {
+      "key": "body-1",
+      "start": 80.534,
+      "end": 108.384,
+      "text": "リールは健康診断と移籍手続きに対処するため、最近のリーグでプレーするための調整を行っていない。この契約が成立すれば、マンチェスター・シティは今夏の中盤再建への投資をさらに増やすことになる。"
+    },
+    {
+      "key": "why",
+      "start": 108.384,
+      "end": 135.179,
+      "text": "最大1億ユーロという金額は18歳のミッドフィールダーにとっては高額な投資であり、若手ミッドフィールダーを獲得するために争うトップクラブの評価水準も反映している。"
+    },
+    {
+      "key": "watch",
+      "start": 135.179,
+      "end": 152.895,
+      "text": "メディカル検査、公式発表、契約期間、そしてトップチームでのブアディの当面のポジションに注目だ。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.414,
+      "end": 3.694,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "マンチェスター・シティとリールは"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.694,
+      "speechEnd": 7.178,
+      "end": 7.318,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "ブアディの獲得に最大"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.318,
+      "speechEnd": 9.478,
+      "end": 9.618,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "1億ユーロ"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.618,
+      "speechEnd": 13.032,
+      "end": 13.262,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "の契約枠組みに達しており、"
+    },
+    {
+      "parentKey": "title",
+      "start": 13.262,
+      "speechEnd": 17.094,
+      "end": 17.375,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "18歳のミッドフィールダーは"
+    },
+    {
+      "parentKey": "title",
+      "start": 17.375,
+      "speechEnd": 22.043,
+      "end": 22.743,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "その手続きを完了する必要がある。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.743,
+      "speechEnd": 28.178,
+      "end": 28.408,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "移籍金は固定額9500万ユーロで、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 28.408,
+      "speechEnd": 35.166,
+      "end": 35.867,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "さらに500万ユーロが上乗せされると報じられている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 35.867,
+      "speechEnd": 38.863,
+      "end": 39.093,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "マンチェスター・シティは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.093,
+      "speechEnd": 44.04,
+      "end": 44.27,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "18歳のモロッコ人ミッドフィールダー、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.27,
+      "speechEnd": 49.705,
+      "end": 49.935,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "アイユーブ・ブアディの獲得にリールと合意に達し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.935,
+      "speechEnd": 52.304,
+      "end": 52.534,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "固定金9,"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.534,
+      "speechEnd": 55.112,
+      "end": 55.342,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "500万ユーロ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.342,
+      "speechEnd": 60.707,
+      "end": 61.207,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "追加料金500万ユーロと報じられている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.207,
+      "speechEnd": 67.687,
+      "end": 68.187,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "ブアディは主に守備的ミッドフィールダーとしてプレーする。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.187,
+      "speechEnd": 74.319,
+      "end": 74.549,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "昨シーズンはリーグアンのリールで30試合に出場し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.549,
+      "speechEnd": 79.914,
+      "end": 80.534,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "モロッコ代表としてワールドカップに出場した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 80.534,
+      "speechEnd": 86.178,
+      "end": 86.408,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "リールは健康診断と移籍手続きに対処するため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 86.408,
+      "speechEnd": 93.166,
+      "end": 93.667,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "最近のリーグでプレーするための調整を行っていない。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.667,
+      "speechEnd": 97.29,
+      "end": 97.52,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この契約が成立すれば、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.52,
+      "speechEnd": 104.278,
+      "end": 104.558,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "マンチェスター・シティは今夏の中盤再建への投資を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.558,
+      "speechEnd": 107.764,
+      "end": 108.384,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "さらに増やすことになる。"
+    },
+    {
+      "parentKey": "why",
+      "start": 108.384,
+      "speechEnd": 112.355,
+      "end": 112.855,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 112.855,
+      "speechEnd": 116.757,
+      "end": 117.037,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "最大1億ユーロという金額は"
+    },
+    {
+      "parentKey": "why",
+      "start": 117.037,
+      "speechEnd": 124.284,
+      "end": 124.514,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "18歳のミッドフィールダーにとっては高額な投資であり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 124.514,
+      "speechEnd": 129.182,
+      "end": 129.462,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "若手ミッドフィールダーを獲得するため"
+    },
+    {
+      "parentKey": "why",
+      "start": 129.462,
+      "speechEnd": 134.479,
+      "end": 135.179,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "に争うトップクラブの評価水準も反映している。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 135.179,
+      "speechEnd": 137.269,
+      "end": 137.499,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 137.499,
+      "speechEnd": 140.008,
+      "end": 140.238,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "メディカル検査、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 140.238,
+      "speechEnd": 142.537,
+      "end": 142.767,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "公式発表、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 142.767,
+      "speechEnd": 144.927,
+      "end": 145.157,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "契約期間、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 145.157,
+      "speechEnd": 152.195,
+      "end": 152.895,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "そしてトップチームでのブアディの当面のポジションに注目だ。"
+    }
+  ]
+}

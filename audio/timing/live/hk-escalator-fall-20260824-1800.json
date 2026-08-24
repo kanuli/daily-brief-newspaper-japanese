@@ -1,0 +1,370 @@
+{
+  "version": 3,
+  "duration": 147.513,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 436,
+  "charactersPerMinute": 177.3,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 15.344,
+      "text": "香港のショッピングモールのエスカレーター事故で高齢者３人が負傷した。消防士と救急車が現場に出動した。"
+    },
+    {
+      "key": "dek",
+      "start": 15.344,
+      "end": 34.063,
+      "text": "最近の地元の事故では、ショッピングモールのエスカレーターで高齢者３人が転落して負傷し、関係施設は一時閉鎖された。"
+    },
+    {
+      "key": "body-0",
+      "start": 34.063,
+      "end": 70.734,
+      "text": "月曜日、香港のショッピングモールでエスカレーター事故が発生した。高齢者３人がエレベーターで転落し負傷した。消防士と救急隊員が現場に到着し、事件に対処した。インターネット上の現場の写真によると、関係するエスカレーターは一時的に閉鎖されていた。"
+    },
+    {
+      "key": "body-1",
+      "start": 70.734,
+      "end": 108.162,
+      "text": "事故の具体的な原因や負傷者の状態などはまだ発表されていない。エスカレーターは人の出入りが多い公共施設です。機械部品、稼働状況、混雑状況に何らかの不均衡があった場合、その後の調査が現場の安全確保に影響を与える可能性があります。"
+    },
+    {
+      "key": "why",
+      "start": 108.162,
+      "end": 131.074,
+      "text": "この事件の結果、数人が負傷しており、エスカレーターに機械的または動作上の問題がないか検査する必要がある可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 131.074,
+      "end": 147.513,
+      "text": "負傷者の状態、事故の発生場所、電気機械サービス部門や会場の検査結果に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 9.545,
+      "end": 10.045,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "香港のショッピングモールのエスカレーター事故で高齢者３人が負傷した。"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.045,
+      "speechEnd": 14.644,
+      "end": 15.344,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "消防士と救急車が現場に出動した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.344,
+      "speechEnd": 19.036,
+      "end": 19.266,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "最近の地元の事故では、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.266,
+      "speechEnd": 24.213,
+      "end": 24.353,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "ショッピングモールのエスカレーターで高齢者"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.353,
+      "speechEnd": 26.374,
+      "end": 26.514,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "３人"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.514,
+      "speechEnd": 29.579,
+      "end": 29.809,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "が転落して負傷し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 29.809,
+      "speechEnd": 33.363,
+      "end": 34.063,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "関係施設は一時閉鎖された。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.063,
+      "speechEnd": 36.153,
+      "end": 36.383,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "月曜日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.383,
+      "speechEnd": 43.768,
+      "end": 44.268,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "香港のショッピングモールでエスカレーター事故が発生した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.268,
+      "speechEnd": 50.609,
+      "end": 51.109,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "高齢者３人がエレベーターで転落し負傷した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.109,
+      "speechEnd": 55.916,
+      "end": 56.146,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "消防士と救急隊員が現場に到着し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.146,
+      "speechEnd": 58.654,
+      "end": 59.154,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "事件に対処した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.154,
+      "speechEnd": 64.031,
+      "end": 64.262,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "インターネット上の現場の写真によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.262,
+      "speechEnd": 70.114,
+      "end": 70.734,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "関係するエスカレーターは一時的に閉鎖されていた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 70.734,
+      "speechEnd": 76.935,
+      "end": 77.215,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "事故の具体的な原因や負傷者の状態などは"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 77.215,
+      "speechEnd": 80.35,
+      "end": 80.85,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "まだ発表されていない。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 80.85,
+      "speechEnd": 87.191,
+      "end": 87.691,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "エスカレーターは人の出入りが多い公共施設です。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 87.691,
+      "speechEnd": 89.851,
+      "end": 90.081,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "機械部品、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.081,
+      "speechEnd": 92.24,
+      "end": 92.47,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "稼働状況、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.47,
+      "speechEnd": 97.626,
+      "end": 97.856,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "混雑状況に何らかの不均衡があった場合、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.856,
+      "speechEnd": 103.848,
+      "end": 104.128,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "その後の調査が現場の安全確保に影響を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.128,
+      "speechEnd": 107.542,
+      "end": 108.162,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "与える可能性があります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 108.162,
+      "speechEnd": 112.134,
+      "end": 112.634,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 112.634,
+      "speechEnd": 115.351,
+      "end": 115.581,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この事件の結果、"
+    },
+    {
+      "parentKey": "why",
+      "start": 115.581,
+      "speechEnd": 118.577,
+      "end": 118.807,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "数人が負傷しており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 118.807,
+      "speechEnd": 122.43,
+      "end": 122.71,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "エスカレーターに機械的または"
+    },
+    {
+      "parentKey": "why",
+      "start": 122.71,
+      "speechEnd": 130.374,
+      "end": 131.074,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "動作上の問題がないか検査する必要がある可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 131.074,
+      "speechEnd": 133.164,
+      "end": 133.394,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 133.394,
+      "speechEnd": 135.902,
+      "end": 136.132,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "負傷者の状態、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 136.132,
+      "speechEnd": 138.989,
+      "end": 139.219,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "事故の発生場所、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 139.219,
+      "speechEnd": 146.813,
+      "end": 147.513,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "電気機械サービス部門や会場の検査結果に注意してください。"
+    }
+  ]
+}
