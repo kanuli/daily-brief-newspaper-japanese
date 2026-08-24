@@ -16,7 +16,7 @@ HIRA_RE = re.compile(r"[\u3040-\u309f]")
 HAN_RE = re.compile(r"[\u3400-\u9fff]")
 CHINESE_PROSE_RE = re.compile(
     r"(?:，|；|分鐘|小時|仍然|目前|進一步|將於|已經|對於|相關消息|賽事|球隊|球員|當局|"
-    r"白禮頓|阿士東|維拉)"
+    r"兒童|服務|加強|預防|預約|檢查|發現|將會|這些|白禮頓|阿士東|維拉)"
 )
 PROSE_FIELDS = ("dek", "summary", "body", "context", "why", "watchNext")
 NEXT_RE = re.compile(r"^次回発行予定 (?:[01]\d|2[0-4]):[0-5]\d HKT$")
