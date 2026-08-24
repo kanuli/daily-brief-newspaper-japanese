@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const BUILD='20260825-parity3';
+  const BUILD='20260825-parity4';
   const NAV = [
     ['live.html','<ruby>速報<rt>そくほう</rt></ruby>','live-nav'],
     ['index.html','<ruby>一面<rt>いちめん</rt></ruby>トップ',''],
@@ -37,7 +37,11 @@
   const PROSE_FIELDS=['dek','summary','body','context','why','watchNext'];
 
   function currentPage(){ return (location.pathname.split('/').pop() || 'index.html').toLowerCase(); }
-  function hasAsset(fragment){ return [...document.querySelectorAll('script[src],link[href]')].some(el=>String(el.getAttribute('src')||el.getAttribute('href')||'').includes(fragment)); }
+  function assetBase(value){ return String(value||'').split('?',1)[0].split('#',1)[0]; }
+  function hasAsset(fragment){
+    const needle=assetBase(fragment);
+    return [...document.querySelectorAll('script[src],link[href]')].some(el=>assetBase(el.getAttribute('src')||el.getAttribute('href')||'').includes(needle));
+  }
   function addCss(path,key){ if(hasAsset(path))return;const link=document.createElement('link');link.rel='stylesheet';link.href=path;link.dataset[key||'jpAsset']='true';document.head.appendChild(link); }
   function addScript(path,key){ if(hasAsset(path))return;const script=document.createElement('script');script.src=path;script.defer=true;script.dataset[key||'jpAsset']='true';document.body.appendChild(script); }
 
