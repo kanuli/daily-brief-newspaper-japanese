@@ -39,6 +39,7 @@ jobs:
 
           webhook = os.environ["DISCORD_WEBHOOK_URL"].strip()
           site = "https://kanuli.github.io/daily-brief-newspaper-japanese/"
+          live_page = f"{site}live.html"
           bad_markers = (
               "Error 500 (Server Error)",
               "That’s an error",
@@ -59,7 +60,7 @@ jobs:
                   data=body,
                   headers={
                       "Content-Type": "application/json",
-                      "User-Agent": "JapaneseDailyBriefGitHubActions/1.0"
+                      "User-Agent": "JapaneseDailyBriefGitHubActions/1.1"
                   },
                   method="POST",
               )
@@ -81,6 +82,17 @@ jobs:
               text = str(value or "")
               return any(marker in text for marker in bad_markers)
 
+          def article_link(item, fallback):
+              candidates = [item.get("sourceUrl")]
+              for source in item.get("sources") or []:
+                  if isinstance(source, dict):
+                      candidates.append(source.get("url"))
+              for candidate in candidates:
+                  candidate = str(candidate or "").strip()
+                  if candidate.startswith("https://") or candidate.startswith("http://"):
+                      return candidate
+              return fallback
+
           try:
               changed = set(
                   subprocess.check_output(
@@ -97,8 +109,9 @@ jobs:
               post(
                   "🧪 **日本語ニュース Discord 接続テスト**\n\n"
                   "✅ `daily-brief-newspaper-japanese` から Discord への接続に成功しました。\n"
-                  "朝刊と最新ニュース速報の更新時に自動配信します。\n\n"
-                  f"🔗 日本語ニュース：{site}"
+                  "今後は各ニュース項目に記事リンクを付けて配信します。\n\n"
+                  f"🗞️ 今日のニュース：{site}\n"
+                  f"🔴 最新ニュース速報：{live_page}"
               )
               print("Discord manual connection test sent successfully.")
               raise SystemExit(0)
@@ -113,7 +126,7 @@ jobs:
                       continue
                   title = article.get("title", "")
                   if title and not corrupt(title):
-                      top.append(title)
+                      top.append((title, article_link(article, site)))
 
               if not top:
                   print("No safe Daily headlines available; Discord notification suppressed.")
@@ -123,14 +136,16 @@ jobs:
                   f"🗞️ **日本語デイリーニュース｜{data.get('dateLabel') or data.get('date') or '本日'}**",
                   "",
               ]
-              lines += [f"{i}. {title}" for i, title in enumerate(top, 1)]
+              for i, (title, url) in enumerate(top, 1):
+                  lines.append(f"{i}. **{title}**")
+                  lines.append(f"   🔗 記事リンク：{url}")
               lines += [
                   "",
-                  f"🔗 今日のニュース：{site}",
-                  f"🔴 最新ニュース速報：{site}live.html",
+                  f"📰 日本語版トップ：{site}",
+                  f"🔴 最新ニュース速報：{live_page}",
               ]
               post("\n".join(lines))
-              print("Daily Japanese Discord notification sent.")
+              print("Daily Japanese Discord notification with article links sent.")
               raise SystemExit(0)
 
           if "data/live.json" in changed:
@@ -166,7 +181,7 @@ jobs:
                           "⚠️ **日本語ニュース配信ガード**\n\n"
                           f"破損したニュース項目を {blocked} 件検出したため、Discordへの記事配信を停止しました。\n"
                           "Error 500 等の内容は配信していません。\n\n"
-                          f"🔗 最新ニュース速報：{site}live.html"
+                          f"🔗 最新ニュース速報：{live_page}"
                       )
                       print(f"Blocked {blocked} corrupted Live item(s).")
                   else:
@@ -180,12 +195,14 @@ jobs:
               for item in material[:4]:
                   status = item.get("status", "UPDATED")
                   title = item.get("title", "更新")
-                  lines.append(f"**{status}** · {title}")
+                  url = article_link(item, live_page)
+                  lines.append(f"**{status}** · **{title}**")
+                  lines.append(f"🔗 記事リンク：{url}")
               if len(material) > 4:
                   lines.append(f"＋ほか {len(material) - 4} 件の更新")
               if blocked:
                   lines += ["", f"⚠️ 破損項目 {blocked} 件は配信から除外しました。"]
-              lines += ["", f"🔗 最新ニュース速報：{site}live.html"]
+              lines += ["", f"🔴 最新ニュース速報一覧：{live_page}"]
               post("\n".join(lines))
-              print("Live Japanese Discord notification sent.")
+              print("Live Japanese Discord notification with article links sent.")
           PY
