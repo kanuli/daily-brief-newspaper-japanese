@@ -9,13 +9,13 @@ HTML_PAGES=[
     'manchester-united.html','football.html','archive.html'
 ]
 STATIC_CRITICAL=HTML_PAGES+[
-    'assets/css/newspaper.css','assets/css/system-ja.css','assets/css/live-ja.css','assets/css/topic-ja-rolling.css',
-    'assets/js/newspaper-ja.js','assets/js/system-ja.js','assets/js/live-guard.js','assets/js/live-article-ja.js','assets/js/topic-ja-rolling.js',
+    'assets/css/newspaper.css','assets/css/system-ja.css','assets/css/live-ja.css','assets/css/topic-ja-rolling.css','assets/css/stocks-ja.css',
+    'assets/js/newspaper-ja.js','assets/js/system-ja.js','assets/js/live-guard.js','assets/js/live-article-ja.js','assets/js/topic-ja-rolling.js','assets/js/home-extras-ja.js','assets/js/stocks-ja.js',
     'scripts/validate_site.py'
 ]
 VERSIONED_ASSETS=[
-    'assets/css/newspaper.css','assets/css/system-ja.css','assets/css/live-ja.css','assets/css/topic-ja-rolling.css',
-    'assets/js/newspaper-ja.js','assets/js/system-ja.js','assets/js/live-guard.js','assets/js/live-article-ja.js','assets/js/topic-ja-rolling.js'
+    'assets/css/newspaper.css','assets/css/system-ja.css','assets/css/live-ja.css','assets/css/topic-ja-rolling.css','assets/css/stocks-ja.css',
+    'assets/js/newspaper-ja.js','assets/js/system-ja.js','assets/js/live-guard.js','assets/js/live-article-ja.js','assets/js/topic-ja-rolling.js','assets/js/home-extras-ja.js','assets/js/stocks-ja.js'
 ]
 REPLACEMENTS={
     '載入中…':'読み込み中…','亞洲':'アジア','財經':'経済','廣東話':'広東語',
