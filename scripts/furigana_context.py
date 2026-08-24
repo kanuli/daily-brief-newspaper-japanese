@@ -38,6 +38,8 @@ COUNTER_SPECS = {
     "社":({1:"いっしゃ",2:"にしゃ",3:"さんしゃ",4:"よんしゃ",5:"ごしゃ",6:"ろくしゃ",7:"ななしゃ",8:"はっしゃ",9:"きゅうしゃ"},"じゅっしゃ",{}),
     "発":({1:"いっぱつ",2:"にはつ",3:"さんぱつ",4:"よんぱつ",5:"ごはつ",6:"ろっぱつ",7:"ななはつ",8:"はっぱつ",9:"きゅうはつ"},"じゅっぱつ",{}),
     "歳":({1:"いっさい",2:"にさい",3:"さんさい",4:"よんさい",5:"ごさい",6:"ろくさい",7:"ななさい",8:"はっさい",9:"きゅうさい"},"じゅっさい",{20:"はたち"}),
+    "節":({1:"いっせつ",2:"にせつ",3:"さんせつ",4:"よんせつ",5:"ごせつ",6:"ろくせつ",7:"ななせつ",8:"はっせつ",9:"きゅうせつ"},"じゅっせつ",{}),
+    "話":({1:"いちわ",2:"にわ",3:"さんわ",4:"よんわ",5:"ごわ",6:"ろくわ",7:"ななわ",8:"はちわ",9:"きゅうわ"},"じゅうわ",{}),
 }
 
 EXACT_RUBY = {
@@ -56,7 +58,12 @@ DURATION_DAY_RE = re.compile(
     r"(?<!\d)(\d{1,2})(?:<ruby>日間<rt>[^<]+</rt></ruby>|<ruby>日<rt>[^<]+</rt></ruby><ruby>間<rt>[^<]+</rt></ruby>)"
 )
 SCORE_TAI_RE = re.compile(r"(?<=\d)<ruby>対<rt>[^<]+</rt></ruby>(?=\d)")
+PREFIX_TAI_RE = re.compile(r"<ruby>対<rt>つい</rt></ruby>(?=(?:[ァ-ヶーA-Za-z]|<ruby>[\u3400-\u9fff]))")
 PAST_AFTER_RE = re.compile(r"(?<=た)<ruby>後<rt>[^<]+</rt></ruby>(?=(?:の|に|で|を|、|。|が|は|$))")
+YUKUE_RE = re.compile(r"<ruby>行方<rt>なめがた</rt></ruby>(?=(?:は|が|を|の|に|も|<ruby>不明))")
+US_PREFIX_RE = re.compile(
+    r"<ruby>米<rt>こめ</rt></ruby>(?=(?:ドル|<ruby>(?:軍|政府|企業|市場|株|大統領|当局|連邦|議会|司法|商務|財務|国防|銀行)))"
+)
 
 def number_reading(n):
     n=int(n)
@@ -164,6 +171,17 @@ def apply_contextual_readings(original, rendered):
             return ruby(f"{n}{unit}",reading) if reading else m.group(0)
         rendered=RUBY_UNIT_RE[unit].sub(counter_repl,rendered)
 
+    # 対 is たい for numeric scores/ratios and as a news prefix (対イラン, 対米, etc.).
     rendered=SCORE_TAI_RE.sub("<ruby>対<rt>たい</rt></ruby>",rendered)
+    rendered=PREFIX_TAI_RE.sub("<ruby>対<rt>たい</rt></ruby>",rendered)
+
+    # 後 varies by syntax: Vた後 is usually あと; noun/loanword + 後 and その後 are ご in news prose.
     rendered=PAST_AFTER_RE.sub("<ruby>後<rt>あと</rt></ruby>",rendered)
+    rendered=rendered.replace("その<ruby>後<rt>のち</rt></ruby>","その<ruby>後<rt>ご</rt></ruby>")
+    rendered=rendered.replace("</ruby><ruby>後<rt>のち</rt></ruby>","</ruby><ruby>後<rt>ご</rt></ruby>")
+    rendered=re.sub(r"(?<=[ァ-ヶーA-Za-z])<ruby>後<rt>のち</rt></ruby>","<ruby>後<rt>ご</rt></ruby>",rendered)
+
+    # Common news homographs that pykakasi may choose as a place/food reading.
+    rendered=YUKUE_RE.sub("<ruby>行方<rt>ゆくえ</rt></ruby>",rendered)
+    rendered=US_PREFIX_RE.sub("<ruby>米<rt>べい</rt></ruby>",rendered)
     return rendered
