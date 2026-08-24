@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
 """Send Japanese Daily/Live publication notifications to Discord.
 
-This script is intentionally callable from the same GitHub Actions job that
-publishes data/latest.json and data/live.json. GitHub suppresses workflow
-chaining when a workflow pushes with GITHUB_TOKEN, so relying only on a second
-push-triggered workflow is not sufficient for bot-generated publications.
+Discord notifications deliberately link only to the Japanese newspaper website.
+Original/source news URLs are never exposed in Discord.
 """
 
 from __future__ import annotations
@@ -43,18 +41,6 @@ def corrupt(value: object) -> bool:
     return any(marker in text for marker in BAD_MARKERS)
 
 
-def article_link(item: dict, fallback: str) -> str:
-    candidates = [item.get("sourceUrl")]
-    for source in item.get("sources") or []:
-        if isinstance(source, dict):
-            candidates.append(source.get("url"))
-    for candidate in candidates:
-        candidate = str(candidate or "").strip()
-        if candidate.startswith("https://") or candidate.startswith("http://"):
-            return candidate
-    return fallback
-
-
 def post(content: str) -> None:
     webhook = os.environ.get("DISCORD_WEBHOOK_URL", "").strip()
     if not webhook:
@@ -73,7 +59,7 @@ def post(content: str) -> None:
         data=body,
         headers={
             "Content-Type": "application/json",
-            "User-Agent": "JapaneseDailyBriefGitHubActions/2.0",
+            "User-Agent": "JapaneseDailyBriefGitHubActions/2.1",
         },
         method="POST",
     )
@@ -86,7 +72,7 @@ def post(content: str) -> None:
 def send_daily() -> None:
     data = load("data/latest.json")
     articles = {a.get("id"): a for a in data.get("articles", [])}
-    top: list[tuple[str, str]] = []
+    top: list[str] = []
 
     for article_id in data.get("topFive", [])[:3]:
         article = articles.get(article_id)
@@ -94,7 +80,7 @@ def send_daily() -> None:
             continue
         title = str(article.get("title") or "").strip()
         if title and not corrupt(title):
-            top.append((title, article_link(article, SITE)))
+            top.append(title)
 
     if not top:
         print("No safe Daily headlines available; Discord Daily notification suppressed.")
@@ -104,16 +90,15 @@ def send_daily() -> None:
         f"🗞️ **日本語デイリーニュース｜{data.get('dateLabel') or data.get('date') or '本日'}**",
         "",
     ]
-    for index, (title, url) in enumerate(top, 1):
+    for index, title in enumerate(top, 1):
         lines.append(f"{index}. **{title}**")
-        lines.append(f"   🔗 記事リンク：{url}")
     lines += [
         "",
-        f"📰 日本語版トップ：{SITE}",
+        f"📰 ニュースを読む：{SITE}",
         f"🔴 最新ニュース速報：{LIVE_PAGE}",
     ]
     post("\n".join(lines))
-    print("Daily Japanese Discord notification sent.")
+    print("Daily Japanese Discord notification sent with website-only links.")
 
 
 def send_live() -> None:
@@ -165,16 +150,14 @@ def send_live() -> None:
     for item in material[:4]:
         status = item.get("status", "UPDATED")
         title = item.get("title", "更新")
-        url = article_link(item, LIVE_PAGE)
         lines.append(f"**{status}** · **{title}**")
-        lines.append(f"🔗 記事リンク：{url}")
     if len(material) > 4:
         lines.append(f"＋ほか {len(material) - 4} 件の更新")
     if blocked:
         lines += ["", f"⚠️ 破損項目 {blocked} 件は配信から除外しました。"]
-    lines += ["", f"🔴 最新ニュース速報一覧：{LIVE_PAGE}"]
+    lines += ["", f"🔴 続きを読む：{LIVE_PAGE}"]
     post("\n".join(lines))
-    print("Live Japanese Discord notification sent.")
+    print("Live Japanese Discord notification sent with website-only links.")
 
 
 def main() -> None:
