@@ -1,0 +1,46 @@
+name: Diagnose Japanese News Sync Freshness
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/workflows/discord-sync-diagnostic.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run sync only and record exact result
+        shell: bash
+        run: |
+          set +e
+          python scripts/safe_sync.py > /tmp/jp-sync-diagnostic.log 2>&1
+          status=$?
+          set -e
+
+          git reset --hard HEAD
+          {
+            echo "exit_status=${status}"
+            echo "utc=$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+            echo "--- log tail ---"
+            tail -n 160 /tmp/jp-sync-diagnostic.log
+          } > sync-diagnostic.txt
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sync-diagnostic.txt
+          git commit -m "Record Japanese sync diagnostic"
+          git push
