@@ -8,6 +8,25 @@ HTML_PAGES=[
     'finance.html','stocks.html','technology.html','manga-anime.html',
     'manchester-united.html','football.html','archive.html'
 ]
+TOPIC_PAGES={
+    'world.html','asia.html','hong-kong.html','japan.html','finance.html','technology.html',
+    'manga-anime.html','manchester-united.html','football.html'
+}
+NAV_ITEMS=[
+    ('live.html','<ruby>速報<rt>そくほう</rt></ruby>','live-nav'),
+    ('index.html','<ruby>一面<rt>いちめん</rt></ruby>トップ',''),
+    ('world.html','<ruby>世界<rt>せかい</rt></ruby>',''),
+    ('asia.html','アジア',''),
+    ('hong-kong.html','<ruby>香港<rt>ほんこん</rt></ruby>',''),
+    ('japan.html','<ruby>日本<rt>にほん</rt></ruby>',''),
+    ('finance.html','<ruby>経済<rt>けいざい</rt></ruby>',''),
+    ('stocks.html','<ruby>株式<rt>かぶしき</rt></ruby>ニュース',''),
+    ('technology.html','AI・テクノロジー',''),
+    ('manga-anime.html','<ruby>漫画<rt>まんが</rt></ruby>・アニメ',''),
+    ('manchester-united.html','マンチェスター・U',''),
+    ('football.html','サッカー',''),
+    ('archive.html','アーカイブ','')
+]
 STATIC_CRITICAL=HTML_PAGES+[
     'assets/css/newspaper.css','assets/css/system-ja.css','assets/css/live-ja.css','assets/css/home-parity-ja.css','assets/css/topic-ja-rolling.css','assets/css/stocks-ja.css',
     'assets/js/newspaper-ja.js','assets/js/system-ja.js','assets/js/live-guard.js','assets/js/live-article-ja.js','assets/js/topic-ja-rolling.js','assets/js/home-extras-ja.js','assets/js/stocks-ja.js',
@@ -41,6 +60,28 @@ def normalize_asset_versions(text):
         text=re.sub(pattern,f'{rel}?v={version}',text)
     return text
 
+def nav_markup(rel):
+    links=[]
+    for href,label,cls in NAV_ITEMS:
+        attrs=[]
+        if cls:attrs.append(f'class="{cls}"')
+        if href==rel:attrs.append('aria-current="page"')
+        attr=(' '+ ' '.join(attrs)) if attrs else ''
+        links.append(f'<a{attr} href="{href}">{label}</a>')
+    return '<nav class="section-nav" aria-label="ニュース分野">'+''.join(links)+'</nav>'
+
+def ensure_topic_shell(text,rel):
+    if rel not in TOPIC_PAGES:return text
+    if 'assets/css/topic-ja-rolling.css' not in text:
+        text=text.replace('</head>','<link rel="stylesheet" href="assets/css/topic-ja-rolling.css">\n</head>',1)
+    if 'id="topic-date"' not in text:
+        pattern=r'(<section[^>]*class="topic-page-head"[^>]*>.*?</section>)'
+        meta='<div class="topic-page-meta"><span id="topic-date">読み込み中…</span><span id="topic-count">本版を整理中…</span></div>'
+        text=re.sub(pattern,lambda m:m.group(1)+meta,text,count=1,flags=re.I|re.S)
+    if 'assets/js/topic-ja-rolling.js' not in text:
+        text=text.replace('</body>','<script src="assets/js/topic-ja-rolling.js" defer></script>\n</body>',1)
+    return text
+
 def normalize_html(rel):
     path=ROOT/rel
     if not path.exists():return False
@@ -52,11 +93,12 @@ def normalize_html(rel):
         text=text.replace('</head>','<link rel="stylesheet" href="assets/css/newspaper.css">\n</head>',1)
     if 'assets/css/system-ja.css' not in text:
         text=text.replace('</head>','<link rel="stylesheet" href="assets/css/system-ja.css">\n</head>',1)
-    nav='<nav class="section-nav" aria-label="ニュース分野"></nav>'
+    nav=nav_markup(rel)
     if re.search(r'<nav[^>]*class="section-nav"[^>]*>.*?</nav>',text,re.I|re.S):
-        text=re.sub(r'<nav[^>]*class="section-nav"[^>]*>.*?</nav>',nav,text,count=1,flags=re.I|re.S)
+        text=re.sub(r'<nav[^>]*class="section-nav"[^>]*>.*?</nav>',lambda _:nav,text,count=1,flags=re.I|re.S)
     elif '</header>' in text:
         text=text.replace('</header>','</header>'+nav,1)
+    text=ensure_topic_shell(text,rel)
     if 'assets/js/system-ja.js' not in text:
         text=text.replace('</body>','<script src="assets/js/system-ja.js" defer></script>\n</body>',1)
     for old,new in REPLACEMENTS.items():text=text.replace(old,new)
