@@ -26,6 +26,7 @@ CASES={
     "1人":"<ruby>1人<rt>ひとり</rt></ruby>",
     "2人":"<ruby>2人<rt>ふたり</rt></ruby>",
     "4人":"<ruby>4人<rt>よにん</rt></ruby>",
+    "22人":"<ruby>22人<rt>にじゅうににん</rt></ruby>",
     "3本":"<ruby>3本<rt>さんぼん</rt></ruby>",
     "6匹":"<ruby>6匹<rt>ろっぴき</rt></ruby>",
     "3杯":"<ruby>3杯<rt>さんばい</rt></ruby>",
@@ -38,6 +39,9 @@ CASES={
     "1社":"<ruby>1社<rt>いっしゃ</rt></ruby>",
     "1発":"<ruby>1発<rt>いっぱつ</rt></ruby>",
     "20歳":"<ruby>20歳<rt>はたち</rt></ruby>",
+    "75歳":"<ruby>75歳<rt>ななじゅうごさい</rt></ruby>",
+    "1節":"<ruby>1節<rt>いっせつ</rt></ruby>",
+    "13話":"<ruby>13話<rt>じゅうさんわ</rt></ruby>",
     "日本":"<ruby>日本<rt>にほん</rt></ruby>",
 }
 
@@ -60,9 +64,24 @@ def check_unit_cases(issues):
     score=base.ruby_html("マンチェスター・ユナイテッドは0対2で敗れた")
     if "<ruby>対<rt>たい</rt></ruby>" not in score or "<rt>つい</rt>" in score:
         issues.append(f"unit:score 対 must be たい, got {score!r}")
+    sanctions=base.ruby_html("対イラン制裁")
+    if "<ruby>対<rt>たい</rt></ruby>イラン" not in sanctions:
+        issues.append(f"unit:対イラン must use たい, got {sanctions!r}")
     after=base.ruby_html("発表した後の対応")
     if "た<ruby>後<rt>あと</rt></ruby>の" not in after:
         issues.append(f"unit:した後 must be あと, got {after!r}")
+    sono_go=base.ruby_html("その後の対応")
+    if "その<ruby>後<rt>ご</rt></ruby>の" not in sono_go:
+        issues.append(f"unit:その後 must be ご, got {sono_go!r}")
+    retirement=base.ruby_html("監督退任後の試合")
+    if "<ruby>後<rt>ご</rt></ruby>" not in retirement and "<rt>たいにんご</rt>" not in retirement:
+        issues.append(f"unit:退任後 must use ご, got {retirement!r}")
+    yukue=base.ruby_html("22名の行方は不明だ")
+    if "<ruby>行方<rt>ゆくえ</rt></ruby>" not in yukue:
+        issues.append(f"unit:行方 must use ゆくえ in whereabouts context, got {yukue!r}")
+    usd=base.ruby_html("102億米ドル")
+    if "<ruby>米<rt>べい</rt></ruby>ドル" not in usd and "<rt>べいどる</rt>" not in usd:
+        issues.append(f"unit:米ドル must use べい, got {usd!r}")
 
 
 def check_item(name,item,issues):
@@ -117,10 +136,18 @@ def check_forbidden(issues):
         raw=(ROOT/"data"/name).read_text(encoding="utf-8")
         if re.search(r"\d<ruby>対<rt>つい</rt></ruby>\d",raw):
             issues.append(f"{name}: numeric score/ratio still contains 対=つい")
+        if re.search(r"<ruby>対<rt>つい</rt></ruby>(?:[ァ-ヶーA-Za-z]|<ruby>)",raw):
+            issues.append(f"{name}: 対-prefix still contains つい")
         if "た<ruby>後<rt>のち</rt></ruby>" in raw:
             issues.append(f"{name}: past-event 後 still contains のち instead of あと")
+        if "その<ruby>後<rt>のち</rt></ruby>" in raw:
+            issues.append(f"{name}: その後 still contains のち instead of ご")
         if re.search(r"\d{1,2}<ruby>月<rt>がつ</rt></ruby>\d{1,2}<ruby>日<rt>にち</rt></ruby>",raw):
             issues.append(f"{name}: uncorrected numeric calendar date ruby remains")
+        if "<ruby>行方<rt>なめがた</rt></ruby>は" in raw:
+            issues.append(f"{name}: whereabouts 行方 still uses なめがた")
+        if "<ruby>米<rt>こめ</rt></ruby>ドル" in raw:
+            issues.append(f"{name}: 米ドル still uses こめ")
 
 
 def main():
