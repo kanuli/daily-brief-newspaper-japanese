@@ -22,10 +22,7 @@ ERROR_RE = re.compile(
 )
 HIRA_RE = re.compile(r"[\u3040-\u309f]")
 HAN_RE = re.compile(r"[\u3400-\u9fff]")
-CHINESE_PROSE_RE = re.compile(
-    r"(?:，|；|分鐘|小時|仍然|目前|進一步|將於|已經|對於|相關消息|賽事|球隊|球員|當局|"
-    r"白禮頓|阿士東|維拉)"
-)
+CHINESE_PROSE_RE = integrity.CHINESE_PROSE_RE
 STRICT_PROSE_KEYS = {"dek", "summary", "body", "context", "why", "watchNext", "description", "note"}
 _ORIGINAL_EXISTING_FEATURES_OK = base.existing_features_ok
 
@@ -39,11 +36,11 @@ def target_quality_ok(source_text, value, strict=False):
     value = str(value or "")
     if not value.strip() or bad_error_text(value):
         return False
+    if CHINESE_PROSE_RE.search(value):
+        return False
     if not base.likely_chinese_source(source_text):
         return True
     if value.strip() == source_text.strip() and len(source_text.strip()) > 18:
-        return False
-    if CHINESE_PROSE_RE.search(value):
         return False
     if strict and len(source_text.strip()) >= 28:
         han = len(HAN_RE.findall(value))
@@ -240,7 +237,7 @@ def prune_cache():
     removed = 0
     for key, value in list(base.CACHE.items()):
         text = str(value or "")
-        if bad_error_text(text) or "，" in text or "；" in text:
+        if bad_error_text(text) or CHINESE_PROSE_RE.search(text):
             base.CACHE.pop(key, None)
             removed += 1
     print(f"TRANSLATION_CACHE_POISON_REMOVED {removed}")
