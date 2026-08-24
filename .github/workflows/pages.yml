@@ -27,7 +27,7 @@ jobs:
         with:
           ref: main
 
-      - name: 静的サイトと保護表示を検証
+      - name: 静的サイトと広東語版レイアウトパリティを検証
         shell: bash
         run: |
           set -euo pipefail
@@ -36,12 +36,21 @@ jobs:
           node --check assets/js/topic-ja-rolling.js
           node --check assets/js/system-ja.js
           node --check assets/js/live-guard.js
+          node --check assets/js/home-extras-ja.js
+          node --check assets/js/live-article-ja.js
+          node --check assets/js/stocks-ja.js
           grep -q 'ensureIntegrityGuard' assets/js/system-ja.js
+          grep -q 'normalizeTopicShell' assets/js/system-ja.js
+          grep -q 'topic-ja-rolling.js' assets/js/system-ja.js
           grep -q 'sanitizeCards' assets/js/live-guard.js
           grep -q 'node.textContent === label' assets/js/live-guard.js
           grep -q 'live-next-update' live.html
-          grep -q 'topic-ja-rolling.js' world.html
-          grep -q 'topic-ja-rolling.js' stocks.html
+          grep -q 'live-article-ja.js' live.html
+          grep -q 'home-extras-ja.js' index.html
+          grep -q 'home-parity-ja.css' index.html
+          grep -q 'stocks-ja.js' stocks.html
+          grep -q 'stock-page-head' stocks.html
+          grep -q 'archive-list' archive.html
 
       - name: コンテンツとF3の状態を判定
         id: data_health
@@ -88,7 +97,7 @@ jobs:
         run: |
           echo "Clean data/F3: ${{ steps.data_health.outputs.clean }}"
           if [ "${{ steps.data_health.outputs.clean }}" = 'true' ]; then
-            echo 'Production is serving fully verified Japanese data, Cantonese-derived rolling layers, and F3 audio.'
+            echo 'Production is serving fully verified Japanese data, Cantonese-derived rolling layers, F3 audio, and Cantonese-layout parity.'
           else
             echo 'Production is serving protected quarantine mode until the translation/F3 sync replaces dirty or incomplete data.'
           fi
