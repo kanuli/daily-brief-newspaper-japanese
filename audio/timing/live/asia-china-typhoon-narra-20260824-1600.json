@@ -1,0 +1,370 @@
+{
+  "version": 3,
+  "duration": 137.77,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 358,
+  "charactersPerMinute": 155.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 13.404,
+      "text": "台風ナラが広西チワン族自治区とベトナム北部を襲い、大雨による洪水や土砂崩れが発生した"
+    },
+    {
+      "key": "dek",
+      "start": 13.404,
+      "end": 27.992,
+      "text": "中国広西チワン族自治区の各地から住民が避難し、ベトナム北部も洪水やインフラ被害に見舞われた。"
+    },
+    {
+      "key": "body-0",
+      "start": 27.992,
+      "end": 70.317,
+      "text": "台風ナラによる大雨は、中国南部の広西チワン族自治区とベトナム北部に影響を与え続けている。洪水、土砂崩れ、道路障害、農作物被害などが各地で発生した。中国当局は数万人の住民を避難させ、川の水位、鉄砲水、低地の監視を強化している。"
+    },
+    {
+      "key": "body-1",
+      "start": 70.317,
+      "end": 101.068,
+      "text": "ベトナム北部でも風雨による被害が記録されており、地方自治体は交通、電力供給、農業の損失に対処している。暴風雨が去った後は雨量が弱まる地域もあるが、二次災害の危険が完全に排除されたわけではない。"
+    },
+    {
+      "key": "why",
+      "start": 101.068,
+      "end": 120.519,
+      "text": "避難規模は大きく、国境を越えた大雨は治安、交通、農業に直接的な影響を与える。"
+    },
+    {
+      "key": "watch",
+      "start": 120.519,
+      "end": 137.77,
+      "text": "最近の降雨量、水位、死傷者、道路事情、農業被害に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.247,
+      "end": 7.477,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "台風ナラが広西チワン族自治区とベトナム北部を襲い、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.477,
+      "speechEnd": 12.704,
+      "end": 13.404,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "大雨による洪水や土砂崩れが発生した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.404,
+      "speechEnd": 21.0,
+      "end": 21.23,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中国広西チワン族自治区の各地から住民が避難し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.23,
+      "speechEnd": 27.292,
+      "end": 27.992,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "ベトナム北部も洪水やインフラ被害に見舞われた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 27.992,
+      "speechEnd": 31.477,
+      "end": 31.707,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "台風ナラによる大雨は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 31.707,
+      "speechEnd": 41.323,
+      "end": 41.823,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "中国南部の広西チワン族自治区とベトナム北部に影響を与え続けている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.823,
+      "speechEnd": 43.844,
+      "end": 44.074,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "洪水、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.074,
+      "speechEnd": 46.235,
+      "end": 46.465,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "土砂崩れ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.465,
+      "speechEnd": 48.695,
+      "end": 48.925,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "道路障害、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.925,
+      "speechEnd": 54.43,
+      "end": 54.93,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "農作物被害などが各地で発生した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.93,
+      "speechEnd": 60.993,
+      "end": 61.223,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中国当局は数万人の住民を避難させ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.223,
+      "speechEnd": 63.592,
+      "end": 63.822,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "川の水位、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.822,
+      "speechEnd": 65.913,
+      "end": 66.143,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "鉄砲水、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.143,
+      "speechEnd": 69.697,
+      "end": 70.317,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "低地の監視を強化している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 70.317,
+      "speechEnd": 77.146,
+      "end": 77.376,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ベトナム北部でも風雨による被害が記録されており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 77.376,
+      "speechEnd": 80.581,
+      "end": 80.812,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "地方自治体は交通、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 80.812,
+      "speechEnd": 83.041,
+      "end": 83.271,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "電力供給、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 83.271,
+      "speechEnd": 86.895,
+      "end": 87.395,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "農業の損失に対処している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 87.395,
+      "speechEnd": 93.597,
+      "end": 93.827,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "暴風雨が去った後は雨量が弱まる地域もあるが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.827,
+      "speechEnd": 100.447,
+      "end": 101.068,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "二次災害の危険が完全に排除されたわけではない。"
+    },
+    {
+      "parentKey": "why",
+      "start": 101.068,
+      "speechEnd": 105.04,
+      "end": 105.54,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 105.54,
+      "speechEnd": 108.536,
+      "end": 108.766,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "避難規模は大きく、"
+    },
+    {
+      "parentKey": "why",
+      "start": 108.766,
+      "speechEnd": 113.156,
+      "end": 113.387,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "国境を越えた大雨は治安、"
+    },
+    {
+      "parentKey": "why",
+      "start": 113.387,
+      "speechEnd": 115.407,
+      "end": 115.637,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "交通、"
+    },
+    {
+      "parentKey": "why",
+      "start": 115.637,
+      "speechEnd": 119.819,
+      "end": 120.519,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "農業に直接的な影響を与える。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 120.519,
+      "speechEnd": 122.609,
+      "end": 122.839,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 122.839,
+      "speechEnd": 125.557,
+      "end": 125.787,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "最近の降雨量、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 125.787,
+      "speechEnd": 127.808,
+      "end": 128.038,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "水位、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 128.038,
+      "speechEnd": 130.129,
+      "end": 130.359,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "死傷者、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 130.359,
+      "speechEnd": 132.589,
+      "end": 132.819,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "道路事情、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 132.819,
+      "speechEnd": 137.07,
+      "end": 137.77,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "農業被害に注意してください。"
+    }
+  ]
+}

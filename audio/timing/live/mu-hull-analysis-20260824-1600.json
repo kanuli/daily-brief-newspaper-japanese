@@ -1,0 +1,340 @@
+{
+  "version": 3,
+  "duration": 136.62,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 476,
+  "charactersPerMinute": 209.0,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 18.58,
+      "text": "マンチェスター・ユナイテッドは後成に0対2で敗れた後、攻撃効率に疑問が生じ、カウィックはシーズンのスタートを修正するというプレッシャーに直面した。"
+    },
+    {
+      "key": "dek",
+      "start": 18.58,
+      "end": 35.35,
+      "text": "マンチェスター・ユナイテッドはポゼッションとシュートで優位に立っていたが、質の高い機会を欠き、デッドボールディフェンスも要因となった。"
+    },
+    {
+      "key": "body-0",
+      "start": 35.35,
+      "end": 81.353,
+      "text": "マンチェスター・ユナイテッドはシーズン初めのアウェイゲームで後城に0-2で敗れた。失点はどちらもデッドボールの状況から生まれた。試合後の分析では、マンチェスター・ユナイテッドは多くのボールコントロールとシュートを見せていたものの、真に質の高いチャンスは限られており、攻撃体制とフロントコートの効率性がより大きな懸念となっていることが指摘された。"
+    },
+    {
+      "key": "body-1",
+      "start": 81.353,
+      "end": 107.343,
+      "text": "チームマネージャーのカウィック氏は、チームは早急に改善する必要があると語った。新加入選手の統合、負傷選手の回復、ミッドフィールドとフロントコートの構成が次節までの主な調整テーマとなる。"
+    },
+    {
+      "key": "why",
+      "start": 107.343,
+      "end": 124.103,
+      "text": "問題は単なる敗北ではなく、デッドボール守備によって露呈した構造的リスクと攻撃機会の質だ。"
+    },
+    {
+      "key": "watch",
+      "start": 124.103,
+      "end": 136.62,
+      "text": "次戦に向けたメンバー調整や負傷状況、フロントコートの人員構成に注目だ。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 6.271,
+      "end": 6.501,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "マンチェスター・ユナイテッドは後成に0対2で敗れた後、"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.501,
+      "speechEnd": 9.846,
+      "end": 10.076,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "攻撃効率に疑問が生じ、"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.076,
+      "speechEnd": 17.88,
+      "end": 18.58,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "カウィックはシーズンのスタートを修正するというプレッシャーに直面した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.58,
+      "speechEnd": 21.855,
+      "end": 22.135,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "マンチェスター・ユナイテッドは"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.135,
+      "speechEnd": 27.082,
+      "end": 27.312,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ポゼッションとシュートで優位に立っていたが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.312,
+      "speechEnd": 30.378,
+      "end": 30.608,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "質の高い機会を欠き、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 30.608,
+      "speechEnd": 34.649,
+      "end": 35.35,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "デッドボールディフェンスも要因となった。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 35.35,
+      "speechEnd": 38.624,
+      "end": 38.905,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "マンチェスター・ユナイテッドは"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.905,
+      "speechEnd": 45.106,
+      "end": 45.606,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "シーズン初めのアウェイゲームで後城に0-2で敗れた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.606,
+      "speechEnd": 51.738,
+      "end": 52.238,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "失点はどちらもデッドボールの状況から生まれた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.238,
+      "speechEnd": 55.164,
+      "end": 55.394,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "試合後の分析では、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.394,
+      "speechEnd": 58.669,
+      "end": 58.949,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "マンチェスター・ユナイテッドは"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.949,
+      "speechEnd": 65.29,
+      "end": 65.52,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "多くのボールコントロールとシュートを見せていたものの、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.52,
+      "speechEnd": 69.91,
+      "end": 70.14,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "真に質の高いチャンスは限られており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.14,
+      "speechEnd": 74.808,
+      "end": 75.089,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "攻撃体制とフロントコートの効率性が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.089,
+      "speechEnd": 80.732,
+      "end": 81.353,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "より大きな懸念となっていることが指摘された。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 81.353,
+      "speechEnd": 85.255,
+      "end": 85.485,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "チームマネージャーのカウィック氏は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 85.485,
+      "speechEnd": 90.85,
+      "end": 91.35,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "チームは早急に改善する必要があると語った。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.35,
+      "speechEnd": 94.486,
+      "end": 94.716,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "新加入選手の統合、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.716,
+      "speechEnd": 97.224,
+      "end": 97.454,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "負傷選手の回復、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.454,
+      "speechEnd": 102.123,
+      "end": 102.403,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ミッドフィールドとフロントコートの構成が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.403,
+      "speechEnd": 106.723,
+      "end": 107.343,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "次節までの主な調整テーマとなる。"
+    },
+    {
+      "parentKey": "why",
+      "start": 107.343,
+      "speechEnd": 111.315,
+      "end": 111.815,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 111.815,
+      "speechEnd": 115.368,
+      "end": 115.598,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "問題は単なる敗北ではなく、"
+    },
+    {
+      "parentKey": "why",
+      "start": 115.598,
+      "speechEnd": 123.402,
+      "end": 124.103,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "デッドボール守備によって露呈した構造的リスクと攻撃機会の質だ。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 124.103,
+      "speechEnd": 126.193,
+      "end": 126.423,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 126.423,
+      "speechEnd": 131.231,
+      "end": 131.461,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "次戦に向けたメンバー調整や負傷状況、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 131.461,
+      "speechEnd": 135.92,
+      "end": 136.62,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "フロントコートの人員構成に注目だ。"
+    }
+  ]
+}
