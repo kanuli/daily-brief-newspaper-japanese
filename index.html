@@ -1,22 +1,45 @@
 <!doctype html>
 <html lang="ja">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="世界、日本、香港、アジア、経済、株式、AI・テクノロジー、漫画・アニメ、マンチェスター・ユナイテッド、サッカーを日本語でまとめる個人向けデイリー・ニュース。">
-<meta name="theme-color" content="#171717"><title>日刊速報｜日本語版</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Noto+Serif+JP:wght@600;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/newspaper.css?v=b7e83cbd6b">
-<link rel="stylesheet" href="assets/css/system-ja.css?v=444e63b5b8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="日刊速報 Daily Brief — 日本、香港、アジア、世界、経済、株式、AI・テクノロジー、漫画・アニメ、マンチェスター・ユナイテッド、サッカーを日本語で掲載。06:00–24:00は毎時Live Update、08:00はDaily Edition。">
+  <meta name="theme-color" content="#111111">
+  <title>日刊速報 Daily Brief</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Noto+Serif+JP:wght@600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/newspaper.css">
+  <link rel="stylesheet" href="assets/css/live-ja.css">
+  <link rel="stylesheet" href="assets/css/system-ja.css">
 </head>
-<body data-page="home"><div class="paper">
-<div class="utility-bar"><span>個人版・香港</span><span>第 <span data-edition-number>001</span> 号</span></div>
-<header class="masthead"><div class="masthead-side">日本・香港・アジア・世界<br>AI・株式・アニメ・サッカー</div><div class="brand"><div class="brand-kicker">個 人 向 け 電 子 新 聞</div><h1>日刊速報</h1><div class="brand-sub">日本語ニュース版</div></div><div class="masthead-side right"><span data-edition-tagline>知るべきニュースを、わかりやすく</span><br>日本語版</div></header>
-<nav class="section-nav" aria-label="ニュース分野"></nav>
-<div class="date-strip"><span data-edition-date>読み込み中…</span><span>日刊版を保存・速報は原版から同期して日本語化</span></div>
-<main><div class="edition-divider"><span>本日のデイリー版</span></div><p id="fatal" class="notice"></p>
-<section class="lead-grid"><article class="lead-story" id="lead-story"><p>一面トップニュースを読み込んでいます…</p></article><aside><div class="section-heading"><h2>きょう必読の5本</h2><span>優先ニュース</span></div><div class="top-five" id="top-five"></div><div class="notice">この5本は一面トップでの優先順位です。各分野のページでは、より多くのニュースを掲載します。</div></aside></section>
-<div id="dynamic-sections"></div>
-<p class="notice">音声：Supertonic 3 F3。日本語のニュース原稿として、明瞭・中立・落ち着いた読み方になるよう速度と文の区切りを調整しています。</p>
-</main><footer class="footer"><span>日本語版デイリー・ブリーフ</span><span><a href="live.html">速報</a>・<a href="archive.html">アーカイブ</a>・<a href="https://github.com/kanuli/daily-brief-newspaper-japanese" target="_blank" rel="noopener noreferrer">ソースコード</a></span></footer>
-</div><script src="assets/js/system-ja.js?v=b655008f88" defer></script><script src="assets/js/newspaper-ja.js?v=cae7c7795e" defer></script></body></html>
+<body data-page="home">
+  <div class="paper">
+    <div class="utility-bar"><span>PERSONAL EDITION · HONG KONG</span><span>NO. <span data-edition-number>001</span></span></div>
+    <header class="masthead">
+      <div class="masthead-side">日本 · 香港 · アジア · 世界<br>AI · 株式ニュース · アニメ · サッカー</div>
+      <div class="brand"><div class="brand-kicker">個 人 向 け 電 子 新 聞</div><h1>日刊速報</h1><div class="brand-sub">DAILY BRIEF</div></div>
+      <div class="masthead-side right"><span data-edition-tagline>知るべきニュースを、わかりやすく</span><br>JAPANESE EDITION</div>
+    </header>
+    <nav class="section-nav" aria-label="ニュース分野"></nav>
+    <div class="date-strip"><span data-edition-date>読み込み中…</span><span>Daily Edition 固定保存 · Live 06:00–24:00 毎時更新（08:00 Daily） · 分野別ページに追加ニュース</span></div>
+    <main>
+      <div class="edition-divider" id="daily-edition"><span>08:00 DAILY EDITION</span></div>
+      <p id="fatal" class="notice"></p>
+      <section class="lead-grid" aria-label="本日の一面と必読5本">
+        <article class="lead-story" id="lead-story"><p>本日の一面トップニュースを読み込んでいます…</p></article>
+        <aside><div class="section-heading"><h2>きょう必読の5本</h2><span>TOP FIVE</span></div><div class="top-five" id="top-five"></div><div class="notice">この5本はDaily Editionの一面での優先順位です。各分野ページでは、一面に入らない追加ニュースも掲載します。</div></aside>
+      </section>
+      <section class="live-summary" id="live-summary" aria-label="Live Update"><div class="live-loading">最新のLive Updateを読み込んでいます…</div></section>
+      <div id="dynamic-sections"></div>
+      <section class="study-desk" id="study-desk" aria-label="きょうの日本語10語"></section>
+      <p class="notice">画像ポリシー：本版ではAI生成のニュース画像を使用しません。公式配布、合法的に再利用可能、または表示許可が明確な画像のみを将来接続し、Reuters / Getty / AFPなどの著作権保護写真をrepositoryへ直接複製しません。</p>
+      <p class="notice">音声：Supertonic 3 F3。日本語ニュース原稿として明瞭・中立・落ち着いた読み方になるよう、速度と文の区切りを調整しています。</p>
+    </main>
+    <footer class="footer"><span>日刊速報 Daily Brief · Daily + Live</span><span><a href="live.html">Live Update</a> · <a href="stocks.html">株式ニュース</a> · <a href="archive.html">アーカイブ</a> · <a href="https://github.com/kanuli/daily-brief-newspaper-japanese" target="_blank" rel="noopener noreferrer">GitHub</a></span></footer>
+  </div>
+  <script src="assets/js/system-ja.js" defer></script>
+  <script src="assets/js/newspaper-ja.js" defer></script>
+  <script src="assets/js/home-extras-ja.js" defer></script>
+</body>
+</html>
