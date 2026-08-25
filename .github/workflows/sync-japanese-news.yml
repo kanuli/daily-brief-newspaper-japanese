@@ -5,9 +5,12 @@ on:
   push:
     branches: ["main"]
     paths:
-      - "scripts/fast_safe_sync.py"
-      - "scripts/safe_sync.py"
-      - "scripts/batch_prewarm.py"
+      - "scripts/local_zh_ja.py"
+      - "scripts/local_translation_runtime.py"
+      - "scripts/local_batch_prewarm.py"
+      - "scripts/local_fast_safe_sync.py"
+      - "scripts/local_sync_cantonese_layers.py"
+      - "requirements-translation.txt"
       - ".github/workflows/sync-japanese-news.yml"
   schedule:
     # 広東語版の毎時公開を唯一のニュース源として、30分後に日本語版を処理する。
@@ -37,18 +40,34 @@ jobs:
         with:
           python-version: '3.11'
           cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            requirements-translation.txt
+
+      - name: ローカル中日翻訳モデルをキャッシュ
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface/hub
+          key: hf-opus-mt-tc-big-zh-ja-v1
 
       - name: 依存パッケージをインストール
-        run: pip install -r requirements.txt
+        shell: bash
+        run: |
+          set -euo pipefail
+          pip install -r requirements.txt
+          pip install --index-url https://download.pytorch.org/whl/cpu torch==2.8.0
+          pip install -r requirements-translation.txt
 
       - name: 広東語版下流パイプラインを構文検査
-        run: python -m py_compile scripts/sync_and_translate.py scripts/safe_sync.py scripts/fast_safe_sync.py scripts/batch_prewarm.py scripts/sync_cantonese_layers.py scripts/furigana_context.py scripts/validate_furigana_readings.py scripts/validate_content_integrity.py scripts/validate_extra_layers.py scripts/check_source_drift.py scripts/notify_discord.py
+        run: python -m py_compile scripts/sync_and_translate.py scripts/safe_sync.py scripts/fast_safe_sync.py scripts/batch_prewarm.py scripts/local_zh_ja.py scripts/local_translation_runtime.py scripts/local_batch_prewarm.py scripts/local_fast_safe_sync.py scripts/sync_cantonese_layers.py scripts/local_sync_cantonese_layers.py scripts/furigana_context.py scripts/validate_furigana_readings.py scripts/validate_content_integrity.py scripts/validate_extra_layers.py scripts/check_source_drift.py scripts/notify_discord.py
 
-      - name: 広東語版の全ニュース層を小分けバッチで日本語キャッシュへ先行翻訳
-        timeout-minutes: 12
-        run: python scripts/batch_prewarm.py
+      - name: 広東語版の全ニュース層をローカルOPUS-MTで小分け翻訳
+        timeout-minutes: 18
+        env:
+          TOKENIZERS_PARALLELISM: "false"
+        run: python scripts/local_batch_prewarm.py
 
-      - name: 完了済み翻訳キャッシュを途中保存
+      - name: 完了済みローカル翻訳キャッシュを途中保存
         if: always()
         shell: bash
         run: |
@@ -62,11 +81,11 @@ jobs:
           git config user.email 'actions@users.noreply.github.com'
           git add data/translation-cache.json
           if git diff --cached --quiet; then
-            echo 'No new validated translation cache entries to checkpoint.'
+            echo 'No new validated local translation cache entries to checkpoint.'
             exit 0
           fi
 
-          git commit -m '日本語翻訳キャッシュ進捗を保存'
+          git commit -m 'ローカル日本語翻訳キャッシュ進捗を保存'
           for attempt in 1 2 3 4 5; do
             echo "translation-cache push attempt ${attempt}/5"
             git fetch origin main
@@ -77,21 +96,25 @@ jobs:
               continue
             fi
             if git push origin HEAD:main; then
-              echo 'JAPANESE_TRANSLATION_CACHE_CHECKPOINT_OK'
+              echo 'LOCAL_JAPANESE_TRANSLATION_CACHE_CHECKPOINT_OK'
               exit 0
             fi
             sleep $((attempt * 2))
           done
-          echo 'Could not checkpoint translation cache after 5 retries.' >&2
+          echo 'Could not checkpoint local translation cache after 5 retries.' >&2
           exit 1
 
-      - name: 広東語版のデイリー・速報・アーカイブをキャッシュから日本語化
-        timeout-minutes: 5
-        run: python scripts/fast_safe_sync.py
+      - name: 広東語版のデイリー・速報・アーカイブをローカル翻訳キャッシュから日本語化
+        timeout-minutes: 4
+        env:
+          TOKENIZERS_PARALLELISM: "false"
+        run: python scripts/local_fast_safe_sync.py
 
-      - name: 広東語版の追加・ローリング・株式ニュースを全件保持してキャッシュから日本語化
-        timeout-minutes: 5
-        run: python scripts/sync_cantonese_layers.py
+      - name: 広東語版の追加・ローリング・株式ニュースをローカル翻訳キャッシュから全件日本語化
+        timeout-minutes: 4
+        env:
+          TOKENIZERS_PARALLELISM: "false"
+        run: python scripts/local_sync_cantonese_layers.py
 
       - name: 広東語版とのソース一致を検証
         run: python scripts/check_source_drift.py
