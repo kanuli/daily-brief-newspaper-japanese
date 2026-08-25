@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
-"""Install the local OPUS-MT translator into the existing Japanese pipeline."""
+"""Install the local OPUS-MT translator into the existing Japanese pipeline.
+
+The local model handles normal bulk work. A source field that still fails the
+Japanese quality gate after isolated local retries is sent through the existing
+free remote fallback chain one field at a time. This prevents one malformed
+local decode from either poisoning publication data or aborting an entire
+edition.
+"""
 from __future__ import annotations
 
 import hashlib
@@ -15,6 +22,12 @@ TEXT_PART_LIMIT = 280
 OWNER_BATCH_SIZE = 4
 _SENTENCE_SPLIT_RE = re.compile(r"(?<=[。！？；!?])")
 _CLAUSE_SPLIT_RE = re.compile(r"(?<=[，,；;：:])")
+
+# Capture the validated free fallbacks before install() rebinds production hooks
+# to the local runtime. These are used ONLY for individual local quality failures.
+_REMOTE_GTX = safe.google_gtx_translate
+_REMOTE_GOOGLE = safe.google_translate
+_REMOTE_MYMEMORY = safe.mymemory_translate
 
 
 def cache_key(text: str) -> str:
@@ -77,8 +90,37 @@ def _piecewise_retry(text: str, splitter: re.Pattern[str], mode: str, strict=Fal
     return None
 
 
+def _remote_quality_fallback(text: str, strict=False) -> str:
+    """Repair one rejected local result without turning bulk translation remote."""
+    errors: list[str] = []
+    backends = (
+        ("gtx", _REMOTE_GTX),
+        ("google", _REMOTE_GOOGLE),
+        ("mymemory", _REMOTE_MYMEMORY),
+    )
+    for label, translator in backends:
+        try:
+            value = translator(text, strict=strict)
+            if safe.target_quality_ok(text, value, strict=strict):
+                print(
+                    "LOCAL_MT_REMOTE_REPAIR_OK",
+                    f"backend={label}",
+                    f"source={text[:80]!r}",
+                )
+                base.CACHE[cache_key(text)] = value
+                checkpoint_cache(f"remote-repair-{label}")
+                return value
+            errors.append(f"{label}=quality-rejected")
+        except Exception as exc:
+            errors.append(f"{label}={exc}")
+    raise RuntimeError(
+        "All validated repair backends failed for one rejected local field: "
+        + "; ".join(errors)
+    )
+
+
 def _retry_quality_failure(text: str, first_value: str, strict=False) -> str:
-    """Retry one bad item locally instead of failing its whole owner batch."""
+    """Retry one bad item instead of failing or publishing its whole owner batch."""
     print(
         "LOCAL_MT_RETRY_QUALITY",
         f"source={text[:80]!r}",
@@ -105,7 +147,7 @@ def _retry_quality_failure(text: str, first_value: str, strict=False) -> str:
 
     # A single Chinese news sentence often contains two or more independent
     # clauses separated by full-width commas. Translate those clauses one at a
-    # time when Marian returns an empty sequence for the complete sentence.
+    # time when Marian returns a malformed complete-sentence decode.
     clause_value = _piecewise_retry(
         text,
         _CLAUSE_SPLIT_RE,
@@ -115,11 +157,12 @@ def _retry_quality_failure(text: str, first_value: str, strict=False) -> str:
     if clause_value is not None:
         return clause_value
 
-    raise RuntimeError(
-        "Local OPUS-MT quality gate failed after isolated local retries: "
-        f"source={text[:100]!r}; first={str(first_value or '')[:100]!r}; "
-        f"retry={str(retry or '')[:100]!r}"
+    print(
+        "LOCAL_MT_LOCAL_RETRIES_EXHAUSTED",
+        f"source={text[:80]!r}",
+        f"retry={str(retry or '')[:80]!r}",
     )
+    return _remote_quality_fallback(text, strict=strict)
 
 
 def _validated_translation(text: str, value: str, strict=False) -> str:
@@ -245,14 +288,15 @@ def local_prewarm_translations(source, label):
 
 
 def install():
-    """Replace every production translation hook with local OPUS-MT."""
+    """Use local OPUS-MT for bulk translation with validated per-field repairs."""
     fast.bounded_gtx = local_translate_part
     fast.bounded_mymemory = local_translate_part
     fast.bounded_translate_part = local_translate_part
     fast.prewarm_translations = local_prewarm_translations
 
     def installer():
-        # Legacy names are rebound so production cannot call Google/MyMemory.
+        # Legacy production hooks use local bulk translation. The captured
+        # originals above remain available solely inside _remote_quality_fallback.
         safe.google_gtx_translate = local_translate_part
         safe.google_translate = local_translate_part
         safe.mymemory_translate = local_translate_part
@@ -261,4 +305,7 @@ def install():
 
     fast.install_bounded_translator = installer
     installer()
-    print("LOCAL_MT_RUNTIME_INSTALLED remote_translation_calls=disabled model=Helsinki-NLP/opus-mt-tc-big-zh-ja")
+    print(
+        "LOCAL_MT_RUNTIME_INSTALLED remote_translation_calls=quality-fallback-only "
+        "model=Helsinki-NLP/opus-mt-tc-big-zh-ja"
+    )
