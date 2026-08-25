@@ -3,9 +3,9 @@ name: 日本語ニュース同期・Discord即時配信
 on:
   workflow_dispatch:
   schedule:
-    # 広東語版の毎時公開を唯一のニュース源として、15分後に日本語版を処理する。
-    # 例: 10:00 Cantonese -> 10:15 Japanese / 08:00 Daily -> 08:15 Japanese.
-    - cron: '15 * * * *'
+    # 広東語版の毎時公開を唯一のニュース源として、30分後に日本語版を処理する。
+    # 例: 10:00 Cantonese -> 10:30 Japanese / 08:00 Daily -> 08:30 Japanese.
+    - cron: '30 * * * *'
 
 permissions:
   contents: write
@@ -37,7 +37,7 @@ jobs:
       - name: 広東語版下流パイプラインを構文検査
         run: python -m py_compile scripts/sync_and_translate.py scripts/safe_sync.py scripts/fast_safe_sync.py scripts/batch_prewarm.py scripts/sync_cantonese_layers.py scripts/furigana_context.py scripts/validate_furigana_readings.py scripts/validate_content_integrity.py scripts/validate_extra_layers.py scripts/check_source_drift.py scripts/notify_discord.py
 
-      - name: 広東語版の全ニュース層を少数リクエストで日本語キャッシュへ先行翻訳
+      - name: 広東語版の全ニュース層を小分けバッチで日本語キャッシュへ先行翻訳
         timeout-minutes: 12
         run: python scripts/batch_prewarm.py
 
@@ -107,7 +107,7 @@ jobs:
           echo 'Could not publish Japanese news data after 5 retries.' >&2
           exit 1
 
-      - name: 15分後の日本語版をDiscordへ配信
+      - name: 30分後の日本語版をDiscordへ配信
         if: steps.publish_news.outputs.published == 'true' && (steps.publish_news.outputs.latest_changed == 'true' || steps.publish_news.outputs.live_changed == 'true')
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
