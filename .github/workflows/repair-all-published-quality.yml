@@ -1,0 +1,121 @@
+name: 日本語全公開コンテンツ品質修復
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ["main"]
+    paths:
+      - 'scripts/repair_all_published_quality.py'
+      - 'scripts/repair_garbled_core.py'
+      - 'scripts/repair_garbled_extra_layers.py'
+      - 'scripts/safe_sync.py'
+      - 'scripts/validate_content_integrity.py'
+      - 'scripts/validate_extra_layers.py'
+      - '.github/workflows/repair-all-published-quality.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: japanese-full-published-quality-repair
+  cancel-in-progress: true
+
+jobs:
+  repair-all:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      CANTONESE_SNAPSHOT_DIR: .cantonese-snapshot/data
+    steps:
+      - name: Checkout current Japanese main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 40
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            requirements-translation.txt
+
+      - name: Cache local Chinese-Japanese model
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface/hub
+          key: hf-opus-mt-tc-big-zh-ja-v1
+
+      - name: Install translation dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          pip install -r requirements.txt
+          pip install --index-url https://download.pytorch.org/whl/cpu torch==2.8.0
+          pip install -r requirements-translation.txt
+
+      - name: Syntax check exhaustive repair
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile \
+            scripts/cantonese_snapshot.py \
+            scripts/repair_all_published_quality.py \
+            scripts/repair_garbled_core.py \
+            scripts/repair_garbled_extra_layers.py \
+            scripts/safe_sync.py \
+            scripts/validate_content_integrity.py \
+            scripts/validate_extra_layers.py
+
+      - name: Freeze one Cantonese source commit
+        run: python scripts/cantonese_snapshot.py
+
+      - name: Repair all published Japanese against source
+        timeout-minutes: 12
+        env:
+          TOKENIZERS_PARALLELISM: 'false'
+        run: python scripts/repair_all_published_quality.py
+
+      - name: Validate core publication
+        run: python scripts/validate_content_integrity.py
+
+      - name: Validate every rolling topic and stock layer
+        run: python scripts/validate_extra_layers.py
+
+      - name: Validate furigana corpus
+        run: python scripts/validate_furigana_readings.py
+
+      - name: Publish all repaired Japanese fields
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'daily-brief-japanese-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add \
+            data/latest.json \
+            data/live.json \
+            data/desk-latest.json \
+            data/stocks-latest.json \
+            data/topic-more \
+            data/translation-cache.json
+          if git diff --cached --quiet; then
+            echo 'No published Japanese quality repair required.'
+            exit 0
+          fi
+          git commit -m '全公開日本語の文字化けと意味不一致を修復'
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              sleep $((attempt * 2))
+              continue
+            fi
+            if git push origin HEAD:main; then
+              echo 'FULL_PUBLISHED_JAPANESE_QUALITY_REPAIR_PUSH_OK'
+              exit 0
+            fi
+            sleep $((attempt * 2))
+          done
+          exit 1
