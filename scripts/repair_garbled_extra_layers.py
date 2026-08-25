@@ -15,6 +15,7 @@ from pathlib import Path
 
 import cantonese_snapshot as snapshot
 import furigana_safe_runtime
+import local_metadata_overrides as metadata_overrides
 import local_translation_runtime as runtime
 import safe_sync as safe
 import sync_and_translate as base
@@ -103,6 +104,7 @@ def main():
     base.likely_chinese_source = extra.needs_cantonese_translation
     base.TRANSLATE_KEYS.update({"impactLabel"})
     furigana_safe_runtime.install()
+    metadata_overrides.install(runtime)
     runtime.install()
     safe.prune_cache()
 
