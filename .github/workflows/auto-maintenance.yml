@@ -8,6 +8,7 @@ on:
       - 'assets/**'
       - 'scripts/**'
       - 'requirements.txt'
+      - 'requirements-translation.txt'
       - '.github/workflows/**'
   pull_request:
     branches: [main]
@@ -16,9 +17,13 @@ on:
       - 'assets/**'
       - 'scripts/**'
       - 'requirements.txt'
+      - 'requirements-translation.txt'
       - '.github/workflows/**'
   workflow_run:
-    workflows: ['日本語ニュース同期・Discord即時配信', '日本語版をGitHub Pagesへ公開']
+    workflows:
+      - '日本語ニュース同期・Discord即時配信'
+      - '日本語版 Pages 公開・広東語版レイアウト同期'
+      - 'F3ニュース読み再生成'
     types: [completed]
   schedule:
     - cron: '*/5 * * * *'
@@ -35,22 +40,26 @@ concurrency:
 jobs:
   watchdog:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 15
     steps:
       - name: Checkout current production main
         uses: actions/checkout@v4
         with:
           ref: main
-          fetch-depth: 30
-
-      - name: Load last-known-good reference
-        run: git fetch -q origin maintenance-known-good:refs/remotes/origin/maintenance-known-good || true
+          fetch-depth: 40
 
       - name: Verify maintenance scripts
         shell: bash
         run: |
           set -euo pipefail
-          python -m py_compile scripts/validate_site.py scripts/validate_layout_parity.py scripts/auto_repair_site.py scripts/check_source_drift.py scripts/validate_content_integrity.py scripts/sync_vocab_ja.py
+          python -m py_compile \
+            scripts/validate_site.py \
+            scripts/validate_layout_parity.py \
+            scripts/auto_repair_site.py \
+            scripts/check_source_drift.py \
+            scripts/validate_content_integrity.py \
+            scripts/validate_extra_layers.py \
+            scripts/validate_furigana_readings.py
 
       - name: Deterministic static repair
         run: python scripts/auto_repair_site.py
@@ -72,18 +81,17 @@ jobs:
             node --check assets/js/stocks-ja.js
           }
           if check_static; then
+            echo 'healthy=true' >> "$GITHUB_OUTPUT"
             echo 'recovered=false' >> "$GITHUB_OUTPUT"
             exit 0
           fi
-
-          echo 'Static QA failed; retrying deterministic repair without legacy layout rollback.'
           python scripts/auto_repair_site.py
           if check_static; then
+            echo 'healthy=true' >> "$GITHUB_OUTPUT"
             echo 'recovered=true' >> "$GITHUB_OUTPUT"
             exit 0
           fi
-
-          echo 'Cantonese-layout parity QA still fails. Refusing to restore the obsolete simplified Japanese presentation.' >&2
+          echo 'healthy=false' >> "$GITHUB_OUTPUT"
           exit 1
 
       - name: Save automatic static repairs
@@ -107,13 +115,50 @@ jobs:
             git pull --rebase origin main
             sleep $((attempt * 2))
           done
-          echo 'Static repair could not push after retries.' >&2
           exit 1
 
-      - name: Check Japanese data and F3 audio
-        id: data_qa
+      - name: Check Japanese publication text/data only
+        id: publication_qa
         shell: bash
         run: |
+          set +e
+          python scripts/validate_content_integrity.py
+          a=$?
+          python scripts/validate_extra_layers.py
+          b=$?
+          python scripts/validate_furigana_readings.py
+          c=$?
+          set -e
+          if [ "$a" -eq 0 ] && [ "$b" -eq 0 ] && [ "$c" -eq 0 ]; then
+            echo 'healthy=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'healthy=false' >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Compare current Cantonese source fingerprints
+        id: drift
+        shell: bash
+        run: |
+          set +e
+          python scripts/check_source_drift.py
+          code=$?
+          set -e
+          echo "exit_code=${code}" >> "$GITHUB_OUTPUT"
+          if [ "$code" -eq 10 ]; then
+            echo 'drift=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'drift=false' >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Check F3 voice independently
+        id: audio_qa
+        shell: bash
+        run: |
+          if [ "${{ steps.publication_qa.outputs.healthy }}" != 'true' ]; then
+            echo 'healthy=false' >> "$GITHUB_OUTPUT"
+            echo 'Publication data is not clean yet; F3 check deferred.'
+            exit 0
+          fi
           set +e
           python scripts/validate_site.py --data-only
           code=$?
@@ -123,144 +168,132 @@ jobs:
           else
             echo 'healthy=false' >> "$GITHUB_OUTPUT"
           fi
+          last_data_epoch=$(git log -1 --format=%ct -- data/latest.json data/live.json 2>/dev/null || echo 0)
+          now_epoch=$(date +%s)
+          if [ "${last_data_epoch:-0}" -gt 0 ]; then
+            age=$((now_epoch-last_data_epoch))
+          else
+            age=999999
+          fi
+          echo "data_age=${age}" >> "$GITHUB_OUTPUT"
 
-      - name: Compare original newspaper fingerprints
-        id: drift
-        shell: bash
-        run: |
-          set +e
-          python scripts/check_source_drift.py
-          code=$?
-          set -e
-          echo "drift-check-exit=${code}"
-          exit 0
-
-      - name: Inspect sync and Pages workers
+      - name: Inspect translation, Pages and F3 workers
         id: workers
         env:
           GH_TOKEN: ${{ github.token }}
         shell: bash
         run: |
           set -euo pipefail
-          gh run list --workflow sync-japanese-news.yml --branch main --limit 20 --json status,conclusion,databaseId,createdAt,updatedAt,headSha > /tmp/sync-runs.json
-          gh run list --workflow pages.yml --branch main --limit 20 --json status,conclusion,databaseId,createdAt,updatedAt,headSha > /tmp/pages-runs.json
+          gh run list --workflow sync-japanese-news.yml --branch main --limit 20 --json status,conclusion,databaseId,createdAt,headSha > /tmp/sync.json
+          gh run list --workflow pages.yml --branch main --limit 20 --json status,conclusion,databaseId,createdAt,headSha > /tmp/pages.json
+          gh run list --workflow rebuild-f3-pacing.yml --branch main --limit 20 --json status,conclusion,databaseId,createdAt,headSha > /tmp/f3.json
           python - <<'PY' >> "$GITHUB_OUTPUT"
           import json
-          from datetime import datetime,timezone
-          now=datetime.now(timezone.utc)
-          def info(path,prefix):
-              runs=json.load(open(path,encoding='utf-8'))
-              active=[r for r in runs if r.get('status')!='completed']
-              ages=[]
+          from datetime import datetime, timezone
+          now = datetime.now(timezone.utc)
+          def emit(path, prefix):
+              runs = json.load(open(path, encoding='utf-8'))
+              active = [r for r in runs if r.get('status') != 'completed']
+              ages = []
               for r in active:
-                  try: ages.append(max(0,int((now-datetime.fromisoformat(r['createdAt'].replace('Z','+00:00'))).total_seconds())))
-                  except Exception: pass
-              latest=runs[0] if runs else {}
+                  try:
+                      ages.append(max(0, int((now-datetime.fromisoformat(r['createdAt'].replace('Z','+00:00'))).total_seconds())))
+                  except Exception:
+                      pass
+              latest = runs[0] if runs else {}
               print(f'{prefix}_active_count={len(active)}')
               print(f'{prefix}_active_ids={",".join(str(r.get("databaseId")) for r in active if r.get("databaseId"))}')
               print(f'{prefix}_active_oldest={max(ages) if ages else 0}')
-              print(f'{prefix}_latest_id={latest.get("databaseId","")}')
               print(f'{prefix}_latest_conclusion={latest.get("conclusion") or ""}')
               print(f'{prefix}_latest_head={latest.get("headSha") or ""}')
-          info('/tmp/sync-runs.json','sync')
-          info('/tmp/pages-runs.json','pages')
+          emit('/tmp/sync.json','sync')
+          emit('/tmp/pages.json','pages')
+          emit('/tmp/f3.json','f3')
           PY
 
-      - name: Recover Japanese translation and F3 pipeline
-        if: github.event_name != 'pull_request' && (steps.data_qa.outputs.healthy != 'true' || steps.drift.outputs.drift == 'true')
+      - name: Recover Japanese text/data sync only
+        if: github.event_name != 'pull_request' && (steps.publication_qa.outputs.healthy != 'true' || steps.drift.outputs.drift == 'true')
         env:
           GH_TOKEN: ${{ github.token }}
           ACTIVE_COUNT: ${{ steps.workers.outputs.sync_active_count }}
-          ACTIVE_IDS: ${{ steps.workers.outputs.sync_active_ids }}
           ACTIVE_OLDEST: ${{ steps.workers.outputs.sync_active_oldest }}
         shell: bash
         run: |
           set -euo pipefail
           if [ "${ACTIVE_COUNT:-0}" -gt 0 ] && [ "${ACTIVE_OLDEST:-0}" -lt 3300 ]; then
-            echo 'Sync/F3 worker is active inside the allowed window; no duplicate restart.'
+            echo 'Japanese text/data sync is already active.'
             exit 0
           fi
-          if [ "${ACTIVE_COUNT:-0}" -gt 0 ]; then
-            IFS=',' read -ra IDS <<< "${ACTIVE_IDS:-}"
-            for id in "${IDS[@]}"; do
-              [ -n "$id" ] || continue
-              echo "Cancelling stale sync/F3 run $id"
-              gh run cancel "$id" --repo "${{ github.repository }}" || true
-            done
-            sleep 4
-          fi
           gh workflow run sync-japanese-news.yml --repo "${{ github.repository }}" --ref main
-          echo 'JAPANESE_SYNC_AUTO_RECOVERY_DISPATCHED'
+          echo 'JAPANESE_TEXT_SYNC_RECOVERY_DISPATCHED'
 
-      - name: Recover GitHub Pages deployment
-        if: github.event_name != 'pull_request' && steps.data_qa.outputs.healthy == 'true' && steps.drift.outputs.drift != 'true'
+      - name: Recover F3 voice separately after server grace period
+        if: github.event_name != 'pull_request' && steps.publication_qa.outputs.healthy == 'true' && steps.drift.outputs.drift != 'true' && steps.audio_qa.outputs.healthy != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ACTIVE_COUNT: ${{ steps.workers.outputs.f3_active_count }}
+          DATA_AGE: ${{ steps.audio_qa.outputs.data_age }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ "${ACTIVE_COUNT:-0}" -gt 0 ]; then
+            echo 'F3 worker is already active.'
+            exit 0
+          fi
+          if [ "${DATA_AGE:-0}" -lt 1200 ]; then
+            echo 'Giving the production server F3 worker 20 minutes to finish.'
+            exit 0
+          fi
+          gh workflow run rebuild-f3-pacing.yml --repo "${{ github.repository }}" --ref main
+          echo 'F3_FALLBACK_RECOVERY_DISPATCHED'
+
+      - name: Recover GitHub Pages independently
+        if: github.event_name != 'pull_request'
         env:
           GH_TOKEN: ${{ github.token }}
           ACTIVE_COUNT: ${{ steps.workers.outputs.pages_active_count }}
-          ACTIVE_IDS: ${{ steps.workers.outputs.pages_active_ids }}
-          ACTIVE_OLDEST: ${{ steps.workers.outputs.pages_active_oldest }}
           LATEST_CONCLUSION: ${{ steps.workers.outputs.pages_latest_conclusion }}
           LATEST_HEAD: ${{ steps.workers.outputs.pages_latest_head }}
         shell: bash
         run: |
           set -euo pipefail
           git fetch -q origin main
-          MAIN_SHA=$(git rev-parse origin/main)
-          if [ "${ACTIVE_COUNT:-0}" -gt 0 ] && [ "${ACTIVE_OLDEST:-0}" -lt 1200 ]; then
-            echo 'Pages deployment is active inside the allowed window.'
+          main_sha=$(git rev-parse origin/main)
+          if [ "${ACTIVE_COUNT:-0}" -gt 0 ]; then
+            echo 'Pages deployment is already active.'
             exit 0
           fi
-          if [ "${ACTIVE_COUNT:-0}" -gt 0 ]; then
-            IFS=',' read -ra IDS <<< "${ACTIVE_IDS:-}"
-            for id in "${IDS[@]}"; do
-              [ -n "$id" ] || continue
-              echo "Cancelling stale Pages run $id"
-              gh run cancel "$id" --repo "${{ github.repository }}" || true
-            done
-            sleep 3
-          fi
-          if [ "${LATEST_CONCLUSION:-}" = 'success' ] && [ "${LATEST_HEAD:-}" = "$MAIN_SHA" ]; then
+          if [ "${LATEST_CONCLUSION:-}" = 'success' ] && [ "${LATEST_HEAD:-}" = "$main_sha" ]; then
             echo 'Pages already matches current main.'
             exit 0
           fi
           gh workflow run pages.yml --repo "${{ github.repository }}" --ref main
-          echo "PAGES_AUTO_RECOVERY_DISPATCHED main=${MAIN_SHA}"
+          echo "PAGES_RECOVERY_DISPATCHED main=${main_sha}"
 
-      - name: Refresh last-known-good after verified health
+      - name: Refresh last-known-good only after full health
         if: github.event_name != 'pull_request'
         shell: bash
         run: |
           set -euo pipefail
+          if [ "${{ steps.static_qa.outputs.healthy }}" != 'true' ] || \
+             [ "${{ steps.publication_qa.outputs.healthy }}" != 'true' ] || \
+             [ "${{ steps.drift.outputs.drift }}" = 'true' ] || \
+             [ "${{ steps.audio_qa.outputs.healthy }}" != 'true' ]; then
+            echo 'Full production health not reached; known-good reference not advanced.'
+            exit 0
+          fi
           git fetch -q origin main
-          git reset --hard origin/main
-          if ! python scripts/validate_site.py; then
-            echo 'Current main is not fully healthy; known-good reference not advanced.'
-            exit 0
-          fi
-          if ! python scripts/validate_layout_parity.py; then
-            echo 'Current main lost Cantonese layout parity; known-good reference not advanced.'
-            exit 0
-          fi
-          set +e
-          python scripts/check_source_drift.py
-          drift_code=$?
-          set -e
-          if [ "$drift_code" -eq 10 ]; then
-            echo 'Source drift exists; known-good reference not advanced until sync catches up.'
-            exit 0
-          fi
-          SHA=$(git rev-parse HEAD)
-          git push --force origin "$SHA:refs/heads/maintenance-known-good"
-          echo "KNOWN_GOOD_REFRESHED ${SHA}"
+          sha=$(git rev-parse origin/main)
+          git push --force origin "$sha:refs/heads/maintenance-known-good"
+          echo "KNOWN_GOOD_REFRESHED ${sha}"
 
       - name: Maintenance summary
         run: |
-          echo "Mode: ${{ github.event_name }}"
-          echo "Static recovered: ${{ steps.static_qa.outputs.recovered || 'false' }}"
-          echo "Data/F3 healthy: ${{ steps.data_qa.outputs.healthy }}"
-          echo "Source drift: ${{ steps.drift.outputs.drift || 'unknown' }}"
+          echo "Static healthy: ${{ steps.static_qa.outputs.healthy || 'false' }}"
+          echo "Publication text/data healthy: ${{ steps.publication_qa.outputs.healthy || 'false' }}"
+          echo "Cantonese source drift: ${{ steps.drift.outputs.drift || 'unknown' }}"
+          echo "F3 voice healthy: ${{ steps.audio_qa.outputs.healthy || 'false' }}"
           echo "Sync active: ${{ steps.workers.outputs.sync_active_count || '0' }}"
-          echo "Sync latest: ${{ steps.workers.outputs.sync_latest_conclusion || 'unknown' }} @ ${{ steps.workers.outputs.sync_latest_head || 'none' }}"
           echo "Pages active: ${{ steps.workers.outputs.pages_active_count || '0' }}"
-          echo "Pages latest: ${{ steps.workers.outputs.pages_latest_conclusion || 'unknown' }} @ ${{ steps.workers.outputs.pages_latest_head || 'none' }}"
-          echo 'Japanese site auto maintenance cycle completed.'
+          echo "F3 active: ${{ steps.workers.outputs.f3_active_count || '0' }}"
+          echo 'Japanese site maintenance cycle completed.'
