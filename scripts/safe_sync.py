@@ -73,12 +73,14 @@ def source_target_quality_reason(source_text, value, strict=False):
             continue
         return f"source numeric anchor {token!r} disappeared"
 
-    # Chinese and Japanese news prose share enough Han characters that a long
-    # translation with essentially zero lexical overlap is a strong corruption
-    # signal. This catches fluent-looking but unrelated translator garbage.
+    # Long Chinese and Japanese news prose normally retain at least one or two
+    # shared Han concepts/proper-name characters. Do NOT require the target to
+    # already contain four Han characters before performing this test: that old
+    # condition allowed unrelated katakana-heavy/meme output to bypass semantic
+    # validation entirely.
     source_han = set(HAN_RE.findall(source_text))
     target_han = set(HAN_RE.findall(value))
-    if len(source_han) >= 12 and len(target_han) >= 4:
+    if len(source_han) >= 12:
         required = 2 if len(source_han) >= 24 else 1
         overlap = len(source_han & target_han)
         if overlap < required:
