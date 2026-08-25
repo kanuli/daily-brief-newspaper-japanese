@@ -14,6 +14,7 @@ import sync_and_translate as base
 TEXT_PART_LIMIT = 280
 OWNER_BATCH_SIZE = 4
 _SENTENCE_SPLIT_RE = re.compile(r"(?<=[。！？；!?])")
+_CLAUSE_SPLIT_RE = re.compile(r"(?<=[，,；;：:])")
 
 
 def cache_key(text: str) -> str:
@@ -29,6 +30,53 @@ def checkpoint_cache(label: str) -> None:
     print(f"LOCAL_MT_CACHE_CHECKPOINT {label} entries={len(base.CACHE)}")
 
 
+def _piecewise_retry(text: str, splitter: re.Pattern[str], mode: str, strict=False) -> str | None:
+    pieces = [x for x in splitter.split(text) if x and x.strip()]
+    if len(pieces) <= 1:
+        return None
+
+    translated: list[str] = []
+    for index, piece in enumerate(pieces, 1):
+        cached = base.CACHE.get(cache_key(piece))
+        if cached is not None and safe.target_quality_ok(piece, cached, strict=False):
+            value = cached
+        else:
+            value = local_zh_ja.translate_one(
+                piece,
+                normalize_traditional=True,
+                num_beams=6,
+            )
+            if not safe.target_quality_ok(piece, value, strict=False):
+                # Remove only terminal punctuation for one last local decode. This
+                # helps Marian avoid rare empty generations on short mixed-name
+                # clauses while preserving the source text in the quality check.
+                bare = re.sub(r"[，,；;：:。！？!?]+$", "", piece).strip()
+                if bare and bare != piece:
+                    value = local_zh_ja.translate_one(
+                        bare,
+                        normalize_traditional=True,
+                        num_beams=8,
+                    )
+            if not safe.target_quality_ok(piece, value, strict=False):
+                print(
+                    "LOCAL_MT_PIECE_FAILED",
+                    f"mode={mode}",
+                    f"part={index}/{len(pieces)}",
+                    f"source={piece[:80]!r}",
+                    f"output={str(value or '')[:80]!r}",
+                )
+                return None
+            base.CACHE[cache_key(piece)] = value
+            checkpoint_cache(f"retry-{mode}-{index}-of-{len(pieces)}")
+        translated.append(value)
+
+    combined = "".join(translated)
+    if safe.target_quality_ok(text, combined, strict=strict):
+        print(f"LOCAL_MT_RETRY_OK mode={mode} parts={len(pieces)}")
+        return combined
+    return None
+
+
 def _retry_quality_failure(text: str, first_value: str, strict=False) -> str:
     """Retry one bad item locally instead of failing its whole owner batch."""
     print(
@@ -37,9 +85,6 @@ def _retry_quality_failure(text: str, first_value: str, strict=False) -> str:
         f"first={str(first_value or '')[:80]!r}",
     )
 
-    # Pass 2: normalize Traditional Chinese to Simplified locally and decode the
-    # single item with a wider beam. OPUS training is substantially richer in
-    # standardized Chinese than in Cantonese-specific Traditional variants.
     retry = local_zh_ja.translate_one(
         text,
         normalize_traditional=True,
@@ -49,20 +94,26 @@ def _retry_quality_failure(text: str, first_value: str, strict=False) -> str:
         print("LOCAL_MT_RETRY_OK mode=t2s-single")
         return retry
 
-    # Pass 3: for compound prose, translate sentence-sized units separately.
-    # This keeps one difficult clause from poisoning the entire paragraph.
-    pieces = [x for x in _SENTENCE_SPLIT_RE.split(text) if x]
-    if len(pieces) > 1:
-        values = local_zh_ja.translate_many(
-            pieces,
-            batch_size=1,
-            normalize_traditional=True,
-            num_beams=6,
-        )
-        combined = "".join(values)
-        if safe.target_quality_ok(text, combined, strict=strict):
-            print(f"LOCAL_MT_RETRY_OK mode=t2s-sentences parts={len(pieces)}")
-            return combined
+    sentence_value = _piecewise_retry(
+        text,
+        _SENTENCE_SPLIT_RE,
+        "t2s-sentences",
+        strict=strict,
+    )
+    if sentence_value is not None:
+        return sentence_value
+
+    # A single Chinese news sentence often contains two or more independent
+    # clauses separated by full-width commas. Translate those clauses one at a
+    # time when Marian returns an empty sequence for the complete sentence.
+    clause_value = _piecewise_retry(
+        text,
+        _CLAUSE_SPLIT_RE,
+        "t2s-clauses",
+        strict=strict,
+    )
+    if clause_value is not None:
+        return clause_value
 
     raise RuntimeError(
         "Local OPUS-MT quality gate failed after isolated local retries: "
@@ -115,11 +166,12 @@ def localize_or_translate(text: str, strict=False) -> str:
             translated = _validated_translation(source_part, translated, strict=False)
             resolved[index] = translated
             base.CACHE[cache_key(source_part)] = translated
-        checkpoint_cache(f"parts-{start + len(batch_texts)}-of-{len(missing_texts)}")
+            checkpoint_cache(f"part-item-{index + 1}-of-{len(parts)}")
 
     result = "".join(x or "" for x in resolved)
     result = _validated_translation(value, result, strict=strict)
     base.CACHE[full_key] = result
+    checkpoint_cache("full-text")
     return result
 
 
@@ -132,9 +184,11 @@ def _translate_short_group(group):
     outputs = local_zh_ja.translate_many(source_texts, batch_size=OWNER_BATCH_SIZE)
     if len(outputs) != len(group):
         raise RuntimeError("Local OPUS-MT returned wrong owner batch size")
-    for (text, strict), value in zip(group, outputs):
+    for index, ((text, strict), value) in enumerate(zip(group, outputs), 1):
         value = _validated_translation(text, value, strict=strict)
         base.CACHE[cache_key(text)] = value
+        # Persist every successful item before attempting the next difficult item.
+        checkpoint_cache(f"short-item-{index}-of-{len(group)}")
 
 
 def local_prewarm_translations(source, label):
@@ -198,8 +252,7 @@ def install():
     fast.prewarm_translations = local_prewarm_translations
 
     def installer():
-        # Legacy function names are intentionally rebound so no production path
-        # can call Google or MyMemory even if older conversion code invokes them.
+        # Legacy names are rebound so production cannot call Google/MyMemory.
         safe.google_gtx_translate = local_translate_part
         safe.google_translate = local_translate_part
         safe.mymemory_translate = local_translate_part
