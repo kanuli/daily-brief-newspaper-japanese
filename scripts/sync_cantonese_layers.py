@@ -4,7 +4,9 @@
 The Cantonese repository is the only news-collection source of truth. This
 script preserves the complete source structure and story set, translates only
 user-facing text, adds furigana metadata for news content, and attaches paths
-for server-side Supertonic 3 F3 audio.
+for server-side Supertonic 3 F3 audio. Translation uses the same bounded,
+parallel cache prewarm as the Daily/Live downstream sync so rolling layers
+cannot become a second serial bottleneck.
 """
 import hashlib
 import json
@@ -15,6 +17,7 @@ import requests
 
 import safe_sync as safe
 import sync_and_translate as base
+import fast_safe_sync as fast
 
 OUT = Path("data")
 SOURCE_BASE = base.SOURCE_BASE
@@ -93,9 +96,9 @@ def existing_current(path, source_hash):
 
 
 def translate_file(name, source):
-    # IMPORTANT: never compact, cap, rank, drop, or independently select stories
-    # here. The Cantonese source structure is preserved exactly before Japanese
-    # text decoration so both editions share the same collected news resources.
+    # Never compact, cap, rank, drop, or independently select stories here.
+    # The Cantonese source structure is preserved exactly before Japanese text
+    # decoration so both editions share the same collected news resources.
     source_hash = fingerprint(source)
     path = OUT / name
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -103,6 +106,7 @@ def translate_file(name, source):
         print("EXTRA_FAST_PATH", name)
         return False
 
+    fast.prewarm_translations(source, name)
     translated = safe.safe_convert(source)
     decorate_story_tree(translated, "rolling")
     if isinstance(translated, dict):
@@ -138,6 +142,7 @@ def prune_old_topic_more(today):
 
 
 def main():
+    fast.install_bounded_translator()
     base.translate_part = lambda part: safe.safe_translate_part(part, strict=False)
     base.translate_text = lambda text: safe.safe_translate_text(text, strict=False)
     base.convert = safe.safe_convert
