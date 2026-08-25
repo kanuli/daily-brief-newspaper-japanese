@@ -70,7 +70,7 @@
 
     const stats = document.querySelector("#live-page-stats");
     if (stats) {
-      stats.innerHTML = `<div><strong>${actual.NEW}</strong><span>NEW</span></div><div><strong>${actual.UPDATED}</strong><span>UPDATED</span></div><div><strong>${actual.DEVELOPING}</strong><span>DEVELOPING</span></div><p>${esc(data.nextUpdateLabel || "")}</p>`;
+      stats.innerHTML = `<div><strong>${actual.NEW}</strong><span>新着</span></div><div><strong>${actual.UPDATED}</strong><span>更新</span></div><div><strong>${actual.DEVELOPING}</strong><span>続報</span></div><p>${esc(data.nextUpdateLabel || "")}</p>`;
     }
 
     const coverage = data.coverage || {};
@@ -82,13 +82,13 @@
       const verifiedCount = Number(coverage.verifiedCandidateCount || 0);
       const incrementalCount = Number(coverage.incrementalCandidateCount || 0);
       audit.innerHTML = sourceCount || searchCount || rawCount || verifiedCount || incrementalCount
-        ? `<strong>最新収集：</strong>${sourceCount}ニュース機関 ・ fresh searches ${searchCount} ・ raw ${rawCount} ・ verified ${verifiedCount} ・ incremental ${incrementalCount}`
+        ? `<strong>最新収集：</strong>${sourceCount}ニュース機関 ・ 新規検索 ${searchCount} ・ 候補 ${rawCount} ・ 確認済み ${verifiedCount} ・ 追加候補 ${incrementalCount}`
         : `<strong>最新発行：</strong>${esc(data.lastUpdatedLabel || data.windowLabel || "更新済み")}`;
     }
 
     host.innerHTML = items.length
       ? items.map(renderStory).join("")
-      : `<p class="notice">この時間帯の速報をまだ読み込めません。システムは最新のLive publicationを自動的に再取得します。</p>`;
+      : `<p class="notice">この時間帯の速報をまだ読み込めません。システムは最新の速報版を自動的に再取得します。</p>`;
     initAudioSync();
   }
 
@@ -107,7 +107,7 @@
     } catch (error) {
       console.error("Japanese Live refresh failed", error);
       const audit = document.querySelector("#live-audit");
-      if (audit) audit.textContent = "Liveデータを一時的に読み込めません。自動的に再試行します。";
+      if (audit) audit.textContent = "速報データを一時的に読み込めません。自動的に再試行します。";
     }
   }
 
