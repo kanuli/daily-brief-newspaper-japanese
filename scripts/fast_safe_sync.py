@@ -276,6 +276,40 @@ def legacy_item_reusable(source_item, old_item):
     return True
 
 
+def reused_translation_quality_ok(source_value, translated_value, parent_key=""):
+    """Reject a fingerprint hit when the stored Japanese copy is poisoned/stale.
+
+    Fingerprints prove that the Cantonese source did not change; they do not prove
+    that an older Japanese translation was valid. Every user-facing translatable
+    field is therefore revalidated before an item can take the reuse fast-path.
+    """
+    if isinstance(source_value, dict):
+        if not isinstance(translated_value, dict):
+            return False
+        for key, child in source_value.items():
+            if key in base.KEEP_KEYS or key == "shortDate":
+                continue
+            if not reused_translation_quality_ok(child, translated_value.get(key), key):
+                return False
+        return True
+    if isinstance(source_value, list):
+        if not isinstance(translated_value, list) or len(translated_value) < len(source_value):
+            return False
+        return all(
+            reused_translation_quality_ok(child, translated_value[index], parent_key)
+            for index, child in enumerate(source_value)
+        )
+    if isinstance(source_value, str) and parent_key in base.TRANSLATE_KEYS:
+        if not isinstance(translated_value, str):
+            return False
+        return safe.target_quality_ok(
+            source_value,
+            translated_value,
+            strict=parent_key in safe.STRICT_PROSE_KEYS,
+        )
+    return True
+
+
 def incremental_convert(name, source, existing):
     list_key = "articles" if name == "latest.json" else "items"
     source_items = source.get(list_key) if isinstance(source, dict) else None
@@ -302,13 +336,19 @@ def incremental_convert(name, source, existing):
         item_id = source_item.get("id")
         item_fingerprint = base.source_fingerprint(source_item)
         old = old_items.get(item_id)
-        can_reuse = bool(
+        fingerprint_matches = bool(
             old
             and (
                 old.get("sourceItemFingerprint") == item_fingerprint
                 or (not old.get("sourceItemFingerprint") and legacy_item_reusable(source_item, old))
             )
         )
+        translation_quality_ok = bool(
+            fingerprint_matches and reused_translation_quality_ok(source_item, old)
+        )
+        can_reuse = fingerprint_matches and translation_quality_ok
+        if fingerprint_matches and not translation_quality_ok:
+            print(f"REUSE_REJECTED_LANGUAGE_QUALITY {name}:{item_id}")
         if can_reuse:
             item = dict(old)
             reused += 1
