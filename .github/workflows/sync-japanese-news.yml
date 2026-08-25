@@ -2,18 +2,6 @@ name: 日本語ニュース同期・Discord即時配信
 
 on:
   workflow_dispatch:
-  push:
-    branches: ["main"]
-    paths:
-      - "scripts/cantonese_snapshot.py"
-      - "scripts/local_zh_ja.py"
-      - "scripts/local_translation_runtime.py"
-      - "scripts/local_batch_prewarm.py"
-      - "scripts/local_fast_safe_sync.py"
-      - "scripts/local_sync_cantonese_layers.py"
-      - "scripts/check_source_drift.py"
-      - "requirements-translation.txt"
-      - ".github/workflows/sync-japanese-news.yml"
   schedule:
     # 広東語版の毎時公開を唯一のニュース源として、30分後に日本語版を処理する。
     # 例: 10:00 Cantonese -> 10:30 Japanese / 08:00 Daily -> 08:30 Japanese.
