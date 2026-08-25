@@ -35,10 +35,11 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: 広東語版下流パイプラインを構文検査
-        run: python -m py_compile scripts/sync_and_translate.py scripts/safe_sync.py scripts/sync_cantonese_layers.py scripts/furigana_context.py scripts/validate_furigana_readings.py scripts/validate_content_integrity.py scripts/validate_extra_layers.py scripts/check_source_drift.py scripts/notify_discord.py
+        run: python -m py_compile scripts/sync_and_translate.py scripts/safe_sync.py scripts/fast_safe_sync.py scripts/sync_cantonese_layers.py scripts/furigana_context.py scripts/validate_furigana_readings.py scripts/validate_content_integrity.py scripts/validate_extra_layers.py scripts/check_source_drift.py scripts/notify_discord.py
 
-      - name: 広東語版のデイリー・速報・アーカイブをそのまま取得して日本語化
-        run: python scripts/safe_sync.py
+      - name: 広東語版のデイリー・速報・アーカイブを差分取得して日本語化
+        timeout-minutes: 12
+        run: python scripts/fast_safe_sync.py
 
       - name: 広東語版の追加・ローリング・株式ニュースを全件保持して日本語化
         run: python scripts/sync_cantonese_layers.py
