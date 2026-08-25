@@ -6,7 +6,10 @@ on:
     branches: ["main"]
     paths:
       - 'scripts/repair_garbled_extra_layers.py'
+      - 'scripts/repair_all_published_quality.py'
       - 'scripts/validate_content_integrity.py'
+      - 'scripts/validate_extra_layers.py'
+      - 'scripts/safe_sync.py'
       - 'scripts/local_translation_runtime.py'
       - '.github/workflows/repair-extra-translation-quality.yml'
   workflow_run:
@@ -22,7 +25,7 @@ permissions:
 
 concurrency:
   group: japanese-extra-quality-repair
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   repair:
