@@ -27,21 +27,49 @@ STRICT_PROSE_KEYS = {"dek", "summary", "body", "context", "why", "watchNext", "d
 _ORIGINAL_EXISTING_FEATURES_OK = base.existing_features_ok
 DIGIT_RE = re.compile(r"\d+")
 DIGIT_KANJI = {
-    "0": "〇",
-    "1": "一",
-    "2": "二",
-    "3": "三",
-    "4": "四",
-    "5": "五",
-    "6": "六",
-    "7": "七",
-    "8": "八",
-    "9": "九",
+    "0": "〇", "1": "一", "2": "二", "3": "三", "4": "四",
+    "5": "五", "6": "六", "7": "七", "8": "八", "9": "九",
+}
+
+# High-value entity anchors. A fluent-looking translation is still invalid when
+# it silently changes a company/person/source identity. These aliases are
+# intentionally conservative and only cover names that have already caused or
+# are especially vulnerable to Chinese->Japanese name hallucination.
+ENTITY_ANCHORS = {
+    "輝達": ("Nvidia", "NVIDIA", "エヌビディア"),
+    "英偉達": ("Nvidia", "NVIDIA", "エヌビディア"),
+    "Nvidia": ("Nvidia", "NVIDIA", "エヌビディア"),
+    "NVIDIA": ("Nvidia", "NVIDIA", "エヌビディア"),
+    "蘋果": ("Apple", "アップル"),
+    "Apple": ("Apple", "アップル"),
+    "微軟": ("Microsoft", "マイクロソフト"),
+    "Microsoft": ("Microsoft", "マイクロソフト"),
+    "谷歌": ("Google", "グーグル"),
+    "Google": ("Google", "グーグル"),
+    "台積電": ("TSMC", "台湾積体電路", "台湾セミコンダクター"),
+    "TSMC": ("TSMC", "台湾積体電路", "台湾セミコンダクター"),
+    "Palantir": ("Palantir", "パランティア"),
+    "OpenAI": ("OpenAI", "オープンAI"),
+    "Reuters": ("Reuters", "ロイター"),
+    "Bloomberg": ("Bloomberg", "ブルームバーグ"),
+    "Manchester United": ("Manchester United", "マンチェスター・ユナイテッド"),
 }
 
 
 def bad_error_text(value):
     return bool(ERROR_RE.search(str(value or "")))
+
+
+def entity_anchor_reason(source_text, value):
+    source = str(source_text or "")
+    target = str(value or "")
+    for token, accepted in ENTITY_ANCHORS.items():
+        if token not in source:
+            continue
+        if any(name in target for name in accepted):
+            continue
+        return f"source entity anchor {token!r} disappeared or changed"
+    return None
 
 
 def source_target_quality_reason(source_text, value, strict=False):
@@ -53,6 +81,10 @@ def source_target_quality_reason(source_text, value, strict=False):
     if generic:
         return generic
 
+    entity_reason = entity_anchor_reason(source_text, value)
+    if entity_reason:
+        return entity_reason
+
     if not base.likely_chinese_source(source_text):
         return None
 
@@ -63,9 +95,6 @@ def source_target_quality_reason(source_text, value, strict=False):
         if ratio < 0.42 or ratio > 3.0:
             return f"implausible translation length ratio {ratio:.2f}"
 
-    # Arabic numbers are high-value factual anchors in news copy. A one-digit
-    # source number may legitimately become a Japanese numeral; multi-digit
-    # values should remain explicit.
     for token in DIGIT_RE.findall(source_text):
         if token in target_compact:
             continue
@@ -73,11 +102,6 @@ def source_target_quality_reason(source_text, value, strict=False):
             continue
         return f"source numeric anchor {token!r} disappeared"
 
-    # Long Chinese and Japanese news prose normally retain at least one or two
-    # shared Han concepts/proper-name characters. Do NOT require the target to
-    # already contain four Han characters before performing this test: that old
-    # condition allowed unrelated katakana-heavy/meme output to bypass semantic
-    # validation entirely.
     source_han = set(HAN_RE.findall(source_text))
     target_han = set(HAN_RE.findall(value))
     if len(source_han) >= 12:
@@ -111,11 +135,6 @@ def target_quality_ok(source_text, value, strict=False):
 
 
 def google_gtx_translate(part, strict=False):
-    """Use Google's lightweight translate endpoint before HTML-scraping backends.
-
-    The endpoint returns JSON rather than an HTML page, so upstream 4xx/5xx pages
-    cannot be mistaken for translated article text. No API key is required.
-    """
     sources = ("zh-TW", "auto", "zh-CN") if base.likely_chinese_source(part) else ("auto",)
     last_error = None
     for source in sources:
@@ -308,7 +327,6 @@ def prune_cache():
 
 
 def furigana_matches_current_engine(name, data):
-    """Prevent fingerprint fast-path from preserving stale contextual readings."""
     if name in ("latest.json", "live.json"):
         list_key = "articles" if name == "latest.json" else "items"
         for item in data.get(list_key, []):
