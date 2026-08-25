@@ -8,6 +8,10 @@ import validate_content_integrity as core
 
 ROOT = Path(__file__).resolve().parents[1]
 STATIC = (ROOT / "data/desk-latest.json", ROOT / "data/stocks-latest.json")
+METADATA_KEYS = {
+    "title", "subtitle", "tagline", "section", "label", "statusLabel",
+    "impactLabel", "description", "note", "lastUpdatedLabel",
+}
 
 
 def story_like(value):
@@ -32,6 +36,26 @@ def iter_stories(value):
             yield from iter_stories(child)
 
 
+def iter_metadata(value, path="$"):
+    """Yield visible non-furigana metadata strings throughout a rolling file."""
+    if isinstance(value, dict):
+        is_story = story_like(value)
+        for key, child in value.items():
+            if key == "furigana":
+                continue
+            child_path = f"{path}.{key}"
+            if key in METADATA_KEYS and isinstance(child, str) and child.strip():
+                # Story text itself is checked by collect_story_issues below;
+                # keep this pass focused on page/section/ticker metadata.
+                if not (is_story and key in core.STORY_TEXT_FIELDS):
+                    yield child_path, child
+            if isinstance(child, (dict, list)):
+                yield from iter_metadata(child, child_path)
+    elif isinstance(value, list):
+        for index, child in enumerate(value):
+            yield from iter_metadata(child, f"{path}[{index}]")
+
+
 def paths():
     out = [p for p in STATIC if p.is_file()]
     folder = ROOT / "data/topic-more"
@@ -50,9 +74,18 @@ def validate(path):
     if not isinstance(data, dict) or data.get("language") != "ja":
         issues.append(f"{label}: language != ja")
         return issues
+
     for key, value in core.iter_strings(data):
         if core.ERROR_RE.search(value):
             issues.append(f"{label}:{key}: translator/server error payload detected")
+
+    # Page/section/ticker metadata used to escape the story-only checker. The
+    # same corruption signatures must apply to these visible strings too.
+    for key, value in iter_metadata(data):
+        reason = core.garbled_japanese_reason(value, strict=False)
+        if reason:
+            issues.append(f"{label}:{key}: garbled visible metadata: {reason}")
+
     count = 0
     for story in iter_stories(data):
         count += 1
