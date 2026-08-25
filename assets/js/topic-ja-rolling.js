@@ -9,6 +9,28 @@
   }
 
   const TECH = new Set(['technology','ai-tech','science-new-tech','cybersecurity','software-apps']);
+  const SAFE_LOWER = new Set(['vs','km','kg','cm','mm','ms','gb','tb','mb','kb','fps','bps','kbps','mbps','gbps','app','apps','web','live','online','email','alpha','beta','http','https','www','com','org','net']);
+
+  function corruptText(value = '') {
+    const text = String(value || '');
+    if (!text) return false;
+    if (/\uFFFD|[\u0000-\u0008\u000B\u000C\u000E-\u001F]/u.test(text)) return true;
+    if (/[\u0400-\u04ff]/u.test(text)) return true;
+    if (/の{5,}/u.test(text)) return true;
+    if (/[ \t]{6,}/u.test(text)) return true;
+    if (/(?:\(\s*\)){3,}|(?:（\s*）){3,}/u.test(text)) return true;
+    if (/[━─═┅┄┈┉＿_~〜]{4,}/u.test(text)) return true;
+    if (/(.{2,8})(?:\s+\1){2,}/u.test(text)) return true;
+    if (/マンチケット|魔女tz|ヘルメットを被ったデカパン|0um32|クーデターum32/u.test(text)) return true;
+    const lower = text.match(/(?<![A-Za-z])[a-z]{2,}(?![A-Za-z])/g) || [];
+    if (lower.some(word => !SAFE_LOWER.has(word.toLowerCase()))) return true;
+    return false;
+  }
+
+  function corruptStory(article = {}) {
+    return ['title','dek','summary','body','context','why','watchNext','timeLabel']
+      .some(field => corruptText(article?.[field]));
+  }
 
   async function optionalJson(path) {
     try {
@@ -64,6 +86,10 @@
 
   function mergeStory(list, article, layer, prepend = false) {
     if (!storyLike(article)) return;
+    if (corruptStory(article)) {
+      console.error('QUARANTINED_GARBLED_JAPANESE_STORY', article.id || '', layer);
+      return;
+    }
     const copy = { ...article, _jpLayer: layer };
     const index = list.findIndex(existing => sameEvent(existing, copy));
     if (index >= 0) {
@@ -80,7 +106,9 @@
     const tickers = payload?.tickers;
     if (!tickers || typeof tickers !== 'object') return out;
     Object.entries(tickers).forEach(([ticker, info]) => {
-      (Array.isArray(info?.stories) ? info.stories : []).forEach(story => out.push({ ...story, desk: 'stocks', deskSlugs: ['stocks'], section: story.section || `株式ニュース・${ticker}` }));
+      (Array.isArray(info?.stories) ? info.stories : []).forEach(story => {
+        if (!corruptStory(story)) out.push({ ...story, desk: 'stocks', deskSlugs: ['stocks'], section: story.section || `株式ニュース・${ticker}` });
+      });
     });
     return out;
   }
