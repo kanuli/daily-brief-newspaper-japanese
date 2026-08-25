@@ -5,9 +5,8 @@ on:
   push:
     branches: ["main"]
     paths:
+      - 'scripts/remote_repair_all_published_quality.py'
       - 'scripts/repair_all_published_quality.py'
-      - 'scripts/repair_garbled_core.py'
-      - 'scripts/repair_garbled_extra_layers.py'
       - 'scripts/safe_sync.py'
       - 'scripts/validate_content_integrity.py'
       - 'scripts/validate_extra_layers.py'
@@ -23,7 +22,7 @@ concurrency:
 jobs:
   repair-all:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 12
     env:
       CANTONESE_SNAPSHOT_DIR: .cantonese-snapshot/data
     steps:
@@ -37,34 +36,23 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          cache: pip
-          cache-dependency-path: |
-            requirements.txt
-            requirements-translation.txt
 
-      - name: Cache local Chinese-Japanese model
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/huggingface/hub
-          key: hf-opus-mt-tc-big-zh-ja-v1
-
-      - name: Install translation dependencies
+      - name: Install lightweight repair dependencies
         shell: bash
         run: |
           set -euo pipefail
-          pip install -r requirements.txt
-          pip install --index-url https://download.pytorch.org/whl/cpu torch==2.8.0
-          pip install -r requirements-translation.txt
+          pip install --disable-pip-version-check --quiet \
+            requests==2.32.5 \
+            deep-translator==1.11.4 \
+            pykakasi==2.3.0
 
-      - name: Syntax check exhaustive repair
+      - name: Syntax check exhaustive remote repair
         shell: bash
         run: |
           set -euo pipefail
           python -m py_compile \
             scripts/cantonese_snapshot.py \
-            scripts/repair_all_published_quality.py \
-            scripts/repair_garbled_core.py \
-            scripts/repair_garbled_extra_layers.py \
+            scripts/remote_repair_all_published_quality.py \
             scripts/safe_sync.py \
             scripts/validate_content_integrity.py \
             scripts/validate_extra_layers.py
@@ -72,11 +60,9 @@ jobs:
       - name: Freeze one Cantonese source commit
         run: python scripts/cantonese_snapshot.py
 
-      - name: Repair all published Japanese against source
-        timeout-minutes: 12
-        env:
-          TOKENIZERS_PARALLELISM: 'false'
-        run: python scripts/repair_all_published_quality.py
+      - name: Repair every published Japanese layer from source
+        timeout-minutes: 7
+        run: python scripts/remote_repair_all_published_quality.py
 
       - name: Validate core publication
         run: python scripts/validate_content_integrity.py
@@ -98,8 +84,7 @@ jobs:
             data/live.json \
             data/desk-latest.json \
             data/stocks-latest.json \
-            data/topic-more \
-            data/translation-cache.json
+            data/topic-more
           if git diff --cached --quiet; then
             echo 'No published Japanese quality repair required.'
             exit 0
