@@ -11,12 +11,13 @@ from __future__ import annotations
 import json
 import os
 import re
+import subprocess
 import urllib.error
 import urllib.request
 from pathlib import Path
 
 REPO = "kanuli/daily-brief-newspaper"
-API_COMMIT = f"https://api.github.com/repos/{REPO}/commits/main"
+GIT_REMOTE = f"https://github.com/{REPO}.git"
 RAW_BASE = f"https://raw.githubusercontent.com/{REPO}"
 DEFAULT_DIR = ".cantonese-snapshot/data"
 BASE_FILES = (
@@ -47,10 +48,19 @@ def _get_json(url: str, optional: bool = False):
 
 
 def resolve_commit() -> str:
-    payload = _get_json(API_COMMIT)
-    sha = str((payload or {}).get("sha") or "")
+    """Resolve public Cantonese main without consuming GitHub REST API quota."""
+    result = subprocess.run(
+        ["git", "ls-remote", GIT_REMOTE, "refs/heads/main"],
+        check=True,
+        capture_output=True,
+        text=True,
+        timeout=30,
+    )
+    first = (result.stdout or "").strip().splitlines()
+    sha = first[0].split()[0] if first else ""
     if not re.fullmatch(r"[0-9a-f]{40}", sha):
         raise RuntimeError(f"Could not resolve immutable Cantonese commit: {sha!r}")
+    print("CANTONESE_SNAPSHOT_RESOLVED_BY_GIT", sha)
     return sha
 
 
