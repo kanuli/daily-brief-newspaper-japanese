@@ -2,10 +2,10 @@
 """Repair garbled Japanese in the already-built Daily/Live core publication.
 
 The normal parity sync remains responsible for adding/removing stories and for
-advancing the publication window.  This worker is a quality backstop: after
-that structural sync it compares the Japanese stories with the same frozen
-Cantonese snapshot, retranslates only fields rejected by the production quality
-gate, and rebuilds furigana/audio metadata before publication.
+advancing the publication window. This worker is a quality backstop: after that
+structural sync it compares Japanese stories with the same frozen Cantonese
+snapshot, retranslates only fields rejected by the production quality gate,
+and rebuilds furigana/audio metadata before publication.
 
 Known-bad text is repaired with the validated free remote fallback chain first.
 The local OPUS-MT path is used only as a final fallback so maintenance does not
@@ -14,6 +14,7 @@ reproduce the same poisoned local output indefinitely.
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 import cantonese_snapshot as snapshot
@@ -29,6 +30,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 CORE_FILES = ("latest.json", "live.json")
 CORE_FIELDS = ("section",) + integrity.STORY_TEXT_FIELDS
+HAN_RE = re.compile(r"[\u3400-\u9fff]")
 
 
 def index_stories(value, out=None):
@@ -45,6 +47,28 @@ def index_stories(value, out=None):
     return out
 
 
+def semantic_mismatch(source_text: str, japanese_text: str) -> str | None:
+    """Reject fluent-looking Japanese that is unrelated to the Cantonese source.
+
+    Long Chinese news prose and a legitimate Japanese rendering normally retain
+    several shared Han concepts/names/numeric context. Corrupt Marian decodes we
+    observed instead produced unrelated katakana/meme text with zero overlap.
+    """
+    source_text = str(source_text or "")
+    japanese_text = str(japanese_text or "")
+    if not base.likely_chinese_source(source_text):
+        return None
+    source_han = set(HAN_RE.findall(source_text))
+    if len(source_han) < 10:
+        return None
+    target_han = set(HAN_RE.findall(japanese_text))
+    overlap = len(source_han & target_han)
+    required = 2 if len(source_han) >= 24 else 1
+    if overlap < required:
+        return f"source/target semantic Han overlap too low ({overlap} < {required})"
+    return None
+
+
 def bad_translation(source_text: str, japanese_text: str, strict: bool) -> bool:
     if not isinstance(japanese_text, str) or not japanese_text.strip():
         return True
@@ -53,6 +77,8 @@ def bad_translation(source_text: str, japanese_text: str, strict: bool) -> bool:
     if strict and integrity.prose_is_mixed(japanese_text):
         return True
     if integrity.garbled_japanese_reason(japanese_text, strict=strict):
+        return True
+    if semantic_mismatch(source_text, japanese_text):
         return True
     return not safe.target_quality_ok(source_text, japanese_text, strict=strict)
 
@@ -81,6 +107,20 @@ def repair_value(source_text: str, strict: bool) -> str:
     return value
 
 
+def decorations_need_rebuild(name: str, local: dict) -> bool:
+    if not base.existing_features_ok(name, local):
+        return True
+    return not safe.furigana_matches_current_engine(name, local)
+
+
+def rebuild_decorations(name: str, local: dict) -> dict:
+    if name == "latest.json":
+        return base.add_furigana(base.attach_daily_audio(local), "articles")
+    if name == "live.json":
+        return base.add_furigana(base.attach_live_audio(local), "items")
+    return local
+
+
 def repair_file(name: str, source) -> int:
     path = DATA / name
     if not path.is_file():
@@ -105,11 +145,13 @@ def repair_file(name: str, source) -> int:
             strict = field in integrity.PROSE_FIELDS
             if not bad_translation(source_text, current, strict):
                 continue
+            reason = semantic_mismatch(source_text, str(current or ""))
             print(
                 "CORE_TARGET_REPAIR_FIELD",
                 f"file={name}",
                 f"id={story_id}",
                 f"field={field}",
+                f"semantic={reason or 'structural/quality'}",
                 f"old={str(current or '')[:90]!r}",
             )
             value = repair_value(source_text, strict)
@@ -122,21 +164,19 @@ def repair_file(name: str, source) -> int:
             story_changed = True
 
         if story_changed:
-            # Furigana is rebuilt below for the whole small core file so visible
-            # ruby never preserves text from the poisoned pre-repair field.
+            # Ruby must never preserve text from the poisoned pre-repair field.
             local_story.pop("furigana", None)
 
-    if repaired:
-        if name == "latest.json":
-            local = base.add_furigana(base.attach_daily_audio(local), "articles")
-        elif name == "live.json":
-            local = base.add_furigana(base.attach_live_audio(local), "items")
+    rebuild = repaired > 0 or decorations_need_rebuild(name, local)
+    if rebuild:
+        local = rebuild_decorations(name, local)
         path.write_text(
             json.dumps(local, ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8",
         )
+        print("CORE_TARGET_DECORATIONS_REBUILT", name)
 
-    print("CORE_TARGET_REPAIR_RESULT", name, f"fields={repaired}")
+    print("CORE_TARGET_REPAIR_RESULT", name, f"fields={repaired}", f"decorations={str(rebuild).lower()}")
     return repaired
 
 
