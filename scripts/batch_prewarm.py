@@ -21,7 +21,6 @@ import json
 import re
 import time
 from dataclasses import dataclass
-from pathlib import Path
 from typing import Iterable
 
 import requests
@@ -41,6 +40,7 @@ MAX_DEEP_ATTEMPTS = 2
 MARKER_RE = re.compile(r"<<<\s*DBJ(\d{5})\s*>>>", re.I)
 HAN_RE = re.compile(r"[\u3400-\u9fff]")
 HIRA_RE = re.compile(r"[\u3040-\u309f]")
+ORIGINAL_LIKELY_CHINESE = base.likely_chinese_source
 
 
 @dataclass(frozen=True)
@@ -58,7 +58,7 @@ def needs_cantonese_translation(value: str) -> bool:
         return False
     if safe.CHINESE_PROSE_RE.search(text):
         return True
-    if base.likely_chinese_source(text):
+    if ORIGINAL_LIKELY_CHINESE(text):
         return True
     han = len(HAN_RE.findall(text))
     hira = len(HIRA_RE.findall(text))
@@ -208,8 +208,6 @@ def deep_google_request(payload: str) -> str:
 
 
 def mymemory_request(payload: str) -> str:
-    # Keep this as a last fallback only. A batch already cuts request count by
-    # an order of magnitude compared with field-by-field fallback.
     response = requests.get(
         "https://api.mymemory.translated.net/get",
         params={"q": payload, "langpair": "zh-TW|ja"},
@@ -227,7 +225,6 @@ def mymemory_request(payload: str) -> str:
 def parse_batch(translated: str, batch: list[Segment]) -> dict[int, str]:
     pieces = MARKER_RE.split(str(translated or ""))
     found: dict[int, str] = {}
-    # re.split gives [prefix, marker, text, marker, text, ...]
     for index in range(1, len(pieces), 2):
         try:
             marker = int(pieces[index])
@@ -264,8 +261,6 @@ def translate_batch(batch: list[Segment]) -> dict[int, str]:
     except Exception:
         if len(batch) <= 1:
             item = batch[0]
-            # One last bounded field translation only after every batch backend
-            # failed; this path should be rare and therefore quota-safe.
             value = fast.bounded_translate_part(item.text, strict=False)
             return {item.marker: value}
         midpoint = len(batch) // 2
@@ -277,8 +272,6 @@ def translate_batch(batch: list[Segment]) -> dict[int, str]:
 
 
 def prewarm_all() -> None:
-    # All quality checks and downstream converters should use the same mixed
-    # Cantonese detector during this run.
     base.likely_chinese_source = needs_cantonese_translation
     fast.install_bounded_translator()
     safe.prune_cache()
@@ -316,9 +309,6 @@ def prewarm_all() -> None:
         print(f"BATCH_PREWARM_PROGRESS {number}/{len(batches)} items={len(batch)}")
         translated_segments.update(translate_batch(batch))
 
-    # Reconstruct every original source string, validate it, and seed the exact
-    # cache key expected by safe_sync/fast_safe_sync.
-    marker_lookup = {item.marker: item for item in segments}
     owner_marker_by_part: dict[tuple[int, int], int] = {
         (item.owner, item.part_index): item.marker for item in segments
     }
