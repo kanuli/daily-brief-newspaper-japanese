@@ -225,16 +225,35 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           ACTIVE_COUNT: ${{ steps.workers.outputs.sync_active_count }}
+          ACTIVE_IDS: ${{ steps.workers.outputs.sync_active_ids }}
           ACTIVE_OLDEST: ${{ steps.workers.outputs.sync_active_oldest }}
         shell: bash
         run: |
           set -euo pipefail
-          if [ "${ACTIVE_COUNT:-0}" -gt 0 ] && [ "${ACTIVE_OLDEST:-0}" -lt 3300 ]; then
-            echo 'Japanese text/data sync is already active.'
-            exit 0
+          git fetch -q origin main
+          main_sha=$(git rev-parse origin/main)
+
+          if [ "${ACTIVE_COUNT:-0}" -gt 0 ]; then
+            current_active=0
+            while IFS=$'\t' read -r run_id head_sha; do
+              [ -n "${run_id:-}" ] || continue
+              if [ "$head_sha" = "$main_sha" ] && [ "${ACTIVE_OLDEST:-0}" -lt 3300 ]; then
+                current_active=1
+                continue
+              fi
+              echo "Cancelling obsolete Japanese sync run ${run_id} head=${head_sha} current=${main_sha}"
+              gh run cancel "$run_id" --repo "${{ github.repository }}" || true
+            done < <(gh run list --workflow sync-japanese-news.yml --branch main --limit 20 --json status,databaseId,headSha --jq '.[] | select(.status != "completed") | [.databaseId,.headSha] | @tsv')
+
+            if [ "$current_active" -eq 1 ]; then
+              echo 'A current-main Japanese text/data sync is already active.'
+              exit 0
+            fi
+            sleep 3
           fi
+
           gh workflow run sync-japanese-news.yml --repo "${{ github.repository }}" --ref main
-          echo 'JAPANESE_TEXT_SYNC_RECOVERY_DISPATCHED'
+          echo "JAPANESE_TEXT_SYNC_RECOVERY_DISPATCHED main=${main_sha}"
 
       - name: Recover F3 voice separately after server grace period
         if: github.event_name != 'pull_request' && steps.publication_qa.outputs.healthy == 'true' && steps.drift.outputs.drift != 'true' && steps.audio_qa.outputs.healthy != 'true'
