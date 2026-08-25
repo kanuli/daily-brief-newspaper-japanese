@@ -11,6 +11,12 @@ on:
       - 'scripts/validate_content_integrity.py'
       - 'scripts/validate_extra_layers.py'
       - '.github/workflows/repair-all-published-quality.yml'
+  workflow_run:
+    workflows:
+      - '日本語ニュース同期・Discord即時配信'
+    types: [completed]
+  schedule:
+    - cron: '50 * * * *'
 
 permissions:
   contents: write
@@ -20,11 +26,12 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  repair-all:
+  repair-rolling:
     runs-on: ubuntu-latest
     timeout-minutes: 12
     env:
       CANTONESE_SNAPSHOT_DIR: .cantonese-snapshot/data
+      REMOTE_REPAIR_SCOPE: rolling
     steps:
       - name: Checkout current Japanese main
         uses: actions/checkout@v4
@@ -60,36 +67,25 @@ jobs:
       - name: Freeze one Cantonese source commit
         run: python scripts/cantonese_snapshot.py
 
-      - name: Repair every published Japanese layer from source
+      - name: Repair all rolling Japanese from source
         timeout-minutes: 7
         run: python scripts/remote_repair_all_published_quality.py
-
-      - name: Validate core publication
-        run: python scripts/validate_content_integrity.py
 
       - name: Validate every rolling topic and stock layer
         run: python scripts/validate_extra_layers.py
 
-      - name: Validate furigana corpus
-        run: python scripts/validate_furigana_readings.py
-
-      - name: Publish all repaired Japanese fields
+      - name: Publish repaired rolling Japanese immediately
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'daily-brief-japanese-bot'
           git config user.email 'actions@users.noreply.github.com'
-          git add \
-            data/latest.json \
-            data/live.json \
-            data/desk-latest.json \
-            data/stocks-latest.json \
-            data/topic-more
+          git add data/desk-latest.json data/stocks-latest.json data/topic-more
           if git diff --cached --quiet; then
-            echo 'No published Japanese quality repair required.'
+            echo 'No rolling Japanese quality repair required.'
             exit 0
           fi
-          git commit -m '全公開日本語の文字化けと意味不一致を修復'
+          git commit -m '全ローリング日本語の文字化けと意味不一致を修復'
           for attempt in 1 2 3 4 5; do
             git fetch origin main
             if ! git rebase origin/main; then
@@ -98,7 +94,7 @@ jobs:
               continue
             fi
             if git push origin HEAD:main; then
-              echo 'FULL_PUBLISHED_JAPANESE_QUALITY_REPAIR_PUSH_OK'
+              echo 'FULL_ROLLING_JAPANESE_QUALITY_REPAIR_PUSH_OK'
               exit 0
             fi
             sleep $((attempt * 2))
