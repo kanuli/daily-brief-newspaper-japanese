@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 
 import fast_safe_sync as fast
 import local_zh_ja
@@ -12,6 +13,7 @@ import sync_and_translate as base
 
 TEXT_PART_LIMIT = 280
 OWNER_BATCH_SIZE = 4
+_SENTENCE_SPLIT_RE = re.compile(r"(?<=[。！？；!?])")
 
 
 def cache_key(text: str) -> str:
@@ -25,6 +27,54 @@ def checkpoint_cache(label: str) -> None:
         encoding="utf-8",
     )
     print(f"LOCAL_MT_CACHE_CHECKPOINT {label} entries={len(base.CACHE)}")
+
+
+def _retry_quality_failure(text: str, first_value: str, strict=False) -> str:
+    """Retry one bad item locally instead of failing its whole owner batch."""
+    print(
+        "LOCAL_MT_RETRY_QUALITY",
+        f"source={text[:80]!r}",
+        f"first={str(first_value or '')[:80]!r}",
+    )
+
+    # Pass 2: normalize Traditional Chinese to Simplified locally and decode the
+    # single item with a wider beam. OPUS training is substantially richer in
+    # standardized Chinese than in Cantonese-specific Traditional variants.
+    retry = local_zh_ja.translate_one(
+        text,
+        normalize_traditional=True,
+        num_beams=6,
+    )
+    if safe.target_quality_ok(text, retry, strict=strict):
+        print("LOCAL_MT_RETRY_OK mode=t2s-single")
+        return retry
+
+    # Pass 3: for compound prose, translate sentence-sized units separately.
+    # This keeps one difficult clause from poisoning the entire paragraph.
+    pieces = [x for x in _SENTENCE_SPLIT_RE.split(text) if x]
+    if len(pieces) > 1:
+        values = local_zh_ja.translate_many(
+            pieces,
+            batch_size=1,
+            normalize_traditional=True,
+            num_beams=6,
+        )
+        combined = "".join(values)
+        if safe.target_quality_ok(text, combined, strict=strict):
+            print(f"LOCAL_MT_RETRY_OK mode=t2s-sentences parts={len(pieces)}")
+            return combined
+
+    raise RuntimeError(
+        "Local OPUS-MT quality gate failed after isolated local retries: "
+        f"source={text[:100]!r}; first={str(first_value or '')[:100]!r}; "
+        f"retry={str(retry or '')[:100]!r}"
+    )
+
+
+def _validated_translation(text: str, value: str, strict=False) -> str:
+    if safe.target_quality_ok(text, value, strict=strict):
+        return value
+    return _retry_quality_failure(text, value, strict=strict)
 
 
 def localize_or_translate(text: str, strict=False) -> str:
@@ -62,14 +112,13 @@ def localize_or_translate(text: str, strict=False) -> str:
         if len(outputs) != len(batch_texts):
             raise RuntimeError("Local OPUS-MT returned wrong batch size")
         for source_part, index, translated in zip(batch_texts, batch_indexes, outputs):
-            if not safe.target_quality_ok(source_part, translated, strict=False):
-                raise RuntimeError(f"Local OPUS-MT part quality gate failed: {source_part[:100]!r}")
+            translated = _validated_translation(source_part, translated, strict=False)
             resolved[index] = translated
             base.CACHE[cache_key(source_part)] = translated
+        checkpoint_cache(f"parts-{start + len(batch_texts)}-of-{len(missing_texts)}")
 
     result = "".join(x or "" for x in resolved)
-    if not safe.target_quality_ok(value, result, strict=strict):
-        raise RuntimeError(f"Local OPUS-MT quality gate failed: {value[:100]!r}")
+    result = _validated_translation(value, result, strict=strict)
     base.CACHE[full_key] = result
     return result
 
@@ -84,8 +133,7 @@ def _translate_short_group(group):
     if len(outputs) != len(group):
         raise RuntimeError("Local OPUS-MT returned wrong owner batch size")
     for (text, strict), value in zip(group, outputs):
-        if not safe.target_quality_ok(text, value, strict=strict):
-            raise RuntimeError(f"Local OPUS-MT quality gate failed: {text[:100]!r}")
+        value = _validated_translation(text, value, strict=strict)
         base.CACHE[cache_key(text)] = value
 
 
