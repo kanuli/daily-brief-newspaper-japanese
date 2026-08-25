@@ -70,6 +70,12 @@ def deterministic_time_label(text: str) -> str | None:
     punctuation so the Chinese-prose quality gate also remains meaningful.
     """
     value = str(text or "").strip()
+    # This shortcut is deliberately limited to short single-line metadata.
+    # Full article prose can contain dates and words such as 公布/更新; treating
+    # that prose as a label would replace isolated tokens and leave the rest in
+    # Cantonese. Long or multiline copy must always use the normal translator.
+    if len(value) > 140 or "\n" in value:
+        return None
     if not value or not _TIME_LABEL_HINT_RE.search(value) or not _TIME_LABEL_STATUS_RE.search(value):
         return None
     result = value
