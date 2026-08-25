@@ -1,0 +1,63 @@
+name: 日本語文字化け即時隔離
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ["main"]
+    paths:
+      - 'scripts/quarantine_garbled_published.py'
+      - 'scripts/validate_content_integrity.py'
+      - '.github/workflows/quarantine-garbled-published.yml'
+  schedule:
+    - cron: '*/10 * * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: japanese-garbled-publication-quarantine
+  cancel-in-progress: true
+
+jobs:
+  quarantine:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout current Japanese main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 20
+
+      - name: Syntax check sanitizer
+        run: python -m py_compile scripts/validate_content_integrity.py scripts/quarantine_garbled_published.py
+
+      - name: Remove garbled rolling text from publication
+        run: python scripts/quarantine_garbled_published.py
+
+      - name: Publish quarantined rolling data
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'japanese-maintenance-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add data/desk-latest.json data/stocks-latest.json data/topic-more
+          if git diff --cached --quiet; then
+            echo 'No garbled rolling publication requires quarantine.'
+            exit 0
+          fi
+          git commit -m '文字化けしたローリング記事を公開から隔離'
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              sleep $((attempt * 2))
+              continue
+            fi
+            if git push origin HEAD:main; then
+              echo 'GARBLED_PUBLICATION_QUARANTINE_PUSH_OK'
+              exit 0
+            fi
+            sleep $((attempt * 2))
+          done
+          exit 1
