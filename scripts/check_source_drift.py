@@ -5,6 +5,10 @@ When CANTONESE_SNAPSHOT_DIR is present, parity is checked against that immutable
 snapshot rather than re-fetching moving Cantonese main. This prevents false
 failures when Cantonese publishes another update while Japanese translation is
 already running.
+
+Set PARITY_SCOPE=base for the latency-sensitive Daily/Live/Archive publication.
+Rolling/topic/stock parity is checked by its own repair path and must never block
+current-news publication.
 """
 import hashlib
 import json
@@ -91,6 +95,7 @@ def main():
     drift = []
     errors = []
     integrity_bad = []
+    scope = str(os.environ.get("PARITY_SCOPE") or "all").strip().lower()
 
     for name in BASE_FILES:
         try:
@@ -108,24 +113,25 @@ def main():
             if issues:
                 integrity_bad.append(name)
 
-    extra_names = list(EXTRA_FILES)
-    date = current_date()
-    if date:
-        extra_names.append(f"topic-more/{date}.json")
+    if scope != "base":
+        extra_names = list(EXTRA_FILES)
+        date = current_date()
+        if date:
+            extra_names.append(f"topic-more/{date}.json")
 
-    for name in extra_names:
-        optional = name.startswith("topic-more/")
-        try:
-            expected, actual = verify_fingerprint(name, optional=optional)
-        except Exception as exc:
-            errors.append(f"{name}:{type(exc).__name__}")
-            continue
-        if expected is None:
-            if local_json(name) is not None:
+        for name in extra_names:
+            optional = name.startswith("topic-more/")
+            try:
+                expected, actual = verify_fingerprint(name, optional=optional)
+            except Exception as exc:
+                errors.append(f"{name}:{type(exc).__name__}")
+                continue
+            if expected is None:
+                if local_json(name) is not None:
+                    drift.append(name)
+                continue
+            if expected != actual:
                 drift.append(name)
-            continue
-        if expected != actual:
-            drift.append(name)
 
     dirty = sorted(set(drift) | set(integrity_bad))
     available = not errors
@@ -144,7 +150,7 @@ def main():
         return 10
 
     mode = "snapshot" if os.environ.get("CANTONESE_SNAPSHOT_DIR") else "live-main"
-    print(f"CANTONESE_SOURCE_PARITY_OK mode={mode}" if available else "CANTONESE_SOURCE_PARITY_UNKNOWN")
+    print(f"CANTONESE_SOURCE_PARITY_OK mode={mode} scope={scope}" if available else "CANTONESE_SOURCE_PARITY_UNKNOWN")
     return 0
 
 
