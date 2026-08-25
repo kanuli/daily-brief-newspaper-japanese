@@ -2,11 +2,12 @@
 """Fast, incremental downstream translation of the Cantonese newspaper.
 
 The Cantonese repository is the only news source. This wrapper preserves the
-existing safe_sync quality/furigana/audio rules while adding three guarantees
+existing safe_sync quality/furigana/audio rules while adding four guarantees
 for the hourly Japanese edition:
-1. free translation network calls have short bounded timeouts/retries;
-2. unchanged Cantonese stories reuse their existing Japanese translation;
-3. genuinely new/changed text is translated concurrently before normal render
+1. only actual Cantonese/Chinese source text is sent to remote translation;
+2. free translation network calls have short bounded timeouts/retries;
+3. unchanged Cantonese stories reuse their existing Japanese translation;
+4. genuinely new/changed text is translated concurrently before normal render
    conversion, so a new Daily edition does not spend the whole :15 window in a
    serial network loop.
 """
@@ -24,18 +25,68 @@ import sync_and_translate as base
 GTX_TIMEOUT = 5
 MYMEMORY_TIMEOUT = 5
 GTX_SOURCES_CHINESE = ("zh-TW", "auto")
-GTX_SOURCES_OTHER = ("auto",)
 MYMEMORY_MAX_CHARS = 900
 MYMEMORY_PIECE_LIMIT = 450
 TRANSLATION_WORKERS = 6
 _CACHE_LOCK = threading.Lock()
 
+# These are publication chrome/category labels, not article prose. Localize them
+# deterministically instead of wasting a rate-limited translation request.
+NON_CHINESE_LOCALIZATIONS = {
+    "Football": "サッカー",
+    "Football｜J-League": "サッカー｜Jリーグ",
+    "Football | J-League": "サッカー｜Jリーグ",
+    "J-League": "Jリーグ",
+    "Manchester United": "マンチェスター・ユナイテッド",
+    "Anime": "アニメ",
+    "Manga / Anime": "漫画・アニメ",
+    "AI / Tech": "AI・テクノロジー",
+    "AI / Technology": "AI・テクノロジー",
+    "Live": "速報",
+    "Live Update": "速報",
+    "Breaking": "速報",
+    "Breaking News": "速報",
+    "Updated": "更新",
+    "Developing": "続報",
+    "Watching": "注視",
+    "World": "世界",
+    "Asia": "アジア",
+    "Hong Kong": "香港",
+    "Japan": "日本",
+    "Market / Economy": "市場・経済",
+    "Market & Economy": "市場・経済",
+    "Stock News": "株式ニュース",
+    "Technology": "テクノロジー",
+    "Cybersecurity": "サイバーセキュリティ",
+    "Software / Apps": "ソフトウェア・アプリ",
+    "Upcoming": "今後の予定",
+}
+
+
+def localize_non_chinese(part):
+    """Return local Japanese chrome or preserve names/text already not Chinese.
+
+    The Cantonese collector is expected to supply Chinese prose for actual news
+    copy. Non-Chinese values in translatable fields are therefore normally desk
+    labels, brand/proper names, acronyms, or already-Japanese strings. They must
+    not be sent to a remote translator merely because the field is user-facing.
+    """
+    text = str(part or "")
+    stripped = text.strip()
+    if stripped in NON_CHINESE_LOCALIZATIONS:
+        localized = NON_CHINESE_LOCALIZATIONS[stripped]
+        if stripped == text:
+            return localized
+        return text.replace(stripped, localized, 1)
+    return text
+
 
 def bounded_gtx(part, strict=False):
-    """At most one short HTTP attempt per source language."""
-    sources = GTX_SOURCES_CHINESE if base.likely_chinese_source(part) else GTX_SOURCES_OTHER
+    """Translate actual Chinese source with at most two short HTTP attempts."""
+    if not base.likely_chinese_source(part):
+        return localize_non_chinese(part)
     errors = []
-    for source in sources:
+    for source in GTX_SOURCES_CHINESE:
         try:
             response = requests.get(
                 "https://translate.googleapis.com/translate_a/single",
@@ -62,7 +113,7 @@ def bounded_gtx(part, strict=False):
 def bounded_mymemory(part, strict=False):
     """Bounded HTTP fallback for short Chinese fields only."""
     if not base.likely_chinese_source(part):
-        raise RuntimeError("MyMemory fallback only applies to Chinese source text")
+        return localize_non_chinese(part)
     if len(part) > MYMEMORY_MAX_CHARS:
         raise RuntimeError(f"MyMemory fallback skipped for long field ({len(part)} chars)")
 
@@ -95,16 +146,17 @@ def bounded_mymemory(part, strict=False):
 
 
 def bounded_translate_part(part, strict=False):
+    if not base.likely_chinese_source(part):
+        return localize_non_chinese(part)
     errors = []
     try:
         return bounded_gtx(part, strict=strict)
     except Exception as exc:
         errors.append(f"gtx={exc}")
-    if base.likely_chinese_source(part):
-        try:
-            return bounded_mymemory(part, strict=strict)
-        except Exception as exc:
-            errors.append(f"mymemory={exc}")
+    try:
+        return bounded_mymemory(part, strict=strict)
+    except Exception as exc:
+        errors.append(f"mymemory={exc}")
     raise RuntimeError("Bounded Japanese translation failed; " + "; ".join(errors))
 
 
@@ -145,8 +197,16 @@ def translate_one_for_cache(text, strict):
     if cached is not None and safe.target_quality_ok(text, cached, strict=strict):
         return "cached"
 
-    # Translate chunks without touching the shared dict until a complete value
-    # has passed the same quality gate used by safe_translate_text.
+    # Non-Chinese publication chrome/proper names are resolved locally. Only
+    # Chinese text enters the rate-limited network pool.
+    if not base.likely_chinese_source(text):
+        value = localize_non_chinese(text)
+        if not safe.target_quality_ok(text, value, strict=strict):
+            raise RuntimeError(f"Local Japanese normalization failed: {text[:100]!r}")
+        with _CACHE_LOCK:
+            base.CACHE[key] = value
+        return "localized"
+
     pieces = []
     for part in base.chunks(text):
         if not part.strip():
@@ -163,19 +223,28 @@ def translate_one_for_cache(text, strict):
 
 def prewarm_translations(source, label):
     candidates = collect_translatable(source)
-    pending = []
+    local = []
+    network = []
     for text, strict in candidates.items():
         cached = base.CACHE.get(cache_key(text))
-        if cached is None or not safe.target_quality_ok(text, cached, strict=strict):
-            pending.append((text, strict))
-    if not pending:
-        print(f"PARALLEL_TRANSLATION {label}: pending=0")
+        if cached is not None and safe.target_quality_ok(text, cached, strict=strict):
+            continue
+        (network if base.likely_chinese_source(text) else local).append((text, strict))
+
+    # Resolve non-Chinese values synchronously and without quota/network use.
+    for text, strict in local:
+        translate_one_for_cache(text, strict)
+
+    print(
+        f"PARALLEL_TRANSLATION {label}: network_pending={len(network)} "
+        f"local_only={len(local)} workers={TRANSLATION_WORKERS}"
+    )
+    if not network:
         return
 
-    print(f"PARALLEL_TRANSLATION {label}: pending={len(pending)} workers={TRANSLATION_WORKERS}")
     failures = []
     with ThreadPoolExecutor(max_workers=TRANSLATION_WORKERS, thread_name_prefix="ja-translate") as pool:
-        futures = {pool.submit(translate_one_for_cache, text, strict): text for text, strict in pending}
+        futures = {pool.submit(translate_one_for_cache, text, strict): text for text, strict in network}
         for future in as_completed(futures):
             text = futures[future]
             try:
@@ -184,7 +253,7 @@ def prewarm_translations(source, label):
                 failures.append(f"{text[:80]!r}: {type(exc).__name__}: {exc}")
     if failures:
         raise RuntimeError("Parallel Japanese translation failed for " + " | ".join(failures[:5]))
-    print(f"PARALLEL_TRANSLATION_OK {label}: translated={len(pending)}")
+    print(f"PARALLEL_TRANSLATION_OK {label}: translated={len(network)}")
 
 
 def legacy_item_reusable(source_item, old_item):
