@@ -5,11 +5,13 @@ on:
   push:
     branches: ["main"]
     paths:
+      - "scripts/cantonese_snapshot.py"
       - "scripts/local_zh_ja.py"
       - "scripts/local_translation_runtime.py"
       - "scripts/local_batch_prewarm.py"
       - "scripts/local_fast_safe_sync.py"
       - "scripts/local_sync_cantonese_layers.py"
+      - "scripts/check_source_drift.py"
       - "requirements-translation.txt"
       - ".github/workflows/sync-japanese-news.yml"
   schedule:
@@ -28,6 +30,8 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    env:
+      CANTONESE_SNAPSHOT_DIR: .cantonese-snapshot/data
     steps:
       - name: リポジトリを取得
         uses: actions/checkout@v4
@@ -59,7 +63,10 @@ jobs:
           pip install -r requirements-translation.txt
 
       - name: 広東語版下流パイプラインを構文検査
-        run: python -m py_compile scripts/sync_and_translate.py scripts/safe_sync.py scripts/fast_safe_sync.py scripts/batch_prewarm.py scripts/local_zh_ja.py scripts/local_translation_runtime.py scripts/local_batch_prewarm.py scripts/local_fast_safe_sync.py scripts/sync_cantonese_layers.py scripts/local_sync_cantonese_layers.py scripts/furigana_context.py scripts/validate_furigana_readings.py scripts/validate_content_integrity.py scripts/validate_extra_layers.py scripts/check_source_drift.py scripts/notify_discord.py
+        run: python -m py_compile scripts/cantonese_snapshot.py scripts/sync_and_translate.py scripts/safe_sync.py scripts/fast_safe_sync.py scripts/batch_prewarm.py scripts/local_zh_ja.py scripts/local_translation_runtime.py scripts/local_batch_prewarm.py scripts/local_fast_safe_sync.py scripts/sync_cantonese_layers.py scripts/local_sync_cantonese_layers.py scripts/furigana_context.py scripts/validate_furigana_readings.py scripts/validate_content_integrity.py scripts/validate_extra_layers.py scripts/check_source_drift.py scripts/notify_discord.py
+
+      - name: 広東語版mainを1コミットに固定してニュース層を取得
+        run: python scripts/cantonese_snapshot.py
 
       - name: 広東語版の全ニュース層をローカルOPUS-MTで小分け翻訳
         timeout-minutes: 18
@@ -116,7 +123,7 @@ jobs:
           TOKENIZERS_PARALLELISM: "false"
         run: python scripts/local_sync_cantonese_layers.py
 
-      - name: 広東語版とのソース一致を検証
+      - name: 同一の広東語版スナップショットとのソース一致を検証
         run: python scripts/check_source_drift.py
 
       - name: Discord配信前にニュース完全性を検証
