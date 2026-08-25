@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reject poisoned or partially untranslated Japanese publication data."""
+"""Reject poisoned, partially untranslated, or structurally garbled Japanese publication data."""
 import json
 import re
 import sys
@@ -13,15 +13,30 @@ ERROR_RE = re.compile(
     re.I,
 )
 HIRA_RE = re.compile(r"[\u3040-\u309f]")
+KATA_RE = re.compile(r"[\u30a0-\u30ff]")
 HAN_RE = re.compile(r"[\u3400-\u9fff]")
 CHINESE_PROSE_RE = re.compile(
     r"(?:，|；|分鐘|小時|仍然|目前|進一步|將於|已經|對於|相關消息|賽事|球隊|球員|當局|"
     r"兒童|服務|加強|預防|預約|檢查|發現|將會|這些|白禮頓|阿士東|維拉)"
 )
 PROSE_FIELDS = ("dek", "summary", "body", "context", "why", "watchNext")
+STORY_TEXT_FIELDS = ("title",) + PROSE_FIELDS + ("timeLabel", "description", "note", "impactLabel")
 NEXT_RE = re.compile(r"^次回発行予定 (?:[01]\d|2[0-4]):[0-5]\d HKT$")
 LAST_RE = re.compile(r"^\d{4}年\d{1,2}月\d{1,2}日 (?:[01]\d|2[0-3]):[0-5]\d HKT$")
 WINDOW_RE = re.compile(r"^(?:[01]\d|2[0-4]):[0-5]\d HKT 速報版$")
+
+# Translation-corruption signatures. These focus on patterns that valid
+# Japanese news copy should not contain; they do not try to score writing style.
+CONTROL_RE = re.compile(r"[\uFFFD\u0000-\u0008\u000B\u000C\u000E-\u001F]")
+BATCH_MARKER_RE = re.compile(r"<<<\s*DBJ\d{5}\s*>>>", re.I)
+LONG_SPACE_RE = re.compile(r"[ \t]{6,}")
+BAD_SCRIPT_JOIN_RE = re.compile(r"(?:[\u3400-\u9fff][a-z]{2,}\b|\b[a-z]{2,}[\u3400-\u9fff])")
+SPACED_CJK_RE = re.compile(r"(?:[\u3400-\u9fff]\s+){2,}[\u3400-\u9fff]")
+REPEATED_OPEN_CLOSE_RE = re.compile(r"(?:「{2,}|『{2,}|（{2,}|\({2,}|」{2,}|』{2,}|）{2,}|\){2,})")
+LOWER_ENGLISH_FUNCTION_RE = re.compile(
+    r"\b(?:is|are|was|were|the|and|or|of|to|for|from|with|this|that|ill)\b",
+    re.I,
+)
 
 
 def iter_strings(value, path="$"):
@@ -33,6 +48,36 @@ def iter_strings(value, path="$"):
             yield from iter_strings(child, f"{path}[{index}]")
     elif isinstance(value, str):
         yield path, value
+
+
+def garbled_japanese_reason(value, strict=False):
+    """Return a stable reason when text is structurally impossible/unsafe Japanese."""
+    text = str(value or "")
+    if not text.strip():
+        return None
+    if CONTROL_RE.search(text):
+        return "replacement/control character detected"
+    if BATCH_MARKER_RE.search(text):
+        return "internal translation batch marker leaked"
+    if LONG_SPACE_RE.search(text):
+        return "abnormal long whitespace run detected"
+    if BAD_SCRIPT_JOIN_RE.search(text):
+        return "impossible Han/lowercase-ASCII token join detected"
+    if SPACED_CJK_RE.search(text):
+        return "multiple isolated CJK tokens separated by spaces"
+    if REPEATED_OPEN_CLOSE_RE.search(text):
+        return "repeated unmatched punctuation detected"
+    for opening, closing in (("「", "」"), ("『", "』"), ("（", "）"), ("(", ")")):
+        if abs(text.count(opening) - text.count(closing)) >= 2:
+            return f"strong punctuation imbalance {opening}{closing}"
+    if LOWER_ENGLISH_FUNCTION_RE.search(text):
+        return "unexpected standalone English function word in Japanese copy"
+    if strict and len(text) >= 28:
+        han = len(HAN_RE.findall(text))
+        kana = len(HIRA_RE.findall(text)) + len(KATA_RE.findall(text))
+        if han >= 8 and kana < max(3, int(han * 0.10)):
+            return "long prose has implausibly little Japanese kana"
+    return None
 
 
 def prose_is_mixed(value):
@@ -47,6 +92,23 @@ def prose_is_mixed(value):
         if han >= 8 and hira < max(2, int(han * 0.06)):
             return True
     return False
+
+
+def collect_story_issues(name, item):
+    issues = []
+    aid = str(item.get("id") or "unknown")
+    for field in STORY_TEXT_FIELDS:
+        value = item.get(field)
+        if not isinstance(value, str) or not value.strip():
+            continue
+        if field in PROSE_FIELDS and prose_is_mixed(value):
+            issues.append(
+                f"{name}:{aid}:{field}: partially untranslated Traditional Chinese detected"
+            )
+        reason = garbled_japanese_reason(value, strict=field in PROSE_FIELDS)
+        if reason:
+            issues.append(f"{name}:{aid}:{field}: garbled Japanese: {reason}")
+    return issues
 
 
 def collect_issues(name, data):
@@ -78,11 +140,8 @@ def collect_issues(name, data):
         groups = data.get("items") or []
 
     for item in groups:
-        aid = str(item.get("id") or "unknown")
-        for field in PROSE_FIELDS:
-            value = item.get(field)
-            if isinstance(value, str) and value.strip() and prose_is_mixed(value):
-                issues.append(f"{name}:{aid}:{field}: partially untranslated Traditional Chinese detected")
+        if isinstance(item, dict):
+            issues.extend(collect_story_issues(name, item))
 
     return issues
 
@@ -106,13 +165,16 @@ def main():
 
     if issues:
         print("CONTENT_INTEGRITY_FAIL")
-        for issue in issues[:80]:
+        for issue in issues[:120]:
             print(" -", issue)
-        if len(issues) > 80:
-            print(f" - ... and {len(issues) - 80} more")
+        if len(issues) > 120:
+            print(f" - ... and {len(issues) - 120} more")
         return 1
 
-    print("CONTENT_INTEGRITY_OK latest/live/archive contain no error-page poison or mixed Traditional Chinese prose")
+    print(
+        "CONTENT_INTEGRITY_OK latest/live/archive contain no error-page poison, "
+        "mixed Traditional Chinese prose, or structural translation corruption"
+    )
     return 0
 
 
