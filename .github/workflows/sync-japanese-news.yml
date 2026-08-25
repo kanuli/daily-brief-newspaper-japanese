@@ -48,6 +48,43 @@ jobs:
         timeout-minutes: 12
         run: python scripts/batch_prewarm.py
 
+      - name: 完了済み翻訳キャッシュを途中保存
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ ! -f data/translation-cache.json ]; then
+            echo 'translation cache does not exist; nothing to checkpoint'
+            exit 0
+          fi
+
+          git config user.name 'daily-brief-japanese-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add data/translation-cache.json
+          if git diff --cached --quiet; then
+            echo 'No new validated translation cache entries to checkpoint.'
+            exit 0
+          fi
+
+          git commit -m '日本語翻訳キャッシュ進捗を保存'
+          for attempt in 1 2 3 4 5; do
+            echo "translation-cache push attempt ${attempt}/5"
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              echo 'Translation-cache rebase conflict; retrying from refreshed main.' >&2
+              sleep $((attempt * 2))
+              continue
+            fi
+            if git push origin HEAD:main; then
+              echo 'JAPANESE_TRANSLATION_CACHE_CHECKPOINT_OK'
+              exit 0
+            fi
+            sleep $((attempt * 2))
+          done
+          echo 'Could not checkpoint translation cache after 5 retries.' >&2
+          exit 1
+
       - name: 広東語版のデイリー・速報・アーカイブをキャッシュから日本語化
         timeout-minutes: 5
         run: python scripts/fast_safe_sync.py
