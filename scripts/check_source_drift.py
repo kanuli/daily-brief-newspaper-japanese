@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Verify that Japanese publication data is derived from the current Cantonese source.
+"""Verify Japanese publication data against the run's frozen Cantonese source.
 
-This does not compare translated text. It verifies source fingerprints so the
-Japanese edition cannot silently use an independent, truncated, or stale story
-set.
+When CANTONESE_SNAPSHOT_DIR is present, parity is checked against that immutable
+snapshot rather than re-fetching moving Cantonese main. This prevents false
+failures when Cantonese publishes another update while Japanese translation is
+already running.
 """
 import hashlib
 import json
@@ -26,7 +27,20 @@ def fingerprint(obj):
     return hashlib.sha256(raw.encode("utf-8")).hexdigest()
 
 
+def snapshot_path(name):
+    root = os.environ.get("CANTONESE_SNAPSHOT_DIR")
+    return Path(root) / name if root else None
+
+
 def remote_json(name, optional=False):
+    snap = snapshot_path(name)
+    if snap is not None:
+        if not snap.is_file():
+            if optional:
+                return None
+            raise FileNotFoundError(f"snapshot source missing: {snap}")
+        return json.loads(snap.read_text(encoding="utf-8"))
+
     req = urllib.request.Request(
         f"{SOURCE_BASE}/{name}",
         headers={"User-Agent": "daily-brief-newspaper-japanese-source-parity"},
@@ -107,7 +121,6 @@ def main():
             errors.append(f"{name}:{type(exc).__name__}")
             continue
         if expected is None:
-            # Optional source absent: local copy should also be absent.
             if local_json(name) is not None:
                 drift.append(name)
             continue
@@ -130,7 +143,8 @@ def main():
         print("CANTONESE_SOURCE_PARITY_FAIL", ",".join(dirty))
         return 10
 
-    print("CANTONESE_SOURCE_PARITY_OK" if available else "CANTONESE_SOURCE_PARITY_UNKNOWN")
+    mode = "snapshot" if os.environ.get("CANTONESE_SNAPSHOT_DIR") else "live-main"
+    print(f"CANTONESE_SOURCE_PARITY_OK mode={mode}" if available else "CANTONESE_SOURCE_PARITY_UNKNOWN")
     return 0
 
 
