@@ -2,6 +2,11 @@ name: 日本語ローリング翻訳品質修復
 
 on:
   workflow_dispatch:
+  # One-time validation trigger. Removed after the recovery run is created.
+  push:
+    branches: ["main"]
+    paths:
+      - '.github/workflows/repair-extra-translation-quality.yml'
   workflow_run:
     workflows:
       - '日本語ニュース同期・Discord即時配信'
@@ -19,7 +24,7 @@ concurrency:
 
 jobs:
   repair:
-    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    # Rolling/category cleanup is independent of whether the core sync succeeded.
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
