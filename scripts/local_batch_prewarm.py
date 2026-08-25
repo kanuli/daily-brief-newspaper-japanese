@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-"""Prewarm all Cantonese news layers using local OPUS-MT only."""
+"""Prewarm all Cantonese news layers using one frozen snapshot + local OPUS-MT."""
 import batch_prewarm as source_helpers
+import cantonese_snapshot as snapshot
 import local_translation_runtime as runtime
 import safe_sync as safe
 import sync_and_translate as base
@@ -8,6 +9,7 @@ import sync_and_translate as base
 
 def main():
     base.likely_chinese_source = source_helpers.needs_cantonese_translation
+    source_helpers.fetch_json = snapshot.load_json
     runtime.install()
     safe.prune_cache()
 
@@ -19,6 +21,7 @@ def main():
     runtime.checkpoint_cache("all-layers-complete")
     print(
         "LOCAL_MT_ALL_LAYERS_OK",
+        f"snapshot={snapshot.snapshot_commit()}",
         ",".join(name for name, _payload in files),
         f"cache_entries={len(base.CACHE)}",
     )
