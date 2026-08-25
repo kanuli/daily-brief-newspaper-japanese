@@ -6,10 +6,6 @@ on:
     # 広東語版の毎時公開を唯一のニュース源として、15分後に日本語版を処理する。
     # 例: 10:00 Cantonese -> 10:15 Japanese / 08:00 Daily -> 08:15 Japanese.
     - cron: '15 * * * *'
-  push:
-    branches: [main]
-    paths:
-      - '.force-fast-sync'
 
 permissions:
   contents: write
