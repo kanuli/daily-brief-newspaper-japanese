@@ -2,27 +2,33 @@
 """Fast, incremental downstream translation of the Cantonese newspaper.
 
 The Cantonese repository is the only news source. This wrapper preserves the
-existing safe_sync quality/furigana/audio rules while adding two guarantees for
-the hourly Japanese edition:
+existing safe_sync quality/furigana/audio rules while adding three guarantees
+for the hourly Japanese edition:
 1. free translation network calls have short bounded timeouts/retries;
-2. unchanged Cantonese stories reuse their existing Japanese translation, so a
-   changing Live timestamp does not cause the whole edition to be translated.
+2. unchanged Cantonese stories reuse their existing Japanese translation;
+3. genuinely new/changed text is translated concurrently before normal render
+   conversion, so a new Daily edition does not spend the whole :15 window in a
+   serial network loop.
 """
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import hashlib
 import html
 import json
+import threading
 
 import requests
 
 import safe_sync as safe
 import sync_and_translate as base
 
-GTX_TIMEOUT = 6
-MYMEMORY_TIMEOUT = 6
+GTX_TIMEOUT = 5
+MYMEMORY_TIMEOUT = 5
 GTX_SOURCES_CHINESE = ("zh-TW", "auto")
 GTX_SOURCES_OTHER = ("auto",)
 MYMEMORY_MAX_CHARS = 900
 MYMEMORY_PIECE_LIMIT = 450
+TRANSLATION_WORKERS = 6
+_CACHE_LOCK = threading.Lock()
 
 
 def bounded_gtx(part, strict=False):
@@ -106,13 +112,83 @@ def cache_key(text):
     return hashlib.sha256(f"{base.CACHE_VERSION}|{text}".encode("utf-8")).hexdigest()
 
 
-def legacy_item_reusable(source_item, old_item):
-    """Bootstrap reuse for items created before sourceItemFingerprint existed.
+def collect_translatable(value, parent_key="", out=None):
+    """Collect the same user-facing strings that safe_convert will translate."""
+    if out is None:
+        out = {}
+    if isinstance(value, dict):
+        for key, child in value.items():
+            if key in base.KEEP_KEYS or key == "shortDate":
+                continue
+            if key == "topics" and isinstance(child, list):
+                for topic in child:
+                    text = str(topic or "").strip()
+                    if text and text not in base.ARCHIVE_TOPIC_NAMES:
+                        out[text] = out.get(text, False)
+                continue
+            collect_translatable(child, key, out)
+    elif isinstance(value, list):
+        for child in value:
+            collect_translatable(child, parent_key, out)
+    elif isinstance(value, str) and parent_key in base.TRANSLATE_KEYS:
+        text = value.strip()
+        if text and not text.startswith(("http://", "https://")):
+            strict = parent_key in safe.STRICT_PROSE_KEYS
+            out[value] = out.get(value, False) or strict
+    return out
 
-    Reuse is allowed only when every translatable source string has a valid
-    cached Japanese value identical to the old item and stable identity fields
-    have not changed. This prevents a stale old story from masking source edits.
-    """
+
+def translate_one_for_cache(text, strict):
+    key = cache_key(text)
+    with _CACHE_LOCK:
+        cached = base.CACHE.get(key)
+    if cached is not None and safe.target_quality_ok(text, cached, strict=strict):
+        return "cached"
+
+    # Translate chunks without touching the shared dict until a complete value
+    # has passed the same quality gate used by safe_translate_text.
+    pieces = []
+    for part in base.chunks(text):
+        if not part.strip():
+            pieces.append(part)
+        else:
+            pieces.append(bounded_translate_part(part, strict=strict))
+    value = "".join(pieces)
+    if not safe.target_quality_ok(text, value, strict=strict):
+        raise RuntimeError(f"Japanese translation failed quality gate: {text[:100]!r}")
+    with _CACHE_LOCK:
+        base.CACHE[key] = value
+    return "translated"
+
+
+def prewarm_translations(source, label):
+    candidates = collect_translatable(source)
+    pending = []
+    for text, strict in candidates.items():
+        cached = base.CACHE.get(cache_key(text))
+        if cached is None or not safe.target_quality_ok(text, cached, strict=strict):
+            pending.append((text, strict))
+    if not pending:
+        print(f"PARALLEL_TRANSLATION {label}: pending=0")
+        return
+
+    print(f"PARALLEL_TRANSLATION {label}: pending={len(pending)} workers={TRANSLATION_WORKERS}")
+    failures = []
+    with ThreadPoolExecutor(max_workers=TRANSLATION_WORKERS, thread_name_prefix="ja-translate") as pool:
+        futures = {pool.submit(translate_one_for_cache, text, strict): text for text, strict in pending}
+        for future in as_completed(futures):
+            text = futures[future]
+            try:
+                future.result()
+            except Exception as exc:
+                failures.append(f"{text[:80]!r}: {type(exc).__name__}: {exc}")
+    if failures:
+        raise RuntimeError("Parallel Japanese translation failed for " + " | ".join(failures[:5]))
+    print(f"PARALLEL_TRANSLATION_OK {label}: translated={len(pending)}")
+
+
+def legacy_item_reusable(source_item, old_item):
+    """Bootstrap reuse for items created before sourceItemFingerprint existed."""
     if not isinstance(source_item, dict) or not isinstance(old_item, dict):
         return False
     if source_item.get("id") != old_item.get("id"):
@@ -199,6 +275,7 @@ def incremental_main():
             skipped.append(name)
             continue
 
+        prewarm_translations(src, name)
         translated = incremental_convert(name, src, existing)
         if name == "latest.json":
             translated = base.add_furigana(base.attach_daily_audio(translated), "articles")
@@ -220,10 +297,14 @@ def incremental_main():
     print("Fingerprint fast-path:", ", ".join(skipped) if skipped else "none")
 
 
-def main():
+def install_bounded_translator():
     safe.google_gtx_translate = bounded_gtx
     safe.mymemory_translate = bounded_mymemory
     safe.safe_translate_part = bounded_translate_part
+
+
+def main():
+    install_bounded_translator()
     # safe.main installs safe_convert/quality gates, then calls base.main. Point
     # base.main at the incremental implementation before invoking safe.main.
     base.main = incremental_main
