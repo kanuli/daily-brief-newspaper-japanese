@@ -4,7 +4,6 @@ on:
   workflow_dispatch:
   schedule:
     # 広東語版の毎時公開を唯一のニュース源として、30分後に日本語版を処理する。
-    # 例: 10:00 Cantonese -> 10:30 Japanese / 08:00 Daily -> 08:30 Japanese.
     - cron: '30 * * * *'
 
 permissions:
@@ -17,7 +16,7 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 20
     env:
       CANTONESE_SNAPSHOT_DIR: .cantonese-snapshot/data
     steps:
@@ -50,43 +49,37 @@ jobs:
           pip install --index-url https://download.pytorch.org/whl/cpu torch==2.8.0
           pip install -r requirements-translation.txt
 
-      - name: 広東語版下流パイプラインを構文検査
-        run: python -m py_compile scripts/cantonese_snapshot.py scripts/sync_and_translate.py scripts/safe_sync.py scripts/fast_safe_sync.py scripts/batch_prewarm.py scripts/local_zh_ja.py scripts/local_translation_runtime.py scripts/local_batch_prewarm.py scripts/local_fast_safe_sync.py scripts/sync_cantonese_layers.py scripts/local_sync_cantonese_layers.py scripts/furigana_context.py scripts/validate_furigana_readings.py scripts/validate_content_integrity.py scripts/validate_extra_layers.py scripts/check_source_drift.py scripts/notify_discord.py
+      - name: 下流パイプラインを構文検査
+        run: python -m py_compile scripts/cantonese_snapshot.py scripts/sync_and_translate.py scripts/safe_sync.py scripts/fast_safe_sync.py scripts/local_zh_ja.py scripts/local_translation_runtime.py scripts/local_batch_prewarm.py scripts/local_fast_safe_sync.py scripts/furigana_context.py scripts/furigana_safe_runtime.py scripts/validate_furigana_readings.py scripts/validate_content_integrity.py scripts/check_source_drift.py scripts/notify_discord.py
 
-      - name: 広東語版mainを1コミットに固定してニュース層を取得
+      - name: 広東語版mainを1コミットに固定
         run: python scripts/cantonese_snapshot.py
 
-      - name: 広東語版の全ニュース層をローカルOPUS-MTで小分け翻訳
-        timeout-minutes: 18
+      - name: デイリー・速報・アーカイブだけを小分け翻訳
+        timeout-minutes: 8
         env:
           TOKENIZERS_PARALLELISM: "false"
+          PREWARM_FILES: "latest.json,live.json,archive.json"
         run: python scripts/local_batch_prewarm.py
 
-      - name: 完了済みローカル翻訳キャッシュを途中保存
+      - name: 完了済み翻訳キャッシュを保存
         if: always()
         shell: bash
         run: |
           set -euo pipefail
-          if [ ! -f data/translation-cache.json ]; then
-            echo 'translation cache does not exist; nothing to checkpoint'
-            exit 0
-          fi
-
+          if [ ! -f data/translation-cache.json ]; then exit 0; fi
           git config user.name 'daily-brief-japanese-bot'
           git config user.email 'actions@users.noreply.github.com'
           git add data/translation-cache.json
           if git diff --cached --quiet; then
-            echo 'No new validated local translation cache entries to checkpoint.'
+            echo 'No new validated translation cache entries.'
             exit 0
           fi
-
           git commit -m 'ローカル日本語翻訳キャッシュ進捗を保存'
           for attempt in 1 2 3 4 5; do
-            echo "translation-cache push attempt ${attempt}/5"
             git fetch origin main
             if ! git rebase origin/main; then
               git rebase --abort || true
-              echo 'Translation-cache rebase conflict; retrying from refreshed main.' >&2
               sleep $((attempt * 2))
               continue
             fi
@@ -96,77 +89,62 @@ jobs:
             fi
             sleep $((attempt * 2))
           done
-          echo 'Could not checkpoint local translation cache after 5 retries.' >&2
           exit 1
 
-      - name: 広東語版のデイリー・速報・アーカイブをローカル翻訳キャッシュから日本語化
+      - name: デイリー・速報・アーカイブを日本語化
         timeout-minutes: 4
         env:
           TOKENIZERS_PARALLELISM: "false"
         run: python scripts/local_fast_safe_sync.py
 
-      - name: 広東語版の追加・ローリング・株式ニュースをローカル翻訳キャッシュから全件日本語化
-        timeout-minutes: 4
+      - name: 同一スナップショットとの基本ニュース一致を検証
         env:
-          TOKENIZERS_PARALLELISM: "false"
-        run: python scripts/local_sync_cantonese_layers.py
-
-      - name: 同一の広東語版スナップショットとのソース一致を検証
+          PARITY_SCOPE: base
         run: python scripts/check_source_drift.py
 
-      - name: Discord配信前にニュース完全性を検証
-        run: |
-          python scripts/validate_content_integrity.py
-          python scripts/validate_extra_layers.py
+      - name: 現在ニュースの翻訳品質を検証
+        run: python scripts/validate_content_integrity.py
 
-      - name: ニュース本文のふりがなを全件検証
+      - name: 現在ニュースのふりがなを検証
         run: python scripts/validate_furigana_readings.py
 
-      - name: 日本語ニュースデータを公開
+      - name: デイリー・速報・アーカイブを先に公開
         id: publish_news
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'daily-brief-japanese-bot'
           git config user.email 'actions@users.noreply.github.com'
-          git add data
+          git add data/latest.json data/live.json data/archive.json
 
           latest_changed=false
           live_changed=false
-          if git diff --cached --name-only | grep -Fxq 'data/latest.json'; then
-            latest_changed=true
-          fi
-          if git diff --cached --name-only | grep -Fxq 'data/live.json'; then
-            live_changed=true
-          fi
+          if git diff --cached --name-only | grep -Fxq 'data/latest.json'; then latest_changed=true; fi
+          if git diff --cached --name-only | grep -Fxq 'data/live.json'; then live_changed=true; fi
           echo "latest_changed=${latest_changed}" >> "$GITHUB_OUTPUT"
           echo "live_changed=${live_changed}" >> "$GITHUB_OUTPUT"
 
           if git diff --cached --quiet; then
-            echo '広東語版からの実効ニュース変更なし'
+            echo '現在ニュースの実効変更なし'
             echo 'published=false' >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
-          git commit -m '広東語版ニュースを日本語版へ同期'
-
+          git commit -m '広東語版の現在ニュースを日本語版へ同期'
           for attempt in 1 2 3 4 5; do
-            echo "news push attempt ${attempt}/5"
             git fetch origin main
             if ! git rebase origin/main; then
               git rebase --abort || true
-              echo 'News-data rebase conflict; refusing to overwrite newer main.' >&2
+              echo 'Current-news rebase conflict; refusing overwrite.' >&2
               exit 1
             fi
             if git push origin HEAD:main; then
-              echo 'JAPANESE_CANTONESE_DOWNSTREAM_PUSH_OK'
+              echo 'JAPANESE_CURRENT_NEWS_PUSH_OK'
               echo 'published=true' >> "$GITHUB_OUTPUT"
               exit 0
             fi
             sleep $((attempt * 2))
           done
-
-          echo 'Could not publish Japanese news data after 5 retries.' >&2
           exit 1
 
       - name: 30分後の日本語版をDiscordへ配信
@@ -179,10 +157,6 @@ jobs:
         run: |
           set -euo pipefail
           args=()
-          if [ "$LATEST_CHANGED" = "true" ]; then
-            args+=(--daily)
-          fi
-          if [ "$LIVE_CHANGED" = "true" ]; then
-            args+=(--live)
-          fi
+          if [ "$LATEST_CHANGED" = "true" ]; then args+=(--daily); fi
+          if [ "$LIVE_CHANGED" = "true" ]; then args+=(--live); fi
           python scripts/notify_discord.py "${args[@]}"
