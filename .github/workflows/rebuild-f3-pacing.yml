@@ -45,6 +45,9 @@ jobs:
       - name: 依存パッケージをインストール
         run: pip install -r requirements.txt
 
+      - name: F3小分け生成スクリプトを構文検査
+        run: python -m py_compile scripts/generate_supertonic_f3.py scripts/generate_supertonic_f3_chunked.py scripts/generate_supertonic_f3_rolling.py scripts/generate_supertonic_f3_rolling_chunked.py
+
       - name: 音声生成前に日本語コンテンツ完全性を検証
         run: python scripts/validate_content_integrity.py
 
