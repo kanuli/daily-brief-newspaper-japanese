@@ -22,6 +22,7 @@ on:
   workflow_run:
     workflows:
       - '日本語ニュース同期・Discord即時配信'
+      - '日本語ローリング翻訳品質修復'
       - '日本語版 Pages 公開・広東語版レイアウト同期'
       - 'F3ニュース読み再生成'
     types: [completed]
@@ -138,6 +139,23 @@ jobs:
           python scripts/validate_furigana_readings.py
           c=$?
           set -e
+
+          if [ "$a" -eq 0 ]; then
+            echo 'core_healthy=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'core_healthy=false' >> "$GITHUB_OUTPUT"
+          fi
+          if [ "$b" -eq 0 ]; then
+            echo 'extra_healthy=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'extra_healthy=false' >> "$GITHUB_OUTPUT"
+          fi
+          if [ "$c" -eq 0 ]; then
+            echo 'furigana_healthy=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'furigana_healthy=false' >> "$GITHUB_OUTPUT"
+          fi
+
           if [ "$a" -eq 0 ] && [ "$b" -eq 0 ] && [ "$c" -eq 0 ]; then
             echo 'healthy=true' >> "$GITHUB_OUTPUT"
           else
@@ -186,7 +204,7 @@ jobs:
           fi
           echo "data_age=${age}" >> "$GITHUB_OUTPUT"
 
-      - name: Inspect translation, Pages and F3 workers
+      - name: Inspect translation, repair, Pages and F3 workers
         id: workers
         env:
           GH_TOKEN: ${{ github.token }}
@@ -194,6 +212,7 @@ jobs:
         run: |
           set -euo pipefail
           gh run list --workflow sync-japanese-news.yml --branch main --limit 20 --json status,conclusion,databaseId,createdAt,headSha > /tmp/sync.json
+          gh run list --workflow repair-extra-translation-quality.yml --branch main --limit 20 --json status,conclusion,databaseId,createdAt,headSha > /tmp/repair.json
           gh run list --workflow pages.yml --branch main --limit 20 --json status,conclusion,databaseId,createdAt,headSha > /tmp/pages.json
           gh run list --workflow rebuild-f3-pacing.yml --branch main --limit 20 --json status,conclusion,databaseId,createdAt,headSha > /tmp/f3.json
           python - <<'PY' >> "$GITHUB_OUTPUT"
@@ -210,23 +229,35 @@ jobs:
                   except Exception:
                       pass
               latest = runs[0] if runs else {}
+              streak = 0
+              for r in runs:
+                  if r.get('status') != 'completed':
+                      continue
+                  if r.get('conclusion') in {'failure', 'cancelled', 'timed_out', 'action_required'}:
+                      streak += 1
+                  else:
+                      break
               print(f'{prefix}_active_count={len(active)}')
               print(f'{prefix}_active_ids={",".join(str(r.get("databaseId")) for r in active if r.get("databaseId"))}')
               print(f'{prefix}_active_oldest={max(ages) if ages else 0}')
               print(f'{prefix}_latest_conclusion={latest.get("conclusion") or ""}')
               print(f'{prefix}_latest_head={latest.get("headSha") or ""}')
+              print(f'{prefix}_failure_streak={streak}')
           emit('/tmp/sync.json','sync')
+          emit('/tmp/repair.json','repair')
           emit('/tmp/pages.json','pages')
           emit('/tmp/f3.json','f3')
           PY
 
-      - name: Recover Japanese text/data sync only
-        if: github.event_name != 'pull_request' && (steps.publication_qa.outputs.healthy != 'true' || steps.drift.outputs.drift == 'true')
+      - name: Recover Japanese core text/data sync
+        if: github.event_name != 'pull_request' && (steps.publication_qa.outputs.core_healthy != 'true' || steps.publication_qa.outputs.furigana_healthy != 'true' || steps.drift.outputs.drift == 'true' || steps.workers.outputs.sync_latest_conclusion == 'failure')
         env:
           GH_TOKEN: ${{ github.token }}
           ACTIVE_COUNT: ${{ steps.workers.outputs.sync_active_count }}
-          ACTIVE_IDS: ${{ steps.workers.outputs.sync_active_ids }}
           ACTIVE_OLDEST: ${{ steps.workers.outputs.sync_active_oldest }}
+          LATEST_CONCLUSION: ${{ steps.workers.outputs.sync_latest_conclusion }}
+          LATEST_HEAD: ${{ steps.workers.outputs.sync_latest_head }}
+          FAILURE_STREAK: ${{ steps.workers.outputs.sync_failure_streak }}
         shell: bash
         run: |
           set -euo pipefail
@@ -252,8 +283,40 @@ jobs:
             sleep 3
           fi
 
+          if [ "${LATEST_CONCLUSION:-}" = 'failure' ] && [ "${LATEST_HEAD:-}" = "$main_sha" ] && [ "${FAILURE_STREAK:-0}" -ge 2 ]; then
+            echo 'Two consecutive sync failures on the same production head; automatic redispatch paused to avoid a failure loop.'
+            exit 0
+          fi
+
           gh workflow run sync-japanese-news.yml --repo "${{ github.repository }}" --ref main
           echo "JAPANESE_TEXT_SYNC_RECOVERY_DISPATCHED main=${main_sha}"
+
+      - name: Recover rolling translation quality independently
+        if: github.event_name != 'pull_request' && (steps.publication_qa.outputs.extra_healthy != 'true' || steps.workers.outputs.repair_latest_conclusion == 'failure')
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ACTIVE_COUNT: ${{ steps.workers.outputs.repair_active_count }}
+          LATEST_CONCLUSION: ${{ steps.workers.outputs.repair_latest_conclusion }}
+          LATEST_HEAD: ${{ steps.workers.outputs.repair_latest_head }}
+          FAILURE_STREAK: ${{ steps.workers.outputs.repair_failure_streak }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch -q origin main
+          main_sha=$(git rev-parse origin/main)
+
+          if [ "${ACTIVE_COUNT:-0}" -gt 0 ]; then
+            echo 'Rolling translation repair worker is already active.'
+            exit 0
+          fi
+
+          if [ "${LATEST_CONCLUSION:-}" = 'failure' ] && [ "${LATEST_HEAD:-}" = "$main_sha" ] && [ "${FAILURE_STREAK:-0}" -ge 2 ]; then
+            echo 'Two consecutive rolling-repair failures on the same production head; automatic redispatch paused to avoid a failure loop.'
+            exit 0
+          fi
+
+          gh workflow run repair-extra-translation-quality.yml --repo "${{ github.repository }}" --ref main
+          echo "ROLLING_TRANSLATION_REPAIR_DISPATCHED main=${main_sha}"
 
       - name: Recover F3 voice separately after server grace period
         if: github.event_name != 'pull_request' && steps.publication_qa.outputs.healthy == 'true' && steps.drift.outputs.drift != 'true' && steps.audio_qa.outputs.healthy != 'true'
@@ -316,12 +379,63 @@ jobs:
           echo "KNOWN_GOOD_REFRESHED ${sha}"
 
       - name: Maintenance summary
+        if: always()
         run: |
           echo "Static healthy: ${{ steps.static_qa.outputs.healthy || 'false' }}"
           echo "Publication text/data healthy: ${{ steps.publication_qa.outputs.healthy || 'false' }}"
+          echo "Core publication healthy: ${{ steps.publication_qa.outputs.core_healthy || 'false' }}"
+          echo "Rolling translation healthy: ${{ steps.publication_qa.outputs.extra_healthy || 'false' }}"
+          echo "Furigana healthy: ${{ steps.publication_qa.outputs.furigana_healthy || 'false' }}"
           echo "Cantonese source drift: ${{ steps.drift.outputs.drift || 'unknown' }}"
           echo "F3 voice healthy: ${{ steps.audio_qa.outputs.healthy || 'false' }}"
           echo "Sync active: ${{ steps.workers.outputs.sync_active_count || '0' }}"
+          echo "Rolling repair active: ${{ steps.workers.outputs.repair_active_count || '0' }}"
           echo "Pages active: ${{ steps.workers.outputs.pages_active_count || '0' }}"
           echo "F3 active: ${{ steps.workers.outputs.f3_active_count || '0' }}"
+          echo "Latest sync conclusion: ${{ steps.workers.outputs.sync_latest_conclusion || 'unknown' }}"
+          echo "Latest rolling repair conclusion: ${{ steps.workers.outputs.repair_latest_conclusion || 'unknown' }}"
           echo 'Japanese site maintenance cycle completed.'
+
+      - name: Enforce truthful production-health status
+        if: always() && github.event_name != 'pull_request'
+        shell: bash
+        run: |
+          set -euo pipefail
+          unhealthy=0
+
+          if [ "${{ steps.static_qa.outputs.healthy }}" != 'true' ]; then
+            echo '::error::Static Japanese site QA is not healthy.'
+            unhealthy=1
+          fi
+          if [ "${{ steps.publication_qa.outputs.healthy }}" != 'true' ]; then
+            echo '::error::Japanese publication data is not healthy; recovery may be active or pending.'
+            unhealthy=1
+          fi
+          if [ "${{ steps.drift.outputs.drift }}" = 'true' ]; then
+            echo '::error::Japanese publication is behind the current Cantonese source.'
+            unhealthy=1
+          fi
+          if [ "${{ steps.audio_qa.outputs.healthy }}" != 'true' ]; then
+            echo '::error::F3 production audio is not healthy or is still awaiting recovery.'
+            unhealthy=1
+          fi
+
+          for state in \
+            "${{ steps.workers.outputs.sync_latest_conclusion }}" \
+            "${{ steps.workers.outputs.repair_latest_conclusion }}" \
+            "${{ steps.workers.outputs.pages_latest_conclusion }}" \
+            "${{ steps.workers.outputs.f3_latest_conclusion }}"; do
+            case "$state" in
+              failure|cancelled|timed_out|action_required)
+                echo "::error::A supervised production workflow last ended as ${state}."
+                unhealthy=1
+                ;;
+            esac
+          done
+
+          if [ "$unhealthy" -ne 0 ]; then
+            echo 'AUTO_MAINTENANCE_UNRESOLVED_HEALTH_FAILURE'
+            exit 1
+          fi
+
+          echo 'AUTO_MAINTENANCE_PRODUCTION_HEALTH_OK'
