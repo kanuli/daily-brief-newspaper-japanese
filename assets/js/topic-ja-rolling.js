@@ -28,6 +28,8 @@
   }
 
   function corruptStory(article = {}) {
+    if (String(article?.qualityStatus || '') === 'QUARANTINED_GARBLED_TRANSLATION') return true;
+    if (String(article?.title || '').trim() === '翻訳品質を再検証中のニュース') return true;
     return ['title','dek','summary','body','context','why','watchNext','timeLabel']
       .some(field => corruptText(article?.[field]));
   }
