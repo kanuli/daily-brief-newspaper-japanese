@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 from pathlib import Path
 
@@ -14,28 +15,7 @@ import validate_content_integrity as integrity
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
-FILES = ("latest.json", "live.json", "desk-latest.json", "stocks-latest.json")
 TRANSLATE_KEYS = set(base.TRANSLATE_KEYS) | {"impactLabel"}
-
-ENTITY_ANCHORS = {
-    "輝達": ("Nvidia", "NVIDIA", "エヌビディア"),
-    "英偉達": ("Nvidia", "NVIDIA", "エヌビディア"),
-    "Nvidia": ("Nvidia", "NVIDIA", "エヌビディア"),
-    "NVIDIA": ("Nvidia", "NVIDIA", "エヌビディア"),
-    "蘋果": ("Apple", "アップル"),
-    "Apple": ("Apple", "アップル"),
-    "微軟": ("Microsoft", "マイクロソフト"),
-    "Microsoft": ("Microsoft", "マイクロソフト"),
-    "谷歌": ("Google", "グーグル"),
-    "Google": ("Google", "グーグル"),
-    "台積電": ("TSMC", "台湾積体電路", "台湾セミコンダクター"),
-    "TSMC": ("TSMC", "台湾積体電路", "台湾セミコンダクター"),
-    "Palantir": ("Palantir", "パランティア"),
-    "OpenAI": ("OpenAI", "オープンAI"),
-    "Reuters": ("Reuters", "ロイター"),
-    "Bloomberg": ("Bloomberg", "ブルームバーグ"),
-    "Manchester United": ("Manchester United", "マンチェスター・ユナイテッド"),
-}
 
 REPEATED_PARTICLE_RE = re.compile(r"の{5,}")
 REPEATED_TOKEN_RE = re.compile(r"(.{2,8})(?:\s+\1){2,}")
@@ -43,13 +23,6 @@ ASCII_ART_RE = re.compile(r"(?:━{4,}|─{5,}|═{5,}|[\\/@]{3,})")
 CYRILLIC_RE = re.compile(r"[\u0400-\u04ff]")
 WEIRD_LOWER_RE = re.compile(r"(?<![A-Za-z])[a-z]{2,}(?![A-Za-z])")
 LOWER_ALLOW = {"ai", "app", "apps", "web", "live", "online", "email", "vs", "km", "kg", "cm", "mm", "am", "pm"}
-
-
-def entity_mismatch(source: str, target: str) -> bool:
-    for token, accepted in ENTITY_ANCHORS.items():
-        if token in source and not any(name in target for name in accepted):
-            return True
-    return False
 
 
 def obvious_bad(target: str) -> bool:
@@ -69,9 +42,7 @@ def bad(source: str, target: str, strict: bool) -> bool:
         return True
     if not safe.target_quality_ok(source, target, strict=strict):
         return True
-    if entity_mismatch(source, target) or obvious_bad(target):
-        return True
-    return False
+    return obvious_bad(target)
 
 
 def remote_translate(source: str, strict: bool) -> str:
@@ -171,9 +142,6 @@ def repair_tree(local, source, name: str, story_mode: str) -> int:
         return False
 
     walk(local, source)
-
-    # Core files use different audio paths and should regenerate furigana only
-    # after all fields have been repaired.
     if repaired and story_mode == "daily":
         base.add_furigana(base.attach_daily_audio(local), "articles")
     elif repaired and story_mode == "live":
@@ -201,18 +169,24 @@ def repair_file(name: str, mode: str) -> int:
 
 
 def main():
+    scope = str(os.environ.get("REMOTE_REPAIR_SCOPE") or "all").strip().lower()
+    if scope not in {"all", "core", "rolling"}:
+        raise RuntimeError(f"invalid REMOTE_REPAIR_SCOPE: {scope!r}")
+
     total = 0
-    total += repair_file("latest.json", "daily")
-    total += repair_file("live.json", "live")
-    total += repair_file("desk-latest.json", "rolling")
-    total += repair_file("stocks-latest.json", "rolling")
+    if scope in {"all", "core"}:
+        total += repair_file("latest.json", "daily")
+        total += repair_file("live.json", "live")
 
-    latest = snapshot.load_json("latest.json") or {}
-    date = str(latest.get("date") or "")
-    if re.fullmatch(r"\d{4}-\d{2}-\d{2}", date):
-        total += repair_file(f"topic-more/{date}.json", "rolling")
+    if scope in {"all", "rolling"}:
+        total += repair_file("desk-latest.json", "rolling")
+        total += repair_file("stocks-latest.json", "rolling")
+        latest = snapshot.load_json("latest.json") or {}
+        date = str(latest.get("date") or "")
+        if re.fullmatch(r"\d{4}-\d{2}-\d{2}", date):
+            total += repair_file(f"topic-more/{date}.json", "rolling")
 
-    print("REMOTE_FULL_PUBLISHED_QUALITY_REPAIR_OK", f"fields={total}")
+    print("REMOTE_FULL_PUBLISHED_QUALITY_REPAIR_OK", f"scope={scope}", f"fields={total}")
 
 
 if __name__ == "__main__":
