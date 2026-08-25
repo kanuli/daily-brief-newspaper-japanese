@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Hardened wrapper around sync_and_translate.
 
-Rejects translator error pages and partially untranslated Traditional Chinese,
-uses multiple free translation backends as fallbacks, normalizes Live schedule
-metadata deterministically, and only hands clean Japanese data to the existing
-furigana/audio pipeline.
+Rejects translator error pages, partially untranslated Traditional Chinese, and
+structurally/semantically implausible Japanese, uses multiple free translation
+backends as fallbacks, normalizes Live schedule metadata deterministically, and
+only hands clean Japanese data to the existing furigana/audio pipeline.
 """
 import hashlib
 import re
@@ -25,10 +25,66 @@ HAN_RE = re.compile(r"[\u3400-\u9fff]")
 CHINESE_PROSE_RE = integrity.CHINESE_PROSE_RE
 STRICT_PROSE_KEYS = {"dek", "summary", "body", "context", "why", "watchNext", "description", "note"}
 _ORIGINAL_EXISTING_FEATURES_OK = base.existing_features_ok
+DIGIT_RE = re.compile(r"\d+")
+DIGIT_KANJI = {
+    "0": "〇",
+    "1": "一",
+    "2": "二",
+    "3": "三",
+    "4": "四",
+    "5": "五",
+    "6": "六",
+    "7": "七",
+    "8": "八",
+    "9": "九",
+}
 
 
 def bad_error_text(value):
     return bool(ERROR_RE.search(str(value or "")))
+
+
+def source_target_quality_reason(source_text, value, strict=False):
+    """Return a reason when a Chinese->Japanese result is structurally implausible."""
+    source_text = str(source_text or "")
+    value = str(value or "")
+
+    generic = integrity.garbled_japanese_reason(value, strict=strict)
+    if generic:
+        return generic
+
+    if not base.likely_chinese_source(source_text):
+        return None
+
+    source_compact = re.sub(r"\s+", "", source_text)
+    target_compact = re.sub(r"\s+", "", value)
+    if len(source_compact) >= 20:
+        ratio = len(target_compact) / max(1, len(source_compact))
+        if ratio < 0.42 or ratio > 3.0:
+            return f"implausible translation length ratio {ratio:.2f}"
+
+    # Arabic numbers are high-value factual anchors in news copy. A one-digit
+    # source number may legitimately become a Japanese numeral; multi-digit
+    # values should remain explicit.
+    for token in DIGIT_RE.findall(source_text):
+        if token in target_compact:
+            continue
+        if len(token) == 1 and DIGIT_KANJI.get(token) in target_compact:
+            continue
+        return f"source numeric anchor {token!r} disappeared"
+
+    # Chinese and Japanese news prose share enough Han characters that a long
+    # translation with essentially zero lexical overlap is a strong corruption
+    # signal. This catches fluent-looking but unrelated translator garbage.
+    source_han = set(HAN_RE.findall(source_text))
+    target_han = set(HAN_RE.findall(value))
+    if len(source_han) >= 12 and len(target_han) >= 4:
+        required = 2 if len(source_han) >= 24 else 1
+        overlap = len(source_han & target_han)
+        if overlap < required:
+            return f"implausibly low source/target Han overlap ({overlap} < {required})"
+
+    return None
 
 
 def target_quality_ok(source_text, value, strict=False):
@@ -37,6 +93,8 @@ def target_quality_ok(source_text, value, strict=False):
     if not value.strip() or bad_error_text(value):
         return False
     if CHINESE_PROSE_RE.search(value):
+        return False
+    if source_target_quality_reason(source_text, value, strict=strict):
         return False
     if not base.likely_chinese_source(source_text):
         return True
@@ -237,7 +295,11 @@ def prune_cache():
     removed = 0
     for key, value in list(base.CACHE.items()):
         text = str(value or "")
-        if bad_error_text(text) or CHINESE_PROSE_RE.search(text):
+        if (
+            bad_error_text(text)
+            or CHINESE_PROSE_RE.search(text)
+            or integrity.garbled_japanese_reason(text, strict=False)
+        ):
             base.CACHE.pop(key, None)
             removed += 1
     print(f"TRANSLATION_CACHE_POISON_REMOVED {removed}")
