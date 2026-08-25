@@ -27,6 +27,11 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    # A failed normal/local-model path is allowed to hand control to the
+    # emergency job. The workflow still fails if that emergency job fails.
+    continue-on-error: true
+    outputs:
+      core_ok: ${{ steps.core_status.outputs.ok }}
     env:
       CANTONESE_SNAPSHOT_DIR: .cantonese-snapshot/data
     steps:
@@ -164,8 +169,21 @@ jobs:
           done
           exit 1
 
+      - name: 通常コア同期結果を記録
+        id: core_status
+        if: always()
+        shell: bash
+        run: |
+          if [ "${{ steps.publish_news.outcome }}" = 'success' ]; then
+            echo 'ok=true' >> "$GITHUB_OUTPUT"
+            echo 'NORMAL_CORE_SYNC_OK'
+          else
+            echo 'ok=false' >> "$GITHUB_OUTPUT"
+            echo 'NORMAL_CORE_SYNC_FAILED_HANDOFF_TO_REMOTE_RECOVERY'
+          fi
+
       - name: 30分後の日本語版をDiscordへ配信
-        if: steps.publish_news.outputs.published == 'true' && (steps.publish_news.outputs.latest_changed == 'true' || steps.publish_news.outputs.live_changed == 'true')
+        if: steps.core_status.outputs.ok == 'true' && steps.publish_news.outputs.published == 'true' && (steps.publish_news.outputs.latest_changed == 'true' || steps.publish_news.outputs.live_changed == 'true')
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           LATEST_CHANGED: ${{ steps.publish_news.outputs.latest_changed }}
@@ -181,7 +199,7 @@ jobs:
   emergency_remote_core:
     name: 通常同期失敗時の遠隔コア復旧
     needs: sync
-    if: ${{ always() && needs.sync.result == 'failure' }}
+    if: ${{ always() && needs.sync.outputs.core_ok != 'true' }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
