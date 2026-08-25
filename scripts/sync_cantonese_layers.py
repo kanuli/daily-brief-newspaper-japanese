@@ -23,11 +23,32 @@ OUT = Path("data")
 SOURCE_BASE = base.SOURCE_BASE
 SCHEMA = "ja-cantonese-extra-v2-full-parity"
 STATIC_FILES = ("desk-latest.json", "stocks-latest.json")
+HAN_RE = re.compile(r"[\u3400-\u9fff]")
+HIRA_RE = re.compile(r"[\u3040-\u309f]")
 
 
 def fingerprint(value):
     raw = json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
     return hashlib.sha256(raw.encode("utf-8")).hexdigest()
+
+
+def needs_cantonese_translation(value):
+    """Detect Cantonese prose even when names contain a little Japanese kana.
+
+    Cantonese news copy can legitimately embed Japanese names/titles such as
+    森井しづ or English brands. The old base detector rejected any string that
+    contained kana, which misclassified otherwise-obvious Cantonese paragraphs
+    as already Japanese. Strong Cantonese punctuation/prose markers take
+    priority; the Han/kana ratio is a fallback for mixed headlines/body copy.
+    """
+    text = str(value or "")
+    if not text.strip():
+        return False
+    if safe.CHINESE_PROSE_RE.search(text):
+        return True
+    han = len(HAN_RE.findall(text))
+    hira = len(HIRA_RE.findall(text))
+    return han >= 12 and hira < max(3, int(han * 0.08))
 
 
 def story_like(value):
@@ -142,6 +163,11 @@ def prune_old_topic_more(today):
 
 
 def main():
+    # Override the shared source detector before installing the bounded
+    # translator. fast_safe_sync consults this function dynamically, so Daily
+    # quality checks and rolling prewarm both correctly recognize mixed
+    # Cantonese + Japanese-name strings.
+    base.likely_chinese_source = needs_cantonese_translation
     fast.install_bounded_translator()
     base.translate_part = lambda part: safe.safe_translate_part(part, strict=False)
     base.translate_text = lambda text: safe.safe_translate_text(text, strict=False)
