@@ -9,6 +9,7 @@ import os
 
 import batch_prewarm as source_helpers
 import cantonese_snapshot as snapshot
+import local_metadata_overrides as metadata_overrides
 import local_translation_runtime as runtime
 import safe_sync as safe
 import sync_and_translate as base
@@ -29,6 +30,7 @@ def selected_files(files):
 def main():
     base.likely_chinese_source = source_helpers.needs_cantonese_translation
     source_helpers.fetch_json = snapshot.load_json
+    metadata_overrides.install(runtime)
     runtime.install()
     safe.prune_cache()
 
