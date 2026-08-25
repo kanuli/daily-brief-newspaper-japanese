@@ -35,6 +35,10 @@ SPACED_CJK_RE = re.compile(r"(?:[\u3400-\u9fff]\s+){2,}[\u3400-\u9fff]")
 REPEATED_OPEN_CLOSE_RE = re.compile(r"(?:「{2,}|『{2,}|（{2,}|\({2,}|」{2,}|』{2,}|）{2,}|\){2,})")
 REPEATED_EMPTY_PARENS_RE = re.compile(r"(?:(?:\(\s*\))|(?:（\s*）)){3,}")
 PLACEHOLDER_RUN_RE = re.compile(r"[◯○〇●◎□■△▲▽▼◇◆☆★]{6,}")
+DECORATIVE_LINE_RE = re.compile(r"[━─═┅┄┈┉＿_~〜]{4,}")
+COMBINING_MARK_RUN_RE = re.compile(r"[\u0300-\u036f]{3,}")
+EXCESS_PUNCT_RE = re.compile(r"(?:!{4,}|！{4,}|\?{4,}|？{4,})")
+KAOMOJI_RE = re.compile(r"(?:[\\/@]\s*[（(]|[（(][^\n]{0,16}[ﾟ゚∀ωДд顔][^\n]{0,16}[）)])")
 LOWER_ENGLISH_FUNCTION_RE = re.compile(
     r"\b(?:is|are|was|were|the|and|or|of|to|for|from|with|this|that|ill)\b",
     re.I,
@@ -67,6 +71,16 @@ def suspicious_lower_ascii_word(text):
     return None
 
 
+def symbol_heavy(text):
+    """Catch ASCII-art/kaomoji-like payloads without rejecting normal news punctuation."""
+    compact = re.sub(r"\s+", "", text)
+    if len(compact) < 12:
+        return False
+    letters = len(HIRA_RE.findall(compact)) + len(KATA_RE.findall(compact)) + len(HAN_RE.findall(compact))
+    symbols = sum(1 for ch in compact if not ch.isalnum() and not HIRA_RE.match(ch) and not KATA_RE.match(ch) and not HAN_RE.match(ch))
+    return symbols >= 8 and symbols > max(letters, int(len(compact) * 0.34))
+
+
 def garbled_japanese_reason(value, strict=False):
     """Return a stable reason when text is structurally impossible/unsafe Japanese."""
     text = str(value or "")
@@ -88,6 +102,16 @@ def garbled_japanese_reason(value, strict=False):
         return "repeated empty-parenthesis placeholder detected"
     if PLACEHOLDER_RUN_RE.search(text):
         return "long placeholder-symbol run detected"
+    if DECORATIVE_LINE_RE.search(text):
+        return "decorative line/ASCII-art run detected"
+    if COMBINING_MARK_RUN_RE.search(text):
+        return "combining-mark corruption run detected"
+    if EXCESS_PUNCT_RE.search(text):
+        return "excessive repeated punctuation detected"
+    if strict and KAOMOJI_RE.search(text):
+        return "kaomoji/ASCII-art payload detected in news prose"
+    if strict and symbol_heavy(text):
+        return "symbol-heavy non-news payload detected"
     for opening, closing in (("「", "」"), ("『", "』"), ("（", "）"), ("(", ")")):
         imbalance = abs(text.count(opening) - text.count(closing))
         if strict and imbalance >= 1:
