@@ -1,8 +1,29 @@
 (() => {
   "use strict";
 
+  const SAFE_LOWER = new Set(["vs","km","kg","cm","mm","ms","gb","tb","mb","kb","fps","bps","kbps","mbps","gbps","app","apps","web","live","online","email","alpha","beta","http","https","www","com","org","net"]);
   const assetLabel = (value) => ({ EQUITY: "株式", ETF: "ETF" }[String(value || "").toUpperCase()] || value || "証券");
   const impactClass = (value) => value === "↑" ? "stock-impact-up" : value === "↓" ? "stock-impact-down" : "stock-impact-neutral";
+
+  function corruptText(value = "") {
+    const text = String(value || "");
+    if (!text) return false;
+    if (/\uFFFD|[\u0000-\u0008\u000B\u000C\u000E-\u001F]/u.test(text)) return true;
+    if (/[\u0400-\u04ff]/u.test(text)) return true;
+    if (/の{5,}/u.test(text)) return true;
+    if (/[ \t]{6,}/u.test(text)) return true;
+    if (/(?:\(\s*\)){3,}|(?:（\s*）){3,}/u.test(text)) return true;
+    if (/[━─═┅┄┈┉＿_~〜]{4,}/u.test(text)) return true;
+    if (/(.{2,8})(?:\s+\1){2,}/u.test(text)) return true;
+    if (/マンチケット|魔女tz|ヘルメットを被ったデカパン|0um32|クーデターum32/u.test(text)) return true;
+    const lower = text.match(/(?<![A-Za-z])[a-z]{2,}(?![A-Za-z])/g) || [];
+    return lower.some(word => !SAFE_LOWER.has(word.toLowerCase()));
+  }
+
+  function corruptStory(story = {}) {
+    return ["title","dek","summary","body","context","why","watchNext","timeLabel","impactLabel"]
+      .some(field => corruptText(story?.[field]));
+  }
 
   async function optionalJson(path) {
     try { return await getJson(path); } catch (error) { console.warn("optional stock layer unavailable", path, error); return null; }
@@ -41,7 +62,7 @@
   }
 
   function normalizeFallback(daily) {
-    const stories = (daily.articles || []).filter((article) => deskOf(article) === "stocks");
+    const stories = (daily.articles || []).filter((article) => deskOf(article) === "stocks" && !corruptStory(article));
     return {
       lastUpdatedLabel: daily.dateLabel || daily.date || "",
       tracked: ["MARKET"],
@@ -60,7 +81,11 @@
     if (!sections) return;
     sections.innerHTML = tracked.map((ticker) => {
       const info = data.tickers?.[ticker] || {};
-      const stories = Array.isArray(info.stories) ? info.stories : [];
+      const stories = (Array.isArray(info.stories) ? info.stories : []).filter((story) => {
+        if (!corruptStory(story)) return true;
+        console.error("QUARANTINED_GARBLED_STOCK_STORY", ticker, story?.id || "");
+        return false;
+      });
       return `<section class="stock-section" id="stock-${esc(ticker.toLowerCase())}"><div class="stock-section-head"><div><div class="stock-symbol">${esc(ticker)}</div><div class="stock-name">${esc(info.name || "")}</div></div><div class="stock-asset-type">${esc(assetLabel(info.assetType))}</div></div>${stories.length ? stories.map((story, index) => storyMarkup(story, index === 0)).join("") : `<p class="stock-empty">現在、この銘柄について掲載できる確認済みニュースはありません。</p>`}</section>`;
     }).join("");
     initAudioSync();
