@@ -16,17 +16,16 @@ def install(runtime) -> None:
         if value and len(value) <= 140 and "\n" not in value:
             localized = value.replace("下一輪", "次回").replace("下一次", "次回")
             if localized != value:
-                # The remaining tokens in this label (Live / 更新 / HKT / time)
-                # are already valid Japanese/site metadata.  Let the existing
-                # mapper process any other known status tokens if possible.
-                mapped = original(localized)
-                result = mapped if mapped is not None else localized
+                # After 下一輪/下一次 is localized, the remaining tokens in this
+                # operational label (Live / 更新 / HKT / time) are already valid
+                # Japanese/site metadata. Return it directly; sending it back to
+                # the old quality guard would reject an unchanged metadata label.
                 print(
                     "LOCAL_MT_METADATA_OVERRIDE",
                     f"source={value!r}",
-                    f"target={result!r}",
+                    f"target={localized!r}",
                 )
-                return result
+                return localized
         return original(text)
 
     runtime.deterministic_time_label = deterministic_time_label
