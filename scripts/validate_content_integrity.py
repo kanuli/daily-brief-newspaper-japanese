@@ -33,10 +33,19 @@ LONG_SPACE_RE = re.compile(r"[ \t]{6,}")
 BAD_SCRIPT_JOIN_RE = re.compile(r"(?:[\u3400-\u9fff][a-z]{2,}\b|\b[a-z]{2,}[\u3400-\u9fff])")
 SPACED_CJK_RE = re.compile(r"(?:[\u3400-\u9fff]\s+){2,}[\u3400-\u9fff]")
 REPEATED_OPEN_CLOSE_RE = re.compile(r"(?:「{2,}|『{2,}|（{2,}|\({2,}|」{2,}|』{2,}|）{2,}|\){2,})")
+REPEATED_EMPTY_PARENS_RE = re.compile(r"(?:(?:\(\s*\))|(?:（\s*）)){3,}")
+PLACEHOLDER_RUN_RE = re.compile(r"[◯○〇●◎□■△▲▽▼◇◆☆★]{6,}")
 LOWER_ENGLISH_FUNCTION_RE = re.compile(
     r"\b(?:is|are|was|were|the|and|or|of|to|for|from|with|this|that|ill)\b",
     re.I,
 )
+LOWER_ASCII_WORD_RE = re.compile(r"(?<![A-Za-z])[a-z]{2,}(?![A-Za-z])")
+LOWER_ASCII_ALLOWLIST = {
+    "km", "kg", "cm", "mm", "ms", "gb", "tb", "mb", "kb",
+    "fps", "bps", "kbps", "mbps", "gbps", "am", "pm", "vs",
+    "web", "app", "apps", "email", "live", "online", "alpha", "beta",
+    "http", "https", "www", "com", "org", "net",
+}
 
 
 def iter_strings(value, path="$"):
@@ -48,6 +57,14 @@ def iter_strings(value, path="$"):
             yield from iter_strings(child, f"{path}[{index}]")
     elif isinstance(value, str):
         yield path, value
+
+
+def suspicious_lower_ascii_word(text):
+    for match in LOWER_ASCII_WORD_RE.finditer(text):
+        word = match.group(0)
+        if word not in LOWER_ASCII_ALLOWLIST:
+            return word
+    return None
 
 
 def garbled_japanese_reason(value, strict=False):
@@ -67,11 +84,22 @@ def garbled_japanese_reason(value, strict=False):
         return "multiple isolated CJK tokens separated by spaces"
     if REPEATED_OPEN_CLOSE_RE.search(text):
         return "repeated unmatched punctuation detected"
+    if REPEATED_EMPTY_PARENS_RE.search(text):
+        return "repeated empty-parenthesis placeholder detected"
+    if PLACEHOLDER_RUN_RE.search(text):
+        return "long placeholder-symbol run detected"
     for opening, closing in (("「", "」"), ("『", "』"), ("（", "）"), ("(", ")")):
-        if abs(text.count(opening) - text.count(closing)) >= 2:
+        imbalance = abs(text.count(opening) - text.count(closing))
+        if strict and imbalance >= 1:
+            return f"punctuation imbalance {opening}{closing}"
+        if imbalance >= 2:
             return f"strong punctuation imbalance {opening}{closing}"
     if LOWER_ENGLISH_FUNCTION_RE.search(text):
         return "unexpected standalone English function word in Japanese copy"
+    if strict:
+        bad_word = suspicious_lower_ascii_word(text)
+        if bad_word:
+            return f"unexpected lowercase ASCII fragment {bad_word!r} in Japanese prose"
     if strict and len(text) >= 28:
         han = len(HAN_RE.findall(text))
         kana = len(HIRA_RE.findall(text)) + len(KATA_RE.findall(text))
