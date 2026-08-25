@@ -22,6 +22,24 @@ TEXT_PART_LIMIT = 280
 OWNER_BATCH_SIZE = 4
 _SENTENCE_SPLIT_RE = re.compile(r"(?<=[。！？；!?])")
 _CLAUSE_SPLIT_RE = re.compile(r"(?<=[，,；;：:])")
+_TIME_LABEL_HINT_RE = re.compile(r"(?:HKT|UTC|JST|\bET\b|\d{1,2}月\d{1,2}日)", re.I)
+_TIME_LABEL_STATUS_RE = re.compile(r"(?:發布|公布|核實|驗證|認證|截至|刊出|發稿|更新)")
+_TIME_LABEL_REPLACEMENTS = (
+    ("已核實", "確認済み"),
+    ("前核實", "までに確認済み"),
+    ("已驗證", "確認済み"),
+    ("前驗證", "までに確認済み"),
+    ("已認證", "確認済み"),
+    ("前認證", "までに確認済み"),
+    ("發布", "公開"),
+    ("公布", "公表"),
+    ("核實", "確認済み"),
+    ("驗證", "確認済み"),
+    ("認證", "確認済み"),
+    ("截至", "時点"),
+    ("刊出", "掲載"),
+    ("發稿", "配信"),
+)
 
 # Capture the validated free fallbacks before install() rebinds production hooks
 # to the local runtime. These are used ONLY for individual local quality failures.
@@ -41,6 +59,29 @@ def checkpoint_cache(label: str) -> None:
         encoding="utf-8",
     )
     print(f"LOCAL_MT_CACHE_CHECKPOINT {label} entries={len(base.CACHE)}")
+
+
+def deterministic_time_label(text: str) -> str | None:
+    """Localize publication/verification metadata without sending it to MT.
+
+    Short timestamp labels contain mostly digits, HKT and a few Cantonese status
+    words. Marian can hallucinate badly on that shape, while the mapping itself
+    is deterministic. Keep all numeric anchors unchanged and use Japanese
+    punctuation so the Chinese-prose quality gate also remains meaningful.
+    """
+    value = str(text or "").strip()
+    if not value or not _TIME_LABEL_HINT_RE.search(value) or not _TIME_LABEL_STATUS_RE.search(value):
+        return None
+    result = value
+    for source, target in _TIME_LABEL_REPLACEMENTS:
+        result = result.replace(source, target)
+    result = result.replace("；", "・").replace("，", "、")
+    result = re.sub(r"\s*・\s*", "・", result)
+    result = re.sub(r"\s+", " ", result).strip()
+    if not safe.target_quality_ok(value, result, strict=False):
+        raise RuntimeError(f"Deterministic time-label localization failed: {value!r} -> {result!r}")
+    print("LOCAL_MT_METADATA_LOCALIZED", f"source={value!r}", f"target={result!r}")
+    return result
 
 
 def _piecewise_retry(text: str, splitter: re.Pattern[str], mode: str, strict=False) -> str | None:
@@ -121,6 +162,10 @@ def _remote_quality_fallback(text: str, strict=False) -> str:
 
 def _retry_quality_failure(text: str, first_value: str, strict=False) -> str:
     """Retry one bad item instead of failing or publishing its whole owner batch."""
+    fixed = deterministic_time_label(text)
+    if fixed is not None:
+        return fixed
+
     print(
         "LOCAL_MT_RETRY_QUALITY",
         f"source={text[:80]!r}",
@@ -173,6 +218,12 @@ def _validated_translation(text: str, value: str, strict=False) -> str:
 
 def localize_or_translate(text: str, strict=False) -> str:
     value = str(text or "")
+    fixed = deterministic_time_label(value)
+    if fixed is not None:
+        base.CACHE[cache_key(value)] = fixed
+        checkpoint_cache("deterministic-time-label")
+        return fixed
+
     if not base.likely_chinese_source(value):
         result = fast.localize_non_chinese(value)
         if not safe.target_quality_ok(value, result, strict=strict):
@@ -191,6 +242,11 @@ def localize_or_translate(text: str, strict=False) -> str:
     for index, part in enumerate(parts):
         if not part.strip():
             resolved[index] = part
+            continue
+        part_fixed = deterministic_time_label(part)
+        if part_fixed is not None:
+            resolved[index] = part_fixed
+            base.CACHE[cache_key(part)] = part_fixed
             continue
         part_cached = base.CACHE.get(cache_key(part))
         if part_cached is not None and safe.target_quality_ok(part, part_cached, strict=False):
@@ -223,15 +279,27 @@ def local_translate_part(part, strict=False):
 
 
 def _translate_short_group(group):
-    source_texts = [text for text, _strict in group]
+    model_group = []
+    for text, strict in group:
+        fixed = deterministic_time_label(text)
+        if fixed is not None:
+            base.CACHE[cache_key(text)] = fixed
+            checkpoint_cache("short-deterministic-time-label")
+        else:
+            model_group.append((text, strict))
+
+    if not model_group:
+        return
+
+    source_texts = [text for text, _strict in model_group]
     outputs = local_zh_ja.translate_many(source_texts, batch_size=OWNER_BATCH_SIZE)
-    if len(outputs) != len(group):
+    if len(outputs) != len(model_group):
         raise RuntimeError("Local OPUS-MT returned wrong owner batch size")
-    for index, ((text, strict), value) in enumerate(zip(group, outputs), 1):
+    for index, ((text, strict), value) in enumerate(zip(model_group, outputs), 1):
         value = _validated_translation(text, value, strict=strict)
         base.CACHE[cache_key(text)] = value
         # Persist every successful item before attempting the next difficult item.
-        checkpoint_cache(f"short-item-{index}-of-{len(group)}")
+        checkpoint_cache(f"short-item-{index}-of-{len(model_group)}")
 
 
 def local_prewarm_translations(source, label):
@@ -244,6 +312,11 @@ def local_prewarm_translations(source, label):
         cached = base.CACHE.get(cache_key(text))
         if cached is not None and safe.target_quality_ok(text, cached, strict=strict):
             cached_count += 1
+            continue
+        fixed = deterministic_time_label(text)
+        if fixed is not None:
+            base.CACHE[cache_key(text)] = fixed
+            local_count += 1
             continue
         if not base.likely_chinese_source(text):
             base.CACHE[cache_key(text)] = localize_or_translate(text, strict=strict)
