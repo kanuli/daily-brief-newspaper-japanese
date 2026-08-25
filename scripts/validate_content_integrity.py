@@ -39,6 +39,9 @@ DECORATIVE_LINE_RE = re.compile(r"[━─═┅┄┈┉＿_~〜]{4,}")
 COMBINING_MARK_RUN_RE = re.compile(r"[\u0300-\u036f]{3,}")
 EXCESS_PUNCT_RE = re.compile(r"(?:!{4,}|！{4,}|\?{4,}|？{4,})")
 KAOMOJI_RE = re.compile(r"(?:[\\/@]\s*[（(]|[（(][^\n]{0,16}[ﾟ゚∀ωДд顔][^\n]{0,16}[）)])")
+REPEATED_PARTICLE_RE = re.compile(r"の{5,}")
+REPEATED_TOKEN_RE = re.compile(r"(.{2,8})(?:\s+\1){2,}")
+CYRILLIC_RE = re.compile(r"[\u0400-\u04ff]")
 LOWER_ENGLISH_FUNCTION_RE = re.compile(
     r"\b(?:is|are|was|were|the|and|or|of|to|for|from|with|this|that|ill)\b",
     re.I,
@@ -92,6 +95,12 @@ def garbled_japanese_reason(value, strict=False):
         return "internal translation batch marker leaked"
     if LONG_SPACE_RE.search(text):
         return "abnormal long whitespace run detected"
+    if CYRILLIC_RE.search(text):
+        return "unexpected Cyrillic script detected in Japanese copy"
+    if REPEATED_PARTICLE_RE.search(text):
+        return "impossible repeated Japanese particle run detected"
+    if REPEATED_TOKEN_RE.search(text):
+        return "repeated placeholder-like phrase detected"
     if BAD_SCRIPT_JOIN_RE.search(text):
         return "impossible Han/lowercase-ASCII token join detected"
     if SPACED_CJK_RE.search(text):
