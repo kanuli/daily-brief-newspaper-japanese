@@ -8,6 +8,7 @@ on:
       - 'scripts/validate_content_integrity.py'
       - 'scripts/safe_sync.py'
       - 'scripts/local_translation_runtime.py'
+      - 'scripts/local_batch_prewarm.py'
       - '.github/workflows/sync-japanese-news.yml'
   schedule:
     # 広東語版の毎時公開を唯一のニュース源として、30分後に日本語版を処理する。
