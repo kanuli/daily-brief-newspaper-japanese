@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const BUILD='20260825-parity4';
+  const BUILD='20260825-parity5-f3status';
   const NAV = [
     ['live.html','<ruby>速報<rt>そくほう</rt></ruby>','live-nav'],
     ['index.html','<ruby>一面<rt>いちめん</rt></ruby>トップ',''],
@@ -98,6 +98,7 @@
   function applyStaticRuby(){document.querySelectorAll('.brand h1').forEach(h=>{if(h.textContent.trim()==='日刊速報')h.innerHTML='<ruby>日刊速報<rt>にっかんそくほう</rt></ruby>';});}
 
   function ensureIntegrityGuard(){if(hasAsset('assets/js/live-guard.js'))return;addScript(`assets/js/live-guard.js?v=${BUILD}`,'integrityGuard');}
+  function ensureVoiceProductionStatus(){if(hasAsset('assets/js/f3-voice-status-ja.js'))return;addScript(`assets/js/f3-voice-status-ja.js?v=${BUILD}`,'f3VoiceStatusJa');}
   function row(id,title,detail){return `<div id="${id}" class="system-panel-row status-check"><span class="status-dot" aria-hidden="true"></span><div><strong>${title}</strong><small>${detail}</small></div></div>`;}
   function mark(id,state,detail){const el=document.getElementById(id);if(!el)return;el.className=`system-panel-row status-${state}`;if(detail){const small=el.querySelector('small');if(small)small.textContent=detail;}}
   function mixedJapaneseProse(value=''){const text=String(value||'').trim();if(!text)return false;if(CHINESE_PROSE_RE.test(text))return true;if(text.length<28)return false;const han=(text.match(HAN_RE)||[]).length,hira=(text.match(HIRA_RE)||[]).length;return han>=8&&hira<Math.max(2,Math.floor(han*.06));}
@@ -112,7 +113,7 @@
     const setOpen=open=>{panel.hidden=!open;button.setAttribute('aria-expanded',String(open));if(open)refreshHealth();};button.addEventListener('click',()=>setOpen(panel.hidden));panel.querySelector('.system-panel-close')?.addEventListener('click',()=>setOpen(false));document.addEventListener('keydown',e=>{if(e.key==='Escape')setOpen(false);});document.body.append(button,panel);
   }
 
-  function boot(){ensureBaseStyles();normalizeNav();normalizeTopicShell();applyStaticRuby();ensurePageAssets();mountSystemPanel();ensureIntegrityGuard();}
+  function boot(){ensureBaseStyles();normalizeNav();normalizeTopicShell();applyStaticRuby();ensurePageAssets();mountSystemPanel();ensureVoiceProductionStatus();ensureIntegrityGuard();}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
-  window.addEventListener('pageshow',()=>{ensureBaseStyles();normalizeNav();normalizeTopicShell();applyStaticRuby();ensurePageAssets();ensureIntegrityGuard();});
+  window.addEventListener('pageshow',()=>{ensureBaseStyles();normalizeNav();normalizeTopicShell();applyStaticRuby();ensurePageAssets();mountSystemPanel();ensureVoiceProductionStatus();ensureIntegrityGuard();});
 })();
