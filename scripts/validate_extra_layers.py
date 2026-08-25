@@ -8,7 +8,6 @@ import validate_content_integrity as core
 
 ROOT = Path(__file__).resolve().parents[1]
 STATIC = (ROOT / "data/desk-latest.json", ROOT / "data/stocks-latest.json")
-PROSE_FIELDS = tuple(core.PROSE_FIELDS) + ("impactLabel",)
 
 
 def story_like(value):
@@ -58,10 +57,7 @@ def validate(path):
     for story in iter_stories(data):
         count += 1
         aid = story.get("id") or "unknown"
-        for field in PROSE_FIELDS:
-            text = story.get(field)
-            if isinstance(text, str) and text.strip() and core.prose_is_mixed(text):
-                issues.append(f"{label}:{aid}:{field}: partially untranslated Traditional Chinese detected")
+        issues.extend(core.collect_story_issues(label, story))
         furigana = story.get("furigana")
         if not isinstance(furigana, dict):
             issues.append(f"{label}:{aid}: missing furigana metadata")
@@ -84,10 +80,10 @@ def main():
         issues.extend(validate(path))
     if issues:
         print("EXTRA_LAYER_INTEGRITY_FAIL")
-        for issue in issues[:100]:
+        for issue in issues[:120]:
             print(" -", issue)
-        if len(issues) > 100:
-            print(f" - ... and {len(issues) - 100} more")
+        if len(issues) > 120:
+            print(f" - ... and {len(issues) - 120} more")
         return 1
     print("EXTRA_LAYER_INTEGRITY_OK", ", ".join(str(p.relative_to(ROOT)) for p in found))
     return 0
