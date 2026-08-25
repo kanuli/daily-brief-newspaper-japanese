@@ -6,6 +6,11 @@ Japanese stories to the frozen Cantonese snapshot by story id, retranslates
 only fields that fail the production Japanese quality gate, regenerates safe
 furigana for repaired stories, and leaves missing/new source stories for the
 separate resumable parity catch-up worker.
+
+Known-bad published fields are repaired with the validated free remote fallback
+chain first. The local OPUS-MT model remains a final fallback only, because
+retrying the same local model first can reproduce the exact corruption this
+worker is supposed to remove and waste most of the repair window.
 """
 from __future__ import annotations
 
@@ -52,6 +57,34 @@ def bad_translation(source_text: str, japanese_text: str, strict: bool) -> bool:
     return not safe.target_quality_ok(source_text, japanese_text, strict=strict)
 
 
+def repair_value(source_text: str, strict: bool) -> str:
+    """Repair known-bad publication copy without repeating local MT first."""
+    remote_error = None
+    try:
+        value = runtime._remote_quality_fallback(source_text, strict=strict)
+        if not bad_translation(source_text, value, strict):
+            return value
+        remote_error = RuntimeError("remote fallback returned rejected text")
+    except Exception as exc:
+        remote_error = exc
+        print(
+            "EXTRA_TARGET_REMOTE_REPAIR_DEFER",
+            f"source={source_text[:80]!r}",
+            f"error={type(exc).__name__}:{exc}",
+        )
+
+    # Free remote translators can be temporarily rate-limited. In that case the
+    # validated local path still gets one final chance and retains its own
+    # per-field fallback chain.
+    value = runtime.localize_or_translate(source_text, strict=strict)
+    if bad_translation(source_text, value, strict):
+        raise RuntimeError(
+            "Targeted repair failed after remote-first and local fallback: "
+            f"remote={remote_error}"
+        )
+    return value
+
+
 def repair_file(name: str, source) -> int:
     path = DATA / name
     if not path.is_file():
@@ -82,7 +115,7 @@ def repair_file(name: str, source) -> int:
                 f"field={field}",
                 f"old={str(current or '')[:90]!r}",
             )
-            value = runtime.localize_or_translate(source_text, strict=strict)
+            value = repair_value(source_text, strict)
             if bad_translation(source_text, value, strict):
                 raise RuntimeError(
                     f"Targeted repair still failed quality: {name}:{story_id}:{field}"
