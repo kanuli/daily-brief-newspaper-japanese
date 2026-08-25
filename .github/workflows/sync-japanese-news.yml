@@ -10,6 +10,7 @@ on:
       - 'scripts/local_translation_runtime.py'
       - 'scripts/local_batch_prewarm.py'
       - 'scripts/repair_garbled_core.py'
+      - 'scripts/emergency_remote_core_sync.py'
       - '.github/workflows/sync-japanese-news.yml'
   schedule:
     # 広東語版の毎時公開を唯一のニュース源として、30分後に日本語版を処理する。
@@ -59,7 +60,7 @@ jobs:
           pip install -r requirements-translation.txt
 
       - name: 下流パイプラインを構文検査
-        run: python -m py_compile scripts/cantonese_snapshot.py scripts/sync_and_translate.py scripts/safe_sync.py scripts/fast_safe_sync.py scripts/local_zh_ja.py scripts/local_translation_runtime.py scripts/local_batch_prewarm.py scripts/local_fast_safe_sync.py scripts/repair_garbled_core.py scripts/furigana_context.py scripts/furigana_safe_runtime.py scripts/validate_furigana_readings.py scripts/validate_content_integrity.py scripts/check_source_drift.py scripts/notify_discord.py
+        run: python -m py_compile scripts/cantonese_snapshot.py scripts/sync_and_translate.py scripts/safe_sync.py scripts/fast_safe_sync.py scripts/local_zh_ja.py scripts/local_translation_runtime.py scripts/local_batch_prewarm.py scripts/local_fast_safe_sync.py scripts/repair_garbled_core.py scripts/emergency_remote_core_sync.py scripts/furigana_context.py scripts/furigana_safe_runtime.py scripts/validate_furigana_readings.py scripts/validate_content_integrity.py scripts/check_source_drift.py scripts/notify_discord.py
 
       - name: 広東語版mainを1コミットに固定
         run: python scripts/cantonese_snapshot.py
@@ -176,3 +177,80 @@ jobs:
           if [ "$LATEST_CHANGED" = "true" ]; then args+=(--daily); fi
           if [ "$LIVE_CHANGED" = "true" ]; then args+=(--live); fi
           python scripts/notify_discord.py "${args[@]}"
+
+  emergency_remote_core:
+    name: 通常同期失敗時の遠隔コア復旧
+    needs: sync
+    if: ${{ always() && needs.sync.result == 'failure' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      CANTONESE_SNAPSHOT_DIR: .cantonese-snapshot/data
+    steps:
+      - name: 最新production mainを取得
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 30
+
+      - name: Pythonを設定
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 遠隔復旧に必要な最小依存だけを導入
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --disable-pip-version-check --quiet \
+            requests==2.32.5 \
+            deep-translator==1.11.4 \
+            pykakasi==2.3.0
+
+      - name: 遠隔復旧経路を構文検査
+        run: python -m py_compile scripts/cantonese_snapshot.py scripts/emergency_remote_core_sync.py scripts/safe_sync.py scripts/sync_and_translate.py scripts/furigana_context.py scripts/furigana_safe_runtime.py scripts/validate_content_integrity.py scripts/validate_furigana_readings.py scripts/check_source_drift.py
+
+      - name: 広東語版mainを1コミットに固定
+        run: python scripts/cantonese_snapshot.py
+
+      - name: ローカルモデルを使わずコアニュースを復旧
+        timeout-minutes: 10
+        run: python scripts/emergency_remote_core_sync.py
+
+      - name: 復旧結果を同一スナップショットと照合
+        env:
+          PARITY_SCOPE: base
+        run: python scripts/check_source_drift.py
+
+      - name: 復旧した日本語本文を検証
+        run: python scripts/validate_content_integrity.py
+
+      - name: 復旧したふりがなを検証
+        run: python scripts/validate_furigana_readings.py
+
+      - name: 遠隔復旧済みコアニュースを公開
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'daily-brief-japanese-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add data/latest.json data/live.json data/archive.json data/translation-cache.json
+          if git diff --cached --quiet; then
+            echo 'Emergency remote recovery found no publication change.'
+            exit 0
+          fi
+          git commit -m '通常同期失敗を遠隔翻訳で自動復旧'
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              sleep $((attempt * 2))
+              continue
+            fi
+            if git push origin HEAD:main; then
+              echo 'EMERGENCY_REMOTE_CORE_RECOVERY_PUSH_OK'
+              exit 0
+            fi
+            sleep $((attempt * 2))
+          done
+          exit 1
