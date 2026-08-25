@@ -4,6 +4,8 @@
 Production translation deliberately avoids Google/remote translation APIs.
 The model is Helsinki-NLP/opus-mt-tc-big-zh-ja (OPUS-MT, CC-BY-4.0), loaded
 locally on the GitHub Actions runner and reused for small batched inference.
+Traditional Chinese is preserved for the first pass; failed items can be
+retried after local Traditional -> Simplified normalization with OpenCC.
 """
 from __future__ import annotations
 
@@ -12,6 +14,7 @@ import threading
 from typing import Iterable
 
 import torch
+from opencc import OpenCC
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 
 MODEL_NAME = "Helsinki-NLP/opus-mt-tc-big-zh-ja"
@@ -23,6 +26,12 @@ _MODEL = None
 _TOKENIZER = None
 _LOAD_LOCK = threading.Lock()
 _INFER_LOCK = threading.Lock()
+_T2S = OpenCC("t2s")
+
+
+def simplify_traditional(text: str) -> str:
+    """Normalize Traditional Chinese locally; never touches a remote service."""
+    return _T2S.convert(str(text or ""))
 
 
 def _load():
@@ -49,13 +58,17 @@ def _batched(values: list[str], size: int):
         yield values[start : start + size]
 
 
-def translate_many(texts: Iterable[str], batch_size: int = MODEL_BATCH_SIZE) -> list[str]:
-    """Translate a list locally while preserving input order.
-
-    Empty strings are preserved. Inference is serialized because a single model
-    instance is substantially more memory-efficient than parallel model copies.
-    """
+def translate_many(
+    texts: Iterable[str],
+    batch_size: int = MODEL_BATCH_SIZE,
+    *,
+    normalize_traditional: bool = False,
+    num_beams: int = 4,
+) -> list[str]:
+    """Translate locally while preserving order and using one model instance."""
     values = [str(x or "") for x in texts]
+    if normalize_traditional:
+        values = [simplify_traditional(x) for x in values]
     if not values:
         return []
 
@@ -73,7 +86,7 @@ def translate_many(texts: Iterable[str], batch_size: int = MODEL_BATCH_SIZE) -> 
             generated = model.generate(
                 **encoded,
                 max_length=MAX_TARGET_TOKENS,
-                num_beams=4,
+                num_beams=max(1, int(num_beams)),
                 early_stopping=True,
                 renormalize_logits=True,
             )
@@ -82,8 +95,18 @@ def translate_many(texts: Iterable[str], batch_size: int = MODEL_BATCH_SIZE) -> 
     return output
 
 
-def translate_one(text: str) -> str:
-    values = translate_many([text], batch_size=1)
+def translate_one(
+    text: str,
+    *,
+    normalize_traditional: bool = False,
+    num_beams: int = 4,
+) -> str:
+    values = translate_many(
+        [text],
+        batch_size=1,
+        normalize_traditional=normalize_traditional,
+        num_beams=num_beams,
+    )
     return values[0] if values else ""
 
 
