@@ -6,6 +6,7 @@ import fast_safe_sync as fast
 import furigana_safe_runtime as furigana_safe
 import local_metadata_overrides as metadata_overrides
 import local_translation_runtime as runtime
+import self_healing_runtime as self_healing
 import sync_and_translate as base
 
 
@@ -14,6 +15,7 @@ def main():
     base.fetch = lambda name: snapshot.load_json(name, optional=True)
     metadata_overrides.install(runtime)
     runtime.install()
+    self_healing.install()
     furigana_safe.install()
     fast.main()
 
