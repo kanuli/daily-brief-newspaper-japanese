@@ -23,7 +23,10 @@ except Exception:
 
 _RT_RE = re.compile(r"<rt>.*?</rt>")
 _PAST_AFTER_RE = re.compile(r"(?<=た)<ruby>後<rt>[^<]+</rt></ruby>")
-_ONE_DAY_LESS_RE = re.compile(r"(?:1<ruby>日<rt>[^<]+</rt></ruby>|<ruby>1日<rt>[^<]+</rt></ruby>)(?=足らず)")
+_ONE_DAY_LESS_RE = re.compile(
+    r"(?:1<ruby>日<rt>[^<]+</rt></ruby>|<ruby>1日<rt>[^<]+</rt></ruby>)"
+    r"(?=(?:足らず|<ruby>足<rt>[^<]+</rt></ruby>らず))"
+)
 _ORIGINAL_RUBY_HTML = base.ruby_html
 
 _SUDACHI = None
@@ -38,10 +41,8 @@ if sudachi_dictionary is not None and sudachi_tokenizer is not None:
         _SPLIT_MODE = None
 
 _PROTECTED_REPLACEMENTS = (
-    # 麻しん / 麻疹 = ましん. Generic character reading often misreads 麻 as あさ.
     (re.compile(r"<ruby>麻<rt>[^<]+</rt></ruby>しん"), "<ruby>麻<rt>ま</rt></ruby>しん"),
     (re.compile(r"<ruby>麻疹<rt>[^<]+</rt></ruby>"), "<ruby>麻疹<rt>ましん</rt></ruby>"),
-    # High-value lexical compounds that must never regress even in fallback mode.
     (re.compile(r"<ruby>氷河<rt>[^<]+</rt></ruby><ruby>湖<rt>[^<]+</rt></ruby>"), "<ruby>氷河湖<rt>ひょうがこ</rt></ruby>"),
     (re.compile(r"<ruby>氷河湖<rt>[^<]+</rt></ruby>"), "<ruby>氷河湖<rt>ひょうがこ</rt></ruby>"),
     (re.compile(r"<ruby>土砂崩<rt>[^<]+</rt></ruby>れ"), "<ruby>土砂崩れ<rt>どしゃくずれ</rt></ruby>"),
@@ -110,7 +111,6 @@ def _editorial_fix(rendered: str) -> str:
 
 
 def _contextualize(source: str, rendered: str) -> str:
-    # Existing context rules still own dates, counters, 対/後/行方/米ドル, etc.
     value = base.furigana_context.apply_contextual_readings(source, rendered)
     return _editorial_fix(value)
 
@@ -119,8 +119,6 @@ def safe_ruby_html(text) -> str:
     value = str(text or "")
     if not value:
         return ""
-
-    # Lexical dictionary first.
     try:
         lexical = _contextualize(value, _sudachi_ruby(value))
         if visible_text(lexical) == value:
@@ -129,8 +127,6 @@ def safe_ruby_html(text) -> str:
     except Exception as exc:
         print("FURIGANA_SUDACHI_FALLBACK", type(exc).__name__, str(exc)[:120])
 
-    # Keep the previous engine as a per-field fallback, then apply independent
-    # protected corrections. This preserves availability during dictionary faults.
     try:
         legacy = _contextualize(value, _pykakasi_ruby(value))
     except Exception:
@@ -138,7 +134,6 @@ def safe_ruby_html(text) -> str:
     if visible_text(legacy) == value:
         return legacy
 
-    # Last-resort display safety: correct Japanese copy is more important than ruby.
     print("FURIGANA_VISIBLE_TEXT_ESCAPE", value[:100])
     return html.escape(value, quote=False)
 
