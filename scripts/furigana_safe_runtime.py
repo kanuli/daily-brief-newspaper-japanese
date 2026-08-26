@@ -28,9 +28,6 @@ _ONE_DAY_LESS_RE = re.compile(
     r"(?=(?:足らず|<ruby>足<rt>[^<]+</rt></ruby>らず))"
 )
 _ONE_DAY_LESS_LEGACY_RE = re.compile(r"1<ruby>日足<rt>[^<]+</rt></ruby>らず")
-# Dates/counters have editorially explicit readings in furigana_context.py.
-# These forms deliberately use that renderer first rather than asking Sudachi to
-# decide token boundaries around digits.
 _SPECIAL_CONTEXT_RE = re.compile(r"\d|対|後|行方|米ドル")
 _ORIGINAL_RUBY_HTML = base.ruby_html
 
@@ -50,6 +47,10 @@ _PROTECTED_REPLACEMENTS = (
     (re.compile(r"<ruby>麻疹<rt>[^<]+</rt></ruby>"), "<ruby>麻疹<rt>ましん</rt></ruby>"),
     (re.compile(r"<ruby>氷河<rt>[^<]+</rt></ruby><ruby>湖<rt>[^<]+</rt></ruby>"), "<ruby>氷河湖<rt>ひょうがこ</rt></ruby>"),
     (re.compile(r"<ruby>氷河湖<rt>[^<]+</rt></ruby>"), "<ruby>氷河湖<rt>ひょうがこ</rt></ruby>"),
+    # Sudachi may split 土砂崩れ into 土砂 + 崩れ. Normalize valid token splits
+    # into one learner-facing lexical unit with the editorial reading.
+    (re.compile(r"<ruby>土砂<rt>[^<]+</rt></ruby><ruby>崩<rt>[^<]+</rt></ruby>れ"), "<ruby>土砂崩れ<rt>どしゃくずれ</rt></ruby>"),
+    (re.compile(r"<ruby>土砂<rt>[^<]+</rt></ruby><ruby>崩れ<rt>[^<]+</rt></ruby>"), "<ruby>土砂崩れ<rt>どしゃくずれ</rt></ruby>"),
     (re.compile(r"<ruby>土砂崩<rt>[^<]+</rt></ruby>れ"), "<ruby>土砂崩れ<rt>どしゃくずれ</rt></ruby>"),
     (re.compile(r"<ruby>土砂崩れ<rt>[^<]+</rt></ruby>"), "<ruby>土砂崩れ<rt>どしゃくずれ</rt></ruby>"),
     (re.compile(r"<ruby>山火<rt>[^<]+</rt></ruby><ruby>事<rt>[^<]+</rt></ruby>"), "<ruby>山火事<rt>やまかじ</rt></ruby>"),
@@ -136,7 +137,6 @@ def safe_ruby_html(text) -> str:
     value = str(text or "")
     if not value:
         return ""
-
     if _SPECIAL_CONTEXT_RE.search(value):
         try:
             contextual = _validated(value, _pykakasi_ruby(value), "CONTEXT")
@@ -144,14 +144,12 @@ def safe_ruby_html(text) -> str:
                 return contextual
         except Exception as exc:
             print("FURIGANA_CONTEXT_PRIMARY_FALLBACK", type(exc).__name__, str(exc)[:120])
-
     try:
         lexical = _validated(value, _sudachi_ruby(value), "SUDACHI")
         if lexical is not None:
             return lexical
     except Exception as exc:
         print("FURIGANA_SUDACHI_FALLBACK", type(exc).__name__, str(exc)[:120])
-
     try:
         legacy = _validated(value, _pykakasi_ruby(value), "LEGACY")
         if legacy is not None:
@@ -160,7 +158,6 @@ def safe_ruby_html(text) -> str:
         legacy = _editorial_fix(_ORIGINAL_RUBY_HTML(value))
         if visible_text(legacy) == value:
             return legacy
-
     print("FURIGANA_VISIBLE_TEXT_ESCAPE", value[:100])
     return html.escape(value, quote=False)
 
