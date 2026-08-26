@@ -1,12 +1,38 @@
 #!/usr/bin/env python3
 """Remote-only self-healing rebuild for Daily/Live/Archive Japanese publication.
 
-This path stays independent of torch/transformers/OPUS-MT. If a remote
-translation backend fails for one story, that owner is quarantined while clean
-current stories continue to publish. The degraded owner is retried on later
-sync/maintenance cycles and is never allowed to poison Japanese publication.
+This path stays independent of torch/transformers/OPUS-MT. It ensures the small
+lexical furigana dependencies are present even when the emergency GitHub job was
+started with the legacy minimal dependency set, then applies the same newsroom
+and furigana standards as the normal publication path.
 """
 from __future__ import annotations
+
+import importlib.util
+import subprocess
+import sys
+
+
+def ensure_lexical_furigana_dependencies() -> None:
+    if importlib.util.find_spec("sudachipy") is not None:
+        return
+    print("EMERGENCY_INSTALL_SUDACHI lexical_furigana_required=true")
+    subprocess.run(
+        [
+            sys.executable,
+            "-m",
+            "pip",
+            "install",
+            "--disable-pip-version-check",
+            "--quiet",
+            "SudachiPy==0.6.11",
+            "SudachiDict-core==20260723",
+        ],
+        check=True,
+    )
+
+
+ensure_lexical_furigana_dependencies()
 
 import cantonese_snapshot as snapshot
 import fast_safe_sync as fast
