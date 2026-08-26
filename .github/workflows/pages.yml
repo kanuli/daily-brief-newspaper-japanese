@@ -65,7 +65,10 @@ jobs:
           python scripts/validate_furigana_readings.py
           python scripts/validate_vocab_quality.py
           python scripts/validate_extra_layers.py
-          python scripts/validate_site.py --data-only
+          # News must remain publishable while server-side F3 audio is still
+          # generating. Full audio completeness is checked separately by the
+          # strict validate_site.py --data-only / F3 health workflows.
+          python scripts/validate_publication_readiness.py
           echo 'clean=true' >> "$GITHUB_OUTPUT"
           echo 'EDITORIAL_PUBLICATION_GATE_OK'
 
