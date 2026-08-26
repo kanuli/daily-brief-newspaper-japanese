@@ -315,6 +315,7 @@ jobs:
           LATEST_AGE: ${{ steps.workers.outputs.sync_latest_age }}
           FAILURE_STREAK: ${{ steps.workers.outputs.sync_failure_streak }}
           DEFERRED: ${{ steps.quarantine.outputs.core_deferred }}
+          BASE_DRIFT: ${{ steps.drift.outputs.base_drift }}
         shell: bash
         run: |
           set -euo pipefail
@@ -338,18 +339,22 @@ jobs:
             sleep 3
           fi
           needs_cooldown=0
-          if [ "${LATEST_HEAD:-}" = "$main_sha" ] && [ "${FAILURE_STREAK:-0}" -ge 2 ]; then
-            needs_cooldown=1
-          fi
-          if [ "${LATEST_HEAD:-}" = "$main_sha" ] && [ "${DEFERRED:-false}" = 'true' ]; then
-            needs_cooldown=1
+          if [ "${BASE_DRIFT:-false}" = 'true' ]; then
+            echo 'Fresh Cantonese core drift detected; bypassing recovery cooldown.'
+          else
+            if [ "${LATEST_HEAD:-}" = "$main_sha" ] && [ "${FAILURE_STREAK:-0}" -ge 2 ]; then
+              needs_cooldown=1
+            fi
+            if [ "${LATEST_HEAD:-}" = "$main_sha" ] && [ "${DEFERRED:-false}" = 'true' ]; then
+              needs_cooldown=1
+            fi
           fi
           if [ "$needs_cooldown" -eq 1 ] && [ "${LATEST_AGE:-999999}" -lt "${RECOVERY_COOLDOWN_SECONDS}" ]; then
             echo "Core recovery cooldown active (${LATEST_AGE}s < ${RECOVERY_COOLDOWN_SECONDS}s); maintenance will retry automatically."
             exit 0
           fi
           gh workflow run sync-japanese-news.yml --repo "${{ github.repository }}" --ref main
-          echo "JAPANESE_TEXT_SYNC_RECOVERY_DISPATCHED main=${main_sha} deferred=${DEFERRED:-false}"
+          echo "JAPANESE_TEXT_SYNC_RECOVERY_DISPATCHED main=${main_sha} deferred=${DEFERRED:-false} drift=${BASE_DRIFT:-false}"
 
       - name: Recover rolling translation quality independently
         if: github.event_name != 'pull_request' && (steps.publication_qa.outputs.extra_healthy != 'true' || steps.drift.outputs.extra_drift == 'true' || steps.quarantine.outputs.extra_deferred == 'true' || steps.workers.outputs.repair_latest_conclusion == 'failure')
@@ -498,7 +503,9 @@ jobs:
             echo '::warning::Current rolling Japanese publication has quarantined owners; automatic rolling retry remains active.'
           fi
           if [ "${{ steps.audio_qa.outputs.healthy }}" != 'true' ]; then
-            if [ "${{ steps.audio_qa.outputs.data_age || '999999' }}" -lt 1200 ]; then
+            if [ "${{ steps.drift.outputs.base_drift }}" = 'true' ] || [ "${{ steps.publication_qa.outputs.core_healthy }}" != 'true' ] || [ "${{ steps.publication_qa.outputs.furigana_healthy }}" != 'true' ]; then
+              echo '::warning::F3 audio recovery is deferred until current core text/data recovery completes.'
+            elif [ "${{ steps.audio_qa.outputs.data_age || '999999' }}" -lt 1200 ]; then
               echo '::warning::F3 audio is inside the normal 20-minute server production grace period.'
             else
               echo '::error::F3 production audio is unhealthy beyond the grace period.'
