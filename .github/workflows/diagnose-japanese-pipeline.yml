@@ -30,6 +30,9 @@ jobs:
             deep-translator==1.11.4 \
             pykakasi==2.3.0
 
+      - name: 静的サイトQA
+        run: python scripts/validate_site.py --static-only
+
       - name: 全サイト編集品質QA
         shell: bash
         run: |
@@ -39,7 +42,7 @@ jobs:
           python scripts/validate_furigana_readings.py
           python scripts/validate_vocab_quality.py
           python scripts/validate_extra_layers.py
-          python scripts/validate_site.py
+          python scripts/validate_publication_readiness.py
 
       - name: JavaScript構文チェック
         run: |
