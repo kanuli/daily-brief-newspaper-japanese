@@ -112,10 +112,12 @@ def _mark_degraded(translated, name, deferred):
 
 
 def _normalize_daily_references(translated, output):
+    """Remove every reference to an owner that was quarantined from this edition."""
     if not isinstance(translated, dict):
         return
     valid_ids = [str(item.get("id")) for item in output if isinstance(item, dict) and item.get("id")]
     valid_set = set(valid_ids)
+
     top = [str(x) for x in (translated.get("topFive") or []) if str(x) in valid_set]
     for item_id in valid_ids:
         if item_id not in top:
@@ -125,6 +127,22 @@ def _normalize_daily_references(translated, output):
     translated["topFive"] = top[:5]
     if str(translated.get("leadId") or "") not in valid_set:
         translated["leadId"] = top[0] if top else (valid_ids[0] if valid_ids else None)
+
+    # Sections are navigation/index metadata. Leaving a quarantined article ID
+    # here creates a broken card/link even though the bad story itself is safely
+    # withheld, so all section references must be pruned in the same transaction.
+    for section in translated.get("sections") or []:
+        if not isinstance(section, dict) or not isinstance(section.get("articleIds"), list):
+            continue
+        before = [str(x) for x in section.get("articleIds") or []]
+        after = [item_id for item_id in before if item_id in valid_set]
+        section["articleIds"] = after
+        if before != after:
+            print(
+                "SELF_HEAL_SECTION_REFERENCES_PRUNED",
+                f"slug={section.get('slug') or 'unknown'}",
+                f"removed={len(before) - len(after)}",
+            )
 
 
 def _convert_story_list(name, source, existing, list_key):
