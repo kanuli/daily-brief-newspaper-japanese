@@ -19,7 +19,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SCHEMA = base.TRANSLATION_SCHEMA
 safety.install()
 
-CASES = {
+STANDARD_CASES = {
     "9月8日":"<ruby>9月<rt>くがつ</rt></ruby><ruby>8日<rt>ようか</rt></ruby>",
     "4月1日":"<ruby>4月<rt>しがつ</rt></ruby><ruby>1日<rt>ついたち</rt></ruby>",
     "7月14日":"<ruby>7月<rt>しちがつ</rt></ruby><ruby>14日<rt>じゅうよっか</rt></ruby>",
@@ -51,6 +51,9 @@ CASES = {
     "1節":"<ruby>1節<rt>いっせつ</rt></ruby>",
     "13話":"<ruby>13話<rt>じゅうさんわ</rt></ruby>",
     "日本":"<ruby>日本<rt>にほん</rt></ruby>",
+}
+
+LEXICAL_CASES = {
     "麻しん":"<ruby>麻<rt>ま</rt></ruby>しん",
     "麻疹":"<ruby>麻疹<rt>ましん</rt></ruby>",
     "氷河湖":"<ruby>氷河湖<rt>ひょうがこ</rt></ruby>",
@@ -74,19 +77,19 @@ def load(name):
     return json.loads((ROOT / "data" / name).read_text(encoding="utf-8"))
 
 
+def check_cases(cases, issues, kind):
+    for text, expected in cases.items():
+        actual = base.ruby_html(text)
+        if expected not in actual:
+            issues.append(f"{kind}:{text}: expected {expected!r}, got {actual!r}")
+        if safety.visible_text(actual) != text:
+            issues.append(f"{kind}:{text}: ruby changed visible Japanese")
+
+
 def check_unit_cases(issues):
-    for text, expected in CASES.items():
-        actual = base.ruby_html(text)
-        if expected not in actual:
-            issues.append(f"unit:{text}: expected {expected!r}, got {actual!r}")
-        if safety.visible_text(actual) != text:
-            issues.append(f"unit:{text}: ruby changed visible Japanese")
-    for text, expected in CONTEXT_CASES.items():
-        actual = base.ruby_html(text)
-        if expected not in actual:
-            issues.append(f"unit:{text}: missing contextual reading {expected!r}; got {actual!r}")
-        if safety.visible_text(actual) != text:
-            issues.append(f"unit:{text}: contextual ruby changed visible Japanese")
+    check_cases(STANDARD_CASES, issues, "standard")
+    check_cases(LEXICAL_CASES, issues, "lexical")
+    check_cases(CONTEXT_CASES, issues, "context")
 
 
 def check_item(name, item, issues):
@@ -190,14 +193,28 @@ def main():
     parser = argparse.ArgumentParser()
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument("--units-only", action="store_true")
+    mode.add_argument("--standard-units-only", action="store_true")
+    mode.add_argument("--lexical-units-only", action="store_true")
+    mode.add_argument("--context-units-only", action="store_true")
     mode.add_argument("--corpus-only", action="store_true")
     args = parser.parse_args()
 
+    if args.standard_units_only:
+        issues = []
+        check_cases(STANDARD_CASES, issues, "standard")
+        return finish(issues, "FURIGANA_STANDARD_UNITS")
+    if args.lexical_units_only:
+        issues = []
+        check_cases(LEXICAL_CASES, issues, "lexical")
+        return finish(issues, "FURIGANA_LEXICAL_UNITS")
+    if args.context_units_only:
+        issues = []
+        check_cases(CONTEXT_CASES, issues, "context")
+        return finish(issues, "FURIGANA_CONTEXT_UNITS")
     if args.units_only:
         issues = []
         check_unit_cases(issues)
         return finish(issues, "FURIGANA_GOLDEN_UNITS")
-
     if args.corpus_only:
         issues = []
         try:
