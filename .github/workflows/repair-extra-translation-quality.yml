@@ -25,13 +25,19 @@ permissions:
 
 concurrency:
   group: japanese-extra-quality-repair
-  cancel-in-progress: true
+  # A rolling rebuild checkpoints translation state locally but publishes only
+  # after validation. Cancelling it discards that run's publishable progress.
+  # Queue a newer trigger instead; the queued run will re-check main/source.
+  cancel-in-progress: false
 
 jobs:
   repair:
     # Rolling/category recovery is independent of core publication success.
     runs-on: ubuntu-latest
-    timeout-minutes: 18
+    # Model startup takes several minutes and the script intentionally budgets
+    # up to 330s + 90s + 90s across the three rolling layers. Keep the job
+    # envelope larger than that declared work budget plus setup/validation.
+    timeout-minutes: 28
     env:
       CANTONESE_SNAPSHOT_DIR: .cantonese-snapshot/data
     steps:
@@ -77,7 +83,9 @@ jobs:
         run: python scripts/cantonese_snapshot.py
 
       - name: Rebuild rolling layers with owner quarantine
-        timeout-minutes: 10
+        # The script's own owner/file budgets bound work and quarantine the rest.
+        # Ten minutes was shorter than model startup + those declared budgets.
+        timeout-minutes: 20
         env:
           TOKENIZERS_PARALLELISM: 'false'
         run: python scripts/self_healing_extra_sync.py
