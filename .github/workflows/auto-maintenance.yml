@@ -38,10 +38,13 @@ concurrency:
   group: japanese-site-auto-maintenance
   cancel-in-progress: false
 
+env:
+  RECOVERY_COOLDOWN_SECONDS: '900'
+
 jobs:
   watchdog:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - name: Checkout current production main
         uses: actions/checkout@v4
@@ -58,7 +61,7 @@ jobs:
             deep-translator==1.11.4 \
             pykakasi==2.3.0
 
-      - name: Verify maintenance scripts
+      - name: Verify maintenance and self-healing scripts
         shell: bash
         run: |
           set -euo pipefail
@@ -69,7 +72,9 @@ jobs:
             scripts/check_source_drift.py \
             scripts/validate_content_integrity.py \
             scripts/validate_extra_layers.py \
-            scripts/validate_furigana_readings.py
+            scripts/validate_furigana_readings.py \
+            scripts/self_healing_runtime.py \
+            scripts/emergency_remote_core_sync.py
 
       - name: Deterministic static repair
         run: python scripts/auto_repair_site.py
@@ -127,7 +132,7 @@ jobs:
           done
           exit 1
 
-      - name: Check Japanese publication text/data only
+      - name: Check Japanese publication text/data
         id: publication_qa
         shell: bash
         run: |
@@ -140,27 +145,45 @@ jobs:
           c=$?
           set -e
 
-          if [ "$a" -eq 0 ]; then
-            echo 'core_healthy=true' >> "$GITHUB_OUTPUT"
-          else
-            echo 'core_healthy=false' >> "$GITHUB_OUTPUT"
-          fi
-          if [ "$b" -eq 0 ]; then
-            echo 'extra_healthy=true' >> "$GITHUB_OUTPUT"
-          else
-            echo 'extra_healthy=false' >> "$GITHUB_OUTPUT"
-          fi
-          if [ "$c" -eq 0 ]; then
-            echo 'furigana_healthy=true' >> "$GITHUB_OUTPUT"
-          else
-            echo 'furigana_healthy=false' >> "$GITHUB_OUTPUT"
-          fi
-
+          [ "$a" -eq 0 ] && echo 'core_healthy=true' >> "$GITHUB_OUTPUT" || echo 'core_healthy=false' >> "$GITHUB_OUTPUT"
+          [ "$b" -eq 0 ] && echo 'extra_healthy=true' >> "$GITHUB_OUTPUT" || echo 'extra_healthy=false' >> "$GITHUB_OUTPUT"
+          [ "$c" -eq 0 ] && echo 'furigana_healthy=true' >> "$GITHUB_OUTPUT" || echo 'furigana_healthy=false' >> "$GITHUB_OUTPUT"
           if [ "$a" -eq 0 ] && [ "$b" -eq 0 ] && [ "$c" -eq 0 ]; then
             echo 'healthy=true' >> "$GITHUB_OUTPUT"
           else
             echo 'healthy=false' >> "$GITHUB_OUTPUT"
           fi
+
+      - name: Detect quarantined translation owners
+        id: quarantine
+        shell: bash
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          from pathlib import Path
+          total = 0
+          files = []
+          owners = []
+          for name in ('latest.json', 'live.json', 'archive.json'):
+              path = Path('data') / name
+              if not path.is_file():
+                  continue
+              try:
+                  data = json.loads(path.read_text(encoding='utf-8'))
+              except Exception:
+                  continue
+              count = int(data.get('translationDeferredCount') or 0)
+              ids = [str(x) for x in (data.get('translationDeferredIds') or [])]
+              if count or ids or data.get('translationDegraded'):
+                  count = max(count, len(ids))
+                  total += count
+                  files.append(name)
+                  owners.extend(f'{name}:{x}' for x in ids)
+          print(f'deferred={str(total > 0).lower()}')
+          print(f'count={total}')
+          print(f'files={",".join(files)}')
+          print(f'owners={",".join(owners[:30])}')
+          PY
 
       - name: Compare current Cantonese source fingerprints
         id: drift
@@ -171,11 +194,7 @@ jobs:
           code=$?
           set -e
           echo "exit_code=${code}" >> "$GITHUB_OUTPUT"
-          if [ "$code" -eq 10 ]; then
-            echo 'drift=true' >> "$GITHUB_OUTPUT"
-          else
-            echo 'drift=false' >> "$GITHUB_OUTPUT"
-          fi
+          [ "$code" -eq 10 ] && echo 'drift=true' >> "$GITHUB_OUTPUT" || echo 'drift=false' >> "$GITHUB_OUTPUT"
 
       - name: Check F3 voice independently
         id: audio_qa
@@ -183,6 +202,7 @@ jobs:
         run: |
           if [ "${{ steps.publication_qa.outputs.healthy }}" != 'true' ]; then
             echo 'healthy=false' >> "$GITHUB_OUTPUT"
+            echo 'data_age=999999' >> "$GITHUB_OUTPUT"
             echo 'Publication data is not clean yet; F3 check deferred.'
             exit 0
           fi
@@ -190,11 +210,7 @@ jobs:
           python scripts/validate_site.py --data-only
           code=$?
           set -e
-          if [ "$code" -eq 0 ]; then
-            echo 'healthy=true' >> "$GITHUB_OUTPUT"
-          else
-            echo 'healthy=false' >> "$GITHUB_OUTPUT"
-          fi
+          [ "$code" -eq 0 ] && echo 'healthy=true' >> "$GITHUB_OUTPUT" || echo 'healthy=false' >> "$GITHUB_OUTPUT"
           last_data_epoch=$(git log -1 --format=%ct -- data/latest.json data/live.json 2>/dev/null || echo 0)
           now_epoch=$(date +%s)
           if [ "${last_data_epoch:-0}" -gt 0 ]; then
@@ -204,7 +220,7 @@ jobs:
           fi
           echo "data_age=${age}" >> "$GITHUB_OUTPUT"
 
-      - name: Inspect translation, repair, Pages and F3 workers
+      - name: Inspect supervised production workers
         id: workers
         env:
           GH_TOKEN: ${{ github.token }}
@@ -219,29 +235,30 @@ jobs:
           import json
           from datetime import datetime, timezone
           now = datetime.now(timezone.utc)
+          def age_seconds(value):
+              try:
+                  return max(0, int((now-datetime.fromisoformat(value.replace('Z','+00:00'))).total_seconds()))
+              except Exception:
+                  return 999999
           def emit(path, prefix):
               runs = json.load(open(path, encoding='utf-8'))
               active = [r for r in runs if r.get('status') != 'completed']
-              ages = []
-              for r in active:
-                  try:
-                      ages.append(max(0, int((now-datetime.fromisoformat(r['createdAt'].replace('Z','+00:00'))).total_seconds())))
-                  except Exception:
-                      pass
+              active_ages = [age_seconds(r.get('createdAt') or '') for r in active]
               latest = runs[0] if runs else {}
               streak = 0
               for r in runs:
                   if r.get('status') != 'completed':
                       continue
-                  if r.get('conclusion') in {'failure', 'cancelled', 'timed_out', 'action_required'}:
+                  if r.get('conclusion') in {'failure','cancelled','timed_out','action_required'}:
                       streak += 1
                   else:
                       break
               print(f'{prefix}_active_count={len(active)}')
               print(f'{prefix}_active_ids={",".join(str(r.get("databaseId")) for r in active if r.get("databaseId"))}')
-              print(f'{prefix}_active_oldest={max(ages) if ages else 0}')
+              print(f'{prefix}_active_oldest={max(active_ages) if active_ages else 0}')
               print(f'{prefix}_latest_conclusion={latest.get("conclusion") or ""}')
               print(f'{prefix}_latest_head={latest.get("headSha") or ""}')
+              print(f'{prefix}_latest_age={age_seconds(latest.get("createdAt") or "") if latest else 999999}')
               print(f'{prefix}_failure_streak={streak}')
           emit('/tmp/sync.json','sync')
           emit('/tmp/repair.json','repair')
@@ -250,14 +267,16 @@ jobs:
           PY
 
       - name: Recover Japanese core text/data sync
-        if: github.event_name != 'pull_request' && (steps.publication_qa.outputs.core_healthy != 'true' || steps.publication_qa.outputs.furigana_healthy != 'true' || steps.drift.outputs.drift == 'true' || steps.workers.outputs.sync_latest_conclusion == 'failure')
+        if: github.event_name != 'pull_request' && (steps.publication_qa.outputs.core_healthy != 'true' || steps.publication_qa.outputs.furigana_healthy != 'true' || steps.drift.outputs.drift == 'true' || steps.quarantine.outputs.deferred == 'true' || steps.workers.outputs.sync_latest_conclusion == 'failure')
         env:
           GH_TOKEN: ${{ github.token }}
           ACTIVE_COUNT: ${{ steps.workers.outputs.sync_active_count }}
           ACTIVE_OLDEST: ${{ steps.workers.outputs.sync_active_oldest }}
           LATEST_CONCLUSION: ${{ steps.workers.outputs.sync_latest_conclusion }}
           LATEST_HEAD: ${{ steps.workers.outputs.sync_latest_head }}
+          LATEST_AGE: ${{ steps.workers.outputs.sync_latest_age }}
           FAILURE_STREAK: ${{ steps.workers.outputs.sync_failure_streak }}
+          DEFERRED: ${{ steps.quarantine.outputs.deferred }}
         shell: bash
         run: |
           set -euo pipefail
@@ -275,7 +294,6 @@ jobs:
               echo "Cancelling obsolete Japanese sync run ${run_id} head=${head_sha} current=${main_sha}"
               gh run cancel "$run_id" --repo "${{ github.repository }}" || true
             done < <(gh run list --workflow sync-japanese-news.yml --branch main --limit 20 --json status,databaseId,headSha --jq '.[] | select(.status != "completed") | [.databaseId,.headSha] | @tsv')
-
             if [ "$current_active" -eq 1 ]; then
               echo 'A current-main Japanese text/data sync is already active.'
               exit 0
@@ -283,38 +301,42 @@ jobs:
             sleep 3
           fi
 
-          if [ "${LATEST_CONCLUSION:-}" = 'failure' ] && [ "${LATEST_HEAD:-}" = "$main_sha" ] && [ "${FAILURE_STREAK:-0}" -ge 2 ]; then
-            echo 'Two consecutive sync failures on the same production head; automatic redispatch paused to avoid a failure loop.'
+          needs_cooldown=0
+          if [ "${LATEST_HEAD:-}" = "$main_sha" ] && [ "${FAILURE_STREAK:-0}" -ge 2 ]; then
+            needs_cooldown=1
+          fi
+          if [ "${LATEST_HEAD:-}" = "$main_sha" ] && [ "${DEFERRED:-false}" = 'true' ]; then
+            needs_cooldown=1
+          fi
+          if [ "$needs_cooldown" -eq 1 ] && [ "${LATEST_AGE:-999999}" -lt "${RECOVERY_COOLDOWN_SECONDS}" ]; then
+            echo "Core recovery cooldown active (${LATEST_AGE}s < ${RECOVERY_COOLDOWN_SECONDS}s); maintenance will retry automatically."
             exit 0
           fi
 
           gh workflow run sync-japanese-news.yml --repo "${{ github.repository }}" --ref main
-          echo "JAPANESE_TEXT_SYNC_RECOVERY_DISPATCHED main=${main_sha}"
+          echo "JAPANESE_TEXT_SYNC_RECOVERY_DISPATCHED main=${main_sha} deferred=${DEFERRED:-false}"
 
       - name: Recover rolling translation quality independently
         if: github.event_name != 'pull_request' && (steps.publication_qa.outputs.extra_healthy != 'true' || steps.workers.outputs.repair_latest_conclusion == 'failure')
         env:
           GH_TOKEN: ${{ github.token }}
           ACTIVE_COUNT: ${{ steps.workers.outputs.repair_active_count }}
-          LATEST_CONCLUSION: ${{ steps.workers.outputs.repair_latest_conclusion }}
           LATEST_HEAD: ${{ steps.workers.outputs.repair_latest_head }}
+          LATEST_AGE: ${{ steps.workers.outputs.repair_latest_age }}
           FAILURE_STREAK: ${{ steps.workers.outputs.repair_failure_streak }}
         shell: bash
         run: |
           set -euo pipefail
           git fetch -q origin main
           main_sha=$(git rev-parse origin/main)
-
           if [ "${ACTIVE_COUNT:-0}" -gt 0 ]; then
             echo 'Rolling translation repair worker is already active.'
             exit 0
           fi
-
-          if [ "${LATEST_CONCLUSION:-}" = 'failure' ] && [ "${LATEST_HEAD:-}" = "$main_sha" ] && [ "${FAILURE_STREAK:-0}" -ge 2 ]; then
-            echo 'Two consecutive rolling-repair failures on the same production head; automatic redispatch paused to avoid a failure loop.'
+          if [ "${LATEST_HEAD:-}" = "$main_sha" ] && [ "${FAILURE_STREAK:-0}" -ge 2 ] && [ "${LATEST_AGE:-999999}" -lt "${RECOVERY_COOLDOWN_SECONDS}" ]; then
+            echo "Rolling-repair cooldown active (${LATEST_AGE}s); maintenance will retry automatically."
             exit 0
           fi
-
           gh workflow run repair-extra-translation-quality.yml --repo "${{ github.repository }}" --ref main
           echo "ROLLING_TRANSLATION_REPAIR_DISPATCHED main=${main_sha}"
 
@@ -369,6 +391,7 @@ jobs:
           if [ "${{ steps.static_qa.outputs.healthy }}" != 'true' ] || \
              [ "${{ steps.publication_qa.outputs.healthy }}" != 'true' ] || \
              [ "${{ steps.drift.outputs.drift }}" = 'true' ] || \
+             [ "${{ steps.quarantine.outputs.deferred }}" = 'true' ] || \
              [ "${{ steps.audio_qa.outputs.healthy }}" != 'true' ]; then
             echo 'Full production health not reached; known-good reference not advanced.'
             exit 0
@@ -387,6 +410,7 @@ jobs:
           echo "Rolling translation healthy: ${{ steps.publication_qa.outputs.extra_healthy || 'false' }}"
           echo "Furigana healthy: ${{ steps.publication_qa.outputs.furigana_healthy || 'false' }}"
           echo "Cantonese source drift: ${{ steps.drift.outputs.drift || 'unknown' }}"
+          echo "Quarantined translation owners: ${{ steps.quarantine.outputs.count || '0' }}"
           echo "F3 voice healthy: ${{ steps.audio_qa.outputs.healthy || 'false' }}"
           echo "Sync active: ${{ steps.workers.outputs.sync_active_count || '0' }}"
           echo "Rolling repair active: ${{ steps.workers.outputs.repair_active_count || '0' }}"
@@ -402,7 +426,6 @@ jobs:
         run: |
           set -euo pipefail
           unhealthy=0
-
           if [ "${{ steps.static_qa.outputs.healthy }}" != 'true' ]; then
             echo '::error::Static Japanese site QA is not healthy.'
             unhealthy=1
@@ -415,11 +438,13 @@ jobs:
             echo '::error::Japanese publication is behind the current Cantonese source.'
             unhealthy=1
           fi
+          if [ "${{ steps.quarantine.outputs.deferred }}" = 'true' ]; then
+            echo '::warning::Japanese publication is current but has quarantined translation owners; automatic retry remains active.'
+          fi
           if [ "${{ steps.audio_qa.outputs.healthy }}" != 'true' ]; then
             echo '::error::F3 production audio is not healthy or is still awaiting recovery.'
             unhealthy=1
           fi
-
           for state in \
             "${{ steps.workers.outputs.sync_latest_conclusion }}" \
             "${{ steps.workers.outputs.repair_latest_conclusion }}" \
@@ -432,10 +457,8 @@ jobs:
                 ;;
             esac
           done
-
           if [ "$unhealthy" -ne 0 ]; then
             echo 'AUTO_MAINTENANCE_UNRESOLVED_HEALTH_FAILURE'
             exit 1
           fi
-
           echo 'AUTO_MAINTENANCE_PRODUCTION_HEALTH_OK'
