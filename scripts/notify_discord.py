@@ -59,7 +59,7 @@ def post(content: str) -> None:
         data=body,
         headers={
             "Content-Type": "application/json",
-            "User-Agent": "JapaneseDailyBriefGitHubActions/2.1",
+            "User-Agent": "JapaneseDailyBriefGitHubActions/2.2",
         },
         method="POST",
     )
@@ -67,6 +67,17 @@ def post(content: str) -> None:
         if response.status not in (200, 204):
             raise RuntimeError(f"Discord webhook returned HTTP {response.status}")
         print(f"Discord accepted notification: HTTP {response.status}")
+
+
+def safe_live_items(data: dict) -> list[dict]:
+    safe: list[dict] = []
+    for item in data.get("items", []) or []:
+        title = str(item.get("title") or "").strip()
+        summary = str(item.get("summary") or "").strip()
+        if not title or corrupt(title) or corrupt(summary):
+            continue
+        safe.append(item)
+    return safe
 
 
 def send_daily() -> None:
@@ -160,18 +171,44 @@ def send_live() -> None:
     print("Live Japanese Discord notification sent with website-only links.")
 
 
+def send_hourly() -> None:
+    """Send the scheduled website update even when this hour has no data delta."""
+    current = load("data/live.json")
+    items = safe_live_items(current)
+    update_label = current.get("lastUpdatedLabel") or current.get("lastUpdated") or "最新更新"
+    if corrupt(update_label):
+        update_label = current.get("lastUpdated") or "最新更新"
+
+    lines = [f"🕒 **日本語ニュース毎時更新｜{update_label}**", ""]
+    if items:
+        for item in items[:3]:
+            lines.append(f"• **{str(item.get('title') or '更新').strip()}**")
+    else:
+        lines.append("この時間帯は新しい安全な速報項目がありません。最新掲載内容はサイトで確認できます。")
+    lines += [
+        "",
+        f"🔴 最新ニュース速報：{LIVE_PAGE}",
+        f"📰 Daily Edition：{SITE}",
+    ]
+    post("\n".join(lines))
+    print("Hourly Japanese Discord website update sent with website-only links.")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--daily", action="store_true")
     parser.add_argument("--live", action="store_true")
+    parser.add_argument("--hourly", action="store_true")
     args = parser.parse_args()
 
-    if not args.daily and not args.live:
-        raise SystemExit("Specify --daily and/or --live")
+    if not args.daily and not args.live and not args.hourly:
+        raise SystemExit("Specify --daily, --live and/or --hourly")
     if args.daily:
         send_daily()
     if args.live:
         send_live()
+    if args.hourly:
+        send_hourly()
 
 
 if __name__ == "__main__":
