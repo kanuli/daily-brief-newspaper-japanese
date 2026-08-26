@@ -7,13 +7,15 @@ on:
     paths:
       - 'scripts/remote_repair_all_published_quality.py'
       - 'scripts/repair_all_published_quality.py'
+      - 'scripts/newsroom_quality.py'
+      - 'scripts/furigana_safe_runtime.py'
       - 'scripts/safe_sync.py'
       - 'scripts/validate_content_integrity.py'
       - 'scripts/validate_extra_layers.py'
       - '.github/workflows/repair-all-published-quality.yml'
   workflow_run:
     workflows:
-      - '日本語ニュース同期・Discord即時配信'
+      - '日本語ニュース同期・品質ゲート・Discord配信'
     types: [completed]
   schedule:
     - cron: '50 * * * *'
@@ -51,7 +53,9 @@ jobs:
           pip install --disable-pip-version-check --quiet \
             requests==2.32.5 \
             deep-translator==1.11.4 \
-            pykakasi==2.3.0
+            pykakasi==2.3.0 \
+            SudachiPy==0.6.11 \
+            SudachiDict-core==20260723
 
       - name: Syntax check exhaustive remote repair
         shell: bash
@@ -60,7 +64,10 @@ jobs:
           python -m py_compile \
             scripts/cantonese_snapshot.py \
             scripts/remote_repair_all_published_quality.py \
+            scripts/newsroom_quality.py \
+            scripts/furigana_safe_runtime.py \
             scripts/safe_sync.py \
+            scripts/sync_and_translate.py \
             scripts/validate_content_integrity.py \
             scripts/validate_extra_layers.py
 
@@ -85,7 +92,7 @@ jobs:
             echo 'No rolling Japanese quality repair required.'
             exit 0
           fi
-          git commit -m '全ローリング日本語の文字化けと意味不一致を修復'
+          git commit -m '全ローリング日本語の文字化け・意味不一致・自然さを修復'
           for attempt in 1 2 3 4 5; do
             git fetch origin main
             if ! git rebase origin/main; then
