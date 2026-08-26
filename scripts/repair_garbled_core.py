@@ -1,15 +1,11 @@
 #!/usr/bin/env python3
-"""Repair garbled Japanese in the already-built Daily/Live core publication.
+"""Repair garbled or editorially unnatural Japanese in built Daily/Live data.
 
 The normal parity sync remains responsible for adding/removing stories and for
 advancing the publication window. This worker is a quality backstop: after that
 structural sync it compares Japanese stories with the same frozen Cantonese
-snapshot, retranslates only fields rejected by the production quality gate,
+snapshot, retranslates fields rejected by structural/semantic/newsroom gates,
 and rebuilds furigana/audio metadata before publication.
-
-Known-bad text is repaired with the validated free remote fallback chain first.
-The local OPUS-MT path is used only as a final fallback so maintenance does not
-reproduce the same poisoned local output indefinitely.
 """
 from __future__ import annotations
 
@@ -21,6 +17,7 @@ import cantonese_snapshot as snapshot
 import furigana_safe_runtime
 import local_metadata_overrides as metadata_overrides
 import local_translation_runtime as runtime
+import newsroom_quality
 import safe_sync as safe
 import sync_and_translate as base
 import sync_cantonese_layers as extra
@@ -29,7 +26,7 @@ import validate_content_integrity as integrity
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 CORE_FILES = ("latest.json", "live.json")
-CORE_FIELDS = ("section",) + integrity.STORY_TEXT_FIELDS
+CORE_FIELDS = ("section", "sectionLabel") + integrity.STORY_TEXT_FIELDS
 HAN_RE = re.compile(r"[\u3400-\u9fff]")
 
 
@@ -48,12 +45,7 @@ def index_stories(value, out=None):
 
 
 def semantic_mismatch(source_text: str, japanese_text: str) -> str | None:
-    """Reject fluent-looking Japanese that is unrelated to the Cantonese source.
-
-    Long Chinese news prose and a legitimate Japanese rendering normally retain
-    several shared Han concepts/names/numeric context. Corrupt Marian decodes we
-    observed instead produced unrelated katakana/meme text with zero overlap.
-    """
+    """Reject fluent-looking Japanese that is unrelated to the Cantonese source."""
     source_text = str(source_text or "")
     japanese_text = str(japanese_text or "")
     if not base.likely_chinese_source(source_text):
@@ -69,7 +61,7 @@ def semantic_mismatch(source_text: str, japanese_text: str) -> str | None:
     return None
 
 
-def bad_translation(source_text: str, japanese_text: str, strict: bool) -> bool:
+def bad_translation(source_text: str, japanese_text: str, strict: bool, field: str = "") -> bool:
     if not isinstance(japanese_text, str) or not japanese_text.strip():
         return True
     if integrity.ERROR_RE.search(japanese_text):
@@ -80,14 +72,17 @@ def bad_translation(source_text: str, japanese_text: str, strict: bool) -> bool:
         return True
     if semantic_mismatch(source_text, japanese_text):
         return True
+    if newsroom_quality.hard_reason(source_text, japanese_text, field):
+        return True
     return not safe.target_quality_ok(source_text, japanese_text, strict=strict)
 
 
-def repair_value(source_text: str, strict: bool) -> str:
+def repair_value(source_text: str, strict: bool, field: str = "") -> str:
     remote_error = None
     try:
         value = runtime._remote_quality_fallback(source_text, strict=strict)
-        if not bad_translation(source_text, value, strict):
+        value = newsroom_quality.deterministic_postedit(source_text, value, field)
+        if not bad_translation(source_text, value, strict, field):
             return value
         remote_error = RuntimeError("remote fallback returned rejected text")
     except Exception as exc:
@@ -99,7 +94,8 @@ def repair_value(source_text: str, strict: bool) -> str:
         )
 
     value = runtime.localize_or_translate(source_text, strict=strict)
-    if bad_translation(source_text, value, strict):
+    value = newsroom_quality.deterministic_postedit(source_text, value, field)
+    if bad_translation(source_text, value, strict, field):
         raise RuntimeError(
             "Core targeted repair failed after remote-first and local fallback: "
             f"remote={remote_error}"
@@ -119,6 +115,14 @@ def rebuild_decorations(name: str, local: dict) -> dict:
     if name == "live.json":
         return base.add_furigana(base.attach_live_audio(local), "items")
     return local
+
+
+def metadata_value(source_text: str, current: str, field: str) -> str:
+    # Known section labels should never need a network translator.
+    mapped = base.ARCHIVE_TOPIC_NAMES.get(str(source_text or ""))
+    if mapped:
+        return mapped
+    return newsroom_quality.deterministic_postedit(source_text, current, field)
 
 
 def repair_file(name: str, source) -> int:
@@ -142,20 +146,43 @@ def repair_file(name: str, source) -> int:
             if not isinstance(source_text, str) or not source_text.strip():
                 continue
             current = local_story.get(field)
+            if not isinstance(current, str):
+                current = ""
             strict = field in integrity.PROSE_FIELDS
-            if not bad_translation(source_text, current, strict):
+
+            if field == "sectionLabel":
+                value = metadata_value(source_text, current, field)
+                if value and value != current:
+                    local_story[field] = value
+                    repaired += 1
+                    story_changed = True
                 continue
-            reason = semantic_mismatch(source_text, str(current or ""))
+
+            polished = newsroom_quality.deterministic_postedit(source_text, current, field)
+            if polished != current and not bad_translation(source_text, polished, strict, field):
+                print(
+                    "CORE_TARGET_POSTEDIT_FIELD",
+                    f"file={name}", f"id={story_id}", f"field={field}",
+                    f"old={current[:90]!r}", f"new={polished[:90]!r}",
+                )
+                local_story[field] = polished
+                current = polished
+                repaired += 1
+                story_changed = True
+
+            if not bad_translation(source_text, current, strict, field):
+                continue
+            reason = newsroom_quality.hard_reason(source_text, current, field) or semantic_mismatch(source_text, current)
             print(
                 "CORE_TARGET_REPAIR_FIELD",
                 f"file={name}",
                 f"id={story_id}",
                 f"field={field}",
-                f"semantic={reason or 'structural/quality'}",
+                f"reason={reason or 'structural/quality'}",
                 f"old={str(current or '')[:90]!r}",
             )
-            value = repair_value(source_text, strict)
-            if bad_translation(source_text, value, strict):
+            value = repair_value(source_text, strict, field)
+            if bad_translation(source_text, value, strict, field):
                 raise RuntimeError(
                     f"Core targeted repair still failed quality: {name}:{story_id}:{field}"
                 )
@@ -164,12 +191,14 @@ def repair_file(name: str, source) -> int:
             story_changed = True
 
         if story_changed:
-            # Ruby must never preserve text from the poisoned pre-repair field.
+            # Ruby must never preserve text from the pre-repair field.
             local_story.pop("furigana", None)
 
     rebuild = repaired > 0 or decorations_need_rebuild(name, local)
     if rebuild:
         local = rebuild_decorations(name, local)
+        local["furiganaEngineVersion"] = furigana_safe_runtime.engine_name()
+        local["newsroomQualityVersion"] = 1
         path.write_text(
             json.dumps(local, ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8",
@@ -182,7 +211,8 @@ def repair_file(name: str, source) -> int:
 
 def main():
     base.likely_chinese_source = extra.needs_cantonese_translation
-    base.TRANSLATE_KEYS.update({"impactLabel"})
+    base.TRANSLATE_KEYS.update({"impactLabel", "sectionLabel"})
+    newsroom_quality.install(safe)
     furigana_safe_runtime.install()
     metadata_overrides.install(runtime)
     runtime.install()
@@ -198,6 +228,8 @@ def main():
         "CORE_TARGET_REPAIR_OK",
         f"fields={total}",
         f"snapshot={snapshot.snapshot_commit()}",
+        f"furigana_engine={furigana_safe_runtime.engine_name()}",
+        "newsroom_quality=true",
     )
 
 
