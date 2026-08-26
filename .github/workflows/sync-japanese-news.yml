@@ -14,6 +14,7 @@ on:
       - 'scripts/repair_garbled_core.py'
       - 'scripts/emergency_remote_core_sync.py'
       - 'scripts/furigana_safe_runtime.py'
+      - 'scripts/notify_discord.py'
       - '.github/workflows/sync-japanese-news.yml'
   schedule:
     # 広東語版の毎時公開後、翻訳時間を確保して毎時15分に日本語版を処理する。
@@ -222,7 +223,7 @@ jobs:
           if [ "$LIVE_CHANGED" = 'true' ]; then check_file data/live.json; fi
           echo 'ready=true' >> "$GITHUB_OUTPUT"
 
-      - name: 毎時15分版をDiscordへ配信
+      - name: 変更ありの毎時15分版をDiscordへ配信
         if: steps.site_ready.outputs.ready == 'true'
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
@@ -235,6 +236,15 @@ jobs:
           if [ "$LATEST_CHANGED" = "true" ]; then args+=(--daily); fi
           if [ "$LIVE_CHANGED" = "true" ]; then args+=(--live); fi
           python scripts/notify_discord.py "${args[@]}"
+
+      - name: 変更なしでも定時xx:15のDiscordサイト更新を配信
+        if: github.event_name == 'schedule' && steps.core_status.outputs.ok == 'true' && steps.publish_news.outputs.latest_changed != 'true' && steps.publish_news.outputs.live_changed != 'true'
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python scripts/notify_discord.py --hourly
 
   emergency_remote_core:
     name: 通常同期失敗時の遠隔コア復旧
@@ -266,7 +276,7 @@ jobs:
             pykakasi==2.3.0
 
       - name: 遠隔復旧経路を構文検査
-        run: python -m py_compile scripts/cantonese_snapshot.py scripts/emergency_remote_core_sync.py scripts/safe_sync.py scripts/sync_and_translate.py scripts/furigana_context.py scripts/furigana_safe_runtime.py scripts/validate_content_integrity.py scripts/validate_editorial_quality.py scripts/validate_vocab_quality.py scripts/validate_furigana_readings.py scripts/check_source_drift.py
+        run: python -m py_compile scripts/cantonese_snapshot.py scripts/emergency_remote_core_sync.py scripts/safe_sync.py scripts/sync_and_translate.py scripts/furigana_context.py scripts/furigana_safe_runtime.py scripts/validate_content_integrity.py scripts/validate_editorial_quality.py scripts/validate_vocab_quality.py scripts/validate_furigana_readings.py scripts/check_source_drift.py scripts/notify_discord.py
 
       - name: 広東語版mainを1コミットに固定
         run: python scripts/cantonese_snapshot.py
