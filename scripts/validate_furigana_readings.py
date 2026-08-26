@@ -6,6 +6,7 @@ that old design allowed the generator to certify its own mistakes. Instead we
 check visible-text preservation, structural coverage, independent golden reading
 cases and known-forbidden readings. Golden cases exercise the active engine.
 """
+import argparse
 import json
 import re
 import sys
@@ -173,7 +174,40 @@ def report_legacy_compounds():
                 print(f"FURIGANA_MIGRATION_WARNING {name}: {label} count={count}")
 
 
+def finish(issues, label):
+    if issues:
+        print(f"{label}_FAIL")
+        for issue in issues[:100]:
+            print(" -", issue)
+        if len(issues) > 100:
+            print(f" - ... and {len(issues)-100} more")
+        return 1
+    print(f"{label}_OK engine={safety.engine_name()}")
+    return 0
+
+
 def main():
+    parser = argparse.ArgumentParser()
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument("--units-only", action="store_true")
+    mode.add_argument("--corpus-only", action="store_true")
+    args = parser.parse_args()
+
+    if args.units_only:
+        issues = []
+        check_unit_cases(issues)
+        return finish(issues, "FURIGANA_GOLDEN_UNITS")
+
+    if args.corpus_only:
+        issues = []
+        try:
+            check_corpus(issues)
+            check_forbidden(issues)
+            report_legacy_compounds()
+        except Exception as exc:
+            issues.append(f"corpus validation failed: {exc}")
+        return finish(issues, "FURIGANA_PUBLIC_CORPUS")
+
     issues = []
     check_unit_cases(issues)
     try:
