@@ -18,6 +18,7 @@ import batch_prewarm as source_helpers
 import cantonese_snapshot as snapshot
 import local_metadata_overrides as metadata_overrides
 import local_translation_runtime as runtime
+import newsroom_quality
 import safe_sync as safe
 import sync_and_translate as base
 
@@ -77,6 +78,7 @@ def repair_bad_existing_to_cache(files):
                 )
                 try:
                     value = runtime._remote_quality_fallback(source_text, strict=strict)
+                    value = newsroom_quality.deterministic_postedit(source_text, value, key)
                     if not safe.target_quality_ok(source_text, value, strict=strict):
                         raise RuntimeError("remote fallback returned quality-rejected text")
                     base.CACHE[runtime.cache_key(source_text)] = value
@@ -106,6 +108,7 @@ def repair_bad_existing_to_cache(files):
 def main():
     base.likely_chinese_source = source_helpers.needs_cantonese_translation
     source_helpers.fetch_json = snapshot.load_json
+    newsroom_quality.install(safe)
     metadata_overrides.install(runtime)
     runtime.install()
     safe.prune_cache()

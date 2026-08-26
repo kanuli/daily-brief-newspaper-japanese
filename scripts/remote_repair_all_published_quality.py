@@ -8,6 +8,8 @@ import re
 from pathlib import Path
 
 import cantonese_snapshot as snapshot
+import furigana_safe_runtime
+import newsroom_quality
 import safe_sync as safe
 import sync_and_translate as base
 import sync_cantonese_layers as extra
@@ -15,7 +17,7 @@ import validate_content_integrity as integrity
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
-TRANSLATE_KEYS = set(base.TRANSLATE_KEYS) | {"impactLabel"}
+TRANSLATE_KEYS = set(base.TRANSLATE_KEYS) | {"impactLabel", "sectionLabel"}
 
 REPEATED_PARTICLE_RE = re.compile(r"の{5,}")
 REPEATED_TOKEN_RE = re.compile(r"(.{2,8})(?:\s+\1){2,}")
@@ -37,15 +39,17 @@ def obvious_bad(target: str) -> bool:
     return False
 
 
-def bad(source: str, target: str, strict: bool) -> bool:
+def bad(source: str, target: str, strict: bool, field: str = "") -> bool:
     if not isinstance(target, str) or not target.strip():
         return True
     if not safe.target_quality_ok(source, target, strict=strict):
         return True
+    if newsroom_quality.hard_reason(source, target, field):
+        return True
     return obvious_bad(target)
 
 
-def remote_translate(source: str, strict: bool) -> str:
+def remote_translate(source: str, strict: bool, field: str = "") -> str:
     errors = []
     backends = (
         ("gtx", safe.google_gtx_translate),
@@ -57,7 +61,8 @@ def remote_translate(source: str, strict: bool) -> str:
             continue
         try:
             value = fn(source, strict=strict)
-            if not bad(source, value, strict):
+            value = newsroom_quality.deterministic_postedit(source, value, field)
+            if not bad(source, value, strict, field):
                 print("REMOTE_FULL_REPAIR_OK", label, repr(source[:70]), "->", repr(value[:70]))
                 return value
             errors.append(f"{label}=enhanced-quality-rejected")
@@ -98,17 +103,22 @@ def repair_tree(local, source, name: str, story_mode: str) -> int:
                     and isinstance(local_child, str)
                 ):
                     strict = key in integrity.PROSE_FIELDS
-                    if bad(source_child, local_child, strict):
+                    polished = newsroom_quality.deterministic_postedit(source_child, local_child, key)
+                    if polished != local_child and not bad(source_child, polished, strict, key):
+                        lv[key] = polished
+                        local_child = polished
+                        repaired += 1
+                        story_changed = True
+                    if bad(source_child, local_child, strict, key):
                         print(
                             "REMOTE_FULL_REPAIR_FIELD",
                             f"file={name}",
                             f"key={key}",
                             f"old={local_child[:100]!r}",
                         )
-                        lv[key] = remote_translate(source_child, strict)
+                        lv[key] = remote_translate(source_child, strict, key)
                         repaired += 1
-                        if current_story is lv:
-                            story_changed = True
+                        story_changed = True
                 elif isinstance(local_child, dict) and isinstance(source_child, dict):
                     if walk(local_child, source_child, current_story):
                         story_changed = True
@@ -142,10 +152,16 @@ def repair_tree(local, source, name: str, story_mode: str) -> int:
         return False
 
     walk(local, source)
-    if repaired and story_mode == "daily":
+    # Daily/Live always migrate ruby to the current lexical engine even when the
+    # Japanese prose itself did not need a field repair.
+    if story_mode == "daily":
         base.add_furigana(base.attach_daily_audio(local), "articles")
-    elif repaired and story_mode == "live":
+        local["furiganaEngineVersion"] = furigana_safe_runtime.engine_name()
+        local["newsroomQualityVersion"] = 1
+    elif story_mode == "live":
         base.add_furigana(base.attach_live_audio(local), "items")
+        local["furiganaEngineVersion"] = furigana_safe_runtime.engine_name()
+        local["newsroomQualityVersion"] = 1
     return repaired
 
 
@@ -161,10 +177,12 @@ def repair_file(name: str, mode: str) -> int:
     if source is None:
         return 0
     local = json.loads(path.read_text(encoding="utf-8"))
+    before = json.dumps(local, ensure_ascii=False, sort_keys=True)
     count = repair_tree(local, source, name, mode)
-    if count:
+    after = json.dumps(local, ensure_ascii=False, sort_keys=True)
+    if before != after:
         path.write_text(json.dumps(local, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print("REMOTE_FULL_REPAIR_RESULT", name, f"fields={count}")
+    print("REMOTE_FULL_REPAIR_RESULT", name, f"fields={count}", f"rerendered={str(before != after).lower()}")
     return count
 
 
@@ -172,6 +190,9 @@ def main():
     scope = str(os.environ.get("REMOTE_REPAIR_SCOPE") or "all").strip().lower()
     if scope not in {"all", "core", "rolling"}:
         raise RuntimeError(f"invalid REMOTE_REPAIR_SCOPE: {scope!r}")
+
+    newsroom_quality.install(safe)
+    furigana_safe_runtime.install()
 
     total = 0
     if scope in {"all", "core"}:
@@ -186,7 +207,13 @@ def main():
         if re.fullmatch(r"\d{4}-\d{2}-\d{2}", date):
             total += repair_file(f"topic-more/{date}.json", "rolling")
 
-    print("REMOTE_FULL_PUBLISHED_QUALITY_REPAIR_OK", f"scope={scope}", f"fields={total}")
+    print(
+        "REMOTE_FULL_PUBLISHED_QUALITY_REPAIR_OK",
+        f"scope={scope}",
+        f"fields={total}",
+        f"furigana_engine={furigana_safe_runtime.engine_name()}",
+        "newsroom_quality=true",
+    )
 
 
 if __name__ == "__main__":
