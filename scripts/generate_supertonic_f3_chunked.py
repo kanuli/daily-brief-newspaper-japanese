@@ -5,6 +5,10 @@ Each story is already split into semantic speech units by generate_supertonic_f3
 This wrapper adds an outer record-batch layer so a large edition is not handled
 as one long undifferentiated queue. The batch size is configurable with
 F3_RECORD_BATCH_SIZE (default: 3).
+
+This file is also a production F3 workflow trigger. Keep the input-state log
+below: it makes a stale/no-op voice run diagnosable from GitHub Actions without
+having to infer freshness from the audio manifest alone.
 """
 import gc
 import json
@@ -33,6 +37,29 @@ def main():
     records, wanted, datasets = base.collect_records(manifest)
     base.remove_stale(manifest, wanted)
     jobs = [record for record in records if record[6]]
+
+    dataset_state = []
+    for data_path, data, _changed in datasets:
+        dataset_state.append(
+            {
+                "path": str(data_path),
+                "date": data.get("date"),
+                "lastUpdated": data.get("lastUpdated") or data.get("generatedAt"),
+            }
+        )
+    print(
+        "F3_INPUT_STATE",
+        json.dumps(
+            {
+                "records": len(records),
+                "pending": len(jobs),
+                "manifestEntries": len(manifest),
+                "datasets": dataset_state,
+            },
+            ensure_ascii=False,
+            sort_keys=True,
+        ),
+    )
 
     if jobs:
         tts = base.TTS(auto_download=True)
