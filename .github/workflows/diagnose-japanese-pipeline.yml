@@ -35,18 +35,31 @@ jobs:
       - name: 静的サイトQA
         run: python scripts/validate_site.py --static-only
 
-      - name: 全サイト編集品質QA
+      - name: Python構文・ニュース自然さQA
         shell: bash
         run: |
           set -euo pipefail
           python -m py_compile scripts/newsroom_quality.py scripts/furigana_safe_runtime.py scripts/repair_garbled_core.py scripts/newsroom_postedit_core.py
           python scripts/test_newsroom_quality.py
+
+      - name: コア本文・編集品質QA
+        shell: bash
+        run: |
+          set -euo pipefail
           python scripts/validate_content_integrity.py
           python scripts/validate_editorial_quality.py
-          python scripts/validate_furigana_readings.py
-          python scripts/validate_vocab_quality.py
-          python scripts/validate_extra_layers.py
-          python scripts/validate_publication_readiness.py
+
+      - name: 独立ふりがなQA
+        run: python scripts/validate_furigana_readings.py
+
+      - name: 学習単語QA
+        run: python scripts/validate_vocab_quality.py
+
+      - name: 追加ローリング層QA
+        run: python scripts/validate_extra_layers.py
+
+      - name: 公開準備QA
+        run: python scripts/validate_publication_readiness.py
 
       - name: JavaScript構文チェック
         run: |
