@@ -1,5 +1,5 @@
 name: 日本語版 Pages 公開・広東語版レイアウト同期
-run-name: 広東語版レイアウト同期・Pages公開 @ ${{ github.sha }}
+run-name: 編集品質ゲート・Pages公開 @ ${{ github.sha }}
 
 on:
   push:
@@ -28,37 +28,46 @@ jobs:
         with:
           ref: main
 
-      - name: 広東語版レイアウト診断（公開を止めない）
-        continue-on-error: true
-        shell: bash
-        run: |
-          set -u
-          echo "LAYOUT_DEPLOY_SHA=${GITHUB_SHA}"
-          python scripts/validate_site.py --static-only || true
-          python scripts/validate_layout_parity.py || true
-          node --check assets/js/newspaper-ja.js || true
-          node --check assets/js/topic-ja-rolling.js || true
-          node --check assets/js/system-ja.js || true
-          echo 'Layout diagnostics completed. Deployment proceeds even if a diagnostic reports a false positive.'
+      - name: Pythonを設定
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
 
-      - name: コンテンツとF3診断（公開を止めない）
-        id: data_health
-        continue-on-error: true
+      - name: 公開品質検証の最小依存を導入
         shell: bash
         run: |
-          set +e
+          set -euo pipefail
+          python -m pip install --disable-pip-version-check --quiet \
+            requests==2.32.5 \
+            deep-translator==1.11.4 \
+            pykakasi==2.3.0
+
+      - name: 静的サイトの公開前ハードゲート
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "LAYOUT_DEPLOY_SHA=${GITHUB_SHA}"
+          python scripts/validate_site.py --static-only
+          node --check assets/js/newspaper-ja.js
+          node --check assets/js/topic-ja-rolling.js
+          node --check assets/js/system-ja.js
+          # Layout parity can depend on upstream presentation changes, so report
+          # it as a warning; syntax/site integrity above remains blocking.
+          python scripts/validate_layout_parity.py || echo 'LAYOUT_PARITY_WARNING non-blocking presentation drift detected'
+
+      - name: 編集品質・ふりがな・単語の公開前ハードゲート
+        id: data_health
+        shell: bash
+        run: |
+          set -euo pipefail
           python scripts/validate_content_integrity.py
-          integrity_code=$?
+          python scripts/validate_editorial_quality.py
+          python scripts/validate_furigana_readings.py
+          python scripts/validate_vocab_quality.py
           python scripts/validate_extra_layers.py
-          extra_code=$?
           python scripts/validate_site.py --data-only
-          data_code=$?
-          set -e
-          if [ "$integrity_code" -eq 0 ] && [ "$extra_code" -eq 0 ] && [ "$data_code" -eq 0 ]; then
-            echo 'clean=true' >> "$GITHUB_OUTPUT"
-          else
-            echo 'clean=false' >> "$GITHUB_OUTPUT"
-          fi
+          echo 'clean=true' >> "$GITHUB_OUTPUT"
+          echo 'EDITORIAL_PUBLICATION_GATE_OK'
 
       - name: Pagesを設定
         uses: actions/configure-pages@v5
@@ -78,4 +87,4 @@ jobs:
         run: |
           echo "Published candidate SHA: ${GITHUB_SHA}"
           echo "Page URL: ${{ steps.deployment.outputs.page_url }}"
-          echo "Clean data/F3: ${{ steps.data_health.outputs.clean || 'unknown' }}"
+          echo "Editorial gate clean: ${{ steps.data_health.outputs.clean || 'false' }}"

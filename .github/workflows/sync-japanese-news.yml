@@ -1,4 +1,4 @@
-name: 日本語ニュース同期・Discord即時配信
+name: 日本語ニュース同期・品質ゲート・Discord配信
 
 on:
   workflow_dispatch:
@@ -6,15 +6,18 @@ on:
     branches: ["main"]
     paths:
       - 'scripts/validate_content_integrity.py'
+      - 'scripts/validate_editorial_quality.py'
+      - 'scripts/validate_vocab_quality.py'
       - 'scripts/safe_sync.py'
       - 'scripts/local_translation_runtime.py'
       - 'scripts/local_batch_prewarm.py'
       - 'scripts/repair_garbled_core.py'
       - 'scripts/emergency_remote_core_sync.py'
+      - 'scripts/furigana_safe_runtime.py'
       - '.github/workflows/sync-japanese-news.yml'
   schedule:
-    # 広東語版の毎時公開を唯一のニュース源として、30分後に日本語版を処理する。
-    - cron: '30 * * * *'
+    # 広東語版の毎時公開後、翻訳時間を確保して毎時15分に日本語版を処理する。
+    - cron: '15 * * * *'
 
 permissions:
   contents: write
@@ -26,7 +29,7 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     # A failed normal/local-model path is allowed to hand control to the
     # emergency job. The workflow still fails if that emergency job fails.
     continue-on-error: true
@@ -65,7 +68,7 @@ jobs:
           pip install -r requirements-translation.txt
 
       - name: 下流パイプラインを構文検査
-        run: python -m py_compile scripts/cantonese_snapshot.py scripts/sync_and_translate.py scripts/safe_sync.py scripts/fast_safe_sync.py scripts/local_zh_ja.py scripts/local_translation_runtime.py scripts/local_batch_prewarm.py scripts/local_fast_safe_sync.py scripts/repair_garbled_core.py scripts/emergency_remote_core_sync.py scripts/furigana_context.py scripts/furigana_safe_runtime.py scripts/validate_furigana_readings.py scripts/validate_content_integrity.py scripts/check_source_drift.py scripts/notify_discord.py
+        run: python -m py_compile scripts/cantonese_snapshot.py scripts/sync_and_translate.py scripts/safe_sync.py scripts/fast_safe_sync.py scripts/local_zh_ja.py scripts/local_translation_runtime.py scripts/local_batch_prewarm.py scripts/local_fast_safe_sync.py scripts/repair_garbled_core.py scripts/emergency_remote_core_sync.py scripts/furigana_context.py scripts/furigana_safe_runtime.py scripts/validate_furigana_readings.py scripts/validate_content_integrity.py scripts/validate_editorial_quality.py scripts/validate_vocab_quality.py scripts/check_source_drift.py scripts/notify_discord.py
 
       - name: 広東語版mainを1コミットに固定
         run: python scripts/cantonese_snapshot.py
@@ -127,10 +130,16 @@ jobs:
       - name: 現在ニュースの翻訳品質を検証
         run: python scripts/validate_content_integrity.py
 
+      - name: ソース基準の独立編集品質を検証
+        run: python scripts/validate_editorial_quality.py
+
       - name: 現在ニュースのふりがなを検証
         run: python scripts/validate_furigana_readings.py
 
-      - name: デイリー・速報・アーカイブを先に公開
+      - name: 学習単語データを検証
+        run: python scripts/validate_vocab_quality.py
+
+      - name: デイリー・速報・アーカイブを公開候補として保存
         id: publish_news
         shell: bash
         run: |
@@ -152,7 +161,7 @@ jobs:
             exit 0
           fi
 
-          git commit -m '広東語版の現在ニュースを日本語版へ同期'
+          git commit -m '編集品質確認済みの現在ニュースを日本語版へ同期'
           for attempt in 1 2 3 4 5; do
             git fetch origin main
             if ! git rebase origin/main; then
@@ -182,8 +191,39 @@ jobs:
             echo 'NORMAL_CORE_SYNC_FAILED_HANDOFF_TO_REMOTE_RECOVERY'
           fi
 
-      - name: 30分後の日本語版をDiscordへ配信
+      - name: GitHub Pagesに同一ニュースが反映されたことを確認
+        id: site_ready
         if: steps.core_status.outputs.ok == 'true' && steps.publish_news.outputs.published == 'true' && (steps.publish_news.outputs.latest_changed == 'true' || steps.publish_news.outputs.live_changed == 'true')
+        env:
+          LATEST_CHANGED: ${{ steps.publish_news.outputs.latest_changed }}
+          LIVE_CHANGED: ${{ steps.publish_news.outputs.live_changed }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          site='https://kanuli.github.io/daily-brief-newspaper-japanese/'
+          check_file() {
+            file="$1"
+            expected="$(sha256sum "$file" | awk '{print $1}')"
+            for attempt in $(seq 1 36); do
+              remote="/tmp/$(basename "$file").remote"
+              if curl -fsSL --retry 2 --retry-delay 1 "${site}${file}?deploy=${GITHUB_RUN_ID}-${attempt}" -o "$remote"; then
+                actual="$(sha256sum "$remote" | awk '{print $1}')"
+                if [ "$actual" = "$expected" ]; then
+                  echo "PAGES_MATCH_OK ${file} ${actual}"
+                  return 0
+                fi
+              fi
+              sleep 10
+            done
+            echo "PAGES_MATCH_TIMEOUT ${file}" >&2
+            return 1
+          }
+          if [ "$LATEST_CHANGED" = 'true' ]; then check_file data/latest.json; fi
+          if [ "$LIVE_CHANGED" = 'true' ]; then check_file data/live.json; fi
+          echo 'ready=true' >> "$GITHUB_OUTPUT"
+
+      - name: 毎時15分版をDiscordへ配信
+        if: steps.site_ready.outputs.ready == 'true'
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           LATEST_CHANGED: ${{ steps.publish_news.outputs.latest_changed }}
@@ -226,7 +266,7 @@ jobs:
             pykakasi==2.3.0
 
       - name: 遠隔復旧経路を構文検査
-        run: python -m py_compile scripts/cantonese_snapshot.py scripts/emergency_remote_core_sync.py scripts/safe_sync.py scripts/sync_and_translate.py scripts/furigana_context.py scripts/furigana_safe_runtime.py scripts/validate_content_integrity.py scripts/validate_furigana_readings.py scripts/check_source_drift.py
+        run: python -m py_compile scripts/cantonese_snapshot.py scripts/emergency_remote_core_sync.py scripts/safe_sync.py scripts/sync_and_translate.py scripts/furigana_context.py scripts/furigana_safe_runtime.py scripts/validate_content_integrity.py scripts/validate_editorial_quality.py scripts/validate_vocab_quality.py scripts/validate_furigana_readings.py scripts/check_source_drift.py
 
       - name: 広東語版mainを1コミットに固定
         run: python scripts/cantonese_snapshot.py
@@ -243,8 +283,14 @@ jobs:
       - name: 復旧した日本語本文を検証
         run: python scripts/validate_content_integrity.py
 
+      - name: 復旧した独立編集品質を検証
+        run: python scripts/validate_editorial_quality.py
+
       - name: 復旧したふりがなを検証
         run: python scripts/validate_furigana_readings.py
+
+      - name: 学習単語データを検証
+        run: python scripts/validate_vocab_quality.py
 
       - name: 遠隔復旧済みコアニュースを公開
         shell: bash
@@ -257,7 +303,7 @@ jobs:
             echo 'Emergency remote recovery found no publication change.'
             exit 0
           fi
-          git commit -m '通常同期失敗を遠隔翻訳で自動復旧'
+          git commit -m '通常同期失敗を遠隔翻訳で編集品質復旧'
           for attempt in 1 2 3 4 5; do
             git fetch origin main
             if ! git rebase origin/main; then

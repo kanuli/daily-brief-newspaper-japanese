@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Hardened wrapper around sync_and_translate.
 
-Rejects translator error pages, partially untranslated Traditional Chinese, and
-structurally/semantically implausible Japanese, uses multiple free translation
-backends as fallbacks, normalizes Live schedule metadata deterministically, and
-only hands clean Japanese data to the existing furigana/audio pipeline.
+Rejects translator error pages, partially untranslated Traditional Chinese,
+structurally/semantically implausible Japanese and high-risk factual reversals;
+uses multiple free translation backends as fallbacks, normalizes Live schedule
+metadata deterministically, and only hands clean Japanese data to the existing
+furigana/audio pipeline.
 """
 import hashlib
 import re
@@ -30,6 +31,17 @@ DIGIT_KANJI = {
     "0": "〇", "1": "一", "2": "二", "3": "三", "4": "四",
     "5": "五", "6": "六", "7": "七", "8": "八", "9": "九",
 }
+
+# Editorial semantic anchors. These operate on the source and target directly,
+# so a fluent-looking Japanese sentence cannot pass after changing causal agency
+# or reversing market/news direction.
+SOURCE_DEATH_RE = re.compile(r"(?:死亡|死者|喪生|罹難|遇難|身亡)")
+SOURCE_VIOLENCE_RE = re.compile(r"(?:殺害|殺死|槍殺|謀殺|攻擊|襲擊|槍擊|刺殺|射殺|恐襲)")
+SOURCE_UP_RE = re.compile(r"(?:上升|上漲|增加|增長|擴大|升至)")
+SOURCE_DOWN_RE = re.compile(r"(?:下降|下跌|減少|縮小|降至)")
+TARGET_UP_RE = re.compile(r"(?:上昇|増加|拡大|伸び|高ま|増え)")
+TARGET_DOWN_RE = re.compile(r"(?:低下|下落|減少|縮小|落ち|減り)")
+MEASLES_PERSON_RE = re.compile(r"(?:死亡した|死亡している|死亡したことが確認された)?\s*\d+\s*人の麻(?:疹|しん)(?:です|でした|となった|となりました)")
 
 # High-value entity anchors. A fluent-looking translation is still invalid when
 # it silently changes a company/person/source identity. These aliases are
@@ -72,6 +84,26 @@ def entity_anchor_reason(source_text, value):
     return None
 
 
+def semantic_anchor_reason(source_text, value):
+    """Return a P0 semantic reason when target reverses a source fact."""
+    source = str(source_text or "")
+    target = str(value or "")
+
+    if SOURCE_DEATH_RE.search(source) and not SOURCE_VIOLENCE_RE.search(source) and "殺害" in target:
+        return "source reports death/casualty but Japanese introduces 殺害"
+
+    source_up = bool(SOURCE_UP_RE.search(source))
+    source_down = bool(SOURCE_DOWN_RE.search(source))
+    if source_up and not source_down and TARGET_DOWN_RE.search(target) and not TARGET_UP_RE.search(target):
+        return "source increase/growth appears reversed to decrease in Japanese"
+    if source_down and not source_up and TARGET_UP_RE.search(target) and not TARGET_DOWN_RE.search(target):
+        return "source decrease/fall appears reversed to increase in Japanese"
+
+    if ("麻疹" in source or "麻しん" in source) and MEASLES_PERSON_RE.search(target):
+        return "Japanese reverses the relationship between measles and deceased people"
+    return None
+
+
 def source_target_quality_reason(source_text, value, strict=False):
     """Return a reason when a Chinese->Japanese result is structurally implausible."""
     source_text = str(source_text or "")
@@ -84,6 +116,10 @@ def source_target_quality_reason(source_text, value, strict=False):
     entity_reason = entity_anchor_reason(source_text, value)
     if entity_reason:
         return entity_reason
+
+    semantic_reason = semantic_anchor_reason(source_text, value)
+    if semantic_reason:
+        return semantic_reason
 
     if not base.likely_chinese_source(source_text):
         return None
