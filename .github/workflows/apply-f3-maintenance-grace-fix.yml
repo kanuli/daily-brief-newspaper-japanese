@@ -25,13 +25,39 @@ jobs:
           set -euo pipefail
           python - <<'PY'
           from pathlib import Path
+
           path = Path('.github/workflows/auto-maintenance.yml')
-          text = path.read_text(encoding='utf-8')
-          old = """        env:\n          GH_TOKEN: ${{ github.token }}\n          ACTIVE_COUNT: ${{ steps.workers.outputs.f3_active_count }}\n          DATA_AGE: ${{ steps.audio_qa.outputs.data_age }}\n        shell: bash\n        run: |\n          set -euo pipefail\n          if [ \"${ACTIVE_COUNT:-0}\" -gt 0 ]; then\n            echo 'pending=true' >> \"$GITHUB_OUTPUT\"\n            echo 'F3 worker is already active.'\n            exit 0\n          fi\n          if [ \"${DATA_AGE:-0}\" -lt 1200 ]; then\n            echo 'pending=true' >> \"$GITHUB_OUTPUT\"\n            echo 'Giving the production server F3 worker 20 minutes to finish.'\n            exit 0\n          fi\n          gh workflow run rebuild-f3-pacing.yml --repo \"${{ github.repository }}\" --ref main\n          echo 'pending=true' >> \"$GITHUB_OUTPUT\"\n          echo 'F3_FALLBACK_RECOVERY_DISPATCHED'\n"""
-          new = """        env:\n          GH_TOKEN: ${{ github.token }}\n          ACTIVE_COUNT: ${{ steps.workers.outputs.f3_active_count }}\n          F3_LATEST_AGE: ${{ steps.workers.outputs.f3_latest_age }}\n        shell: bash\n        run: |\n          set -euo pipefail\n          if [ \"${ACTIVE_COUNT:-0}\" -gt 0 ]; then\n            echo 'pending=true' >> \"$GITHUB_OUTPUT\"\n            echo 'F3 worker is already active.'\n            exit 0\n          fi\n          # Grace/cooldown is measured from the latest F3 attempt, never from\n          # the newest news commit. Hourly news therefore cannot reset this timer.\n          if [ \"${F3_LATEST_AGE:-999999}\" -lt 1200 ]; then\n            echo 'pending=true' >> \"$GITHUB_OUTPUT\"\n            echo \"Recent F3 attempt is inside the 20-minute recovery cooldown (${F3_LATEST_AGE}s).\"\n            exit 0\n          fi\n          gh workflow run rebuild-f3-pacing.yml --repo \"${{ github.repository }}\" --ref main\n          echo 'pending=true' >> \"$GITHUB_OUTPUT\"\n          echo 'F3_FALLBACK_RECOVERY_DISPATCHED'\n"""
-          if old not in text:
-              raise SystemExit('Expected old F3 recovery block was not found; refusing unsafe patch')
-          path.write_text(text.replace(old, new, 1), encoding='utf-8')
+          lines = path.read_text(encoding='utf-8').splitlines()
+          changed = 0
+
+          for i, line in enumerate(lines):
+              if line.strip().startswith('DATA_AGE:'):
+                  lines[i] = '          F3_LATEST_AGE: $' + '{{ steps.workers.outputs.f3_latest_age }}'
+                  changed += 1
+              elif 'if [ "${DATA_AGE:-0}" -lt 1200 ]; then' in line:
+                  lines[i] = line.replace('${DATA_AGE:-0}', '${F3_LATEST_AGE:-999999}')
+                  lines.insert(i, '          # Measure grace from the latest F3 attempt, never from the newest news commit.')
+                  changed += 1
+                  break
+
+          for i, line in enumerate(lines):
+              if "Giving the production server F3 worker 20 minutes to finish." in line:
+                  lines[i] = "            echo \"Recent F3 attempt is inside the 20-minute recovery cooldown (${F3_LATEST_AGE}s).\""
+                  changed += 1
+              if 'steps.audio_qa.outputs.data_age' in line and line.lstrip().startswith('elif ['):
+                  lines[i] = line.replace('steps.audio_qa.outputs.data_age', 'steps.workers.outputs.f3_latest_age')
+                  changed += 1
+              if 'F3 audio is inside the normal 20-minute server production grace period.' in line:
+                  lines[i] = line.replace(
+                      'F3 audio is inside the normal 20-minute server production grace period.',
+                      'The latest F3 recovery attempt is inside the 20-minute cooldown.'
+                  )
+                  changed += 1
+
+          if changed < 4:
+              raise SystemExit(f'Expected F3 maintenance edits were not all found; changed={changed}')
+
+          path.write_text('\n'.join(lines) + '\n', encoding='utf-8')
           PY
 
       - name: Commit patch
