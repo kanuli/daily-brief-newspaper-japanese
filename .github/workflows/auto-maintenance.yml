@@ -144,7 +144,6 @@ jobs:
           python scripts/validate_furigana_readings.py
           c=$?
           set -e
-
           [ "$a" -eq 0 ] && echo 'core_healthy=true' >> "$GITHUB_OUTPUT" || echo 'core_healthy=false' >> "$GITHUB_OUTPUT"
           [ "$b" -eq 0 ] && echo 'extra_healthy=true' >> "$GITHUB_OUTPUT" || echo 'extra_healthy=false' >> "$GITHUB_OUTPUT"
           [ "$c" -eq 0 ] && echo 'furigana_healthy=true' >> "$GITHUB_OUTPUT" || echo 'furigana_healthy=false' >> "$GITHUB_OUTPUT"
@@ -185,16 +184,23 @@ jobs:
           print(f'owners={",".join(owners[:30])}')
           PY
 
-      - name: Compare current Cantonese source fingerprints
+      - name: Compare Cantonese source fingerprints by health domain
         id: drift
         shell: bash
         run: |
           set +e
-          python scripts/check_source_drift.py
-          code=$?
+          PARITY_SCOPE=base python scripts/check_source_drift.py
+          base_code=$?
+          PARITY_SCOPE=all python scripts/check_source_drift.py
+          all_code=$?
           set -e
-          echo "exit_code=${code}" >> "$GITHUB_OUTPUT"
-          [ "$code" -eq 10 ] && echo 'drift=true' >> "$GITHUB_OUTPUT" || echo 'drift=false' >> "$GITHUB_OUTPUT"
+          [ "$base_code" -eq 10 ] && echo 'base_drift=true' >> "$GITHUB_OUTPUT" || echo 'base_drift=false' >> "$GITHUB_OUTPUT"
+          [ "$all_code" -eq 10 ] && echo 'all_drift=true' >> "$GITHUB_OUTPUT" || echo 'all_drift=false' >> "$GITHUB_OUTPUT"
+          if [ "$all_code" -eq 10 ] && [ "$base_code" -ne 10 ]; then
+            echo 'extra_drift=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'extra_drift=false' >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Check F3 voice independently
         id: audio_qa
@@ -267,12 +273,11 @@ jobs:
           PY
 
       - name: Recover Japanese core text/data sync
-        if: github.event_name != 'pull_request' && (steps.publication_qa.outputs.core_healthy != 'true' || steps.publication_qa.outputs.furigana_healthy != 'true' || steps.drift.outputs.drift == 'true' || steps.quarantine.outputs.deferred == 'true' || steps.workers.outputs.sync_latest_conclusion == 'failure')
+        if: github.event_name != 'pull_request' && (steps.publication_qa.outputs.core_healthy != 'true' || steps.publication_qa.outputs.furigana_healthy != 'true' || steps.drift.outputs.base_drift == 'true' || steps.quarantine.outputs.deferred == 'true' || steps.workers.outputs.sync_latest_conclusion == 'failure')
         env:
           GH_TOKEN: ${{ github.token }}
           ACTIVE_COUNT: ${{ steps.workers.outputs.sync_active_count }}
           ACTIVE_OLDEST: ${{ steps.workers.outputs.sync_active_oldest }}
-          LATEST_CONCLUSION: ${{ steps.workers.outputs.sync_latest_conclusion }}
           LATEST_HEAD: ${{ steps.workers.outputs.sync_latest_head }}
           LATEST_AGE: ${{ steps.workers.outputs.sync_latest_age }}
           FAILURE_STREAK: ${{ steps.workers.outputs.sync_failure_streak }}
@@ -282,7 +287,6 @@ jobs:
           set -euo pipefail
           git fetch -q origin main
           main_sha=$(git rev-parse origin/main)
-
           if [ "${ACTIVE_COUNT:-0}" -gt 0 ]; then
             current_active=0
             while IFS=$'\t' read -r run_id head_sha; do
@@ -300,7 +304,6 @@ jobs:
             fi
             sleep 3
           fi
-
           needs_cooldown=0
           if [ "${LATEST_HEAD:-}" = "$main_sha" ] && [ "${FAILURE_STREAK:-0}" -ge 2 ]; then
             needs_cooldown=1
@@ -312,12 +315,11 @@ jobs:
             echo "Core recovery cooldown active (${LATEST_AGE}s < ${RECOVERY_COOLDOWN_SECONDS}s); maintenance will retry automatically."
             exit 0
           fi
-
           gh workflow run sync-japanese-news.yml --repo "${{ github.repository }}" --ref main
           echo "JAPANESE_TEXT_SYNC_RECOVERY_DISPATCHED main=${main_sha} deferred=${DEFERRED:-false}"
 
       - name: Recover rolling translation quality independently
-        if: github.event_name != 'pull_request' && (steps.publication_qa.outputs.extra_healthy != 'true' || steps.workers.outputs.repair_latest_conclusion == 'failure')
+        if: github.event_name != 'pull_request' && (steps.publication_qa.outputs.extra_healthy != 'true' || steps.drift.outputs.extra_drift == 'true' || steps.workers.outputs.repair_latest_conclusion == 'failure')
         env:
           GH_TOKEN: ${{ github.token }}
           ACTIVE_COUNT: ${{ steps.workers.outputs.repair_active_count }}
@@ -341,7 +343,7 @@ jobs:
           echo "ROLLING_TRANSLATION_REPAIR_DISPATCHED main=${main_sha}"
 
       - name: Recover F3 voice separately after server grace period
-        if: github.event_name != 'pull_request' && steps.publication_qa.outputs.healthy == 'true' && steps.drift.outputs.drift != 'true' && steps.audio_qa.outputs.healthy != 'true'
+        if: github.event_name != 'pull_request' && steps.publication_qa.outputs.healthy == 'true' && steps.drift.outputs.base_drift != 'true' && steps.audio_qa.outputs.healthy != 'true'
         env:
           GH_TOKEN: ${{ github.token }}
           ACTIVE_COUNT: ${{ steps.workers.outputs.f3_active_count }}
@@ -390,7 +392,7 @@ jobs:
           set -euo pipefail
           if [ "${{ steps.static_qa.outputs.healthy }}" != 'true' ] || \
              [ "${{ steps.publication_qa.outputs.healthy }}" != 'true' ] || \
-             [ "${{ steps.drift.outputs.drift }}" = 'true' ] || \
+             [ "${{ steps.drift.outputs.all_drift }}" = 'true' ] || \
              [ "${{ steps.quarantine.outputs.deferred }}" = 'true' ] || \
              [ "${{ steps.audio_qa.outputs.healthy }}" != 'true' ]; then
             echo 'Full production health not reached; known-good reference not advanced.'
@@ -409,15 +411,15 @@ jobs:
           echo "Core publication healthy: ${{ steps.publication_qa.outputs.core_healthy || 'false' }}"
           echo "Rolling translation healthy: ${{ steps.publication_qa.outputs.extra_healthy || 'false' }}"
           echo "Furigana healthy: ${{ steps.publication_qa.outputs.furigana_healthy || 'false' }}"
-          echo "Cantonese source drift: ${{ steps.drift.outputs.drift || 'unknown' }}"
+          echo "Core Cantonese drift: ${{ steps.drift.outputs.base_drift || 'unknown' }}"
+          echo "Extra-layer Cantonese drift: ${{ steps.drift.outputs.extra_drift || 'unknown' }}"
+          echo "Any Cantonese drift: ${{ steps.drift.outputs.all_drift || 'unknown' }}"
           echo "Quarantined translation owners: ${{ steps.quarantine.outputs.count || '0' }}"
           echo "F3 voice healthy: ${{ steps.audio_qa.outputs.healthy || 'false' }}"
           echo "Sync active: ${{ steps.workers.outputs.sync_active_count || '0' }}"
           echo "Rolling repair active: ${{ steps.workers.outputs.repair_active_count || '0' }}"
           echo "Pages active: ${{ steps.workers.outputs.pages_active_count || '0' }}"
           echo "F3 active: ${{ steps.workers.outputs.f3_active_count || '0' }}"
-          echo "Latest sync conclusion: ${{ steps.workers.outputs.sync_latest_conclusion || 'unknown' }}"
-          echo "Latest rolling repair conclusion: ${{ steps.workers.outputs.repair_latest_conclusion || 'unknown' }}"
           echo 'Japanese site maintenance cycle completed.'
 
       - name: Enforce truthful production-health status
@@ -434,12 +436,16 @@ jobs:
             echo '::error::Japanese publication data is not healthy; recovery may be active or pending.'
             unhealthy=1
           fi
-          if [ "${{ steps.drift.outputs.drift }}" = 'true' ]; then
-            echo '::error::Japanese publication is behind the current Cantonese source.'
+          if [ "${{ steps.drift.outputs.base_drift }}" = 'true' ]; then
+            echo '::error::Core Japanese publication is behind Daily/Live/Archive Cantonese source.'
+            unhealthy=1
+          fi
+          if [ "${{ steps.drift.outputs.extra_drift }}" = 'true' ]; then
+            echo '::error::Rolling/topic Japanese publication is behind its Cantonese source.'
             unhealthy=1
           fi
           if [ "${{ steps.quarantine.outputs.deferred }}" = 'true' ]; then
-            echo '::warning::Japanese publication is current but has quarantined translation owners; automatic retry remains active.'
+            echo '::warning::Current Japanese publication has quarantined translation owners; automatic retry remains active.'
           fi
           if [ "${{ steps.audio_qa.outputs.healthy }}" != 'true' ]; then
             echo '::error::F3 production audio is not healthy or is still awaiting recovery.'
