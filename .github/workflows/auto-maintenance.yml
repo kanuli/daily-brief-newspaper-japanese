@@ -396,13 +396,13 @@ jobs:
           echo 'pending=true' >> "$GITHUB_OUTPUT"
           echo "ROLLING_TRANSLATION_REPAIR_DISPATCHED main=${main_sha} deferred=${DEFERRED:-false}"
 
-      - name: Recover F3 voice separately after server grace period
+      - name: Recover F3 voice after bounded F3-attempt cooldown
         id: f3_recovery
         if: github.event_name != 'pull_request' && steps.publication_qa.outputs.core_healthy == 'true' && steps.publication_qa.outputs.furigana_healthy == 'true' && steps.drift.outputs.base_drift != 'true' && steps.audio_qa.outputs.healthy != 'true'
         env:
           GH_TOKEN: ${{ github.token }}
           ACTIVE_COUNT: ${{ steps.workers.outputs.f3_active_count }}
-          DATA_AGE: ${{ steps.audio_qa.outputs.data_age }}
+          F3_LATEST_AGE: ${{ steps.workers.outputs.f3_latest_age }}
         shell: bash
         run: |
           set -euo pipefail
@@ -411,9 +411,11 @@ jobs:
             echo 'F3 worker is already active.'
             exit 0
           fi
-          if [ "${DATA_AGE:-0}" -lt 1200 ]; then
+          # This grace period is intentionally based on the latest F3 attempt,
+          # not on the latest news commit. New hourly news cannot reset it.
+          if [ "${F3_LATEST_AGE:-999999}" -lt 1200 ]; then
             echo 'pending=true' >> "$GITHUB_OUTPUT"
-            echo 'Giving the production server F3 worker 20 minutes to finish.'
+            echo "Recent F3 attempt is inside the 20-minute recovery cooldown (${F3_LATEST_AGE}s)."
             exit 0
           fi
           gh workflow run rebuild-f3-pacing.yml --repo "${{ github.repository }}" --ref main
@@ -479,6 +481,7 @@ jobs:
           echo "F3 recovery pending: ${{ steps.f3_recovery.outputs.pending || 'false' }}"
           echo "F3 voice healthy: ${{ steps.audio_qa.outputs.healthy || 'false' }}"
           echo "F3 data age seconds: ${{ steps.audio_qa.outputs.data_age || 'unknown' }}"
+          echo "Latest F3 attempt age seconds: ${{ steps.workers.outputs.f3_latest_age || 'unknown' }}"
           echo "Sync active: ${{ steps.workers.outputs.sync_active_count || '0' }}"
           echo "Rolling repair active: ${{ steps.workers.outputs.repair_active_count || '0' }}"
           echo "Pages active: ${{ steps.workers.outputs.pages_active_count || '0' }}"
@@ -537,11 +540,11 @@ jobs:
             if [ "${{ steps.drift.outputs.base_drift }}" = 'true' ] || [ "${{ steps.publication_qa.outputs.core_healthy }}" != 'true' ] || [ "${{ steps.publication_qa.outputs.furigana_healthy }}" != 'true' ]; then
               echo '::warning::F3 audio recovery is deferred until current core text/data recovery completes.'
             elif [ "${{ steps.f3_recovery.outputs.pending }}" = 'true' ]; then
-              echo '::warning::F3 audio recovery is active, dispatched, or inside the server grace period.'
-            elif [ "${{ steps.audio_qa.outputs.data_age || '999999' }}" -lt 1200 ]; then
-              echo '::warning::F3 audio is inside the normal 20-minute server production grace period.'
+              echo '::warning::F3 audio recovery is active, dispatched, or inside the F3-attempt cooldown.'
+            elif [ "${{ steps.workers.outputs.f3_latest_age || '999999' }}" -lt 1200 ]; then
+              echo '::warning::The latest F3 recovery attempt is inside the 20-minute cooldown.'
             else
-              echo '::error::F3 production audio is unhealthy beyond the grace period and recovery did not start.'
+              echo '::error::F3 production audio is unhealthy beyond the cooldown and recovery did not start.'
               unhealthy=1
             fi
           fi
