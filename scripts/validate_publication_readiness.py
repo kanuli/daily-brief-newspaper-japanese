@@ -3,8 +3,9 @@
 
 News publication must be blocked by bad Japanese, broken schemas/references, or
 missing learner-facing text. It must NOT be blocked merely because the server
-has not generated the MP3/timing asset yet. Full audio completeness remains the
-responsibility of validate_site.py --data-only / the F3 audio health workflows.
+has not generated the MP3/timing asset or final F3 metadata yet. Full audio
+completeness remains the responsibility of validate_site.py --data-only and the
+F3 audio health workflows.
 """
 from __future__ import annotations
 
@@ -66,20 +67,36 @@ def check_item(group: str, item: dict, warnings: list[str]) -> None:
         fail(f"{group}:{aid}: audio path metadata mismatch")
     if item.get("timing") != expected_timing:
         fail(f"{group}:{aid}: timing path metadata mismatch")
-    try:
-        speed = float(item.get("audioSpeed", 0))
-    except Exception:
-        speed = 0
-    if abs(speed - EXPECTED_AUDIO_SPEED) > 0.001:
-        fail(f"{group}:{aid}: audioSpeed metadata mismatch")
-    if item.get("audioDeliveryProfile") != EXPECTED_DELIVERY_PROFILE:
-        fail(f"{group}:{aid}: audioDeliveryProfile metadata mismatch")
+
+    audio_exists = (ROOT / expected_audio).is_file()
+    timing_exists = (ROOT / expected_timing).is_file()
+
+    # Speed/profile are final F3 metadata. Before synthesis they may legitimately
+    # be absent. Once present, however, they must match the approved delivery
+    # profile; a conflicting value is a real publication-integrity problem.
+    speed_raw = item.get("audioSpeed")
+    if speed_raw not in (None, ""):
+        try:
+            speed = float(speed_raw)
+        except Exception:
+            fail(f"{group}:{aid}: invalid audioSpeed metadata")
+        if abs(speed - EXPECTED_AUDIO_SPEED) > 0.001:
+            fail(f"{group}:{aid}: audioSpeed metadata mismatch")
+    else:
+        warnings.append(f"{group}:{aid}: audioSpeed pending")
+
+    profile = item.get("audioDeliveryProfile")
+    if profile not in (None, ""):
+        if profile != EXPECTED_DELIVERY_PROFILE:
+            fail(f"{group}:{aid}: audioDeliveryProfile metadata mismatch")
+    else:
+        warnings.append(f"{group}:{aid}: audioDeliveryProfile pending")
 
     # Missing physical audio/timing is a valid temporary state. The frontend's
     # F3 voice-status layer will show 音声準備中 until the manifest/assets arrive.
-    if not (ROOT / expected_audio).is_file():
+    if not audio_exists:
         warnings.append(f"{group}:{aid}: audio pending")
-    if not (ROOT / expected_timing).is_file():
+    if not timing_exists:
         warnings.append(f"{group}:{aid}: timing pending")
 
 
@@ -134,7 +151,7 @@ def main() -> int:
         print(f"PUBLICATION_AUDIO_PENDING - ... and {len(warnings) - 100} more")
     print(
         f"PUBLICATION_READINESS_OK daily={len(daily)} live={len(live_items)} "
-        f"audio_pending={len(warnings)} asynchronous_audio_allowed=true"
+        f"pending_warnings={len(warnings)} asynchronous_audio_allowed=true"
     )
     return 0
 
