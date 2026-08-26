@@ -74,6 +74,7 @@ jobs:
             scripts/validate_extra_layers.py \
             scripts/validate_furigana_readings.py \
             scripts/self_healing_runtime.py \
+            scripts/self_healing_extra_sync.py \
             scripts/emergency_remote_core_sync.py
 
       - name: Deterministic static repair
@@ -153,35 +154,67 @@ jobs:
             echo 'healthy=false' >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Detect quarantined translation owners
+      - name: Detect quarantined translation owners by health domain
         id: quarantine
         shell: bash
         run: |
           python - <<'PY' >> "$GITHUB_OUTPUT"
           import json
           from pathlib import Path
-          total = 0
-          files = []
-          owners = []
+
+          def read_count(path):
+              try:
+                  data = json.loads(path.read_text(encoding='utf-8'))
+              except Exception:
+                  return 0, []
+              ids = [str(x) for x in (data.get('translationDeferredIds') or [])]
+              metadata = [str(x) for x in (data.get('translationDeferredMetadata') or [])]
+              count = int(data.get('translationDeferredCount') or 0)
+              if data.get('translationDegraded'):
+                  count = max(count, len(ids) + len(metadata), 1)
+              return count, ids + [f'metadata:{x}' for x in metadata]
+
+          core_total = 0
+          core_files = []
+          core_owners = []
           for name in ('latest.json', 'live.json', 'archive.json'):
               path = Path('data') / name
               if not path.is_file():
                   continue
-              try:
-                  data = json.loads(path.read_text(encoding='utf-8'))
-              except Exception:
+              count, owners = read_count(path)
+              if count:
+                  core_total += count
+                  core_files.append(name)
+                  core_owners.extend(f'{name}:{x}' for x in owners)
+
+          extra_total = 0
+          extra_files = []
+          extra_owners = []
+          extra_paths = [Path('data/desk-latest.json'), Path('data/stocks-latest.json')]
+          topic = Path('data/topic-more')
+          if topic.is_dir():
+              extra_paths.extend(sorted(topic.glob('*.json')))
+          for path in extra_paths:
+              if not path.is_file():
                   continue
-              count = int(data.get('translationDeferredCount') or 0)
-              ids = [str(x) for x in (data.get('translationDeferredIds') or [])]
-              if count or ids or data.get('translationDegraded'):
-                  count = max(count, len(ids))
-                  total += count
-                  files.append(name)
-                  owners.extend(f'{name}:{x}' for x in ids)
+              count, owners = read_count(path)
+              if count:
+                  name = str(path.relative_to(Path('data')))
+                  extra_total += count
+                  extra_files.append(name)
+                  extra_owners.extend(f'{name}:{x}' for x in owners)
+
+          total = core_total + extra_total
           print(f'deferred={str(total > 0).lower()}')
           print(f'count={total}')
-          print(f'files={",".join(files)}')
-          print(f'owners={",".join(owners[:30])}')
+          print(f'core_deferred={str(core_total > 0).lower()}')
+          print(f'core_count={core_total}')
+          print(f'core_files={",".join(core_files)}')
+          print(f'core_owners={",".join(core_owners[:30])}')
+          print(f'extra_deferred={str(extra_total > 0).lower()}')
+          print(f'extra_count={extra_total}')
+          print(f'extra_files={",".join(extra_files)}')
+          print(f'extra_owners={",".join(extra_owners[:30])}')
           PY
 
       - name: Compare Cantonese source fingerprints by health domain
@@ -206,10 +239,10 @@ jobs:
         id: audio_qa
         shell: bash
         run: |
-          if [ "${{ steps.publication_qa.outputs.healthy }}" != 'true' ]; then
+          if [ "${{ steps.publication_qa.outputs.core_healthy }}" != 'true' ] || [ "${{ steps.publication_qa.outputs.furigana_healthy }}" != 'true' ]; then
             echo 'healthy=false' >> "$GITHUB_OUTPUT"
             echo 'data_age=999999' >> "$GITHUB_OUTPUT"
-            echo 'Publication data is not clean yet; F3 check deferred.'
+            echo 'Core publication data is not clean yet; F3 check deferred.'
             exit 0
           fi
           set +e
@@ -273,7 +306,7 @@ jobs:
           PY
 
       - name: Recover Japanese core text/data sync
-        if: github.event_name != 'pull_request' && (steps.publication_qa.outputs.core_healthy != 'true' || steps.publication_qa.outputs.furigana_healthy != 'true' || steps.drift.outputs.base_drift == 'true' || steps.quarantine.outputs.deferred == 'true' || steps.workers.outputs.sync_latest_conclusion == 'failure')
+        if: github.event_name != 'pull_request' && (steps.publication_qa.outputs.core_healthy != 'true' || steps.publication_qa.outputs.furigana_healthy != 'true' || steps.drift.outputs.base_drift == 'true' || steps.quarantine.outputs.core_deferred == 'true' || steps.workers.outputs.sync_latest_conclusion == 'failure')
         env:
           GH_TOKEN: ${{ github.token }}
           ACTIVE_COUNT: ${{ steps.workers.outputs.sync_active_count }}
@@ -281,7 +314,7 @@ jobs:
           LATEST_HEAD: ${{ steps.workers.outputs.sync_latest_head }}
           LATEST_AGE: ${{ steps.workers.outputs.sync_latest_age }}
           FAILURE_STREAK: ${{ steps.workers.outputs.sync_failure_streak }}
-          DEFERRED: ${{ steps.quarantine.outputs.deferred }}
+          DEFERRED: ${{ steps.quarantine.outputs.core_deferred }}
         shell: bash
         run: |
           set -euo pipefail
@@ -319,13 +352,14 @@ jobs:
           echo "JAPANESE_TEXT_SYNC_RECOVERY_DISPATCHED main=${main_sha} deferred=${DEFERRED:-false}"
 
       - name: Recover rolling translation quality independently
-        if: github.event_name != 'pull_request' && (steps.publication_qa.outputs.extra_healthy != 'true' || steps.drift.outputs.extra_drift == 'true' || steps.workers.outputs.repair_latest_conclusion == 'failure')
+        if: github.event_name != 'pull_request' && (steps.publication_qa.outputs.extra_healthy != 'true' || steps.drift.outputs.extra_drift == 'true' || steps.quarantine.outputs.extra_deferred == 'true' || steps.workers.outputs.repair_latest_conclusion == 'failure')
         env:
           GH_TOKEN: ${{ github.token }}
           ACTIVE_COUNT: ${{ steps.workers.outputs.repair_active_count }}
           LATEST_HEAD: ${{ steps.workers.outputs.repair_latest_head }}
           LATEST_AGE: ${{ steps.workers.outputs.repair_latest_age }}
           FAILURE_STREAK: ${{ steps.workers.outputs.repair_failure_streak }}
+          DEFERRED: ${{ steps.quarantine.outputs.extra_deferred }}
         shell: bash
         run: |
           set -euo pipefail
@@ -335,15 +369,22 @@ jobs:
             echo 'Rolling translation repair worker is already active.'
             exit 0
           fi
-          if [ "${LATEST_HEAD:-}" = "$main_sha" ] && [ "${FAILURE_STREAK:-0}" -ge 2 ] && [ "${LATEST_AGE:-999999}" -lt "${RECOVERY_COOLDOWN_SECONDS}" ]; then
-            echo "Rolling-repair cooldown active (${LATEST_AGE}s); maintenance will retry automatically."
+          needs_cooldown=0
+          if [ "${LATEST_HEAD:-}" = "$main_sha" ] && [ "${FAILURE_STREAK:-0}" -ge 2 ]; then
+            needs_cooldown=1
+          fi
+          if [ "${LATEST_HEAD:-}" = "$main_sha" ] && [ "${DEFERRED:-false}" = 'true' ]; then
+            needs_cooldown=1
+          fi
+          if [ "$needs_cooldown" -eq 1 ] && [ "${LATEST_AGE:-999999}" -lt "${RECOVERY_COOLDOWN_SECONDS}" ]; then
+            echo "Rolling-repair cooldown active (${LATEST_AGE}s < ${RECOVERY_COOLDOWN_SECONDS}s); maintenance will retry automatically."
             exit 0
           fi
           gh workflow run repair-extra-translation-quality.yml --repo "${{ github.repository }}" --ref main
-          echo "ROLLING_TRANSLATION_REPAIR_DISPATCHED main=${main_sha}"
+          echo "ROLLING_TRANSLATION_REPAIR_DISPATCHED main=${main_sha} deferred=${DEFERRED:-false}"
 
       - name: Recover F3 voice separately after server grace period
-        if: github.event_name != 'pull_request' && steps.publication_qa.outputs.healthy == 'true' && steps.drift.outputs.base_drift != 'true' && steps.audio_qa.outputs.healthy != 'true'
+        if: github.event_name != 'pull_request' && steps.publication_qa.outputs.core_healthy == 'true' && steps.publication_qa.outputs.furigana_healthy == 'true' && steps.drift.outputs.base_drift != 'true' && steps.audio_qa.outputs.healthy != 'true'
         env:
           GH_TOKEN: ${{ github.token }}
           ACTIVE_COUNT: ${{ steps.workers.outputs.f3_active_count }}
@@ -414,7 +455,8 @@ jobs:
           echo "Core Cantonese drift: ${{ steps.drift.outputs.base_drift || 'unknown' }}"
           echo "Extra-layer Cantonese drift: ${{ steps.drift.outputs.extra_drift || 'unknown' }}"
           echo "Any Cantonese drift: ${{ steps.drift.outputs.all_drift || 'unknown' }}"
-          echo "Quarantined translation owners: ${{ steps.quarantine.outputs.count || '0' }}"
+          echo "Core quarantined owners: ${{ steps.quarantine.outputs.core_count || '0' }}"
+          echo "Rolling quarantined owners: ${{ steps.quarantine.outputs.extra_count || '0' }}"
           echo "F3 voice healthy: ${{ steps.audio_qa.outputs.healthy || 'false' }}"
           echo "F3 data age seconds: ${{ steps.audio_qa.outputs.data_age || 'unknown' }}"
           echo "Sync active: ${{ steps.workers.outputs.sync_active_count || '0' }}"
@@ -433,8 +475,12 @@ jobs:
             echo '::error::Static Japanese site QA is not healthy.'
             unhealthy=1
           fi
-          if [ "${{ steps.publication_qa.outputs.healthy }}" != 'true' ]; then
-            echo '::error::Japanese publication data is not healthy; recovery may be active or pending.'
+          if [ "${{ steps.publication_qa.outputs.core_healthy }}" != 'true' ] || [ "${{ steps.publication_qa.outputs.furigana_healthy }}" != 'true' ]; then
+            echo '::error::Core Japanese publication data is not healthy; recovery may be active or pending.'
+            unhealthy=1
+          fi
+          if [ "${{ steps.publication_qa.outputs.extra_healthy }}" != 'true' ]; then
+            echo '::error::Rolling/topic Japanese publication data is not healthy; recovery may be active or pending.'
             unhealthy=1
           fi
           if [ "${{ steps.drift.outputs.base_drift }}" = 'true' ]; then
@@ -445,8 +491,11 @@ jobs:
             echo '::error::Rolling/topic Japanese publication is behind its Cantonese source.'
             unhealthy=1
           fi
-          if [ "${{ steps.quarantine.outputs.deferred }}" = 'true' ]; then
-            echo '::warning::Current Japanese publication has quarantined translation owners; automatic retry remains active.'
+          if [ "${{ steps.quarantine.outputs.core_deferred }}" = 'true' ]; then
+            echo '::warning::Current core Japanese publication has quarantined owners; automatic core retry remains active.'
+          fi
+          if [ "${{ steps.quarantine.outputs.extra_deferred }}" = 'true' ]; then
+            echo '::warning::Current rolling Japanese publication has quarantined owners; automatic rolling retry remains active.'
           fi
           if [ "${{ steps.audio_qa.outputs.healthy }}" != 'true' ]; then
             if [ "${{ steps.audio_qa.outputs.data_age || '999999' }}" -lt 1200 ]; then
@@ -457,9 +506,7 @@ jobs:
             fi
           fi
           # Historical failed workflow conclusions are diagnostic signals, not
-          # current health. The recovery steps above already dispatch fresh work
-          # when needed; do not keep maintenance red merely because an older run
-          # failed while current data is healthy or recovery is underway.
+          # current health. Recovery steps above dispatch fresh work as needed.
           if [ "$unhealthy" -ne 0 ]; then
             echo 'AUTO_MAINTENANCE_UNRESOLVED_HEALTH_FAILURE'
             exit 1
