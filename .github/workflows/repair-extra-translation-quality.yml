@@ -5,9 +5,9 @@ on:
   push:
     branches: ["main"]
     paths:
+      - 'scripts/self_healing_extra_sync.py'
+      - 'scripts/sync_cantonese_layers.py'
       - 'scripts/repair_garbled_extra_layers.py'
-      - 'scripts/repair_all_published_quality.py'
-      - 'scripts/validate_content_integrity.py'
       - 'scripts/validate_extra_layers.py'
       - 'scripts/safe_sync.py'
       - 'scripts/local_translation_runtime.py'
@@ -17,7 +17,7 @@ on:
       - '日本語ニュース同期・Discord即時配信'
     types: [completed]
   schedule:
-    # Current Daily/Live starts at :30. Repair existing rolling copy afterward.
+    # Core Daily/Live starts at :30. Full rolling parity follows at :45.
     - cron: '45 * * * *'
 
 permissions:
@@ -29,9 +29,9 @@ concurrency:
 
 jobs:
   repair:
-    # Rolling/category cleanup is independent of whether the core sync succeeded.
+    # Rolling/category recovery is independent of core publication success.
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 18
     env:
       CANTONESE_SNAPSHOT_DIR: .cantonese-snapshot/data
     steps:
@@ -64,43 +64,50 @@ jobs:
           pip install --index-url https://download.pytorch.org/whl/cpu torch==2.8.0
           pip install -r requirements-translation.txt
 
-      - name: Syntax check targeted repair
-        run: python -m py_compile scripts/cantonese_snapshot.py scripts/repair_garbled_extra_layers.py scripts/local_translation_runtime.py scripts/validate_extra_layers.py
+      - name: Syntax check self-healing rolling sync
+        run: |
+          python -m py_compile \
+            scripts/cantonese_snapshot.py \
+            scripts/self_healing_extra_sync.py \
+            scripts/sync_cantonese_layers.py \
+            scripts/local_translation_runtime.py \
+            scripts/validate_extra_layers.py
 
       - name: Freeze one Cantonese source commit
         run: python scripts/cantonese_snapshot.py
 
-      - name: Repair only garbled rolling fields
-        timeout-minutes: 8
+      - name: Rebuild rolling layers with owner quarantine
+        timeout-minutes: 10
         env:
           TOKENIZERS_PARALLELISM: 'false'
-        run: python scripts/repair_garbled_extra_layers.py
+        run: python scripts/self_healing_extra_sync.py
 
-      - name: Validate all published rolling Japanese
+      - name: Validate every published rolling Japanese layer
         run: python scripts/validate_extra_layers.py
 
-      - name: Publish repaired rolling fields
+      - name: Publish current rolling layers
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'daily-brief-japanese-bot'
           git config user.email 'actions@users.noreply.github.com'
-          git add data/desk-latest.json data/stocks-latest.json data/topic-more data/translation-cache.json
+          git add data/desk-latest.json data/stocks-latest.json
+          git add -A data/topic-more
           if git diff --cached --quiet; then
-            echo 'No garbled rolling fields required publication.'
+            echo 'Rolling layers already match the current source candidate.'
             exit 0
           fi
-          git commit -m '修復済みローリング日本語翻訳を公開'
+          git commit -m '広東語版ローリングニュースを自己修復同期'
           for attempt in 1 2 3 4 5; do
             git fetch origin main
             if ! git rebase origin/main; then
               git rebase --abort || true
-              echo 'Rolling repair rebase conflict; retrying.' >&2
+              echo 'Rolling self-heal rebase conflict; retrying.' >&2
               sleep $((attempt * 2))
               continue
             fi
             if git push origin HEAD:main; then
-              echo 'JAPANESE_EXTRA_QUALITY_REPAIR_PUSH_OK'
+              echo 'JAPANESE_EXTRA_SELF_HEAL_PUSH_OK'
               exit 0
             fi
             sleep $((attempt * 2))
