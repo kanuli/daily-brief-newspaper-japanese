@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Safety wrapper for context-aware, lexical Japanese furigana.
 
-Primary readings come from Sudachi's Japanese morphological dictionary so news
-compounds are read as lexical units instead of isolated kanji. pykakasi remains
-only as a fallback. The invariant is strict: removing ruby markup must reproduce
-the source Japanese exactly; if any reading correction changes visible copy,
-the field falls back rather than publishing mutated text.
+Sudachi is primary for lexical Japanese compounds. Numeric counters/dates and a
+small set of explicitly context-sensitive forms are routed through the existing
+specialized context renderer, whose rules are more precise than generic
+morphological tokenization for those cases. pykakasi is otherwise fallback only.
+Visible Japanese must always remain byte-for-byte identical after ruby removal.
 """
 from __future__ import annotations
 
@@ -27,6 +27,10 @@ _ONE_DAY_LESS_RE = re.compile(
     r"(?:1<ruby>日<rt>[^<]+</rt></ruby>|<ruby>1日<rt>[^<]+</rt></ruby>)"
     r"(?=(?:足らず|<ruby>足<rt>[^<]+</rt></ruby>らず))"
 )
+# Dates/counters have editorially explicit readings in furigana_context.py.
+# These forms deliberately use that renderer first rather than asking Sudachi to
+# decide token boundaries around digits.
+_SPECIAL_CONTEXT_RE = re.compile(r"\d|対|後|行方|米ドル")
 _ORIGINAL_RUBY_HTML = base.ruby_html
 
 _SUDACHI = None
@@ -115,31 +119,52 @@ def _contextualize(source: str, rendered: str) -> str:
     return _editorial_fix(value)
 
 
+def _validated(source: str, rendered: str, label: str) -> str | None:
+    value = _contextualize(source, rendered)
+    if visible_text(value) == source:
+        return value
+    print(f"FURIGANA_{label}_VISIBLE_TEXT_MISMATCH", source[:100])
+    return None
+
+
 def safe_ruby_html(text) -> str:
     value = str(text or "")
     if not value:
         return ""
+
+    # Explicit date/counter/context rules first for forms they own.
+    if _SPECIAL_CONTEXT_RE.search(value):
+        try:
+            contextual = _validated(value, _pykakasi_ruby(value), "CONTEXT")
+            if contextual is not None:
+                return contextual
+        except Exception as exc:
+            print("FURIGANA_CONTEXT_PRIMARY_FALLBACK", type(exc).__name__, str(exc)[:120])
+
+    # Lexical dictionary first for ordinary Japanese compounds.
     try:
-        lexical = _contextualize(value, _sudachi_ruby(value))
-        if visible_text(lexical) == value:
+        lexical = _validated(value, _sudachi_ruby(value), "SUDACHI")
+        if lexical is not None:
             return lexical
-        print("FURIGANA_SUDACHI_VISIBLE_TEXT_MISMATCH", value[:100])
     except Exception as exc:
         print("FURIGANA_SUDACHI_FALLBACK", type(exc).__name__, str(exc)[:120])
 
+    # Legacy per-field fallback remains available during dictionary faults.
     try:
-        legacy = _contextualize(value, _pykakasi_ruby(value))
+        legacy = _validated(value, _pykakasi_ruby(value), "LEGACY")
+        if legacy is not None:
+            return legacy
     except Exception:
         legacy = _editorial_fix(_ORIGINAL_RUBY_HTML(value))
-    if visible_text(legacy) == value:
-        return legacy
+        if visible_text(legacy) == value:
+            return legacy
 
     print("FURIGANA_VISIBLE_TEXT_ESCAPE", value[:100])
     return html.escape(value, quote=False)
 
 
 def engine_name() -> str:
-    return "sudachi-core-mode-c" if _SUDACHI is not None else "pykakasi-protected-fallback"
+    return "sudachi-core-mode-c+context" if _SUDACHI is not None else "pykakasi-protected-fallback"
 
 
 def install() -> None:
