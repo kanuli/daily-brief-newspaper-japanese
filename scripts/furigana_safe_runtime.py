@@ -27,6 +27,7 @@ _ONE_DAY_LESS_RE = re.compile(
     r"(?:1<ruby>日<rt>[^<]+</rt></ruby>|<ruby>1日<rt>[^<]+</rt></ruby>)"
     r"(?=(?:足らず|<ruby>足<rt>[^<]+</rt></ruby>らず))"
 )
+_ONE_DAY_LESS_LEGACY_RE = re.compile(r"1<ruby>日足<rt>[^<]+</rt></ruby>らず")
 # Dates/counters have editorially explicit readings in furigana_context.py.
 # These forms deliberately use that renderer first rather than asking Sudachi to
 # decide token boundaries around digits.
@@ -100,7 +101,11 @@ def _fix_past_after(rendered: str) -> str:
 
 
 def _fix_one_day_less(rendered: str) -> str:
-    return _ONE_DAY_LESS_RE.sub("<ruby>1日<rt>いちにち</rt></ruby>", rendered)
+    value = _ONE_DAY_LESS_LEGACY_RE.sub(
+        "<ruby>1日<rt>いちにち</rt></ruby><ruby>足<rt>た</rt></ruby>らず",
+        rendered,
+    )
+    return _ONE_DAY_LESS_RE.sub("<ruby>1日<rt>いちにち</rt></ruby>", value)
 
 
 def _fix_protected_readings(rendered: str) -> str:
@@ -132,7 +137,6 @@ def safe_ruby_html(text) -> str:
     if not value:
         return ""
 
-    # Explicit date/counter/context rules first for forms they own.
     if _SPECIAL_CONTEXT_RE.search(value):
         try:
             contextual = _validated(value, _pykakasi_ruby(value), "CONTEXT")
@@ -141,7 +145,6 @@ def safe_ruby_html(text) -> str:
         except Exception as exc:
             print("FURIGANA_CONTEXT_PRIMARY_FALLBACK", type(exc).__name__, str(exc)[:120])
 
-    # Lexical dictionary first for ordinary Japanese compounds.
     try:
         lexical = _validated(value, _sudachi_ruby(value), "SUDACHI")
         if lexical is not None:
@@ -149,7 +152,6 @@ def safe_ruby_html(text) -> str:
     except Exception as exc:
         print("FURIGANA_SUDACHI_FALLBACK", type(exc).__name__, str(exc)[:120])
 
-    # Legacy per-field fallback remains available during dictionary faults.
     try:
         legacy = _validated(value, _pykakasi_ruby(value), "LEGACY")
         if legacy is not None:
