@@ -2,6 +2,15 @@ name: F3ニュース読み再生成
 
 on:
   workflow_dispatch:
+  workflow_run:
+    workflows:
+      - '日本語ニュース同期・Discord即時配信'
+      - '日本語ローリング翻訳品質修復'
+    types: [completed]
+  schedule:
+    # Safety net: if an upstream workflow_run event is ever missed, make sure
+    # stale F3 audio is revisited every hour after the Japanese xx:15 cycle.
+    - cron: '35 * * * *'
   push:
     branches: [main]
     paths:
@@ -22,6 +31,9 @@ concurrency:
 
 jobs:
   rebuild:
+    # A failed upstream sync must not synthesize a rejected/partial publication.
+    # Manual, schedule and direct F3-code pushes remain eligible immediately.
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:
