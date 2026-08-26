@@ -28,7 +28,9 @@ jobs:
           python -m pip install --disable-pip-version-check --quiet \
             requests==2.32.5 \
             deep-translator==1.11.4 \
-            pykakasi==2.3.0
+            pykakasi==2.3.0 \
+            SudachiPy==0.6.11 \
+            SudachiDict-core==20260723
 
       - name: 静的サイトQA
         run: python scripts/validate_site.py --static-only
@@ -37,6 +39,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          python -m py_compile scripts/newsroom_quality.py scripts/furigana_safe_runtime.py scripts/repair_garbled_core.py
           python scripts/validate_content_integrity.py
           python scripts/validate_editorial_quality.py
           python scripts/validate_furigana_readings.py
