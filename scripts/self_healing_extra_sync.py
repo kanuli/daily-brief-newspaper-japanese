@@ -6,11 +6,19 @@ one rolling story is quarantined at that story instead of aborting the whole
 file. Clean stories and current source metadata continue to publish. Degraded
 files carry explicit deferred-owner metadata so maintenance can retry them on
 later cycles without treating the file as fully repaired.
+
+Large rolling files are also time-bounded per file. When the local translation
+budget is exhausted, unprocessed owners are quarantined (not failed), the clean
+current subset is published, and subsequent maintenance cycles resume from the
+source fingerprints already translated. This prevents a large news hour from
+turning into a GitHub Actions timeout loop.
 """
 from __future__ import annotations
 
 import json
+import os
 import re
+import time
 from pathlib import Path
 
 import cantonese_snapshot as snapshot
@@ -26,6 +34,15 @@ import validate_content_integrity as integrity
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data"
 DROP = object()
+
+
+def _budget_seconds(name: str) -> int:
+    """Keep the whole rebuild safely inside the workflow's 10-minute step."""
+    if name == "desk-latest.json":
+        return max(60, int(os.getenv("EXTRA_DESK_BUDGET_SECONDS", "330")))
+    if name == "stocks-latest.json":
+        return max(30, int(os.getenv("EXTRA_STOCKS_BUDGET_SECONDS", "90")))
+    return max(30, int(os.getenv("EXTRA_TOPIC_BUDGET_SECONDS", "90")))
 
 
 def _load_existing(name: str):
@@ -66,8 +83,15 @@ def _story_quality_ok(source_story, japanese_story) -> bool:
     return True
 
 
-def _translate_visible_string(source_text: str, old_value, parent_key: str, path: str, metadata_deferred: list[str]):
+def _translate_visible_string(source_text: str, old_value, parent_key: str, path: str, metadata_deferred: list[str], deadline: float):
     strict = parent_key in safe.STRICT_PROSE_KEYS
+    if time.monotonic() >= deadline:
+        if isinstance(old_value, str) and old_value.strip() and safe.target_quality_ok(source_text, old_value, strict=strict):
+            metadata_deferred.append(path)
+            return old_value
+        metadata_deferred.append(path)
+        print("EXTRA_SELF_HEAL_METADATA_BUDGET_DEFERRED", f"path={path}")
+        return DROP
     try:
         return runtime.localize_or_translate(source_text, strict=strict)
     except Exception as exc:
@@ -81,16 +105,11 @@ def _translate_visible_string(source_text: str, old_value, parent_key: str, path
                 f"error={type(exc).__name__}:{str(exc)[:180]}",
             )
             return old_value
-        # If this is non-Chinese chrome/proper-name text, the deterministic local
-        # normalization is safe even when a model path unexpectedly raised.
         if not base.likely_chinese_source(source_text):
             value = fast.localize_non_chinese(source_text)
             if safe.target_quality_ok(source_text, value, strict=strict):
                 metadata_deferred.append(path)
                 return value
-        # Optional visible metadata is safer omitted than published in Cantonese
-        # or as garbled Japanese. The file remains explicitly degraded and is
-        # retried by maintenance.
         metadata_deferred.append(path)
         print(
             "EXTRA_SELF_HEAL_METADATA_OMITTED",
@@ -100,7 +119,7 @@ def _translate_visible_string(source_text: str, old_value, parent_key: str, path
         return DROP
 
 
-def _convert_node(source, old, file_name: str, path: str, old_by_id, deferred: set[str], metadata_deferred: list[str]):
+def _convert_node(source, old, file_name: str, path: str, old_by_id, deferred: set[str], metadata_deferred: list[str], deadline: float):
     if extra.story_like(source):
         story_id = str(source.get("id"))
         source_fp = extra.fingerprint(source)
@@ -115,6 +134,11 @@ def _convert_node(source, old, file_name: str, path: str, old_by_id, deferred: s
             extra.decorate_story_tree(value, "rolling")
             print("EXTRA_SELF_HEAL_REUSE", f"file={file_name}", f"id={story_id}")
             return value
+
+        if time.monotonic() >= deadline:
+            deferred.add(story_id)
+            print("EXTRA_SELF_HEAL_BUDGET_QUARANTINED", f"file={file_name}", f"id={story_id}")
+            return DROP
 
         try:
             # Prewarm this owner only. A failure is caught here and cannot abort
@@ -149,6 +173,7 @@ def _convert_node(source, old, file_name: str, path: str, old_by_id, deferred: s
                 old_by_id,
                 deferred,
                 metadata_deferred,
+                deadline,
             )
             if value is not DROP:
                 output.append(value)
@@ -158,8 +183,6 @@ def _convert_node(source, old, file_name: str, path: str, old_by_id, deferred: s
         output = {}
         old_dict = old if isinstance(old, dict) else {}
         for key, child in source.items():
-            # Source identity/URLs/timestamps and machine metadata are copied
-            # exactly. User-facing text keys are translated below.
             if key in base.KEEP_KEYS or key in {
                 "generatedAt", "mode", "editorialStandardVersion", "contentVersion",
                 "sourceFingerprint", "translationSchemaVersion", "language",
@@ -175,6 +198,7 @@ def _convert_node(source, old, file_name: str, path: str, old_by_id, deferred: s
                     key,
                     child_path,
                     metadata_deferred,
+                    deadline,
                 )
             else:
                 value = _convert_node(
@@ -185,6 +209,7 @@ def _convert_node(source, old, file_name: str, path: str, old_by_id, deferred: s
                     old_by_id,
                     deferred,
                     metadata_deferred,
+                    deadline,
                 )
             if value is not DROP:
                 output[key] = value
@@ -192,7 +217,7 @@ def _convert_node(source, old, file_name: str, path: str, old_by_id, deferred: s
 
     if isinstance(source, str) and path.rsplit(".", 1)[-1] in base.TRANSLATE_KEYS:
         key = path.rsplit(".", 1)[-1]
-        return _translate_visible_string(source, old, key, path, metadata_deferred)
+        return _translate_visible_string(source, old, key, path, metadata_deferred, deadline)
     return source
 
 
@@ -213,6 +238,9 @@ def sync_file(name: str, source) -> bool:
         print("EXTRA_SELF_HEAL_FAST_PATH", name)
         return False
 
+    budget = _budget_seconds(name)
+    started = time.monotonic()
+    deadline = started + budget
     old_by_id = _index_stories(existing or {})
     deferred: set[str] = set()
     metadata_deferred: list[str] = []
@@ -224,15 +252,18 @@ def sync_file(name: str, source) -> bool:
         old_by_id,
         deferred,
         metadata_deferred,
+        deadline,
     )
     if translated is DROP or not isinstance(translated, dict):
         raise RuntimeError(f"Self-healing extra sync could not construct {name}")
 
-    story_count = sum(1 for _ in extra.iter_stories(translated)) if hasattr(extra, "iter_stories") else len(_index_stories(translated))
+    story_count = len(_index_stories(translated))
     source_story_count = len(_index_stories(source))
     if source_story_count and story_count == 0:
         raise RuntimeError(f"Self-healing guard refused empty rolling publication: {name}")
 
+    elapsed = int(time.monotonic() - started)
+    budget_exhausted = time.monotonic() >= deadline
     extra.decorate_story_tree(translated, "rolling")
     translated["language"] = "ja"
     translated["translationSource"] = "kanuli/daily-brief-newspaper"
@@ -245,14 +276,23 @@ def sync_file(name: str, source) -> bool:
     translated["translationDeferredIds"] = sorted(deferred)
     translated["translationDeferredMetadata"] = metadata_deferred[:80]
     translated["translationRecoveryMode"] = "owner-quarantine-v1"
+    translated["translationBudgetSeconds"] = budget
+    translated["translationElapsedSeconds"] = elapsed
+    translated["translationBudgetExhausted"] = budget_exhausted
 
     path.write_text(json.dumps(translated, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    # Persist successful work after every source file. A later timeout/crash must
+    # never throw away translations that a subsequent maintenance cycle can reuse.
+    runtime.checkpoint_cache(f"self-healing-extra-{name.replace('/', '-')}")
     print(
         "EXTRA_SELF_HEAL_PUBLISHED_CANDIDATE",
         f"file={name}",
         f"stories={story_count}/{source_story_count}",
         f"deferred_stories={len(deferred)}",
         f"deferred_metadata={len(metadata_deferred)}",
+        f"elapsed={elapsed}s",
+        f"budget={budget}s",
+        f"budget_exhausted={budget_exhausted}",
     )
     return True
 
@@ -279,8 +319,6 @@ def main():
         if sync_file(name, source):
             changed.append(name)
 
-    # Current-day topic-more is authoritative; old files only create stale UI
-    # ambiguity and should not survive a successful current-date candidate build.
     folder = OUT / "topic-more"
     if folder.is_dir():
         for old in folder.glob("*.json"):
