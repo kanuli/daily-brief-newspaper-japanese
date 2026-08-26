@@ -8,16 +8,19 @@ on:
       - 'scripts/self_healing_extra_sync.py'
       - 'scripts/sync_cantonese_layers.py'
       - 'scripts/repair_garbled_extra_layers.py'
+      - 'scripts/remote_repair_all_published_quality.py'
+      - 'scripts/newsroom_quality.py'
+      - 'scripts/furigana_safe_runtime.py'
       - 'scripts/validate_extra_layers.py'
       - 'scripts/safe_sync.py'
       - 'scripts/local_translation_runtime.py'
       - '.github/workflows/repair-extra-translation-quality.yml'
   workflow_run:
     workflows:
-      - '日本語ニュース同期・Discord即時配信'
+      - '日本語ニュース同期・品質ゲート・Discord配信'
     types: [completed]
   schedule:
-    # Core Daily/Live starts at :30. Full rolling parity follows at :45.
+    # Core Daily/Live starts at :15. Full rolling parity follows at :45.
     - cron: '45 * * * *'
 
 permissions:
@@ -25,18 +28,11 @@ permissions:
 
 concurrency:
   group: japanese-extra-quality-repair
-  # A rolling rebuild checkpoints translation state locally but publishes only
-  # after validation. Cancelling it discards that run's publishable progress.
-  # Queue a newer trigger instead; the queued run will re-check main/source.
   cancel-in-progress: false
 
 jobs:
   repair:
-    # Rolling/category recovery is independent of core publication success.
     runs-on: ubuntu-latest
-    # Model startup takes several minutes and the script intentionally budgets
-    # up to 330s + 90s + 90s across the three rolling layers. Keep the job
-    # envelope larger than that declared work budget plus setup/validation.
     timeout-minutes: 28
     env:
       CANTONESE_SNAPSHOT_DIR: .cantonese-snapshot/data
@@ -77,18 +73,25 @@ jobs:
             scripts/self_healing_extra_sync.py \
             scripts/sync_cantonese_layers.py \
             scripts/local_translation_runtime.py \
+            scripts/remote_repair_all_published_quality.py \
+            scripts/newsroom_quality.py \
+            scripts/furigana_safe_runtime.py \
             scripts/validate_extra_layers.py
 
       - name: Freeze one Cantonese source commit
         run: python scripts/cantonese_snapshot.py
 
       - name: Rebuild rolling layers with owner quarantine
-        # The script's own owner/file budgets bound work and quarantine the rest.
-        # Ten minutes was shorter than model startup + those declared budgets.
         timeout-minutes: 20
         env:
           TOKENIZERS_PARALLELISM: 'false'
         run: python scripts/self_healing_extra_sync.py
+
+      - name: Apply v4 newsroom and lexical-furigana repair to rolling layers
+        timeout-minutes: 6
+        env:
+          REMOTE_REPAIR_SCOPE: rolling
+        run: python scripts/remote_repair_all_published_quality.py
 
       - name: Validate every published rolling Japanese layer
         run: python scripts/validate_extra_layers.py
@@ -105,7 +108,7 @@ jobs:
             echo 'Rolling layers already match the current source candidate.'
             exit 0
           fi
-          git commit -m '広東語版ローリングニュースを自己修復同期'
+          git commit -m '広東語版ローリングニュースをv4編集品質で自己修復同期'
           for attempt in 1 2 3 4 5; do
             git fetch origin main
             if ! git rebase origin/main; then
