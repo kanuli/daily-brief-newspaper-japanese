@@ -39,7 +39,8 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          python -m py_compile scripts/newsroom_quality.py scripts/furigana_safe_runtime.py scripts/repair_garbled_core.py
+          python -m py_compile scripts/newsroom_quality.py scripts/furigana_safe_runtime.py scripts/repair_garbled_core.py scripts/newsroom_postedit_core.py
+          python scripts/test_newsroom_quality.py
           python scripts/validate_content_integrity.py
           python scripts/validate_editorial_quality.py
           python scripts/validate_furigana_readings.py
