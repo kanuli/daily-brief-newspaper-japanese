@@ -44,6 +44,12 @@ CASES = {
     "1節":"<ruby>1節<rt>いっせつ</rt></ruby>",
     "13話":"<ruby>13話<rt>じゅうさんわ</rt></ruby>",
     "日本":"<ruby>日本<rt>にほん</rt></ruby>",
+    # Editorially protected newsroom vocabulary. These cases are explicit golden
+    # readings, not expectations generated from pykakasi itself.
+    "麻しん":"<ruby>麻<rt>ま</rt></ruby>しん",
+    "麻疹":"<ruby>麻疹<rt>ましん</rt></ruby>",
+    "氷河湖":"<ruby>氷河湖<rt>ひょうがこ</rt></ruby>",
+    "土砂崩れ":"<ruby>土砂崩れ<rt>どしゃくずれ</rt></ruby>",
 }
 
 
@@ -142,6 +148,9 @@ def check_forbidden(issues):
             (r"\d{1,2}<ruby>月<rt>がつ</rt></ruby>\d{1,2}<ruby>日<rt>にち</rt></ruby>", "uncorrected numeric calendar date ruby remains"),
             (r"<ruby>行方<rt>なめがた</rt></ruby>は", "whereabouts 行方 still uses なめがた"),
             (r"<ruby>米<rt>こめ</rt></ruby>ドル", "米ドル still uses こめ"),
+            (r"<ruby>麻<rt>あさ</rt></ruby>しん", "麻しん still uses あさ instead of ましん"),
+            (r"<ruby>氷河<rt>ひょうが</rt></ruby><ruby>湖<rt>みずうみ</rt></ruby>", "氷河湖 still uses 湖=みずうみ instead of lexical ひょうがこ"),
+            (r"<ruby>土砂崩<rt>どしゃくづ</rt></ruby>れ", "土砂崩れ still uses どしゃくづれ instead of どしゃくずれ"),
         )
         for pattern, message in forbidden:
             if re.search(pattern, raw):
