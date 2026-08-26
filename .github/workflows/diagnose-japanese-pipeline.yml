@@ -49,8 +49,14 @@ jobs:
           python scripts/validate_content_integrity.py
           python scripts/validate_editorial_quality.py
 
-      - name: ふりがな独立ゴールデン単体QA
-        run: python scripts/validate_furigana_readings.py --units-only
+      - name: ふりがな数詞・日付ゴールデンQA
+        run: python scripts/validate_furigana_readings.py --standard-units-only
+
+      - name: ふりがな文脈ゴールデンQA
+        run: python scripts/validate_furigana_readings.py --context-units-only
+
+      - name: ふりがな語彙ゴールデンQA
+        run: python scripts/validate_furigana_readings.py --lexical-units-only
 
       - name: ふりがな公開コーパスQA
         run: python scripts/validate_furigana_readings.py --corpus-only
