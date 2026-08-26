@@ -27,7 +27,11 @@ permissions:
 
 concurrency:
   group: f3-semantic-pacing-rebuild
-  cancel-in-progress: true
+  # Voice generation can take long enough to overlap the next upstream event.
+  # Cancelling here discards all uncommitted audio progress, which caused the
+  # Aug 26 run to die with 19 records pending. Serialize instead; a queued run
+  # will re-check the manifest and normally become a small/no-op catch-up run.
+  cancel-in-progress: false
 
 jobs:
   rebuild:
