@@ -51,12 +51,9 @@ jobs:
           node --check assets/js/newspaper-ja.js
           node --check assets/js/topic-ja-rolling.js
           node --check assets/js/system-ja.js
-          # Layout parity can depend on upstream presentation changes, so report
-          # it as a warning; syntax/site integrity above remains blocking.
           python scripts/validate_layout_parity.py || echo 'LAYOUT_PARITY_WARNING non-blocking presentation drift detected'
 
-      - name: 編集品質・ふりがな・単語の公開前ハードゲート
-        id: data_health
+      - name: コア日本語・編集品質ハードゲート
         shell: bash
         run: |
           set -euo pipefail
@@ -64,13 +61,23 @@ jobs:
           python scripts/validate_editorial_quality.py
           python scripts/validate_furigana_readings.py
           python scripts/validate_vocab_quality.py
+          echo 'CORE_EDITORIAL_GATE_OK'
+
+      - name: 追加ローリング層ハードゲート
+        shell: bash
+        run: |
+          set -euo pipefail
           python scripts/validate_extra_layers.py
-          # News must remain publishable while server-side F3 audio is still
-          # generating. Full audio completeness is checked separately by the
-          # strict validate_site.py --data-only / F3 health workflows.
+          echo 'EXTRA_LAYER_GATE_OK'
+
+      - name: 非同期音声対応の公開準備ハードゲート
+        id: data_health
+        shell: bash
+        run: |
+          set -euo pipefail
           python scripts/validate_publication_readiness.py
           echo 'clean=true' >> "$GITHUB_OUTPUT"
-          echo 'EDITORIAL_PUBLICATION_GATE_OK'
+          echo 'PUBLICATION_READINESS_GATE_OK'
 
       - name: Pagesを設定
         uses: actions/configure-pages@v5
