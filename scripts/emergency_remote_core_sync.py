@@ -11,6 +11,7 @@ from __future__ import annotations
 import cantonese_snapshot as snapshot
 import fast_safe_sync as fast
 import furigana_safe_runtime
+import newsroom_postedit_core
 import newsroom_quality
 import safe_sync as safe
 import self_healing_runtime
@@ -22,13 +23,12 @@ def snapshot_fetch(name: str):
 
 
 def main():
-    # Freeze all base.fetch() calls to the snapshot created by this workflow run
-    # so source parity cannot move underneath a recovery already in progress.
     base.fetch = snapshot_fetch
     newsroom_quality.install(safe)
     self_healing_runtime.install()
     furigana_safe_runtime.install()
     fast.main()
+    newsroom_postedit_core.main()
     print(
         "EMERGENCY_REMOTE_CORE_SYNC_OK",
         f"snapshot={snapshot.snapshot_commit()}",
