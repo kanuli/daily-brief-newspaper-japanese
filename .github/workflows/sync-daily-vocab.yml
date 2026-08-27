@@ -1,0 +1,68 @@
+name: Sync daily Japanese vocab
+
+on:
+  schedule:
+    # 00:20 Hong Kong time every day, after upstream generation at 00:10 HKT.
+    - cron: "20 16 * * *"
+  workflow_dispatch:
+  push:
+    paths:
+      - ".daily-vocab-sync-trigger"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-daily-japanese-vocab
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install sync dependencies
+        run: python -m pip install --disable-pip-version-check requests==2.32.5 deep-translator==1.11.4
+
+      - name: Sync teacher-audited upstream vocabulary
+        run: python scripts/sync_vocab_ja.py
+
+      - name: Require today's Hong Kong source date
+        run: |
+          python - <<'PY'
+          import json
+          from datetime import datetime
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+          expected = datetime.now(ZoneInfo("Asia/Hong_Kong")).date().isoformat()
+          data = json.loads(Path("data/vocab/latest.json").read_text(encoding="utf-8"))
+          actual = str(data.get("date") or "")
+          assert actual == expected, f"Stale daily vocabulary: expected {expected}, got {actual}"
+          print(f"VOCAB_DATE_OK {actual}")
+          PY
+
+      - name: Validate Japanese learner vocabulary quality
+        run: python scripts/validate_vocab_quality.py
+
+      - name: Commit synced vocabulary
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/vocab
+          if git diff --cached --quiet; then
+            echo "No vocab changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: sync daily Japanese vocab"
+          git pull --rebase origin main
+          git push origin HEAD:main
