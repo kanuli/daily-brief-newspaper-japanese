@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate learner-facing Japanese vocabulary metadata independently of sync."""
+"""Validate the Japanese edition's learner-facing daily vocabulary."""
 from __future__ import annotations
 
 import json
@@ -8,17 +8,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PATH = ROOT / "data" / "vocab" / "latest.json"
-LEVELS = {"N1", "N2", "N3", "N4", "N5"}
-KANA_RE = re.compile(r"^[\u3040-\u30ffー・]+$")
-
-# Conservative editorial minimums for words that have already appeared with
-# implausibly easy source metadata. These are estimates, not official JLPT lists.
-MIN_LEVEL = {
-    ("さつがい", "殺害"): "N2",
-    ("せいたい", "生体"): "N2",
-    ("じょうき", "常軌"): "N1",
-}
-LEVEL_RANK = {"N5": 1, "N4": 2, "N3": 3, "N2": 4, "N1": 5}
+LEVELS = ("N1", "N2", "N3", "N4", "N5")
+KANA_RE = re.compile(r"^[\u3040-\u30ffー・ヽヾゝゞ]+$")
+ASCII_DISPLAY_RE = re.compile(r"[A-Za-z0-9@:/\\]")
+BLOCKED = {("コム", "COM"), ("のこったぶん", "残った分"), ("アロハ", "アロハ"), ("ビア", "ビア")}
 
 
 def main() -> int:
@@ -29,6 +22,14 @@ def main() -> int:
     issues = []
     seen = set()
     words = data.get("words") or []
+
+    if len(words) != 10:
+        issues.append(f"expected exactly 10 words, got {len(words)}")
+    if "teacher-core" not in str(data.get("sourceSelectionPolicy") or ""):
+        issues.append("sourceSelectionPolicy is not teacher-core gated")
+    if data.get("levelMethod") != "upstream-teacher-core-exact-audit-common-direct-grade-A-B":
+        issues.append(f"unexpected levelMethod: {data.get('levelMethod')!r}")
+
     for index, word in enumerate(words):
         reading = str(word.get("reading") or "").strip()
         kanji = str(word.get("kanji") or "").strip()
@@ -45,22 +46,40 @@ def main() -> int:
         if level not in LEVELS:
             issues.append(f"{label}: invalid level {level!r}")
         if not meaning:
-            issues.append(f"{label}: missing meaning")
+            issues.append(f"{label}: missing Japanese meaning")
         if not pos:
-            issues.append(f"{label}: missing part of speech")
-        minimum = MIN_LEVEL.get(key)
-        if minimum and level in LEVEL_RANK and LEVEL_RANK[level] < LEVEL_RANK[minimum]:
-            issues.append(f"{label}: {level} is implausibly easy; editorial minimum is {minimum}")
+            issues.append(f"{label}: missing part-of-speech status")
+        if key in BLOCKED:
+            issues.append(f"{label}: known unsuitable daily-teaching regression")
+        if ASCII_DISPLAY_RE.search(kanji):
+            issues.append(f"{label}: ASCII/code-like display is not allowed in JLPT teaching pool")
+        if word.get("teacherGrade") not in {"A", "B"}:
+            issues.append(f"{label}: teacherGrade must be A/B")
+        if word.get("teacherStatus") != "direct":
+            issues.append(f"{label}: teacherStatus must be direct")
+        if word.get("teacherCommon") is not True:
+            issues.append(f"{label}: word must be marked common")
+        if word.get("selectionClass") != "teacher-core-common-direct":
+            issues.append(f"{label}: wrong selectionClass")
 
-    if "推定" not in str(data.get("levelNote") or ""):
-        issues.append("levelNote must explicitly say JLPT levels are estimates")
+    for level in LEVELS:
+        count = sum(1 for word in words if word.get("level") == level)
+        if count != 2:
+            issues.append(f"{level}: expected 2 words, got {count}")
+
+    date = str(data.get("date") or "")
+    archive = PATH.parent / f"{date}.json"
+    if not date or not archive.exists():
+        issues.append(f"dated archive missing for {date!r}")
+    elif json.loads(archive.read_text(encoding="utf-8")) != data:
+        issues.append("dated archive does not exactly match latest.json")
 
     if issues:
         print("VOCAB_QUALITY_FAIL")
         for issue in issues:
             print(" -", issue)
         return 1
-    print(f"VOCAB_QUALITY_OK words={len(words)} estimated_levels_validated=true")
+    print(f"VOCAB_QUALITY_OK words={len(words)} date={date} teacher_quality_gate=true")
     return 0
 
 
