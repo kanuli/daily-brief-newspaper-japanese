@@ -1,0 +1,164 @@
+name: 日本語カテゴリーページ鮮度ウォッチドッグ
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ["main"]
+    paths:
+      - '.github/workflows/category-page-health-watchdog.yml'
+  schedule:
+    # Rolling repair starts at :45; check reader-facing category coverage after it has had time to finish.
+    - cron: '10 * * * *'
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: japanese-category-page-health-watchdog
+  cancel-in-progress: true
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check every reader-facing category for a current path to news
+        id: health
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+
+            async function jsonAt(path) {
+              try {
+                const response = await github.rest.repos.getContent({ owner, repo, path, ref: 'main' });
+                if (Array.isArray(response.data) || !response.data.content) return null;
+                return JSON.parse(Buffer.from(response.data.content, response.data.encoding || 'base64').toString('utf8'));
+              } catch (error) {
+                if (error.status === 404) return null;
+                throw error;
+              }
+            }
+
+            function day(value) {
+              const text = String(value || '').slice(0, 10);
+              if (!/^20\d{2}-\d{2}-\d{2}$/.test(text)) return null;
+              const stamp = Date.parse(`${text}T00:00:00Z`);
+              return Number.isFinite(stamp) ? Math.floor(stamp / 86400000) : null;
+            }
+
+            function fresh(payload, currentDate, maxAge = 1) {
+              if (!payload) return false;
+              const current = day(currentDate);
+              const candidate = day(payload.date || payload.generatedAt || payload.sourceGeneratedAt);
+              if (current === null || candidate === null) return false;
+              const age = current - candidate;
+              return age >= 0 && age <= maxAge;
+            }
+
+            function stories(value, out = []) {
+              if (value && typeof value === 'object' && !Array.isArray(value)) {
+                if (value.id && value.title && (value.dek || value.summary || value.body)) out.push(value);
+                Object.values(value).forEach((child) => stories(child, out));
+              } else if (Array.isArray(value)) {
+                value.forEach((child) => stories(child, out));
+              }
+              return out;
+            }
+
+            const latest = await jsonAt('data/latest.json');
+            if (!latest || !latest.date) {
+              core.setFailed('data/latest.json is missing or has no current date; category health cannot be established.');
+              return;
+            }
+
+            const topic = await jsonAt(`data/topic-more/${latest.date}.json`);
+            const stocks = await jsonAt('data/stocks-latest.json');
+            const topicStories = stories(topic || {});
+            const dailyById = new Map((latest.articles || []).map((article) => [String(article.id || ''), article]));
+            const sourceCounts = latest.collectionAudit?.deskLatestStoryCounts || {};
+            const uncovered = [];
+
+            const aliases = {
+              'ai-tech': new Set(['ai-tech', 'technology']),
+              'market-economy': new Set(['market-economy', 'finance']),
+              'manga-anime': new Set(['manga-anime']),
+              'manchester-united': new Set(['manchester-united']),
+              'hong-kong': new Set(['hong-kong']),
+              'japan': new Set(['japan']),
+              'asia': new Set(['asia']),
+              'world': new Set(['world']),
+              'football': new Set(['football']),
+            };
+
+            for (const section of latest.sections || []) {
+              const slug = String(section.slug || '');
+              const available = Number(sourceCounts[slug] || 0);
+              if (available <= 0) continue;
+              const dailyCount = (section.articleIds || []).filter((id) => dailyById.has(String(id))).length;
+              const accepted = aliases[slug] || new Set([slug]);
+              const topicCount = topicStories.filter((story) => {
+                const slugs = new Set([String(story.section || ''), String(story.desk || ''), ...((story.deskSlugs || []).map(String))]);
+                return [...accepted].some((candidate) => slugs.has(candidate));
+              }).length;
+              if (dailyCount === 0 && topicCount === 0) {
+                uncovered.push(`${slug}(source_candidates=${available})`);
+              }
+            }
+
+            let stockStoryCount = 0;
+            if (stocks) {
+              for (const info of Object.values(stocks.tickers || {})) {
+                stockStoryCount += Array.isArray(info?.stories) ? info.stories.length : 0;
+              }
+            }
+            const stockFresh = fresh(stocks, latest.date, 1) && stockStoryCount > 0;
+            const stockDailyFallback = (latest.articles || []).some((article) => {
+              const slugs = new Set([String(article.desk || ''), ...((article.deskSlugs || []).map(String))]);
+              return slugs.has('stocks') || slugs.has('stock-news') || slugs.has('market-economy');
+            });
+
+            const mangaSection = (latest.sections || []).find((section) => section.slug === 'manga-anime');
+            const mangaDaily = mangaSection?.articleIds?.length || 0;
+            const mangaTopic = topicStories.filter((story) => String(story.section || story.desk || '') === 'manga-anime').length;
+
+            core.info(`Daily date: ${latest.date}`);
+            core.info(`Manga/anime coverage: daily=${mangaDaily}, current_topic=${mangaTopic}`);
+            core.info(`Stocks rolling: fresh=${stockFresh}, stories=${stockStoryCount}, daily_fallback=${stockDailyFallback}`);
+            core.info(`Uncovered source-backed sections: ${uncovered.join(', ') || 'none'}`);
+
+            const repairNeeded = uncovered.length > 0 || !stockFresh;
+            core.setOutput('repair_needed', repairNeeded ? 'true' : 'false');
+            core.setOutput('uncovered', uncovered.join(','));
+            core.setOutput('stock_fresh', stockFresh ? 'true' : 'false');
+            core.setOutput('stock_fallback', stockDailyFallback ? 'true' : 'false');
+
+            if (repairNeeded) {
+              const runs = await github.rest.actions.listWorkflowRuns({
+                owner,
+                repo,
+                workflow_id: 'repair-extra-translation-quality.yml',
+                per_page: 10,
+              });
+              const active = runs.data.workflow_runs.some((run) => run.status !== 'completed');
+              if (!active) {
+                await github.rest.actions.createWorkflowDispatch({
+                  owner,
+                  repo,
+                  workflow_id: 'repair-extra-translation-quality.yml',
+                  ref: 'main',
+                });
+                core.warning('Category coverage/staleness defect detected; dispatched rolling repair.');
+              } else {
+                core.warning('Category defect detected, but a rolling repair is already active; no duplicate dispatch.');
+              }
+            }
+
+            // A stale stock layer is still reader-safe because stocks-ja.js now rejects it
+            // and uses current Daily market news. An uncovered source-backed section is not.
+            if (uncovered.length > 0) {
+              core.setFailed(`Source-backed category pages have no current Japanese news path: ${uncovered.join(', ')}`);
+            } else if (!stockFresh && !stockDailyFallback) {
+              core.setFailed('Stock rolling layer is stale and no current Daily market fallback exists.');
+            }
