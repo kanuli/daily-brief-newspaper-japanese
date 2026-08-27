@@ -2,6 +2,10 @@ name: 日本語ニュース毎時配信ウォッチドッグ
 
 on:
   workflow_dispatch:
+  push:
+    branches: ["main"]
+    paths:
+      - '.github/workflows/hourly-update-watchdog.yml'
   schedule:
     # Primary recovery check 10 minutes after the normal :15 sync.
     - cron: '25 * * * *'
