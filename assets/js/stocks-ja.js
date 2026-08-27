@@ -34,22 +34,28 @@
 
   function isoDay(value = "") {
     const text = String(value || "").trim().slice(0, 10);
-    return /^20\d{2}-\d{2}-\d{2}$/.test(text) ? text : "";
+    if (!/^20\d{2}-\d{2}-\d{2}$/.test(text)) return "";
+    const [year, month, day] = text.split("-").map(Number);
+    const stamp = Date.UTC(year, month - 1, day);
+    const check = new Date(stamp);
+    if (check.getUTCFullYear() !== year || check.getUTCMonth() !== month - 1 || check.getUTCDate() !== day) return "";
+    return text;
   }
 
   function dayNumber(value = "") {
     const text = isoDay(value);
     if (!text) return null;
     const [year, month, day] = text.split("-").map(Number);
-    const stamp = Date.UTC(year, month - 1, day);
-    const check = new Date(stamp);
-    if (check.getUTCFullYear() !== year || check.getUTCMonth() !== month - 1 || check.getUTCDate() !== day) return null;
-    return Math.floor(stamp / 86400000);
+    return Math.floor(Date.UTC(year, month - 1, day) / 86400000);
   }
 
-  function stockLayerFresh(data, daily) {
-    if (!data || !daily) return false;
-    const current = dayNumber(daily.date);
+  function publicationDay(daily = {}, live = {}) {
+    return [isoDay(daily?.date), isoDay(live?.date)].filter(Boolean).sort().at(-1) || "";
+  }
+
+  function stockLayerFresh(data, currentDate) {
+    if (!data || !currentDate) return false;
+    const current = dayNumber(currentDate);
     const candidate = dayNumber(data.date || data.generatedAt || data.sourceGeneratedAt);
     if (current === null || candidate === null) return false;
     const age = current - candidate;
@@ -94,20 +100,33 @@
     return desk === "stocks" || desk === "stock-news" || desk === "market-economy" || slugs.has("stocks") || slugs.has("stock-news") || slugs.has("market-economy");
   }
 
-  function normalizeFallback(daily) {
-    const stories = (daily.articles || [])
-      .filter((article) => dailyMarketStory(article) && !corruptStory(article))
+  function normalizeFallback(daily, live) {
+    const candidates = [
+      ...(daily?.articles || []).map(article => ({ ...article, _fallbackLayer: "DAILY" })),
+      ...(live?.items || []).map(article => ({ ...article, _fallbackLayer: "LIVE" })),
+    ].filter((article) => dailyMarketStory(article) && !corruptStory(article));
+    const seen = new Set();
+    const stories = candidates
+      .slice().reverse()
+      .filter((article) => {
+        const key = String(article.id || article.sourceUrl || article.title || "");
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      })
+      .reverse()
       .map((article) => ({
         ...article,
-        storyType: article.storyType || "DAILY / MARKET",
+        storyType: article.storyType || `${article._fallbackLayer} / MARKET`,
         impact: article.impact || "↔",
-        impactLabel: article.impactLabel || "最新デイリー",
+        impactLabel: article.impactLabel || (article._fallbackLayer === "LIVE" ? "最新速報" : "最新デイリー"),
       }));
+    const current = publicationDay(daily, live) || daily?.date || "";
     return {
-      generatedAt: daily.date || "",
-      lastUpdatedLabel: `${daily.dateLabel || daily.date || ""}・デイリー版フォールバック`,
+      generatedAt: current,
+      lastUpdatedLabel: `${current}・Daily/Live 市場フォールバック`,
       tracked: ["MARKET"],
-      tickers: { MARKET: { name: "Daily Edition 市場・株式ニュース", assetType: "EQUITY", stories } }
+      tickers: { MARKET: { name: "Current Edition 市場・株式ニュース", assetType: "EQUITY", stories } }
     };
   }
 
@@ -133,17 +152,22 @@
   }
 
   async function init() {
-    const daily = await getJson("data/latest.json");
-    let data = await optionalJson("data/stocks-latest.json");
-    if (!data || !stockLayerFresh(data, daily)) {
+    const [daily, live, rolling] = await Promise.all([
+      getJson("data/latest.json"),
+      optionalJson("data/live.json"),
+      optionalJson("data/stocks-latest.json"),
+    ]);
+    const currentDate = publicationDay(daily, live) || daily.date;
+    let data = rolling;
+    if (!data || !stockLayerFresh(data, currentDate)) {
       if (data) {
         console.warn(
           "STALE_STOCK_LAYER_SUPPRESSED",
           `payloadDate=${String(data.date || data.generatedAt || data.sourceGeneratedAt || "unknown").slice(0, 10)}`,
-          `dailyDate=${daily.date || "unknown"}`,
+          `publicationDate=${currentDate || "unknown"}`,
         );
       }
-      data = normalizeFallback(daily);
+      data = normalizeFallback(daily, live);
     }
     render(data);
   }
