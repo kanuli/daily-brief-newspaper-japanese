@@ -1,14 +1,25 @@
 #!/usr/bin/env python3
-"""Validate translated rolling/topic layers before publication and F3 synthesis."""
+"""Validate only rolling/topic layers that are currently eligible to render.
+
+A stale rolling payload is quarantined by the topic renderer and therefore must
+not block deployment merely because old copy still exists in the repository.
+Fresh/renderable rolling content remains fail-closed.
+"""
+from __future__ import annotations
+
 import json
+import re
 import sys
+from datetime import date
 from pathlib import Path
 
 import editor_in_chief_review as editor_in_chief
 import validate_content_integrity as core
 
 ROOT = Path(__file__).resolve().parents[1]
-STATIC = (ROOT / "data/desk-latest.json", ROOT / "data/stocks-latest.json")
+DATA = ROOT / "data"
+STATIC = (DATA / "desk-latest.json", DATA / "stocks-latest.json")
+ROLLING_LAYER_MAX_AGE_DAYS = 1
 METADATA_KEYS = {
     "title", "subtitle", "tagline", "section", "label", "statusLabel",
     "impactLabel", "description", "note", "lastUpdatedLabel",
@@ -46,8 +57,6 @@ def iter_metadata(value, path="$"):
                 continue
             child_path = f"{path}.{key}"
             if key in METADATA_KEYS and isinstance(child, str) and child.strip():
-                # Story text itself is checked by collect_story_issues below;
-                # keep this pass focused on page/section/ticker metadata.
                 if not (is_story and key in core.STORY_TEXT_FIELDS):
                     yield child_path, child
             if isinstance(child, (dict, list)):
@@ -57,18 +66,81 @@ def iter_metadata(value, path="$"):
             yield from iter_metadata(child, f"{path}[{index}]")
 
 
+def load_json(path: Path):
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def parse_day(value) -> date | None:
+    text = str(value or "").strip()[:10]
+    try:
+        return date.fromisoformat(text)
+    except Exception:
+        return None
+
+
+def current_daily_day() -> date | None:
+    path = DATA / "latest.json"
+    if not path.is_file():
+        return None
+    try:
+        return parse_day(load_json(path).get("date"))
+    except Exception:
+        return None
+
+
+def payload_day(path: Path) -> date | None:
+    try:
+        data = load_json(path)
+    except Exception:
+        return None
+    return parse_day(data.get("date") or data.get("generatedAt"))
+
+
+def static_layer_publishable(path: Path, current: date | None) -> bool:
+    if not path.is_file():
+        return False
+    if current is None:
+        return False
+    candidate = payload_day(path)
+    if candidate is None:
+        return False
+    age = (current - candidate).days
+    return 0 <= age <= ROLLING_LAYER_MAX_AGE_DAYS
+
+
 def paths():
-    out = [p for p in STATIC if p.is_file()]
-    folder = ROOT / "data/topic-more"
-    if folder.is_dir():
-        out.extend(sorted(folder.glob("*.json")))
+    """Return only layers the current frontend is allowed to render."""
+    current = current_daily_day()
+    out: list[Path] = []
+
+    for path in STATIC:
+        if static_layer_publishable(path, current):
+            out.append(path)
+        elif path.is_file():
+            candidate = payload_day(path)
+            age = (current - candidate).days if current and candidate else "unknown"
+            print(
+                "EXTRA_LAYER_STALE_QUARANTINED",
+                str(path.relative_to(ROOT)),
+                f"age_days={age}",
+                "renderable=false",
+            )
+
+    # Topic pages request only topic-more/<current Daily date>.json. Historical
+    # topic-more files are archive material, not current publication candidates.
+    if current:
+        current_name = current.isoformat()
+        topic = DATA / "topic-more" / f"{current_name}.json"
+        if topic.is_file():
+            out.append(topic)
+
     return out
 
 
 def validate(path):
     issues = []
     try:
-        data = json.loads(path.read_text(encoding="utf-8"))
+        data = load_json(path)
     except Exception as exc:
         return [f"{path.relative_to(ROOT)}: {exc}"]
     label = str(path.relative_to(ROOT))
@@ -80,8 +152,6 @@ def validate(path):
         if core.ERROR_RE.search(value):
             issues.append(f"{label}:{key}: translator/server error payload detected")
 
-    # Page/section/ticker metadata used to escape the story-only checker. The
-    # same corruption signatures must apply to these visible strings too.
     for key, value in iter_metadata(data):
         reason = core.garbled_japanese_reason(value, strict=False)
         if reason:
@@ -104,11 +174,58 @@ def validate(path):
     return issues
 
 
+def review_publishable(found: list[Path]) -> int:
+    """Run Editor-in-Chief only on layers that can actually reach a reader."""
+    issues: list[str] = []
+    warnings: list[str] = []
+    reviewed = 0
+
+    # The display-level freshness guard is mandatory even when every rolling
+    # payload is currently stale, because it is what makes quarantine truthful.
+    editor_in_chief.check_topic_freshness_delivery(issues, warnings)
+
+    for path in found:
+        name = str(path.relative_to(DATA))
+        try:
+            data = load_json(path)
+        except Exception as exc:
+            issues.append(f"{name}: unreadable JSON: {type(exc).__name__}: {exc}")
+            continue
+        source_map = editor_in_chief.source_map_for(name)
+        for story in editor_in_chief.iter_story_dicts(data):
+            reviewed += 1
+            sid = str(story.get("id") or "")
+            editor_in_chief.check_story(name, story, source_map.get(sid), issues, warnings)
+
+    for warning in warnings[:100]:
+        print("EDITOR_IN_CHIEF_WARNING -", warning)
+    if len(warnings) > 100:
+        print(f"EDITOR_IN_CHIEF_WARNING - ... and {len(warnings) - 100} more")
+
+    if issues:
+        print(
+            "EDITOR_IN_CHIEF_REJECT",
+            "scope=publishable-rolling",
+            f"reviewed_stories={reviewed}",
+            f"issues={len(issues)}",
+            f"warnings={len(warnings)}",
+        )
+        for issue in issues[:100]:
+            print(" -", issue)
+        return 1
+
+    print(
+        "EDITOR_IN_CHIEF_APPROVED",
+        "scope=publishable-rolling",
+        f"reviewed_stories={reviewed}",
+        f"warnings={len(warnings)}",
+        "stale_layers_quarantined=true",
+    )
+    return 0
+
+
 def main():
     found = paths()
-    if not found:
-        print("EXTRA_LAYER_INTEGRITY_FAIL: no extra translated data files")
-        return 1
     issues = []
     for path in found:
         issues.extend(validate(path))
@@ -120,19 +237,15 @@ def main():
             print(f" - ... and {len(issues) - 120} more")
         return 1
 
-    # Auto-maintenance already treats this validator as the rolling health
-    # authority. Include the rolling Editor-in-Chief verdict so only the
-    # rolling repair worker is dispatched for editorial defects in that domain.
-    editor_code = editor_in_chief.review("rolling")
-    if editor_code != 0:
-        print("EXTRA_LAYER_INTEGRITY_FAIL - Editor-in-Chief rejected rolling publication")
+    if review_publishable(found) != 0:
+        print("EXTRA_LAYER_INTEGRITY_FAIL - Editor-in-Chief rejected publishable rolling content")
         return 1
 
-    print(
-        "EXTRA_LAYER_INTEGRITY_OK",
-        ", ".join(str(p.relative_to(ROOT)) for p in found),
-        "editor_in_chief=approved",
-    )
+    if found:
+        labels = ", ".join(str(p.relative_to(ROOT)) for p in found)
+    else:
+        labels = "no current publishable rolling layers (stale layers quarantined)"
+    print("EXTRA_LAYER_INTEGRITY_OK", labels, "editor_in_chief=approved")
     return 0
 
 
