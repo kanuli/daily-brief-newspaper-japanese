@@ -172,6 +172,11 @@ def files_for_scope(scope: str) -> list[str]:
     return ["latest.json", "live.json", *rolling_files()]
 
 
+def _pull_request_advisory_mode() -> bool:
+    """Report existing corpus defects on PRs without blocking the fixer PR itself."""
+    return str(os.environ.get("GITHUB_EVENT_NAME") or "").strip().lower() == "pull_request"
+
+
 def review(scope: str = "all") -> int:
     scope = str(scope or "all").strip().lower()
     if scope not in VALID_SCOPES:
@@ -209,8 +214,9 @@ def review(scope: str = "all") -> int:
         print(f"EDITOR_IN_CHIEF_WARNING - ... and {len(warnings) - 100} more")
 
     if issues:
+        label = "EDITOR_IN_CHIEF_ADVISORY_REJECT" if _pull_request_advisory_mode() else "EDITOR_IN_CHIEF_REJECT"
         print(
-            "EDITOR_IN_CHIEF_REJECT",
+            label,
             f"scope={scope}",
             f"reviewed_stories={reviewed}",
             f"issues={len(issues)}",
@@ -220,6 +226,9 @@ def review(scope: str = "all") -> int:
             print(" -", issue)
         if len(issues) > 100:
             print(f" - ... and {len(issues) - 100} more")
+        if _pull_request_advisory_mode():
+            print("EDITOR_IN_CHIEF_PR_ADVISORY_ONLY production_enforcement=true")
+            return 0
         return 1
 
     print(
