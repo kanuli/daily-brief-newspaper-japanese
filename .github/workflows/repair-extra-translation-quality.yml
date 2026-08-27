@@ -5,6 +5,7 @@ on:
   push:
     branches: ["main"]
     paths:
+      - 'scripts/run_extra_sync_editor.py'
       - 'scripts/self_healing_extra_sync.py'
       - 'scripts/sync_cantonese_layers.py'
       - 'scripts/repair_garbled_extra_layers.py'
@@ -70,6 +71,7 @@ jobs:
         run: |
           python -m py_compile \
             scripts/cantonese_snapshot.py \
+            scripts/run_extra_sync_editor.py \
             scripts/self_healing_extra_sync.py \
             scripts/sync_cantonese_layers.py \
             scripts/local_translation_runtime.py \
@@ -81,11 +83,15 @@ jobs:
       - name: Freeze one Cantonese source commit
         run: python scripts/cantonese_snapshot.py
 
-      - name: Rebuild rolling layers with owner quarantine
+      - name: Rebuild rolling layers with editor isolation
         timeout-minutes: 20
         env:
           TOKENIZERS_PARALLELISM: 'false'
-        run: python scripts/self_healing_extra_sync.py
+          # Reader-critical queues get dedicated time before the oversized desk feed.
+          EXTRA_STOCKS_BUDGET_SECONDS: '180'
+          EXTRA_TOPIC_BUDGET_SECONDS: '180'
+          EXTRA_DESK_BUDGET_SECONDS: '240'
+        run: python scripts/run_extra_sync_editor.py
 
       - name: Apply v4 newsroom and lexical-furigana repair to rolling layers
         timeout-minutes: 6
