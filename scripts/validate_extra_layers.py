@@ -78,7 +78,28 @@ def parse_day(value) -> date | None:
         return None
 
 
+def current_publication_day() -> date | None:
+    """Use the newest reader-facing edition boundary, not Daily alone.
+
+    Live can roll into the next HKT calendar day before the next Daily edition is
+    cut.  A same-day rolling desk must remain publishable in that interval.
+    """
+    days: list[date] = []
+    for name in ("latest.json", "live.json"):
+        path = DATA / name
+        if not path.is_file():
+            continue
+        try:
+            parsed = parse_day(load_json(path).get("date"))
+        except Exception:
+            parsed = None
+        if parsed:
+            days.append(parsed)
+    return max(days) if days else None
+
+
 def current_daily_day() -> date | None:
+    """Daily date still owns the topic-more filename."""
     path = DATA / "latest.json"
     if not path.is_file():
         return None
@@ -110,7 +131,8 @@ def static_layer_publishable(path: Path, current: date | None) -> bool:
 
 def paths():
     """Return only layers the current frontend is allowed to render."""
-    current = current_daily_day()
+    current = current_publication_day()
+    daily = current_daily_day()
     out: list[Path] = []
 
     for path in STATIC:
@@ -123,13 +145,14 @@ def paths():
                 "EXTRA_LAYER_STALE_QUARANTINED",
                 str(path.relative_to(ROOT)),
                 f"age_days={age}",
+                f"publication_day={current}",
                 "renderable=false",
             )
 
-    # Topic pages request only topic-more/<current Daily date>.json. Historical
-    # topic-more files are archive material, not current publication candidates.
-    if current:
-        current_name = current.isoformat()
+    # Topic pages request topic-more/<Daily date>.json. Historical topic-more
+    # files remain archive material even when Live has crossed midnight.
+    if daily:
+        current_name = daily.isoformat()
         topic = DATA / "topic-more" / f"{current_name}.json"
         if topic.is_file():
             out.append(topic)
