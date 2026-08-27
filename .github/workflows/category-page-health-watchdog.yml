@@ -6,9 +6,11 @@ on:
     branches: ["main"]
     paths:
       - '.github/workflows/category-page-health-watchdog.yml'
+      - 'archive.html'
       - 'assets/js/topic-ja-rolling.js'
       - 'assets/js/stocks-ja.js'
       - 'scripts/run_extra_sync_editor.py'
+      - 'scripts/remote_repair_all_published_quality.py'
   schedule:
     # Rolling guaranteed edition starts at :45; verify it before the next core cycle.
     - cron: '10 * * * *'
@@ -189,11 +191,15 @@ jobs:
               if (status !== 'PASS') pageFailures.push(`${slug}:${status}`);
             }
 
+            // Archive is intentionally self-contained: it publishes saved headlines
+            // and topic labels directly. Historical url metadata is not rendered as
+            // a link unless real Japanese snapshot pages are added in the future.
             const archiveEditions = Array.isArray(archive) ? archive : (archive?.editions || archive?.items || []);
             if (!archiveEditions.length) structural.push('archive.html:no-editions');
-            if (archiveEditions[0]?.url) {
-              const archivedPage = await rawAt(repo, String(archiveEditions[0].url));
-              if (!archivedPage) structural.push(`archive-latest-target-missing:${archiveEditions[0].url}`);
+            for (const [index, edition] of archiveEditions.slice(0, 10).entries()) {
+              const headline = String(edition?.headline || edition?.title || edition?.tagline || '').trim();
+              const date = String(edition?.date || edition?.dateLabel || edition?.shortDate || '').trim();
+              if (!headline || !date) structural.push(`archive.html:invalid-edition-${index}`);
             }
             if (!dailyStories.length) structural.push('index.html:no-daily-stories');
             if (!liveStories.length) structural.push('live.html:no-live-stories');
@@ -222,6 +228,7 @@ jobs:
             core.info(`Upstream desk date=${sourceDate}; Japanese desk date=${localDeskDate || 'missing'}; lag_days=${deskLag}`);
             core.info(`Upstream stock date=${sourceStockDate || 'unknown'}; Japanese stock date=${localStockDate || 'missing'}; lag_days=${stockLag}`);
             for (const row of pageRows) core.info(`PAGE ${row}`);
+            core.info(`Archive editions checked: ${Math.min(archiveEditions.length, 10)}`);
             core.info(`Structural defects: ${structural.join(', ') || 'none'}`);
             core.info(`Reader freshness defects: ${pageFailures.join(', ') || 'none'}`);
 
