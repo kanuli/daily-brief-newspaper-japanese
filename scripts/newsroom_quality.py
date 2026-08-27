@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Editorial Japanese quality rules shared by translation and repair paths.
 
-The rules here are intentionally conservative.  They target phrases that are
+The rules here are intentionally conservative. They target phrases that are
 not merely stylistic preferences but strong evidence of literal Chinese/English
-machine translation, unit-role reversal, duplicated copy, or finance/disaster
-terminology that would mislead a Japanese learner.
+machine translation, unit-role reversal, duplicated copy, or domain terminology
+that would mislead a Japanese learner.
 """
 from __future__ import annotations
 
@@ -22,6 +22,16 @@ _HARD_TARGET_PATTERNS = (
     (re.compile(r"レッドフラッグの火災警告"), "Red Flag Warning mistranslated literally"),
     (re.compile(r"わずか\s*\d+(?:\.\d+)?\s*[％%]を(?:制御|コントロール)しました"), "containment percentage attached to object-control grammar"),
     (re.compile(r"少なくとも[^。\n]{0,70}少なくとも"), "duplicated 少なくとも in one sentence"),
+    (re.compile(r"バプテスマを受けたコミュニティ"), "flooded/submerged community mistranslated as a baptised community"),
+    (re.compile(r"洪水制御圧力"), "literal Chinese flood-control-pressure compound"),
+    (re.compile(r"(?:洪水|豪雨)[^。\n]{0,70}(?:移動|シフト)を悪化"), "evacuation/relocation role mistranslated as worsening movement"),
+    (re.compile(r"(?:洪水|豪雨)[^。\n]{0,90}大規模なシフト"), "literal 大規模なシフト in disaster copy"),
+    (re.compile(r"セカンドサークル"), "cup round mistranslated as セカンドサークル"),
+    (re.compile(r"サブリング試合"), "cup-round fixture mistranslated as サブリング試合"),
+    (re.compile(r"マルチライン戦闘"), "multi-competition schedule mistranslated as military-style マルチライン戦闘"),
+    (re.compile(r"ポジティブな選択とフィジカルディストリビューション"), "squad selection/load-management phrase is machine translation"),
+    (re.compile(r"フォローアップの試合や犠牲者"), "football follow-up/injuries mistranslated with casualty wording"),
+    (re.compile(r"完全なラップ結果"), "round results mistranslated as 完全なラップ結果"),
 )
 
 # Source unit anchors: only flag a reversal when the same number is explicitly
@@ -118,4 +128,4 @@ def install(safe_module) -> None:
 
     safe_module.source_target_quality_reason = wrapped
     safe_module._newsroom_quality_installed = True
-    print("NEWSROOM_QUALITY_INSTALLED semantic_units=true translationese_gate=true")
+    print("NEWSROOM_QUALITY_INSTALLED semantic_units=true translationese_gate=true editor_in_chief_rules=true")
