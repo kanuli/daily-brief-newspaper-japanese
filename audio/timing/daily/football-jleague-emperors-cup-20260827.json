@@ -1,0 +1,360 @@
+{
+  "version": 3,
+  "duration": 162.377,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 495,
+  "charactersPerMinute": 182.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 16.044,
+      "text": "天皇杯2回戦が始まる。東京ヴェルディが4-1で群馬を破り、多くのJ1チームが同日夜に対戦した。"
+    },
+    {
+      "key": "dek",
+      "start": 16.044,
+      "end": 38.856,
+      "text": "Jリーグの公式結果ページでは、8月26日に天皇杯2回戦の複数試合が終了し、J1チームがカップローテーションとノックアウトのリズムに入ったことを確認した。"
+    },
+    {
+      "key": "body-0",
+      "start": 38.856,
+      "end": 84.564,
+      "text": "天皇杯2回戦は8月26日夜に行われる。Jリーグの公式スケジュールと結果ページでは、東京ヴェルディがザスパ群馬を4-1で破って勝ち上がったことが確認された。同日夜には、町田ゼルビア、名古屋グランパス、セレッソ大阪、サンフレッチェ広島、鹿島アントラーズなど多くのJ1チームも参加した。"
+    },
+    {
+      "key": "body-1",
+      "start": 84.564,
+      "end": 121.845,
+      "text": "J1新シーズンの序盤にはカップ戦が始まり、チームはリーグ戦と決勝トーナメントの間で主力選手の選考や戦力配分を調整する必要がある。中位以下のチームにとって、天皇杯はJ1クラブに直接挑戦する機会でもある。その後の試合と負傷選手の状況は追跡調査に値する。"
+    },
+    {
+      "key": "why",
+      "start": 121.845,
+      "end": 143.884,
+      "text": "天皇杯は日本のメインカップトーナメントであり、結果はJリーグチームのスケジュール、ローテーション、シーズン目標に直接影響します。"
+    },
+    {
+      "key": "watch",
+      "start": 143.884,
+      "end": 162.377,
+      "text": "第2節の全結果と次節の引き分け、J1チームの負傷者、そして週末リーグでの大幅なローテーションの有無に注目だ。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.763,
+      "end": 4.383,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "天皇杯2回戦が始まる。"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.383,
+      "speechEnd": 9.609,
+      "end": 9.889,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "東京ヴェルディが4-1で群馬を破り、"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.889,
+      "speechEnd": 15.184,
+      "end": 16.044,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "多くのJ1チームが同日夜に対戦した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.044,
+      "speechEnd": 20.016,
+      "end": 20.296,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Jリーグの公式結果ページでは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.296,
+      "speechEnd": 29.076,
+      "end": 29.356,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "8月26日に天皇杯2回戦の複数試合が終了し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 29.356,
+      "speechEnd": 37.996,
+      "end": 38.856,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "J1チームがカップローテーションとノックアウトのリズムに入ったことを確認した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.856,
+      "speechEnd": 46.451,
+      "end": 47.071,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "天皇杯2回戦は8月26日夜に行われる。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.071,
+      "speechEnd": 52.367,
+      "end": 52.647,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Jリーグの公式スケジュールと結果ページでは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.647,
+      "speechEnd": 59.823,
+      "end": 60.164,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "東京ヴェルディがザスパ群馬を4-1で破って勝ち上が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.164,
+      "speechEnd": 63.16,
+      "end": 63.78,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ったことが確認された。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.78,
+      "speechEnd": 66.358,
+      "end": 66.638,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同日夜には、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.638,
+      "speechEnd": 69.146,
+      "end": 69.427,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "町田ゼルビア、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.427,
+      "speechEnd": 72.214,
+      "end": 72.494,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "名古屋グランパス、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.494,
+      "speechEnd": 74.863,
+      "end": 75.143,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "セレッソ大阪、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.143,
+      "speechEnd": 77.651,
+      "end": 77.931,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "サンフレッチェ広島、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 77.931,
+      "speechEnd": 83.784,
+      "end": 84.564,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "鹿島アントラーズなど多くのJ1チームも参加した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.564,
+      "speechEnd": 90.069,
+      "end": 90.349,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "J1新シーズンの序盤にはカップ戦が始まり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.349,
+      "speechEnd": 102.682,
+      "end": 103.302,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "チームはリーグ戦と決勝トーナメントの間で主力選手の選考や戦力配分を調整する必要がある。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.302,
+      "speechEnd": 106.786,
+      "end": 107.066,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "中位以下のチームにとって、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.066,
+      "speechEnd": 113.964,
+      "end": 114.585,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "天皇杯はJ1クラブに直接挑戦する機会でもある。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.585,
+      "speechEnd": 121.065,
+      "end": 121.845,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "その後の試合と負傷選手の状況は追跡調査に値する。"
+    },
+    {
+      "parentKey": "why",
+      "start": 121.845,
+      "speechEnd": 125.816,
+      "end": 126.437,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 126.437,
+      "speechEnd": 132.29,
+      "end": 132.57,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "天皇杯は日本のメインカップトーナメントであり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 132.57,
+      "speechEnd": 136.541,
+      "end": 136.821,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "結果はJリーグチームのスケジュール、"
+    },
+    {
+      "parentKey": "why",
+      "start": 136.821,
+      "speechEnd": 139.051,
+      "end": 139.331,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ローテーション、"
+    },
+    {
+      "parentKey": "why",
+      "start": 139.331,
+      "speechEnd": 143.024,
+      "end": 143.884,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "シーズン目標に直接影響します。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 143.884,
+      "speechEnd": 145.975,
+      "end": 146.255,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 146.255,
+      "speechEnd": 150.853,
+      "end": 151.134,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "第2節の全結果と次節の引き分け、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 151.134,
+      "speechEnd": 153.99,
+      "end": 154.27,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "J1チームの負傷者、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 154.27,
+      "speechEnd": 161.517,
+      "end": 162.377,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "そして週末リーグでの大幅なローテーションの有無に注目だ。"
+    }
+  ]
+}
