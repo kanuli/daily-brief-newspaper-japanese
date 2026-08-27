@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
-"""Reject poisoned, partially untranslated, or structurally garbled Japanese publication data."""
+"""Reject poisoned, partially untranslated, garbled, or editorially unsafe Japanese publication data."""
 import json
 import re
 import sys
 from pathlib import Path
+
+import editor_in_chief_review as editor_in_chief
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_FILES = ("latest.json", "live.json", "archive.json")
@@ -232,9 +234,17 @@ def main():
             print(f" - ... and {len(issues) - 120} more")
         return 1
 
+    # Auto-maintenance already treats this validator as the core publication
+    # health authority. Keep the Editor-in-Chief inside the same decision so a
+    # newsroom rejection activates the existing core recovery machinery.
+    editor_code = editor_in_chief.review("core")
+    if editor_code != 0:
+        print("CONTENT_INTEGRITY_FAIL - Editor-in-Chief rejected core publication")
+        return 1
+
     print(
         "CONTENT_INTEGRITY_OK latest/live/archive contain no error-page poison, "
-        "mixed Traditional Chinese prose, or structural translation corruption"
+        "mixed Traditional Chinese prose, structural translation corruption, or Editor-in-Chief rejection"
     )
     return 0
 
