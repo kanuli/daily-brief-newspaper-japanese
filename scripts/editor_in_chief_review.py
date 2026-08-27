@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Independent Editor-in-Chief review for automatic production maintenance.
 
-This is deliberately downstream of translation.  It judges already-generated
-Japanese instead of asking the translator to validate itself.  The review is
-lightweight enough to run every maintenance cycle and covers core Daily/Live as
-well as current rolling layers.
+This is deliberately downstream of translation. It judges already-generated
+Japanese instead of asking the translator to validate itself. The review is
+lightweight enough to run every maintenance cycle and can be scoped to core
+Daily/Live or rolling/category layers so recovery remains precise.
 """
 from __future__ import annotations
 
@@ -25,15 +25,22 @@ SOURCE_DIR = (
 PROSE_FIELDS = ("title", "dek", "summary", "body", "context", "why", "watchNext")
 EXPECTED_FURIGANA_ENGINE = "sudachi-core-mode-c+context"
 MIN_NEWSROOM_QUALITY_VERSION = 1
+VALID_SCOPES = {"core", "rolling", "all"}
 
 # Strong evidence of learner-harmful or newsroom-unacceptable Japanese already
-# observed in production.  Keep this list conservative: stylistic preferences
+# observed in production. Keep this list conservative: stylistic preferences
 # belong in warnings, not hard publication failures.
 HARD_TEXT_PATTERNS = (
     (re.compile(r"バプテスマを受けたコミュニティ"), "flooded/submerged community mistranslated as a baptised community"),
     (re.compile(r"洪水制御圧力"), "literal Chinese flood-control-pressure compound is not normal Japanese newsroom copy"),
     (re.compile(r"(?:洪水|豪雨)[^。\n]{0,70}(?:移動|シフト)を悪化"), "evacuation/relocation role is mistranslated as worsening movement"),
     (re.compile(r"(?:洪水|豪雨)[^。\n]{0,90}大規模なシフト"), "literal 大規模なシフト in disaster copy is semantically unsafe"),
+    (re.compile(r"セカンドサークル"), "cup round mistranslated as セカンドサークル"),
+    (re.compile(r"サブリング試合"), "cup-round fixture mistranslated as サブリング試合"),
+    (re.compile(r"マルチライン戦闘"), "multi-competition schedule mistranslated as military-style マルチライン戦闘"),
+    (re.compile(r"ポジティブな選択とフィジカルディストリビューション"), "squad selection/load-management phrase is machine translation"),
+    (re.compile(r"フォローアップの試合や犠牲者"), "football follow-up/injuries mistranslated with casualty wording"),
+    (re.compile(r"完全なラップ結果"), "round results mistranslated as 完全なラップ結果"),
 )
 
 # Learner-facing ruby defects that can survive otherwise valid HTML.
@@ -48,10 +55,6 @@ SOURCE_UKRAINE_CIVIL_RE = re.compile(r"烏克蘭內戰|烏克蘭内戰")
 
 def load_json(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
-
-
-def story_key_for(name: str) -> str:
-    return "articles" if name == "latest.json" else "items" if name == "live.json" else ""
 
 
 def iter_story_dicts(value):
@@ -148,8 +151,8 @@ def check_sections(data: dict, warnings: list[str]) -> None:
             )
 
 
-def current_files() -> list[str]:
-    names = ["latest.json", "live.json", "desk-latest.json", "stocks-latest.json"]
+def rolling_files() -> list[str]:
+    names = ["desk-latest.json", "stocks-latest.json"]
     latest_path = DATA / "latest.json"
     if latest_path.is_file():
         try:
@@ -161,12 +164,25 @@ def current_files() -> list[str]:
     return names
 
 
-def main() -> int:
+def files_for_scope(scope: str) -> list[str]:
+    if scope == "core":
+        return ["latest.json", "live.json"]
+    if scope == "rolling":
+        return rolling_files()
+    return ["latest.json", "live.json", *rolling_files()]
+
+
+def review(scope: str = "all") -> int:
+    scope = str(scope or "all").strip().lower()
+    if scope not in VALID_SCOPES:
+        print(f"EDITOR_IN_CHIEF_REJECT invalid_scope={scope!r}")
+        return 2
+
     issues: list[str] = []
     warnings: list[str] = []
     reviewed = 0
 
-    for name in current_files():
+    for name in files_for_scope(scope):
         path = DATA / name
         if not path.is_file():
             if name in {"latest.json", "live.json"}:
@@ -195,6 +211,7 @@ def main() -> int:
     if issues:
         print(
             "EDITOR_IN_CHIEF_REJECT",
+            f"scope={scope}",
             f"reviewed_stories={reviewed}",
             f"issues={len(issues)}",
             f"warnings={len(warnings)}",
@@ -207,11 +224,16 @@ def main() -> int:
 
     print(
         "EDITOR_IN_CHIEF_APPROVED",
+        f"scope={scope}",
         f"reviewed_stories={reviewed}",
         f"warnings={len(warnings)}",
         "independent_downstream_review=true",
     )
     return 0
+
+
+def main() -> int:
+    return review(os.environ.get("EDITOR_IN_CHIEF_SCOPE", "all"))
 
 
 if __name__ == "__main__":
