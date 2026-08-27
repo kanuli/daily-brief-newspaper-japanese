@@ -1,95 +1,195 @@
 {
-  "mode": "HOURLY_LIVE",
+  "mode": "LIVE",
   "date": "2026-08-27",
   "editorialStandardVersion": 3,
   "contentVersion": 3,
-  "lastUpdated": "2026-08-27T00:00:00+08:00",
-  "lastUpdatedLabel": "2026年8月27日 00:00 HKT",
-  "windowLabel": "24:00 HKT 速報版",
-  "nextUpdateLabel": "次回発行予定 06:00 HKT",
-  "newCount": 2,
-  "updatedCount": 2,
+  "lastUpdated": "2026-08-27T09:00:00+08:00",
+  "lastUpdatedLabel": "2026年8月27日 09:00 HKT",
+  "windowLabel": "09:00 HKT 速報版",
+  "nextUpdateLabel": "次回発行予定 10:00 HKT",
+  "newCount": 4,
+  "updatedCount": 0,
   "developingCount": 0,
   "coverage": {
     "status": "COMPLETE",
     "deskLatestStoryCounts": {
       "world": 13,
-      "asia": 18,
-      "hong-kong": 15,
-      "japan": 18,
+      "asia": 20,
+      "hong-kong": 16,
+      "japan": 20,
       "market-economy": 20,
-      "ai-tech": 13,
+      "ai-tech": 15,
       "manga-anime": 5,
       "manchester-united": 7,
       "football": 21
     },
     "deskLatestDepthMet": true,
-    "japanCountVerified": 18,
+    "japanCountVerified": 20,
     "sourceGateMet": true,
     "geographicGateMet": true,
     "footballGateMet": true,
-    "publishingGateMet": true
+    "publishingGateMet": true,
+    "dailyEdition": "2026-08-27",
+    "qaNote": "09:00 Live independently verified after the 08:00 Daily baseline. All retained desk depth floors remain met; Rolling Desk whole-file merge was not safely completed in this run, so publishing gate remains false."
   },
   "items": [
     {
-      "id": "football-fifa-governance-pressure-20260827-0000",
-      "desk": "football",
-      "status": "UPDATED",
-      "title": "FIFAのガバナンス論争はUEFAの提案するボイコットを継続するが、インファンティーノの政治的圧力は未解決のままである",
-      "dek": "トーナメント危機が冷え込んだ後、FIFAはインファンティーノの再選への支持を撤回し、ワールドカップで争われている商業権スキームを再開しないと誓約した。",
-      "summary": "UEFAはFIFAトーナメントのボイコットの脅威を取り除く準備ができていますが、FIFA会長インファンティーノに対するヨーロッパと大陸間の政治的圧力は続いています。",
-      "body": "ロイターとガーディアンは、UEFAがFIFAトーナメントをボイコットするという脅威を撤回する準備をしていると報じた。これは、FIFAが紛争中の商業権スキームを再プロモートしないという保証を得て、U 20女子ワールドカップなどのイベントが影響を受けるリスクを軽減するためである。\n\nしかし、FAはジャンニ・インファンティーノの再選への支持を撤回し、欧州リーグはそのリーダーシップの見通しに公然と疑問を呈している。差し迫った参入危機は解消されると予想されているが、FIFAの透明性、議長職、2027年の議長選挙は引き続き次のフェーズの焦点となるだろう。",
-      "context": "FIFAは以前、ワールドカップなどの主要なトーナメントでいくつかの商業的利益の売却を検討しており、UEFAや他のサッカー組織からの強い反発を引き起こした。",
-      "why": "サッカーガバナンスの紛争は、国際競争への参加、商業権の割り当て、FIFAリーダーシップ選挙に影響を与える可能性があります。",
-      "watchNext": "UEFAのボイコットの正式な撤回、FIFAの対応、そして2027年の大統領チャレンジャーの出現にご注意ください。",
-      "sourceName": "Reuters／The Guardian",
-      "sourceUrl": "https://www.reuters.com/sports/soccer/uefa-set-drop-fifa-boycott-threat-sources-say-2026-08-26/",
-      "timeLabel": "8月27日00:00 HKT最新情報",
+      "id": "ai-tech-nvidia-q2-results-20260827-0900",
+      "desk": "ai-tech",
+      "status": "NEW",
+      "title": "NVIDIAの四半期売上高は962.2億ドルと予想を上回り、AIデータセンターの売上高は前年比で倍増",
+      "dek": "次の四半期の売上高ガイダンスは約1,080億ドルで、市場の焦点は純粋な成長からRubinの供給、粗利益率、AI資本の開放に移行して継続性をサポートしています。",
+      "summary": "NVIDIAの第2四半期の売上高と調整後の収益はどちらも市場の予想を上回っており、データセンター事業は引き続き主要な成長エンジンとなっています。",
+      "body": "NVIDIAは、7月期第2四半期の売上高を前年同期比106 ％増の962.2億ドル、調整後1株当たり利益を市場予想を上回る2.22ドルと報告した。データセンターの売上高は前年比117 ％増の890億ドルに達しました。これは、大規模なクラウド企業やAIラボからの加速コンピューティングに対する強い需要が続いていることを反映しています。\n\n同社は、次の四半期に約1,080億ドルの収益を見込んでおり、次世代のVera Rubinプラットフォームが徐々に重要な成長源になると指摘しています。しかし、メモリと部品コストの上昇は粗利益率を押し下げる可能性が高く、投資家は次に供給のボトルネック、中国のビジネスの制約、そして大規模な顧客のAI資本支出が現在のペースを維持できるかどうかに注目します。",
+      "context": "NVIDIAは、世界的なAIインフラ投資サイクルの重要な需要指標となっており、そのパフォーマンスは半導体、クラウド、データセンターサプライチェーンの評価に直接影響を与えています。",
+      "why": "収益、収益、ガイダンスも期待を上回り、グローバルなAI投資ニーズに新しい現実世界のデータ検証を提供します。",
+      "watchNext": "Rubinの出荷リズム、売上総利益率の傾向、中国市場の制限、主要なクラウド顧客向けのAI資本支出ガイドラインに注意してください。",
+      "sourceName": "NVIDIA / Reuters / AP",
+      "sourceUrl": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027",
+      "timeLabel": "09:00 HKT",
       "sources": [
         {
-          "name": "Reuters",
-          "url": "https://www.reuters.com/sports/soccer/uefa-set-drop-fifa-boycott-threat-sources-say-2026-08-26/"
+          "name": "NVIDIA Newsroom",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027"
         },
         {
-          "name": "The Guardian",
-          "url": "https://www.theguardian.com/football/2026/aug/26/uefa-poised-lift-boycott-threat-fifa-promises-no-world-cup-sale-repeat-gianni-infantino"
+          "name": "Reuters",
+          "url": "https://www.reuters.com/business/media-telecom/nvidia-forecasts-quarterly-revenue-above-estimates-2026-08-26/"
+        },
+        {
+          "name": "Associated Press",
+          "url": "https://apnews.com/article/dc8d556e709b50915cca9217a60b1991"
         }
       ],
       "deskSlugs": [
-        "football"
+        "ai-tech"
       ],
-      "section": "フットボール",
-      "sectionLabel": "サッカー",
-      "sourceItemFingerprint": "41e9b07c26fbee331a0ab2318a20fe8442fe52c2ccd0ec11b9afe48ef0045ff9",
-      "audio": "audio/live/football-fifa-governance-pressure-20260827-0000.mp3",
-      "timing": "audio/timing/live/football-fifa-governance-pressure-20260827-0000.json",
+      "section": "AI・テクノロジー",
+      "sectionLabel": "AI・テクノロジー",
+      "sourceItemFingerprint": "6248bc7809b1a95fe77c4a81862fd1d05d466fba1165ac95f41c15b3cd986767",
+      "audio": "audio/live/ai-tech-nvidia-q2-results-20260827-0900.mp3",
+      "timing": "audio/timing/live/ai-tech-nvidia-q2-results-20260827-0900.json",
       "furigana": {
-        "section": "フットボール",
-        "title": "FIFAのガバナンス<ruby>論争<rt>ろんそう</rt></ruby>はUEFAの<ruby>提案<rt>ていあん</rt></ruby>するボイコットを<ruby>継続<rt>けいぞく</rt></ruby>するが、インファンティーノの<ruby>政治的<rt>せいじてき</rt></ruby><ruby>圧力<rt>あつりょく</rt></ruby>は<ruby>未解決<rt>みかいけつ</rt></ruby>のままである",
-        "dek": "トーナメント<ruby>危機<rt>きき</rt></ruby>が<ruby>冷<rt>ひ</rt></ruby>え<ruby>込<rt>こ</rt></ruby>んだ<ruby>後<rt>のち</rt></ruby>、FIFAはインファンティーノの<ruby>再選<rt>さいせん</rt></ruby>への<ruby>支持<rt>しじ</rt></ruby>を<ruby>撤回<rt>てっかい</rt></ruby>し、ワールドカップで<ruby>争<rt>そう</rt></ruby>われている<ruby>商業<rt>しょうぎょう</rt></ruby><ruby>権<rt>けん</rt></ruby>スキームを<ruby>再開<rt>さいかい</rt></ruby>しないと<ruby>誓約<rt>せいやく</rt></ruby>した。",
-        "summary": "UEFAはFIFAトーナメントのボイコットの<ruby>脅威<rt>きょうい</rt></ruby>を<ruby>取り除<rt>とりのぞ</rt></ruby>く<ruby>準備<rt>じゅんび</rt></ruby>ができていますが、FIFA<ruby>会長<rt>かいちょう</rt></ruby>インファンティーノに<ruby>対<rt>たい</rt></ruby>するヨーロッパと<ruby>大陸<rt>たいりく</rt></ruby><ruby>間<rt>ま</rt></ruby>の<ruby>政治的<rt>せいじてき</rt></ruby><ruby>圧力<rt>あつりょく</rt></ruby>は<ruby>続<rt>つづ</rt></ruby>いています。",
-        "context": "FIFAは<ruby>以前<rt>いぜん</rt></ruby>、ワールドカップなどの<ruby>主要<rt>しゅよう</rt></ruby>なトーナメントでいくつかの<ruby>商業<rt>しょうぎょう</rt></ruby><ruby>的<rt>てき</rt></ruby><ruby>利益<rt>りえき</rt></ruby>の<ruby>売却<rt>ばいきゃく</rt></ruby>を<ruby>検討<rt>けんとう</rt></ruby>しており、UEFAや<ruby>他<rt>ほか</rt></ruby>のサッカー<ruby>組織<rt>そしき</rt></ruby>からの<ruby>強<rt>つよ</rt></ruby>い<ruby>反発<rt>はんぱつ</rt></ruby>を<ruby>引き起<rt>ひきお</rt></ruby>こした。",
-        "why": "サッカーガバナンスの<ruby>紛争<rt>ふんそう</rt></ruby>は、<ruby>国際<rt>こくさい</rt></ruby><ruby>競争<rt>きょうそう</rt></ruby>への<ruby>参加<rt>さんか</rt></ruby>、<ruby>商業<rt>しょうぎょう</rt></ruby><ruby>権<rt>けん</rt></ruby>の<ruby>割り当<rt>わりあ</rt></ruby>て、FIFAリーダーシップ<ruby>選挙<rt>せんきょ</rt></ruby>に<ruby>影響<rt>えいきょう</rt></ruby>を<ruby>与<rt>あた</rt></ruby>える<ruby>可能性<rt>かのうせい</rt></ruby>があります。",
-        "watchNext": "UEFAのボイコットの<ruby>正式<rt>せいしき</rt></ruby>な<ruby>撤回<rt>てっかい</rt></ruby>、FIFAの<ruby>対応<rt>たいおう</rt></ruby>、そして2027<ruby>年<rt>ねん</rt></ruby>の<ruby>大統領<rt>だいとうりょう</rt></ruby>チャレンジャーの<ruby>出現<rt>しゅつげん</rt></ruby>にご<ruby>注意<rt>ちゅうい</rt></ruby>ください。",
+        "section": "AI・テクノロジー",
+        "title": "NVIDIAの<ruby>四半期<rt>しはんき</rt></ruby><ruby>売上高<rt>うりあげだか</rt></ruby>は962.2<ruby>億<rt>おく</rt></ruby>ドルと<ruby>予想<rt>よそう</rt></ruby>を<ruby>上回<rt>うわまわ</rt></ruby>り、AIデータセンターの<ruby>売上高<rt>うりあげだか</rt></ruby>は<ruby>前年比<rt>ぜんねんひ</rt></ruby>で<ruby>倍増<rt>ばいぞう</rt></ruby>",
+        "dek": "<ruby>次<rt>つぎ</rt></ruby>の<ruby>四半期<rt>しはんき</rt></ruby>の<ruby>売上高<rt>うりあげだか</rt></ruby>ガイダンスは<ruby>約<rt>やく</rt></ruby>1,080<ruby>億<rt>おく</rt></ruby>ドルで、<ruby>市場<rt>しじょう</rt></ruby>の<ruby>焦点<rt>しょうてん</rt></ruby>は<ruby>純粋<rt>じゅんすい</rt></ruby>な<ruby>成長<rt>せいちょう</rt></ruby>からRubinの<ruby>供給<rt>きょうきゅう</rt></ruby>、<ruby>粗利益<rt>あらりえき</rt></ruby><ruby>率<rt>りつ</rt></ruby>、AI<ruby>資本<rt>しほん</rt></ruby>の<ruby>開放<rt>かいほう</rt></ruby>に<ruby>移行<rt>いこう</rt></ruby>して<ruby>継続性<rt>けいぞくせい</rt></ruby>をサポートしています。",
+        "summary": "NVIDIAの<ruby>第<rt>だい</rt></ruby>2<ruby>四半期<rt>しはんき</rt></ruby>の<ruby>売上高<rt>うりあげだか</rt></ruby>と<ruby>調整後<rt>ちょうせいご</rt></ruby>の<ruby>収益<rt>しゅうえき</rt></ruby>はどちらも<ruby>市場<rt>しじょう</rt></ruby>の<ruby>予想<rt>よそう</rt></ruby>を<ruby>上回<rt>うわまわ</rt></ruby>っており、データセンター<ruby>事業<rt>じぎょう</rt></ruby>は<ruby>引き続<rt>ひきつづ</rt></ruby>き<ruby>主要<rt>しゅよう</rt></ruby>な<ruby>成長<rt>せいちょう</rt></ruby>エンジンとなっています。",
+        "context": "NVIDIAは、<ruby>世界的<rt>せかいてき</rt></ruby>なAIインフラ<ruby>投資<rt>とうし</rt></ruby>サイクルの<ruby>重要<rt>じゅうよう</rt></ruby>な<ruby>需要<rt>じゅよう</rt></ruby><ruby>指標<rt>しひょう</rt></ruby>となっており、そのパフォーマンスは<ruby>半導体<rt>はんどうたい</rt></ruby>、クラウド、データセンターサプライチェーンの<ruby>評価<rt>ひょうか</rt></ruby>に<ruby>直接<rt>ちょくせつ</rt></ruby><ruby>影響<rt>えいきょう</rt></ruby>を<ruby>与<rt>あた</rt></ruby>えています。",
+        "why": "<ruby>収益<rt>しゅうえき</rt></ruby>、<ruby>収益<rt>しゅうえき</rt></ruby>、ガイダンスも<ruby>期待<rt>きたい</rt></ruby>を<ruby>上回<rt>うわまわ</rt></ruby>り、グローバルなAI<ruby>投資<rt>とうし</rt></ruby>ニーズに<ruby>新<rt>あたら</rt></ruby>しい<ruby>現実世界<rt>げんじつせかい</rt></ruby>のデータ<ruby>検証<rt>けんしょう</rt></ruby>を<ruby>提供<rt>ていきょう</rt></ruby>します。",
+        "watchNext": "Rubinの<ruby>出荷<rt>しゅっか</rt></ruby>リズム、<ruby>売上総利益<rt>うりあげそうりえき</rt></ruby><ruby>率<rt>りつ</rt></ruby>の<ruby>傾向<rt>けいこう</rt></ruby>、<ruby>中国<rt>ちゅうごく</rt></ruby><ruby>市場<rt>しじょう</rt></ruby>の<ruby>制限<rt>せいげん</rt></ruby>、<ruby>主要<rt>しゅよう</rt></ruby>なクラウド<ruby>顧客<rt>こきゃく</rt></ruby><ruby>向<rt>む</rt></ruby>けのAI<ruby>資本<rt>しほん</rt></ruby><ruby>支出<rt>ししゅつ</rt></ruby>ガイドラインに<ruby>注意<rt>ちゅうい</rt></ruby>してください。",
         "bodyParagraphs": [
-          "ロイターとガーディアンは、UEFAがFIFAトーナメントをボイコットするという<ruby>脅威<rt>きょうい</rt></ruby>を<ruby>撤回<rt>てっかい</rt></ruby>する<ruby>準備<rt>じゅんび</rt></ruby>をしていると<ruby>報<rt>ほう</rt></ruby>じた。これは、FIFAが<ruby>紛争<rt>ふんそう</rt></ruby><ruby>中<rt>なか</rt></ruby>の<ruby>商業<rt>しょうぎょう</rt></ruby><ruby>権<rt>けん</rt></ruby>スキームを<ruby>再<rt>さい</rt></ruby>プロモートしないという<ruby>保証<rt>ほしょう</rt></ruby>を<ruby>得<rt>え</rt></ruby>て、U 20<ruby>女子<rt>じょし</rt></ruby>ワールドカップなどのイベントが<ruby>影響<rt>えいきょう</rt></ruby>を<ruby>受<rt>う</rt></ruby>けるリスクを<ruby>軽減<rt>けいげん</rt></ruby>するためである。",
-          "しかし、FAはジャンニ・インファンティーノの<ruby>再選<rt>さいせん</rt></ruby>への<ruby>支持<rt>しじ</rt></ruby>を<ruby>撤回<rt>てっかい</rt></ruby>し、<ruby>欧州<rt>おうしゅう</rt></ruby>リーグはそのリーダーシップの<ruby>見通<rt>みとお</rt></ruby>しに<ruby>公然<rt>こうぜん</rt></ruby>と<ruby>疑問<rt>ぎもん</rt></ruby>を<ruby>呈<rt>てい</rt></ruby>している。<ruby>差<rt>さ</rt></ruby>し<ruby>迫<rt>せま</rt></ruby>った<ruby>参入<rt>さんにゅう</rt></ruby><ruby>危機<rt>きき</rt></ruby>は<ruby>解消<rt>かいしょう</rt></ruby>されると<ruby>予想<rt>よそう</rt></ruby>されているが、FIFAの<ruby>透明性<rt>とうめいせい</rt></ruby>、<ruby>議長<rt>ぎちょう</rt></ruby><ruby>職<rt>しょく</rt></ruby>、2027<ruby>年<rt>ねん</rt></ruby>の<ruby>議長<rt>ぎちょう</rt></ruby><ruby>選挙<rt>せんきょ</rt></ruby>は<ruby>引き続<rt>ひきつづ</rt></ruby>き<ruby>次<rt>つぎ</rt></ruby>のフェーズの<ruby>焦点<rt>しょうてん</rt></ruby>となるだろう。"
+          "NVIDIAは、<ruby>7月<rt>しちがつ</rt></ruby><ruby>期<rt>き</rt></ruby><ruby>第<rt>だい</rt></ruby>2<ruby>四半期<rt>しはんき</rt></ruby>の<ruby>売上高<rt>うりあげだか</rt></ruby>を<ruby>前年<rt>ぜんねん</rt></ruby><ruby>同期<rt>どうき</rt></ruby><ruby>比<rt>ひ</rt></ruby>106 ％<ruby>増<rt>ぞう</rt></ruby>の962.2<ruby>億<rt>おく</rt></ruby>ドル、<ruby>調整後<rt>ちょうせいご</rt></ruby>1<ruby>株<rt>かぶ</rt></ruby><ruby>当<rt>あ</rt></ruby>たり<ruby>利益<rt>りえき</rt></ruby>を<ruby>市場<rt>しじょう</rt></ruby><ruby>予想<rt>よそう</rt></ruby>を<ruby>上回<rt>うわまわ</rt></ruby>る2.22ドルと<ruby>報告<rt>ほうこく</rt></ruby>した。データセンターの<ruby>売上高<rt>うりあげだか</rt></ruby>は<ruby>前年比<rt>ぜんねんひ</rt></ruby>117 ％<ruby>増<rt>ぞう</rt></ruby>の890<ruby>億<rt>おく</rt></ruby>ドルに<ruby>達<rt>たっ</rt></ruby>しました。これは、<ruby>大規模<rt>だいきぼ</rt></ruby>なクラウド<ruby>企業<rt>きぎょう</rt></ruby>やAIラボからの<ruby>加速<rt>かそく</rt></ruby>コンピューティングに<ruby>対<rt>たい</rt></ruby>する<ruby>強<rt>つよ</rt></ruby>い<ruby>需要<rt>じゅよう</rt></ruby>が<ruby>続<rt>つづ</rt></ruby>いていることを<ruby>反映<rt>はんえい</rt></ruby>しています。",
+          "<ruby>同社<rt>どうしゃ</rt></ruby>は、<ruby>次<rt>つぎ</rt></ruby>の<ruby>四半期<rt>しはんき</rt></ruby>に<ruby>約<rt>やく</rt></ruby>1,080<ruby>億<rt>おく</rt></ruby>ドルの<ruby>収益<rt>しゅうえき</rt></ruby>を<ruby>見込<rt>みこ</rt></ruby>んでおり、<ruby>次世代<rt>じせだい</rt></ruby>のVera Rubinプラットフォームが<ruby>徐々<rt>じょじょ</rt></ruby>に<ruby>重要<rt>じゅうよう</rt></ruby>な<ruby>成長<rt>せいちょう</rt></ruby><ruby>源<rt>げん</rt></ruby>になると<ruby>指摘<rt>してき</rt></ruby>しています。しかし、メモリと<ruby>部品<rt>ぶひん</rt></ruby>コストの<ruby>上昇<rt>じょうしょう</rt></ruby>は<ruby>粗利益<rt>あらりえき</rt></ruby><ruby>率<rt>ひき</rt></ruby>を<ruby>押<rt>お</rt></ruby>し<ruby>下<rt>さ</rt></ruby>げる<ruby>可能性<rt>かのうせい</rt></ruby>が<ruby>高<rt>たか</rt></ruby>く、<ruby>投資家<rt>とうしか</rt></ruby>は<ruby>次<rt>つぎ</rt></ruby>に<ruby>供給<rt>きょうきゅう</rt></ruby>のボトルネック、<ruby>中国<rt>ちゅうごく</rt></ruby>のビジネスの<ruby>制約<rt>せいやく</rt></ruby>、そして<ruby>大規模<rt>だいきぼ</rt></ruby>な<ruby>顧客<rt>こきゃく</rt></ruby>のAI<ruby>資本<rt>しほん</rt></ruby><ruby>支出<rt>ししゅつ</rt></ruby>が<ruby>現在<rt>げんざい</rt></ruby>のペースを<ruby>維持<rt>いじ</rt></ruby>できるかどうかに<ruby>注目<rt>ちゅうもく</rt></ruby>します。"
+        ]
+      }
+    },
+    {
+      "id": "asia-china-india-border-consensus-20260827-0900",
+      "desk": "asia",
+      "status": "NEW",
+      "title": "中国とインドの国境交渉が8つの合意点に達し、軍事交渉ポイントと2つのホットラインが追加",
+      "dek": "双方は、9月に管理線の危機コミュニケーションを強化し、国境の境界線を推進し、国境を越えた河川水文データの交渉を行うことで合意した。",
+      "summary": "中国とインドは、より多くの軍事コミュニケーションチャネルを確立し、国境の平和の維持を再確認するために、北京で国境問題特別代表会議の第25回会合を開催した。",
+      "body": "中国とインドは第25回国境問題特別代表会合を完了し、双方は公正で合理的で相互に受け入れられる国境問題の解決策を模索し続けること、そして既存の外交・軍事メカニズムが誤算のリスクを減らすために実際の管理ライン上の緊急事態により迅速に対処することを要求することを含む8項目の結果を発表した。\n\n双方は、上級軍事指揮官のために2つの新しい集合場所を追加し、東部セクターと中央セクターに2つの追加の軍事ホットラインを追加することに合意した。国境貿易、巡礼、国境を越えた川の協力も引き続き進展する。次回の特別代表会談は、2027年にインドで開催される予定です。",
+      "context": "中国とインドの国境は、2020年の致命的な紛争後、長い間緊張状態にあり、両国は過去2年間で徐々に外交・軍事コミュニケーションを回復してきました。",
+      "why": "軍事コミュニケーションチャネルを追加することで、国境の誤算を減らすことができ、国境の問題は、2つのアジア大国間の全体的な外交関係と経済関係に直接影響を与えます。",
+      "watchNext": "9月の国境を越えた河川会談の詳細、管理線の管理、両国首脳間のフォローアップ会談がより実質的なブレークスルーをもたらすことができるかどうかに注意してください。",
+      "sourceName": "中國外交部 / Reuters",
+      "sourceUrl": "https://www.mfa.gov.cn/eng/wjbzhd/202608/t20260826_12011002.html",
+      "timeLabel": "09:00 HKT",
+      "sources": [
+        {
+          "name": "中國外交部",
+          "url": "https://www.mfa.gov.cn/eng/wjbzhd/202608/t20260826_12011002.html"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/china/china-india-reaffirm-border-peace-expand-communication-channels-2026-08-26/"
+        },
+        {
+          "name": "South China Morning Post",
+          "url": "https://www.scmp.com/news/china/diplomacy/article/3365318/chinas-xi-jinping-expected-visit-india-after-7-years-whats-agenda"
+        }
+      ],
+      "deskSlugs": [
+        "asia"
+      ],
+      "section": "アジア",
+      "sectionLabel": "アジア",
+      "sourceItemFingerprint": "3bfc30789172aeea6a568d4dfaa546796938731e1ebc45850e8600911f694de2",
+      "audio": "audio/live/asia-china-india-border-consensus-20260827-0900.mp3",
+      "timing": "audio/timing/live/asia-china-india-border-consensus-20260827-0900.json",
+      "furigana": {
+        "section": "アジア",
+        "title": "<ruby>中国<rt>ちゅうごく</rt></ruby>とインドの<ruby>国境<rt>こっきょう</rt></ruby><ruby>交渉<rt>こうしょう</rt></ruby>が8つの<ruby>合意点<rt>ごういてん</rt></ruby>に<ruby>達<rt>たっ</rt></ruby>し、<ruby>軍事<rt>ぐんじ</rt></ruby><ruby>交渉<rt>こうしょう</rt></ruby>ポイントと2つのホットラインが<ruby>追加<rt>ついか</rt></ruby>",
+        "dek": "<ruby>双方<rt>そうほう</rt></ruby>は、<ruby>9月<rt>くがつ</rt></ruby>に<ruby>管理<rt>かんり</rt></ruby><ruby>線<rt>せん</rt></ruby>の<ruby>危機<rt>きき</rt></ruby>コミュニケーションを<ruby>強化<rt>きょうか</rt></ruby>し、<ruby>国境<rt>こっきょう</rt></ruby>の<ruby>境界線<rt>きょうかいせん</rt></ruby>を<ruby>推進<rt>すいしん</rt></ruby>し、<ruby>国境<rt>こっきょう</rt></ruby>を<ruby>越<rt>こ</rt></ruby>えた<ruby>河川<rt>かせん</rt></ruby><ruby>水文<rt>すいもん</rt></ruby>データの<ruby>交渉<rt>こうしょう</rt></ruby>を<ruby>行<rt>おこな</rt></ruby>うことで<ruby>合意<rt>ごうい</rt></ruby>した。",
+        "summary": "<ruby>中国<rt>ちゅうごく</rt></ruby>とインドは、より<ruby>多<rt>おお</rt></ruby>くの<ruby>軍事<rt>ぐんじ</rt></ruby>コミュニケーションチャネルを<ruby>確立<rt>かくりつ</rt></ruby>し、<ruby>国境<rt>こっきょう</rt></ruby>の<ruby>平和<rt>へいわ</rt></ruby>の<ruby>維持<rt>いじ</rt></ruby>を<ruby>再確認<rt>さいかくにん</rt></ruby>するために、<ruby>北京<rt>ぺきん</rt></ruby>で<ruby>国境<rt>こっきょう</rt></ruby><ruby>問題<rt>もんだい</rt></ruby><ruby>特別<rt>とくべつ</rt></ruby><ruby>代表<rt>だいひょう</rt></ruby><ruby>会議<rt>かいぎ</rt></ruby>の<ruby>第<rt>だい</rt></ruby><ruby>25回<rt>にじゅうごかい</rt></ruby><ruby>会合<rt>かいごう</rt></ruby>を<ruby>開催<rt>かいさい</rt></ruby>した。",
+        "context": "<ruby>中国<rt>ちゅうごく</rt></ruby>とインドの<ruby>国境<rt>こっきょう</rt></ruby>は、2020<ruby>年<rt>ねん</rt></ruby>の<ruby>致命的<rt>ちめいてき</rt></ruby>な<ruby>紛争<rt>ふんそう</rt></ruby><ruby>後<rt>ご</rt></ruby>、<ruby>長<rt>なが</rt></ruby>い<ruby>間<rt>かん</rt></ruby><ruby>緊張<rt>きんちょう</rt></ruby><ruby>状態<rt>じょうたい</rt></ruby>にあり、<ruby>両国<rt>りょうごく</rt></ruby>は<ruby>過去<rt>かこ</rt></ruby>2<ruby>年間<rt>ねんかん</rt></ruby>で<ruby>徐々<rt>じょじょ</rt></ruby>に<ruby>外交<rt>がいこう</rt></ruby>・<ruby>軍事<rt>ぐんじ</rt></ruby>コミュニケーションを<ruby>回復<rt>かいふく</rt></ruby>してきました。",
+        "why": "<ruby>軍事<rt>ぐんじ</rt></ruby>コミュニケーションチャネルを<ruby>追加<rt>ついか</rt></ruby>することで、<ruby>国境<rt>こっきょう</rt></ruby>の<ruby>誤算<rt>ごさん</rt></ruby>を<ruby>減<rt>へ</rt></ruby>らすことができ、<ruby>国境<rt>こっきょう</rt></ruby>の<ruby>問題<rt>もんだい</rt></ruby>は、2つのアジア<ruby>大国間<rt>たいこくかん</rt></ruby>の<ruby>全体的<rt>ぜんたいてき</rt></ruby>な<ruby>外交関係<rt>がいこうかんけい</rt></ruby>と<ruby>経済関係<rt>けいざいかんけい</rt></ruby>に<ruby>直接影響<rt>ちょくせつえいきょう</rt></ruby>を<ruby>与<rt>あた</rt></ruby>えます。",
+        "watchNext": "<ruby>9月<rt>くがつ</rt></ruby>の<ruby>国境<rt>こっきょう</rt></ruby>を<ruby>越<rt>こ</rt></ruby>えた<ruby>河川<rt>かせん</rt></ruby><ruby>会談<rt>かいだん</rt></ruby>の<ruby>詳細<rt>しょうさい</rt></ruby>、<ruby>管理<rt>かんり</rt></ruby><ruby>線<rt>せん</rt></ruby>の<ruby>管理<rt>かんり</rt></ruby>、<ruby>両国<rt>りょうごく</rt></ruby><ruby>首脳<rt>しゅのう</rt></ruby><ruby>間<rt>ま</rt></ruby>のフォローアップ<ruby>会談<rt>かいだん</rt></ruby>がより<ruby>実質的<rt>じっしつてき</rt></ruby>なブレークスルーをもたらすことができるかどうかに<ruby>注意<rt>ちゅうい</rt></ruby>してください。",
+        "bodyParagraphs": [
+          "<ruby>中国<rt>ちゅうごく</rt></ruby>とインドは<ruby>第<rt>だい</rt></ruby>25<ruby>回国<rt>かいこく</rt></ruby><ruby>境<rt>さかい</rt></ruby><ruby>問題<rt>もんだい</rt></ruby><ruby>特別<rt>とくべつ</rt></ruby><ruby>代表<rt>だいひょう</rt></ruby><ruby>会合<rt>かいごう</rt></ruby>を<ruby>完了<rt>かんりょう</rt></ruby>し、<ruby>双方<rt>そうほう</rt></ruby>は<ruby>公正<rt>こうせい</rt></ruby>で<ruby>合理的<rt>ごうりてき</rt></ruby>で<ruby>相互<rt>そうご</rt></ruby>に<ruby>受け入<rt>うけい</rt></ruby>れられる<ruby>国境<rt>こっきょう</rt></ruby><ruby>問題<rt>もんだい</rt></ruby>の<ruby>解決策<rt>かいけつさく</rt></ruby>を<ruby>模索<rt>もさく</rt></ruby>し<ruby>続<rt>つづ</rt></ruby>けること、そして<ruby>既存<rt>きぞん</rt></ruby>の<ruby>外交<rt>がいこう</rt></ruby>・<ruby>軍事<rt>ぐんじ</rt></ruby>メカニズムが<ruby>誤算<rt>ごさん</rt></ruby>のリスクを<ruby>減<rt>へ</rt></ruby>らすために<ruby>実際<rt>じっさい</rt></ruby>の<ruby>管理<rt>かんり</rt></ruby>ライン<ruby>上<rt>うえ</rt></ruby>の<ruby>緊急事態<rt>きんきゅうじたい</rt></ruby>により<ruby>迅速<rt>じんそく</rt></ruby>に<ruby>対処<rt>たいしょ</rt></ruby>することを<ruby>要求<rt>ようきゅう</rt></ruby>することを<ruby>含<rt>ふく</rt></ruby>む8<ruby>項目<rt>こうもく</rt></ruby>の<ruby>結果<rt>けっか</rt></ruby>を<ruby>発表<rt>はっぴょう</rt></ruby>した。",
+          "<ruby>双方<rt>そうほう</rt></ruby>は、<ruby>上級<rt>じょうきゅう</rt></ruby><ruby>軍事<rt>ぐんじ</rt></ruby><ruby>指揮官<rt>しきかん</rt></ruby>のために2つの<ruby>新<rt>あたら</rt></ruby>しい<ruby>集合場所<rt>しゅうごうばしょ</rt></ruby>を<ruby>追加<rt>ついか</rt></ruby>し、<ruby>東部<rt>とうぶ</rt></ruby>セクターと<ruby>中央<rt>ちゅうおう</rt></ruby>セクターに2つの<ruby>追加<rt>ついか</rt></ruby>の<ruby>軍事<rt>ぐんじ</rt></ruby>ホットラインを<ruby>追加<rt>ついか</rt></ruby>することに<ruby>合意<rt>ごうい</rt></ruby>した。<ruby>国境<rt>こっきょう</rt></ruby><ruby>貿易<rt>ぼうえき</rt></ruby>、<ruby>巡礼<rt>じゅんれい</rt></ruby>、<ruby>国境<rt>こっきょう</rt></ruby>を<ruby>越<rt>こ</rt></ruby>えた<ruby>川<rt>かわ</rt></ruby>の<ruby>協力<rt>きょうりょく</rt></ruby>も<ruby>引き続<rt>ひきつづ</rt></ruby>き<ruby>進展<rt>しんてん</rt></ruby>する。<ruby>次回<rt>じかい</rt></ruby>の<ruby>特別<rt>とくべつ</rt></ruby><ruby>代表<rt>だいひょう</rt></ruby><ruby>会談<rt>かいだん</rt></ruby>は、2027<ruby>年<rt>ねん</rt></ruby>にインドで<ruby>開催<rt>かいさい</rt></ruby>される<ruby>予定<rt>よてい</rt></ruby>です。"
+        ]
+      }
+    },
+    {
+      "id": "market-qatar-lng-war-losses-20260827-0900",
+      "desk": "market-economy",
+      "status": "NEW",
+      "title": "ホルムズが封鎖されたため、カタールのLNG輸出は半年で96 ％減少し、ヨーロッパの冬季ガス価格のリスクが高まった",
+      "dek": "ロイターは、カタールの天然ガス販売で約240億ドルの損失を計上しており、米国のLNGがギャップの一部を埋めているが、欧州の在庫は同時期に歴史的に低い水準にあると推定している。",
+      "summary": "米イラク戦争とホルムズ海運は、カタールのLNG輸出によって妨げられ、世界的な天然ガスサプライチェーンは、ギャップを埋めるために米国の供給源に移行しています。",
+      "body": "米伊戦争は約半年続き、カタールのLNG輸出は昨年同期比で約96 ％減少した。ロイター通信は、カタールがこの期間に輸出したLNG船はわずか18隻で、昨年同期の509隻と比較して、出荷と市場データに基づいており、天然ガス販売の損失は約240億ドルであると計算した。\n\n米国のLNG輸出の増加は供給ギャップの一部を埋めたが、欧州の天然ガス在庫は前年比の低水準に落ち込んでいる。ホルムズの船積みが予想よりも遅く回復した場合、またはヨーロッパの冬が寒くなった場合、天然ガス価格と電力コストは再び急上昇する可能性があります。",
+      "context": "戦前、カタールは世界の1日のLNGの約5分の1を供給しており、輸出はホルムズ海峡に大きく依存していました。",
+      "why": "LNG供給ギャップは、ヨーロッパのエネルギー安全保障、世界のガス価格、米国のガス輸出需要に直接的な影響を与えています。",
+      "watchNext": "ホルムズの商人の輸送トラフィック、カタールの積荷、ヨーロッパのガス貯蔵の進捗状況、冬のガス先物価格に注目してください。",
+      "sourceName": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/energy/war-strands-qatari-gas-6-months-us-sales-rise-european-stocks-plummet-2026-08-26/",
+      "timeLabel": "09:00 HKT",
+      "sources": [
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/business/energy/war-strands-qatari-gas-6-months-us-sales-rise-european-stocks-plummet-2026-08-26/"
+        },
+        {
+          "name": "Gas Processing & LNG",
+          "url": "https://www.gasprocessingnews.com/news/2026/08/as-war-strands-qatari-gas-for-6-months-us-sales-rise-and-european-stocks-plummet/"
+        }
+      ],
+      "deskSlugs": [
+        "market-economy"
+      ],
+      "section": "金融/グローバル市場",
+      "sectionLabel": "経済・世界市場",
+      "sourceItemFingerprint": "255a6089aad0eed39fa7af47991ff283fc4552af649eb53cdd0363a000c7353e",
+      "audio": "audio/live/market-qatar-lng-war-losses-20260827-0900.mp3",
+      "timing": "audio/timing/live/market-qatar-lng-war-losses-20260827-0900.json",
+      "furigana": {
+        "section": "<ruby>金融<rt>きんゆう</rt></ruby>/グローバル<ruby>市場<rt>しじょう</rt></ruby>",
+        "title": "ホルムズが<ruby>封鎖<rt>ふうさ</rt></ruby>されたため、カタールのLNG<ruby>輸出<rt>ゆしゅつ</rt></ruby>は<ruby>半年<rt>はんとし</rt></ruby>で96 ％<ruby>減少<rt>げんしょう</rt></ruby>し、ヨーロッパの<ruby>冬季<rt>とうき</rt></ruby>ガス<ruby>価格<rt>かかく</rt></ruby>のリスクが<ruby>高<rt>たか</rt></ruby>まった",
+        "dek": "ロイターは、カタールの<ruby>天然<rt>てんねん</rt></ruby>ガス<ruby>販売<rt>はんばい</rt></ruby>で<ruby>約<rt>やく</rt></ruby>240<ruby>億<rt>おく</rt></ruby>ドルの<ruby>損失<rt>そんしつ</rt></ruby>を<ruby>計上<rt>けいじょう</rt></ruby>しており、<ruby>米国<rt>べいこく</rt></ruby>のLNGがギャップの<ruby>一部<rt>いちぶ</rt></ruby>を<ruby>埋<rt>う</rt></ruby>めているが、<ruby>欧州<rt>おうしゅう</rt></ruby>の<ruby>在庫<rt>ざいこ</rt></ruby>は<ruby>同時期<rt>どうじき</rt></ruby>に<ruby>歴史的<rt>れきしてき</rt></ruby>に<ruby>低<rt>ひく</rt></ruby>い<ruby>水準<rt>すいじゅん</rt></ruby>にあると<ruby>推定<rt>すいてい</rt></ruby>している。",
+        "summary": "<ruby>米<rt>べい</rt></ruby>イラク<ruby>戦争<rt>せんそう</rt></ruby>とホルムズ<ruby>海運<rt>かいうん</rt></ruby>は、カタールのLNG<ruby>輸出<rt>ゆしゅつ</rt></ruby>によって<ruby>妨<rt>さまた</rt></ruby>げられ、<ruby>世界的<rt>せかいてき</rt></ruby>な<ruby>天然<rt>てんねん</rt></ruby>ガスサプライチェーンは、ギャップを<ruby>埋<rt>う</rt></ruby>めるために<ruby>米国<rt>べいこく</rt></ruby>の<ruby>供給源<rt>きょうきゅうげん</rt></ruby>に<ruby>移行<rt>いこう</rt></ruby>しています。",
+        "context": "<ruby>戦前<rt>せんぜん</rt></ruby>、カタールは<ruby>世界<rt>せかい</rt></ruby>の1<ruby>日<rt>にち</rt></ruby>のLNGの<ruby>約<rt>やく</rt></ruby><ruby>5分<rt>ごふん</rt></ruby>の1を<ruby>供給<rt>きょうきゅう</rt></ruby>しており、<ruby>輸出<rt>ゆしゅつ</rt></ruby>はホルムズ<ruby>海峡<rt>かいきょう</rt></ruby>に<ruby>大<rt>おお</rt></ruby>きく<ruby>依存<rt>いぞん</rt></ruby>していました。",
+        "why": "LNG<ruby>供給<rt>きょうきゅう</rt></ruby>ギャップは、ヨーロッパのエネルギー<ruby>安全<rt>あんぜん</rt></ruby><ruby>保障<rt>ほしょう</rt></ruby>、<ruby>世界<rt>せかい</rt></ruby>のガス<ruby>価格<rt>かかく</rt></ruby>、<ruby>米国<rt>べいこく</rt></ruby>のガス<ruby>輸出<rt>ゆしゅつ</rt></ruby><ruby>需要<rt>じゅよう</rt></ruby>に<ruby>直接的<rt>ちょくせつてき</rt></ruby>な<ruby>影響<rt>えいきょう</rt></ruby>を<ruby>与<rt>あた</rt></ruby>えています。",
+        "watchNext": "ホルムズの<ruby>商人<rt>しょうにん</rt></ruby>の<ruby>輸送<rt>ゆそう</rt></ruby>トラフィック、カタールの<ruby>積荷<rt>つみに</rt></ruby>、ヨーロッパのガス<ruby>貯蔵<rt>ちょぞう</rt></ruby>の<ruby>進捗状況<rt>しんちょくじょうきょう</rt></ruby>、<ruby>冬<rt>ふゆ</rt></ruby>のガス<ruby>先物<rt>さきもの</rt></ruby><ruby>価格<rt>かかく</rt></ruby>に<ruby>注目<rt>ちゅうもく</rt></ruby>してください。",
+        "bodyParagraphs": [
+          "<ruby>米<rt>こめ</rt></ruby><ruby>伊<rt>い</rt></ruby><ruby>戦争<rt>せんそう</rt></ruby>は<ruby>約半年<rt>やくはんとし</rt></ruby><ruby>続<rt>つづ</rt></ruby>き、カタールのLNG<ruby>輸出<rt>ゆしゅつ</rt></ruby>は<ruby>昨年<rt>さくねん</rt></ruby><ruby>同期<rt>どうき</rt></ruby><ruby>比<rt>ひ</rt></ruby>で<ruby>約<rt>やく</rt></ruby>96 ％<ruby>減少<rt>げんしょう</rt></ruby>した。ロイター<ruby>通信<rt>つうしん</rt></ruby>は、カタールがこの<ruby>期間<rt>きかん</rt></ruby>に<ruby>輸出<rt>ゆしゅつ</rt></ruby>したLNG<ruby>船<rt>ふね</rt></ruby>はわずか18<ruby>隻<rt>せき</rt></ruby>で、<ruby>昨年<rt>さくねん</rt></ruby><ruby>同期<rt>どうき</rt></ruby>の509<ruby>隻<rt>せき</rt></ruby>と<ruby>比較<rt>ひかく</rt></ruby>して、<ruby>出荷<rt>しゅっか</rt></ruby>と<ruby>市場<rt>しじょう</rt></ruby>データに<ruby>基<rt>もと</rt></ruby>づいており、<ruby>天然<rt>てんねん</rt></ruby>ガス<ruby>販売<rt>はんばい</rt></ruby>の<ruby>損失<rt>そんしつ</rt></ruby>は<ruby>約<rt>やく</rt></ruby>240<ruby>億<rt>おく</rt></ruby>ドルであると<ruby>計算<rt>けいさん</rt></ruby>した。",
+          "<ruby>米国<rt>べいこく</rt></ruby>のLNG<ruby>輸出<rt>ゆしゅつ</rt></ruby>の<ruby>増加<rt>ぞうか</rt></ruby>は<ruby>供給<rt>きょうきゅう</rt></ruby>ギャップの<ruby>一部<rt>いちぶ</rt></ruby>を<ruby>埋<rt>う</rt></ruby>めたが、<ruby>欧州<rt>おうしゅう</rt></ruby>の<ruby>天然<rt>てんねん</rt></ruby>ガス<ruby>在庫<rt>ざいこ</rt></ruby>は<ruby>前年比<rt>ぜんねんひ</rt></ruby>の<ruby>低<rt>てい</rt></ruby><ruby>水準<rt>すいじゅん</rt></ruby>に<ruby>落ち込<rt>おちこ</rt></ruby>んでいる。ホルムズの<ruby>船積<rt>ふなづ</rt></ruby>みが<ruby>予想<rt>よそう</rt></ruby>よりも<ruby>遅<rt>おそ</rt></ruby>く<ruby>回復<rt>かいふく</rt></ruby>した<ruby>場合<rt>ばあい</rt></ruby>、またはヨーロッパの<ruby>冬<rt>ふゆ</rt></ruby>が<ruby>寒<rt>さむ</rt></ruby>くなった<ruby>場合<rt>ばあい</rt></ruby>、<ruby>天然<rt>てんねん</rt></ruby>ガス<ruby>価格<rt>かかく</rt></ruby>と<ruby>電力<rt>でんりょく</rt></ruby>コストは<ruby>再<rt>ふたた</rt></ruby>び<ruby>急上昇<rt>きゅうじょうしょう</rt></ruby>する<ruby>可能性<rt>かのうせい</rt></ruby>があります。"
         ]
       }
     }
   ],
   "translationDegraded": true,
-  "translationDeferredCount": 3,
+  "translationDeferredCount": 1,
   "translationDeferredIds": [
-    "ai-dreame-ev-project-winddown-20260827-0000",
-    "asia-nepal-tibet-flash-floods-20260827-0000",
-    "market-wall-st-nvidia-pce-20260827-0000"
+    "japan-saudel-recovery-20260827-0900"
   ],
   "translationRecoveryMode": "owner-quarantine-v1",
   "language": "ja",
   "translationSource": "kanuli/daily-brief-newspaper",
   "sourceFile": "live.json",
-  "sourceFingerprint": "7006a7027624c7ffe760dff808cb2d27832b25355275dd3d0639bc3039726dad",
+  "sourceFingerprint": "ac4f49a691f86879e182e5c8bc8d03afbb8fb1a6e4432d74cd357bb8634d52e9",
   "translationSchemaVersion": "ja-furigana-v3-context-sensitive",
   "furiganaEngineVersion": "sudachi-core-mode-c+context",
   "newsroomQualityVersion": 1
