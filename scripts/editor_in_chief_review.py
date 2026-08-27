@@ -11,6 +11,7 @@ from __future__ import annotations
 import json
 import os
 import re
+from datetime import date
 from pathlib import Path
 
 import newsroom_quality
@@ -26,6 +27,13 @@ PROSE_FIELDS = ("title", "dek", "summary", "body", "context", "why", "watchNext"
 EXPECTED_FURIGANA_ENGINE = "sudachi-core-mode-c+context"
 MIN_NEWSROOM_QUALITY_VERSION = 1
 VALID_SCOPES = {"core", "rolling", "all"}
+TOPIC_RENDERER = ROOT / "assets/js/topic-ja-rolling.js"
+TOPIC_FRESHNESS_GUARD_MARKERS = (
+    "GEO_FOOTBALL_CROSSPLACEMENT_MAX_AGE_DAYS",
+    "ROLLING_LAYER_MAX_AGE_DAYS",
+    "STALE_GEO_FOOTBALL_CROSSPLACEMENT_SUPPRESSED",
+    "STALE_ROLLING_LAYER_SUPPRESSED",
+)
 
 # Strong evidence of learner-harmful or newsroom-unacceptable Japanese already
 # observed in production. Keep this list conservative: stylistic preferences
@@ -151,16 +159,91 @@ def check_sections(data: dict, warnings: list[str]) -> None:
             )
 
 
+def _parse_iso_day(value: str) -> date | None:
+    text = str(value or "").strip()[:10]
+    try:
+        return date.fromisoformat(text)
+    except Exception:
+        return None
+
+
+def _story_day(story: dict, current: date | None) -> date | None:
+    for key in ("updatedAt", "publishedAt", "generatedAt", "date"):
+        parsed = _parse_iso_day(story.get(key))
+        if parsed:
+            return parsed
+    matches = list(re.finditer(r"(20\d{2})(\d{2})(\d{2})", str(story.get("id") or "")))
+    if matches:
+        match = matches[-1]
+        try:
+            return date(int(match.group(1)), int(match.group(2)), int(match.group(3)))
+        except Exception:
+            pass
+    if current:
+        label = re.search(r"(\d{1,2})\s*月\s*(\d{1,2})\s*日", str(story.get("timeLabel") or ""))
+        if label:
+            try:
+                return date(current.year, int(label.group(1)), int(label.group(2)))
+            except Exception:
+                pass
+    return None
+
+
+def check_topic_freshness_delivery(issues: list[str], warnings: list[str]) -> None:
+    if not TOPIC_RENDERER.is_file():
+        issues.append("topic renderer missing; Editor-in-Chief cannot guarantee geographic-page freshness")
+        return
+    renderer = TOPIC_RENDERER.read_text(encoding="utf-8")
+    missing = [marker for marker in TOPIC_FRESHNESS_GUARD_MARKERS if marker not in renderer]
+    if missing:
+        issues.append(
+            "topic renderer is missing Editor-in-Chief freshness guards: " + ", ".join(missing)
+        )
+        return
+
+    latest_path = DATA / "latest.json"
+    rolling_path = DATA / "desk-latest.json"
+    if not latest_path.is_file() or not rolling_path.is_file():
+        return
+    try:
+        current_payload = load_json(latest_path)
+        rolling_payload = load_json(rolling_path)
+    except Exception:
+        return
+    current = _parse_iso_day(current_payload.get("date"))
+    rolling_day = _parse_iso_day(rolling_payload.get("date") or rolling_payload.get("generatedAt"))
+    if current and rolling_day:
+        age = (current - rolling_day).days
+        if age > 1:
+            warnings.append(
+                f"desk-latest.json is {age} days behind Daily; topic renderer must suppress it rather than label it 最新"
+            )
+
+    stale_geo_football: list[str] = []
+    for story in iter_story_dicts(rolling_payload):
+        slugs = {str(x) for x in (story.get("deskSlugs") or [])}
+        if "football" not in slugs or not slugs.intersection({"hong-kong", "japan"}):
+            continue
+        story_day = _story_day(story, current)
+        if current and story_day and (current - story_day).days > 1:
+            stale_geo_football.append(str(story.get("id") or "unknown"))
+    if stale_geo_football:
+        warnings.append(
+            "stale football cross-placement present upstream but suppressed on Hong Kong/Japan pages: "
+            + ", ".join(stale_geo_football[:12])
+        )
+
+
 def rolling_files() -> list[str]:
     names = ["desk-latest.json", "stocks-latest.json"]
     latest_path = DATA / "latest.json"
     if latest_path.is_file():
         try:
-            date = str(load_json(latest_path).get("date") or "")
+            date_value = str(load_json(latest_path).get("date") or "")
         except Exception:
-            date = ""
-        if re.fullmatch(r"\d{4}-\d{2}-\d{2}", date):
-            names.append(f"topic-more/{date}.json")
+            date_value = ""
+        if re.fullmatch(r"\d{4}-\d{2}-\d{2}", date_value):
+            names.append(f"topic-more/{date_value}.json")
     return names
 
 
@@ -186,6 +269,9 @@ def review(scope: str = "all") -> int:
     issues: list[str] = []
     warnings: list[str] = []
     reviewed = 0
+
+    if scope in {"rolling", "all"}:
+        check_topic_freshness_delivery(issues, warnings)
 
     for name in files_for_scope(scope):
         path = DATA / name
