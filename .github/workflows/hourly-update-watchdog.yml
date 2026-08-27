@@ -1,0 +1,152 @@
+name: 日本語ニュース毎時配信ウォッチドッグ
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Primary recovery check 10 minutes after the normal :15 sync.
+    - cron: '25 * * * *'
+    # Second independent check in case the :25 GitHub cron itself is delayed or skipped.
+    - cron: '35 * * * *'
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: japanese-news-hourly-watchdog
+  cancel-in-progress: false
+
+jobs:
+  watchdog:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: 毎時配信の実績を確認
+        id: inspect
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const deliveryStepNames = new Set([
+              '変更ありの毎時15分版をDiscordへ配信',
+              '変更なしでも定時xx:15のDiscordサイト更新を配信',
+              '緊急復旧版をDiscordへ配信',
+              '緊急復旧でも変更なしなら定時xx:15サイト更新を配信',
+            ]);
+
+            const now = new Date();
+            const expected = new Date(now);
+            expected.setUTCMinutes(15, 0, 0);
+            if (now.getTime() < expected.getTime()) {
+              expected.setUTCHours(expected.getUTCHours() - 1);
+            }
+            const cutoff = expected.getTime() - 2 * 60 * 1000;
+
+            const { owner, repo } = context.repo;
+            const runsResponse = await github.rest.actions.listWorkflowRuns({
+              owner,
+              repo,
+              workflow_id: 'sync-japanese-news.yml',
+              per_page: 30,
+            });
+            const candidates = runsResponse.data.workflow_runs.filter((run) => {
+              const created = new Date(run.created_at).getTime();
+              return created >= cutoff && created <= now.getTime();
+            });
+
+            let deliveryOk = false;
+            let activeSync = false;
+            for (const run of candidates.slice(0, 10)) {
+              if (run.status !== 'completed') {
+                activeSync = true;
+              }
+              const jobs = await github.paginate(
+                github.rest.actions.listJobsForWorkflowRun,
+                { owner, repo, run_id: run.id, per_page: 100 }
+              );
+              for (const job of jobs) {
+                for (const step of job.steps || []) {
+                  if (deliveryStepNames.has(step.name) && step.conclusion === 'success') {
+                    deliveryOk = true;
+                  }
+                }
+              }
+            }
+
+            let priorFallback = false;
+            if (context.eventName === 'schedule' && context.payload.schedule === '35 * * * *') {
+              const watchdogRuns = await github.rest.actions.listWorkflowRuns({
+                owner,
+                repo,
+                workflow_id: 'hourly-update-watchdog.yml',
+                event: 'schedule',
+                per_page: 20,
+              });
+              const priorRuns = watchdogRuns.data.workflow_runs.filter((run) => {
+                if (run.id === context.runId) return false;
+                const created = new Date(run.created_at).getTime();
+                return created >= cutoff && created < now.getTime();
+              });
+              for (const run of priorRuns.slice(0, 5)) {
+                const jobs = await github.paginate(
+                  github.rest.actions.listJobsForWorkflowRun,
+                  { owner, repo, run_id: run.id, per_page: 100 }
+                );
+                if (jobs.some((job) =>
+                  (job.steps || []).some((step) =>
+                    step.name === '最後の承認済み版をDiscordへ安全配信' &&
+                    step.conclusion === 'success'
+                  )
+                )) {
+                  priorFallback = true;
+                  break;
+                }
+              }
+            }
+
+            const fallback = !deliveryOk && !priorFallback;
+            const recovery = !deliveryOk && !activeSync;
+
+            core.info(`Expected hourly slot: ${expected.toISOString()}`);
+            core.info(`Candidate sync runs: ${candidates.length}`);
+            core.info(`Discord delivery confirmed: ${deliveryOk}`);
+            core.info(`Active sync exists: ${activeSync}`);
+            core.info(`Prior watchdog fallback confirmed: ${priorFallback}`);
+            core.setOutput('fallback', fallback ? 'true' : 'false');
+            core.setOutput('recovery', recovery ? 'true' : 'false');
+
+      - name: production mainを取得
+        if: steps.inspect.outputs.fallback == 'true'
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 2
+
+      - name: 最後の承認済み版をDiscordへ安全配信
+        if: steps.inspect.outputs.fallback == 'true'
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 scripts/notify_discord.py --hourly
+
+      - name: 欠落・失敗した毎時同期を再起動
+        if: steps.inspect.outputs.recovery == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            await github.rest.actions.createWorkflowDispatch({
+              owner,
+              repo,
+              workflow_id: 'sync-japanese-news.yml',
+              ref: 'main',
+            });
+            core.info('Dispatched sync-japanese-news.yml recovery run on main.');
+
+      - name: ウォッチドッグ結果
+        if: always()
+        shell: bash
+        run: |
+          echo "fallback=${{ steps.inspect.outputs.fallback }}"
+          echo "recovery=${{ steps.inspect.outputs.recovery }}"
