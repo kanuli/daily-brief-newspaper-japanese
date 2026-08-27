@@ -21,7 +21,7 @@ on:
       - '日本語ニュース同期・品質ゲート・Discord配信'
     types: [completed]
   schedule:
-    # Core Daily/Live starts at :15. Full rolling parity follows at :45.
+    # Core Daily/Live starts at :15. Guaranteed rolling page coverage follows at :45.
     - cron: '45 * * * *'
 
 permissions:
@@ -29,12 +29,14 @@ permissions:
 
 concurrency:
   group: japanese-extra-quality-repair
-  cancel-in-progress: false
+  # A new source hour supersedes an old repair. Never let an obsolete oversized
+  # translation run block the current newsroom edition.
+  cancel-in-progress: true
 
 jobs:
   repair:
     runs-on: ubuntu-latest
-    timeout-minutes: 28
+    timeout-minutes: 20
     env:
       CANTONESE_SNAPSHOT_DIR: .cantonese-snapshot/data
     steps:
@@ -83,18 +85,21 @@ jobs:
       - name: Freeze one Cantonese source commit
         run: python scripts/cantonese_snapshot.py
 
-      - name: Rebuild rolling layers with editor isolation
-        timeout-minutes: 20
+      - name: Build minimum guaranteed reader edition first
+        timeout-minutes: 12
         env:
           TOKENIZERS_PARALLELISM: 'false'
-          # Reader-critical queues get dedicated time before the oversized desk feed.
-          EXTRA_STOCKS_BUDGET_SECONDS: '180'
-          EXTRA_TOPIC_BUDGET_SECONDS: '180'
-          EXTRA_DESK_BUDGET_SECONDS: '240'
+          # Availability before depth: one newest story per source-backed desk
+          # and one per ticker. Later cycles can reuse translations and deepen.
+          EXTRA_DESK_STORIES_PER_DESK: '1'
+          EXTRA_STOCK_STORIES_PER_TICKER: '1'
+          EXTRA_STOCKS_BUDGET_SECONDS: '90'
+          EXTRA_TOPIC_BUDGET_SECONDS: '120'
+          EXTRA_DESK_BUDGET_SECONDS: '180'
         run: python scripts/run_extra_sync_editor.py
 
       - name: Apply v4 newsroom and lexical-furigana repair to rolling layers
-        timeout-minutes: 6
+        timeout-minutes: 5
         env:
           REMOTE_REPAIR_SCOPE: rolling
         run: python scripts/remote_repair_all_published_quality.py
@@ -111,20 +116,20 @@ jobs:
           git add data/desk-latest.json data/stocks-latest.json
           git add -A data/topic-more
           if git diff --cached --quiet; then
-            echo 'Rolling layers already match the current source candidate.'
+            echo 'Rolling layers already match the current guaranteed edition.'
             exit 0
           fi
-          git commit -m '広東語版ローリングニュースをv4編集品質で自己修復同期'
+          git commit -m '全カテゴリの最新ニュース最低掲載数を保証して同期'
           for attempt in 1 2 3 4 5; do
             git fetch origin main
             if ! git rebase origin/main; then
               git rebase --abort || true
-              echo 'Rolling self-heal rebase conflict; retrying.' >&2
+              echo 'Rolling guaranteed-edition rebase conflict; retrying.' >&2
               sleep $((attempt * 2))
               continue
             fi
             if git push origin HEAD:main; then
-              echo 'JAPANESE_EXTRA_SELF_HEAL_PUSH_OK'
+              echo 'JAPANESE_EXTRA_GUARANTEED_EDITION_PUSH_OK'
               exit 0
             fi
             sleep $((attempt * 2))
