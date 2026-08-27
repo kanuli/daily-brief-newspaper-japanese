@@ -10,6 +10,8 @@
 
   const TECH = new Set(['technology','ai-tech','science-new-tech','cybersecurity','software-apps']);
   const SAFE_LOWER = new Set(['vs','km','kg','cm','mm','ms','gb','tb','mb','kb','fps','bps','kbps','mbps','gbps','app','apps','web','live','online','email','alpha','beta','http','https','www','com','org','net']);
+  const GEO_FOOTBALL_CROSSPLACEMENT_MAX_AGE_DAYS = 1;
+  const ROLLING_LAYER_MAX_AGE_DAYS = 1;
 
   function corruptText(value = '') {
     const text = String(value || '');
@@ -86,6 +88,86 @@
     return slugs.has(wanted);
   }
 
+  function isoDate(value = '') {
+    const match = String(value || '').match(/^(20\d{2})-(\d{2})-(\d{2})$/);
+    if (!match) return '';
+    const y = Number(match[1]), m = Number(match[2]), d = Number(match[3]);
+    const stamp = Date.UTC(y, m - 1, d);
+    const check = new Date(stamp);
+    if (check.getUTCFullYear() !== y || check.getUTCMonth() !== m - 1 || check.getUTCDate() !== d) return '';
+    return `${match[1]}-${match[2]}-${match[3]}`;
+  }
+
+  function dayNumber(value = '') {
+    const date = isoDate(value);
+    if (!date) return null;
+    const [y,m,d] = date.split('-').map(Number);
+    return Math.floor(Date.UTC(y, m - 1, d) / 86400000);
+  }
+
+  function ageDays(currentDate, candidateDate) {
+    const current = dayNumber(currentDate), candidate = dayNumber(candidateDate);
+    if (current === null || candidate === null) return null;
+    return current - candidate;
+  }
+
+  function payloadDate(payload = {}) {
+    const direct = isoDate(payload?.date);
+    if (direct) return direct;
+    const generated = String(payload?.generatedAt || '').slice(0, 10);
+    return isoDate(generated);
+  }
+
+  function payloadFresh(payload, daily, maxAgeDays = ROLLING_LAYER_MAX_AGE_DAYS) {
+    if (!payload) return false;
+    const current = isoDate(daily?.date);
+    const candidate = payloadDate(payload);
+    if (!current || !candidate) return false;
+    const age = ageDays(current, candidate);
+    return age !== null && age >= 0 && age <= maxAgeDays;
+  }
+
+  function storyDate(article = {}, daily = {}) {
+    for (const key of ['updatedAt','publishedAt','generatedAt','date']) {
+      const direct = isoDate(String(article?.[key] || '').slice(0, 10));
+      if (direct) return direct;
+    }
+    const idMatches = [...String(article?.id || '').matchAll(/(20\d{2})(\d{2})(\d{2})/g)];
+    if (idMatches.length) {
+      const match = idMatches[idMatches.length - 1];
+      const fromId = isoDate(`${match[1]}-${match[2]}-${match[3]}`);
+      if (fromId) return fromId;
+    }
+    const labelMatch = String(article?.timeLabel || '').match(/(\d{1,2})\s*月\s*(\d{1,2})\s*日/);
+    const current = isoDate(daily?.date);
+    if (labelMatch && current) {
+      const year = current.slice(0, 4);
+      return isoDate(`${year}-${String(Number(labelMatch[1])).padStart(2, '0')}-${String(Number(labelMatch[2])).padStart(2, '0')}`);
+    }
+    return '';
+  }
+
+  function freshCrossDeskPlacement(article, wanted, daily) {
+    if (!['hong-kong','japan'].includes(wanted)) return true;
+    const slugs = articleSlugs(article);
+    if (!slugs.has('football')) return true;
+    if (String(article?.desk || '') === wanted) return true;
+    const current = isoDate(daily?.date);
+    const candidate = storyDate(article, daily);
+    const age = ageDays(current, candidate);
+    if (age === null) {
+      console.warn('GEO_FOOTBALL_CROSSPLACEMENT_SUPPRESSED_NO_DATE', article?.id || '', wanted);
+      return false;
+    }
+    const fresh = age >= 0 && age <= GEO_FOOTBALL_CROSSPLACEMENT_MAX_AGE_DAYS;
+    if (!fresh) console.warn('STALE_GEO_FOOTBALL_CROSSPLACEMENT_SUPPRESSED', article?.id || '', wanted, `ageDays=${age}`);
+    return fresh;
+  }
+
+  function eligibleForDesk(article, wanted, daily) {
+    return matchesDesk(article, wanted) && freshCrossDeskPlacement(article, wanted, daily);
+  }
+
   function mergeStory(list, article, layer, prepend = false) {
     if (!storyLike(article)) return;
     if (corruptStory(article)) {
@@ -124,10 +206,18 @@
       wanted === 'stocks' ? optionalJson('data/stocks-latest.json') : Promise.resolve(null),
       optionalJson('data/live.json'),
     ]);
-    collectStories(topicMore).filter(article => matchesDesk(article, wanted)).forEach(article => mergeStory(list, article, 'more', false));
-    collectStories(deskLatest).filter(article => matchesDesk(article, wanted)).reverse().forEach(article => mergeStory(list, article, 'rolling', true));
-    if (stocksLatest) stockStories(stocksLatest).reverse().forEach(article => mergeStory(list, article, 'rolling', true));
-    (live?.items || []).filter(article => matchesDesk(article, wanted)).slice().reverse().forEach(article => mergeStory(list, article, 'live', true));
+    collectStories(topicMore).filter(article => eligibleForDesk(article, wanted, daily)).forEach(article => mergeStory(list, article, 'more', false));
+    if (payloadFresh(deskLatest, daily)) {
+      collectStories(deskLatest).filter(article => eligibleForDesk(article, wanted, daily)).reverse().forEach(article => mergeStory(list, article, 'rolling', true));
+    } else if (deskLatest) {
+      console.warn('STALE_ROLLING_LAYER_SUPPRESSED', 'data/desk-latest.json', `payloadDate=${payloadDate(deskLatest) || 'unknown'}`, `dailyDate=${daily.date || 'unknown'}`);
+    }
+    if (stocksLatest && payloadFresh(stocksLatest, daily)) {
+      stockStories(stocksLatest).reverse().forEach(article => mergeStory(list, article, 'rolling', true));
+    } else if (stocksLatest) {
+      console.warn('STALE_ROLLING_LAYER_SUPPRESSED', 'data/stocks-latest.json', `payloadDate=${payloadDate(stocksLatest) || 'unknown'}`, `dailyDate=${daily.date || 'unknown'}`);
+    }
+    (live?.items || []).filter(article => eligibleForDesk(article, wanted, daily)).slice().reverse().forEach(article => mergeStory(list, article, 'live', true));
     return list;
   }
 
