@@ -4,6 +4,7 @@ import json
 import sys
 from pathlib import Path
 
+import editor_in_chief_review as editor_in_chief
 import validate_content_integrity as core
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -118,7 +119,20 @@ def main():
         if len(issues) > 120:
             print(f" - ... and {len(issues) - 120} more")
         return 1
-    print("EXTRA_LAYER_INTEGRITY_OK", ", ".join(str(p.relative_to(ROOT)) for p in found))
+
+    # Auto-maintenance already treats this validator as the rolling health
+    # authority. Include the rolling Editor-in-Chief verdict so only the
+    # rolling repair worker is dispatched for editorial defects in that domain.
+    editor_code = editor_in_chief.review("rolling")
+    if editor_code != 0:
+        print("EXTRA_LAYER_INTEGRITY_FAIL - Editor-in-Chief rejected rolling publication")
+        return 1
+
+    print(
+        "EXTRA_LAYER_INTEGRITY_OK",
+        ", ".join(str(p.relative_to(ROOT)) for p in found),
+        "editor_in_chief=approved",
+    )
     return 0
 
 
