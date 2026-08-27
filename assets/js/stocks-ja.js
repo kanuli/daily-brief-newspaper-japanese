@@ -2,6 +2,7 @@
   "use strict";
 
   const SAFE_LOWER = new Set(["vs","km","kg","cm","mm","ms","gb","tb","mb","kb","fps","bps","kbps","mbps","gbps","app","apps","web","live","online","email","alpha","beta","http","https","www","com","org","net"]);
+  const STOCK_LAYER_MAX_AGE_DAYS = 1;
   const assetLabel = (value) => ({ EQUITY: "株式", ETF: "ETF" }[String(value || "").toUpperCase()] || value || "証券");
   const impactClass = (value) => value === "↑" ? "stock-impact-up" : value === "↓" ? "stock-impact-down" : "stock-impact-neutral";
 
@@ -29,6 +30,30 @@
 
   async function optionalJson(path) {
     try { return await getJson(path); } catch (error) { console.warn("optional stock layer unavailable", path, error); return null; }
+  }
+
+  function isoDay(value = "") {
+    const text = String(value || "").trim().slice(0, 10);
+    return /^20\d{2}-\d{2}-\d{2}$/.test(text) ? text : "";
+  }
+
+  function dayNumber(value = "") {
+    const text = isoDay(value);
+    if (!text) return null;
+    const [year, month, day] = text.split("-").map(Number);
+    const stamp = Date.UTC(year, month - 1, day);
+    const check = new Date(stamp);
+    if (check.getUTCFullYear() !== year || check.getUTCMonth() !== month - 1 || check.getUTCDate() !== day) return null;
+    return Math.floor(stamp / 86400000);
+  }
+
+  function stockLayerFresh(data, daily) {
+    if (!data || !daily) return false;
+    const current = dayNumber(daily.date);
+    const candidate = dayNumber(data.date || data.generatedAt || data.sourceGeneratedAt);
+    if (current === null || candidate === null) return false;
+    const age = current - candidate;
+    return age >= 0 && age <= STOCK_LAYER_MAX_AGE_DAYS;
   }
 
   function sourceMarkup(story) {
@@ -63,12 +88,26 @@
     </article>`;
   }
 
+  function dailyMarketStory(article) {
+    const slugs = new Set(Array.isArray(article?.deskSlugs) ? article.deskSlugs.map(String) : []);
+    const desk = String(article?.desk || "");
+    return desk === "stocks" || desk === "stock-news" || desk === "market-economy" || slugs.has("stocks") || slugs.has("stock-news") || slugs.has("market-economy");
+  }
+
   function normalizeFallback(daily) {
-    const stories = (daily.articles || []).filter((article) => deskOf(article) === "stocks" && !corruptStory(article));
+    const stories = (daily.articles || [])
+      .filter((article) => dailyMarketStory(article) && !corruptStory(article))
+      .map((article) => ({
+        ...article,
+        storyType: article.storyType || "DAILY / MARKET",
+        impact: article.impact || "↔",
+        impactLabel: article.impactLabel || "最新デイリー",
+      }));
     return {
-      lastUpdatedLabel: daily.dateLabel || daily.date || "",
+      generatedAt: daily.date || "",
+      lastUpdatedLabel: `${daily.dateLabel || daily.date || ""}・デイリー版フォールバック`,
       tracked: ["MARKET"],
-      tickers: { MARKET: { name: "Daily Edition 株式ニュース", assetType: "EQUITY", stories } }
+      tickers: { MARKET: { name: "Daily Edition 市場・株式ニュース", assetType: "EQUITY", stories } }
     };
   }
 
@@ -94,8 +133,18 @@
   }
 
   async function init() {
+    const daily = await getJson("data/latest.json");
     let data = await optionalJson("data/stocks-latest.json");
-    if (!data) data = normalizeFallback(await getJson("data/latest.json"));
+    if (!data || !stockLayerFresh(data, daily)) {
+      if (data) {
+        console.warn(
+          "STALE_STOCK_LAYER_SUPPRESSED",
+          `payloadDate=${String(data.date || data.generatedAt || data.sourceGeneratedAt || "unknown").slice(0, 10)}`,
+          `dailyDate=${daily.date || "unknown"}`,
+        );
+      }
+      data = normalizeFallback(daily);
+    }
     render(data);
   }
 
