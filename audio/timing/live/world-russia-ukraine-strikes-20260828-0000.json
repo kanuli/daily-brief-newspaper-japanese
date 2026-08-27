@@ -1,0 +1,480 @@
+{
+  "version": 3,
+  "duration": 173.27,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 467,
+  "charactersPerMinute": 161.7,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 11.193,
+      "text": "ロシアによるウクライナの港湾、物流、民間施設への大規模な空爆"
+    },
+    {
+      "key": "dek",
+      "start": 11.193,
+      "end": 31.394,
+      "text": "ミサイルと258機の無人機が新たな攻撃に参加し、キエフ、オデッサなどに影響を与え、ウクライナ側は防空支援の加速を要請した。"
+    },
+    {
+      "key": "body-0",
+      "start": 31.394,
+      "end": 79.048,
+      "text": "ロシアは27日、ウクライナに大規模なミサイルとドローン攻撃を開始した。ロイター通信は、攻撃には258機のドローンが関与し、キエフ、オデッサ、ハリコフなどの地域に影響を与えたと報じた。港湾、工業施設、小売流通センター、鉄道輸送が被害を受け、民間の建物も被害を受けました。"
+    },
+    {
+      "key": "body-1",
+      "start": 79.048,
+      "end": 124.94,
+      "text": "AP通信はまた、家屋、学校、医療施設への被害を確認し、民間人の犠牲者を出した。ウクライナのゼレンスキー大統領は再び同盟国に対し、弾道ミサイルを迎撃できる対空能力の提供を加速するよう要請した。今回の攻撃はまた、冬に向けてエネルギー、物流、輸出インフラのリスクを高めた。"
+    },
+    {
+      "key": "why",
+      "start": 124.94,
+      "end": 152.978,
+      "text": "大規模な空爆は、ウクライナの人々の生活、輸出、エネルギー安全保障に直接的な影響を与え、ヨーロッパの安全保障と食料流通のリスクを高めています。"
+    },
+    {
+      "key": "watch",
+      "start": 152.978,
+      "end": 173.27,
+      "text": "最新の犠牲者、港湾やエネルギー施設への被害、ウクライナの反撃、ヨーロッパとアメリカの防空支援体制に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.553,
+      "end": 3.783,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロシアによるウクライナの港湾、"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.783,
+      "speechEnd": 5.804,
+      "end": 6.034,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "物流、"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.034,
+      "speechEnd": 10.493,
+      "end": 11.193,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "民間施設への大規模な空爆。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 11.193,
+      "speechEnd": 19.066,
+      "end": 19.296,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ミサイルと258機の無人機が新たな攻撃に参加し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.296,
+      "speechEnd": 21.316,
+      "end": 21.546,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "キエフ、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.546,
+      "speechEnd": 25.309,
+      "end": 25.539,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "オデッサなどに影響を与え、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.539,
+      "speechEnd": 30.694,
+      "end": 31.394,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "ウクライナ側は防空支援の加速を要請した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 31.394,
+      "speechEnd": 34.53,
+      "end": 34.76,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロシアは27日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.76,
+      "speechEnd": 41.518,
+      "end": 42.018,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "ウクライナに大規模なミサイルとドローン攻撃を開始した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.018,
+      "speechEnd": 44.526,
+      "end": 44.756,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.756,
+      "speechEnd": 50.957,
+      "end": 51.187,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "攻撃には258機のドローンが関与し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.187,
+      "speechEnd": 53.207,
+      "end": 53.437,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "キエフ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.437,
+      "speechEnd": 55.528,
+      "end": 55.758,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "オデッサ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.758,
+      "speechEnd": 61.68,
+      "end": 62.18,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "ハリコフなどの地域に影響を与えたと報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.18,
+      "speechEnd": 64.2,
+      "end": 64.43,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "港湾、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.43,
+      "speechEnd": 66.66,
+      "end": 66.89,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "工業施設、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.89,
+      "speechEnd": 69.816,
+      "end": 70.046,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "小売流通センター、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.046,
+      "speechEnd": 73.46,
+      "end": 73.69,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "鉄道輸送が被害を受け、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.69,
+      "speechEnd": 78.428,
+      "end": 79.048,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "民間の建物も被害を受けました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 79.048,
+      "speechEnd": 81.556,
+      "end": 81.786,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "AP通信はまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 81.786,
+      "speechEnd": 83.807,
+      "end": 84.037,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "家屋、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.037,
+      "speechEnd": 86.057,
+      "end": 86.287,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "学校、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 86.287,
+      "speechEnd": 90.607,
+      "end": 90.837,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "医療施設への被害を確認し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.837,
+      "speechEnd": 94.529,
+      "end": 95.029,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "民間人の犠牲者を出した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 95.029,
+      "speechEnd": 102.275,
+      "end": 102.505,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ウクライナのゼレンスキー大統領は再び同盟国に対し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.505,
+      "speechEnd": 108.358,
+      "end": 108.638,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "弾道ミサイルを迎撃できる対空能力の提供を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.638,
+      "speechEnd": 111.634,
+      "end": 112.134,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "加速するよう要請した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.134,
+      "speechEnd": 115.06,
+      "end": 115.29,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今回の攻撃はまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.29,
+      "speechEnd": 118.147,
+      "end": 118.377,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "冬に向けてエネルギー、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.377,
+      "speechEnd": 120.397,
+      "end": 120.627,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "物流、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.627,
+      "speechEnd": 124.32,
+      "end": 124.94,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "輸出インフラのリスクを高めた。"
+    },
+    {
+      "parentKey": "why",
+      "start": 124.94,
+      "speechEnd": 128.911,
+      "end": 129.411,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 129.411,
+      "speechEnd": 132.128,
+      "end": 132.358,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "大規模な空爆は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 132.358,
+      "speechEnd": 135.703,
+      "end": 135.933,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ウクライナの人々の生活、"
+    },
+    {
+      "parentKey": "why",
+      "start": 135.933,
+      "speechEnd": 137.953,
+      "end": 138.183,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "輸出、"
+    },
+    {
+      "parentKey": "why",
+      "start": 138.183,
+      "speechEnd": 144.314,
+      "end": 144.544,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "エネルギー安全保障に直接的な影響を与え、"
+    },
+    {
+      "parentKey": "why",
+      "start": 144.544,
+      "speechEnd": 152.278,
+      "end": 152.978,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "ヨーロッパの安全保障と食料流通のリスクを高めています。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 152.978,
+      "speechEnd": 155.068,
+      "end": 155.298,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 155.298,
+      "speechEnd": 157.876,
+      "end": 158.106,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "最新の犠牲者、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 158.106,
+      "speechEnd": 162.495,
+      "end": 162.725,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "港湾やエネルギー施設への被害、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 162.725,
+      "speechEnd": 165.512,
+      "end": 165.742,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ウクライナの反撃、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 165.742,
+      "speechEnd": 172.57,
+      "end": 173.27,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "ヨーロッパとアメリカの防空支援体制に注意してください。"
+    }
+  ]
+}

@@ -1,0 +1,370 @@
+{
+  "version": 3,
+  "duration": 155.742,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 444,
+  "charactersPerMinute": 171.1,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 12.775,
+      "text": "香港の民間住宅価格は7月に0.5 ％下落し、16ヶ月ぶりの月間下落"
+    },
+    {
+      "key": "dek",
+      "start": 12.775,
+      "end": 34.74,
+      "text": "金利と評価部門のデータによると、不動産価格の上昇は中断されており、市場の焦点は金利、供給、取引が価格を再サポートできるかどうかに移っています。"
+    },
+    {
+      "key": "body-0",
+      "start": 34.74,
+      "end": 64.965,
+      "text": "ロイターは、7月の民間住宅価格は前月比0.5 ％下落し、2025年春に始まった継続的な上昇トレンドを終わらせ、16ヶ月ぶりの月間下落となったと香港格付評価局の最新データを引用した。"
+    },
+    {
+      "key": "body-1",
+      "start": 64.965,
+      "end": 110.963,
+      "text": "不動産価格の軟化により、市場は住宅ローン金利、開発者からの新しい市場供給、中古取引、バイヤーの市場参入意欲に再び焦点を当てています。1か月間の引き下げは、必ずしもトレンドが逆転したことを意味するわけではありませんが、高金利環境と供給の増加を背景に、今後数か月間のデータはより示唆的なものになるでしょう。"
+    },
+    {
+      "key": "why",
+      "start": 110.963,
+      "end": 136.494,
+      "text": "不動産価格は、香港の家計資産、銀行の住宅ローンリスク、地元消費者の信頼感の重要な指標であり、16か月ぶりに転換点に戻りました。"
+    },
+    {
+      "key": "watch",
+      "start": 136.494,
+      "end": 155.742,
+      "text": "8月の売上高、住宅ローン金利、新規上場販売、格付評価部門の次回の不動産価格指数に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.455,
+      "end": 7.685,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "香港の民間住宅価格は7月に0.5 ％下落し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.685,
+      "speechEnd": 12.075,
+      "end": 12.775,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "16ヶ月ぶりの月間下落。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.775,
+      "speechEnd": 16.746,
+      "end": 16.976,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "金利と評価部門のデータによると、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.976,
+      "speechEnd": 22.132,
+      "end": 22.362,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "不動産価格の上昇は中断されており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.362,
+      "speechEnd": 25.219,
+      "end": 25.449,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "市場の焦点は金利、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.449,
+      "speechEnd": 27.469,
+      "end": 27.699,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "供給、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.699,
+      "speechEnd": 34.04,
+      "end": 34.74,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "取引が価格を再サポートできるかどうかに移っています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.74,
+      "speechEnd": 36.9,
+      "end": 37.13,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイターは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.13,
+      "speechEnd": 44.585,
+      "end": 44.815,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "7月の民間住宅価格は前月比0.5 ％下落し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.815,
+      "speechEnd": 52.828,
+      "end": 53.058,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "2025年春に始まった継続的な上昇トレンドを終わらせ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.058,
+      "speechEnd": 64.345,
+      "end": 64.965,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "16ヶ月ぶりの月間下落となったと香港格付評価局の最新データを引用した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 64.965,
+      "speechEnd": 68.449,
+      "end": 68.679,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "不動産価格の軟化により、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 68.679,
+      "speechEnd": 71.744,
+      "end": 71.974,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "市場は住宅ローン金利、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 71.974,
+      "speechEnd": 76.294,
+      "end": 76.524,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "開発者からの新しい市場供給、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 76.524,
+      "speechEnd": 78.754,
+      "end": 78.984,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中古取引、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 78.984,
+      "speechEnd": 85.255,
+      "end": 85.755,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "バイヤーの市場参入意欲に再び焦点を当てています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 85.755,
+      "speechEnd": 89.099,
+      "end": 89.329,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "1か月間の引き下げは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 89.329,
+      "speechEnd": 98.038,
+      "end": 98.268,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "必ずしもトレンドが逆転したことを意味するわけではありませんが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 98.268,
+      "speechEnd": 103.285,
+      "end": 103.515,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "高金利環境と供給の増加を背景に、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.515,
+      "speechEnd": 110.343,
+      "end": 110.963,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "今後数か月間のデータはより示唆的なものになるでしょう。"
+    },
+    {
+      "parentKey": "why",
+      "start": 110.963,
+      "speechEnd": 114.935,
+      "end": 115.435,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 115.435,
+      "speechEnd": 117.943,
+      "end": 118.173,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "不動産価格は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 118.173,
+      "speechEnd": 121.03,
+      "end": 121.26,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "香港の家計資産、"
+    },
+    {
+      "parentKey": "why",
+      "start": 121.26,
+      "speechEnd": 124.395,
+      "end": 124.625,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "銀行の住宅ローンリスク、"
+    },
+    {
+      "parentKey": "why",
+      "start": 124.625,
+      "speechEnd": 130.478,
+      "end": 130.708,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "地元消費者の信頼感の重要な指標であり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 130.708,
+      "speechEnd": 135.794,
+      "end": 136.494,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "16か月ぶりに転換点に戻りました。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 136.494,
+      "speechEnd": 138.584,
+      "end": 138.814,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 138.814,
+      "speechEnd": 141.741,
+      "end": 141.971,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "8月の売上高、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 141.971,
+      "speechEnd": 144.409,
+      "end": 144.639,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "住宅ローン金利、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 144.639,
+      "speechEnd": 147.078,
+      "end": 147.308,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "新規上場販売、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 147.308,
+      "speechEnd": 155.042,
+      "end": 155.742,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "格付評価部門の次回の不動産価格指数に注意してください。"
+    }
+  ]
+}
