@@ -111,6 +111,11 @@
     return current - candidate;
   }
 
+  function publicationDate(daily = {}, live = {}) {
+    const dates = [isoDate(daily?.date), isoDate(live?.date)].filter(Boolean).sort();
+    return dates.at(-1) || '';
+  }
+
   function payloadDate(payload = {}) {
     const direct = isoDate(payload?.date);
     if (direct) return direct;
@@ -118,16 +123,16 @@
     return isoDate(generated);
   }
 
-  function payloadFresh(payload, daily, maxAgeDays = ROLLING_LAYER_MAX_AGE_DAYS) {
+  function payloadFresh(payload, currentDate, maxAgeDays = ROLLING_LAYER_MAX_AGE_DAYS) {
     if (!payload) return false;
-    const current = isoDate(daily?.date);
+    const current = isoDate(currentDate);
     const candidate = payloadDate(payload);
     if (!current || !candidate) return false;
     const age = ageDays(current, candidate);
     return age !== null && age >= 0 && age <= maxAgeDays;
   }
 
-  function storyDate(article = {}, daily = {}) {
+  function storyDate(article = {}, publication = {}) {
     for (const key of ['updatedAt','publishedAt','generatedAt','date']) {
       const direct = isoDate(String(article?.[key] || '').slice(0, 10));
       if (direct) return direct;
@@ -139,7 +144,7 @@
       if (fromId) return fromId;
     }
     const labelMatch = String(article?.timeLabel || '').match(/(\d{1,2})\s*月\s*(\d{1,2})\s*日/);
-    const current = isoDate(daily?.date);
+    const current = isoDate(publication?.date);
     if (labelMatch && current) {
       const year = current.slice(0, 4);
       return isoDate(`${year}-${String(Number(labelMatch[1])).padStart(2, '0')}-${String(Number(labelMatch[2])).padStart(2, '0')}`);
@@ -147,13 +152,13 @@
     return '';
   }
 
-  function freshCrossDeskPlacement(article, wanted, daily) {
+  function freshCrossDeskPlacement(article, wanted, publication) {
     if (!['hong-kong','japan'].includes(wanted)) return true;
     const slugs = articleSlugs(article);
     if (!slugs.has('football')) return true;
     if (String(article?.desk || '') === wanted) return true;
-    const current = isoDate(daily?.date);
-    const candidate = storyDate(article, daily);
+    const current = isoDate(publication?.date);
+    const candidate = storyDate(article, publication);
     const age = ageDays(current, candidate);
     if (age === null) {
       console.warn('GEO_FOOTBALL_CROSSPLACEMENT_SUPPRESSED_NO_DATE', article?.id || '', wanted);
@@ -164,8 +169,8 @@
     return fresh;
   }
 
-  function eligibleForDesk(article, wanted, daily) {
-    return matchesDesk(article, wanted) && freshCrossDeskPlacement(article, wanted, daily);
+  function eligibleForDesk(article, wanted, publication) {
+    return matchesDesk(article, wanted) && freshCrossDeskPlacement(article, wanted, publication);
   }
 
   function mergeStory(list, article, layer, prepend = false) {
@@ -206,18 +211,21 @@
       wanted === 'stocks' ? optionalJson('data/stocks-latest.json') : Promise.resolve(null),
       optionalJson('data/live.json'),
     ]);
-    collectStories(topicMore).filter(article => eligibleForDesk(article, wanted, daily)).forEach(article => mergeStory(list, article, 'more', false));
-    if (payloadFresh(deskLatest, daily)) {
-      collectStories(deskLatest).filter(article => eligibleForDesk(article, wanted, daily)).reverse().forEach(article => mergeStory(list, article, 'rolling', true));
+    const currentDate = publicationDate(daily, live);
+    const publication = { ...daily, date: currentDate || daily.date };
+    collectStories(topicMore).filter(article => eligibleForDesk(article, wanted, publication)).forEach(article => mergeStory(list, article, 'more', false));
+    if (payloadFresh(deskLatest, publication.date)) {
+      collectStories(deskLatest).filter(article => eligibleForDesk(article, wanted, publication)).reverse().forEach(article => mergeStory(list, article, 'rolling', true));
     } else if (deskLatest) {
-      console.warn('STALE_ROLLING_LAYER_SUPPRESSED', 'data/desk-latest.json', `payloadDate=${payloadDate(deskLatest) || 'unknown'}`, `dailyDate=${daily.date || 'unknown'}`);
+      console.warn('STALE_ROLLING_LAYER_SUPPRESSED', 'data/desk-latest.json', `payloadDate=${payloadDate(deskLatest) || 'unknown'}`, `publicationDate=${publication.date || 'unknown'}`);
     }
-    if (stocksLatest && payloadFresh(stocksLatest, daily)) {
+    if (stocksLatest && payloadFresh(stocksLatest, publication.date)) {
       stockStories(stocksLatest).reverse().forEach(article => mergeStory(list, article, 'rolling', true));
     } else if (stocksLatest) {
-      console.warn('STALE_ROLLING_LAYER_SUPPRESSED', 'data/stocks-latest.json', `payloadDate=${payloadDate(stocksLatest) || 'unknown'}`, `dailyDate=${daily.date || 'unknown'}`);
+      console.warn('STALE_ROLLING_LAYER_SUPPRESSED', 'data/stocks-latest.json', `payloadDate=${payloadDate(stocksLatest) || 'unknown'}`, `publicationDate=${publication.date || 'unknown'}`);
     }
-    (live?.items || []).filter(article => eligibleForDesk(article, wanted, daily)).slice().reverse().forEach(article => mergeStory(list, article, 'live', true));
+    (live?.items || []).filter(article => eligibleForDesk(article, wanted, publication)).slice().reverse().forEach(article => mergeStory(list, article, 'live', true));
+    list._publicationDate = publication.date;
     return list;
   }
 
@@ -282,7 +290,7 @@
     const metaBar = ensureMetaBar();
     if (title) { title.classList.add('topic-page-title'); title.innerHTML = uiRuby(meta[0]); }
     if (subtitle) { subtitle.classList.add('topic-page-description'); if (!subtitle.textContent.trim()) subtitle.textContent = meta[1]; }
-    if (metaBar.date) metaBar.date.textContent = formatEditionDate(daily);
+    if (metaBar.date) metaBar.date.textContent = formatEditionDate({ date: stories._publicationDate || daily.date });
     if (metaBar.count) metaBar.count.textContent = `${stories.length} stories · Daily + Rolling Desk + 速報`;
     if (!host) return;
     host.innerHTML = stories.length ? `<div class="topic-story-grid">${stories.map((article, index) => articleMarkup(article, index === 0)).join('')}</div>` : '<p class="empty">現在、この分野に掲載できる確認済み記事はありません。</p>';
