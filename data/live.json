@@ -3,12 +3,12 @@
   "date": "2026-08-27",
   "editorialStandardVersion": 3,
   "contentVersion": 3,
-  "lastUpdated": "2026-08-27T10:00:00+08:00",
-  "lastUpdatedLabel": "2026年8月27日 10:00 HKT",
-  "windowLabel": "10:00 HKT 速報版",
-  "nextUpdateLabel": "次回発行予定 11:00 HKT",
-  "newCount": 2,
-  "updatedCount": 1,
+  "lastUpdated": "2026-08-27T12:00:00+08:00",
+  "lastUpdatedLabel": "2026年8月27日 12:00 HKT",
+  "windowLabel": "12:00 HKT 速報版",
+  "nextUpdateLabel": "次回発行予定 13:00 HKT",
+  "newCount": 1,
+  "updatedCount": 0,
   "developingCount": 0,
   "coverage": {
     "status": "COMPLETE",
@@ -18,10 +18,10 @@
       "hong-kong": 16,
       "japan": 20,
       "market-economy": 20,
-      "ai-tech": 17,
+      "ai-tech": 19,
       "manga-anime": 5,
       "manchester-united": 7,
-      "football": 21
+      "football": 22
     },
     "deskLatestDepthMet": true,
     "japanCountVerified": 20,
@@ -30,35 +30,35 @@
     "footballGateMet": true,
     "publishingGateMet": true,
     "dailyEdition": "2026-08-27",
-    "qaNote": "10:00 Live independently verified. All retained desk floors remain met and Japan count is explicitly verified at 20; complete Rolling Desk whole-file merge could not be safely committed in this run, so publishing gate remains false."
+    "qaNote": "12:00 Live independently verified. All retained desk floors remain above hard minimums and Japan is explicitly verified at 20 unique retained stories. The 12:00 Rolling Desk whole-file merge could not be safely committed in this run, so publishing gate remains false."
   },
   "items": [
     {
-      "id": "ai-tech-salesforce-anthropic-q2-20260827-1000",
+      "id": "ai-nvidia-hugging-face-reported-deal-20260827-1200",
       "desk": "ai-tech",
       "status": "NEW",
-      "title": "Salesforce、通年予測を引き上げ、Claudeforceを立ち上げるためにAnthropicパートナーシップを拡大",
-      "dek": "第2四半期の売上高は113.5億ドル、AgentforceとData 360の年間経常収益は約39億ドルで、市場終了後に株価が急騰しました。",
-      "summary": "SalesforceのパフォーマンスとAI製品の成長は市場の予想を上回り、Claudeをセールス、サービス、エンタープライズワークフローにさらに統合しました。",
-      "body": "Salesforceは第2四半期の売上高を前年同期比11 ％増の113.5億ドルと報告し、2027年度の売上高予測を461億ドルから464億ドルに引き上げた。AgentforceとData 360の年間経常収益は約39億ドルに達し、前年比210 ％以上の増加となっており、エンタープライズAIエージェント製品がより大きなサブスクリプション収益を生み出し始めていることを示しています。\n\n同社はまた、Anthropicとのパートナーシップを拡大して、Claudeforceを立ち上げました。これは、Claudeの推論機能をSalesforceのデータ、ワークフロー、およびガバナンスツールに統合したものです。プラグインの第1フェーズでは、37の事前構築された販売スキルを提供します。市場の次のステップは、エンタープライズ顧客の実際の利用状況、AI製品の売上総利益率、AIエージェントが引き続き注文の増加を促進できるかどうかを観察することです。",
-      "context": "エンタープライズソフトウェア投資家は、ジェネレーティブAIが従来のSaaSビジネスモデルを弱体化させることを懸念しています。SalesforceはAIエージェントを新しい成長層に変えようとしています。",
-      "why": "通期計画の上方修正とAI経常収益の急速な成長は、エンタープライズソフトウェアAIの商業化に新たな実際の収益の証拠を提供します。",
-      "watchNext": "クロードフォースオープンベータ、エージェントフォース注文、更新率、公式取引セッションの株価反応にご注目ください。",
-      "sourceName": "Salesforce / Reuters / WSJ",
-      "sourceUrl": "https://www.salesforce.com/news/press-releases/2026/08/26/fy27-q2-earnings/",
-      "timeLabel": "10:00 HKT",
+      "title": "NVIDIA、Hugging FaceのオープンソースAIプラットフォームを129億ドル以上で買収",
+      "dek": "この情報は、この問題に精通している人々を引用し、双方が合意に達したと述べた。ロイターはそれを独立して検証することができず、NvidiaとHugging Faceは直ちに応答していない。",
+      "summary": "Nvidiaは、オープンソースのAIモデリングプラットフォームHugging Faceを129億ドルで買収することに合意したと伝えられているが、この取引は両社の正式な承認を待っている。",
+      "body": "この情報によると、NvidiaはHugging Faceを129億ドルで買収することに合意したという。Hugging Faceは、オープンソースのAIモデル、データセット、開発ツールのための世界で最も重要なプラットフォームの1つです。Nvidiaは、同社が約45億ドルの評価を受けた2023年以来、2億3500万ドルの資金調達ラウンドに参加しています。\n\nロイター通信によると、この取引は独立して検証されておらず、NvidiaとHugging Faceはタイムリーにコメントの要請に対応していないため、このエディションでは、このニュースを完了した買収ではなく「報告された契約」として明確に記載しています。最終的に実装されれば、NVIDIAはAIチップとコンピューティングプラットフォームによるモデル配布とオープンソースデベロッパーエコシステムをさらに深化させ、プラットフォームの中立性と規制レビューの議論につながる可能性があります。",
+      "context": "Hugging Faceは長い間、さまざまなモデルやハードウェアエコシステムにサービスを提供してきた。Nvidiaは四半期の好業績を報告し、会計年度の残りの期間に約180億ドルの株式投資をコミットしたと述べた。",
+      "why": "この129億ドルの取引が承認されれば、Nvidia史上最大の買収の1つとなり、オープンソースのAIモデル配布、開発ツール、チップエコシステムの競争環境を変える可能性がある。",
+      "watchNext": "NvidiaとHugging Faceからの公式発表、取引構造、プラットフォームがハードウェアニュートラルのままであるかどうか、米国と欧州の規制当局が独占禁止法の審査を開始するかどうかに注目してください。",
+      "sourceName": "The Information／Reuters",
+      "sourceUrl": "https://www.theinformation.com/articles/nvidia-agrees-buy-open-source-model-repository-hugging-face-12-9-billion",
+      "timeLabel": "12:00 HKT",
       "sources": [
         {
-          "name": "Salesforce",
-          "url": "https://www.salesforce.com/news/press-releases/2026/08/26/fy27-q2-earnings/"
-        },
-        {
-          "name": "Salesforce / Anthropic",
-          "url": "https://investor.salesforce.com/news/news-details/2026/Salesforce-and-Anthropic-Announce-Claudeforce-The-1-AI-Meets-the-1-AI-CRM/default.aspx"
+          "name": "The Information",
+          "url": "https://www.theinformation.com/articles/nvidia-agrees-buy-open-source-model-repository-hugging-face-12-9-billion"
         },
         {
           "name": "Reuters",
-          "url": "https://www.reuters.com/technology/salesforce-raises-annual-revenue-forecast-2026-08-26/"
+          "url": "https://www.reuters.com/technology/nvidia-talks-acquire-hugging-face-13-billion-deal-business-insider-reports-2026-08-27/"
+        },
+        {
+          "name": "Channel NewsAsia／Reuters",
+          "url": "https://www.channelnewsasia.com/business/nvidia-agrees-buy-hugging-face-129-billion-information-reports-6343911"
         }
       ],
       "deskSlugs": [
@@ -67,114 +67,20 @@
       ],
       "section": "AI・テクノロジー",
       "sectionLabel": "AI・テクノロジー",
-      "sourceItemFingerprint": "50b7ed0c2474ca0cdcf2e5edeba97dc67d7d1e7fc5781370fca3e5031151a827",
-      "audio": "audio/live/ai-tech-salesforce-anthropic-q2-20260827-1000.mp3",
-      "timing": "audio/timing/live/ai-tech-salesforce-anthropic-q2-20260827-1000.json",
+      "sourceItemFingerprint": "9d66fc166084e84dd0c217d52dbd83a4858732055db26a958f3986c1b1b0e214",
+      "audio": "audio/live/ai-nvidia-hugging-face-reported-deal-20260827-1200.mp3",
+      "timing": "audio/timing/live/ai-nvidia-hugging-face-reported-deal-20260827-1200.json",
       "furigana": {
         "section": "AI・テクノロジー",
-        "title": "Salesforce、<ruby>通年<rt>つうねん</rt></ruby><ruby>予測<rt>よそく</rt></ruby>を<ruby>引き上<rt>ひきあ</rt></ruby>げ、Claudeforceを<ruby>立ち上<rt>たちあ</rt></ruby>げるためにAnthropicパートナーシップを<ruby>拡大<rt>かくだい</rt></ruby>",
-        "dek": "<ruby>第<rt>だい</rt></ruby>2<ruby>四半期<rt>しはんき</rt></ruby>の<ruby>売上高<rt>うりあげだか</rt></ruby>は113.5<ruby>億<rt>おく</rt></ruby>ドル、AgentforceとData 360の<ruby>年間<rt>ねんかん</rt></ruby><ruby>経常<rt>けいじょう</rt></ruby><ruby>収益<rt>しゅうえき</rt></ruby>は<ruby>約<rt>やく</rt></ruby>39<ruby>億<rt>おく</rt></ruby>ドルで、<ruby>市場<rt>しじょう</rt></ruby><ruby>終了後<rt>しゅうりょうご</rt></ruby>に<ruby>株価<rt>かぶか</rt></ruby>が<ruby>急騰<rt>きゅうとう</rt></ruby>しました。",
-        "summary": "SalesforceのパフォーマンスとAI<ruby>製品<rt>せいひん</rt></ruby>の<ruby>成長<rt>せいちょう</rt></ruby>は<ruby>市場<rt>しじょう</rt></ruby>の<ruby>予想<rt>よそう</rt></ruby>を<ruby>上回<rt>うわまわ</rt></ruby>り、Claudeをセールス、サービス、エンタープライズワークフローにさらに<ruby>統合<rt>とうごう</rt></ruby>しました。",
-        "context": "エンタープライズソフトウェア<ruby>投資家<rt>とうしか</rt></ruby>は、ジェネレーティブAIが<ruby>従来<rt>じゅうらい</rt></ruby>のSaaSビジネスモデルを<ruby>弱体化<rt>じゃくたいか</rt></ruby>させることを<ruby>懸念<rt>けねん</rt></ruby>しています。SalesforceはAIエージェントを<ruby>新<rt>あたら</rt></ruby>しい<ruby>成長<rt>せいちょう</rt></ruby><ruby>層<rt>そう</rt></ruby>に<ruby>変<rt>か</rt></ruby>えようとしています。",
-        "why": "<ruby>通期<rt>つうき</rt></ruby><ruby>計画<rt>けいかく</rt></ruby>の<ruby>上方<rt>じょうほう</rt></ruby><ruby>修正<rt>しゅうせい</rt></ruby>とAI<ruby>経常<rt>けいじょう</rt></ruby><ruby>収益<rt>しゅうえき</rt></ruby>の<ruby>急速<rt>きゅうそく</rt></ruby>な<ruby>成長<rt>せいちょう</rt></ruby>は、エンタープライズソフトウェアAIの<ruby>商業<rt>しょうぎょう</rt></ruby><ruby>化<rt>か</rt></ruby>に<ruby>新<rt>あら</rt></ruby>たな<ruby>実際<rt>じっさい</rt></ruby>の<ruby>収益<rt>しゅうえき</rt></ruby>の<ruby>証拠<rt>しょうこ</rt></ruby>を<ruby>提供<rt>ていきょう</rt></ruby>します。",
-        "watchNext": "クロードフォースオープンベータ、エージェントフォース<ruby>注文<rt>ちゅうもん</rt></ruby>、<ruby>更新<rt>こうしん</rt></ruby><ruby>率<rt>りつ</rt></ruby>、<ruby>公式<rt>こうしき</rt></ruby><ruby>取引<rt>とりひき</rt></ruby>セッションの<ruby>株価<rt>かぶか</rt></ruby><ruby>反応<rt>はんのう</rt></ruby>にご<ruby>注目<rt>ちゅうもく</rt></ruby>ください。",
+        "title": "NVIDIA、Hugging FaceのオープンソースAIプラットフォームを129<ruby>億<rt>おく</rt></ruby>ドル<ruby>以上<rt>いじょう</rt></ruby>で<ruby>買収<rt>ばいしゅう</rt></ruby>",
+        "dek": "この<ruby>情報<rt>じょうほう</rt></ruby>は、この<ruby>問題<rt>もんだい</rt></ruby>に<ruby>精通<rt>せいつう</rt></ruby>している<ruby>人々<rt>ひとびと</rt></ruby>を<ruby>引用<rt>いんよう</rt></ruby>し、<ruby>双方<rt>そうほう</rt></ruby>が<ruby>合意<rt>ごうい</rt></ruby>に<ruby>達<rt>たっ</rt></ruby>したと<ruby>述<rt>の</rt></ruby>べた。ロイターはそれを<ruby>独立<rt>どくりつ</rt></ruby>して<ruby>検証<rt>けんしょう</rt></ruby>することができず、NvidiaとHugging Faceは<ruby>直<rt>ただ</rt></ruby>ちに<ruby>応答<rt>おうとう</rt></ruby>していない。",
+        "summary": "Nvidiaは、オープンソースのAIモデリングプラットフォームHugging Faceを129<ruby>億<rt>おく</rt></ruby>ドルで<ruby>買収<rt>ばいしゅう</rt></ruby>することに<ruby>合意<rt>ごうい</rt></ruby>したと<ruby>伝<rt>つた</rt></ruby>えられているが、この<ruby>取引<rt>とりひき</rt></ruby>は<ruby>両社<rt>りょうしゃ</rt></ruby>の<ruby>正式<rt>せいしき</rt></ruby>な<ruby>承認<rt>しょうにん</rt></ruby>を<ruby>待<rt>ま</rt></ruby>っている。",
+        "context": "Hugging Faceは<ruby>長<rt>なが</rt></ruby>い<ruby>間<rt>かん</rt></ruby>、さまざまなモデルやハードウェアエコシステムにサービスを<ruby>提供<rt>ていきょう</rt></ruby>してきた。Nvidiaは<ruby>四半期<rt>しはんき</rt></ruby>の<ruby>好<rt>こう</rt></ruby><ruby>業績<rt>ぎょうせき</rt></ruby>を<ruby>報告<rt>ほうこく</rt></ruby>し、<ruby>会計<rt>かいけい</rt></ruby><ruby>年度<rt>ねんど</rt></ruby>の<ruby>残<rt>のこ</rt></ruby>りの<ruby>期間<rt>きかん</rt></ruby>に<ruby>約<rt>やく</rt></ruby>180<ruby>億<rt>おく</rt></ruby>ドルの<ruby>株式投資<rt>かぶしきとうし</rt></ruby>をコミットしたと<ruby>述<rt>の</rt></ruby>べた。",
+        "why": "この129<ruby>億<rt>おく</rt></ruby>ドルの<ruby>取引<rt>とりひき</rt></ruby>が<ruby>承認<rt>しょうにん</rt></ruby>されれば、Nvidia<ruby>史上最大<rt>しじょうさいだい</rt></ruby>の<ruby>買収<rt>ばいしゅう</rt></ruby>の1つとなり、オープンソースのAIモデル<ruby>配布<rt>はいふ</rt></ruby>、<ruby>開発<rt>かいはつ</rt></ruby>ツール、チップエコシステムの<ruby>競争<rt>きょうそう</rt></ruby><ruby>環境<rt>かんきょう</rt></ruby>を<ruby>変<rt>か</rt></ruby>える<ruby>可能性<rt>かのうせい</rt></ruby>がある。",
+        "watchNext": "NvidiaとHugging Faceからの<ruby>公式<rt>こうしき</rt></ruby><ruby>発表<rt>はっぴょう</rt></ruby>、<ruby>取引<rt>とりひき</rt></ruby><ruby>構造<rt>こうぞう</rt></ruby>、プラットフォームがハードウェアニュートラルのままであるかどうか、<ruby>米国<rt>べいこく</rt></ruby>と<ruby>欧州<rt>おうしゅう</rt></ruby>の<ruby>規制<rt>きせい</rt></ruby><ruby>当局<rt>とうきょく</rt></ruby>が<ruby>独占禁止法<rt>どくせんきんしほう</rt></ruby>の<ruby>審査<rt>しんさ</rt></ruby>を<ruby>開始<rt>かいし</rt></ruby>するかどうかに<ruby>注目<rt>ちゅうもく</rt></ruby>してください。",
         "bodyParagraphs": [
-          "Salesforceは<ruby>第<rt>だい</rt></ruby>2<ruby>四半期<rt>しはんき</rt></ruby>の<ruby>売上高<rt>うりあげだか</rt></ruby>を<ruby>前年<rt>ぜんねん</rt></ruby><ruby>同期<rt>どうき</rt></ruby><ruby>比<rt>ひ</rt></ruby>11 ％<ruby>増<rt>ぞう</rt></ruby>の113.5<ruby>億<rt>おく</rt></ruby>ドルと<ruby>報告<rt>ほうこく</rt></ruby>し、2027<ruby>年度<rt>ねんど</rt></ruby>の<ruby>売上高<rt>うりあげだか</rt></ruby><ruby>予測<rt>よそく</rt></ruby>を461<ruby>億<rt>おく</rt></ruby>ドルから464<ruby>億<rt>おく</rt></ruby>ドルに<ruby>引き上<rt>ひきあ</rt></ruby>げた。AgentforceとData 360の<ruby>年間<rt>ねんかん</rt></ruby><ruby>経常<rt>けいじょう</rt></ruby><ruby>収益<rt>しゅうえき</rt></ruby>は<ruby>約<rt>やく</rt></ruby>39<ruby>億<rt>おく</rt></ruby>ドルに<ruby>達<rt>たっ</rt></ruby>し、<ruby>前年比<rt>ぜんねんひ</rt></ruby>210 ％<ruby>以上<rt>いじょう</rt></ruby>の<ruby>増加<rt>ぞうか</rt></ruby>となっており、エンタープライズAIエージェント<ruby>製品<rt>せいひん</rt></ruby>がより<ruby>大<rt>おお</rt></ruby>きなサブスクリプション<ruby>収益<rt>しゅうえき</rt></ruby>を<ruby>生み出<rt>うみだ</rt></ruby>し<ruby>始<rt>はじ</rt></ruby>めていることを<ruby>示<rt>しめ</rt></ruby>しています。",
-          "<ruby>同社<rt>どうしゃ</rt></ruby>はまた、Anthropicとのパートナーシップを<ruby>拡大<rt>かくだい</rt></ruby>して、Claudeforceを<ruby>立ち上<rt>たちあ</rt></ruby>げました。これは、Claudeの<ruby>推論<rt>すいろん</rt></ruby><ruby>機能<rt>きのう</rt></ruby>をSalesforceのデータ、ワークフロー、およびガバナンスツールに<ruby>統合<rt>とうごう</rt></ruby>したものです。プラグインの<ruby>第<rt>だい</rt></ruby>1フェーズでは、37の<ruby>事前<rt>じぜん</rt></ruby><ruby>構築<rt>こうちく</rt></ruby>された<ruby>販売<rt>はんばい</rt></ruby>スキルを<ruby>提供<rt>ていきょう</rt></ruby>します。<ruby>市場<rt>しじょう</rt></ruby>の<ruby>次<rt>つぎ</rt></ruby>のステップは、エンタープライズ<ruby>顧客<rt>こきゃく</rt></ruby>の<ruby>実際<rt>じっさい</rt></ruby>の<ruby>利用状況<rt>りようじょうきょう</rt></ruby>、AI<ruby>製品<rt>せいひん</rt></ruby>の<ruby>売上総利益率<rt>うりあげそうりえきりつ</rt></ruby>、AIエージェントが<ruby>引き続<rt>ひきつづ</rt></ruby>き<ruby>注文<rt>ちゅうもん</rt></ruby>の<ruby>増加<rt>ぞうか</rt></ruby>を<ruby>促進<rt>そくしん</rt></ruby>できるかどうかを<ruby>観察<rt>かんさつ</rt></ruby>することです。"
-        ]
-      }
-    },
-    {
-      "id": "asia-qatar-pm-tehran-mediation-20260827-1000",
-      "desk": "asia",
-      "status": "NEW",
-      "title": "カタールの首相は本日テヘランを訪問し、米国にホルムズとの調停を促して冷静になった",
-      "dek": "カタールは6月の停戦調停に直接関与した。今回の訪問は外交再開、航行の自由、制裁の行き詰まりに焦点を当てた。",
-      "summary": "カタールのムハンマド首相と外務大臣は本日、米国とイランの間の経済と海運の対立が続く中、テヘランを訪問し、調停を再開しようとした。",
-      "body": "カタールのムハンマド・ビン・アブドゥルラフマン・アル＝サーニ首相兼外務大臣は本日、テヘランを訪問し、米国とイランの間の外交調停の新たな推進を求めた。カタールはイランとの連絡手段を維持しながら米国の同盟国であり、6月に短期間の停戦を仲介した交渉に直接関与していた。\n\n今回の訪問は、イラン経済への圧力がワシントンで拡大し、ホルムズの航行が依然として制限されている時期に行われた。イランとオマーンが一時的な商船輸送の取り決めについて話し合ったとしても、海峡の支配、制裁、収益分配に関して米国とイランの間には依然として大きな違いがあります。カタールが両国を正式な交渉に戻すことができるかどうかが次のステップの焦点になります。",
-      "context": "西アジア/中東はアジア全体の範囲内にあります。カタールは長い間、米国、イラク、ガザなどの紛争で仲介役を果たしてきました。",
-      "why": "調停の進展は、ホルムズの出荷、エネルギー供給、地域の軍事エスカレーションのリスクを直接軽減する可能性があります。",
-      "watchNext": "テヘラン会談の結果、米国の対応、オマーンの調整役割、ホルムズでの実際の商船のトラフィックに注意を払ってください。",
-      "sourceName": "Reuters / Anadolu",
-      "sourceUrl": "https://www.reuters.com/world/middle-east/qatar-pm-visit-tehran-pursue-mediation-efforts-2026-08-26/",
-      "timeLabel": "10:00 HKT",
-      "sources": [
-        {
-          "name": "Reuters",
-          "url": "https://www.reuters.com/world/middle-east/qatar-pm-visit-tehran-pursue-mediation-efforts-2026-08-26/"
-        },
-        {
-          "name": "Anadolu Agency",
-          "url": "https://www.anews.com.tr/middle-east/2026/08/26/qatari-premier-to-visit-iran-to-discuss-de-escalation-efforts"
-        }
-      ],
-      "deskSlugs": [
-        "asia",
-        "market-economy"
-      ],
-      "section": "アジア",
-      "sectionLabel": "アジア",
-      "sourceItemFingerprint": "f51fe46b7e7c5101d2a963815dde1fca63f27142939426eda7aee9c2c1f2f150",
-      "audio": "audio/live/asia-qatar-pm-tehran-mediation-20260827-1000.mp3",
-      "timing": "audio/timing/live/asia-qatar-pm-tehran-mediation-20260827-1000.json",
-      "furigana": {
-        "section": "アジア",
-        "title": "カタールの<ruby>首相<rt>しゅしょう</rt></ruby>は<ruby>本日<rt>ほんじつ</rt></ruby>テヘランを<ruby>訪問<rt>ほうもん</rt></ruby>し、<ruby>米国<rt>べいこく</rt></ruby>にホルムズとの<ruby>調停<rt>ちょうてい</rt></ruby>を<ruby>促<rt>うなが</rt></ruby>して<ruby>冷静<rt>れいせい</rt></ruby>になった",
-        "dek": "カタールは<ruby>6月<rt>ろくがつ</rt></ruby>の<ruby>停戦<rt>ていせん</rt></ruby><ruby>調停<rt>ちょうてい</rt></ruby>に<ruby>直接<rt>ちょくせつ</rt></ruby><ruby>関与<rt>かんよ</rt></ruby>した。<ruby>今回<rt>こんかい</rt></ruby>の<ruby>訪問<rt>ほうもん</rt></ruby>は<ruby>外交<rt>がいこう</rt></ruby><ruby>再開<rt>さいかい</rt></ruby>、<ruby>航行<rt>こうこう</rt></ruby>の<ruby>自由<rt>じゆう</rt></ruby>、<ruby>制裁<rt>せいさい</rt></ruby>の<ruby>行<rt>い</rt></ruby>き<ruby>詰<rt>つ</rt></ruby>まりに<ruby>焦点<rt>しょうてん</rt></ruby>を<ruby>当<rt>あ</rt></ruby>てた。",
-        "summary": "カタールのムハンマド<ruby>首相<rt>しゅしょう</rt></ruby>と<ruby>外務大臣<rt>がいむだいじん</rt></ruby>は<ruby>本日<rt>ほんじつ</rt></ruby>、<ruby>米国<rt>べいこく</rt></ruby>とイランの<ruby>間<rt>ま</rt></ruby>の<ruby>経済<rt>けいざい</rt></ruby>と<ruby>海運<rt>かいうん</rt></ruby>の<ruby>対立<rt>たいりつ</rt></ruby>が<ruby>続<rt>つづ</rt></ruby>く<ruby>中<rt>なか</rt></ruby>、テヘランを<ruby>訪問<rt>ほうもん</rt></ruby>し、<ruby>調停<rt>ちょうてい</rt></ruby>を<ruby>再開<rt>さいかい</rt></ruby>しようとした。",
-        "context": "<ruby>西<rt>にし</rt></ruby>アジア/<ruby>中東<rt>ちゅうとう</rt></ruby>はアジア<ruby>全体<rt>ぜんたい</rt></ruby>の<ruby>範囲<rt>はんい</rt></ruby><ruby>内<rt>ない</rt></ruby>にあります。カタールは<ruby>長<rt>なが</rt></ruby>い<ruby>間<rt>あいだ</rt></ruby>、<ruby>米国<rt>べいこく</rt></ruby>、イラク、ガザなどの<ruby>紛争<rt>ふんそう</rt></ruby>で<ruby>仲介役<rt>ちゅうかいやく</rt></ruby>を<ruby>果<rt>は</rt></ruby>たしてきました。",
-        "why": "<ruby>調停<rt>ちょうてい</rt></ruby>の<ruby>進展<rt>しんてん</rt></ruby>は、ホルムズの<ruby>出荷<rt>しゅっか</rt></ruby>、エネルギー<ruby>供給<rt>きょうきゅう</rt></ruby>、<ruby>地域<rt>ちいき</rt></ruby>の<ruby>軍事<rt>ぐんじ</rt></ruby>エスカレーションのリスクを<ruby>直接<rt>ちょくせつ</rt></ruby><ruby>軽減<rt>けいげん</rt></ruby>する<ruby>可能性<rt>かのうせい</rt></ruby>があります。",
-        "watchNext": "テヘラン<ruby>会談<rt>かいだん</rt></ruby>の<ruby>結果<rt>けっか</rt></ruby>、<ruby>米国<rt>べいこく</rt></ruby>の<ruby>対応<rt>たいおう</rt></ruby>、オマーンの<ruby>調整役<rt>ちょうせいやく</rt></ruby><ruby>割<rt>わり</rt></ruby>、ホルムズでの<ruby>実際<rt>じっさい</rt></ruby>の<ruby>商船<rt>しょうせん</rt></ruby>のトラフィックに<ruby>注意<rt>ちゅうい</rt></ruby>を<ruby>払<rt>はら</rt></ruby>ってください。",
-        "bodyParagraphs": [
-          "カタールのムハンマド・ビン・アブドゥルラフマン・アル＝サーニ<ruby>首相<rt>しゅしょう</rt></ruby><ruby>兼<rt>けん</rt></ruby><ruby>外務大臣<rt>がいむだいじん</rt></ruby>は<ruby>本日<rt>ほんじつ</rt></ruby>、テヘランを<ruby>訪問<rt>ほうもん</rt></ruby>し、<ruby>米国<rt>べいこく</rt></ruby>とイランの<ruby>間<rt>あいだ</rt></ruby>の<ruby>外交<rt>がいこう</rt></ruby><ruby>調停<rt>ちょうてい</rt></ruby>の<ruby>新<rt>あら</rt></ruby>たな<ruby>推進<rt>すいしん</rt></ruby>を<ruby>求<rt>もと</rt></ruby>めた。カタールはイランとの<ruby>連絡<rt>れんらく</rt></ruby><ruby>手段<rt>しゅだん</rt></ruby>を<ruby>維持<rt>いじ</rt></ruby>しながら<ruby>米国<rt>べいこく</rt></ruby>の<ruby>同盟国<rt>どうめいこく</rt></ruby>であり、<ruby>6月<rt>ろくがつ</rt></ruby>に<ruby>短期間<rt>たんきかん</rt></ruby>の<ruby>停戦<rt>ていせん</rt></ruby>を<ruby>仲介<rt>ちゅうかい</rt></ruby>した<ruby>交渉<rt>こうしょう</rt></ruby>に<ruby>直接<rt>ちょくせつ</rt></ruby><ruby>関与<rt>かんよ</rt></ruby>していた。",
-          "<ruby>今回<rt>こんかい</rt></ruby>の<ruby>訪問<rt>ほうもん</rt></ruby>は、イラン<ruby>経済<rt>けいざい</rt></ruby>への<ruby>圧力<rt>あつりょく</rt></ruby>がワシントンで<ruby>拡大<rt>かくだい</rt></ruby>し、ホルムズの<ruby>航行<rt>こうこう</rt></ruby>が<ruby>依然<rt>いぜん</rt></ruby>として<ruby>制限<rt>せいげん</rt></ruby>されている<ruby>時期<rt>じき</rt></ruby>に<ruby>行<rt>おこな</rt></ruby>われた。イランとオマーンが<ruby>一時的<rt>いちじてき</rt></ruby>な<ruby>商船<rt>しょうせん</rt></ruby><ruby>輸送<rt>ゆそう</rt></ruby>の<ruby>取り決<rt>とりき</rt></ruby>めについて<ruby>話し合<rt>はなしあ</rt></ruby>ったとしても、<ruby>海峡<rt>かいきょう</rt></ruby>の<ruby>支配<rt>しはい</rt></ruby>、<ruby>制裁<rt>せいさい</rt></ruby>、<ruby>収益<rt>しゅうえき</rt></ruby><ruby>分配<rt>ぶんぱい</rt></ruby>に<ruby>関<rt>かん</rt></ruby>して<ruby>米国<rt>べいこく</rt></ruby>とイランの<ruby>間<rt>あいだ</rt></ruby>には<ruby>依然<rt>いぜん</rt></ruby>として<ruby>大<rt>おお</rt></ruby>きな<ruby>違<rt>ちが</rt></ruby>いがあります。カタールが<ruby>両国<rt>りょうこく</rt></ruby>を<ruby>正式<rt>せいしき</rt></ruby>な<ruby>交渉<rt>こうしょう</rt></ruby>に<ruby>戻<rt>もど</rt></ruby>すことができるかどうかが<ruby>次<rt>つぎ</rt></ruby>のステップの<ruby>焦点<rt>しょうてん</rt></ruby>になります。"
-        ]
-      }
-    },
-    {
-      "id": "ai-tech-nvidia-post-results-bounce-20260827-1000",
-      "desk": "ai-tech",
-      "status": "UPDATED",
-      "title": "NVIDIAの実績以降、株価は下落から市場に反発しており、AI投資サイクルに賭けるにはまだまだ長い年月がかかる",
-      "dek": "データセンターの収益は前年比117 ％増の890億ドルに達し、経営陣は来年度の収益が約70 ％増加すると予想しており、時間外の株価は初期段階の下落から上昇にシフトしています。",
-      "summary": "NVIDIAの好調な業績発表に続いて、投資家は、高い期待と粗利益率に対する当初の懸念から、AIインフラストラクチャのニーズの持続時間を再評価することに移行しました。",
-      "body": "NVIDIAが四半期決算を発表した後、株価はポスト市場期間の初めに下落しましたが、経営会議の後に上昇しました。データセンターの収益は前年比117 ％増の890億ドルであり、同社は今四半期から新世代のVera Rubinプロセッサからより大きな収益貢献を期待しています。\n\n経営陣は、2028年1月までの翌年度に収益が約70 ％増加すると予想しており、AIインフラ投資にはまだ数年間の成長の余地があるという市場の判断をさらに強化しています。しかし、メモリと部品のコスト、売上総利益率の低下、中国での販売制限、大手顧客の設備投資収益率は依然として大きなリスクです。",
-      "context": "バージョン09 ： 00では、収益、収益、および予想を達成するためのガイダンスが確認されています。バージョン10:00では、結果に参加した後の価格の反応と経営陣の長期的な成長見通しに対応しています。",
-      "why": "株価の上昇は、単一四半期が予想を大幅に上回ったかどうかではなく、高い期待を消化した後、市場がAIの需要と長期的な成長に再び焦点を当てたことを示しています。",
-      "watchNext": "Nvidiaと半導体セクターの対応、Rubinの出荷、粗利益率、米国株の公式取引時間中の主要なクラウドカスタマーの資本支出に注意してください。",
-      "sourceName": "Reuters / NVIDIA",
-      "sourceUrl": "https://www.reuters.com/business/nvidia-bounce-shows-wall-streets-ai-obsession-is-far-over-2026-08-26/",
-      "timeLabel": "10:00 HKT",
-      "sources": [
-        {
-          "name": "Reuters",
-          "url": "https://www.reuters.com/business/nvidia-bounce-shows-wall-streets-ai-obsession-is-far-over-2026-08-26/"
-        },
-        {
-          "name": "NVIDIA Newsroom",
-          "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027"
-        }
-      ],
-      "deskSlugs": [
-        "ai-tech",
-        "market-economy"
-      ],
-      "section": "AI・テクノロジー",
-      "sectionLabel": "AI・テクノロジー",
-      "sourceItemFingerprint": "6d88f07e28c887bd01d02213d50f950263a94256cb79e1f75ba83fb83f46bb34",
-      "audio": "audio/live/ai-tech-nvidia-post-results-bounce-20260827-1000.mp3",
-      "timing": "audio/timing/live/ai-tech-nvidia-post-results-bounce-20260827-1000.json",
-      "furigana": {
-        "section": "AI・テクノロジー",
-        "title": "NVIDIAの<ruby>実績<rt>じっせき</rt></ruby><ruby>以降<rt>いこう</rt></ruby>、<ruby>株価<rt>かぶか</rt></ruby>は<ruby>下落<rt>げらく</rt></ruby>から<ruby>市場<rt>しじょう</rt></ruby>に<ruby>反発<rt>はんぱつ</rt></ruby>しており、AI<ruby>投資<rt>とうし</rt></ruby>サイクルに<ruby>賭<rt>か</rt></ruby>けるにはまだまだ<ruby>長<rt>なが</rt></ruby>い<ruby>年月<rt>としつき</rt></ruby>がかかる",
-        "dek": "データセンターの<ruby>収益<rt>しゅうえき</rt></ruby>は<ruby>前年比<rt>ぜんねんひ</rt></ruby>117 ％<ruby>増<rt>ぞう</rt></ruby>の890<ruby>億<rt>おく</rt></ruby>ドルに<ruby>達<rt>たっ</rt></ruby>し、<ruby>経営陣<rt>けいえいじん</rt></ruby>は<ruby>来年度<rt>らいねんど</rt></ruby>の<ruby>収益<rt>しゅうえき</rt></ruby>が<ruby>約<rt>やく</rt></ruby>70 ％<ruby>増加<rt>ぞうか</rt></ruby>すると<ruby>予想<rt>よそう</rt></ruby>しており、<ruby>時間外<rt>じかんがい</rt></ruby>の<ruby>株価<rt>かぶか</rt></ruby>は<ruby>初期段階<rt>しょきだんかい</rt></ruby>の<ruby>下落<rt>げらく</rt></ruby>から<ruby>上昇<rt>じょうしょう</rt></ruby>にシフトしています。",
-        "summary": "NVIDIAの<ruby>好調<rt>こうちょう</rt></ruby>な<ruby>業績<rt>ぎょうせき</rt></ruby><ruby>発表<rt>はっぴょう</rt></ruby>に<ruby>続<rt>つづ</rt></ruby>いて、<ruby>投資家<rt>とうしか</rt></ruby>は、<ruby>高<rt>たか</rt></ruby>い<ruby>期待<rt>きたい</rt></ruby>と<ruby>粗利益<rt>あらりえき</rt></ruby><ruby>率<rt>りつ</rt></ruby>に<ruby>対<rt>たい</rt></ruby>する<ruby>当初<rt>とうしょ</rt></ruby>の<ruby>懸念<rt>けねん</rt></ruby>から、AIインフラストラクチャのニーズの<ruby>持続時間<rt>じぞくじかん</rt></ruby>を<ruby>再評価<rt>さいひょうか</rt></ruby>することに<ruby>移行<rt>いこう</rt></ruby>しました。",
-        "context": "バージョン09 ： 00では、<ruby>収益<rt>しゅうえき</rt></ruby>、<ruby>収益<rt>しゅうえき</rt></ruby>、および<ruby>予想<rt>よそう</rt></ruby>を<ruby>達成<rt>たっせい</rt></ruby>するためのガイダンスが<ruby>確認<rt>かくにん</rt></ruby>されています。バージョン10:00では、<ruby>結果<rt>けっか</rt></ruby>に<ruby>参加<rt>さんか</rt></ruby>した<ruby>後<rt>あと</rt></ruby>の<ruby>価格<rt>かかく</rt></ruby>の<ruby>反応<rt>はんのう</rt></ruby>と<ruby>経営陣<rt>けいえいじん</rt></ruby>の<ruby>長期的<rt>ちょうきてき</rt></ruby>な<ruby>成長<rt>せいちょう</rt></ruby><ruby>見通<rt>みとお</rt></ruby>しに<ruby>対応<rt>たいおう</rt></ruby>しています。",
-        "why": "<ruby>株価<rt>かぶか</rt></ruby>の<ruby>上昇<rt>じょうしょう</rt></ruby>は、<ruby>単一<rt>たんいつ</rt></ruby><ruby>四半期<rt>しはんき</rt></ruby>が<ruby>予想<rt>よそう</rt></ruby>を<ruby>大幅<rt>おおはば</rt></ruby>に<ruby>上回<rt>うわまわ</rt></ruby>ったかどうかではなく、<ruby>高<rt>たか</rt></ruby>い<ruby>期待<rt>きたい</rt></ruby>を<ruby>消化<rt>しょうか</rt></ruby>した<ruby>後<rt>あと</rt></ruby>、<ruby>市場<rt>しじょう</rt></ruby>がAIの<ruby>需要<rt>じゅよう</rt></ruby>と<ruby>長期的<rt>ちょうきてき</rt></ruby>な<ruby>成長<rt>せいちょう</rt></ruby>に<ruby>再<rt>ふたた</rt></ruby>び<ruby>焦点<rt>しょうてん</rt></ruby>を<ruby>当<rt>あ</rt></ruby>てたことを<ruby>示<rt>しめ</rt></ruby>しています。",
-        "watchNext": "Nvidiaと<ruby>半導体<rt>はんどうたい</rt></ruby>セクターの<ruby>対応<rt>たいおう</rt></ruby>、Rubinの<ruby>出荷<rt>しゅっか</rt></ruby>、<ruby>粗利益<rt>あらりえき</rt></ruby><ruby>率<rt>りつ</rt></ruby>、<ruby>米国<rt>べいこく</rt></ruby><ruby>株<rt>かぶ</rt></ruby>の<ruby>公式<rt>こうしき</rt></ruby><ruby>取引<rt>とりひき</rt></ruby><ruby>時間中<rt>じかんちゅう</rt></ruby>の<ruby>主要<rt>しゅよう</rt></ruby>なクラウドカスタマーの<ruby>資本<rt>しほん</rt></ruby><ruby>支出<rt>ししゅつ</rt></ruby>に<ruby>注意<rt>ちゅうい</rt></ruby>してください。",
-        "bodyParagraphs": [
-          "NVIDIAが<ruby>四半期<rt>しはんき</rt></ruby><ruby>決算<rt>けっさん</rt></ruby>を<ruby>発表<rt>はっぴょう</rt></ruby>した<ruby>後<rt>あと</rt></ruby>、<ruby>株価<rt>かぶか</rt></ruby>はポスト<ruby>市場<rt>しじょう</rt></ruby><ruby>期間<rt>きかん</rt></ruby>の<ruby>初<rt>はじ</rt></ruby>めに<ruby>下落<rt>げらく</rt></ruby>しましたが、<ruby>経営<rt>けいえい</rt></ruby><ruby>会議<rt>かいぎ</rt></ruby>の<ruby>後<rt>のち</rt></ruby>に<ruby>上昇<rt>じょうしょう</rt></ruby>しました。データセンターの<ruby>収益<rt>しゅうえき</rt></ruby>は<ruby>前年比<rt>ぜんねんひ</rt></ruby>117 ％<ruby>増<rt>ぞう</rt></ruby>の890<ruby>億<rt>おく</rt></ruby>ドルであり、<ruby>同社<rt>どうしゃ</rt></ruby>は<ruby>今<rt>いま</rt></ruby><ruby>四半期<rt>しはんき</rt></ruby>から<ruby>新世代<rt>しんせだい</rt></ruby>のVera Rubinプロセッサからより<ruby>大<rt>おお</rt></ruby>きな<ruby>収益<rt>しゅうえき</rt></ruby><ruby>貢献<rt>こうけん</rt></ruby>を<ruby>期待<rt>きたい</rt></ruby>しています。",
-          "<ruby>経営陣<rt>けいえいじん</rt></ruby>は、2028<ruby>年<rt>ねん</rt></ruby><ruby>1月<rt>いちがつ</rt></ruby>までの<ruby>翌年<rt>よくねん</rt></ruby><ruby>度<rt>ど</rt></ruby>に<ruby>収益<rt>しゅうえき</rt></ruby>が<ruby>約<rt>やく</rt></ruby>70 ％<ruby>増加<rt>ぞうか</rt></ruby>すると<ruby>予想<rt>よそう</rt></ruby>しており、AIインフラ<ruby>投資<rt>とうし</rt></ruby>にはまだ<ruby>数年間<rt>すうねんかん</rt></ruby>の<ruby>成長<rt>せいちょう</rt></ruby>の<ruby>余地<rt>よち</rt></ruby>があるという<ruby>市場<rt>しじょう</rt></ruby>の<ruby>判断<rt>はんだん</rt></ruby>をさらに<ruby>強化<rt>きょうか</rt></ruby>しています。しかし、メモリと<ruby>部品<rt>ぶひん</rt></ruby>のコスト、<ruby>売上総利益率<rt>うりあげそうりえきりつ</rt></ruby>の<ruby>低下<rt>ていか</rt></ruby>、<ruby>中国<rt>ちゅうごく</rt></ruby>での<ruby>販売<rt>はんばい</rt></ruby><ruby>制限<rt>せいげん</rt></ruby>、<ruby>大手<rt>おおて</rt></ruby><ruby>顧客<rt>こきゃく</rt></ruby>の<ruby>設備投資<rt>せつびとうし</rt></ruby><ruby>収益率<rt>しゅうえきりつ</rt></ruby>は<ruby>依然<rt>いぜん</rt></ruby>として<ruby>大<rt>おお</rt></ruby>きなリスクです。"
+          "この<ruby>情報<rt>じょうほう</rt></ruby>によると、NvidiaはHugging Faceを129<ruby>億<rt>おく</rt></ruby>ドルで<ruby>買収<rt>ばいしゅう</rt></ruby>することに<ruby>合意<rt>ごうい</rt></ruby>したという。Hugging Faceは、オープンソースのAIモデル、データセット、<ruby>開発<rt>かいはつ</rt></ruby>ツールのための<ruby>世界<rt>せかい</rt></ruby>で<ruby>最<rt>もっと</rt></ruby>も<ruby>重要<rt>じゅうよう</rt></ruby>なプラットフォームの1つです。Nvidiaは、<ruby>同社<rt>どうしゃ</rt></ruby>が<ruby>約<rt>やく</rt></ruby>45<ruby>億<rt>おく</rt></ruby>ドルの<ruby>評価<rt>ひょうか</rt></ruby>を<ruby>受<rt>う</rt></ruby>けた2023<ruby>年<rt>ねん</rt></ruby><ruby>以来<rt>いらい</rt></ruby>、2<ruby>億<rt>おく</rt></ruby>3500<ruby>万<rt>まん</rt></ruby>ドルの<ruby>資金調達<rt>しきんちょうたつ</rt></ruby>ラウンドに<ruby>参加<rt>さんか</rt></ruby>しています。",
+          "ロイター<ruby>通信<rt>つうしん</rt></ruby>によると、この<ruby>取引<rt>とりひき</rt></ruby>は<ruby>独立<rt>どくりつ</rt></ruby>して<ruby>検証<rt>けんしょう</rt></ruby>されておらず、NvidiaとHugging Faceはタイムリーにコメントの<ruby>要請<rt>ようせい</rt></ruby>に<ruby>対応<rt>たいおう</rt></ruby>していないため、このエディションでは、このニュースを<ruby>完了<rt>かんりょう</rt></ruby>した<ruby>買収<rt>ばいしゅう</rt></ruby>ではなく「<ruby>報告<rt>ほうこく</rt></ruby>された<ruby>契約<rt>けいやく</rt></ruby>」として<ruby>明確<rt>めいかく</rt></ruby>に<ruby>記載<rt>きさい</rt></ruby>しています。<ruby>最終的<rt>さいしゅうてき</rt></ruby>に<ruby>実装<rt>じっそう</rt></ruby>されれば、NVIDIAはAIチップとコンピューティングプラットフォームによるモデル<ruby>配布<rt>はいふ</rt></ruby>とオープンソースデベロッパーエコシステムをさらに<ruby>深化<rt>しんか</rt></ruby>させ、プラットフォームの<ruby>中立性<rt>ちゅうりつせい</rt></ruby>と<ruby>規制<rt>きせい</rt></ruby>レビューの<ruby>議論<rt>ぎろん</rt></ruby>につながる<ruby>可能性<rt>かのうせい</rt></ruby>があります。"
         ]
       }
     }
@@ -186,7 +92,7 @@
   "language": "ja",
   "translationSource": "kanuli/daily-brief-newspaper",
   "sourceFile": "live.json",
-  "sourceFingerprint": "8e19e692b28000cfb309e7af298baa5079f73c4e36bc2ada0b2d96df36588016",
+  "sourceFingerprint": "9ff01db596ba25d2d89ffef3ccfb2e4772122e8b862830c378804230c7f462b0",
   "translationSchemaVersion": "ja-furigana-v3-context-sensitive",
   "furiganaEngineVersion": "sudachi-core-mode-c+context",
   "newsroomQualityVersion": 1
