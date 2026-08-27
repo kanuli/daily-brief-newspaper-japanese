@@ -1,0 +1,350 @@
+{
+  "version": 3,
+  "duration": 161.332,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 524,
+  "charactersPerMinute": 194.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 17.369,
+      "text": "マンチェスター・ユナイテッドは後城戦に0-2で敗れ、開幕調整期間に入った。デッドボール防御と攻撃効率が大きな課題となっている。"
+    },
+    {
+      "key": "dek",
+      "start": 17.369,
+      "end": 41.0,
+      "text": "マンチェスター・ユナイテッドはボールの約72％を支配していたが、それでも得点には至らず、昇格したばかりのチームは勝利するために2度のデッドボール攻撃に頼った。"
+    },
+    {
+      "key": "body-0",
+      "start": 41.0,
+      "end": 88.259,
+      "text": "マンチェスター・ユナイテッドは、プレミアリーグ新シーズンの初戦でアウェイでハル・シティに0-2で敗れた。ユナイテッドは試合の約72％でボールを支配したが、決定的なチャンスを継続的に作り出すことができなかった。ハルはデッドボールの状況からセミ・アジャイとノーベル・メンディが得点し、52年ぶりにリーグ戦でユナイテッド相手に勝利を収めた。"
+    },
+    {
+      "key": "body-1",
+      "start": 88.259,
+      "end": 128.745,
+      "text": "マイケル・キャリック監督は、負けたからといってチームの方向性が変わるわけではないと語ったが、初戦ではデッドボール時の守備組織や守備力の低い相手に直面した際の攻撃効率の問題がはっきりと露呈した。新しい選手の慣らしとフロントコートの人員の配置は、次のラウンドまでに重要な修正となるだろう。"
+    },
+    {
+      "key": "why",
+      "start": 128.745,
+      "end": 146.462,
+      "text": "初戦で露呈した問題が続けばチームの勝ち点に直結し、リーグ序盤での信頼を取り戻すことになる。"
+    },
+    {
+      "key": "watch",
+      "start": 146.462,
+      "end": 161.332,
+      "text": "次戦のスタメンや負傷者の状況、デッドボールの手配、そして移籍市場の終盤に注目だ。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 6.132,
+      "end": 6.412,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マンチェスター・ユナイテッドは後城戦に0-2で敗れ、"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.412,
+      "speechEnd": 9.687,
+      "end": 10.307,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "開幕調整期間に入った。"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.307,
+      "speechEnd": 16.508,
+      "end": 17.369,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "デッドボール防御と攻撃効率が大きな課題となっている。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.369,
+      "speechEnd": 20.644,
+      "end": 20.984,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "マンチェスター・ユナイテッドは"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.984,
+      "speechEnd": 26.697,
+      "end": 26.978,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ボールの約72％を支配していたが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.978,
+      "speechEnd": 30.671,
+      "end": 30.951,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "それでも得点には至らず、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 30.951,
+      "speechEnd": 35.55,
+      "end": 35.89,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "昇格したばかりのチームは勝利するため"
+    },
+    {
+      "parentKey": "dek",
+      "start": 35.89,
+      "speechEnd": 40.14,
+      "end": 41.0,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "に2度のデッドボール攻撃に頼った。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.0,
+      "speechEnd": 44.415,
+      "end": 44.695,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マンチェスター・ユナイテッドは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.695,
+      "speechEnd": 53.753,
+      "end": 54.373,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "プレミアリーグ新シーズンの初戦でアウェイでハル・シティに0-2で敗れた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.373,
+      "speechEnd": 57.509,
+      "end": 57.689,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "ユナイテッドは試合の約"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.689,
+      "speechEnd": 59.988,
+      "end": 60.168,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "72％"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.168,
+      "speechEnd": 63.513,
+      "end": 63.793,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "でボールを支配したが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.793,
+      "speechEnd": 70.343,
+      "end": 70.963,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "決定的なチャンスを継続的に作り出すことができなかった。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.963,
+      "speechEnd": 79.325,
+      "end": 79.605,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ハルはデッドボールの状況からセミ・アジャイとノーベル・メンディが得点し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 79.605,
+      "speechEnd": 87.479,
+      "end": 88.259,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "52年ぶりにリーグ戦でユナイテッド相手に勝利を収めた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.259,
+      "speechEnd": 91.464,
+      "end": 91.744,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マイケル・キャリック監督は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.744,
+      "speechEnd": 95.925,
+      "end": 96.265,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "負けたからといってチームの方向性が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 96.265,
+      "speechEnd": 100.237,
+      "end": 100.517,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "変わるわけではないと語ったが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 100.517,
+      "speechEnd": 114.731,
+      "end": 115.352,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "初戦ではデッドボール時の守備組織や守備力の低い相手に直面した際の攻撃効率の問題がはっきりと露呈した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.352,
+      "speechEnd": 122.18,
+      "end": 122.46,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "新しい選手の慣らしとフロントコートの人員の配置は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 122.46,
+      "speechEnd": 127.965,
+      "end": 128.745,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "次のラウンドまでに重要な修正となるだろう。"
+    },
+    {
+      "parentKey": "why",
+      "start": 128.745,
+      "speechEnd": 132.717,
+      "end": 133.337,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 133.337,
+      "speechEnd": 140.444,
+      "end": 140.725,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "初戦で露呈した問題が続けばチームの勝ち点に直結し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 140.725,
+      "speechEnd": 145.602,
+      "end": 146.462,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "リーグ序盤での信頼を取り戻すことになる。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 146.462,
+      "speechEnd": 148.553,
+      "end": 148.833,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 148.833,
+      "speechEnd": 153.083,
+      "end": 153.363,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "次戦のスタメンや負傷者の状況、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 153.363,
+      "speechEnd": 156.29,
+      "end": 156.57,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "デッドボールの手配、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 156.57,
+      "speechEnd": 160.472,
+      "end": 161.332,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "そして移籍市場の終盤に注目だ。"
+    }
+  ]
+}

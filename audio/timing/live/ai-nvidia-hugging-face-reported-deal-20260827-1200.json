@@ -1,0 +1,470 @@
+{
+  "version": 3,
+  "duration": 209.528,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 722,
+  "charactersPerMinute": 206.8,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 12.916,
+      "text": "NVIDIA、Hugging FaceのオープンソースAIプラットフォームを129億ドル以上で買収"
+    },
+    {
+      "key": "dek",
+      "start": 12.916,
+      "end": 38.915,
+      "text": "この情報は、この問題に精通している人々を引用し、双方が合意に達したと述べた。ロイターはそれを独立して検証することができず、NvidiaとHugging Faceは直ちに応答していない。"
+    },
+    {
+      "key": "body-0",
+      "start": 38.915,
+      "end": 88.738,
+      "text": "この情報によると、NvidiaはHugging Faceを129億ドルで買収することに合意したという。Hugging Faceは、オープンソースのAIモデル、データセット、開発ツールのための世界で最も重要なプラットフォームの1つです。Nvidiaは、同社が約45億ドルの評価を受けた2023年以来、2億3500万ドルの資金調達ラウンドに参加しています。"
+    },
+    {
+      "key": "body-1",
+      "start": 88.738,
+      "end": 149.837,
+      "text": "ロイター通信によると、この取引は独立して検証されておらず、NvidiaとHugging Faceはタイムリーにコメントの要請に対応していないため、このエディションでは、このニュースを完了した買収ではなく「報告された契約」として明確に記載しています。最終的に実装されれば、NVIDIAはAIチップとコンピューティングプラットフォームによるモデル配布とオープンソースデベロッパーエコシステムをさらに深化させ、プラットフォームの中立性と規制レビューの議論につながる可能性があります。"
+    },
+    {
+      "key": "why",
+      "start": 149.837,
+      "end": 180.106,
+      "text": "この129億ドルの取引が承認されれば、Nvidia史上最大の買収の1つとなり、オープンソースのAIモデル配布、開発ツール、チップエコシステムの競争環境を変える可能性がある。"
+    },
+    {
+      "key": "watch",
+      "start": 180.106,
+      "end": 209.528,
+      "text": "NvidiaとHugging Faceからの公式発表、取引構造、プラットフォームがハードウェアニュートラルのままであるかどうか、米国と欧州の規制当局が独占禁止法の審査を開始するかどうかに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.16,
+      "end": 2.39,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "NVIDIA、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.39,
+      "speechEnd": 7.685,
+      "end": 7.965,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "Hugging FaceのオープンソースAIプラットフォームを"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.965,
+      "speechEnd": 12.215,
+      "end": 12.916,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "129億ドル以上で買収。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.916,
+      "speechEnd": 15.215,
+      "end": 15.445,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この情報は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.445,
+      "speechEnd": 20.531,
+      "end": 20.761,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この問題に精通している人々を引用し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.761,
+      "speechEnd": 24.802,
+      "end": 25.302,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "双方が合意に達したと述べた。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.302,
+      "speechEnd": 31.434,
+      "end": 31.664,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイターはそれを独立して検証することができず、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 31.664,
+      "speechEnd": 34.938,
+      "end": 35.219,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "NvidiaとHugging Faceは"
+    },
+    {
+      "parentKey": "dek",
+      "start": 35.219,
+      "speechEnd": 38.215,
+      "end": 38.915,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "直ちに応答していない。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.915,
+      "speechEnd": 41.702,
+      "end": 41.932,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この情報によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.932,
+      "speechEnd": 45.346,
+      "end": 45.626,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "NvidiaはHugging Faceを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.626,
+      "speechEnd": 51.966,
+      "end": 52.466,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "129億ドルで買収することに合意したという。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.466,
+      "speechEnd": 55.044,
+      "end": 55.274,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Hugging Faceは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.274,
+      "speechEnd": 58.688,
+      "end": 58.918,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "オープンソースのAIモデル、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.918,
+      "speechEnd": 61.148,
+      "end": 61.378,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "データセット、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.378,
+      "speechEnd": 69.53,
+      "end": 70.03,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "開発ツールのための世界で最も重要なプラットフォームの1つです。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.03,
+      "speechEnd": 72.329,
+      "end": 72.559,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Nvidiaは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.559,
+      "speechEnd": 80.502,
+      "end": 80.732,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同社が約45億ドルの評価を受けた2023年以来、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 80.732,
+      "speechEnd": 88.118,
+      "end": 88.738,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "2億3500万ドルの資金調達ラウンドに参加しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.738,
+      "speechEnd": 91.734,
+      "end": 91.964,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信によると、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.964,
+      "speechEnd": 97.12,
+      "end": 97.35,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この取引は独立して検証されておらず、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.35,
+      "speechEnd": 100.625,
+      "end": 100.905,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "NvidiaとHugging Faceは"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 100.905,
+      "speechEnd": 106.13,
+      "end": 106.36,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "タイムリーにコメントの要請に対応していないため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 106.36,
+      "speechEnd": 109.287,
+      "end": 109.517,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "このエディションでは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.517,
+      "speechEnd": 114.046,
+      "end": 114.326,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "このニュースを完了した買収では"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.326,
+      "speechEnd": 121.223,
+      "end": 121.723,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "なく「報告された契約」として明確に記載しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.723,
+      "speechEnd": 125.416,
+      "end": 125.646,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "最終的に実装されれば、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 125.646,
+      "speechEnd": 140.139,
+      "end": 140.369,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "NVIDIAはAIチップとコンピューティングプラットフォームによるモデル配布とオープンソースデベロッパーエコシステムをさらに深化させ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 140.369,
+      "speechEnd": 149.217,
+      "end": 149.837,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "プラットフォームの中立性と規制レビューの議論につながる可能性があります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 149.837,
+      "speechEnd": 153.809,
+      "end": 154.309,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 154.309,
+      "speechEnd": 160.301,
+      "end": 160.531,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この129億ドルの取引が承認されれば、"
+    },
+    {
+      "parentKey": "why",
+      "start": 160.531,
+      "speechEnd": 166.453,
+      "end": 166.683,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Nvidia史上最大の買収の1つとなり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 166.683,
+      "speechEnd": 170.515,
+      "end": 170.746,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "オープンソースのAIモデル配布、"
+    },
+    {
+      "parentKey": "why",
+      "start": 170.746,
+      "speechEnd": 173.045,
+      "end": 173.275,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "開発ツール、"
+    },
+    {
+      "parentKey": "why",
+      "start": 173.275,
+      "speechEnd": 179.406,
+      "end": 180.106,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "チップエコシステムの競争環境を変える可能性がある。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 180.106,
+      "speechEnd": 182.197,
+      "end": 182.427,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 182.427,
+      "speechEnd": 187.931,
+      "end": 188.161,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "NvidiaとHugging Faceからの公式発表、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 188.161,
+      "speechEnd": 190.321,
+      "end": 190.551,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "取引構造、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 190.551,
+      "speechEnd": 197.24,
+      "end": 197.47,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "プラットフォームがハードウェアニュートラルのままであるかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 197.47,
+      "speechEnd": 203.81,
+      "end": 204.09,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "米国と欧州の規制当局が独占禁止法の審査を"
+    },
+    {
+      "parentKey": "watch",
+      "start": 204.09,
+      "speechEnd": 208.828,
+      "end": 209.528,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "開始するかどうかに注目してください。"
+    }
+  ]
+}

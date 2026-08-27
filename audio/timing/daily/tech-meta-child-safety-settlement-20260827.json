@@ -1,0 +1,420 @@
+{
+  "version": 3,
+  "duration": 197.669,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 614,
+  "charactersPerMinute": 186.4,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 16.469,
+      "text": "最大180億ドルの子供のソーシャルメディア依存症訴訟を解決するためのメタ、ティーンエイジャーの使用制限が厳しくなります"
+    },
+    {
+      "key": "dek",
+      "start": 16.469,
+      "end": 40.049,
+      "text": "この和解により、FacebookとInstagramは、未成年ユーザーの1日の制限時間、1泊の制限時間、および授業時間の通知を追加する必要があります。"
+    },
+    {
+      "key": "body-0",
+      "start": 40.049,
+      "end": 89.683,
+      "text": "Metaは今後数年間で最大180億ドルを支払うことに同意し、FacebookとInstagramが子供の中毒、精神的健康を害し、データを不適切に収集するように設計されているとされる米国のいくつかの州での訴訟を解決することに同意した。同社は不正行為を否定していますが、和解により、注目を集める連邦裁判は早期に終了します。"
+    },
+    {
+      "key": "body-1",
+      "start": 89.683,
+      "end": 141.248,
+      "text": "新しい対策には、未成年ユーザーの1日の使用制限の設定、親の同意なしに深夜から早朝までの使用を制限すること、授業時間中のプッシュ通知を減らすことが含まれます。一部の州は依然として訴訟を継続することを選択しており、児童のサイバーセキュリティ規制が終わっておらず、他のプラットフォームも同様の制度的圧力に直面する可能性があることを示しています。"
+    },
+    {
+      "key": "why",
+      "start": 141.248,
+      "end": 167.396,
+      "text": "この和解は実質的なものであり、製品のデフォルト機能を直接変更することで、米国のティーン向けソーシャルメディア規制の重要なテンプレートとなる可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 167.396,
+      "end": 197.669,
+      "text": "メタ実装の条件、期間、他の州で訴訟が継続しているかどうか、TikTok、YouTube、Snapにも同様の保護があるかどうかについては、裁判所の公式承認をご確認ください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 10.312,
+      "end": 10.592,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "最大180億ドルの子供のソーシャルメディア依存症訴訟を解決するためのメタ、"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.592,
+      "speechEnd": 15.609,
+      "end": 16.469,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ティーンエイジャーの使用制限が厳しくなります。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.469,
+      "speechEnd": 19.186,
+      "end": 19.466,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この和解により、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.466,
+      "speechEnd": 22.95,
+      "end": 23.23,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "FacebookとInstagramは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.23,
+      "speechEnd": 28.595,
+      "end": 28.875,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "未成年ユーザーの1日の制限時間、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 28.875,
+      "speechEnd": 31.941,
+      "end": 32.221,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "1泊の制限時間、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.221,
+      "speechEnd": 39.188,
+      "end": 40.049,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "および授業時間の通知を追加する必要があります。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.049,
+      "speechEnd": 44.368,
+      "end": 44.549,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "Metaは今後数年間で最大"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.549,
+      "speechEnd": 47.057,
+      "end": 47.237,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "180億ドル"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.237,
+      "speechEnd": 50.512,
+      "end": 50.792,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "を支払うことに同意し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.792,
+      "speechEnd": 56.575,
+      "end": 56.855,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "FacebookとInstagramが子供の中毒、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.855,
+      "speechEnd": 60.269,
+      "end": 60.549,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "精神的健康を害し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.549,
+      "speechEnd": 74.554,
+      "end": 75.174,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "データを不適切に収集するように設計されているとされる米国のいくつかの州での訴訟を解決することに同意した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.174,
+      "speechEnd": 80.19,
+      "end": 80.47,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同社は不正行為を否定していますが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 80.47,
+      "speechEnd": 82.77,
+      "end": 83.05,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "和解により、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 83.05,
+      "speechEnd": 88.903,
+      "end": 89.683,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "注目を集める連邦裁判は早期に終了します。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 89.683,
+      "speechEnd": 92.4,
+      "end": 92.68,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "新しい対策には、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.68,
+      "speechEnd": 98.742,
+      "end": 99.022,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "未成年ユーザーの1日の使用制限の設定、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.022,
+      "speechEnd": 107.522,
+      "end": 107.802,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "親の同意なしに深夜から早朝までの使用を制限すること、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.802,
+      "speechEnd": 114.7,
+      "end": 115.32,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "授業時間中のプッシュ通知を減らすことが含まれます。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.32,
+      "speechEnd": 122.985,
+      "end": 123.265,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "一部の州は依然として訴訟を継続することを選択しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 123.265,
+      "speechEnd": 129.048,
+      "end": 129.328,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "児童のサイバーセキュリティ規制が終わっておらず、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 129.328,
+      "speechEnd": 136.992,
+      "end": 137.332,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "他のプラットフォームも同様の制度的圧力に直面する可能性が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 137.332,
+      "speechEnd": 140.468,
+      "end": 141.248,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "あることを示しています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 141.248,
+      "speechEnd": 145.219,
+      "end": 145.839,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 145.839,
+      "speechEnd": 150.368,
+      "end": 150.648,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この和解は実質的なものであり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 150.648,
+      "speechEnd": 156.222,
+      "end": 156.502,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "製品のデフォルト機能を直接変更することで、"
+    },
+    {
+      "parentKey": "why",
+      "start": 156.502,
+      "speechEnd": 166.536,
+      "end": 167.396,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "米国のティーン向けソーシャルメディア規制の重要なテンプレートとなる可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 167.396,
+      "speechEnd": 169.486,
+      "end": 169.766,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 169.766,
+      "speechEnd": 172.484,
+      "end": 172.764,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "メタ実装の条件、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 172.764,
+      "speechEnd": 174.784,
+      "end": 175.064,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "期間、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 175.064,
+      "speechEnd": 180.011,
+      "end": 180.291,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "他の州で訴訟が継続しているかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 180.291,
+      "speechEnd": 182.451,
+      "end": 182.731,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "TikTok、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 182.731,
+      "speechEnd": 184.822,
+      "end": 185.102,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "YouTube、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 185.102,
+      "speechEnd": 191.372,
+      "end": 191.652,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Snapにも同様の保護があるかどうかについては、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 191.652,
+      "speechEnd": 196.808,
+      "end": 197.669,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "裁判所の公式承認をご確認ください。"
+    }
+  ]
+}

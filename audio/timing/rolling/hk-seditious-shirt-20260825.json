@@ -1,0 +1,350 @@
+{
+  "version": 3,
+  "duration": 140.591,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 392,
+  "charactersPerMinute": 167.3,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 12.15,
+      "text": "女子西九龍法院外句穿涉煽動警報字上衣被捕、方指涉擾亂順序及阻止差辦公"
+    },
+    {
+      "key": "dek",
+      "start": 12.15,
+      "end": 23.186,
+      "text": "インシデントは、ステークケース判決の前後の注目度の高い期間に発生しました。"
+    },
+    {
+      "key": "body-0",
+      "start": 23.186,
+      "end": 63.258,
+      "text": "香港の警察は、西九龍の裁判所の外で警察による扇動とみなされる内容のTシャツを着ていたとされる女性を逮捕した。SCMPは、事件が裁判所による注目度の高い事件の処理中に発生したと報告し、警察はまた、関係する女性が秩序を乱し、オフィスを妨害したと主張した。"
+    },
+    {
+      "key": "body-1",
+      "start": 63.258,
+      "end": 102.086,
+      "text": "警察はまだ完全な起訴決定を発表しておらず、実際の起訴、証拠、裁判手続きに基づいて判決を下す必要があります。この事件は、公共の場での政治的表現、扇動罪、裁判所周辺の治安の境界線を再び一般の人々の目に引き戻しました。"
+    },
+    {
+      "key": "why",
+      "start": 102.086,
+      "end": 123.909,
+      "text": "正式に起訴された場合、この事件は、既存の扇動法が公の場でどのように適用されるかをさらに実証しています。"
+    },
+    {
+      "key": "watch",
+      "start": 123.909,
+      "end": 140.591,
+      "text": "警察が起訴状を提出したかどうか、罪状は何か、初回提出と保釈の取り決めに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.038,
+      "end": 7.318,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "女子西九龍法院外句穿涉煽動警報字上衣被捕、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.318,
+      "speechEnd": 11.29,
+      "end": 12.15,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "方指涉擾亂順序及阻止差辦公。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.15,
+      "speechEnd": 14.519,
+      "end": 14.8,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インシデントは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.8,
+      "speechEnd": 22.325,
+      "end": 23.186,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ステークケース判決の前後の注目度の高い期間に発生しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 23.186,
+      "speechEnd": 25.764,
+      "end": 26.044,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "香港の警察は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 26.044,
+      "speechEnd": 34.754,
+      "end": 35.094,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "西九龍の裁判所の外で警察による扇動とみなされる内容のTシャツを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 35.094,
+      "speechEnd": 39.624,
+      "end": 40.244,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "着ていたとされる女性を逮捕した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.244,
+      "speechEnd": 42.334,
+      "end": 42.614,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "SCMPは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.614,
+      "speechEnd": 51.743,
+      "end": 52.023,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "事件が裁判所による注目度の高い事件の処理中に発生したと報告し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.023,
+      "speechEnd": 54.183,
+      "end": 54.463,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "警察はまた、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.463,
+      "speechEnd": 58.296,
+      "end": 58.576,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "関係する女性が秩序を乱し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.576,
+      "speechEnd": 62.478,
+      "end": 63.258,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "オフィスを妨害したと主張した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 63.258,
+      "speechEnd": 69.739,
+      "end": 70.019,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "警察はまだ完全な起訴決定を発表しておらず、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 70.019,
+      "speechEnd": 72.388,
+      "end": 72.668,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "実際の起訴、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 72.668,
+      "speechEnd": 74.689,
+      "end": 74.969,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "証拠、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 74.969,
+      "speechEnd": 81.241,
+      "end": 81.861,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "裁判手続きに基づいて判決を下す必要があります。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 81.861,
+      "speechEnd": 84.16,
+      "end": 84.44,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この事件は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.44,
+      "speechEnd": 88.761,
+      "end": 89.041,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "公共の場での政治的表現、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 89.041,
+      "speechEnd": 91.131,
+      "end": 91.411,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "扇動罪、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.411,
+      "speechEnd": 101.306,
+      "end": 102.086,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "裁判所周辺の治安の境界線を再び一般の人々の目に引き戻しました。"
+    },
+    {
+      "parentKey": "why",
+      "start": 102.086,
+      "speechEnd": 106.058,
+      "end": 106.679,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 106.679,
+      "speechEnd": 110.163,
+      "end": 110.443,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "正式に起訴された場合、"
+    },
+    {
+      "parentKey": "why",
+      "start": 110.443,
+      "speechEnd": 112.742,
+      "end": 113.022,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この事件は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 113.022,
+      "speechEnd": 119.642,
+      "end": 119.982,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "既存の扇動法が公の場でどのように適用されるかを"
+    },
+    {
+      "parentKey": "why",
+      "start": 119.982,
+      "speechEnd": 123.048,
+      "end": 123.909,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "さらに実証しています。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 123.909,
+      "speechEnd": 125.999,
+      "end": 126.279,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 126.279,
+      "speechEnd": 130.878,
+      "end": 131.158,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "警察が起訴状を提出したかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 131.158,
+      "speechEnd": 133.458,
+      "end": 133.738,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "罪状は何か、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 133.738,
+      "speechEnd": 139.731,
+      "end": 140.591,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "初回提出と保釈の取り決めに注意してください。"
+    }
+  ]
+}

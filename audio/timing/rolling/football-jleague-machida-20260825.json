@@ -1,0 +1,310 @@
+{
+  "version": 3,
+  "duration": 136.96,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 406,
+  "charactersPerMinute": 177.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 10.267,
+      "text": "町田ゼルビア3対1敗浦和レッドダイヤJ 1週末業績アップデートポイント状況"
+    },
+    {
+      "key": "dek",
+      "start": 10.267,
+      "end": 22.903,
+      "text": "Jリーグは8月23日に正式に結果を確認し、次戦のリーグ戦と天皇杯は続く。"
+    },
+    {
+      "key": "body-0",
+      "start": 22.903,
+      "end": 59.138,
+      "text": "Jリーグの公式結果は、町田ゼルビアが8月23日のJ 1レースで浦和レッドダイヤモンドを3 -1で破ったことを示している。結果は、リーグランキングと2チームの展開の次の段階に直接影響を与え、8月末に集中的なスケジュールを開始します。"
+    },
+    {
+      "key": "body-1",
+      "start": 59.138,
+      "end": 99.358,
+      "text": "日本のクラブはリーグとカップの取り決めに同時に直面しており、ローテーション、ケガ、フィジカルマネジメントの重要性が高まっています。アジアサッカー版では、J 1の実際の結果、次のラウンドのスケジュール、プレーヤーのステータスはすべて、継続的にフォローアップする必要がある試合情報です。"
+    },
+    {
+      "key": "why",
+      "start": 99.358,
+      "end": 116.517,
+      "text": "町田の3球勝利は、ポイント状況とその後の浦和の調整に新たな合図を与えた。"
+    },
+    {
+      "key": "watch",
+      "start": 116.517,
+      "end": 136.96,
+      "text": "8月26日に開催される天皇杯、8月29日に開催されるJ 1の次戦、怪我や出場停止にご注目ください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 9.406,
+      "end": 10.267,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "町田ゼルビア3対1敗浦和レッドダイヤJ 1週末業績アップデートポイント状況。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 10.267,
+      "speechEnd": 17.095,
+      "end": 17.375,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Jリーグは8月23日に正式に結果を確認し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.375,
+      "speechEnd": 22.043,
+      "end": 22.903,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "次戦のリーグ戦と天皇杯は続く。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 22.903,
+      "speechEnd": 26.039,
+      "end": 26.319,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Jリーグの公式結果は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 26.319,
+      "speechEnd": 35.795,
+      "end": 36.135,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "町田ゼルビアが8月23日のJ 1レースで浦和レッドダイヤモンドを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.135,
+      "speechEnd": 40.734,
+      "end": 41.354,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "3 -1で破ったことを示している。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.354,
+      "speechEnd": 43.444,
+      "end": 43.724,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "結果は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.724,
+      "speechEnd": 52.085,
+      "end": 52.366,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "リーグランキングと2チームの展開の次の段階に直接影響を与え、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.366,
+      "speechEnd": 58.358,
+      "end": 59.138,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "8月末に集中的なスケジュールを開始します。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 59.138,
+      "speechEnd": 66.733,
+      "end": 67.013,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本のクラブはリーグとカップの取り決めに同時に直面しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 67.013,
+      "speechEnd": 69.242,
+      "end": 69.522,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ローテーション、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 69.522,
+      "speechEnd": 71.543,
+      "end": 71.823,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ケガ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 71.823,
+      "speechEnd": 77.467,
+      "end": 78.087,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "フィジカルマネジメントの重要性が高まっています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 78.087,
+      "speechEnd": 81.083,
+      "end": 81.363,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アジアサッカー版では、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 81.363,
+      "speechEnd": 84.29,
+      "end": 84.57,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "J 1の実際の結果、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.57,
+      "speechEnd": 88.054,
+      "end": 88.334,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "次のラウンドのスケジュール、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.334,
+      "speechEnd": 92.236,
+      "end": 92.516,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "プレーヤーのステータスはすべて、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.516,
+      "speechEnd": 98.577,
+      "end": 99.358,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "継続的にフォローアップする必要がある試合情報です。"
+    },
+    {
+      "parentKey": "why",
+      "start": 99.358,
+      "speechEnd": 103.329,
+      "end": 103.949,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 103.949,
+      "speechEnd": 107.085,
+      "end": 107.365,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "町田の3球勝利は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 107.365,
+      "speechEnd": 115.656,
+      "end": 116.517,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ポイント状況とその後の浦和の調整に新たな合図を与えた。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 116.517,
+      "speechEnd": 118.607,
+      "end": 118.887,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 118.887,
+      "speechEnd": 124.879,
+      "end": 125.159,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "8月26日に開催される天皇杯、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 125.159,
+      "speechEnd": 131.151,
+      "end": 131.431,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "8月29日に開催されるJ 1の次戦、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 131.431,
+      "speechEnd": 136.1,
+      "end": 136.96,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "怪我や出場停止にご注目ください。"
+    }
+  ]
+}

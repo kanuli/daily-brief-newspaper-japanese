@@ -1,0 +1,410 @@
+{
+  "version": 3,
+  "duration": 169.77,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 534,
+  "charactersPerMinute": 188.7,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 18.134,
+      "text": "S&P 500とナスダックは下落、NVIDIAは2.9%下落、ハイテク株は業績とジャクソンホールを前にプレッシャーにさらされている"
+    },
+    {
+      "key": "dek",
+      "start": 18.134,
+      "end": 34.257,
+      "text": "ダウは約140ポイント上昇し、市場の焦点はNVIDIAの業績、長期金利、政策シグナルに移行した。"
+    },
+    {
+      "key": "body-0",
+      "start": 34.257,
+      "end": 89.319,
+      "text": "米国株は月曜日に差別化され、ロイターはS&P 500、ナスダック、ダウの下落が約140ポイント上昇したと報告した。半導体セクターは明らかにプレッシャーにさらされており、Nvidiaは2.9 ％減、Micronは5.8 ％減、Broadcomは2.6 ％減となっており、投資家はNvidiaの業績とJackson Hole中央銀行の年次総会に先立ち、いくつかの技術リスクを軽減しています。"
+    },
+    {
+      "key": "body-1",
+      "start": 89.319,
+      "end": 129.308,
+      "text": "市場はまた、米国とカナダの関税引き上げ、イランの制裁、および米国財務省の長期的な高い利回りを消化しています。テック企業のバリュエーションは金利と業績予想の両方に非常に敏感であるため、今週のガイダンスや政策シグナルはボラティリティを増幅させる可能性があります。"
+    },
+    {
+      "key": "why",
+      "start": 129.308,
+      "end": 152.321,
+      "text": "テクノロジー株の下落は、単一の企業からのニュースを反映しているだけでなく、プリインターンのリスク調整と金利圧力の組み合わせの結果です。"
+    },
+    {
+      "key": "watch",
+      "start": 152.321,
+      "end": 169.77,
+      "text": "NVIDIAの業績、Jackson Holeのスピーチ、米国のコアPCE、30年国債利回りをご覧ください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.181,
+      "end": 4.461,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "S&P 500とナスダックは下落、"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.461,
+      "speechEnd": 8.781,
+      "end": 9.061,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "NVIDIAは2.9%下落、"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.061,
+      "speechEnd": 13.032,
+      "end": 13.372,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ハイテク株は業績とジャクソンホールを"
+    },
+    {
+      "parentKey": "title",
+      "start": 13.372,
+      "speechEnd": 17.274,
+      "end": 18.134,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "前にプレッシャーにさらされている。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.134,
+      "speechEnd": 22.524,
+      "end": 22.804,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ダウは約140ポイント上昇し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.804,
+      "speechEnd": 27.054,
+      "end": 27.334,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "市場の焦点はNVIDIAの業績、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.334,
+      "speechEnd": 29.564,
+      "end": 29.844,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "長期金利、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 29.844,
+      "speechEnd": 33.397,
+      "end": 34.257,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "政策シグナルに移行した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.257,
+      "speechEnd": 38.577,
+      "end": 38.857,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国株は月曜日に差別化され、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.857,
+      "speechEnd": 42.132,
+      "end": 42.412,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイターはS&P 500、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.412,
+      "speechEnd": 44.572,
+      "end": 44.852,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ナスダック、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.852,
+      "speechEnd": 51.471,
+      "end": 52.092,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ダウの下落が約140ポイント上昇したと報告した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.092,
+      "speechEnd": 58.711,
+      "end": 58.991,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "半導体セクターは明らかにプレッシャーにさらされており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.991,
+      "speechEnd": 63.032,
+      "end": 63.312,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Nvidiaは2.9 ％減、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.312,
+      "speechEnd": 67.493,
+      "end": 67.773,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Micronは5.8 ％減、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.773,
+      "speechEnd": 73.207,
+      "end": 73.487,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Broadcomは2.6 ％減となっており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.487,
+      "speechEnd": 83.73,
+      "end": 84.01,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "投資家はNvidiaの業績とJackson Hole中央銀行の年次総会に先立ち、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 84.01,
+      "speechEnd": 88.539,
+      "end": 89.319,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "いくつかの技術リスクを軽減しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 89.319,
+      "speechEnd": 91.549,
+      "end": 91.829,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "市場はまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.829,
+      "speechEnd": 95.591,
+      "end": 95.871,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国とカナダの関税引き上げ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 95.871,
+      "speechEnd": 98.31,
+      "end": 98.59,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イランの制裁、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 98.59,
+      "speechEnd": 106.742,
+      "end": 107.362,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "および米国財務省の長期的な高い利回りを消化しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.362,
+      "speechEnd": 110.846,
+      "end": 111.186,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "テック企業のバリュエーションは"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.186,
+      "speechEnd": 117.945,
+      "end": 118.225,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "金利と業績予想の両方に非常に敏感であるため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.225,
+      "speechEnd": 123.102,
+      "end": 123.442,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "今週のガイダンスや政策シグナルは"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 123.442,
+      "speechEnd": 128.528,
+      "end": 129.308,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "ボラティリティを増幅させる可能性があります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 129.308,
+      "speechEnd": 133.28,
+      "end": 133.9,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 133.9,
+      "speechEnd": 137.314,
+      "end": 137.594,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "テクノロジー株の下落は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 137.594,
+      "speechEnd": 143.935,
+      "end": 144.215,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "単一の企業からのニュースを反映しているだけでなく、"
+    },
+    {
+      "parentKey": "why",
+      "start": 144.215,
+      "speechEnd": 151.461,
+      "end": 152.321,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "プリインターンのリスク調整と金利圧力の組み合わせの結果です。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 152.321,
+      "speechEnd": 154.412,
+      "end": 154.692,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 154.692,
+      "speechEnd": 157.479,
+      "end": 157.759,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "NVIDIAの業績、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 157.759,
+      "speechEnd": 161.034,
+      "end": 161.314,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Jackson Holeのスピーチ、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 161.314,
+      "speechEnd": 163.961,
+      "end": 164.241,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国のコアPCE、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 164.241,
+      "speechEnd": 168.91,
+      "end": 169.77,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "30年国債利回りをご覧ください。"
+    }
+  ]
+}

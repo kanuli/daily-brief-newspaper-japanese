@@ -1,0 +1,310 @@
+{
+  "version": 3,
+  "duration": 156.186,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 460,
+  "charactersPerMinute": 176.7,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 19.954,
+      "text": "アリババは約800億香港ドルの株式発行を完了し、すべての資金をAIチップ、コンピューティングインフラストラクチャおよびモデルに投資した"
+    },
+    {
+      "key": "dek",
+      "start": 19.954,
+      "end": 34.89,
+      "text": "発行価格は1株当たり112.70香港ドルで、香港の株価は早朝に10％近く下落した。"
+    },
+    {
+      "key": "body-0",
+      "start": 34.89,
+      "end": 78.101,
+      "text": "アリババは1株当たり112.70香港ドルで7億1000万株の新株を発行し、約800億香港ドル（約102億米ドルに相当）を調達した。同社は、収益はすべて、チップ、コンピューティングインフラストラクチャ、モデルの開発と展開を含む人工知能関連の開発に投資されると述べた。"
+    },
+    {
+      "key": "body-1",
+      "start": 78.101,
+      "end": 119.073,
+      "text": "株式の希薄化とAI設備投資の収益に対する市場の同時評価を反映して、株式の発行規模は巨大で、香港の株価は初期段階で10％近く下落した。この資金調達は、大手テクノロジー企業が競争力の焦点をコンピューティング能力とモデルへの長期投資に移していることをさらに示しています。"
+    },
+    {
+      "key": "why",
+      "start": 119.073,
+      "end": 141.457,
+      "text": "大規模な株式融資はAI投資能力を直接的に高め、香港のテクノロジー株の評価や設備投資の期待にも影響を与えるだろう。"
+    },
+    {
+      "key": "watch",
+      "start": 141.457,
+      "end": 156.186,
+      "text": "株価が安定できるかどうか、資本展開のペース、AI投資の収益見通しに注目です。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 8.222,
+      "end": 8.502,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アリババは約800億香港ドルの株式発行を完了し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.502,
+      "speechEnd": 11.916,
+      "end": 12.196,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "すべての資金をAIチップ、"
+    },
+    {
+      "parentKey": "title",
+      "start": 12.196,
+      "speechEnd": 19.094,
+      "end": 19.954,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "コンピューティングインフラストラクチャおよびモデルに投資した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.954,
+      "speechEnd": 27.2,
+      "end": 27.48,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "発行価格は1株当たり112.70香港ドルで、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.48,
+      "speechEnd": 34.029,
+      "end": 34.89,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "香港の株価は早朝に10％近く下落した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.89,
+      "speechEnd": 46.804,
+      "end": 47.084,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アリババは1株当たり112.70香港ドルで7億1000万株の新株を発行し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.084,
+      "speechEnd": 55.793,
+      "end": 56.413,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "約800億香港ドル（約102億米ドルに相当）を調達した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.413,
+      "speechEnd": 58.504,
+      "end": 58.784,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同社は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.784,
+      "speechEnd": 61.362,
+      "end": 61.642,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "収益はすべて、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.642,
+      "speechEnd": 63.662,
+      "end": 63.942,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "チップ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.942,
+      "speechEnd": 67.565,
+      "end": 67.845,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "コンピューティングインフラストラクチャ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.845,
+      "speechEnd": 77.321,
+      "end": 78.101,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "モデルの開発と展開を含む人工知能関連の開発に投資されると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 78.101,
+      "speechEnd": 87.577,
+      "end": 87.857,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "株式の希薄化とAI設備投資の収益に対する市場の同時評価を反映して、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 87.857,
+      "speechEnd": 91.898,
+      "end": 92.178,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "株式の発行規模は巨大で、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.178,
+      "speechEnd": 99.215,
+      "end": 99.836,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "香港の株価は初期段階で10％近く下落した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.836,
+      "speechEnd": 102.483,
+      "end": 102.763,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この資金調達は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.763,
+      "speechEnd": 108.198,
+      "end": 108.538,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "大手テクノロジー企業が競争力の焦点を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.538,
+      "speechEnd": 118.292,
+      "end": 119.073,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "コンピューティング能力とモデルへの長期投資に移していることをさらに示しています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 119.073,
+      "speechEnd": 123.044,
+      "end": 123.664,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 123.664,
+      "speechEnd": 130.841,
+      "end": 131.121,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "大規模な株式融資はAI投資能力を直接的に高め、"
+    },
+    {
+      "parentKey": "why",
+      "start": 131.121,
+      "speechEnd": 140.596,
+      "end": 141.457,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "香港のテクノロジー株の評価や設備投資の期待にも影響を与えるだろう。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 141.457,
+      "speechEnd": 143.547,
+      "end": 143.827,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 143.827,
+      "speechEnd": 147.45,
+      "end": 147.73,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "株価が安定できるかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 147.73,
+      "speechEnd": 150.587,
+      "end": 150.867,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "資本展開のペース、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 150.867,
+      "speechEnd": 155.326,
+      "end": 156.186,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "AI投資の収益見通しに注目です。"
+    }
+  ]
+}

@@ -1,0 +1,390 @@
+{
+  "version": 3,
+  "duration": 154.802,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 474,
+  "charactersPerMinute": 183.7,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 16.608,
+      "text": "2027年と2029年を目標とした2つの新しいワンピースアニメーション映画が制作中であると報告されています"
+    },
+    {
+      "key": "dek",
+      "start": 16.608,
+      "end": 30.768,
+      "text": "アニメーション映画の長期的な制作スケジュールを反映した大規模な長寿命IPエクステンションシネマプラン。"
+    },
+    {
+      "key": "body-0",
+      "start": 30.768,
+      "end": 79.362,
+      "text": "日本のエンターテイメントメディアは、「ONE PIECE」アニメーション映画プロジェクトが、それぞれ2027年と2029年に発売することを目標に、2つの新しい映画を計画していると報じた。この段階では、公開情報はまだ制作計画に基づいており、完全なタイトル、制作チーム、リリース日はまだ正式に発表されていません。"
+    },
+    {
+      "key": "body-1",
+      "start": 79.362,
+      "end": 115.112,
+      "text": "Longevity IPの場合、数年前から劇場制作を計画することは、制作リソースとグローバル流通の重要性が高まっていることを反映しています。当局から完全に確認された場合、東営アニメーション、ストリーミングプラットフォーム、海外ライセンスのレイアウトに影響します。"
+    },
+    {
+      "key": "why",
+      "start": 115.112,
+      "end": 138.885,
+      "text": "複数の映画の長期スケジュールは、制作リソース、流通、およびIPコマースのペースに影響を与える可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 138.885,
+      "end": 154.802,
+      "text": "公式タイトル、制作チーム、公式リリース日、海外リリースの手配に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 15.747,
+      "end": 16.608,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "2027年と2029年を目標とした2つの新しいワンピースアニメーション映画が制作中であると報告されています。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.608,
+      "speechEnd": 22.739,
+      "end": 23.079,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "アニメーション映画の長期的な制作スケジュールを"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.079,
+      "speechEnd": 29.908,
+      "end": 30.768,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "反映した大規模な長寿命IPエクステンションシネマプラン。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 30.768,
+      "speechEnd": 34.461,
+      "end": 34.741,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本のエンターテイメントメディアは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.741,
+      "speechEnd": 41.151,
+      "end": 41.432,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "「ONE PIECE」アニメーション映画プロジェクトが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.432,
+      "speechEnd": 45.403,
+      "end": 45.583,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "それぞれ2027年と"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.583,
+      "speechEnd": 48.231,
+      "end": 48.411,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "2029年"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.411,
+      "speechEnd": 51.965,
+      "end": 52.245,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "に発売することを目標に、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.245,
+      "speechEnd": 57.958,
+      "end": 58.579,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "2つの新しい映画を計画していると報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.579,
+      "speechEnd": 61.366,
+      "end": 61.646,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この段階では、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.646,
+      "speechEnd": 67.15,
+      "end": 67.43,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "公開情報はまだ制作計画に基づいており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.43,
+      "speechEnd": 70.009,
+      "end": 70.289,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "完全なタイトル、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.289,
+      "speechEnd": 72.518,
+      "end": 72.798,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "制作チーム、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.798,
+      "speechEnd": 78.582,
+      "end": 79.362,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "リリース日はまだ正式に発表されていません。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 79.362,
+      "speechEnd": 82.497,
+      "end": 82.777,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Longevity IPの場合、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.777,
+      "speechEnd": 87.864,
+      "end": 88.144,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "数年前から劇場制作を計画することは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.144,
+      "speechEnd": 93.718,
+      "end": 94.058,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "制作リソースとグローバル流通の重要性が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.058,
+      "speechEnd": 98.309,
+      "end": 98.929,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "高まっていることを反映しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 98.929,
+      "speechEnd": 103.249,
+      "end": 103.529,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "当局から完全に確認された場合、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.529,
+      "speechEnd": 106.038,
+      "end": 106.318,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "東営アニメーション、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 106.318,
+      "speechEnd": 109.523,
+      "end": 109.803,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ストリーミングプラットフォーム、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.803,
+      "speechEnd": 114.332,
+      "end": 115.112,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "海外ライセンスのレイアウトに影響します。"
+    },
+    {
+      "parentKey": "why",
+      "start": 115.112,
+      "speechEnd": 119.084,
+      "end": 119.704,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 119.704,
+      "speechEnd": 124.303,
+      "end": 124.583,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "複数の映画の長期スケジュールは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 124.583,
+      "speechEnd": 126.882,
+      "end": 127.162,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "制作リソース、"
+    },
+    {
+      "parentKey": "why",
+      "start": 127.162,
+      "speechEnd": 129.183,
+      "end": 129.463,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "流通、"
+    },
+    {
+      "parentKey": "why",
+      "start": 129.463,
+      "speechEnd": 134.271,
+      "end": 134.611,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "およびIPコマースのペースに影響を"
+    },
+    {
+      "parentKey": "why",
+      "start": 134.611,
+      "speechEnd": 138.025,
+      "end": 138.885,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "与える可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 138.885,
+      "speechEnd": 140.976,
+      "end": 141.256,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 141.256,
+      "speechEnd": 143.625,
+      "end": 143.905,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "公式タイトル、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 143.905,
+      "speechEnd": 146.135,
+      "end": 146.415,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "制作チーム、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 146.415,
+      "speechEnd": 148.854,
+      "end": 149.134,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "公式リリース日、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 149.134,
+      "speechEnd": 153.941,
+      "end": 154.802,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "海外リリースの手配に注意してください。"
+    }
+  ]
+}

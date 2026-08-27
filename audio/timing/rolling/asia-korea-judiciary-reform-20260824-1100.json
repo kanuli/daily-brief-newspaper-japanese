@@ -1,0 +1,310 @@
+{
+  "version": 3,
+  "duration": 148.088,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 398,
+  "charactersPerMinute": 161.3,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.796,
+      "text": "韓国の与党が司法・行政改革を推し進め、最高裁判所長官の指名をめぐる論争が白熱"
+    },
+    {
+      "key": "dek",
+      "start": 14.796,
+      "end": 35.645,
+      "text": "大裁判所判事の指名手続きをめぐる論争が広がるにつれて、与党のコモン民主党は最高裁判所長官の執行力を縮小することを提案した。"
+    },
+    {
+      "key": "body-0",
+      "start": 35.645,
+      "end": 80.108,
+      "text": "最高裁判所判事の指名をめぐる論争の後、与党朝鮮民主主義人民共和国は再び司法行政体制の改革を推し進め、現在最高裁判所長官と裁判所の行政部門に集中している権限の一部を縮小し、新しい司法行政機関による人員、予算、行政機能の分担を検討することを提案した。"
+    },
+    {
+      "key": "body-1",
+      "start": 80.108,
+      "end": 117.664,
+      "text": "この論争は、最近の最高裁判所長官曹希達の指名手配に起因している。改革の支持者は、現在のシステムはあまりにも中央集権的であると主張し、反対者は司法行政への直接的な政治的関与が裁判所の独立性を損なう可能性があると警告している。"
+    },
+    {
+      "key": "why",
+      "start": 117.664,
+      "end": 134.056,
+      "text": "この改革が施行されれば、裁判所職員と行政権の配分が変わることになる。"
+    },
+    {
+      "key": "watch",
+      "start": 134.056,
+      "end": 148.088,
+      "text": "特定の法案、最高裁判所の対応、反対と法的立場に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 6.549,
+      "end": 6.829,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "韓国の与党が司法・行政改革を推し進め、"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.829,
+      "speechEnd": 13.936,
+      "end": 14.796,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "最高裁判所長官の指名をめぐる論争が白熱。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.796,
+      "speechEnd": 22.948,
+      "end": 23.228,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "大裁判所判事の指名手続きをめぐる論争が広がるにつれて、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.228,
+      "speechEnd": 31.031,
+      "end": 31.371,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "与党のコモン民主党は最高裁判所長官の執行力を"
+    },
+    {
+      "parentKey": "dek",
+      "start": 31.371,
+      "speechEnd": 34.785,
+      "end": 35.645,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "縮小することを提案した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 35.645,
+      "speechEnd": 41.916,
+      "end": 42.196,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "最高裁判所判事の指名をめぐる論争の後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.196,
+      "speechEnd": 47.63,
+      "end": 47.97,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "与党朝鮮民主主義人民共和国は"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.97,
+      "speechEnd": 54.032,
+      "end": 54.312,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "再び司法行政体制の改革を推し進め、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.312,
+      "speechEnd": 65.947,
+      "end": 66.227,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "現在最高裁判所長官と裁判所の行政部門に集中している権限の一部を縮小し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.227,
+      "speechEnd": 70.965,
+      "end": 71.245,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "新しい司法行政機関による人員、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.245,
+      "speechEnd": 73.265,
+      "end": 73.545,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "予算、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.545,
+      "speechEnd": 79.328,
+      "end": 80.108,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "行政機能の分担を検討することを提案した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 80.108,
+      "speechEnd": 82.408,
+      "end": 82.688,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この論争は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.688,
+      "speechEnd": 91.327,
+      "end": 91.947,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "最近の最高裁判所長官曹希達の指名手配に起因している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.947,
+      "speechEnd": 94.804,
+      "end": 95.084,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "改革の支持者は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 95.084,
+      "speechEnd": 102.33,
+      "end": 102.61,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "現在のシステムはあまりにも中央集権的であると主張し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.61,
+      "speechEnd": 109.507,
+      "end": 109.847,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "反対者は司法行政への直接的な政治的関与が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.847,
+      "speechEnd": 116.884,
+      "end": 117.664,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "裁判所の独立性を損なう可能性があると警告している。"
+    },
+    {
+      "parentKey": "why",
+      "start": 117.664,
+      "speechEnd": 121.636,
+      "end": 122.256,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 122.256,
+      "speechEnd": 126.157,
+      "end": 126.437,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この改革が施行されれば、"
+    },
+    {
+      "parentKey": "why",
+      "start": 126.437,
+      "speechEnd": 133.196,
+      "end": 134.056,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "裁判所職員と行政権の配分が変わることになる。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 134.056,
+      "speechEnd": 136.146,
+      "end": 136.426,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 136.426,
+      "speechEnd": 138.865,
+      "end": 139.145,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "特定の法案、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 139.145,
+      "speechEnd": 142.28,
+      "end": 142.56,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "最高裁判所の対応、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 142.56,
+      "speechEnd": 147.228,
+      "end": 148.088,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "反対と法的立場に注意してください。"
+    }
+  ]
+}

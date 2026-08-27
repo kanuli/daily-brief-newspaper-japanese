@@ -1,0 +1,390 @@
+{
+  "version": 3,
+  "duration": 174.942,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 596,
+  "charactersPerMinute": 204.4,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 16.181,
+      "text": "Vivitarの人工知能サーバーは15 ％以上増加し、データセンターのメモリコストが上昇したと報告されています。"
+    },
+    {
+      "key": "dek",
+      "start": 16.181,
+      "end": 32.361,
+      "text": "Vera RubinやGrace Blackwellプラットフォームなど、2027年初頭の出荷システムが影響を受ける可能性があります。"
+    },
+    {
+      "key": "body-0",
+      "start": 32.361,
+      "end": 77.024,
+      "text": "フィデリティの最大の顧客の一部には、主にメモリチップのコストの急激な上昇により、人工知能チップを搭載したサーバーの価格がさまざまな構成で15 ％以上上昇すると通知されています。新しい価格は、Vera RubinやGrace Blackwellなどのプラットフォームを含む、2027年初頭に出荷を開始するシステムに適用される予定です。"
+    },
+    {
+      "key": "body-1",
+      "start": 77.024,
+      "end": 126.55,
+      "text": "マイクロソフト、グーグル、オラクルなどの大規模データセンター事業者向けにサーバーを組み立てているサプライヤーは、価格の変更を顧客に伝えていると伝えられています。フィデリティはこの報告書について正式にコメントしていない。市場はまた、今週の同社の四半期業績を見て、需要の強さがハードウェアコストの増加を相殺できるかどうかを評価する予定である。"
+    },
+    {
+      "key": "why",
+      "start": 126.55,
+      "end": 153.525,
+      "text": "大規模な人工知能サーバーが一般的に価格設定されている場合、クラウドオペレーターの資本支出、モデルトレーニングコスト、データセンターの投資リターンが影響を受けます。"
+    },
+    {
+      "key": "watch",
+      "start": 153.525,
+      "end": 174.942,
+      "text": "Vistraのパフォーマンス、サーバー価格レポートに対する同社の対応、およびメモリプロバイダからのその後の見積もりに注意を払ってください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.664,
+      "end": 7.944,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Vivitarの人工知能サーバーは15 ％以上増加し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.944,
+      "speechEnd": 11.497,
+      "end": 11.837,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "データセンターのメモリコストが"
+    },
+    {
+      "parentKey": "title",
+      "start": 11.837,
+      "speechEnd": 15.321,
+      "end": 16.181,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "上昇したと報告されています。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.181,
+      "speechEnd": 22.172,
+      "end": 22.452,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Vera RubinやGrace Blackwellプラットフォームなど、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.452,
+      "speechEnd": 27.399,
+      "end": 27.739,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "2027年初頭の出荷システムが"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.739,
+      "speechEnd": 31.501,
+      "end": 32.361,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "影響を受ける可能性があります。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 32.361,
+      "speechEnd": 36.96,
+      "end": 37.24,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "フィデリティの最大の顧客の一部には、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.24,
+      "speechEnd": 42.953,
+      "end": 43.233,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "主にメモリチップのコストの急激な上昇により、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.233,
+      "speechEnd": 48.249,
+      "end": 48.589,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "人工知能チップを搭載したサーバーの価格が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.589,
+      "speechEnd": 56.601,
+      "end": 57.221,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "さまざまな構成で15 ％以上上昇すると通知されています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.221,
+      "speechEnd": 59.729,
+      "end": 60.009,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "新しい価格は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.009,
+      "speechEnd": 67.464,
+      "end": 67.744,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Vera RubinやGrace Blackwellなどのプラットフォームを含む、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.744,
+      "speechEnd": 76.244,
+      "end": 77.024,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "2027年初頭に出荷を開始するシステムに適用される予定です。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 77.024,
+      "speechEnd": 79.323,
+      "end": 79.603,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マイクロソフト、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 79.603,
+      "speechEnd": 81.763,
+      "end": 82.043,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "グーグル、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.043,
+      "speechEnd": 89.01,
+      "end": 89.35,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "オラクルなどの大規模データセンター事業者向けにサーバーを"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 89.35,
+      "speechEnd": 92.764,
+      "end": 93.044,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "組み立てているサプライヤーは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.044,
+      "speechEnd": 99.663,
+      "end": 100.283,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "価格の変更を顧客に伝えていると伝えられています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 100.283,
+      "speechEnd": 106.832,
+      "end": 107.452,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "フィデリティはこの報告書について正式にコメントしていない。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.452,
+      "speechEnd": 109.681,
+      "end": 109.961,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "市場はまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.961,
+      "speechEnd": 114.629,
+      "end": 114.909,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今週の同社の四半期業績を見て、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.909,
+      "speechEnd": 119.926,
+      "end": 120.266,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "需要の強さがハードウェアコストの増加を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.266,
+      "speechEnd": 125.77,
+      "end": 126.55,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "相殺できるかどうかを評価する予定である。"
+    },
+    {
+      "parentKey": "why",
+      "start": 126.55,
+      "speechEnd": 130.521,
+      "end": 131.141,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 131.141,
+      "speechEnd": 134.834,
+      "end": 135.174,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "大規模な人工知能サーバーが"
+    },
+    {
+      "parentKey": "why",
+      "start": 135.174,
+      "speechEnd": 139.563,
+      "end": 139.843,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "一般的に価格設定されている場合、"
+    },
+    {
+      "parentKey": "why",
+      "start": 139.843,
+      "speechEnd": 143.814,
+      "end": 144.094,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "クラウドオペレーターの資本支出、"
+    },
+    {
+      "parentKey": "why",
+      "start": 144.094,
+      "speechEnd": 147.229,
+      "end": 147.509,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "モデルトレーニングコスト、"
+    },
+    {
+      "parentKey": "why",
+      "start": 147.509,
+      "speechEnd": 152.665,
+      "end": 153.525,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "データセンターの投資リターンが影響を受けます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 153.525,
+      "speechEnd": 155.615,
+      "end": 155.895,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 155.895,
+      "speechEnd": 159.309,
+      "end": 159.589,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Vistraのパフォーマンス、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 159.589,
+      "speechEnd": 164.745,
+      "end": 165.025,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "サーバー価格レポートに対する同社の対応、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 165.025,
+      "speechEnd": 174.082,
+      "end": 174.942,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "およびメモリプロバイダからのその後の見積もりに注意を払ってください。"
+    }
+  ]
+}

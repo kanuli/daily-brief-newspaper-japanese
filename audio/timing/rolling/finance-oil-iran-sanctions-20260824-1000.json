@@ -1,0 +1,320 @@
+{
+  "version": 3,
+  "duration": 141.767,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 395,
+  "charactersPerMinute": 167.2,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 16.471,
+      "text": "初期のアジアでは原油価格が1ドル以上下落し、投資家は米国の新たなイラン制裁に先立って利益を上げている"
+    },
+    {
+      "key": "dek",
+      "start": 16.471,
+      "end": 35.033,
+      "text": "ブレント原油は1バレル当たり93.17ドルに下落し、米国西テキサス中間原油は85.86ドルに下落した。"
+    },
+    {
+      "key": "body-0",
+      "start": 35.033,
+      "end": 81.865,
+      "text": "国際原油価格は月曜日にアジアで1ドル以上下落し、ブレント期間には1バレル当たり93.17ドル、米国西テキサス中間市場では85.86ドルに下落した。トレーダーは、ベセント米財務長官がイランに対する新たな制裁を発表する前に利益を上げたが、ホルムズ海峡の供給リスクは価格を高く維持した。"
+    },
+    {
+      "key": "body-1",
+      "start": 81.865,
+      "end": 111.613,
+      "text": "市場の焦点は、制裁が中国や他のバイヤーへのイランの原油の流れをさらに制限するかどうかにある。供給が再び引き締まった場合、エネルギーコストはインフレと長期債の利回りを押し上げる可能性があります。"
+    },
+    {
+      "key": "why",
+      "start": 111.613,
+      "end": 126.755,
+      "text": "石油価格はすぐにインフレ、金利、リスク選好に変換されます。"
+    },
+    {
+      "key": "watch",
+      "start": 126.755,
+      "end": 141.767,
+      "text": "制裁対象、イランの対応、ナビゲーション、原油価格に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.178,
+      "end": 7.458,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "初期のアジアでは原油価格が1ドル以上下落し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.458,
+      "speechEnd": 15.611,
+      "end": 16.471,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "投資家は米国の新たなイラン制裁に先立って利益を上げている。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.471,
+      "speechEnd": 24.973,
+      "end": 25.253,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ブレント原油は1バレル当たり93.17ドルに下落し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.253,
+      "speechEnd": 34.172,
+      "end": 35.033,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "米国西テキサス中間原油は85.86ドルに下落した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 35.033,
+      "speechEnd": 42.977,
+      "end": 43.257,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "国際原油価格は月曜日にアジアで1ドル以上下落し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.257,
+      "speechEnd": 50.504,
+      "end": 50.784,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ブレント期間には1バレル当たり93.17ドル、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.784,
+      "speechEnd": 59.634,
+      "end": 60.254,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "米国西テキサス中間市場では85.86ドルに下落した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.254,
+      "speechEnd": 62.554,
+      "end": 62.834,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "トレーダーは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.834,
+      "speechEnd": 69.872,
+      "end": 70.212,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ベセント米財務長官がイランに対する新たな制裁を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.212,
+      "speechEnd": 74.394,
+      "end": 74.674,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "発表する前に利益を上げたが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.674,
+      "speechEnd": 81.085,
+      "end": 81.865,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "ホルムズ海峡の供給リスクは価格を高く維持した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 81.865,
+      "speechEnd": 84.374,
+      "end": 84.654,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "市場の焦点は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.654,
+      "speechEnd": 92.249,
+      "end": 92.589,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "制裁が中国や他のバイヤーへのイランの原油の流れを"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.589,
+      "speechEnd": 96.631,
+      "end": 97.251,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "さらに制限するかどうかにある。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.251,
+      "speechEnd": 100.945,
+      "end": 101.225,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "供給が再び引き締まった場合、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.225,
+      "speechEnd": 106.73,
+      "end": 107.07,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "エネルギーコストはインフレと長期債の利回りを"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.07,
+      "speechEnd": 110.833,
+      "end": 111.613,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "押し上げる可能性があります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 111.613,
+      "speechEnd": 115.585,
+      "end": 116.206,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 116.206,
+      "speechEnd": 120.038,
+      "end": 120.318,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "石油価格はすぐにインフレ、"
+    },
+    {
+      "parentKey": "why",
+      "start": 120.318,
+      "speechEnd": 122.339,
+      "end": 122.619,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "金利、"
+    },
+    {
+      "parentKey": "why",
+      "start": 122.619,
+      "speechEnd": 125.894,
+      "end": 126.755,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "リスク選好に変換されます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 126.755,
+      "speechEnd": 128.845,
+      "end": 129.125,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 129.125,
+      "speechEnd": 131.355,
+      "end": 131.635,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "制裁対象、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 131.635,
+      "speechEnd": 133.935,
+      "end": 134.215,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イランの対応、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 134.215,
+      "speechEnd": 136.584,
+      "end": 136.864,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ナビゲーション、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 136.864,
+      "speechEnd": 140.906,
+      "end": 141.767,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "原油価格に注目してください。"
+    }
+  ]
+}

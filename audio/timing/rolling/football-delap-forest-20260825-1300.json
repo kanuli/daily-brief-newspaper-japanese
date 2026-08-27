@@ -1,0 +1,340 @@
+{
+  "version": 3,
+  "duration": 141.27,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 458,
+  "charactersPerMinute": 194.5,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 16.46,
+      "text": "ノッティンガム・フォレストはチェルシー・フォワードリアム・デラップとの契約に近づいており、移籍ウィンドウの終わりが加速されます"
+    },
+    {
+      "key": "dek",
+      "start": 16.46,
+      "end": 34.115,
+      "text": "フォレストはチェルシーとより深い交渉に入り、23歳のストライカーは現在、ザビ・アロンソチームの計画の中心にはいません。"
+    },
+    {
+      "key": "body-0",
+      "start": 34.115,
+      "end": 70.141,
+      "text": "ノッティンガム・フォレストは、23歳のストライカー、リアム・デラップについてチェルシーとの交渉を進めている。デラップは現在、チェルシーのファーストチームのポジションに制限されており、フォレストは移籍ウィンドウが閉じる前に最前線のオプションを追加したいと考えています。"
+    },
+    {
+      "key": "body-1",
+      "start": 70.141,
+      "end": 100.672,
+      "text": "フォレストはこの夏、多くの選手を追加しましたが、ストライカーとウイングガードを強化すべきポジションと見なしています。取引は正式に完了しておらず、送金手数料、個人的な条件、健康診断はまだ次のステップです。"
+    },
+    {
+      "key": "why",
+      "start": 100.672,
+      "end": 121.871,
+      "text": "デラップが移籍した場合、フォレストのフロントラインの深さとチェルシーのラインナップのクリアランスの進行状況の両方が変わります。"
+    },
+    {
+      "key": "watch",
+      "start": 121.871,
+      "end": 141.27,
+      "text": "2つの会議が正式な合意、移籍金、健康診断、クラブの公式発表に達しているかどうかに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.344,
+      "end": 3.684,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ノッティンガム・フォレストは"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.684,
+      "speechEnd": 10.652,
+      "end": 10.932,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "チェルシー・フォワードリアム・デラップとの契約に近づいており、"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.932,
+      "speechEnd": 15.6,
+      "end": 16.46,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "移籍ウィンドウの終わりが加速されます。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.46,
+      "speechEnd": 22.034,
+      "end": 22.314,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "フォレストはチェルシーとより深い交渉に入り、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.314,
+      "speechEnd": 26.565,
+      "end": 26.845,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "23歳のストライカーは現在、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.845,
+      "speechEnd": 33.255,
+      "end": 34.115,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ザビ・アロンソチームの計画の中心にはいません。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.115,
+      "speechEnd": 37.529,
+      "end": 37.809,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ノッティンガム・フォレストは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.809,
+      "speechEnd": 41.223,
+      "end": 41.503,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "23歳のストライカー、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.503,
+      "speechEnd": 47.704,
+      "end": 48.324,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "リアム・デラップについてチェルシーとの交渉を進めている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.324,
+      "speechEnd": 50.902,
+      "end": 51.182,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "デラップは現在、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.182,
+      "speechEnd": 57.871,
+      "end": 58.151,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "チェルシーのファーストチームのポジションに制限されており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.151,
+      "speechEnd": 61.635,
+      "end": 61.975,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "フォレストは移籍ウィンドウが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.975,
+      "speechEnd": 69.36,
+      "end": 70.141,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "閉じる前に最前線のオプションを追加したいと考えています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 70.141,
+      "speechEnd": 73.067,
+      "end": 73.347,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "フォレストはこの夏、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 73.347,
+      "speechEnd": 77.318,
+      "end": 77.598,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "多くの選手を追加しましたが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 77.598,
+      "speechEnd": 85.123,
+      "end": 85.743,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ストライカーとウイングガードを強化すべきポジションと見なしています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 85.743,
+      "speechEnd": 90.133,
+      "end": 90.413,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "取引は正式に完了しておらず、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.413,
+      "speechEnd": 92.782,
+      "end": 93.062,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "送金手数料、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.062,
+      "speechEnd": 95.57,
+      "end": 95.85,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "個人的な条件、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 95.85,
+      "speechEnd": 99.891,
+      "end": 100.672,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "健康診断はまだ次のステップです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 100.672,
+      "speechEnd": 104.643,
+      "end": 105.263,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 105.263,
+      "speechEnd": 108.468,
+      "end": 108.748,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "デラップが移籍した場合、"
+    },
+    {
+      "parentKey": "why",
+      "start": 108.748,
+      "speechEnd": 121.011,
+      "end": 121.871,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "フォレストのフロントラインの深さとチェルシーのラインナップのクリアランスの進行状況の両方が変わります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 121.871,
+      "speechEnd": 123.961,
+      "end": 124.241,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 124.241,
+      "speechEnd": 128.004,
+      "end": 128.284,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "2つの会議が正式な合意、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 128.284,
+      "speechEnd": 130.304,
+      "end": 130.585,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "移籍金、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 130.585,
+      "speechEnd": 132.744,
+      "end": 133.025,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "健康診断、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 133.025,
+      "speechEnd": 140.41,
+      "end": 141.27,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "クラブの公式発表に達しているかどうかに注意してください。"
+    }
+  ]
+}

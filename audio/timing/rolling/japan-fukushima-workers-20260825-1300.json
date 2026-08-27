@@ -1,0 +1,300 @@
+{
+  "version": 3,
+  "duration": 151.876,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 437,
+  "charactersPerMinute": 172.6,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 20.511,
+      "text": "福島第一原子力発電所の53,000人以上の労働者が高い放射線量を記録しており、長期的な労働衛生が新たな注目を集めています。"
+    },
+    {
+      "key": "dek",
+      "start": 20.511,
+      "end": 38.443,
+      "text": "東京電力は事故後の職員の累積暴露記録を多数開示しており、原子力発電所の余波は依然として長期的なプロジェクトである。"
+    },
+    {
+      "key": "body-0",
+      "start": 38.443,
+      "end": 80.054,
+      "text": "東京電力のデータによると、福島第一原子力発電所事故後の現場作業に携わった53,000人以上が、より高い放射線量を記録しています。このデータは、長期的な健康モニタリング、作業配分、および廃止されたエンジニアリングの労働安全性に新たな注目を集めました。"
+    },
+    {
+      "key": "body-1",
+      "start": 80.054,
+      "end": 115.601,
+      "text": "福島の廃炉にはまだ何年もかかると予想されており、燃料デブリの処理、汚染水管理、高リスク地域の運営が引き続き行われています。プロジェクトの進捗と労働者の曝露制御のバランスをとる方法は、日本の原子力の余波にとって重要な課題である。"
+    },
+    {
+      "key": "why",
+      "start": 115.601,
+      "end": 137.219,
+      "text": "多数の労働者の累積被ばく記録には、長期的な労働衛生および原子力廃止措置の安全システムが含まれている。"
+    },
+    {
+      "key": "watch",
+      "start": 137.219,
+      "end": 151.876,
+      "text": "厚生労働省及び東京電力の健康管理体制及び廃止措置の安全基準に注意する。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 5.644,
+      "end": 5.924,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "福島第一原子力発電所の53,"
+    },
+    {
+      "parentKey": "title",
+      "start": 5.924,
+      "speechEnd": 13.031,
+      "end": 13.311,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "000人以上の労働者が高い放射線量を記録しており、"
+    },
+    {
+      "parentKey": "title",
+      "start": 13.311,
+      "speechEnd": 19.651,
+      "end": 20.511,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "長期的な労働衛生が新たな注目を集めています。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.511,
+      "speechEnd": 28.524,
+      "end": 28.804,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "東京電力は事故後の職員の累積暴露記録を多数開示しており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 28.804,
+      "speechEnd": 37.583,
+      "end": 38.443,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "原子力発電所の余波は依然として長期的なプロジェクトである。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.443,
+      "speechEnd": 41.857,
+      "end": 42.137,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "東京電力のデータによると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.137,
+      "speechEnd": 51.335,
+      "end": 51.615,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "福島第一原子力発電所事故後の現場作業に携わった53,"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.615,
+      "speechEnd": 54.332,
+      "end": 54.612,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "000人以上が、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.612,
+      "speechEnd": 59.002,
+      "end": 59.622,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "より高い放射線量を記録しています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.622,
+      "speechEnd": 61.991,
+      "end": 62.271,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "このデータは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.271,
+      "speechEnd": 65.963,
+      "end": 66.244,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "長期的な健康モニタリング、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.244,
+      "speechEnd": 68.543,
+      "end": 68.823,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "作業配分、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.823,
+      "speechEnd": 79.274,
+      "end": 80.054,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "および廃止されたエンジニアリングの労働安全性に新たな注目を集めました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 80.054,
+      "speechEnd": 87.44,
+      "end": 87.72,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "福島の廃炉にはまだ何年もかかると予想されており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 87.72,
+      "speechEnd": 90.507,
+      "end": 90.787,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "燃料デブリの処理、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.787,
+      "speechEnd": 93.226,
+      "end": 93.506,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "汚染水管理、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.506,
+      "speechEnd": 99.289,
+      "end": 99.909,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "高リスク地域の運営が引き続き行われています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.909,
+      "speechEnd": 107.852,
+      "end": 108.132,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "プロジェクトの進捗と労働者の曝露制御のバランスをとる方法は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.132,
+      "speechEnd": 114.821,
+      "end": 115.601,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "日本の原子力の余波にとって重要な課題である。"
+    },
+    {
+      "parentKey": "why",
+      "start": 115.601,
+      "speechEnd": 119.572,
+      "end": 120.193,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 120.193,
+      "speechEnd": 125.488,
+      "end": 125.768,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "多数の労働者の累積被ばく記録には、"
+    },
+    {
+      "parentKey": "why",
+      "start": 125.768,
+      "speechEnd": 136.358,
+      "end": 137.219,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "長期的な労働衛生および原子力廃止措置の安全システムが含まれている。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 137.219,
+      "speechEnd": 139.309,
+      "end": 139.589,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 139.589,
+      "speechEnd": 151.016,
+      "end": 151.876,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "厚生労働省及び東京電力の健康管理体制及び廃止措置の安全基準に注意する。"
+    }
+  ]
+}

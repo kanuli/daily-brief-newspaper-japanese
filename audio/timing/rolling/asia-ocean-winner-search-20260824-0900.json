@@ -1,0 +1,360 @@
+{
+  "version": 3,
+  "duration": 150.439,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 436,
+  "charactersPerMinute": 173.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 17.366,
+      "text": "インド東海岸沖で貨物船が沈没した後も22人が行方不明となっており、沿岸警備隊と海軍は捜索救助を続けています"
+    },
+    {
+      "key": "dek",
+      "start": 17.366,
+      "end": 36.823,
+      "text": "パナマの貨物船「オーシャン・ビクトリー」には乗組員２４人が乗っており、うち２人は救助されたが、残り２２人はまだ見つかっていない。"
+    },
+    {
+      "key": "body-0",
+      "start": 36.823,
+      "end": 75.917,
+      "text": "パナマ貨物船「Oceanic Victory」がインドのオリシャ州沖で沈没した。中国人20人、ビルマ人3人、バングラデシュ人1人を含む合計24人の乗組員が乗船していました。救命いかだから2人が救助され、残りの22人はまだ行方不明です。"
+    },
+    {
+      "key": "body-1",
+      "start": 75.917,
+      "end": 106.158,
+      "text": "インド沿岸警備隊と海軍は捜索を続けるために多数の船舶を派遣し、近くの商船に協力を要請した。事故の原因はまだ発表されておらず、捜索エリアは海岸から遠く、海象や時間が捜索の進行に影響を及ぼす。"
+    },
+    {
+      "key": "why",
+      "start": 106.158,
+      "end": 131.46,
+      "text": "乗組員22名の行方は多国籍市民を巻き込んでいて未だに不明であり、捜索救助の進捗や事故の原因は公共の安全や船舶に直接的な懸念がある。"
+    },
+    {
+      "key": "watch",
+      "start": 131.46,
+      "end": 150.439,
+      "text": "インド当局が発表した新しい捜索救助結果、行方不明者の特定、貨物船の沈没原因の調査に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.037,
+      "end": 7.377,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "インド東海岸沖で貨物船が沈没した後も22人が"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.377,
+      "speechEnd": 10.652,
+      "end": 10.932,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "行方不明となっており、"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.932,
+      "speechEnd": 16.506,
+      "end": 17.366,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "沿岸警備隊と海軍は捜索救助を続けています。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.366,
+      "speechEnd": 22.94,
+      "end": 23.28,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "パナマの貨物船「オーシャン・ビクトリー」には"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.28,
+      "speechEnd": 27.181,
+      "end": 27.462,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "乗組員２４人が乗っており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.462,
+      "speechEnd": 31.085,
+      "end": 31.365,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "うち２人は救助されたが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 31.365,
+      "speechEnd": 35.963,
+      "end": 36.823,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "残り２２人はまだ見つかっていない。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.823,
+      "speechEnd": 42.536,
+      "end": 42.877,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "パナマ貨物船「Oceanic Victory」が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.877,
+      "speechEnd": 46.778,
+      "end": 47.398,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "インドのオリシャ州沖で沈没した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.398,
+      "speechEnd": 50.325,
+      "end": 50.605,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "中国人20人、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.605,
+      "speechEnd": 53.392,
+      "end": 53.672,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ビルマ人3人、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.672,
+      "speechEnd": 58.34,
+      "end": 58.52,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "バングラデシュ人1人を含む合計"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.52,
+      "speechEnd": 60.749,
+      "end": 60.929,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "24人"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.929,
+      "speechEnd": 64.483,
+      "end": 65.103,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "の乗組員が乗船していました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.103,
+      "speechEnd": 69.562,
+      "end": 69.842,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "救命いかだから2人が救助され、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.842,
+      "speechEnd": 75.137,
+      "end": 75.917,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "残りの22人はまだ行方不明です。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 75.917,
+      "speechEnd": 81.561,
+      "end": 81.901,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "インド沿岸警備隊と海軍は捜索を続けるため"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 81.901,
+      "speechEnd": 85.385,
+      "end": 85.665,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "に多数の船舶を派遣し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 85.665,
+      "speechEnd": 89.984,
+      "end": 90.605,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "近くの商船に協力を要請した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.605,
+      "speechEnd": 95.9,
+      "end": 96.18,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "事故の原因はまだ発表されておらず、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 96.18,
+      "speechEnd": 99.385,
+      "end": 99.665,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "捜索エリアは海岸から遠く、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.665,
+      "speechEnd": 105.378,
+      "end": 106.158,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "海象や時間が捜索の進行に影響を及ぼす。"
+    },
+    {
+      "parentKey": "why",
+      "start": 106.158,
+      "speechEnd": 110.13,
+      "end": 110.75,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 110.75,
+      "speechEnd": 119.947,
+      "end": 120.227,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "乗組員22名の行方は多国籍市民を巻き込んでいて未だに不明であり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 120.227,
+      "speechEnd": 124.616,
+      "end": 124.956,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "捜索救助の進捗や事故の原因は"
+    },
+    {
+      "parentKey": "why",
+      "start": 124.956,
+      "speechEnd": 130.6,
+      "end": 131.46,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "公共の安全や船舶に直接的な懸念がある。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 131.46,
+      "speechEnd": 133.55,
+      "end": 133.83,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 133.83,
+      "speechEnd": 139.613,
+      "end": 139.893,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インド当局が発表した新しい捜索救助結果、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 139.893,
+      "speechEnd": 143.168,
+      "end": 143.448,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "行方不明者の特定、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 143.448,
+      "speechEnd": 149.579,
+      "end": 150.439,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "貨物船の沈没原因の調査に注意してください。"
+    }
+  ]
+}

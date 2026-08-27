@@ -1,0 +1,380 @@
+{
+  "version": 3,
+  "duration": 170.136,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 522,
+  "charactersPerMinute": 184.1,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 12.636,
+      "text": "300億ドル以上の価値があると報じられているAIを活用した検索会社、Perplexity"
+    },
+    {
+      "key": "dek",
+      "start": 12.636,
+      "end": 35.028,
+      "text": "新ラウンドの資金調達の評価額は、人工知能エージェントの需要が高まっていることを反映して、1年前の200億ドル以上のレベルから50 ％以上上昇しました。"
+    },
+    {
+      "key": "body-0",
+      "start": 35.028,
+      "end": 79.982,
+      "text": "Fidelityは、人工知能検索および代理店会社であるPerplexityの新ラウンドの資金調達に参加するための交渉を行っていると伝えられている。これにより、同社の評価額が300億ドルを超える可能性がある。Perplexityは、1年前に資金調達を終了したときに約200億ドルの価値がありました。"
+    },
+    {
+      "key": "body-1",
+      "start": 79.982,
+      "end": 123.334,
+      "text": "伝えられるところによると、Perplexityの年間収益は、主にエンタープライズ人工知能エージェント製品のおかげで、年初の2億5000万ドル未満から7億5000万ドル以上に増加しました。資金調達が完了すれば、大手チップ企業が株式投資を通じてAIエコシステムを拡大し続けていることがわかります。"
+    },
+    {
+      "key": "why",
+      "start": 123.334,
+      "end": 150.04,
+      "text": "フィデリティの投資の方向性は、人工知能業界への資金の流れに影響を与え、また、高成長プロキシ製品の市場の評価スケールを反映しています。"
+    },
+    {
+      "key": "watch",
+      "start": 150.04,
+      "end": 170.136,
+      "text": "資金調達が正式に完了しているかどうか、投資家リスト、評価、および混乱収入の増加に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 9.197,
+      "end": 9.477,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "300億ドル以上の価値があると報じられているAIを活用した検索会社、"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.477,
+      "speechEnd": 11.776,
+      "end": 12.636,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "Perplexity。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.636,
+      "speechEnd": 17.235,
+      "end": 17.515,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "新ラウンドの資金調達の評価額は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.515,
+      "speechEnd": 24.552,
+      "end": 24.832,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "人工知能エージェントの需要が高まっていることを反映して、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.832,
+      "speechEnd": 34.168,
+      "end": 35.028,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "1年前の200億ドル以上のレベルから50 ％以上上昇しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 35.028,
+      "speechEnd": 37.397,
+      "end": 37.677,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Fidelityは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.677,
+      "speechEnd": 54.816,
+      "end": 55.436,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "人工知能検索および代理店会社であるPerplexityの新ラウンドの資金調達に参加するための交渉を行っていると伝えられている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.436,
+      "speechEnd": 57.666,
+      "end": 57.946,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "これにより、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.946,
+      "speechEnd": 64.844,
+      "end": 65.464,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "同社の評価額が300億ドルを超える可能性がある。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.464,
+      "speechEnd": 67.972,
+      "end": 68.252,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Perplexityは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.252,
+      "speechEnd": 73.686,
+      "end": 73.866,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "1年前に資金調達を終了したときに約"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.866,
+      "speechEnd": 76.235,
+      "end": 76.415,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "200億ドル"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.415,
+      "speechEnd": 79.202,
+      "end": 79.982,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "の価値がありました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 79.982,
+      "speechEnd": 83.536,
+      "end": 83.816,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "伝えられるところによると、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 83.816,
+      "speechEnd": 87.926,
+      "end": 88.206,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Perplexityの年間収益は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.206,
+      "speechEnd": 94.616,
+      "end": 94.896,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "主にエンタープライズ人工知能エージェント製品のおかげで、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.896,
+      "speechEnd": 100.888,
+      "end": 101.068,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "年初の2億5000万ドル未満から7億"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.068,
+      "speechEnd": 103.646,
+      "end": 103.826,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "5000万ドル"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.826,
+      "speechEnd": 106.822,
+      "end": 107.442,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "以上に増加しました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.442,
+      "speechEnd": 110.926,
+      "end": 111.206,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "資金調達が完了すれば、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.206,
+      "speechEnd": 118.034,
+      "end": 118.374,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "大手チップ企業が株式投資を通じてAIエコシステムを"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.374,
+      "speechEnd": 122.554,
+      "end": 123.334,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "拡大し続けていることがわかります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 123.334,
+      "speechEnd": 127.306,
+      "end": 127.926,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 127.926,
+      "speechEnd": 131.897,
+      "end": 132.177,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "フィデリティの投資の方向性は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 132.177,
+      "speechEnd": 139.005,
+      "end": 139.285,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "人工知能業界への資金の流れに影響を与え、"
+    },
+    {
+      "parentKey": "why",
+      "start": 139.285,
+      "speechEnd": 141.306,
+      "end": 141.586,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "また、"
+    },
+    {
+      "parentKey": "why",
+      "start": 141.586,
+      "speechEnd": 149.18,
+      "end": 150.04,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "高成長プロキシ製品の市場の評価スケールを反映しています。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 150.04,
+      "speechEnd": 152.13,
+      "end": 152.41,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 152.41,
+      "speechEnd": 157.915,
+      "end": 158.195,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "資金調達が正式に完了しているかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 158.195,
+      "speechEnd": 160.564,
+      "end": 160.844,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "投資家リスト、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 160.844,
+      "speechEnd": 162.864,
+      "end": 163.144,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "評価、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 163.144,
+      "speechEnd": 169.275,
+      "end": 170.136,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "および混乱収入の増加に注意してください。"
+    }
+  ]
+}

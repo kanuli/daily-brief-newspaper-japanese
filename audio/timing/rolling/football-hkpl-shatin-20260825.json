@@ -1,0 +1,320 @@
+{
+  "version": 3,
+  "duration": 144.64,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 462,
+  "charactersPerMinute": 191.6,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 15.636,
+      "text": "シャティン3対1で東洋を破り、3,329人がニュークォーターポートスーパーオープニングバトルに参戦"
+    },
+    {
+      "key": "dek",
+      "start": 15.636,
+      "end": 31.551,
+      "text": "大久保が最初に記録を樹立し、アーサーとスコットがシャティンに続き、香港の新シーズンが正式にスタートしました。"
+    },
+    {
+      "key": "body-0",
+      "start": 31.551,
+      "end": 68.903,
+      "text": "香港サッカー協会が発表した競技データによると、シャティンは香港スーパーオープニングバトルの新シーズンで3,329人の参加者で東3 ： 1を破った。大久保裕大久保は15分で12ヤードでスタートしたが、シャティンはアーサーやスコットなどの選手でフィニッシュした。"
+    },
+    {
+      "key": "body-1",
+      "start": 68.903,
+      "end": 107.451,
+      "text": "新シーズンには11チームが参加しており、第1ラウンドの結果はチームの自信と早期ランキングに影響します。2つのチームにとって、次のラウンドは新しいサポート、攻撃的および防御的な移行と身体状態を観察することになり、エントリーの数もリーグのビジネスとファンの熱意の重要な指標です。"
+    },
+    {
+      "key": "why",
+      "start": 107.451,
+      "end": 123.427,
+      "text": "シャティンの伝統的な強力なチームの敗北は、代表戦の第1ラウンドの結果です。"
+    },
+    {
+      "key": "watch",
+      "start": 123.427,
+      "end": 144.64,
+      "text": "2つのチームの次のラウンドのスケジュール、負傷の停止、新しいサポートのパフォーマンス、最初の月の入場傾向に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.111,
+      "end": 4.391,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "シャティン3対1で東洋を破り、"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.391,
+      "speechEnd": 6.343,
+      "end": 6.623,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "3,"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.623,
+      "speechEnd": 14.776,
+      "end": 15.636,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "329人がニュークォーターポートスーパーオープニングバトルに参戦。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.636,
+      "speechEnd": 19.956,
+      "end": 20.236,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "大久保が最初に記録を樹立し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.236,
+      "speechEnd": 24.139,
+      "end": 24.419,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アーサーとスコットがシャティンに続き、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.419,
+      "speechEnd": 30.69,
+      "end": 31.551,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "香港の新シーズンが正式にスタートしました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 31.551,
+      "speechEnd": 37.543,
+      "end": 37.823,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "香港サッカー協会が発表した競技データによると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.823,
+      "speechEnd": 46.046,
+      "end": 46.326,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "シャティンは香港スーパーオープニングバトルの新シーズンで3,"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.326,
+      "speechEnd": 50.925,
+      "end": 51.265,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "punctuation-semantic",
+      "text": "329人の参加者で東3 ："
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.265,
+      "speechEnd": 53.495,
+      "end": 54.115,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "1を破った。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.115,
+      "speechEnd": 62.129,
+      "end": 62.409,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "大久保裕大久保は15分で12ヤードでスタートしたが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.409,
+      "speechEnd": 68.123,
+      "end": 68.903,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "シャティンはアーサーやスコットなどの選手でフィニッシュした。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 68.903,
+      "speechEnd": 74.269,
+      "end": 74.549,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "新シーズンには11チームが参加しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 74.549,
+      "speechEnd": 82.284,
+      "end": 82.904,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "第1ラウンドの結果はチームの自信と早期ランキングに影響します。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.904,
+      "speechEnd": 85.901,
+      "end": 86.181,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "2つのチームにとって、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 86.181,
+      "speechEnd": 90.153,
+      "end": 90.433,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "次のラウンドは新しいサポート、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.433,
+      "speechEnd": 98.864,
+      "end": 99.145,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "攻撃的および防御的な移行と身体状態を観察することになり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.145,
+      "speechEnd": 106.67,
+      "end": 107.451,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "エントリーの数もリーグのビジネスとファンの熱意の重要な指標です。"
+    },
+    {
+      "parentKey": "why",
+      "start": 107.451,
+      "speechEnd": 111.423,
+      "end": 112.043,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 112.043,
+      "speechEnd": 117.478,
+      "end": 117.758,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "シャティンの伝統的な強力なチームの敗北は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 117.758,
+      "speechEnd": 122.566,
+      "end": 123.427,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "代表戦の第1ラウンドの結果です。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 123.427,
+      "speechEnd": 125.517,
+      "end": 125.797,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 125.797,
+      "speechEnd": 130.954,
+      "end": 131.234,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "2つのチームの次のラウンドのスケジュール、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 131.234,
+      "speechEnd": 133.603,
+      "end": 133.883,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "負傷の停止、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 133.883,
+      "speechEnd": 137.855,
+      "end": 138.135,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "新しいサポートのパフォーマンス、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 138.135,
+      "speechEnd": 143.78,
+      "end": 144.64,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "最初の月の入場傾向に注意してください。"
+    }
+  ]
+}

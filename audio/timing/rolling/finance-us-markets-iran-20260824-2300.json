@@ -1,0 +1,350 @@
+{
+  "version": 3,
+  "duration": 141.819,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 440,
+  "charactersPerMinute": 186.2,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 13.195,
+      "text": "米国株と原油価格の低迷、中東制裁のリスク、長期債務利子抑制のリスク選好"
+    },
+    {
+      "key": "dek",
+      "start": 13.195,
+      "end": 32.522,
+      "text": "S ＆ P 500とネバダ指数は圧力を受けており、エネルギー価格は約2 ％下落し、市場はインフレデータと中央銀行のシグナルを待っていました。"
+    },
+    {
+      "key": "body-0",
+      "start": 32.522,
+      "end": 69.165,
+      "text": "米国株は月曜日に軟化し、投資家が米国がイランに対する新たな制裁を発表するのを待っていたため、S&P 500とNASDAQは圧力を受けた。原油価格は同日に約2 ％下落したが、ホルムズ海峡の供給リスクは依然としてエネルギー市場に敏感である。"
+    },
+    {
+      "key": "body-1",
+      "start": 69.165,
+      "end": 101.158,
+      "text": "米国債の長期利回りは依然として高水準であり、テクノロジー株のバリュエーション圧力が高まっている。市場はまた、今週の個人消費者支出のインフレに関するデータ、ジャクソンホールでのFRB議長のスピーチ、そしてフィデリティの結果を待っています。"
+    },
+    {
+      "key": "why",
+      "start": 101.158,
+      "end": 122.0,
+      "text": "制裁とインフレは金利の期待を変える可能性があり、フィデリティの結果はAI取引全体に影響を与える可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 122.0,
+      "end": 141.819,
+      "text": "米国の制裁、原油価格、米国財務省のタームレート、インフレデータ、Fidelityの結果に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.111,
+      "end": 4.391,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国株と原油価格の低迷、"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.391,
+      "speechEnd": 7.457,
+      "end": 7.737,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "中東制裁のリスク、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.737,
+      "speechEnd": 12.335,
+      "end": 13.195,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "長期債務利子抑制のリスク選好。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.195,
+      "speechEnd": 18.978,
+      "end": 19.258,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "S ＆ P 500とネバダ指数は圧力を受けており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.258,
+      "speechEnd": 24.275,
+      "end": 24.555,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "エネルギー価格は約2 ％下落し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.555,
+      "speechEnd": 31.662,
+      "end": 32.522,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "市場はインフレデータと中央銀行のシグナルを待っていました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 32.522,
+      "speechEnd": 36.354,
+      "end": 36.634,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国株は月曜日に軟化し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.634,
+      "speechEnd": 42.835,
+      "end": 43.175,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "投資家が米国がイランに対する新たな制裁を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.175,
+      "speechEnd": 47.007,
+      "end": 47.287,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "発表するのを待っていたため、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.287,
+      "speechEnd": 52.095,
+      "end": 52.715,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "S&P 500とNASDAQは圧力を受けた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.715,
+      "speechEnd": 59.125,
+      "end": 59.405,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "原油価格は同日に約2 ％下落したが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.405,
+      "speechEnd": 63.167,
+      "end": 63.507,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ホルムズ海峡の供給リスクは"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.507,
+      "speechEnd": 68.385,
+      "end": 69.165,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "依然としてエネルギー市場に敏感である。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 69.165,
+      "speechEnd": 75.714,
+      "end": 75.994,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国債の長期利回りは依然として高水準であり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 75.994,
+      "speechEnd": 81.777,
+      "end": 82.397,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "テクノロジー株のバリュエーション圧力が高まっている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.397,
+      "speechEnd": 84.627,
+      "end": 84.907,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "市場はまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.907,
+      "speechEnd": 90.62,
+      "end": 90.9,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今週の個人消費者支出のインフレに関するデータ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.9,
+      "speechEnd": 95.847,
+      "end": 96.127,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ジャクソンホールでのFRB議長のスピーチ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 96.127,
+      "speechEnd": 100.377,
+      "end": 101.158,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "そしてフィデリティの結果を待っています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 101.158,
+      "speechEnd": 105.129,
+      "end": 105.749,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 105.749,
+      "speechEnd": 112.299,
+      "end": 112.579,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "制裁とインフレは金利の期待を変える可能性があり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 112.579,
+      "speechEnd": 117.386,
+      "end": 117.726,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "フィデリティの結果はAI取引全体に影響を"
+    },
+    {
+      "parentKey": "why",
+      "start": 117.726,
+      "speechEnd": 121.14,
+      "end": 122.0,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "与える可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 122.0,
+      "speechEnd": 124.091,
+      "end": 124.371,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 124.371,
+      "speechEnd": 126.879,
+      "end": 127.159,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国の制裁、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 127.159,
+      "speechEnd": 129.458,
+      "end": 129.738,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "原油価格、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 129.738,
+      "speechEnd": 133.361,
+      "end": 133.641,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国財務省のタームレート、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 133.641,
+      "speechEnd": 135.941,
+      "end": 136.221,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インフレデータ、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 136.221,
+      "speechEnd": 140.959,
+      "end": 141.819,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "Fidelityの結果に注目してください。"
+    }
+  ]
+}

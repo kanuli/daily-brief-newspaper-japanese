@@ -1,0 +1,370 @@
+{
+  "version": 3,
+  "duration": 176.771,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 512,
+  "charactersPerMinute": 173.8,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 18.852,
+      "text": "トランプ大統領、来年からカナダの自動車と部品に50％の関税を課すと脅し、米国とカナダの貿易摩擦が激化"
+    },
+    {
+      "key": "dek",
+      "start": 18.852,
+      "end": 33.371,
+      "text": "カナダの対抗関税は9月8日に発効し、北米の自動車サプライチェーンは次の主要な戦場になります。"
+    },
+    {
+      "key": "body-0",
+      "start": 33.371,
+      "end": 78.747,
+      "text": "ロイターは、米国とカナダの交渉が再開されなかった後、トランプ氏が自動車業界にさらに圧力をかけ、2027年1月1日からカナダ製の自動車、トラック、部品に50 ％の関税を課すと脅していると報じた。カナダのカーニー首相は以前、9月8日から米国製品の出荷に対する相互措置を発表していた。"
+    },
+    {
+      "key": "body-1",
+      "start": 78.747,
+      "end": 123.418,
+      "text": "北米の自動車産業は国境を越えた統合度が高く、米国とカナダの間で複数回部品を完成させることができます。50 ％の自動車関税が実施されれば、コストはすぐに両国の車両価格、サプライヤーの利益、製造雇用に移行し、USMCAの後継者の取り決めに関する不確実性が高まる可能性があります。"
+    },
+    {
+      "key": "why",
+      "start": 123.418,
+      "end": 152.215,
+      "text": "自動車関税は、一般的な商品関税よりも国境を越えた製造業や消費者物価に直接的な影響を及ぼし、米国とカナダの紛争における新たなエスカレーションとなっています。"
+    },
+    {
+      "key": "watch",
+      "start": 152.215,
+      "end": 176.771,
+      "text": "カナダの対策の完全なリスト、米国が正式に自動車関税文書を公開するかどうか、自動車メーカーが北米の生産能力を調整するかどうかに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.648,
+      "end": 2.928,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "トランプ大統領、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.928,
+      "speechEnd": 7.736,
+      "end": 7.916,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "来年からカナダの自動車と部品に"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.916,
+      "speechEnd": 10.076,
+      "end": 10.256,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "50％"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.256,
+      "speechEnd": 13.252,
+      "end": 13.532,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "の関税を課すと脅し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 13.532,
+      "speechEnd": 17.992,
+      "end": 18.852,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "米国とカナダの貿易摩擦が激化。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.852,
+      "speechEnd": 24.984,
+      "end": 25.264,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "カナダの対抗関税は9月8日に発効し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.264,
+      "speechEnd": 32.511,
+      "end": 33.371,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "北米の自動車サプライチェーンは次の主要な戦場になります。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 33.371,
+      "speechEnd": 35.531,
+      "end": 35.811,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイターは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 35.811,
+      "speechEnd": 41.316,
+      "end": 41.596,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国とカナダの交渉が再開されなかった後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.596,
+      "speechEnd": 47.728,
+      "end": 48.008,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "トランプ氏が自動車業界にさらに圧力をかけ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.008,
+      "speechEnd": 54.767,
+      "end": 55.047,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "2027年1月1日からカナダ製の自動車、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.047,
+      "speechEnd": 57.067,
+      "end": 57.348,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "トラック、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.348,
+      "speechEnd": 63.897,
+      "end": 64.518,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "部品に50 ％の関税を課すと脅していると報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.518,
+      "speechEnd": 68.629,
+      "end": 68.909,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "カナダのカーニー首相は以前、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.909,
+      "speechEnd": 77.967,
+      "end": 78.747,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "9月8日から米国製品の出荷に対する相互措置を発表していた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 78.747,
+      "speechEnd": 86.273,
+      "end": 86.553,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "北米の自動車産業は国境を越えた統合度が高く、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 86.553,
+      "speechEnd": 94.845,
+      "end": 95.465,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "米国とカナダの間で複数回部品を完成させることができます。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 95.465,
+      "speechEnd": 101.388,
+      "end": 101.668,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "50 ％の自動車関税が実施されれば、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.668,
+      "speechEnd": 106.336,
+      "end": 106.617,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "コストはすぐに両国の車両価格、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 106.617,
+      "speechEnd": 109.264,
+      "end": 109.544,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "サプライヤーの利益、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.544,
+      "speechEnd": 112.332,
+      "end": 112.612,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "製造雇用に移行し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.612,
+      "speechEnd": 118.953,
+      "end": 119.293,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "USMCAの後継者の取り決めに関する不確実性が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 119.293,
+      "speechEnd": 122.637,
+      "end": 123.418,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "高まる可能性があります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 123.418,
+      "speechEnd": 127.389,
+      "end": 128.009,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 128.009,
+      "speechEnd": 130.588,
+      "end": 130.868,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "自動車関税は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 130.868,
+      "speechEnd": 143.131,
+      "end": 143.411,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "一般的な商品関税よりも国境を越えた製造業や消費者物価に直接的な影響を及ぼし、"
+    },
+    {
+      "parentKey": "why",
+      "start": 143.411,
+      "speechEnd": 151.355,
+      "end": 152.215,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "米国とカナダの紛争における新たなエスカレーションとなっています。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 152.215,
+      "speechEnd": 154.306,
+      "end": 154.586,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 154.586,
+      "speechEnd": 158.488,
+      "end": 158.768,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "カナダの対策の完全なリスト、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 158.768,
+      "speechEnd": 166.084,
+      "end": 166.364,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国が正式に自動車関税文書を公開するかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 166.364,
+      "speechEnd": 175.91,
+      "end": 176.771,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "自動車メーカーが北米の生産能力を調整するかどうかに注意してください。"
+    }
+  ]
+}

@@ -1,0 +1,400 @@
+{
+  "version": 3,
+  "duration": 171.233,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 480,
+  "charactersPerMinute": 168.2,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 18.352,
+      "text": "日本政府は、9月から米の不足から「米の余剰」のリスクに至るまで、約20万トンの備蓄米の需給を買い戻す予定です。"
+    },
+    {
+      "key": "dek",
+      "start": 18.352,
+      "end": 37.4,
+      "text": "政府は今年初めに米の備蓄を発表して価格を下げたが、供給が改善するにつれて、当初の計画よりも早く買い戻されるものもある。"
+    },
+    {
+      "key": "body-0",
+      "start": 37.4,
+      "end": 77.878,
+      "text": "日本政府は、9月に20万トン前後の米備蓄買い戻しを開始する準備を進めている。米価の高騰と供給不足のため、政府は今年初めに一部の米備蓄を公表したが、新米の上場と需給の改善の後、市場は供給過剰が農家の収入を押し下げるのではないかと懸念し始めた。"
+    },
+    {
+      "key": "body-1",
+      "start": 77.878,
+      "end": 124.428,
+      "text": "買い戻しの取り決めは、単に市場供給を増やすことから消費者物価と生産者収益のバランスを取ることへの政策焦点のシフトを反映している。実際の買い戻し価格、タイミング、小売米価格への影響は依然として観察される必要があり、次の季節の植栽と在庫に関する農家協会、卸売業者、農家の判断にも影響を与えます。"
+    },
+    {
+      "key": "why",
+      "start": 124.428,
+      "end": 153.645,
+      "text": "政策の転換は、需要と供給の状況が急速に変化していることを示しており、これは家計の食料支出、農家の収入、政府の食料安全保障戦略に直接影響しています。"
+    },
+    {
+      "key": "watch",
+      "start": 153.645,
+      "end": 171.233,
+      "text": "農林水産省の公式買戻し規模、価格、小売米価格、新米在庫の変化に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.648,
+      "end": 2.928,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本政府は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.928,
+      "speechEnd": 10.662,
+      "end": 10.942,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "9月から米の不足から「米の余剰」のリスクに至るまで、"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.942,
+      "speechEnd": 17.491,
+      "end": 18.352,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "約20万トンの備蓄米の需給を買い戻す予定です。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.352,
+      "speechEnd": 26.225,
+      "end": 26.505,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "政府は今年初めに米の備蓄を発表して価格を下げたが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.505,
+      "speechEnd": 30.059,
+      "end": 30.339,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "供給が改善するにつれて、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 30.339,
+      "speechEnd": 36.54,
+      "end": 37.4,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "当初の計画よりも早く買い戻されるものもある。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.4,
+      "speechEnd": 40.048,
+      "end": 40.328,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本政府は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.328,
+      "speechEnd": 46.041,
+      "end": 46.381,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "9月に20万トン前後の米備蓄買い戻しを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.381,
+      "speechEnd": 49.726,
+      "end": 50.346,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "開始する準備を進めている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.346,
+      "speechEnd": 54.736,
+      "end": 55.016,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米価の高騰と供給不足のため、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.016,
+      "speechEnd": 61.844,
+      "end": 62.124,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "政府は今年初めに一部の米備蓄を公表したが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.124,
+      "speechEnd": 66.583,
+      "end": 66.863,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "新米の上場と需給の改善の後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.863,
+      "speechEnd": 73.622,
+      "end": 73.962,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "市場は供給過剰が農家の収入を押し下げるのでは"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.962,
+      "speechEnd": 77.097,
+      "end": 77.878,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "ないかと懸念し始めた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 77.878,
+      "speechEnd": 81.013,
+      "end": 81.293,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "買い戻しの取り決めは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 81.293,
+      "speechEnd": 90.142,
+      "end": 90.482,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "単に市場供給を増やすことから消費者物価と生産者収益のバランスを"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.482,
+      "speechEnd": 96.753,
+      "end": 97.373,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "取ることへの政策焦点のシフトを反映している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.373,
+      "speechEnd": 100.508,
+      "end": 100.788,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "実際の買い戻し価格、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 100.788,
+      "speechEnd": 102.948,
+      "end": 103.228,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "タイミング、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.228,
+      "speechEnd": 110.684,
+      "end": 110.964,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "小売米価格への影響は依然として観察される必要があり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 110.964,
+      "speechEnd": 116.329,
+      "end": 116.609,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "次の季節の植栽と在庫に関する農家協会、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 116.609,
+      "speechEnd": 118.839,
+      "end": 119.119,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "卸売業者、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 119.119,
+      "speechEnd": 123.648,
+      "end": 124.428,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "農家の判断にも影響を与えます。"
+    },
+    {
+      "parentKey": "why",
+      "start": 124.428,
+      "speechEnd": 128.399,
+      "end": 129.02,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 129.02,
+      "speechEnd": 131.737,
+      "end": 132.017,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "政策の転換は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 132.017,
+      "speechEnd": 138.845,
+      "end": 139.125,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "需要と供給の状況が急速に変化していることを示しており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 139.125,
+      "speechEnd": 142.818,
+      "end": 143.098,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "これは家計の食料支出、"
+    },
+    {
+      "parentKey": "why",
+      "start": 143.098,
+      "speechEnd": 145.676,
+      "end": 145.956,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "農家の収入、"
+    },
+    {
+      "parentKey": "why",
+      "start": 145.956,
+      "speechEnd": 152.785,
+      "end": 153.645,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "政府の食料安全保障戦略に直接影響しています。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 153.645,
+      "speechEnd": 155.735,
+      "end": 156.015,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 156.015,
+      "speechEnd": 160.474,
+      "end": 160.754,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "農林水産省の公式買戻し規模、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 160.754,
+      "speechEnd": 162.775,
+      "end": 163.055,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "価格、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 163.055,
+      "speechEnd": 165.494,
+      "end": 165.774,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "小売米価格、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 165.774,
+      "speechEnd": 170.372,
+      "end": 171.233,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "新米在庫の変化に注意してください。"
+    }
+  ]
+}

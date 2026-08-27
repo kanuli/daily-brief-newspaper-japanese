@@ -1,0 +1,380 @@
+{
+  "version": 3,
+  "duration": 173.14,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 493,
+  "charactersPerMinute": 170.8,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 16.738,
+      "text": "税関は上水工業ビルで1100万元以上の規制薬物を検査した2人が逮捕され、本日裁判所に持ち込まれた"
+    },
+    {
+      "key": "dek",
+      "start": 16.738,
+      "end": 39.748,
+      "text": "この作戦では、媚薬や抗がん剤の疑いのある40万以上の医薬品が押収され、税関は密輸された薬物を分配して保管するために使用されたと考えています。"
+    },
+    {
+      "key": "body-0",
+      "start": 39.748,
+      "end": 79.882,
+      "text": "上水市の工業ビル内の医薬品流通・貯蔵倉庫で、推定市場価値1,100万香港ドルを超える40万以上の規制薬物が香港税関によって押収されました。これらには、多数の男性用性機能薬や抗がん薬が含まれ、そのほとんどが法的に規制された成分を含んでいます。"
+    },
+    {
+      "key": "body-1",
+      "start": 79.882,
+      "end": 129.625,
+      "text": "税関は56歳の女性と51歳の男性を双方向通行証で逮捕した。当局は、関与した薬物のほとんどが南アジアからのものであり、商品は他の場所に出荷される前に単位で分配されたと考えています。発信元、最終的な宛先、およびケースがより大きなクロスボーダーネットワークに関与しているかどうかは、依然として調査の焦点です。"
+    },
+    {
+      "key": "why",
+      "start": 129.625,
+      "end": 151.861,
+      "text": "ケースの量と価値は膨大であり、法執行機関や患者の投薬の安全性に影響を与える抗がん剤などの高リスク薬が含まれています。"
+    },
+    {
+      "key": "watch",
+      "start": 151.861,
+      "end": 173.14,
+      "text": "結果、正式な料金、薬物の出所と目的地、税関が事件に関与した他の人々を拘束するかどうかに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.873,
+      "end": 8.213,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "税関は上水工業ビルで1100万元以上の規制薬物を"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.213,
+      "speechEnd": 11.975,
+      "end": 12.255,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "検査した2人が逮捕され、"
+    },
+    {
+      "parentKey": "title",
+      "start": 12.255,
+      "speechEnd": 15.878,
+      "end": 16.738,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "本日裁判所に持ち込まれた。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.738,
+      "speechEnd": 19.455,
+      "end": 19.735,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この作戦では、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.735,
+      "speechEnd": 28.444,
+      "end": 28.724,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "媚薬や抗がん剤の疑いのある40万以上の医薬品が押収され、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 28.724,
+      "speechEnd": 34.995,
+      "end": 35.335,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "税関は密輸された薬物を分配して保管するため"
+    },
+    {
+      "parentKey": "dek",
+      "start": 35.335,
+      "speechEnd": 38.888,
+      "end": 39.748,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "に使用されたと考えています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.748,
+      "speechEnd": 46.854,
+      "end": 47.134,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "上水市の工業ビル内の医薬品流通・貯蔵倉庫で、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.134,
+      "speechEnd": 49.712,
+      "end": 49.992,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "推定市場価値1,"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.992,
+      "speechEnd": 57.517,
+      "end": 57.857,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "100万香港ドルを超える40万以上の規制薬物が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.857,
+      "speechEnd": 62.525,
+      "end": 63.145,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "香港税関によって押収されました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.145,
+      "speechEnd": 65.444,
+      "end": 65.724,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "これらには、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.724,
+      "speechEnd": 71.855,
+      "end": 72.135,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "多数の男性用性機能薬や抗がん薬が含まれ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.135,
+      "speechEnd": 79.102,
+      "end": 79.882,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "そのほとんどが法的に規制された成分を含んでいます。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 79.882,
+      "speechEnd": 86.431,
+      "end": 86.771,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "税関は56歳の女性と51歳の男性を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 86.771,
+      "speechEnd": 90.603,
+      "end": 91.223,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "双方向通行証で逮捕した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.223,
+      "speechEnd": 93.313,
+      "end": 93.593,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "当局は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.593,
+      "speechEnd": 101.048,
+      "end": 101.328,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "関与した薬物のほとんどが南アジアからのものであり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.328,
+      "speechEnd": 109.689,
+      "end": 110.309,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "商品は他の場所に出荷される前に単位で分配されたと考えています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 110.309,
+      "speechEnd": 112.399,
+      "end": 112.679,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "発信元、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.679,
+      "speechEnd": 115.326,
+      "end": 115.606,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "最終的な宛先、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.606,
+      "speechEnd": 124.733,
+      "end": 125.013,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "およびケースがより大きなクロスボーダーネットワークに関与しているかどうかは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 125.013,
+      "speechEnd": 128.845,
+      "end": 129.625,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "依然として調査の焦点です。"
+    },
+    {
+      "parentKey": "why",
+      "start": 129.625,
+      "speechEnd": 133.597,
+      "end": 134.217,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 134.217,
+      "speechEnd": 138.049,
+      "end": 138.329,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ケースの量と価値は膨大であり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 138.329,
+      "speechEnd": 145.923,
+      "end": 146.263,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "法執行機関や患者の投薬の安全性に影響を与える抗が"
+    },
+    {
+      "parentKey": "why",
+      "start": 146.263,
+      "speechEnd": 151.0,
+      "end": 151.861,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ん剤などの高リスク薬が含まれています。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 151.861,
+      "speechEnd": 153.951,
+      "end": 154.231,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 154.231,
+      "speechEnd": 156.251,
+      "end": 156.531,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "結果、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 156.531,
+      "speechEnd": 158.97,
+      "end": 159.25,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "正式な料金、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 159.25,
+      "speechEnd": 162.594,
+      "end": 162.874,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "薬物の出所と目的地、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 162.874,
+      "speechEnd": 172.279,
+      "end": 173.14,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "税関が事件に関与した他の人々を拘束するかどうかに注意してください。"
+    }
+  ]
+}

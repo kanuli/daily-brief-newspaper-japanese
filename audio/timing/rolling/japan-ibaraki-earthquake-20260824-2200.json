@@ -1,0 +1,340 @@
+{
+  "version": 3,
+  "duration": 141.479,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 371,
+  "charactersPerMinute": 157.3,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 17.375,
+      "text": "茨城県南部で発生したマグニチュード5.9の地震で少なくとも37人が負傷、首都圏は余震への警戒が続いている。"
+    },
+    {
+      "key": "dek",
+      "start": 17.375,
+      "end": 33.001,
+      "text": "震源の深さは約70キロで、津波の脅威はなかった。一部の交通機関と給水が一時的に影響を受けた。"
+    },
+    {
+      "key": "body-0",
+      "start": 33.001,
+      "end": 74.469,
+      "text": "8月23日未明、関東地方でマグニチュード5.9の地震が発生した。震源地は茨城県南部、震源の深さは約70キロだった。東京、埼玉、千葉、神奈川、茨城で大きな揺れが記録され、５都県で少なくとも３７人が負傷した。"
+    },
+    {
+      "key": "body-1",
+      "start": 74.469,
+      "end": 104.293,
+      "text": "この地震では津波警報は発令されず、原子力施設にも異常は報告されなかった。一部の鉄道は一時遅れ、東京の江東区では地下のパイプが破損した。住民らは引き続き来週の余震に注意するよう呼び掛けた。"
+    },
+    {
+      "key": "why",
+      "start": 104.293,
+      "end": 127.656,
+      "text": "多くの人が傷つき、隣に影響を与える交通道路に給水、震動、そして基地建設が公共の安全上の意義を持っている。"
+    },
+    {
+      "key": "watch",
+      "start": 127.656,
+      "end": 141.479,
+      "text": "負傷者の数や交通・水道の復旧状況、気象庁の余震状況に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 11.497,
+      "end": 11.777,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "茨城県南部で発生したマグニチュード5.9の地震で少なくとも37人が負傷、"
+    },
+    {
+      "parentKey": "title",
+      "start": 11.777,
+      "speechEnd": 16.515,
+      "end": 17.375,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "首都圏は余震への警戒が続いている。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.375,
+      "speechEnd": 21.974,
+      "end": 22.254,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "震源の深さは約70キロで、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.254,
+      "speechEnd": 25.25,
+      "end": 25.87,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "津波の脅威はなかった。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.87,
+      "speechEnd": 32.141,
+      "end": 33.001,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "一部の交通機関と給水が一時的に影響を受けた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 33.001,
+      "speechEnd": 36.555,
+      "end": 36.835,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "8月23日未明、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.835,
+      "speechEnd": 44.012,
+      "end": 44.632,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "関東地方でマグニチュード5.9の地震が発生した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.632,
+      "speechEnd": 48.255,
+      "end": 48.535,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "震源地は茨城県南部、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.535,
+      "speechEnd": 53.273,
+      "end": 53.893,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "震源の深さは約70キロだった。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.893,
+      "speechEnd": 55.914,
+      "end": 56.194,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "東京、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.194,
+      "speechEnd": 58.215,
+      "end": 58.495,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "埼玉、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.495,
+      "speechEnd": 60.515,
+      "end": 60.795,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "千葉、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.795,
+      "speechEnd": 62.886,
+      "end": 63.166,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "神奈川、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.166,
+      "speechEnd": 67.068,
+      "end": 67.348,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "茨城で大きな揺れが記録され、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.348,
+      "speechEnd": 73.688,
+      "end": 74.469,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "５都県で少なくとも３７人が負傷した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 74.469,
+      "speechEnd": 79.834,
+      "end": 80.114,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この地震では津波警報は発令されず、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 80.114,
+      "speechEnd": 85.618,
+      "end": 86.239,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "原子力施設にも異常は報告されなかった。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 86.239,
+      "speechEnd": 89.792,
+      "end": 90.072,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "一部の鉄道は一時遅れ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.072,
+      "speechEnd": 96.134,
+      "end": 96.754,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "東京の江東区では地下のパイプが破損した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 96.754,
+      "speechEnd": 103.513,
+      "end": 104.293,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "住民らは引き続き来週の余震に注意するよう呼び掛けた。"
+    },
+    {
+      "parentKey": "why",
+      "start": 104.293,
+      "speechEnd": 108.265,
+      "end": 108.885,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 108.885,
+      "speechEnd": 111.811,
+      "end": 112.091,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "多くの人が傷つき、"
+    },
+    {
+      "parentKey": "why",
+      "start": 112.091,
+      "speechEnd": 117.108,
+      "end": 117.388,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "隣に影響を与える交通道路に給水、"
+    },
+    {
+      "parentKey": "why",
+      "start": 117.388,
+      "speechEnd": 119.409,
+      "end": 119.689,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "震動、"
+    },
+    {
+      "parentKey": "why",
+      "start": 119.689,
+      "speechEnd": 126.796,
+      "end": 127.656,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "そして基地建設が公共の安全上の意義を持っている。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 127.656,
+      "speechEnd": 129.747,
+      "end": 130.027,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 130.027,
+      "speechEnd": 135.392,
+      "end": 135.672,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "負傷者の数や交通・水道の復旧状況、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 135.672,
+      "speechEnd": 140.619,
+      "end": 141.479,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "気象庁の余震状況に注目してください。"
+    }
+  ]
+}

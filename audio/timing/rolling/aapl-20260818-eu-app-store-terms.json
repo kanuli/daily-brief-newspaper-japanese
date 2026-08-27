@@ -1,0 +1,410 @@
+{
+  "version": 3,
+  "duration": 200.934,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 625,
+  "charactersPerMinute": 186.6,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 15.275,
+      "text": "Apple、EU App Storeの課金を再構築： 10月1日に開始される新しい統一された商用規約"
+    },
+    {
+      "key": "dek",
+      "start": 15.275,
+      "end": 39.895,
+      "text": "Appleは、標準的なIAPコミッションが26 ％に調整され、古い料金体系の一部を5 ％のコアテクノロジーコミッションに置き換えたことを正式に確認しました。"
+    },
+    {
+      "key": "body-0",
+      "start": 39.895,
+      "end": 98.19,
+      "text": "Appleの公式デベロッパードキュメントによると、新しいEU App Store商用利用規約は10月1日に発効します。標準のAppleアプリ内購入取引手数料は26 ％に変更され、特定の条件を満たしている場合はより低い料金が適用されます。App Storeでの代替支払いにも新しい手数料の手配が行われ、App Store以外で配布されるアプリの場合、元のインストールあたりのコアテクノロジ手数料は5 ％に変更されます。"
+    },
+    {
+      "key": "body-1",
+      "start": 98.19,
+      "end": 153.167,
+      "text": "この調整は、Appleの高収益サービス事業の収益化モデルに直接関連しています。料金の引き下げと代替支払いオプションは、一部の開発者コストを削減することができますが、App Storeの手数料収入を圧縮する可能性もあります。一方、新しいシステムは複数の古い手数料を簡素化するため、実際の財務的影響は、大規模な開発者が採用している外部支払いと代替流通の割合に依存します。"
+    },
+    {
+      "key": "why",
+      "start": 153.167,
+      "end": 178.889,
+      "text": "新しい手数料は、App Storeの収益化とデベロッパーエコノミーに直接影響を与えます。これは、サービスビジネスの実質的なルールの変更です。"
+    },
+    {
+      "key": "watch",
+      "start": 178.889,
+      "end": 200.934,
+      "text": "10月1日の正式な導入後、EUにおける大規模な開発者の採用率、サービス収益、およびその後の規制対応に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.09,
+      "end": 2.37,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Apple、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.37,
+      "speechEnd": 6.62,
+      "end": 6.96,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "punctuation-semantic",
+      "text": "EU App Storeの課金を再構築："
+    },
+    {
+      "parentKey": "title",
+      "start": 6.96,
+      "speechEnd": 14.415,
+      "end": 15.275,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "10月1日に開始される新しい統一された商用規約。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.275,
+      "speechEnd": 17.435,
+      "end": 17.715,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Appleは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.715,
+      "speechEnd": 24.542,
+      "end": 24.822,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "標準的なIAPコミッションが26 ％に調整され、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.822,
+      "speechEnd": 39.035,
+      "end": 39.895,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "古い料金体系の一部を5 ％のコアテクノロジーコミッションに置き換えたことを正式に確認しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.895,
+      "speechEnd": 45.19,
+      "end": 45.47,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Appleの公式デベロッパードキュメントによると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.47,
+      "speechEnd": 50.696,
+      "end": 51.036,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "新しいEU App Store商用利用規約は"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.036,
+      "speechEnd": 54.589,
+      "end": 55.209,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "10月1日に発効します。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.209,
+      "speechEnd": 63.918,
+      "end": 64.198,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "標準のAppleアプリ内購入取引手数料は26 ％に変更され、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.198,
+      "speechEnd": 68.587,
+      "end": 68.927,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "特定の条件を満たしている場合は"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.927,
+      "speechEnd": 72.55,
+      "end": 73.17,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "より低い料金が適用されます。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.17,
+      "speechEnd": 81.67,
+      "end": 81.95,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "App Storeでの代替支払いにも新しい手数料の手配が行われ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 81.95,
+      "speechEnd": 87.245,
+      "end": 87.525,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "App Store以外で配布されるアプリの場合、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 87.525,
+      "speechEnd": 93.447,
+      "end": 93.787,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "元のインストールあたりのコアテクノロジ手数料は"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 93.787,
+      "speechEnd": 97.409,
+      "end": 98.19,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "5 ％に変更されます。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 98.19,
+      "speechEnd": 100.558,
+      "end": 100.838,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この調整は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 100.838,
+      "speechEnd": 109.478,
+      "end": 110.098,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "Appleの高収益サービス事業の収益化モデルに直接関連しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 110.098,
+      "speechEnd": 114.975,
+      "end": 115.255,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "料金の引き下げと代替支払いオプションは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.255,
+      "speechEnd": 121.734,
+      "end": 122.014,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "一部の開発者コストを削減することができますが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 122.014,
+      "speechEnd": 129.26,
+      "end": 129.88,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "App Storeの手数料収入を圧縮する可能性もあります。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 129.88,
+      "speechEnd": 131.9,
+      "end": 132.18,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "一方、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 132.18,
+      "speechEnd": 138.938,
+      "end": 139.218,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "新しいシステムは複数の古い手数料を簡素化するため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 139.218,
+      "speechEnd": 142.423,
+      "end": 142.703,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "実際の財務的影響は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 142.703,
+      "speechEnd": 152.387,
+      "end": 153.167,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "大規模な開発者が採用している外部支払いと代替流通の割合に依存します。"
+    },
+    {
+      "parentKey": "why",
+      "start": 153.167,
+      "speechEnd": 157.139,
+      "end": 157.759,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 157.759,
+      "speechEnd": 160.545,
+      "end": 160.826,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "新しい手数料は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 160.826,
+      "speechEnd": 169.325,
+      "end": 169.945,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "App Storeの収益化とデベロッパーエコノミーに直接影響を与えます。"
+    },
+    {
+      "parentKey": "why",
+      "start": 169.945,
+      "speechEnd": 172.035,
+      "end": 172.316,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "これは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 172.316,
+      "speechEnd": 178.028,
+      "end": 178.889,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "サービスビジネスの実質的なルールの変更です。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 178.889,
+      "speechEnd": 180.979,
+      "end": 181.259,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 181.259,
+      "speechEnd": 185.718,
+      "end": 185.998,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "10月1日の正式な導入後、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 185.998,
+      "speechEnd": 190.875,
+      "end": 191.155,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "EUにおける大規模な開発者の採用率、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 191.155,
+      "speechEnd": 193.523,
+      "end": 193.803,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "サービス収益、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 193.803,
+      "speechEnd": 200.074,
+      "end": 200.934,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "およびその後の規制対応に注意してください。"
+    }
+  ]
+}
