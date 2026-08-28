@@ -1,0 +1,40 @@
+name: Editor-in-Chief Recovery Recheck Bridge
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows:
+      - '日本語ニュース同期・品質ゲート・Discord配信'
+      - '日本語ローリング翻訳品質修復'
+      - 'Japanese Site Auto Maintenance'
+    types: [completed]
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: editor-in-chief-recovery-recheck
+  cancel-in-progress: true
+
+jobs:
+  recheck:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Re-run Editor-in-Chief after recovery finishes
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const upstream = context.payload.workflow_run || null;
+            if (upstream) {
+              core.info(`RECOVERY_COMPLETED name=${upstream.name} run=${upstream.id} conclusion=${upstream.conclusion}`);
+            }
+            await github.rest.actions.createWorkflowDispatch({
+              owner,
+              repo,
+              workflow_id: 'editor-in-chief-newsroom-robot.yml',
+              ref: 'main',
+            });
+            core.info('EDITOR_IN_CHIEF_RECHECK_DISPATCHED');
