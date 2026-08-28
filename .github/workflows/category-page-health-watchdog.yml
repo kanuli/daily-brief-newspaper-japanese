@@ -35,6 +35,7 @@ jobs:
           script: |
             const { owner, repo } = context.repo;
             const sourceRepo = 'daily-brief-newspaper';
+            const HOURLY_TOLERANCE_MS = 60 * 60 * 1000;
 
             async function rawAt(repoName, path) {
               try {
@@ -66,7 +67,21 @@ jobs:
             }
 
             function payloadDay(payload) {
-              return isoDay(payload?.date || payload?.generatedAt || payload?.sourceGeneratedAt || '');
+              return isoDay(payload?.date || payload?.generatedAt || payload?.sourceGeneratedAt || payload?.lastUpdated || '');
+            }
+
+            function payloadTimestamp(payload) {
+              const values = [
+                payload?.generatedAt,
+                payload?.lastUpdated,
+                payload?.sourceGeneratedAt,
+                payload?.checkedAt,
+              ];
+              for (const value of values) {
+                const stamp = Date.parse(String(value || ''));
+                if (Number.isFinite(stamp)) return stamp;
+              }
+              return null;
             }
 
             function maxDay(...values) {
@@ -76,6 +91,16 @@ jobs:
             function lagDays(candidate, reference) {
               const a = dayNumber(candidate), b = dayNumber(reference);
               return a === null || b === null ? null : b - a;
+            }
+
+            function lagMinutes(candidateMs, referenceMs) {
+              if (!Number.isFinite(candidateMs) || !Number.isFinite(referenceMs)) return null;
+              return Math.max(0, Math.floor((referenceMs - candidateMs) / 60000));
+            }
+
+            function withinHourlyTolerance(candidateMs, referenceMs) {
+              return Number.isFinite(candidateMs) && Number.isFinite(referenceMs) &&
+                candidateMs >= referenceMs - HOURLY_TOLERANCE_MS;
             }
 
             function stories(value, out = []) {
@@ -154,17 +179,26 @@ jobs:
               return;
             }
 
-            const topic = await jsonAt(repo, `data/topic-more/${latest.date}.json`);
+            const currentPublicationDate = maxDay(latest?.date, live?.date, payloadDay(sourceDesk));
+            const topic = await jsonAt(repo, `data/topic-more/${currentPublicationDate || latest.date}.json`);
             const dailyStories = stories(latest?.articles || []);
             const liveStories = stories(live?.items || []);
             const topicStories = stories(topic || {});
             const deskStories = stories(localDesk || {});
             const sourceDeskStories = stories(sourceDesk || {});
+
             const sourceDate = payloadDay(sourceDesk);
             const referenceDate = maxDay(latest.date, live?.date, sourceDate);
             const localDeskDate = payloadDay(localDesk);
             const deskLag = lagDays(localDeskDate, sourceDate);
-            const deskCurrent = Boolean(localDeskDate && sourceDate && deskLag !== null && deskLag <= 0);
+            const sourceDeskMs = payloadTimestamp(sourceDesk);
+            const localDeskMs = payloadTimestamp(localDesk);
+            const liveMs = payloadTimestamp(live);
+            const topicMs = payloadTimestamp(topic);
+            const deskLagMinutes = lagMinutes(localDeskMs, sourceDeskMs);
+            const deskCurrent = withinHourlyTolerance(localDeskMs, sourceDeskMs);
+            const liveCurrent = withinHourlyTolerance(liveMs, sourceDeskMs);
+            const topicCurrent = withinHourlyTolerance(topicMs, sourceDeskMs);
 
             const pageFailures = [];
             const pageRows = [];
@@ -175,19 +209,18 @@ jobs:
               const dailyCount = dailyStories.filter((story) => matches(story, slug)).length;
               const topicCount = topicStories.filter((story) => matches(story, slug)).length;
               const liveCount = liveStories.filter((story) => matches(story, slug)).length;
-              const rollingCount = deskCurrent ? deskStories.filter((story) => matches(story, slug)).length : 0;
+              const rollingCount = deskStories.filter((story) => matches(story, slug)).length;
 
               const availableCount = dailyCount + topicCount + liveCount + rollingCount;
-              const currentCount =
-                (isoDay(latest.date) === referenceDate ? dailyCount : 0) +
-                (payloadDay(topic) === referenceDate ? topicCount : 0) +
-                (payloadDay(live) === referenceDate ? liveCount : 0) +
-                (localDeskDate === referenceDate ? rollingCount : 0);
+              const hourlyCurrentCount =
+                (deskCurrent ? rollingCount : 0) +
+                (liveCurrent ? liveCount : 0) +
+                (topicCurrent ? topicCount : 0);
 
-              const status = availableCount > 0 && (sourceDate !== referenceDate || currentCount > 0)
+              const status = hourlyCurrentCount > 0
                 ? 'PASS'
                 : availableCount > 0 ? 'STALE' : 'EMPTY';
-              pageRows.push(`${slug}:${status}(upstream=${upstreamCount},daily=${dailyCount},topic=${topicCount},live=${liveCount},rolling=${rollingCount})`);
+              pageRows.push(`${slug}:${status}(upstream=${upstreamCount},daily=${dailyCount},topic=${topicCount},live=${liveCount},rolling=${rollingCount},hourly_current=${hourlyCurrentCount})`);
               if (status !== 'PASS') pageFailures.push(`${slug}:${status}`);
             }
 
@@ -215,18 +248,28 @@ jobs:
             const localStockDate = payloadDay(localStocks);
             const sourceStockDate = payloadDay(sourceStocks);
             const stockLag = lagDays(localStockDate, sourceStockDate);
-            const stockCurrent = Boolean(localStockDate && sourceStockDate && stockLag !== null && stockLag <= 0 && localStockStoryCount > 0);
+            const localStockMs = payloadTimestamp(localStocks);
+            const sourceStockMs = payloadTimestamp(sourceStocks);
+            const stockLagMinutes = lagMinutes(localStockMs, sourceStockMs);
+            const stockCurrent = withinHourlyTolerance(localStockMs, sourceStockMs) && localStockStoryCount > 0;
+            const liveStockFallback = liveCurrent && liveStories.filter((story) => matches(story, 'market-economy')).length > 0;
             const dailyStockFallback = dailyStories.filter((story) => matches(story, 'market-economy')).length > 0;
-            const stockReaderSafe = stockCurrent || (dailyStockFallback && isoDay(latest.date) >= sourceStockDate);
+            const stockReaderSafe = stockCurrent || liveStockFallback ||
+              (dailyStockFallback && sourceStockDate && isoDay(latest.date) >= sourceStockDate && !Number.isFinite(sourceStockMs));
             if (!stockReaderSafe) pageFailures.push('stocks:EMPTY_OR_STALE_WITHOUT_CURRENT_FALLBACK');
 
-            const rollingBehind = Boolean(sourceDate && (!localDeskDate || (deskLag !== null && deskLag > 0)));
-            const stocksBehind = Boolean(sourceStockDate && (!localStockDate || (stockLag !== null && stockLag > 0)));
+            const rollingBehind = Number.isFinite(sourceDeskMs)
+              ? !withinHourlyTolerance(localDeskMs, sourceDeskMs)
+              : Boolean(sourceDate && (!localDeskDate || (deskLag !== null && deskLag > 0)));
+            const stocksBehind = Number.isFinite(sourceStockMs)
+              ? !withinHourlyTolerance(localStockMs, sourceStockMs)
+              : Boolean(sourceStockDate && (!localStockDate || (stockLag !== null && stockLag > 0)));
             const repairNeeded = pageFailures.length > 0 || rollingBehind || stocksBehind;
 
             core.info(`Reference date: ${referenceDate}`);
-            core.info(`Upstream desk date=${sourceDate}; Japanese desk date=${localDeskDate || 'missing'}; lag_days=${deskLag}`);
-            core.info(`Upstream stock date=${sourceStockDate || 'unknown'}; Japanese stock date=${localStockDate || 'missing'}; lag_days=${stockLag}`);
+            core.info(`Upstream desk=${sourceDesk?.generatedAt || sourceDate}; Japanese desk=${localDesk?.generatedAt || localDeskDate || 'missing'}; lag_minutes=${deskLagMinutes}; lag_days=${deskLag}`);
+            core.info(`Japanese live=${live?.lastUpdated || 'missing'}; live_current_vs_desk=${liveCurrent}`);
+            core.info(`Upstream stock=${sourceStocks?.generatedAt || sourceStockDate || 'unknown'}; Japanese stock=${localStocks?.generatedAt || localStockDate || 'missing'}; lag_minutes=${stockLagMinutes}; lag_days=${stockLag}`);
             for (const row of pageRows) core.info(`PAGE ${row}`);
             core.info(`Archive editions checked: ${Math.min(archiveEditions.length, 10)}`);
             core.info(`Structural defects: ${structural.join(', ') || 'none'}`);
@@ -236,6 +279,8 @@ jobs:
             core.setOutput('page_failures', pageFailures.join(','));
             core.setOutput('rolling_behind', rollingBehind ? 'true' : 'false');
             core.setOutput('stocks_behind', stocksBehind ? 'true' : 'false');
+            core.setOutput('desk_lag_minutes', String(deskLagMinutes ?? 'N/V'));
+            core.setOutput('stock_lag_minutes', String(stockLagMinutes ?? 'N/V'));
 
             if (repairNeeded) {
               const runs = await github.rest.actions.listWorkflowRuns({
@@ -257,14 +302,14 @@ jobs:
                 }
               } else {
                 await github.rest.actions.createWorkflowDispatch({ owner, repo, workflow_id: 'repair-extra-translation-quality.yml', ref: 'main' });
-                core.warning('Page freshness defect detected; dispatched rolling repair.');
+                core.warning('Page hourly freshness defect detected; dispatched rolling repair.');
               }
             }
 
             if (structural.length > 0) {
               core.setFailed(`Reader-facing page structure/data defects: ${structural.join(', ')}`);
             } else if (pageFailures.length > 0) {
-              core.setFailed(`Source-backed pages lack current Japanese coverage: ${pageFailures.join(', ')}`);
+              core.setFailed(`Source-backed pages lack hourly-current Japanese coverage: ${pageFailures.join(', ')}`);
             } else if (rollingBehind || stocksBehind) {
-              core.setFailed(`Rolling publication is behind upstream: desk=${rollingBehind}, stocks=${stocksBehind}`);
+              core.setFailed(`Rolling publication is behind upstream hourly SLA: desk=${rollingBehind}, stocks=${stocksBehind}`);
             }
