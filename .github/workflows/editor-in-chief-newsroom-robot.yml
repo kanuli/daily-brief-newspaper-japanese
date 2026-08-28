@@ -19,6 +19,7 @@ on:
       - 'stocks.html'
       - 'archive.html'
       - 'assets/js/home-current-ja.js'
+      - 'assets/js/system-ja.js'
       - '.github/workflows/editor-in-chief-newsroom-robot.yml'
   schedule:
     # Independent newsroom patrol every 15 minutes.
@@ -26,7 +27,7 @@ on:
 
 permissions:
   actions: write
-  contents: read
+  contents: write
 
 concurrency:
   group: editor-in-chief-newsroom-robot
@@ -37,28 +38,44 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
-      - name: Patrol every reader page and publication layer
+      - name: Patrol, publish health truth, and recover stale pages
         uses: actions/github-script@v7
         with:
           script: |
             const { owner, repo } = context.repo;
             const sourceRepo = 'daily-brief-newspaper';
             const HOUR = 60 * 60 * 1000;
+            const MINUTE = 60 * 1000;
+            const HEALTH_PATH = 'data/newsroom-health.json';
+            const HEALTH_HEARTBEAT_MS = 30 * MINUTE;
+            const STUCK_RUN_MS = 30 * MINUTE;
 
-            async function raw(repoName, path) {
+            async function entry(repoName, path) {
               try {
                 const r = await github.rest.repos.getContent({ owner, repo: repoName, path, ref: 'main' });
                 if (Array.isArray(r.data) || !r.data.content) return null;
-                return Buffer.from(r.data.content, r.data.encoding || 'base64').toString('utf8');
+                return {
+                  sha: r.data.sha,
+                  text: Buffer.from(r.data.content, r.data.encoding || 'base64').toString('utf8'),
+                };
               } catch (error) {
                 if (error.status === 404) return null;
                 throw error;
               }
             }
 
+            async function raw(repoName, path) {
+              return (await entry(repoName, path))?.text || null;
+            }
+
             async function json(repoName, path) {
               const text = await raw(repoName, path);
-              return text ? JSON.parse(text) : null;
+              if (!text) return null;
+              try { return JSON.parse(text); }
+              catch (error) {
+                core.warning(`${repoName}/${path}: invalid JSON: ${error.message}`);
+                return null;
+              }
             }
 
             function ms(payload) {
@@ -71,7 +88,17 @@ jobs:
             }
 
             function day(value) {
-              return String(value || '').slice(0, 10);
+              const text = String(value || '').slice(0, 10);
+              return /^\d{4}-\d{2}-\d{2}$/.test(text) ? text : '';
+            }
+
+            function currentTimestamp(sourceMs, localMs, toleranceMs) {
+              return Number.isFinite(sourceMs) && Number.isFinite(localMs) && localMs >= sourceMs - toleranceMs;
+            }
+
+            function lagMinutes(sourceMs, localMs) {
+              if (!Number.isFinite(sourceMs) || !Number.isFinite(localMs)) return null;
+              return Math.max(0, Math.round((sourceMs - localMs) / MINUTE));
             }
 
             async function active(workflow) {
@@ -79,15 +106,21 @@ jobs:
               return r.data.workflow_runs.find((run) => run.status !== 'completed') || null;
             }
 
-            async function dispatchIfIdle(workflow, reason) {
+            async function dispatchRecovery(workflow, reason) {
               const running = await active(workflow);
               if (running) {
-                core.warning(`${workflow} already active as run ${running.id}; reason=${reason}`);
-                return false;
+                const age = Date.now() - Date.parse(running.created_at || 0);
+                if (Number.isFinite(age) && age < STUCK_RUN_MS) {
+                  core.warning(`${workflow} already active as run ${running.id}; reason=${reason}`);
+                  return { dispatched: false, active: true, runId: running.id };
+                }
+                core.warning(`${workflow} run ${running.id} is stale; cancelling before recovery`);
+                try { await github.rest.actions.cancelWorkflowRun({ owner, repo, run_id: running.id }); }
+                catch (error) { core.warning(`cancel ${workflow} ${running.id} failed: ${error.message}`); }
               }
               await github.rest.actions.createWorkflowDispatch({ owner, repo, workflow_id: workflow, ref: 'main' });
               core.warning(`ROBOT_DISPATCH ${workflow}; reason=${reason}`);
-              return true;
+              return { dispatched: true, active: false, runId: null };
             }
 
             const pages = [
@@ -124,39 +157,134 @@ jobs:
               json(sourceRepo, 'data/stocks-latest.json'), json(repo, 'data/stocks-latest.json'),
             ]);
 
-            const dailyBehind = day(sourceDaily?.date) > day(localDaily?.date);
+            const sourceDailyDay = day(sourceDaily?.date);
+            const localDailyDay = day(localDaily?.date);
+            const dailyCurrent = Boolean(sourceDailyDay && localDailyDay && localDailyDay >= sourceDailyDay);
+
             const sourceLiveMs = ms(sourceLive), localLiveMs = ms(localLive);
-            const liveBehind = Number.isFinite(sourceLiveMs) && (!Number.isFinite(localLiveMs) || localLiveMs < sourceLiveMs - 60 * 1000);
             const sourceDeskMs = ms(sourceDesk), localDeskMs = ms(localDesk);
-            const deskBehind = Number.isFinite(sourceDeskMs) && (!Number.isFinite(localDeskMs) || localDeskMs < sourceDeskMs - HOUR);
             const sourceStockMs = ms(sourceStocks), localStockMs = ms(localStocks);
-            const stocksBehind = Number.isFinite(sourceStockMs) && (!Number.isFinite(localStockMs) || localStockMs < sourceStockMs - HOUR);
+            const liveCurrent = currentTimestamp(sourceLiveMs, localLiveMs, MINUTE);
+            const deskCurrent = currentTimestamp(sourceDeskMs, localDeskMs, HOUR);
+            const stocksCurrent = currentTimestamp(sourceStockMs, localStockMs, HOUR);
+            const structuralCurrent = structural.length === 0;
 
-            core.info(`ROBOT Daily source=${sourceDaily?.date || 'missing'} japanese=${localDaily?.date || 'missing'} behind=${dailyBehind}`);
-            core.info(`ROBOT Live source=${sourceLive?.lastUpdated || 'missing'} japanese=${localLive?.lastUpdated || 'missing'} behind=${liveBehind}`);
-            core.info(`ROBOT Desk source=${sourceDesk?.generatedAt || 'missing'} japanese=${localDesk?.generatedAt || 'missing'} behind=${deskBehind}`);
-            core.info(`ROBOT Stocks source=${sourceStocks?.generatedAt || 'missing'} japanese=${localStocks?.generatedAt || 'missing'} behind=${stocksBehind}`);
-            core.info(`ROBOT Structural defects=${structural.join(',') || 'none'}`);
+            const layers = {
+              daily: {
+                current: dailyCurrent,
+                upstream: sourceDailyDay || null,
+                japanese: localDailyDay || null,
+              },
+              live: {
+                current: liveCurrent,
+                upstream: sourceLive?.lastUpdated || sourceLive?.generatedAt || null,
+                japanese: localLive?.lastUpdated || localLive?.generatedAt || null,
+                lagMinutes: lagMinutes(sourceLiveMs, localLiveMs),
+              },
+              desk: {
+                current: deskCurrent,
+                upstream: sourceDesk?.generatedAt || sourceDesk?.lastUpdated || null,
+                japanese: localDesk?.generatedAt || localDesk?.lastUpdated || null,
+                lagMinutes: lagMinutes(sourceDeskMs, localDeskMs),
+              },
+              stocks: {
+                current: stocksCurrent,
+                upstream: sourceStocks?.generatedAt || sourceStocks?.lastUpdated || null,
+                japanese: localStocks?.generatedAt || localStocks?.lastUpdated || null,
+                lagMinutes: lagMinutes(sourceStockMs, localStockMs),
+              },
+              structural: {
+                current: structuralCurrent,
+                defects: structural,
+                pagesChecked: pages.length,
+              },
+            };
 
-            const coreBehind = dailyBehind || liveBehind;
-            if (coreBehind) await dispatchIfIdle('sync-japanese-news.yml', `core daily=${dailyBehind} live=${liveBehind}`);
-            if (deskBehind || stocksBehind) await dispatchIfIdle('repair-extra-translation-quality.yml', `rolling desk=${deskBehind} stocks=${stocksBehind}`);
-            if (structural.length) await dispatchIfIdle('auto-maintenance.yml', `structural ${structural.join(',')}`);
+            const recovery = {
+              coreRequired: !dailyCurrent || !liveCurrent,
+              rollingRequired: !deskCurrent || !stocksCurrent,
+              structuralRequired: !structuralCurrent,
+            };
+            const failures = Object.entries(layers).filter(([, value]) => value.current !== true).map(([name]) => name);
+            const state = failures.length ? 'RED' : 'GREEN';
+            const assessedAt = new Date().toISOString();
+            const health = {
+              version: 1,
+              assessedAt,
+              state,
+              summary: state === 'GREEN' ? 'ALL_REQUIRED_NEWS_LAYERS_CURRENT' : `RECOVERY_REQUIRED:${failures.join(',')}`,
+              layers,
+              recovery,
+              policy: {
+                repairRunningRemainsRed: true,
+                missingHealthFailsClosed: true,
+                liveToleranceMinutes: 1,
+                rollingToleranceMinutes: 60,
+              },
+            };
 
-            // Keep GitHub Pages aligned with current main whenever a deployment is absent/stale.
-            const branch = await github.rest.repos.getBranch({ owner, repo, branch: 'main' });
-            const mainSha = branch.data.commit.sha;
-            const pageRuns = await github.rest.actions.listWorkflowRuns({ owner, repo, workflow_id: 'pages.yml', per_page: 10 });
-            const latestSuccessfulPage = pageRuns.data.workflow_runs.find((run) => run.conclusion === 'success');
-            const pageActive = pageRuns.data.workflow_runs.find((run) => run.status !== 'completed');
-            if (!pageActive && (!latestSuccessfulPage || latestSuccessfulPage.head_sha !== mainSha)) {
-              await github.rest.actions.createWorkflowDispatch({ owner, repo, workflow_id: 'pages.yml', ref: 'main' });
-              core.warning(`ROBOT_DISPATCH pages.yml; main=${mainSha}`);
+            core.info(`ROBOT state=${state} summary=${health.summary}`);
+            core.info(`ROBOT Daily source=${sourceDailyDay || 'missing'} japanese=${localDailyDay || 'missing'} current=${dailyCurrent}`);
+            core.info(`ROBOT Live source=${layers.live.upstream || 'missing'} japanese=${layers.live.japanese || 'missing'} current=${liveCurrent} lag=${layers.live.lagMinutes}`);
+            core.info(`ROBOT Desk source=${layers.desk.upstream || 'missing'} japanese=${layers.desk.japanese || 'missing'} current=${deskCurrent} lag=${layers.desk.lagMinutes}`);
+            core.info(`ROBOT Stocks source=${layers.stocks.upstream || 'missing'} japanese=${layers.stocks.japanese || 'missing'} current=${stocksCurrent} lag=${layers.stocks.lagMinutes}`);
+            core.info(`ROBOT Structural current=${structuralCurrent} defects=${structural.join(',') || 'none'}`);
+
+            // Publish one machine-readable source of truth for the website SYSTEM indicator.
+            const oldEntry = await entry(repo, HEALTH_PATH);
+            let oldHealth = null;
+            try { oldHealth = oldEntry?.text ? JSON.parse(oldEntry.text) : null; } catch (_) {}
+            const semantic = (value) => JSON.stringify({
+              state: value?.state,
+              summary: value?.summary,
+              layers: value?.layers,
+              recovery: value?.recovery,
+              policy: value?.policy,
+            });
+            const oldAssessed = Date.parse(String(oldHealth?.assessedAt || ''));
+            const heartbeatDue = !Number.isFinite(oldAssessed) || Date.now() - oldAssessed >= HEALTH_HEARTBEAT_MS;
+            const healthChanged = semantic(oldHealth) !== semantic(health);
+            let healthCommitSha = null;
+            if (healthChanged || heartbeatDue || !oldEntry) {
+              const result = await github.rest.repos.createOrUpdateFileContents({
+                owner,
+                repo,
+                path: HEALTH_PATH,
+                branch: 'main',
+                message: `newsroom health: ${state.toLowerCase()}`,
+                content: Buffer.from(JSON.stringify(health, null, 2) + '\n').toString('base64'),
+                ...(oldEntry?.sha ? { sha: oldEntry.sha } : {}),
+              });
+              healthCommitSha = result.data.commit.sha;
+              core.warning(`ROBOT_HEALTH_PUBLISHED state=${state} commit=${healthCommitSha}`);
+            } else {
+              core.info('ROBOT_HEALTH_UNCHANGED heartbeat not due');
             }
 
-            const unhealthy = coreBehind || deskBehind || stocksBehind || structural.length > 0;
-            if (unhealthy) {
-              core.setFailed(`EDITOR_IN_CHIEF_ROBOT_RECOVERY_ACTIVE daily=${dailyBehind} live=${liveBehind} desk=${deskBehind} stocks=${stocksBehind} structural=${structural.join('|') || 'none'}`);
+            if (recovery.coreRequired) {
+              await dispatchRecovery('sync-japanese-news.yml', `daily=${!dailyCurrent} live=${!liveCurrent}`);
+            }
+            if (recovery.rollingRequired) {
+              await dispatchRecovery('repair-extra-translation-quality.yml', `desk=${!deskCurrent} stocks=${!stocksCurrent}`);
+            }
+            if (recovery.structuralRequired) {
+              await dispatchRecovery('auto-maintenance.yml', `structural=${structural.join(',')}`);
+            }
+
+            // GITHUB_TOKEN commits do not reliably trigger push workflows. Explicitly
+            // deploy the current main SHA so RED/GREEN truth reaches the public site.
+            const branch = await github.rest.repos.getBranch({ owner, repo, branch: 'main' });
+            const mainSha = branch.data.commit.sha;
+            const pageRuns = await github.rest.actions.listWorkflowRuns({ owner, repo, workflow_id: 'pages.yml', per_page: 12 });
+            const latestSuccessfulPage = pageRuns.data.workflow_runs.find((run) => run.conclusion === 'success');
+            const activeForMain = pageRuns.data.workflow_runs.find((run) => run.status !== 'completed' && run.head_sha === mainSha);
+            if (!activeForMain && (!latestSuccessfulPage || latestSuccessfulPage.head_sha !== mainSha)) {
+              await github.rest.actions.createWorkflowDispatch({ owner, repo, workflow_id: 'pages.yml', ref: 'main' });
+              core.warning(`ROBOT_DISPATCH pages.yml; main=${mainSha}; healthCommit=${healthCommitSha || 'none'}`);
+            }
+
+            if (state === 'RED') {
+              core.setFailed(`EDITOR_IN_CHIEF_ROBOT_RED ${health.summary}`);
             } else {
-              core.info('EDITOR_IN_CHIEF_ROBOT_ALL_READER_PAGES_CURRENT');
+              core.info('EDITOR_IN_CHIEF_ROBOT_GREEN all required reader layers current');
             }
