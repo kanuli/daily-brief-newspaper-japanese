@@ -155,6 +155,9 @@
     // newspaper-ja.js and home-extras-ja.js render first; this layer is the final
     // editorial authority for what the reader sees on the front page.
     window.setTimeout(refreshHomepage, 250);
+    // Re-assert after slower async homepage layers finish so stale Daily content
+    // can never overwrite fresher Live/Rolling content.
+    window.setTimeout(refreshHomepage, 1500);
     window.setInterval(refreshHomepage, 5 * 60 * 1000);
   }
 
