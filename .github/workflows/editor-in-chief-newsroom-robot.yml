@@ -1,0 +1,162 @@
+name: Editor-in-Chief Newsroom Robot
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ["main"]
+    paths:
+      - 'index.html'
+      - 'live.html'
+      - 'world.html'
+      - 'asia.html'
+      - 'hong-kong.html'
+      - 'japan.html'
+      - 'finance.html'
+      - 'technology.html'
+      - 'manga-anime.html'
+      - 'manchester-united.html'
+      - 'football.html'
+      - 'stocks.html'
+      - 'archive.html'
+      - 'assets/js/home-current-ja.js'
+      - '.github/workflows/editor-in-chief-newsroom-robot.yml'
+  schedule:
+    # Independent newsroom patrol every 15 minutes.
+    - cron: '5,20,35,50 * * * *'
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: editor-in-chief-newsroom-robot
+  cancel-in-progress: true
+
+jobs:
+  patrol:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Patrol every reader page and publication layer
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const sourceRepo = 'daily-brief-newspaper';
+            const HOUR = 60 * 60 * 1000;
+
+            async function raw(repoName, path) {
+              try {
+                const r = await github.rest.repos.getContent({ owner, repo: repoName, path, ref: 'main' });
+                if (Array.isArray(r.data) || !r.data.content) return null;
+                return Buffer.from(r.data.content, r.data.encoding || 'base64').toString('utf8');
+              } catch (error) {
+                if (error.status === 404) return null;
+                throw error;
+              }
+            }
+
+            async function json(repoName, path) {
+              const text = await raw(repoName, path);
+              return text ? JSON.parse(text) : null;
+            }
+
+            function ms(payload) {
+              const values = [payload?.generatedAt, payload?.lastUpdated, payload?.sourceGeneratedAt, payload?.checkedAt];
+              for (const value of values) {
+                const stamp = Date.parse(String(value || ''));
+                if (Number.isFinite(stamp)) return stamp;
+              }
+              return NaN;
+            }
+
+            function day(value) {
+              return String(value || '').slice(0, 10);
+            }
+
+            async function active(workflow) {
+              const r = await github.rest.actions.listWorkflowRuns({ owner, repo, workflow_id: workflow, per_page: 15 });
+              return r.data.workflow_runs.find((run) => run.status !== 'completed') || null;
+            }
+
+            async function dispatchIfIdle(workflow, reason) {
+              const running = await active(workflow);
+              if (running) {
+                core.warning(`${workflow} already active as run ${running.id}; reason=${reason}`);
+                return false;
+              }
+              await github.rest.actions.createWorkflowDispatch({ owner, repo, workflow_id: workflow, ref: 'main' });
+              core.warning(`ROBOT_DISPATCH ${workflow}; reason=${reason}`);
+              return true;
+            }
+
+            const pages = [
+              ['index.html', 'home-current-ja.js', null],
+              ['live.html', 'live-guard.js', null],
+              ['archive.html', 'data/archive.json', null],
+              ['world.html', 'topic-ja-rolling.js', 'world'],
+              ['asia.html', 'topic-ja-rolling.js', 'asia'],
+              ['hong-kong.html', 'topic-ja-rolling.js', 'hong-kong'],
+              ['japan.html', 'topic-ja-rolling.js', 'japan'],
+              ['finance.html', 'topic-ja-rolling.js', 'market-economy'],
+              ['technology.html', 'topic-ja-rolling.js', 'technology'],
+              ['manga-anime.html', 'topic-ja-rolling.js', 'manga-anime'],
+              ['manchester-united.html', 'topic-ja-rolling.js', 'manchester-united'],
+              ['football.html', 'topic-ja-rolling.js', 'football'],
+              ['stocks.html', 'stocks-ja.js', null],
+            ];
+
+            const structural = [];
+            for (const [path, marker, desk] of pages) {
+              const text = await raw(repo, path);
+              if (!text) {
+                structural.push(`${path}:missing`);
+                continue;
+              }
+              if (marker && !text.includes(marker)) structural.push(`${path}:missing-${marker}`);
+              if (desk && !text.includes(`data-desk="${desk}"`)) structural.push(`${path}:wrong-desk`);
+            }
+
+            const [sourceDaily, localDaily, sourceLive, localLive, sourceDesk, localDesk, sourceStocks, localStocks] = await Promise.all([
+              json(sourceRepo, 'data/latest.json'), json(repo, 'data/latest.json'),
+              json(sourceRepo, 'data/live.json'), json(repo, 'data/live.json'),
+              json(sourceRepo, 'data/desk-latest.json'), json(repo, 'data/desk-latest.json'),
+              json(sourceRepo, 'data/stocks-latest.json'), json(repo, 'data/stocks-latest.json'),
+            ]);
+
+            const dailyBehind = day(sourceDaily?.date) > day(localDaily?.date);
+            const sourceLiveMs = ms(sourceLive), localLiveMs = ms(localLive);
+            const liveBehind = Number.isFinite(sourceLiveMs) && (!Number.isFinite(localLiveMs) || localLiveMs < sourceLiveMs - 60 * 1000);
+            const sourceDeskMs = ms(sourceDesk), localDeskMs = ms(localDesk);
+            const deskBehind = Number.isFinite(sourceDeskMs) && (!Number.isFinite(localDeskMs) || localDeskMs < sourceDeskMs - HOUR);
+            const sourceStockMs = ms(sourceStocks), localStockMs = ms(localStocks);
+            const stocksBehind = Number.isFinite(sourceStockMs) && (!Number.isFinite(localStockMs) || localStockMs < sourceStockMs - HOUR);
+
+            core.info(`ROBOT Daily source=${sourceDaily?.date || 'missing'} japanese=${localDaily?.date || 'missing'} behind=${dailyBehind}`);
+            core.info(`ROBOT Live source=${sourceLive?.lastUpdated || 'missing'} japanese=${localLive?.lastUpdated || 'missing'} behind=${liveBehind}`);
+            core.info(`ROBOT Desk source=${sourceDesk?.generatedAt || 'missing'} japanese=${localDesk?.generatedAt || 'missing'} behind=${deskBehind}`);
+            core.info(`ROBOT Stocks source=${sourceStocks?.generatedAt || 'missing'} japanese=${localStocks?.generatedAt || 'missing'} behind=${stocksBehind}`);
+            core.info(`ROBOT Structural defects=${structural.join(',') || 'none'}`);
+
+            const coreBehind = dailyBehind || liveBehind;
+            if (coreBehind) await dispatchIfIdle('sync-japanese-news.yml', `core daily=${dailyBehind} live=${liveBehind}`);
+            if (deskBehind || stocksBehind) await dispatchIfIdle('repair-extra-translation-quality.yml', `rolling desk=${deskBehind} stocks=${stocksBehind}`);
+            if (structural.length) await dispatchIfIdle('auto-maintenance.yml', `structural ${structural.join(',')}`);
+
+            // Keep GitHub Pages aligned with current main whenever a deployment is absent/stale.
+            const branch = await github.rest.repos.getBranch({ owner, repo, branch: 'main' });
+            const mainSha = branch.data.commit.sha;
+            const pageRuns = await github.rest.actions.listWorkflowRuns({ owner, repo, workflow_id: 'pages.yml', per_page: 10 });
+            const latestSuccessfulPage = pageRuns.data.workflow_runs.find((run) => run.conclusion === 'success');
+            const pageActive = pageRuns.data.workflow_runs.find((run) => run.status !== 'completed');
+            if (!pageActive && (!latestSuccessfulPage || latestSuccessfulPage.head_sha !== mainSha)) {
+              await github.rest.actions.createWorkflowDispatch({ owner, repo, workflow_id: 'pages.yml', ref: 'main' });
+              core.warning(`ROBOT_DISPATCH pages.yml; main=${mainSha}`);
+            }
+
+            const unhealthy = coreBehind || deskBehind || stocksBehind || structural.length > 0;
+            if (unhealthy) {
+              core.setFailed(`EDITOR_IN_CHIEF_ROBOT_RECOVERY_ACTIVE daily=${dailyBehind} live=${liveBehind} desk=${deskBehind} stocks=${stocksBehind} structural=${structural.join('|') || 'none'}`);
+            } else {
+              core.info('EDITOR_IN_CHIEF_ROBOT_ALL_READER_PAGES_CURRENT');
+            }
