@@ -22,7 +22,6 @@ on:
       - 'assets/js/system-ja.js'
       - '.github/workflows/editor-in-chief-newsroom-robot.yml'
   schedule:
-    # Independent newsroom patrol every 15 minutes.
     - cron: '5,20,35,50 * * * *'
 
 permissions:
@@ -43,13 +42,13 @@ jobs:
         with:
           script: |
             const { owner, repo } = context.repo;
+            const crypto = require('crypto');
             const sourceRepo = 'daily-brief-newspaper';
             const HOUR = 60 * 60 * 1000;
             const MINUTE = 60 * 1000;
             const HEALTH_PATH = 'data/newsroom-health.json';
             const HEALTH_HEARTBEAT_MS = 30 * MINUTE;
             const STUCK_RUN_MS = 30 * MINUTE;
-            const SYSTEM_ASSET_VERSION = '20260828health1';
 
             async function entry(repoName, path) {
               try {
@@ -173,11 +172,7 @@ jobs:
             const structuralCurrent = structural.length === 0;
 
             const layers = {
-              daily: {
-                current: dailyCurrent,
-                upstream: sourceDailyDay || null,
-                japanese: localDailyDay || null,
-              },
+              daily: { current: dailyCurrent, upstream: sourceDailyDay || null, japanese: localDailyDay || null },
               live: {
                 current: liveCurrent,
                 upstream: sourceLive?.lastUpdated || sourceLive?.generatedAt || null,
@@ -196,11 +191,7 @@ jobs:
                 japanese: localStocks?.generatedAt || localStocks?.lastUpdated || null,
                 lagMinutes: lagMinutes(sourceStockMs, localStockMs),
               },
-              structural: {
-                current: structuralCurrent,
-                defects: structural,
-                pagesChecked: pages.length,
-              },
+              structural: { current: structuralCurrent, defects: structural, pagesChecked: pages.length },
             };
 
             const recovery = {
@@ -233,7 +224,6 @@ jobs:
             core.info(`ROBOT Stocks source=${layers.stocks.upstream || 'missing'} japanese=${layers.stocks.japanese || 'missing'} current=${stocksCurrent} lag=${layers.stocks.lagMinutes}`);
             core.info(`ROBOT Structural current=${structuralCurrent} defects=${structural.join(',') || 'none'}`);
 
-            // Publish one machine-readable source of truth for the website SYSTEM indicator.
             const oldEntry = await entry(repo, HEALTH_PATH);
             let oldHealth = null;
             try { oldHealth = oldEntry?.text ? JSON.parse(oldEntry.text) : null; } catch (_) {}
@@ -264,50 +254,48 @@ jobs:
               core.info('ROBOT_HEALTH_UNCHANGED heartbeat not due');
             }
 
-            if (recovery.coreRequired) {
-              await dispatchRecovery('sync-japanese-news.yml', `daily=${!dailyCurrent} live=${!liveCurrent}`);
-            }
-            if (recovery.rollingRequired) {
-              await dispatchRecovery('repair-extra-translation-quality.yml', `desk=${!deskCurrent} stocks=${!stocksCurrent}`);
-            }
-            if (recovery.structuralRequired) {
-              await dispatchRecovery('auto-maintenance.yml', `structural=${structural.join(',')}`);
-            }
+            if (recovery.coreRequired) await dispatchRecovery('sync-japanese-news.yml', `daily=${!dailyCurrent} live=${!liveCurrent}`);
+            if (recovery.rollingRequired) await dispatchRecovery('repair-extra-translation-quality.yml', `desk=${!deskCurrent} stocks=${!stocksCurrent}`);
+            if (recovery.structuralRequired) await dispatchRecovery('auto-maintenance.yml', `structural=${structural.join(',')}`);
 
-            // Keep every reader page on the same SYSTEM implementation. A stale
-            // cache-buster can otherwise preserve the old green-only UI after the
-            // health logic has been fixed. Repair all HTML references in one commit.
+            // Use exactly the same deterministic content-hash cache key as
+            // scripts/auto_repair_site.py so the two maintenance robots never
+            // rewrite each other's SYSTEM asset references.
             async function repairSystemAssetRefs() {
-              const desired = `assets/js/system-ja.js?v=${SYSTEM_ASSET_VERSION}`;
+              const systemText = await raw(repo, 'assets/js/system-ja.js');
+              if (!systemText) {
+                core.warning('SYSTEM asset self-heal skipped: assets/js/system-ja.js missing');
+                return null;
+              }
+              const systemAssetVersion = crypto.createHash('sha256').update(systemText, 'utf8').digest('hex').slice(0, 10);
+              const desired = `assets/js/system-ja.js?v=${systemAssetVersion}`;
               const replacements = [];
               for (const [path, text] of pageDocuments.entries()) {
                 const next = text.replace(/assets\/js\/system-ja\.js(?:\?v=[^"'\s>]+)?/g, desired);
                 if (next !== text) replacements.push({ path, content: next });
               }
-              if (!replacements.length) return null;
-
+              if (!replacements.length) {
+                core.info(`ROBOT_SYSTEM_ASSET_CURRENT version=${systemAssetVersion}`);
+                return null;
+              }
               try {
                 const branch = await github.rest.repos.getBranch({ owner, repo, branch: 'main' });
                 const parentSha = branch.data.commit.sha;
                 const parent = await github.rest.git.getCommit({ owner, repo, commit_sha: parentSha });
                 const tree = [];
                 for (const item of replacements) {
-                  const blob = await github.rest.git.createBlob({
-                    owner, repo, content: item.content, encoding: 'utf-8',
-                  });
+                  const blob = await github.rest.git.createBlob({ owner, repo, content: item.content, encoding: 'utf-8' });
                   tree.push({ path: item.path, mode: '100644', type: 'blob', sha: blob.data.sha });
                 }
-                const createdTree = await github.rest.git.createTree({
-                  owner, repo, base_tree: parent.data.tree.sha, tree,
-                });
+                const createdTree = await github.rest.git.createTree({ owner, repo, base_tree: parent.data.tree.sha, tree });
                 const commit = await github.rest.git.createCommit({
-                  owner, repo, message: `Bump SYSTEM newsroom health asset on ${replacements.length} pages`,
-                  tree: createdTree.data.sha, parents: [parentSha],
+                  owner, repo,
+                  message: `Refresh SYSTEM asset hash on ${replacements.length} pages`,
+                  tree: createdTree.data.sha,
+                  parents: [parentSha],
                 });
-                await github.rest.git.updateRef({
-                  owner, repo, ref: 'heads/main', sha: commit.data.sha, force: false,
-                });
-                core.warning(`ROBOT_SYSTEM_ASSET_REPAIRED pages=${replacements.length} commit=${commit.data.sha}`);
+                await github.rest.git.updateRef({ owner, repo, ref: 'heads/main', sha: commit.data.sha, force: false });
+                core.warning(`ROBOT_SYSTEM_ASSET_REPAIRED version=${systemAssetVersion} pages=${replacements.length} commit=${commit.data.sha}`);
                 return commit.data.sha;
               } catch (error) {
                 core.warning(`SYSTEM asset self-heal deferred: ${error.message}`);
@@ -317,8 +305,6 @@ jobs:
 
             const assetRepairCommit = await repairSystemAssetRefs();
 
-            // GITHUB_TOKEN commits do not reliably trigger push workflows. Explicitly
-            // deploy the current main SHA so RED/GREEN truth reaches the public site.
             const branch = await github.rest.repos.getBranch({ owner, repo, branch: 'main' });
             const mainSha = branch.data.commit.sha;
             const pageRuns = await github.rest.actions.listWorkflowRuns({ owner, repo, workflow_id: 'pages.yml', per_page: 12 });
@@ -329,8 +315,5 @@ jobs:
               core.warning(`ROBOT_DISPATCH pages.yml; main=${mainSha}; healthCommit=${healthCommitSha || 'none'}; assetRepair=${assetRepairCommit || 'none'}`);
             }
 
-            if (state === 'RED') {
-              core.setFailed(`EDITOR_IN_CHIEF_ROBOT_RED ${health.summary}`);
-            } else {
-              core.info('EDITOR_IN_CHIEF_ROBOT_GREEN all required reader layers current');
-            }
+            if (state === 'RED') core.setFailed(`EDITOR_IN_CHIEF_ROBOT_RED ${health.summary}`);
+            else core.info('EDITOR_IN_CHIEF_ROBOT_GREEN all required reader layers current');
