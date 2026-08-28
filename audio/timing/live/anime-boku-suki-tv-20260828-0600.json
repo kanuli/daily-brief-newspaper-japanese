@@ -1,0 +1,430 @@
+{
+  "version": 3,
+  "duration": 169.117,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 525,
+  "charactersPerMinute": 186.3,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 18.49,
+      "text": "漫画・恋愛シリーズ『好きな人は好きな人』がテレビアニメ化されることが発表され、原作の恋愛漫画が正式に映像化されることになった。"
+    },
+    {
+      "key": "dek",
+      "start": 18.49,
+      "end": 40.066,
+      "text": "8月28日早朝、日本のエンターテイメントメディアからアニメーションニュースが発表され、今朝のマンガ/アニメーションボードの最新の確認項目の1つとなりました。"
+    },
+    {
+      "key": "body-0",
+      "start": 40.066,
+      "end": 82.933,
+      "text": "MANTANWEB JAPANは8月28日早朝、マンガ「私が好きな人、私が好きな人」がテレビアニメを制作することを正式に決定したと報じた。このニュースは、噂やファンの憶測ではなく、作品の公式アニメーションであり、制作チーム、音声、放送の取り決めが徐々に発表されます。"
+    },
+    {
+      "key": "body-1",
+      "start": 82.933,
+      "end": 124.245,
+      "text": "同時に、日本のアニメーション業界では、新しいビジュアル、トレーラー、演劇のアップデートが数多く行われており、秋のシーズンのプロモーションが加速していることを示しています。オリジナルの読者にとって、アニメーションは作品がイメージ配信と海外ライセンスのより広い段階に入ることを意味します。"
+    },
+    {
+      "key": "why",
+      "start": 124.245,
+      "end": 149.22,
+      "text": "フォーマルアニメーションは、漫画作品の商業化における重要なノードであり、オリジナル作品の販売量、ライセンス、海外露出に影響を与えます。"
+    },
+    {
+      "key": "watch",
+      "start": 149.22,
+      "end": 169.117,
+      "text": "公式ウェブサイト、制作会社、メジャーサウンド、プレミアクォーター、ストリーミングプラットフォームの配置に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.181,
+      "end": 4.461,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "漫画・恋愛シリーズ『好きな人は"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.461,
+      "speechEnd": 10.732,
+      "end": 10.962,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "好きな人』がテレビアニメ化されることが発表され、"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.962,
+      "speechEnd": 17.79,
+      "end": 18.49,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "原作の恋愛漫画が正式に映像化されることになった。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.49,
+      "speechEnd": 22.114,
+      "end": 22.344,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "8月28日早朝、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.344,
+      "speechEnd": 29.451,
+      "end": 29.681,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本のエンターテイメントメディアからアニメーションニュースが発表され、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 29.681,
+      "speechEnd": 39.366,
+      "end": 40.066,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "今朝のマンガ/アニメーションボードの最新の確認項目の1つとなりました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.066,
+      "speechEnd": 47.034,
+      "end": 47.264,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "MANTANWEB JAPANは8月28日早朝、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.264,
+      "speechEnd": 50.887,
+      "end": 51.117,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "マンガ「私が好きな人、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.117,
+      "speechEnd": 57.876,
+      "end": 58.156,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "私が好きな人」がテレビアニメを制作することを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.156,
+      "speechEnd": 61.64,
+      "end": 62.14,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "正式に決定したと報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.14,
+      "speechEnd": 64.509,
+      "end": 64.739,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "このニュースは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.739,
+      "speechEnd": 68.014,
+      "end": 68.244,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "噂やファンの憶測ではなく、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.244,
+      "speechEnd": 72.285,
+      "end": 72.515,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "作品の公式アニメーションであり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.515,
+      "speechEnd": 74.745,
+      "end": 74.975,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "制作チーム、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.975,
+      "speechEnd": 76.996,
+      "end": 77.226,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "音声、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 77.226,
+      "speechEnd": 82.312,
+      "end": 82.933,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "放送の取り決めが徐々に発表されます。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.933,
+      "speechEnd": 85.093,
+      "end": 85.323,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同時に、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 85.323,
+      "speechEnd": 89.573,
+      "end": 89.803,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本のアニメーション業界では、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 89.803,
+      "speechEnd": 92.66,
+      "end": 92.89,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "新しいビジュアル、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.89,
+      "speechEnd": 94.98,
+      "end": 95.21,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "トレーラー、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 95.21,
+      "speechEnd": 100.297,
+      "end": 100.527,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "演劇のアップデートが数多く行われており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 100.527,
+      "speechEnd": 104.498,
+      "end": 104.778,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "秋のシーズンのプロモーションが"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.778,
+      "speechEnd": 108.68,
+      "end": 109.181,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "加速していることを示しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.181,
+      "speechEnd": 112.316,
+      "end": 112.546,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "オリジナルの読者にとって、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.546,
+      "speechEnd": 123.625,
+      "end": 124.245,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "アニメーションは作品がイメージ配信と海外ライセンスのより広い段階に入ることを意味します。"
+    },
+    {
+      "parentKey": "why",
+      "start": 124.245,
+      "speechEnd": 128.217,
+      "end": 128.717,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 128.717,
+      "speechEnd": 131.783,
+      "end": 132.013,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "フォーマルアニメーションは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 132.013,
+      "speechEnd": 138.423,
+      "end": 138.653,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "漫画作品の商業化における重要なノードであり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 138.653,
+      "speechEnd": 141.998,
+      "end": 142.228,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "オリジナル作品の販売量、"
+    },
+    {
+      "parentKey": "why",
+      "start": 142.228,
+      "speechEnd": 144.388,
+      "end": 144.618,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ライセンス、"
+    },
+    {
+      "parentKey": "why",
+      "start": 144.618,
+      "speechEnd": 148.52,
+      "end": 149.22,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "海外露出に影響を与えます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 149.22,
+      "speechEnd": 151.31,
+      "end": 151.54,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 151.54,
+      "speechEnd": 154.118,
+      "end": 154.348,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "公式ウェブサイト、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 154.348,
+      "speechEnd": 156.578,
+      "end": 156.808,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "制作会社、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 156.808,
+      "speechEnd": 159.316,
+      "end": 159.546,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "メジャーサウンド、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 159.546,
+      "speechEnd": 162.125,
+      "end": 162.355,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "プレミアクォーター、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 162.355,
+      "speechEnd": 168.417,
+      "end": 169.117,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "ストリーミングプラットフォームの配置に注意してください。"
+    }
+  ]
+}

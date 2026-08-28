@@ -1,0 +1,410 @@
+{
+  "version": 3,
+  "duration": 178.678,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 520,
+  "charactersPerMinute": 174.6,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 15.354,
+      "text": "日本は原油源を多様化し、ホルムズ海峡パイプラインをバイパスするエネルギーレジリエンスを支援しようとしています"
+    },
+    {
+      "key": "dek",
+      "start": 15.354,
+      "end": 40.622,
+      "text": "日本は長年、原油輸入のほぼすべてを中東ルートに依存してきたが、政府は供給源の多様化とパイプラインへの投資を通じて地政学的リスクを軽減する準備を進めている。"
+    },
+    {
+      "key": "body-0",
+      "start": 40.622,
+      "end": 91.546,
+      "text": "ロイター通信は26日、日本政府のエネルギー政策の取り決めを引用し、日本が原油輸入源の多様化を推進し、ホルムズ海峡を迂回できる中東の石油パイプライン計画への支援を検討していると報じた。日本は長年、中東産原油に大きく依存しており、軍事衝突や封鎖によってホルムズ海峡が混乱すれば、国内のエネルギー供給に直接的な影響が出る。"
+    },
+    {
+      "key": "body-1",
+      "start": 91.546,
+      "end": 128.723,
+      "text": "関連する方向性は政府のグリーン転換実施会議で議論されており、年内に政策手段がさらに実施される見込みです。日本は供給源の拡大に加え、戦略備蓄、長期調達、代替輸送ルートの検討も行い、単一の輸送ルートへの依存リスクを低減していく予定です。"
+    },
+    {
+      "key": "why",
+      "start": 128.723,
+      "end": 157.688,
+      "text": "エネルギー輸入の中断は、日本の電力、輸送、製造コスト、インフレに直接影響を及ぼすため、供給レジリエンスは国の経済安全保障政策の重要な部分です。"
+    },
+    {
+      "key": "watch",
+      "start": 157.688,
+      "end": 178.678,
+      "text": "今年の日本政府の具体的な法規制、海外パイプライン投資協定、原油調達先の変更、戦略備蓄政策に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.111,
+      "end": 4.341,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本は原油源を多様化し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.341,
+      "speechEnd": 11.378,
+      "end": 11.658,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ホルムズ海峡パイプラインをバイパスするエネルギーレジリエンスを"
+    },
+    {
+      "parentKey": "title",
+      "start": 11.658,
+      "speechEnd": 14.654,
+      "end": 15.354,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "支援しようとしています。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.354,
+      "speechEnd": 18.141,
+      "end": 18.371,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本は長年、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.371,
+      "speechEnd": 25.895,
+      "end": 26.125,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "原油輸入のほぼすべてを中東ルートに依存してきたが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.125,
+      "speechEnd": 32.814,
+      "end": 33.094,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "政府は供給源の多様化とパイプラインへの投資を"
+    },
+    {
+      "parentKey": "dek",
+      "start": 33.094,
+      "speechEnd": 39.922,
+      "end": 40.622,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "通じて地政学的リスクを軽減する準備を進めている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.622,
+      "speechEnd": 44.454,
+      "end": 44.684,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信は26日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.684,
+      "speechEnd": 51.024,
+      "end": 51.254,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本政府のエネルギー政策の取り決めを引用し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.254,
+      "speechEnd": 56.968,
+      "end": 57.198,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本が原油輸入源の多様化を推進し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.198,
+      "speechEnd": 65.907,
+      "end": 66.187,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ホルムズ海峡を迂回できる中東の石油パイプライン計画への支援を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.187,
+      "speechEnd": 69.113,
+      "end": 69.613,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "検討していると報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.613,
+      "speechEnd": 72.4,
+      "end": 72.63,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本は長年、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.63,
+      "speechEnd": 77.855,
+      "end": 78.086,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中東産原油に大きく依存しており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 78.086,
+      "speechEnd": 84.913,
+      "end": 85.143,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "軍事衝突や封鎖によってホルムズ海峡が混乱すれば、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 85.143,
+      "speechEnd": 90.926,
+      "end": 91.546,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "国内のエネルギー供給に直接的な影響が出る。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.546,
+      "speechEnd": 100.534,
+      "end": 100.764,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "関連する方向性は政府のグリーン転換実施会議で議論されており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 100.764,
+      "speechEnd": 107.244,
+      "end": 107.744,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "年内に政策手段がさらに実施される見込みです。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.744,
+      "speechEnd": 111.924,
+      "end": 112.154,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本は供給源の拡大に加え、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.154,
+      "speechEnd": 114.244,
+      "end": 114.475,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "戦略備蓄、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.475,
+      "speechEnd": 116.704,
+      "end": 116.934,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "長期調達、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 116.934,
+      "speechEnd": 120.627,
+      "end": 120.857,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "代替輸送ルートの検討も行い、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.857,
+      "speechEnd": 128.103,
+      "end": 128.723,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "単一の輸送ルートへの依存リスクを低減していく予定です。"
+    },
+    {
+      "parentKey": "why",
+      "start": 128.723,
+      "speechEnd": 132.694,
+      "end": 133.194,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 133.194,
+      "speechEnd": 136.608,
+      "end": 136.838,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "エネルギー輸入の中断は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 136.838,
+      "speechEnd": 139.207,
+      "end": 139.437,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本の電力、"
+    },
+    {
+      "parentKey": "why",
+      "start": 139.437,
+      "speechEnd": 141.458,
+      "end": 141.688,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "輸送、"
+    },
+    {
+      "parentKey": "why",
+      "start": 141.688,
+      "speechEnd": 143.848,
+      "end": 144.078,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "製造コスト、"
+    },
+    {
+      "parentKey": "why",
+      "start": 144.078,
+      "speechEnd": 148.328,
+      "end": 148.558,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "インフレに直接影響を及ぼすため、"
+    },
+    {
+      "parentKey": "why",
+      "start": 148.558,
+      "speechEnd": 156.988,
+      "end": 157.688,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "供給レジリエンスは国の経済安全保障政策の重要な部分です。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 157.688,
+      "speechEnd": 159.778,
+      "end": 160.008,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 160.008,
+      "speechEnd": 165.861,
+      "end": 166.091,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今年の日本政府の具体的な法規制、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 166.091,
+      "speechEnd": 169.784,
+      "end": 170.014,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "海外パイプライン投資協定、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 170.014,
+      "speechEnd": 173.497,
+      "end": 173.727,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "原油調達先の変更、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 173.727,
+      "speechEnd": 177.977,
+      "end": 178.678,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "戦略備蓄政策に注目してください。"
+    }
+  ]
+}
