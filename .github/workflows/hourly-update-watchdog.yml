@@ -1,4 +1,4 @@
-name: 日本語ニュース毎時配信ウォッチドッグ
+name: 日本語ニュース総編集公開SLAウォッチドッグ
 
 on:
   workflow_dispatch:
@@ -9,7 +9,7 @@ on:
   schedule:
     # Primary recovery check 10 minutes after the normal :15 sync.
     - cron: '25 * * * *'
-    # Independent SLA check 25 minutes after the normal :15 sync.
+    # Hard publication SLA check 25 minutes after the normal :15 sync.
     - cron: '40 * * * *'
 
 permissions:
@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - name: 毎時ニュース公開実績を確認
+      - name: Daily・Live毎時公開実績を確認
         id: inspect
         uses: actions/github-script@v7
         with:
@@ -60,18 +60,36 @@ jobs:
               return JSON.parse(Buffer.from(response.data.content, 'base64').toString('utf8'));
             }
 
-            // Publication SLA is based on the actual newsroom payload, not on whether
-            // a Discord heartbeat happened to send successfully.
-            const upstreamLive = await readJson('kanuli', 'daily-brief-newspaper', 'data/live.json');
-            const japaneseLive = await readJson(owner, repo, 'data/live.json');
-            const upstreamMs = Date.parse(upstreamLive.lastUpdated || '');
-            const japaneseMs = Date.parse(japaneseLive.lastUpdated || '');
-            if (!Number.isFinite(upstreamMs) || !Number.isFinite(japaneseMs)) {
+            function dayMs(value) {
+              const text = String(value || '').slice(0, 10);
+              const stamp = Date.parse(`${text}T00:00:00Z`);
+              return Number.isFinite(stamp) ? stamp : NaN;
+            }
+
+            // Editorial truth comes from published newsroom payloads, not workflow green lights.
+            const [upstreamLive, japaneseLive, upstreamDaily, japaneseDaily] = await Promise.all([
+              readJson('kanuli', 'daily-brief-newspaper', 'data/live.json'),
+              readJson(owner, repo, 'data/live.json'),
+              readJson('kanuli', 'daily-brief-newspaper', 'data/latest.json'),
+              readJson(owner, repo, 'data/latest.json'),
+            ]);
+
+            const upstreamLiveMs = Date.parse(upstreamLive.lastUpdated || '');
+            const japaneseLiveMs = Date.parse(japaneseLive.lastUpdated || '');
+            if (!Number.isFinite(upstreamLiveMs) || !Number.isFinite(japaneseLiveMs)) {
               throw new Error(`Invalid live timestamps: upstream=${upstreamLive.lastUpdated}, japanese=${japaneseLive.lastUpdated}`);
             }
 
-            const sourceAhead = upstreamMs > japaneseMs + 60 * 1000;
-            const lagMinutes = Math.max(0, Math.floor((upstreamMs - japaneseMs) / 60000));
+            const upstreamDailyMs = dayMs(upstreamDaily.date);
+            const japaneseDailyMs = dayMs(japaneseDaily.date);
+            if (!Number.isFinite(upstreamDailyMs) || !Number.isFinite(japaneseDailyMs)) {
+              throw new Error(`Invalid Daily dates: upstream=${upstreamDaily.date}, japanese=${japaneseDaily.date}`);
+            }
+
+            const liveAhead = upstreamLiveMs > japaneseLiveMs + 60 * 1000;
+            const liveLagMinutes = Math.max(0, Math.floor((upstreamLiveMs - japaneseLiveMs) / 60000));
+            const dailyAhead = upstreamDailyMs > japaneseDailyMs;
+            const dailyLagDays = Math.max(0, Math.floor((upstreamDailyMs - japaneseDailyMs) / 86400000));
 
             const runsResponse = await github.rest.actions.listWorkflowRuns({
               owner,
@@ -99,9 +117,7 @@ jobs:
               );
               for (const job of jobs) {
                 for (const step of job.steps || []) {
-                  if (deliveryStepNames.has(step.name) && step.conclusion === 'success') {
-                    deliveryOk = true;
-                  }
+                  if (deliveryStepNames.has(step.name) && step.conclusion === 'success') deliveryOk = true;
                 }
               }
             }
@@ -125,12 +141,9 @@ jobs:
                   github.rest.actions.listJobsForWorkflowRun,
                   { owner, repo, run_id: run.id, per_page: 100 }
                 );
-                if (jobs.some((job) =>
-                  (job.steps || []).some((step) =>
-                    step.name === '最後の承認済み版をDiscordへ安全配信' &&
-                    step.conclusion === 'success'
-                  )
-                )) {
+                if (jobs.some((job) => (job.steps || []).some((step) =>
+                  step.name === '最後の承認済み版をDiscordへ安全配信' && step.conclusion === 'success'
+                ))) {
                   priorFallback = true;
                   break;
                 }
@@ -138,35 +151,36 @@ jobs:
             }
 
             const scheduledCycleMissing = candidates.length === 0;
-            const publicationLag = sourceAhead;
+            const publicationLag = liveAhead || dailyAhead;
             const fallback = !deliveryOk && !priorFallback;
 
-            // At :25, allow a genuinely fresh in-flight :15 translation to finish.
-            // Otherwise recover immediately. At :40, a still-stale edition is an SLA
-            // breach and a new dispatch supersedes the stuck run via workflow concurrency.
+            // :25 allows only a genuinely fresh in-flight translation. :40 is the hard SLA.
             const recovery = scheduledCycleMissing ||
               (publicationLag && (!freshActiveSync || isSecondCheck));
             const slaBreach = isSecondCheck && publicationLag;
 
             core.info(`Expected hourly slot: ${expected.toISOString()}`);
-            core.info(`Upstream live: ${upstreamLive.lastUpdated}`);
-            core.info(`Japanese live: ${japaneseLive.lastUpdated}`);
-            core.info(`Publication lag: ${publicationLag} (${lagMinutes} minutes)`);
+            core.info(`Upstream Daily=${upstreamDaily.date}; Japanese Daily=${japaneseDaily.date}; lag_days=${dailyLagDays}; behind=${dailyAhead}`);
+            core.info(`Upstream Live=${upstreamLive.lastUpdated}; Japanese Live=${japaneseLive.lastUpdated}; lag_minutes=${liveLagMinutes}; behind=${liveAhead}`);
             core.info(`Candidate sync runs: ${candidates.length}`);
             core.info(`Active sync exists: ${activeSync}; fresh active sync: ${freshActiveSync}`);
             core.info(`Discord delivery confirmed: ${deliveryOk}`);
-            core.info(`Prior watchdog fallback confirmed: ${priorFallback}`);
             core.info(`Scheduled cycle missing: ${scheduledCycleMissing}`);
             core.info(`Recovery required: ${recovery}`);
-            core.info(`Hourly publication SLA breach: ${slaBreach}`);
+            core.info(`Publication SLA breach: ${slaBreach}`);
 
             core.setOutput('fallback', fallback ? 'true' : 'false');
             core.setOutput('recovery', recovery ? 'true' : 'false');
             core.setOutput('publication_lag', publicationLag ? 'true' : 'false');
-            core.setOutput('lag_minutes', String(lagMinutes));
+            core.setOutput('live_lag_minutes', String(liveLagMinutes));
+            core.setOutput('daily_lag_days', String(dailyLagDays));
+            core.setOutput('daily_behind', dailyAhead ? 'true' : 'false');
+            core.setOutput('live_behind', liveAhead ? 'true' : 'false');
             core.setOutput('sla_breach', slaBreach ? 'true' : 'false');
-            core.setOutput('upstream_updated', String(upstreamLive.lastUpdated || 'N/V'));
-            core.setOutput('japanese_updated', String(japaneseLive.lastUpdated || 'N/V'));
+            core.setOutput('upstream_daily', String(upstreamDaily.date || 'N/V'));
+            core.setOutput('japanese_daily', String(japaneseDaily.date || 'N/V'));
+            core.setOutput('upstream_live', String(upstreamLive.lastUpdated || 'N/V'));
+            core.setOutput('japanese_live', String(japaneseLive.lastUpdated || 'N/V'));
 
       - name: production mainを取得
         if: steps.inspect.outputs.fallback == 'true'
@@ -198,22 +212,24 @@ jobs:
             });
             core.info('Dispatched sync-japanese-news.yml recovery run on main.');
 
-      - name: 毎時公開SLA違反を明示
+      - name: Daily・Live公開SLA違反を明示
         if: steps.inspect.outputs.sla_breach == 'true'
         shell: bash
         run: |
-          echo "::error::Japanese Live is still behind upstream after the hourly publication deadline."
-          echo "upstream=${{ steps.inspect.outputs.upstream_updated }}"
-          echo "japanese=${{ steps.inspect.outputs.japanese_updated }}"
-          echo "lag_minutes=${{ steps.inspect.outputs.lag_minutes }}"
+          echo "::error::Japanese newsroom publication is still behind upstream after the hard hourly deadline."
+          echo "Daily upstream=${{ steps.inspect.outputs.upstream_daily }} Japanese=${{ steps.inspect.outputs.japanese_daily }} lag_days=${{ steps.inspect.outputs.daily_lag_days }}"
+          echo "Live upstream=${{ steps.inspect.outputs.upstream_live }} Japanese=${{ steps.inspect.outputs.japanese_live }} lag_minutes=${{ steps.inspect.outputs.live_lag_minutes }}"
           exit 1
 
-      - name: ウォッチドッグ結果
+      - name: 総編集ウォッチドッグ結果
         if: always()
         shell: bash
         run: |
           echo "fallback=${{ steps.inspect.outputs.fallback }}"
           echo "recovery=${{ steps.inspect.outputs.recovery }}"
           echo "publication_lag=${{ steps.inspect.outputs.publication_lag }}"
-          echo "lag_minutes=${{ steps.inspect.outputs.lag_minutes }}"
+          echo "daily_behind=${{ steps.inspect.outputs.daily_behind }}"
+          echo "daily_lag_days=${{ steps.inspect.outputs.daily_lag_days }}"
+          echo "live_behind=${{ steps.inspect.outputs.live_behind }}"
+          echo "live_lag_minutes=${{ steps.inspect.outputs.live_lag_minutes }}"
           echo "sla_breach=${{ steps.inspect.outputs.sla_breach }}"
