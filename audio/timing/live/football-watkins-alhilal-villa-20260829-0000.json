@@ -1,0 +1,400 @@
+{
+  "version": 3,
+  "duration": 193.176,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 672,
+  "charactersPerMinute": 208.7,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 16.051,
+      "text": "エメリーは、ヴィラ・イングランドのストライカーであるワトキンスが約5000万ポンドでアル・ヒラールに移籍することを確認"
+    },
+    {
+      "key": "dek",
+      "start": 16.051,
+      "end": 33.765,
+      "text": "ワトキンスはリーグ開幕戦に先立って欠場したことをチームに謝罪した。ヴェラはニコラス・ジャクソンが最前線にいるコアを再構築している。"
+    },
+    {
+      "key": "body-0",
+      "start": 33.765,
+      "end": 83.107,
+      "text": "アストン・ヴィラのマネージャー、ウナイ・エメリーは金曜日、30歳のイングランド人ストライカー、オリー・ワトキンスがサウジアラビアのプロリーグ、アル・ヒラールへの移籍をまもなく完了することを確認し、ロイターとガーディアンはともに約5000万ポンドの移籍金を報告した。ワトキンスは、以前にヴェラ対ブラッドレイトンのリーグ開幕戦に参加しなかったことについて、エメリーとチームメイトに謝罪した。"
+    },
+    {
+      "key": "body-1",
+      "start": 83.107,
+      "end": 141.422,
+      "text": "2020年にビンフォードからヴィラに加入して以来、ワトキンスはクラブのプレミアリーグ時代の最も象徴的なゴールコアラーの1人となっています。エメリーは、2人ともさよならを言うことに興奮していると言いました。ベラはまた、チェルシーとニコラス・ジャクソンとの契約に近づいており、レオン・ゴレツカを無料で紹介しています。これは、クラブが複数の高価なセールスを使用してロスターと財務構造を再調整していることを示しています。"
+    },
+    {
+      "key": "why",
+      "start": 141.422,
+      "end": 169.07,
+      "text": "ワトキンスは、サウジアラビアリーグが高い移籍金でプレミアリーグの成熟したメインフォースを吸収し続けていることを反映して、ヴェラの攻撃システムを直接変更するためにチームを去った。"
+    },
+    {
+      "key": "watch",
+      "start": 169.07,
+      "end": 193.176,
+      "text": "アル・ヒラルの正式な登録とデビューの取り決め、ジャクソンがヴィラに参加するかどうか、ヴィラの移籍期間が終了する前に本隊が売却されるかどうかに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.09,
+      "end": 2.32,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "エメリーは、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.32,
+      "speechEnd": 7.964,
+      "end": 8.244,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ヴィラ・イングランドのストライカーであるワトキンスが"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.244,
+      "speechEnd": 15.351,
+      "end": 16.051,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "約5000万ポンドでアル・ヒラールに移籍することを確認。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.051,
+      "speechEnd": 24.481,
+      "end": 24.981,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "ワトキンスはリーグ開幕戦に先立って欠場したことをチームに謝罪した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.981,
+      "speechEnd": 28.465,
+      "end": 28.745,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ヴェラはニコラス・ジャクソンが"
+    },
+    {
+      "parentKey": "dek",
+      "start": 28.745,
+      "speechEnd": 33.065,
+      "end": 33.765,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "最前線にいるコアを再構築している。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 33.765,
+      "speechEnd": 37.388,
+      "end": 37.618,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "アストン・ヴィラのマネージャー、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.618,
+      "speechEnd": 40.684,
+      "end": 40.914,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ウナイ・エメリーは金曜日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.914,
+      "speechEnd": 45.303,
+      "end": 45.533,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "30歳のイングランド人ストライカー、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.533,
+      "speechEnd": 50.55,
+      "end": 50.78,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "オリー・ワトキンスがサウジアラビアのプロリーグ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.78,
+      "speechEnd": 58.096,
+      "end": 58.326,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "アル・ヒラールへの移籍をまもなく完了することを確認し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.326,
+      "speechEnd": 66.896,
+      "end": 67.396,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "ロイターとガーディアンはともに約5000万ポンドの移籍金を報告した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.396,
+      "speechEnd": 69.625,
+      "end": 69.855,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ワトキンスは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.855,
+      "speechEnd": 78.704,
+      "end": 78.934,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "以前にヴェラ対ブラッドレイトンのリーグ開幕戦に参加しなかったことについて、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 78.934,
+      "speechEnd": 82.487,
+      "end": 83.107,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "エメリーとチームメイトに謝罪した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 83.107,
+      "speechEnd": 89.866,
+      "end": 90.096,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "2020年にビンフォードからヴィラに加入して以来、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.096,
+      "speechEnd": 101.244,
+      "end": 101.744,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "ワトキンスはクラブのプレミアリーグ時代の最も象徴的なゴールコアラーの1人となっています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.744,
+      "speechEnd": 103.834,
+      "end": 104.064,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "エメリーは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.064,
+      "speechEnd": 110.822,
+      "end": 111.322,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "2人ともさよならを言うことに興奮していると言いました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.322,
+      "speechEnd": 113.552,
+      "end": 113.782,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ベラはまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 113.782,
+      "speechEnd": 120.471,
+      "end": 120.701,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "チェルシーとニコラス・ジャクソンとの契約に近づいており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.701,
+      "speechEnd": 125.717,
+      "end": 126.217,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "レオン・ゴレツカを無料で紹介しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 126.217,
+      "speechEnd": 128.307,
+      "end": 128.538,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "これは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 128.538,
+      "speechEnd": 136.202,
+      "end": 136.482,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "クラブが複数の高価なセールスを使用してロスターと財務構造を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 136.482,
+      "speechEnd": 140.801,
+      "end": 141.422,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "再調整していることを示しています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 141.422,
+      "speechEnd": 145.393,
+      "end": 145.893,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 145.893,
+      "speechEnd": 148.123,
+      "end": 148.353,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ワトキンスは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 148.353,
+      "speechEnd": 161.242,
+      "end": 161.472,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "サウジアラビアリーグが高い移籍金でプレミアリーグの成熟したメインフォースを吸収し続けていることを反映して、"
+    },
+    {
+      "parentKey": "why",
+      "start": 161.472,
+      "speechEnd": 168.37,
+      "end": 169.07,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "ヴェラの攻撃システムを直接変更するためにチームを去った。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 169.07,
+      "speechEnd": 171.16,
+      "end": 171.39,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 171.39,
+      "speechEnd": 176.686,
+      "end": 176.916,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "アル・ヒラルの正式な登録とデビューの取り決め、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 176.916,
+      "speechEnd": 181.514,
+      "end": 181.744,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ジャクソンがヴィラに参加するかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 181.744,
+      "speechEnd": 187.248,
+      "end": 187.529,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ヴィラの移籍期間が終了する前に本隊が"
+    },
+    {
+      "parentKey": "watch",
+      "start": 187.529,
+      "speechEnd": 192.475,
+      "end": 193.176,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "売却されるかどうかに注意してください。"
+    }
+  ]
+}

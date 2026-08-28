@@ -1,0 +1,530 @@
+{
+  "version": 3,
+  "duration": 236.304,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 714,
+  "charactersPerMinute": 181.3,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 16.099,
+      "text": "グローバル・エクイティ・ファンドが13週間のゴールド吸収トレンド米国エクイティ・ファンドを週に223億ドルクローズ"
+    },
+    {
+      "key": "dek",
+      "start": 16.099,
+      "end": 48.16,
+      "text": "グローバルエクイティファンドは、8月26日に終了した週の時点で58.7億ドルの純流出を記録しました。ヨーロッパとアジアのファンドは、資金調達ポジションに大きな地理的相違があるため、引き続き流入が見られました。"
+    },
+    {
+      "key": "body-0",
+      "start": 48.16,
+      "end": 104.84,
+      "text": "LSEG Lipperのデータによると、グローバルエクイティファンドは、8月26日までの週に約58.7億ドルの純流出を記録し、13週間連続した現金引き出しを終了しました。米国株式ファンドの純流出額223.3億ドルが全体的なマイナスの主な原因でした。対照的に、ヨーロッパとアジアの株式ファンドはそれぞれ約79.2億ドルと48億ドルを吸収しました。"
+    },
+    {
+      "key": "body-1",
+      "start": 104.84,
+      "end": 169.317,
+      "text": "セグメント資金調達は、完全な出口リスク資産ではありません。テクノロジーファンドは依然として約32億ドルの流入を記録したが、金融ファンドは約9億4800万ドルの流出を記録し、金と貴金属ファンドは6ヶ月間で最大の週ごとの流入を記録した。世界の債券ファンドは、4週間で最も遅いペースではあるが、依然として102.5億ドルの純流入を見せており、本格的なヘッジではなく、より再分配的なバイアスを示唆している。"
+    },
+    {
+      "key": "why",
+      "start": 169.317,
+      "end": 208.018,
+      "text": "グローバル・エクイティ・ファンドの流入は13週間連続で混乱しており、過大評価された米国株が金利や業績イベントに敏感になっていることを反映しており、欧州、米国、アジアの流入の乖離が始まっていることを浮き彫りにしています。"
+    },
+    {
+      "key": "watch",
+      "start": 208.018,
+      "end": 236.304,
+      "text": "来週も米国のエクイティファンドが流出し続けるかどうか、テクノロジーファンドの資金が弱まるかどうか、米国債利回りと米ドルのトレンドが地域横断的な資産再配分を推進するかどうかに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.693,
+      "end": 3.973,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "グローバル・エクイティ・ファンドが"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.973,
+      "speechEnd": 15.399,
+      "end": 16.099,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "13週間のゴールド吸収トレンド米国エクイティ・ファンドを週に223億ドルクローズ。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.099,
+      "speechEnd": 19.513,
+      "end": 19.743,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "グローバルエクイティファンドは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.743,
+      "speechEnd": 25.457,
+      "end": 25.597,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "8月26日に終了した週の時点で"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.597,
+      "speechEnd": 28.662,
+      "end": 28.802,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "58.7億ドル"
+    },
+    {
+      "parentKey": "dek",
+      "start": 28.802,
+      "speechEnd": 32.147,
+      "end": 32.647,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "の純流出を記録しました。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.647,
+      "speechEnd": 36.27,
+      "end": 36.5,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ヨーロッパとアジアのファンドは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 36.5,
+      "speechEnd": 43.397,
+      "end": 43.627,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "資金調達ポジションに大きな地理的相違があるため、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 43.627,
+      "speechEnd": 47.459,
+      "end": 48.16,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "引き続き流入が見られました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.16,
+      "speechEnd": 52.967,
+      "end": 53.197,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "LSEG Lipperのデータによると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.197,
+      "speechEnd": 56.611,
+      "end": 56.841,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "グローバルエクイティファンドは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.841,
+      "speechEnd": 61.3,
+      "end": 61.44,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "8月26日までの週に約"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.44,
+      "speechEnd": 64.506,
+      "end": 64.646,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "58.7億ドル"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.646,
+      "speechEnd": 67.502,
+      "end": 67.733,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "の純流出を記録し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.733,
+      "speechEnd": 74.7,
+      "end": 75.2,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "13週間連続した現金引き出しを終了しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.2,
+      "speechEnd": 82.655,
+      "end": 82.935,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "米国株式ファンドの純流出額223.3億ドルが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 82.935,
+      "speechEnd": 88.161,
+      "end": 88.661,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "全体的なマイナスの主な原因でした。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 88.661,
+      "speechEnd": 90.89,
+      "end": 91.12,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "対照的に、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 91.12,
+      "speechEnd": 95.231,
+      "end": 95.511,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ヨーロッパとアジアの株式ファンドは"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 95.511,
+      "speechEnd": 104.22,
+      "end": 104.84,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "それぞれ約79.2億ドルと48億ドルを吸収しました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.84,
+      "speechEnd": 107.836,
+      "end": 108.066,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "セグメント資金調達は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.066,
+      "speechEnd": 113.152,
+      "end": 113.653,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "完全な出口リスク資産ではありません。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 113.653,
+      "speechEnd": 118.042,
+      "end": 118.182,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "テクノロジーファンドは依然として約"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.182,
+      "speechEnd": 120.621,
+      "end": 120.761,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "32億ドル"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.761,
+      "speechEnd": 123.966,
+      "end": 124.196,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "の流入を記録したが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 124.196,
+      "speechEnd": 132.069,
+      "end": 132.299,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "金融ファンドは約9億4800万ドルの流出を記録し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 132.299,
+      "speechEnd": 135.225,
+      "end": 135.365,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "金と貴金属ファンドは"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 135.365,
+      "speechEnd": 137.525,
+      "end": 137.665,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "6ヶ月"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 137.665,
+      "speechEnd": 143.239,
+      "end": 143.739,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "間で最大の週ごとの流入を記録した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 143.739,
+      "speechEnd": 146.665,
+      "end": 146.895,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "世界の債券ファンドは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 146.895,
+      "speechEnd": 152.33,
+      "end": 152.56,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "4週間で最も遅いペースではあるが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 152.56,
+      "speechEnd": 159.876,
+      "end": 160.106,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "依然として102.5億ドルの純流入を見せており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 160.106,
+      "speechEnd": 163.729,
+      "end": 163.959,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "本格的なヘッジではなく、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 163.959,
+      "speechEnd": 168.696,
+      "end": 169.317,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "より再分配的なバイアスを示唆している。"
+    },
+    {
+      "parentKey": "why",
+      "start": 169.317,
+      "speechEnd": 173.288,
+      "end": 173.788,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 173.788,
+      "speechEnd": 178.595,
+      "end": 178.876,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "グローバル・エクイティ・ファンドの流入は"
+    },
+    {
+      "parentKey": "why",
+      "start": 178.876,
+      "speechEnd": 183.474,
+      "end": 183.704,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "13週間連続で混乱しており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 183.704,
+      "speechEnd": 194.085,
+      "end": 194.315,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "過大評価された米国株が金利や業績イベントに敏感になっていることを反映しており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 194.315,
+      "speechEnd": 196.336,
+      "end": 196.566,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "欧州、"
+    },
+    {
+      "parentKey": "why",
+      "start": 196.566,
+      "speechEnd": 198.586,
+      "end": 198.816,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国、"
+    },
+    {
+      "parentKey": "why",
+      "start": 198.816,
+      "speechEnd": 204.181,
+      "end": 204.461,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "アジアの流入の乖離が始まっていることを"
+    },
+    {
+      "parentKey": "why",
+      "start": 204.461,
+      "speechEnd": 207.318,
+      "end": 208.018,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "浮き彫りにしています。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 208.018,
+      "speechEnd": 210.108,
+      "end": 210.338,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 210.338,
+      "speechEnd": 216.609,
+      "end": 216.839,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "来週も米国のエクイティファンドが流出し続けるかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 216.839,
+      "speechEnd": 222.204,
+      "end": 222.434,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "テクノロジーファンドの資金が弱まるかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 222.434,
+      "speechEnd": 226.754,
+      "end": 227.034,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "米国債利回りと米ドルのトレンドが"
+    },
+    {
+      "parentKey": "watch",
+      "start": 227.034,
+      "speechEnd": 235.604,
+      "end": 236.304,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "地域横断的な資産再配分を推進するかどうかに注目してください。"
+    }
+  ]
+}

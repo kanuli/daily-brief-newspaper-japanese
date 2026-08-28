@@ -1,0 +1,380 @@
+{
+  "version": 3,
+  "duration": 166.792,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 477,
+  "charactersPerMinute": 171.6,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 13.543,
+      "text": "本日から動作熱警告が指定された条件に達した場合、香港は警告レベルをより早く引き上げる"
+    },
+    {
+      "key": "dek",
+      "start": 13.543,
+      "end": 41.51,
+      "text": "この新しいシステムには、香港全域で摂氏35度以上の極端な暑さアラートとトリガー条件が組み込まれており、高温のリスクが上昇する前に雇用主と屋外労働者に早期に警告することを目標としています。"
+    },
+    {
+      "key": "body-0",
+      "start": 41.51,
+      "end": 77.737,
+      "text": "香港政府は27日、強化された作業熱警報システムが28日から発効すると発表した。観測所が極端な暑さに対する特別な警告を発すると、労働局は直ちに黄色の作業熱警告を発し、より高いレベルの警告をトリガーするための監視閾値を下げます。"
+    },
+    {
+      "key": "body-1",
+      "start": 77.737,
+      "end": 124.868,
+      "text": "香港全域で一般的に摂氏35度以上が記録されている場合、監視しきい値も下げられ、警告レベルは自動的に1レベル上昇します。施策建設、物流、清掃、その他の屋外または非空調の作業環境では、雇用主は休息し、水を飲み、リスクの取り決めに従って作業を調整する必要があります。"
+    },
+    {
+      "key": "why",
+      "start": 124.868,
+      "end": 147.951,
+      "text": "新しいトリガーは、極端な暑さの中で雇用主の仕事の取り決めを直接変え、屋外労働者が早期に保護される機会を増やします。"
+    },
+    {
+      "key": "watch",
+      "start": 147.951,
+      "end": 166.792,
+      "text": "建設および屋外セクターでの実際の警告レベル、観測所の温度、および施行状況を今すぐ確認してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 6.828,
+      "end": 7.108,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "本日から動作熱警告が指定された条件に達した場合、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.108,
+      "speechEnd": 12.683,
+      "end": 13.543,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "香港は警告レベルをより早く引き上げる。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.543,
+      "speechEnd": 16.957,
+      "end": 17.237,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この新しいシステムには、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.237,
+      "speechEnd": 29.082,
+      "end": 29.362,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "香港全域で摂氏35度以上の極端な暑さアラートとトリガー条件が組み込まれており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 29.362,
+      "speechEnd": 40.65,
+      "end": 41.51,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "高温のリスクが上昇する前に雇用主と屋外労働者に早期に警告することを目標としています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.51,
+      "speechEnd": 45.412,
+      "end": 45.692,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "香港政府は27日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.692,
+      "speechEnd": 49.733,
+      "end": 50.074,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "強化された作業熱警報システムが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.074,
+      "speechEnd": 54.463,
+      "end": 55.083,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "28日から発効すると発表した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.083,
+      "speechEnd": 61.633,
+      "end": 61.913,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "観測所が極端な暑さに対する特別な警告を発すると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.913,
+      "speechEnd": 68.254,
+      "end": 68.534,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "労働局は直ちに黄色の作業熱警告を発し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.534,
+      "speechEnd": 73.69,
+      "end": 74.03,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "より高いレベルの警告をトリガーするため"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.03,
+      "speechEnd": 76.956,
+      "end": 77.737,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "の監視閾値を下げます。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 77.737,
+      "speechEnd": 81.569,
+      "end": 81.749,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "香港全域で一般的に摂氏"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 81.749,
+      "speechEnd": 83.909,
+      "end": 84.089,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "35度"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.089,
+      "speechEnd": 87.573,
+      "end": 87.853,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "以上が記録されている場合、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 87.853,
+      "speechEnd": 90.919,
+      "end": 91.199,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "監視しきい値も下げられ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.199,
+      "speechEnd": 96.982,
+      "end": 97.602,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "警告レベルは自動的に1レベル上昇します。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.602,
+      "speechEnd": 99.901,
+      "end": 100.182,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "施策建設、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 100.182,
+      "speechEnd": 102.202,
+      "end": 102.482,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "物流、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.482,
+      "speechEnd": 104.503,
+      "end": 104.783,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "清掃、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.783,
+      "speechEnd": 111.124,
+      "end": 111.404,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "その他の屋外または非空調の作業環境では、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.404,
+      "speechEnd": 114.26,
+      "end": 114.54,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "雇用主は休息し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.54,
+      "speechEnd": 116.7,
+      "end": 116.981,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "水を飲み、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 116.981,
+      "speechEnd": 124.088,
+      "end": 124.868,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "リスクの取り決めに従って作業を調整する必要があります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 124.868,
+      "speechEnd": 128.839,
+      "end": 129.46,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 129.46,
+      "speechEnd": 132.247,
+      "end": 132.527,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "新しいトリガーは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 132.527,
+      "speechEnd": 140.331,
+      "end": 140.611,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "極端な暑さの中で雇用主の仕事の取り決めを直接変え、"
+    },
+    {
+      "parentKey": "why",
+      "start": 140.611,
+      "speechEnd": 147.091,
+      "end": 147.951,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "屋外労働者が早期に保護される機会を増やします。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 147.951,
+      "speechEnd": 150.041,
+      "end": 150.321,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 150.321,
+      "speechEnd": 156.732,
+      "end": 157.012,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "建設および屋外セクターでの実際の警告レベル、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 157.012,
+      "speechEnd": 159.59,
+      "end": 159.87,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "観測所の温度、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 159.87,
+      "speechEnd": 165.932,
+      "end": 166.792,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "および施行状況を今すぐ確認してください。"
+    }
+  ]
+}
