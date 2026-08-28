@@ -59,6 +59,8 @@ DURATION_DAY_RE = re.compile(
     r"(?<!\d)(\d{1,2})(?:<ruby>日間<rt>[^<]+</rt></ruby>|<ruby>日<rt>[^<]+</rt></ruby><ruby>間<rt>[^<]+</rt></ruby>)"
 )
 MONTH_DURATION_RE = re.compile(r"(?<!\d)(\d{1,2})([カかケヶヵ])<ruby>月<rt>[^<]+</rt></ruby>")
+NUMERIC_PERSON_ABOVE_RE = re.compile(r"(?<=\d)<ruby>人以上<rt>[^<]+</rt></ruby>")
+NUMERIC_PERSON_SPLIT_RE = re.compile(r"(?<=\d)<ruby>人<rt>[^<]+</rt></ruby>(?=(?:<ruby>以上<rt>[^<]+</rt></ruby>|以上))")
 SCORE_TAI_RE = re.compile(r"(?<=\d)<ruby>対<rt>[^<]+</rt></ruby>(?=\d)")
 PREFIX_TAI_RE = re.compile(r"<ruby>対<rt>つい</rt></ruby>(?=(?:[ァ-ヶーA-Za-z]|<ruby>[\u3400-\u9fff]))")
 PAST_AFTER_RE = re.compile(r"(?<=た)<ruby>後<rt>[^<]+</rt></ruby>(?=(?:の|に|で|を|、|。|が|は|$))")
@@ -189,6 +191,12 @@ def apply_contextual_readings(original, rendered):
         n=int(m.group(1)); reading=person_reading(n)
         return ruby(f"{n}人",reading) if reading else m.group(0)
     rendered=RUBY_UNIT_RE["人"].sub(person_repl,rendered)
+    # pykakasi can tokenize 3+ digit counters as a suffix compound such as
+    # 359<ruby>人以上<rt>ひといじょう</rt></ruby>.  In numeric context 人 is
+    # the productive counter にん, regardless of whether the full number itself
+    # is outside the explicit 1-99 person-reading table.
+    rendered=NUMERIC_PERSON_ABOVE_RE.sub("<ruby>人以上<rt>にんいじょう</rt></ruby>", rendered)
+    rendered=NUMERIC_PERSON_SPLIT_RE.sub("<ruby>人<rt>にん</rt></ruby>", rendered)
 
     for unit in COUNTER_SPECS:
         def counter_repl(m, unit=unit):
