@@ -49,6 +49,7 @@ jobs:
             const HEALTH_PATH = 'data/newsroom-health.json';
             const HEALTH_HEARTBEAT_MS = 30 * MINUTE;
             const STUCK_RUN_MS = 30 * MINUTE;
+            const SYSTEM_ASSET_VERSION = '20260828health1';
 
             async function entry(repoName, path) {
               try {
@@ -140,8 +141,10 @@ jobs:
             ];
 
             const structural = [];
+            const pageDocuments = new Map();
             for (const [path, marker, desk] of pages) {
               const text = await raw(repo, path);
+              if (text) pageDocuments.set(path, text);
               if (!text) {
                 structural.push(`${path}:missing`);
                 continue;
@@ -271,6 +274,49 @@ jobs:
               await dispatchRecovery('auto-maintenance.yml', `structural=${structural.join(',')}`);
             }
 
+            // Keep every reader page on the same SYSTEM implementation. A stale
+            // cache-buster can otherwise preserve the old green-only UI after the
+            // health logic has been fixed. Repair all HTML references in one commit.
+            async function repairSystemAssetRefs() {
+              const desired = `assets/js/system-ja.js?v=${SYSTEM_ASSET_VERSION}`;
+              const replacements = [];
+              for (const [path, text] of pageDocuments.entries()) {
+                const next = text.replace(/assets\/js\/system-ja\.js(?:\?v=[^"'\s>]+)?/g, desired);
+                if (next !== text) replacements.push({ path, content: next });
+              }
+              if (!replacements.length) return null;
+
+              try {
+                const branch = await github.rest.repos.getBranch({ owner, repo, branch: 'main' });
+                const parentSha = branch.data.commit.sha;
+                const parent = await github.rest.git.getCommit({ owner, repo, commit_sha: parentSha });
+                const tree = [];
+                for (const item of replacements) {
+                  const blob = await github.rest.git.createBlob({
+                    owner, repo, content: item.content, encoding: 'utf-8',
+                  });
+                  tree.push({ path: item.path, mode: '100644', type: 'blob', sha: blob.data.sha });
+                }
+                const createdTree = await github.rest.git.createTree({
+                  owner, repo, base_tree: parent.data.tree.sha, tree,
+                });
+                const commit = await github.rest.git.createCommit({
+                  owner, repo, message: `Bump SYSTEM newsroom health asset on ${replacements.length} pages`,
+                  tree: createdTree.data.sha, parents: [parentSha],
+                });
+                await github.rest.git.updateRef({
+                  owner, repo, ref: 'heads/main', sha: commit.data.sha, force: false,
+                });
+                core.warning(`ROBOT_SYSTEM_ASSET_REPAIRED pages=${replacements.length} commit=${commit.data.sha}`);
+                return commit.data.sha;
+              } catch (error) {
+                core.warning(`SYSTEM asset self-heal deferred: ${error.message}`);
+                return null;
+              }
+            }
+
+            const assetRepairCommit = await repairSystemAssetRefs();
+
             // GITHUB_TOKEN commits do not reliably trigger push workflows. Explicitly
             // deploy the current main SHA so RED/GREEN truth reaches the public site.
             const branch = await github.rest.repos.getBranch({ owner, repo, branch: 'main' });
@@ -280,7 +326,7 @@ jobs:
             const activeForMain = pageRuns.data.workflow_runs.find((run) => run.status !== 'completed' && run.head_sha === mainSha);
             if (!activeForMain && (!latestSuccessfulPage || latestSuccessfulPage.head_sha !== mainSha)) {
               await github.rest.actions.createWorkflowDispatch({ owner, repo, workflow_id: 'pages.yml', ref: 'main' });
-              core.warning(`ROBOT_DISPATCH pages.yml; main=${mainSha}; healthCommit=${healthCommitSha || 'none'}`);
+              core.warning(`ROBOT_DISPATCH pages.yml; main=${mainSha}; healthCommit=${healthCommitSha || 'none'}; assetRepair=${assetRepairCommit || 'none'}`);
             }
 
             if (state === 'RED') {
