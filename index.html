@@ -23,13 +23,13 @@
       <div class="masthead-side right"><span data-edition-tagline>知るべきニュースを、わかりやすく</span><br>JAPANESE EDITION</div>
     </header>
     <nav class="section-nav" aria-label="ニュース分野"><a class="live-nav" href="live.html"><ruby>速報<rt>そくほう</rt></ruby></a><a aria-current="page" href="index.html"><ruby>一面<rt>いちめん</rt></ruby>トップ</a><a href="world.html"><ruby>世界<rt>せかい</rt></ruby></a><a href="asia.html">アジア</a><a href="hong-kong.html"><ruby>香港<rt>ほんこん</rt></ruby></a><a href="japan.html"><ruby>日本<rt>にほん</rt></ruby></a><a href="finance.html"><ruby>経済<rt>けいざい</rt></ruby></a><a href="stocks.html"><ruby>株式<rt>かぶしき</rt></ruby>ニュース</a><a href="technology.html">AI・テクノロジー</a><a href="manga-anime.html"><ruby>漫画<rt>まんが</rt></ruby>・アニメ</a><a href="manchester-united.html">マンチェスター・U</a><a href="football.html">サッカー</a><a href="archive.html">アーカイブ</a></nav>
-    <div class="date-strip"><span data-edition-date>読み込み中…</span><span>Daily Edition 固定保存 · Live 06:00–24:00 毎時更新（08:00 Daily） · 分野別ページに追加ニュース</span></div>
+    <div class="date-strip"><span data-edition-date>読み込み中…</span><span>Daily Edition 固定保存 · Live 06:00–24:00 毎時更新（08:00 Daily） · 一面は最新の承認済みDaily / Live / Rollingを優先表示</span></div>
     <main>
-      <div class="edition-divider" id="daily-edition"><span>08:00 DAILY EDITION</span></div>
+      <div class="edition-divider" id="daily-edition"><span>08:00 DAILY EDITION + CURRENT NEWSROOM</span></div>
       <p id="fatal" class="notice"></p>
       <section class="lead-grid" aria-label="本日の一面と必読5本">
         <article class="lead-story" id="lead-story"><p>本日の一面トップニュースを読み込んでいます…</p></article>
-        <aside><div class="section-heading"><h2>きょう必読の5本</h2><span>TOP FIVE</span></div><div class="top-five" id="top-five"></div><div class="notice">この5本はDaily Editionの一面での優先順位です。各分野ページでは、一面に入らない追加ニュースも掲載します。</div></aside>
+        <aside><div class="section-heading"><h2>いま必読の5本</h2><span>CURRENT TOP FIVE</span></div><div class="top-five" id="top-five"></div><div class="notice">Daily Editionを基礎に、より新しい承認済みLive / Rollingがある場合は一面を自動更新します。</div></aside>
       </section>
       <section class="live-summary" id="live-summary" aria-label="Live Update"><div class="live-loading">最新のLive Updateを読み込んでいます…</div></section>
       <div id="dynamic-sections"></div>
@@ -42,5 +42,6 @@
   <script src="assets/js/system-ja.js?v=90bae28ef0" defer></script>
   <script src="assets/js/newspaper-ja.js?v=504f9b6d6f" defer></script>
   <script src="assets/js/home-extras-ja.js?v=72eebd44f3" defer></script>
+  <script src="assets/js/home-current-ja.js?v=935e827eb5" defer></script>
 </body>
 </html>
