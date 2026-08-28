@@ -51,7 +51,11 @@ jobs:
           echo "LAYOUT_DEPLOY_SHA=${GITHUB_SHA}"
           python scripts/validate_site.py --static-only
           node --check assets/js/newspaper-ja.js
+          node --check assets/js/home-extras-ja.js
+          node --check assets/js/home-current-ja.js
           node --check assets/js/topic-ja-rolling.js
+          node --check assets/js/stocks-ja.js
+          node --check assets/js/live-guard.js
           node --check assets/js/system-ja.js
           python scripts/validate_layout_parity.py || echo 'LAYOUT_PARITY_WARNING non-blocking presentation drift detected'
 
