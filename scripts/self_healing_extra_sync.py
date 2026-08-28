@@ -83,6 +83,68 @@ def _story_quality_ok(source_story, japanese_story) -> bool:
     return True
 
 
+def _stock_event_label(story: dict) -> str:
+    kind = str(story.get("storyType") or "").upper()
+    if "EARN" in kind or "RESULT" in kind:
+        return "決算・業績"
+    if "REGUL" in kind or "DISCLOS" in kind or "FILING" in kind:
+        return "規制・公式開示"
+    if "PRODUCT" in kind or "EVENT" in kind:
+        return "製品・イベント"
+    if "REVENUE" in kind or "CAPACITY" in kind:
+        return "売上高・事業動向"
+    if "ANALYST" in kind or "RATING" in kind:
+        return "アナリスト動向"
+    return "企業・市場動向"
+
+
+def _stock_ticker_from_path(path: str) -> str:
+    match = re.search(r"\.tickers\.([^\.\[]+)\.stories\[\d+\]", str(path or ""))
+    return match.group(1) if match else "STOCK"
+
+
+def _stock_minimum_fallback(source_story: dict, path: str, reason: str):
+    """Publish a truthful Japanese minimum card when MT is unavailable.
+
+    This is intentionally narrow: it uses only the ticker, source and verified
+    event class already present in the source record. It never invents numbers,
+    direction or details. The owner remains deferred, so later maintenance will
+    retry and replace this minimum card with the full translation.
+    """
+    ticker = _stock_ticker_from_path(path)
+    source_name = str(source_story.get("sourceName") or "").strip()
+    if not source_name or base.likely_chinese_source(source_name):
+        source_name = ticker
+    event = _stock_event_label(source_story)
+    value = {}
+    for key in (
+        "id", "storyType", "impact", "sourceName", "sourceUrl", "sources",
+        "verificationMode", "verifiedAt", "primaryPublishedAt", "publishedAt",
+        "updatedAt", "generatedAt",
+    ):
+        if key in source_story:
+            value[key] = source_story[key]
+    value["impactLabel"] = "確認済み情報"
+    value["title"] = f"{ticker}：{source_name}で最新の{event}情報を確認"
+    value["summary"] = (
+        f"{source_name}を出典として、{event}に関する新しい検証済み情報を確認しました。"
+        "詳細は出典資料の確認後に順次更新します。"
+    )
+    time_label = str(source_story.get("timeLabel") or "").strip()
+    if time_label:
+        value["timeLabel"] = time_label.replace("核實", "確認済み").replace("核实", "確認済み")
+    value["translationStatus"] = "EDITORIAL_MINIMUM_FALLBACK"
+    value["sourceItemFingerprint"] = extra.fingerprint(source_story)
+    extra.decorate_story_tree(value, "rolling")
+    print(
+        "EXTRA_STOCK_EDITORIAL_MINIMUM_FALLBACK",
+        f"ticker={ticker}",
+        f"id={source_story.get('id')}",
+        f"reason={reason}",
+    )
+    return value
+
+
 def _translate_visible_string(source_text: str, old_value, parent_key: str, path: str, metadata_deferred: list[str], deadline: float):
     strict = parent_key in safe.STRICT_PROSE_KEYS
     if time.monotonic() >= deadline:
@@ -137,6 +199,8 @@ def _convert_node(source, old, file_name: str, path: str, old_by_id, deferred: s
 
         if time.monotonic() >= deadline:
             deferred.add(story_id)
+            if file_name == "stocks-latest.json":
+                return _stock_minimum_fallback(source, path, "translation-budget-exhausted")
             print("EXTRA_SELF_HEAL_BUDGET_QUARANTINED", f"file={file_name}", f"id={story_id}")
             return DROP
 
@@ -159,6 +223,8 @@ def _convert_node(source, old, file_name: str, path: str, old_by_id, deferred: s
                 f"id={story_id}",
                 f"error={type(exc).__name__}:{str(exc)[:220]}",
             )
+            if file_name == "stocks-latest.json":
+                return _stock_minimum_fallback(source, path, type(exc).__name__)
             return DROP
 
     if isinstance(source, list):
