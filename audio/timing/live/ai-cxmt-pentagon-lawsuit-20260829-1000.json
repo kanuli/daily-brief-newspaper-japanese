@@ -1,0 +1,400 @@
+{
+  "version": 3,
+  "duration": 212.846,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 653,
+  "charactersPerMinute": 184.1,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 19.047,
+      "text": "中国のDRAM工場のディレクターであるXin Chuは、「中国の軍事企業」のラベルに異議を申し立てるために米国国防総省を訴えた"
+    },
+    {
+      "key": "dek",
+      "start": 19.047,
+      "end": 46.766,
+      "text": "CXMTは、国防総省が同社を軍事会社のリストに含めることは証拠が不足しており、正当な手続きに違反していると述べた。この事件は再び米国の技術制限の法的境界をテストするだろう。"
+    },
+    {
+      "key": "body-0",
+      "start": 46.766,
+      "end": 100.27,
+      "text": "中国の大手DRAMメーカーであるChangxin Storageは、ペンタゴンが同社を「中国の軍事企業」として上場したことに異議を申し立て、米国コロンビア特別区地方裁判所に訴訟を提起した。CXMTは、その製品は主に民間および商業市場で使用されており、国防総省の指定は恣意的であり、十分な証拠がなく、会社の正当な手続きの権利を侵害していると主張しています。"
+    },
+    {
+      "key": "body-1",
+      "start": 100.27,
+      "end": 158.164,
+      "text": "このリスト自体は包括的な制裁に相当するものではありませんが、一部の米国政府の契約を制限し、銀行、サプライヤー、および国際的な顧客のコンプライアンス上の懸念を引き起こす可能性があります。CXMTは中国で最も重要なDRAMメーカーの1つであり、グローバルメモリサプライチェーンと中国の半導体自律戦略において重要な地位を占めているため、この訴訟はより広範な技術政策にも影響を与えます。"
+    },
+    {
+      "key": "why",
+      "start": 158.164,
+      "end": 187.973,
+      "text": "CXMTは中国のメモリ業界の中核企業であり、この訴訟の結果は、米国の中国の半導体企業に対するリストシステムの制限の法的根拠と実施に影響を与える可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 187.973,
+      "end": 212.846,
+      "text": "ペンタゴンの正式な申し立て、裁判所が一時的な差し止め命令を出すかどうか、米国政府が関連する軍事企業のリストを調整するかどうかに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 6.549,
+      "end": 6.78,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中国のDRAM工場のディレクターであるXin Chuは、"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.78,
+      "speechEnd": 13.886,
+      "end": 14.166,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "「中国の軍事企業」のラベルに異議を申し立てるため"
+    },
+    {
+      "parentKey": "title",
+      "start": 14.166,
+      "speechEnd": 18.347,
+      "end": 19.047,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "に米国国防総省を訴えた。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.047,
+      "speechEnd": 21.207,
+      "end": 21.437,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "CXMTは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.437,
+      "speechEnd": 31.331,
+      "end": 31.561,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "国防総省が同社を軍事会社のリストに含めることは証拠が不足しており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 31.561,
+      "speechEnd": 36.438,
+      "end": 36.938,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "正当な手続きに違反していると述べた。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 36.938,
+      "speechEnd": 46.066,
+      "end": 46.766,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "この事件は再び米国の技術制限の法的境界をテストするだろう。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.766,
+      "speechEnd": 54.012,
+      "end": 54.242,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中国の大手DRAMメーカーであるChangxin Storageは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.242,
+      "speechEnd": 60.931,
+      "end": 61.211,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ペンタゴンが同社を「中国の軍事企業」として"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.211,
+      "speechEnd": 65.322,
+      "end": 65.552,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "上場したことに異議を申し立て、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.552,
+      "speechEnd": 73.077,
+      "end": 73.577,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "米国コロンビア特別区地方裁判所に訴訟を提起した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.577,
+      "speechEnd": 75.737,
+      "end": 75.967,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "CXMTは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.967,
+      "speechEnd": 83.91,
+      "end": 84.14,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "その製品は主に民間および商業市場で使用されており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 84.14,
+      "speechEnd": 88.878,
+      "end": 89.108,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "国防総省の指定は恣意的であり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 89.108,
+      "speechEnd": 91.965,
+      "end": 92.195,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "十分な証拠がなく、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 92.195,
+      "speechEnd": 99.65,
+      "end": 100.27,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "会社の正当な手続きの権利を侵害していると主張しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 100.27,
+      "speechEnd": 108.771,
+      "end": 109.001,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "このリスト自体は包括的な制裁に相当するものではありませんが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.001,
+      "speechEnd": 114.436,
+      "end": 114.666,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "一部の米国政府の契約を制限し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.666,
+      "speechEnd": 116.686,
+      "end": 116.916,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "銀行、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 116.916,
+      "speechEnd": 119.076,
+      "end": 119.306,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "サプライヤー、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 119.306,
+      "speechEnd": 125.995,
+      "end": 126.275,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "および国際的な顧客のコンプライアンス上の懸念を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 126.275,
+      "speechEnd": 130.038,
+      "end": 130.538,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "引き起こす可能性があります。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 130.538,
+      "speechEnd": 138.132,
+      "end": 138.362,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "CXMTは中国で最も重要なDRAMメーカーの1つであり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 138.362,
+      "speechEnd": 150.207,
+      "end": 150.437,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "グローバルメモリサプライチェーンと中国の半導体自律戦略において重要な地位を占めているため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 150.437,
+      "speechEnd": 157.544,
+      "end": 158.164,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "この訴訟はより広範な技術政策にも影響を与えます。"
+    },
+    {
+      "parentKey": "why",
+      "start": 158.164,
+      "speechEnd": 162.136,
+      "end": 162.636,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 162.636,
+      "speechEnd": 169.464,
+      "end": 169.694,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "CXMTは中国のメモリ業界の中核企業であり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 169.694,
+      "speechEnd": 172.62,
+      "end": 172.85,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この訴訟の結果は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 172.85,
+      "speechEnd": 187.273,
+      "end": 187.973,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "米国の中国の半導体企業に対するリストシステムの制限の法的根拠と実施に影響を与える可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 187.973,
+      "speechEnd": 190.064,
+      "end": 190.294,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 190.294,
+      "speechEnd": 194.126,
+      "end": 194.356,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ペンタゴンの正式な申し立て、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 194.356,
+      "speechEnd": 201.114,
+      "end": 201.345,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "裁判所が一時的な差し止め命令を出すかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 201.345,
+      "speechEnd": 207.128,
+      "end": 207.408,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "米国政府が関連する軍事企業のリストを"
+    },
+    {
+      "parentKey": "watch",
+      "start": 207.408,
+      "speechEnd": 212.146,
+      "end": 212.846,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "調整するかどうかに注意してください。"
+    }
+  ]
+}

@@ -1,0 +1,430 @@
+{
+  "version": 3,
+  "duration": 177.868,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 481,
+  "charactersPerMinute": 162.3,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 15.565,
+      "text": "台風サウデルが2回上陸し、浙江省で82万人以上が避難し、鉄道フェリーが大規模に閉鎖されました"
+    },
+    {
+      "key": "dek",
+      "start": 15.565,
+      "end": 36.356,
+      "text": "嵐は台州と温州に上陸し、浙江省、福建省、および多くの内陸省は依然として大雨や二次災害のリスクに直面しています。"
+    },
+    {
+      "key": "body-0",
+      "start": 36.356,
+      "end": 86.809,
+      "text": "台風サウデル号は金曜日の朝、台州と温州に上陸し、今年浙江省に上陸した3番目の台風となりました。ロイターが引用した公式データによると、温州では82万人以上が避難し、台州ではさらに数万人が送迎手配に含まれている。浙江省の多段式鉄道サービスは一時停止されており、台州と福建省の多くの旅客フェリー路線も一時停止されている。"
+    },
+    {
+      "key": "body-1",
+      "start": 86.809,
+      "end": 125.556,
+      "text": "嵐は上陸後徐々に弱まりましたが、豪雨は依然として浙江省、福建省などの内陸部に影響を与える可能性があります。次の段階では、鉄砲水、地滑り、都市流出が主なリスクとなり、輸送とサプライチェーンの回復速度は降雨量と河川水位に依存します。"
+    },
+    {
+      "key": "why",
+      "start": 125.556,
+      "end": 155.192,
+      "text": "浙江省と福建省は重要な輸出、製造、港湾地域であり、大規模な閉鎖は一時的に物流、工業生産、地域横断輸送に影響を与える可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 155.192,
+      "end": 177.868,
+      "text": "暴風雨の赤色またはオレンジ色のアラート、鉄道と港の再開時間、洪水、土砂崩れ、または大きな犠牲者に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.902,
+      "end": 4.182,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "台風サウデルが2回上陸し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.182,
+      "speechEnd": 9.617,
+      "end": 9.897,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "浙江省で82万人以上が避難し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.897,
+      "speechEnd": 14.704,
+      "end": 15.565,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "鉄道フェリーが大規模に閉鎖されました。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.565,
+      "speechEnd": 19.467,
+      "end": 19.747,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "嵐は台州と温州に上陸し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.747,
+      "speechEnd": 21.837,
+      "end": 22.117,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "浙江省、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.117,
+      "speechEnd": 24.277,
+      "end": 24.557,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "福建省、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.557,
+      "speechEnd": 35.496,
+      "end": 36.356,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "および多くの内陸省は依然として大雨や二次災害のリスクに直面しています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.356,
+      "speechEnd": 40.398,
+      "end": 40.678,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "台風サウデル号は金曜日の朝、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.678,
+      "speechEnd": 44.092,
+      "end": 44.372,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "台州と温州に上陸し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.372,
+      "speechEnd": 51.688,
+      "end": 52.308,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "今年浙江省に上陸した3番目の台風となりました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.308,
+      "speechEnd": 56.907,
+      "end": 57.187,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイターが引用した公式データによると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.187,
+      "speechEnd": 62.761,
+      "end": 63.041,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "温州では82万人以上が避難し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.041,
+      "speechEnd": 69.382,
+      "end": 70.002,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "台州ではさらに数万人が送迎手配に含まれている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.002,
+      "speechEnd": 77.387,
+      "end": 77.667,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "浙江省の多段式鉄道サービスは一時停止されており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 77.667,
+      "speechEnd": 86.029,
+      "end": 86.809,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "台州と福建省の多くの旅客フェリー路線も一時停止されている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 86.809,
+      "speechEnd": 91.407,
+      "end": 91.688,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "嵐は上陸後徐々に弱まりましたが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.688,
+      "speechEnd": 95.45,
+      "end": 95.73,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "豪雨は依然として浙江省、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 95.73,
+      "speechEnd": 103.255,
+      "end": 103.875,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "福建省などの内陸部に影響を与える可能性があります。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.875,
+      "speechEnd": 106.732,
+      "end": 107.012,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "次の段階では、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.012,
+      "speechEnd": 109.102,
+      "end": 109.382,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "鉄砲水、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.382,
+      "speechEnd": 111.473,
+      "end": 111.753,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "地滑り、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.753,
+      "speechEnd": 115.515,
+      "end": 115.795,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "都市流出が主なリスクとなり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.795,
+      "speechEnd": 119.837,
+      "end": 120.177,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "輸送とサプライチェーンの回復速度は"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.177,
+      "speechEnd": 124.775,
+      "end": 125.556,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "降雨量と河川水位に依存します。"
+    },
+    {
+      "parentKey": "why",
+      "start": 125.556,
+      "speechEnd": 129.527,
+      "end": 130.147,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 130.147,
+      "speechEnd": 135.025,
+      "end": 135.305,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "浙江省と福建省は重要な輸出、"
+    },
+    {
+      "parentKey": "why",
+      "start": 135.305,
+      "speechEnd": 137.325,
+      "end": 137.605,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "製造、"
+    },
+    {
+      "parentKey": "why",
+      "start": 137.605,
+      "speechEnd": 140.323,
+      "end": 140.603,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "港湾地域であり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 140.603,
+      "speechEnd": 145.062,
+      "end": 145.342,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "大規模な閉鎖は一時的に物流、"
+    },
+    {
+      "parentKey": "why",
+      "start": 145.342,
+      "speechEnd": 147.572,
+      "end": 147.852,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "工業生産、"
+    },
+    {
+      "parentKey": "why",
+      "start": 147.852,
+      "speechEnd": 154.332,
+      "end": 155.192,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "地域横断輸送に影響を与える可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 155.192,
+      "speechEnd": 157.282,
+      "end": 157.562,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 157.562,
+      "speechEnd": 163.206,
+      "end": 163.486,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "暴風雨の赤色またはオレンジ色のアラート、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 163.486,
+      "speechEnd": 166.9,
+      "end": 167.18,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "鉄道と港の再開時間、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 167.18,
+      "speechEnd": 169.201,
+      "end": 169.481,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "洪水、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 169.481,
+      "speechEnd": 171.641,
+      "end": 171.921,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "土砂崩れ、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 171.921,
+      "speechEnd": 177.008,
+      "end": 177.868,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "または大きな犠牲者に注意してください。"
+    }
+  ]
+}

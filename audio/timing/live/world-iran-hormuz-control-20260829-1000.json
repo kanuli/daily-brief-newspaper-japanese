@@ -1,0 +1,380 @@
+{
+  "version": 3,
+  "duration": 180.689,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 553,
+  "charactersPerMinute": 183.6,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 17.603,
+      "text": "イラン海軍は、ホルムズ海峡の制限を完全に管理していると主張しており、引き続き世界的なエネルギー供給を推進している"
+    },
+    {
+      "key": "dek",
+      "start": 17.603,
+      "end": 39.199,
+      "text": "テヘランは、輸送レーンが正常に開かれたという米国の主張を否定し、ワシントンが軍事作戦を停止し、その約束を果たすまで制限は続くと述べた。"
+    },
+    {
+      "key": "body-0",
+      "start": 39.199,
+      "end": 79.163,
+      "text": "イラン革命防衛隊海軍は、現在ホルムズ海峡の「完全な支配」を維持していると述べ、重要な輸送レーンが正常に開かれたという米国の主張を否定している。イラン側は、米国がイランに対する軍事作戦を停止し、関連するコミットメントを履行するまで、現在の制限は継続すると述べた。"
+    },
+    {
+      "key": "body-1",
+      "start": 79.163,
+      "end": 136.113,
+      "text": "6か月の戦いの後、ホルムズは純粋に軍事的な焦点から中核的な世界的なエネルギーと輸送のリスクに移行しました。イランとオマーンは近い将来、一時的な海運ルートについて話し合っているが、全面的な再開については合意に達していないとAP通信は報じた。海峡は通常、世界の石油とガスの供給の約5分の1を担っており、航行の引き締めはすぐに石油価格、保険、運賃に変換されます。"
+    },
+    {
+      "key": "why",
+      "start": 136.113,
+      "end": 159.769,
+      "text": "ホルムズは世界で最も重要なエネルギー回廊の1つであり、航行の状態はアジアとヨーロッパのエネルギーコストと世界的なインフレリスクに直接影響します。"
+    },
+    {
+      "key": "watch",
+      "start": 159.769,
+      "end": 180.689,
+      "text": "オマーンとのイランのチャネル協定、米国とイランが直接交渉を再開したかどうか、商船の実際の輸送量、原油価格の反応に注意を払う。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.439,
+      "end": 2.669,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "イラン海軍は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.669,
+      "speechEnd": 10.542,
+      "end": 10.772,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ホルムズ海峡の制限を完全に管理していると主張しており、"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.772,
+      "speechEnd": 16.903,
+      "end": 17.603,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "引き続き世界的なエネルギー供給を推進している。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.603,
+      "speechEnd": 19.694,
+      "end": 19.924,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "テヘランは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.924,
+      "speechEnd": 27.588,
+      "end": 27.818,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "輸送レーンが正常に開かれたという米国の主張を否定し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.818,
+      "speechEnd": 32.347,
+      "end": 32.577,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ワシントンが軍事作戦を停止し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.577,
+      "speechEnd": 38.499,
+      "end": 39.199,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "その約束を果たすまで制限は続くと述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.199,
+      "speechEnd": 43.24,
+      "end": 43.47,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "イラン革命防衛隊海軍は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.47,
+      "speechEnd": 51.343,
+      "end": 51.573,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "現在ホルムズ海峡の「完全な支配」を維持していると述べ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.573,
+      "speechEnd": 60.492,
+      "end": 60.992,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "重要な輸送レーンが正常に開かれたという米国の主張を否定している。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.992,
+      "speechEnd": 63.221,
+      "end": 63.451,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "イラン側は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.451,
+      "speechEnd": 69.234,
+      "end": 69.464,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国がイランに対する軍事作戦を停止し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.464,
+      "speechEnd": 74.133,
+      "end": 74.363,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "関連するコミットメントを履行するまで、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.363,
+      "speechEnd": 78.543,
+      "end": 79.163,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "現在の制限は継続すると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 79.163,
+      "speechEnd": 82.438,
+      "end": 82.668,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "6か月の戦いの後、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.668,
+      "speechEnd": 94.722,
+      "end": 95.222,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "ホルムズは純粋に軍事的な焦点から中核的な世界的なエネルギーと輸送のリスクに移行しました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 95.222,
+      "speechEnd": 99.193,
+      "end": 99.423,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "イランとオマーンは近い将来、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.423,
+      "speechEnd": 105.136,
+      "end": 105.366,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "一時的な海運ルートについて話し合っているが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 105.366,
+      "speechEnd": 113.867,
+      "end": 114.367,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "全面的な再開については合意に達していないとAP通信は報じた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.367,
+      "speechEnd": 117.014,
+      "end": 117.244,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "海峡は通常、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.244,
+      "speechEnd": 125.118,
+      "end": 125.348,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "世界の石油とガスの供給の約5分の1を担っており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 125.348,
+      "speechEnd": 130.225,
+      "end": 130.455,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "航行の引き締めはすぐに石油価格、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 130.455,
+      "speechEnd": 132.475,
+      "end": 132.706,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "保険、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 132.706,
+      "speechEnd": 135.492,
+      "end": 136.113,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "運賃に変換されます。"
+    },
+    {
+      "parentKey": "why",
+      "start": 136.113,
+      "speechEnd": 140.084,
+      "end": 140.584,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 140.584,
+      "speechEnd": 148.039,
+      "end": 148.269,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ホルムズは世界で最も重要なエネルギー回廊の1つであり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 148.269,
+      "speechEnd": 159.069,
+      "end": 159.769,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "航行の状態はアジアとヨーロッパのエネルギーコストと世界的なインフレリスクに直接影響します。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 159.769,
+      "speechEnd": 161.859,
+      "end": 162.089,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 162.089,
+      "speechEnd": 165.991,
+      "end": 166.221,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "オマーンとのイランのチャネル協定、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 166.221,
+      "speechEnd": 171.865,
+      "end": 172.095,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国とイランが直接交渉を再開したかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 172.095,
+      "speechEnd": 175.439,
+      "end": 175.669,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "商船の実際の輸送量、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 175.669,
+      "speechEnd": 179.989,
+      "end": 180.689,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "原油価格の反応に注意を払う。"
+    }
+  ]
+}
