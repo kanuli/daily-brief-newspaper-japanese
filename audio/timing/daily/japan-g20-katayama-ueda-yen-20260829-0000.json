@@ -1,0 +1,420 @@
+{
+  "version": 3,
+  "duration": 216.79,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 612,
+  "charactersPerMinute": 169.4,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 12.217,
+      "text": "片山皋月與植田和男赴任 G20日圓再近160令日美政策並行焦點"
+    },
+    {
+      "key": "dek",
+      "start": 12.217,
+      "end": 42.123,
+      "text": "日本の財務大臣は来週米国のアッシュビルで開催されるG 20財務会議に出席する予定であり、市場は彼女と米国財務長官ベッセントが為替レートと日本の金融政策について再び話すかどうかを懸念している。"
+    },
+    {
+      "key": "body-0",
+      "start": 42.123,
+      "end": 88.113,
+      "text": "また、日本銀行総裁の上田和夫氏は、来週、ノースカロライナ州アッシュビルで開催されるG 20の財務大臣と中央銀行総裁の会合に出席する予定です。片山氏は、世界経済と国際金融問題に貢献したいと述べた。市場は、スコット・ベッセント米財務長官との二国間協議を特に懸念している。"
+    },
+    {
+      "key": "body-1",
+      "start": 88.113,
+      "end": 159.538,
+      "text": "財務省の最新データによると、7月30日から8月26日にかけての外国為替介入の規模は15.4兆円に達し、一時は共同介入後に155ドルから1ドル程度に上昇したが、その後160ドル程度に弱まった。Bessent氏は以前、金利引き上げを通じて金融政策の正常化を検討する可能性があると公表しており、日本銀行副総裁の彦見野良三氏も、9月の金利引き上げは議論の余地のある選択肢であり、G 20を取り巻く政策シグナルが市場にとってより魅力的になると述べた。"
+    },
+    {
+      "key": "why",
+      "start": 159.538,
+      "end": 194.188,
+      "text": "日本と米国の間で再び為替レートが調整されたり、日本が金利を引き上げるためのより明確なシグナルを放出したりすると、円の評価、日本の国債利回り、銀行株式、輸出企業に直接影響を与えます。"
+    },
+    {
+      "key": "watch",
+      "start": 194.188,
+      "end": 216.79,
+      "text": "G 20を傍観した日米二国間協議、片山・上田間の為替レートの文言、9月の日銀総会前のインフレ・賃金データに注目してほしい。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 11.356,
+      "end": 12.217,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "片山皋月與植田和男赴任 G20日圓再近160令日美政策並行焦點。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.217,
+      "speechEnd": 25.315,
+      "end": 25.595,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本の財務大臣は来週米国のアッシュビルで開催されるG 20財務会議に出席する予定であり、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.595,
+      "speechEnd": 31.517,
+      "end": 31.857,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "市場は彼女と米国財務長官ベッセントが"
+    },
+    {
+      "parentKey": "dek",
+      "start": 31.857,
+      "speechEnd": 41.263,
+      "end": 42.123,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "為替レートと日本の金融政策について再び話すかどうかを懸念している。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.123,
+      "speechEnd": 44.143,
+      "end": 44.423,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "また、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.423,
+      "speechEnd": 49.509,
+      "end": 49.789,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本銀行総裁の上田和夫氏は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.789,
+      "speechEnd": 51.81,
+      "end": 52.09,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "来週、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.09,
+      "speechEnd": 66.442,
+      "end": 67.062,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ノースカロライナ州アッシュビルで開催されるG 20の財務大臣と中央銀行総裁の会合に出席する予定です。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.062,
+      "speechEnd": 69.431,
+      "end": 69.711,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "片山氏は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.711,
+      "speechEnd": 75.773,
+      "end": 76.393,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "世界経済と国際金融問題に貢献したいと述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.393,
+      "speechEnd": 78.483,
+      "end": 78.763,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "市場は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 78.763,
+      "speechEnd": 87.333,
+      "end": 88.113,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "スコット・ベッセント米財務長官との二国間協議を特に懸念している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.113,
+      "speechEnd": 92.363,
+      "end": 92.643,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "財務省の最新データによると、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.643,
+      "speechEnd": 104.975,
+      "end": 105.255,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "7月30日から8月26日にかけての外国為替介入の規模は15.4兆円に達し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 105.255,
+      "speechEnd": 108.529,
+      "end": 108.709,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "一時は共同介入後に"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.709,
+      "speechEnd": 111.357,
+      "end": 111.537,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "155ドル"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.537,
+      "speechEnd": 115.508,
+      "end": 115.788,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "から1ドル程度に上昇したが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.788,
+      "speechEnd": 120.247,
+      "end": 120.867,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "その後160ドル程度に弱まった。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.867,
+      "speechEnd": 124.003,
+      "end": 124.283,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Bessent氏は以前、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 124.283,
+      "speechEnd": 130.414,
+      "end": 130.754,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "金利引き上げを通じて金融政策の正常化を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 130.754,
+      "speechEnd": 135.491,
+      "end": 135.771,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "検討する可能性があると公表しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 135.771,
+      "speechEnd": 140.579,
+      "end": 140.859,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本銀行副総裁の彦見野良三氏も、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 140.859,
+      "speechEnd": 148.105,
+      "end": 148.385,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "9月の金利引き上げは議論の余地のある選択肢であり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 148.385,
+      "speechEnd": 153.61,
+      "end": 153.95,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "G 20を取り巻く政策シグナルが"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 153.95,
+      "speechEnd": 158.758,
+      "end": 159.538,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "市場にとってより魅力的になると述べた。"
+    },
+    {
+      "parentKey": "why",
+      "start": 159.538,
+      "speechEnd": 163.509,
+      "end": 164.129,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 164.129,
+      "speechEnd": 171.375,
+      "end": 171.655,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本と米国の間で再び為替レートが調整されたり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 171.655,
+      "speechEnd": 180.573,
+      "end": 180.853,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本が金利を引き上げるためのより明確なシグナルを放出したりすると、"
+    },
+    {
+      "parentKey": "why",
+      "start": 180.853,
+      "speechEnd": 182.943,
+      "end": 183.223,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "円の評価、"
+    },
+    {
+      "parentKey": "why",
+      "start": 183.223,
+      "speechEnd": 186.149,
+      "end": 186.429,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本の国債利回り、"
+    },
+    {
+      "parentKey": "why",
+      "start": 186.429,
+      "speechEnd": 188.659,
+      "end": 188.939,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "銀行株式、"
+    },
+    {
+      "parentKey": "why",
+      "start": 188.939,
+      "speechEnd": 193.328,
+      "end": 194.188,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "輸出企業に直接影響を与えます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 194.188,
+      "speechEnd": 196.279,
+      "end": 196.559,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 196.559,
+      "speechEnd": 202.272,
+      "end": 202.552,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "G 20を傍観した日米二国間協議、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 202.552,
+      "speechEnd": 207.777,
+      "end": 208.057,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "片山・上田間の為替レートの文言、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 208.057,
+      "speechEnd": 215.93,
+      "end": 216.79,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "9月の日銀総会前のインフレ・賃金データに注目してほしい。"
+    }
+  ]
+}
