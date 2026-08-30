@@ -1,0 +1,560 @@
+{
+  "version": 3,
+  "duration": 252.578,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 742,
+  "charactersPerMinute": 176.3,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 17.046,
+      "text": "熊本地震から1か月が経過したが、日本製紙八代製作所では、他の現場からの支援のための生産スケジュールがまだない。"
+    },
+    {
+      "key": "dek",
+      "start": 17.046,
+      "end": 43.999,
+      "text": "地震は3つの煙突に損傷を与え、9人が死亡しました。サイトは危険な煙突の除去を優先し、地元企業は長期的なシャットダウンが雇用と物流を引き下げることを心配しました。"
+    },
+    {
+      "key": "body-0",
+      "start": 43.999,
+      "end": 111.093,
+      "text": "熊本県八代市のNippon Paper Yatsushiro Worksは、7月28日の地震以降生産を停止しており、日本の最新の地元報道によると、復旧の時期はまだ不透明であるという。この地震では、作業場のいくつかの煙突が損傷し、そのうちの1つが倒壊して建物に衝突し、最終的に9人が死亡しました。現在、現場では、9月中旬までに大規模な撤去作業を完了することを目標に、まだ落下の危険性がある損傷した煙突の撤去を優先しています。"
+    },
+    {
+      "key": "body-1",
+      "start": 111.093,
+      "end": 175.89,
+      "text": "ジャパンペーパーは先に、製品の供給は最初に在庫でカバーされ、必要に応じて代替生産は他の工場によって手配されると述べた。第8世代商工会議所は、工場のメンテナンス、輸送などに関連する地元企業が約300社あったと推定しているため、生産の中止は単一の製造現場の問題であるだけでなく、地元の雇用、物流、サプライチェーンにも関係しています。八代市はまた、長期的な閉鎖が地域経済に与える影響に注意を払うよう中央政府に要請した。"
+    },
+    {
+      "key": "why",
+      "start": 175.89,
+      "end": 223.017,
+      "text": "大規模な製紙工場の長期的な閉鎖は、紙製品の供給、物流、および請負業者の収益に影響を及ぼします。さらに重要なことに、この事故は大きな犠牲者を伴います。工場がいつ、どのような安全基準で操業を再開するかは、日本企業にとって防災と古い機器管理の重要なケースになります。"
+    },
+    {
+      "key": "watch",
+      "start": 223.017,
+      "end": 252.578,
+      "text": "ジャパンペーパーが発表した正式な再開計画、損傷した煙突の解体の進捗状況、事故調査委員会の結論、八代市と中央政府が雇用または企業支援措置を導入しているかどうかに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.668,
+      "end": 4.898,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "熊本地震から1か月が経過したが、"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.898,
+      "speechEnd": 8.939,
+      "end": 9.169,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本製紙八代製作所では、"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.169,
+      "speechEnd": 16.346,
+      "end": 17.046,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "他の現場からの支援のための生産スケジュールがまだない。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.046,
+      "speechEnd": 22.48,
+      "end": 22.71,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "地震は3つの煙突に損傷を与え、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.71,
+      "speechEnd": 25.985,
+      "end": 26.485,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "9人が死亡しました。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.485,
+      "speechEnd": 31.502,
+      "end": 31.732,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "サイトは危険な煙突の除去を優先し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 31.732,
+      "speechEnd": 36.679,
+      "end": 36.959,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "地元企業は長期的なシャットダウンが"
+    },
+    {
+      "parentKey": "dek",
+      "start": 36.959,
+      "speechEnd": 43.299,
+      "end": 43.999,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "雇用と物流を引き下げることを心配しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.999,
+      "speechEnd": 51.594,
+      "end": 51.824,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "熊本県八代市のNippon Paper Yatsushiro Worksは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.824,
+      "speechEnd": 59.209,
+      "end": 59.439,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "7月28日の地震以降生産を停止しており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.439,
+      "speechEnd": 64.247,
+      "end": 64.477,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本の最新の地元報道によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.477,
+      "speechEnd": 69.772,
+      "end": 70.272,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "復旧の時期はまだ不透明であるという。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.272,
+      "speechEnd": 72.85,
+      "end": 73.08,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この地震では、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.08,
+      "speechEnd": 77.678,
+      "end": 77.908,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "作業場のいくつかの煙突が損傷し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 77.908,
+      "speechEnd": 83.691,
+      "end": 83.921,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "そのうちの1つが倒壊して建物に衝突し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 83.921,
+      "speechEnd": 88.45,
+      "end": 88.95,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "最終的に9人が死亡しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 88.95,
+      "speechEnd": 90.971,
+      "end": 91.201,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "現在、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 91.201,
+      "speechEnd": 93.361,
+      "end": 93.591,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "現場では、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 93.591,
+      "speechEnd": 101.952,
+      "end": 102.182,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "9月中旬までに大規模な撤去作業を完了することを目標に、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 102.182,
+      "speechEnd": 110.473,
+      "end": 111.093,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "まだ落下の危険性がある損傷した煙突の撤去を優先しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.093,
+      "speechEnd": 114.507,
+      "end": 114.737,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ジャパンペーパーは先に、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.737,
+      "speechEnd": 119.963,
+      "end": 120.193,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "製品の供給は最初に在庫でカバーされ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.193,
+      "speechEnd": 128.344,
+      "end": 128.845,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "必要に応じて代替生産は他の工場によって手配されると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 128.845,
+      "speechEnd": 132.955,
+      "end": 133.185,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "第8世代商工会議所は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 133.185,
+      "speechEnd": 135.763,
+      "end": 135.993,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "工場のメンテナンス、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 135.993,
+      "speechEnd": 140.313,
+      "end": 140.593,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "輸送などに関連する地元企業が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 140.593,
+      "speechEnd": 145.331,
+      "end": 145.561,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "約300社あったと推定しているため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 145.561,
+      "speechEnd": 152.528,
+      "end": 152.758,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "生産の中止は単一の製造現場の問題であるだけでなく、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 152.758,
+      "speechEnd": 155.127,
+      "end": 155.357,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "地元の雇用、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 155.357,
+      "speechEnd": 157.378,
+      "end": 157.608,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "物流、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 157.608,
+      "speechEnd": 161.301,
+      "end": 161.801,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "サプライチェーンにも関係しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 161.801,
+      "speechEnd": 164.379,
+      "end": 164.609,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "八代市はまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 164.609,
+      "speechEnd": 171.088,
+      "end": 171.368,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "長期的な閉鎖が地域経済に与える影響に注意を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 171.368,
+      "speechEnd": 175.27,
+      "end": 175.89,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "払うよう中央政府に要請した。"
+    },
+    {
+      "parentKey": "why",
+      "start": 175.89,
+      "speechEnd": 179.862,
+      "end": 180.362,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 180.362,
+      "speechEnd": 185.309,
+      "end": 185.539,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "大規模な製紙工場の長期的な閉鎖は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 185.539,
+      "speechEnd": 188.117,
+      "end": 188.347,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "紙製品の供給、"
+    },
+    {
+      "parentKey": "why",
+      "start": 188.347,
+      "speechEnd": 190.367,
+      "end": 190.597,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "物流、"
+    },
+    {
+      "parentKey": "why",
+      "start": 190.597,
+      "speechEnd": 196.729,
+      "end": 197.229,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "および請負業者の収益に影響を及ぼします。"
+    },
+    {
+      "parentKey": "why",
+      "start": 197.229,
+      "speechEnd": 200.225,
+      "end": 200.455,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "さらに重要なことに、"
+    },
+    {
+      "parentKey": "why",
+      "start": 200.455,
+      "speechEnd": 205.332,
+      "end": 205.832,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "この事故は大きな犠牲者を伴います。"
+    },
+    {
+      "parentKey": "why",
+      "start": 205.832,
+      "speechEnd": 208.061,
+      "end": 208.292,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "工場がいつ、"
+    },
+    {
+      "parentKey": "why",
+      "start": 208.292,
+      "speechEnd": 214.074,
+      "end": 214.304,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "どのような安全基準で操業を再開するかは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 214.304,
+      "speechEnd": 222.317,
+      "end": 223.017,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "日本企業にとって防災と古い機器管理の重要なケースになります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 223.017,
+      "speechEnd": 225.107,
+      "end": 225.337,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 225.337,
+      "speechEnd": 230.911,
+      "end": 231.141,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ジャパンペーパーが発表した正式な再開計画、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 231.141,
+      "speechEnd": 235.461,
+      "end": 235.691,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "損傷した煙突の解体の進捗状況、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 235.691,
+      "speechEnd": 239.593,
+      "end": 239.823,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "事故調査委員会の結論、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 239.823,
+      "speechEnd": 244.421,
+      "end": 244.701,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "八代市と中央政府が雇用または"
+    },
+    {
+      "parentKey": "watch",
+      "start": 244.701,
+      "speechEnd": 251.878,
+      "end": 252.578,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "企業支援措置を導入しているかどうかに注意してください。"
+    }
+  ]
+}
