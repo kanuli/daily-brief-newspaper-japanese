@@ -1,0 +1,460 @@
+{
+  "version": 3,
+  "duration": 189.518,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 592,
+  "charactersPerMinute": 187.4,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 18.092,
+      "text": "フィンランドの大統領は、ロシアがNATOを攻撃するリスクを冒す可能性は低いと述べているが、ヨーロッパは抑止されなければならない"
+    },
+    {
+      "key": "dek",
+      "start": 18.092,
+      "end": 36.391,
+      "text": "スタブ氏は、ロシア軍はウクライナで高い兵力減少に苦しんでおり、現段階では同時に第二戦線を開く条件はないと指摘した。"
+    },
+    {
+      "key": "body-0",
+      "start": 36.391,
+      "end": 80.815,
+      "text": "フィンランドのアレクサンダー・スタブ大統領は、ロシアが直接NATO諸国を攻撃する準備ができているという証拠は見当たらないと述べた。スタブ氏は、NATOは依然として通常兵器、ミサイル、核抑止力において圧倒的な優位性を持っており、モスクワはNATOの集団的防衛コミットメントをテストすると非常に高価になると指摘した。"
+    },
+    {
+      "key": "body-1",
+      "start": 80.815,
+      "end": 140.373,
+      "text": "彼はまた、ロシア軍は現在、ウクライナで毎月約3万人から3万5000人の損失を被っており、補強部隊は約2万7000人であり、別の大規模な戦線を支援することは困難であると指摘した。スタブ氏は依然として、ロシアがサイバー攻撃、情報戦争、その他のハイブリッド手段で欧州に圧力をかけ続けると警告しているため、短期的な直接侵略のリスクが低いため、NATOは防衛を緩和できない。"
+    },
+    {
+      "key": "why",
+      "start": 140.373,
+      "end": 168.481,
+      "text": "フィンランドはNATOの東部に位置しており、フィンランド大統領のリスク評価は、抑止力、軍事支出、軍隊配備に関する欧州の政策議論に影響を与える可能性がある。"
+    },
+    {
+      "key": "watch",
+      "start": 168.481,
+      "end": 189.518,
+      "text": "NATOとドイツがスタブの判断、ロシアの軍事徴募と損失の傾向、ハイブリッド脅威に対するヨーロッパの対策に対応するかどうかを確認してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.275,
+      "end": 3.505,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "フィンランドの大統領は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.505,
+      "speechEnd": 8.033,
+      "end": 8.313,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ロシアがNATOを攻撃するリスクを"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.313,
+      "speechEnd": 12.703,
+      "end": 12.933,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "冒す可能性は低いと述べているが、"
+    },
+    {
+      "parentKey": "title",
+      "start": 12.933,
+      "speechEnd": 17.392,
+      "end": 18.092,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "ヨーロッパは抑止されなければならない。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.092,
+      "speechEnd": 20.321,
+      "end": 20.551,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "スタブ氏は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.551,
+      "speechEnd": 27.17,
+      "end": 27.4,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロシア軍はウクライナで高い兵力減少に苦しんでおり、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.4,
+      "speechEnd": 35.691,
+      "end": 36.391,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "現段階では同時に第二戦線を開く条件はないと指摘した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.391,
+      "speechEnd": 41.407,
+      "end": 41.637,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "フィンランドのアレクサンダー・スタブ大統領は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.637,
+      "speechEnd": 47.072,
+      "end": 47.352,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ロシアが直接NATO諸国を攻撃する準備が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.352,
+      "speechEnd": 52.717,
+      "end": 53.217,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "できているという証拠は見当たらないと述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.217,
+      "speechEnd": 55.446,
+      "end": 55.676,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "スタブ氏は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.676,
+      "speechEnd": 60.275,
+      "end": 60.505,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "NATOは依然として通常兵器、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.505,
+      "speechEnd": 62.595,
+      "end": 62.825,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ミサイル、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.825,
+      "speechEnd": 68.956,
+      "end": 69.186,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "核抑止力において圧倒的な優位性を持っており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.186,
+      "speechEnd": 74.969,
+      "end": 75.249,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "モスクワはNATOの集団的防衛コミットメントを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.249,
+      "speechEnd": 80.195,
+      "end": 80.815,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "テストすると非常に高価になると指摘した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 80.815,
+      "speechEnd": 82.906,
+      "end": 83.136,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "彼はまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 83.136,
+      "speechEnd": 85.853,
+      "end": 86.083,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロシア軍は現在、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 86.083,
+      "speechEnd": 88.8,
+      "end": 88.94,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "ウクライナで毎月約"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.94,
+      "speechEnd": 91.03,
+      "end": 91.17,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "3万人"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.17,
+      "speechEnd": 97.162,
+      "end": 97.392,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "から3万5000人の損失を被っており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.392,
+      "speechEnd": 103.105,
+      "end": 103.335,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "補強部隊は約2万7000人であり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.335,
+      "speechEnd": 111.208,
+      "end": 111.708,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "別の大規模な戦線を支援することは困難であると指摘した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.708,
+      "speechEnd": 114.913,
+      "end": 115.143,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "スタブ氏は依然として、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.143,
+      "speechEnd": 118.139,
+      "end": 118.369,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロシアがサイバー攻撃、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.369,
+      "speechEnd": 120.529,
+      "end": 120.759,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "情報戦争、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.759,
+      "speechEnd": 125.984,
+      "end": 126.264,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "その他のハイブリッド手段で欧州に圧力を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 126.264,
+      "speechEnd": 129.957,
+      "end": 130.187,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "かけ続けると警告しているため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 130.187,
+      "speechEnd": 134.994,
+      "end": 135.224,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "短期的な直接侵略のリスクが低いため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 135.224,
+      "speechEnd": 139.753,
+      "end": 140.373,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "NATOは防衛を緩和できない。"
+    },
+    {
+      "parentKey": "why",
+      "start": 140.373,
+      "speechEnd": 144.344,
+      "end": 144.844,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 144.844,
+      "speechEnd": 150.209,
+      "end": 150.439,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "フィンランドはNATOの東部に位置しており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 150.439,
+      "speechEnd": 154.341,
+      "end": 154.571,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "フィンランド大統領のリスク評価は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 154.571,
+      "speechEnd": 156.661,
+      "end": 156.891,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "抑止力、"
+    },
+    {
+      "parentKey": "why",
+      "start": 156.891,
+      "speechEnd": 159.12,
+      "end": 159.35,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "軍事支出、"
+    },
+    {
+      "parentKey": "why",
+      "start": 159.35,
+      "speechEnd": 167.781,
+      "end": 168.481,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "軍隊配備に関する欧州の政策議論に影響を与える可能性がある。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 168.481,
+      "speechEnd": 170.571,
+      "end": 170.801,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 170.801,
+      "speechEnd": 174.772,
+      "end": 175.002,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "NATOとドイツがスタブの判断、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 175.002,
+      "speechEnd": 179.252,
+      "end": 179.482,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロシアの軍事徴募と損失の傾向、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 179.482,
+      "speechEnd": 188.818,
+      "end": 189.518,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "ハイブリッド脅威に対するヨーロッパの対策に対応するかどうかを確認してください。"
+    }
+  ]
+}
