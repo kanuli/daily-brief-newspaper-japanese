@@ -1,0 +1,550 @@
+{
+  "version": 3,
+  "duration": 263.314,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 896,
+  "charactersPerMinute": 204.2,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 20.929,
+      "text": "OpenAIは、11月12日からCursorへのモデルの提供を停止する予定であり、SpaceXの買収後、パートナーシップは急激に変化している"
+    },
+    {
+      "key": "dek",
+      "start": 20.929,
+      "end": 54.383,
+      "text": "OpenAIは、SpaceXとMuskが所有する企業との過去の契約経験に言及しており、SpaceXが条件に従ってその技術を使用するとは確信していない。Cursor氏は、OpenAIモデルが現在トラフィックの約5 ％を占めていると述べた。"
+    },
+    {
+      "key": "body-0",
+      "start": 54.383,
+      "end": 112.127,
+      "text": "OpenAIは28日、AIプログラム開発ツールCursorにモデルを提供する契約を終了する予定であることをSpaceXに通知し、11月12日をサービス終了日として提案した。OpenAIは、SpaceXによるCursorの買収は契約の管理条項の変更を引き起こし、Elon Muskが所有する企業との過去の契約経験に基づいて、SpaceXが利用規約内でOpenAI技術を使用するとは確信していないと述べた。"
+    },
+    {
+      "key": "body-1",
+      "start": 112.127,
+      "end": 185.482,
+      "text": "Cursorの創設者であるMichael Truell氏は、同社はこの決定に失望しており、OpenAIチームとソリューションについて話し合っていると述べた。彼は、OpenAIモデルは現在、Cursorのユーザートラフィックの約5 ％を占めていると述べた。Cursorは引き続きAnthropic、Google、SpaceXのモデルを使用することができ、AnthropicはClaudeのCursorの使用をサポートするためにコンピューティングパワーを向上させ、AIプログラミングプラットフォームモデルの新しい競争と同時にこの商業的ブレークスルーを達成すると公表しています。"
+    },
+    {
+      "key": "why",
+      "start": 185.482,
+      "end": 227.153,
+      "text": "このイベントは、開発者のOpenAIモデルへのアクセスに直接影響を与えました。また、大規模なAIモデルのサプライヤーが、制御の変更、競合関係、および契約上のコンプライアンスをプラットフォームの供給リスクとして扱っていることも示しています。"
+    },
+    {
+      "key": "watch",
+      "start": 227.153,
+      "end": 263.314,
+      "text": "OpenAIとCursorが11月12日までに新しい合意に達するかどうか、CursorがClaudeまたはGrokの割合をさらに増やすかどうか、企業ユーザーがOpenAIモデルに依存する開発プロセスを調整する必要があるかどうかに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.299,
+      "end": 2.579,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "OpenAIは、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.579,
+      "speechEnd": 12.124,
+      "end": 12.404,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "11月12日からCursorへのモデルの提供を停止する予定であり、"
+    },
+    {
+      "parentKey": "title",
+      "start": 12.404,
+      "speechEnd": 15.33,
+      "end": 15.61,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "SpaceXの買収後、"
+    },
+    {
+      "parentKey": "title",
+      "start": 15.61,
+      "speechEnd": 20.069,
+      "end": 20.929,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "パートナーシップは急激に変化している。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.929,
+      "speechEnd": 23.228,
+      "end": 23.508,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "OpenAIは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.508,
+      "speechEnd": 32.774,
+      "end": 33.054,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "SpaceXとMuskが所有する企業との過去の契約経験に言及しており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 33.054,
+      "speechEnd": 37.652,
+      "end": 37.992,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "SpaceXが条件に従ってその技術を"
+    },
+    {
+      "parentKey": "dek",
+      "start": 37.992,
+      "speechEnd": 41.615,
+      "end": 42.235,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "使用するとは確信していない。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 42.235,
+      "speechEnd": 44.604,
+      "end": 44.884,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Cursor氏は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 44.884,
+      "speechEnd": 53.523,
+      "end": 54.383,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "OpenAIモデルが現在トラフィックの約5 ％を占めていると述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.383,
+      "speechEnd": 57.866,
+      "end": 58.146,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "OpenAIは28日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.146,
+      "speechEnd": 63.511,
+      "end": 63.851,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "AIプログラム開発ツールCursorにモデルを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.851,
+      "speechEnd": 72.211,
+      "end": 72.491,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "提供する契約を終了する予定であることをSpaceXに通知し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.491,
+      "speechEnd": 79.388,
+      "end": 80.008,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "11月12日をサービス終了日として提案した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 80.008,
+      "speechEnd": 82.307,
+      "end": 82.587,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "OpenAIは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 82.587,
+      "speechEnd": 86.907,
+      "end": 87.247,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "SpaceXによるCursorの買収は"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 87.247,
+      "speechEnd": 92.611,
+      "end": 92.891,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "契約の管理条項の変更を引き起こし、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 92.891,
+      "speechEnd": 100.555,
+      "end": 100.835,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Elon Muskが所有する企業との過去の契約経験に基づいて、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 100.835,
+      "speechEnd": 107.802,
+      "end": 108.142,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "SpaceXが利用規約内でOpenAI技術を使用するとは"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 108.142,
+      "speechEnd": 111.347,
+      "end": 112.127,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "確信していないと述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.127,
+      "speechEnd": 117.909,
+      "end": 118.189,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Cursorの創設者であるMichael Truell氏は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.189,
+      "speechEnd": 123.136,
+      "end": 123.416,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同社はこの決定に失望しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 123.416,
+      "speechEnd": 127.526,
+      "end": 127.866,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "OpenAIチームとソリューションについて"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 127.866,
+      "speechEnd": 131.002,
+      "end": 131.622,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "話し合っていると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 131.622,
+      "speechEnd": 133.642,
+      "end": 133.922,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "彼は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 133.922,
+      "speechEnd": 137.336,
+      "end": 137.616,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "OpenAIモデルは現在、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 137.616,
+      "speechEnd": 145.14,
+      "end": 145.76,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "Cursorのユーザートラフィックの約5 ％を占めていると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 145.76,
+      "speechEnd": 149.453,
+      "end": 149.733,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Cursorは引き続きAnthropic、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 149.733,
+      "speechEnd": 151.823,
+      "end": 152.103,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Google、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 152.103,
+      "speechEnd": 157.328,
+      "end": 157.608,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "SpaceXのモデルを使用することができ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 157.608,
+      "speechEnd": 162.624,
+      "end": 162.964,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "AnthropicはClaudeのCursorの使用を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 162.964,
+      "speechEnd": 169.513,
+      "end": 169.793,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "サポートするためにコンピューティングパワーを向上させ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 169.793,
+      "speechEnd": 184.702,
+      "end": 185.482,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "AIプログラミングプラットフォームモデルの新しい競争と同時にこの商業的ブレークスルーを達成すると公表しています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 185.482,
+      "speechEnd": 189.453,
+      "end": 190.073,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 190.073,
+      "speechEnd": 192.582,
+      "end": 192.862,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "このイベントは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 192.862,
+      "speechEnd": 201.501,
+      "end": 202.121,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "開発者のOpenAIモデルへのアクセスに直接影響を与えました。"
+    },
+    {
+      "parentKey": "why",
+      "start": 202.121,
+      "speechEnd": 204.141,
+      "end": 204.421,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "また、"
+    },
+    {
+      "parentKey": "why",
+      "start": 204.421,
+      "speechEnd": 208.88,
+      "end": 209.16,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "大規模なAIモデルのサプライヤーが、"
+    },
+    {
+      "parentKey": "why",
+      "start": 209.16,
+      "speechEnd": 211.598,
+      "end": 211.878,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "制御の変更、"
+    },
+    {
+      "parentKey": "why",
+      "start": 211.878,
+      "speechEnd": 214.038,
+      "end": 214.318,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "競合関係、"
+    },
+    {
+      "parentKey": "why",
+      "start": 214.318,
+      "speechEnd": 222.539,
+      "end": 222.879,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "および契約上のコンプライアンスをプラットフォームの供給リスクとして"
+    },
+    {
+      "parentKey": "why",
+      "start": 222.879,
+      "speechEnd": 226.293,
+      "end": 227.153,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "扱っていることも示しています。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 227.153,
+      "speechEnd": 229.243,
+      "end": 229.523,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 229.523,
+      "speechEnd": 232.588,
+      "end": 232.928,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "OpenAIとCursorが"
+    },
+    {
+      "parentKey": "watch",
+      "start": 232.928,
+      "speechEnd": 239.756,
+      "end": 240.036,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "11月12日までに新しい合意に達するかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 240.036,
+      "speechEnd": 243.241,
+      "end": 243.581,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "CursorがClaudeまたは"
+    },
+    {
+      "parentKey": "watch",
+      "start": 243.581,
+      "speechEnd": 248.388,
+      "end": 248.668,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Grokの割合をさらに増やすかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 248.668,
+      "speechEnd": 255.983,
+      "end": 256.323,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "企業ユーザーがOpenAIモデルに依存する開発プロセスを"
+    },
+    {
+      "parentKey": "watch",
+      "start": 256.323,
+      "speechEnd": 262.454,
+      "end": 263.314,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "調整する必要があるかどうかに注目してください。"
+    }
+  ]
+}

@@ -1,0 +1,470 @@
+{
+  "version": 3,
+  "duration": 203.964,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 566,
+  "charactersPerMinute": 166.5,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 15.904,
+      "text": "ロシア、ディーゼル輸出禁止を9月末まで延長。製油所攻撃後も国内供給圧力は未解決のまま"
+    },
+    {
+      "key": "dek",
+      "start": 15.904,
+      "end": 37.243,
+      "text": "モスティス科は、定國燃料市場を目的として、電気商用柴油、船舶用燃料および軽油の一部の出口制限を9月30日まで延長する。"
+    },
+    {
+      "key": "body-0",
+      "start": 37.243,
+      "end": 88.881,
+      "text": "ロシア政府は29日、ディーゼル、舶用燃料、一部のガソリンの直接輸出禁止を9月30日まで延長すると発表した。この措置はもともと8月末に失効する予定だった。政府は、制限の延長は国内燃料市場の安定を維持するためであると述べた。非生産者のディーゼルおよびガソリンの輸出は、長期的な制限の対象となります。"
+    },
+    {
+      "key": "body-1",
+      "start": 88.881,
+      "end": 142.675,
+      "text": "この延長は、ロシアの精製能力が引き続きプレッシャーにさらされている時期に行われた。ウクライナのドローン攻撃のため、いくつかの製油所は以前に閉鎖されており、一部の地域では燃料不足が再発していた。すでに世界の主要なディーゼル輸出国の1つであるロシアは、中東で依然として厳しい国内供給への圧力に加えて、世界の中間蒸留物供給をさらに引き締める可能性があります。"
+    },
+    {
+      "key": "why",
+      "start": 142.675,
+      "end": 173.694,
+      "text": "ロシアのディーゼル供給は、欧州、トルコ、世界の精製石油市場で重要な変数である。禁止期間の延長は、代替供給需要と輸送コストを引き上げる可能性がある。"
+    },
+    {
+      "key": "watch",
+      "start": 173.694,
+      "end": 203.964,
+      "text": "ロシアの精製所の回復、国内在庫と小売供給、トルコ、ヨーロッパ、アジアのバイヤーが米国やインドなどの供給源からさらに購入しているかどうか、9月の進捗状況に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.02,
+      "end": 2.301,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロシア、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.301,
+      "speechEnd": 7.735,
+      "end": 8.355,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ディーゼル輸出禁止を9月末まで延長。"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.355,
+      "speechEnd": 15.044,
+      "end": 15.904,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "製油所攻撃後も国内供給圧力は未解決のまま。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.904,
+      "speechEnd": 18.273,
+      "end": 18.553,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "モスティス科は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.553,
+      "speechEnd": 22.315,
+      "end": 22.595,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "定國燃料市場を目的として、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.595,
+      "speechEnd": 25.173,
+      "end": 25.453,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "電気商用柴油、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.453,
+      "speechEnd": 32.141,
+      "end": 32.481,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "船舶用燃料および軽油の一部の出口制限を"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.481,
+      "speechEnd": 36.383,
+      "end": 37.243,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "9月30日まで延長する。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.243,
+      "speechEnd": 41.005,
+      "end": 41.285,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロシア政府は29日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.285,
+      "speechEnd": 43.515,
+      "end": 43.795,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ディーゼル、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.795,
+      "speechEnd": 45.885,
+      "end": 46.165,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "舶用燃料、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.165,
+      "speechEnd": 50.694,
+      "end": 50.874,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "一部のガソリンの直接輸出禁止を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.874,
+      "speechEnd": 53.452,
+      "end": 53.632,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "9月30日"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.632,
+      "speechEnd": 57.115,
+      "end": 57.735,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "まで延長すると発表した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.735,
+      "speechEnd": 64.424,
+      "end": 65.044,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "この措置はもともと8月末に失効する予定だった。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.044,
+      "speechEnd": 67.204,
+      "end": 67.484,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "政府は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.484,
+      "speechEnd": 76.472,
+      "end": 77.092,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "制限の延長は国内燃料市場の安定を維持するためであると述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 77.092,
+      "speechEnd": 83.502,
+      "end": 83.782,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "非生産者のディーゼルおよびガソリンの輸出は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 83.782,
+      "speechEnd": 88.101,
+      "end": 88.881,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "長期的な制限の対象となります。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.881,
+      "speechEnd": 91.39,
+      "end": 91.67,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この延長は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.67,
+      "speechEnd": 100.448,
+      "end": 101.068,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ロシアの精製能力が引き続きプレッシャーにさらされている時期に行われた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.068,
+      "speechEnd": 105.109,
+      "end": 105.389,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ウクライナのドローン攻撃のため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 105.389,
+      "speechEnd": 110.963,
+      "end": 111.243,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "いくつかの製油所は以前に閉鎖されており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.243,
+      "speechEnd": 117.165,
+      "end": 117.785,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "一部の地域では燃料不足が再発していた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.785,
+      "speechEnd": 125.519,
+      "end": 125.799,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "すでに世界の主要なディーゼル輸出国の1つであるロシアは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 125.799,
+      "speechEnd": 133.324,
+      "end": 133.604,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "中東で依然として厳しい国内供給への圧力に加えて、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 133.604,
+      "speechEnd": 141.895,
+      "end": 142.675,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "世界の中間蒸留物供給をさらに引き締める可能性があります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 142.675,
+      "speechEnd": 146.646,
+      "end": 147.266,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 147.266,
+      "speechEnd": 150.68,
+      "end": 150.96,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロシアのディーゼル供給は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 150.96,
+      "speechEnd": 152.981,
+      "end": 153.261,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "欧州、"
+    },
+    {
+      "parentKey": "why",
+      "start": 153.261,
+      "speechEnd": 155.281,
+      "end": 155.561,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "トルコ、"
+    },
+    {
+      "parentKey": "why",
+      "start": 155.561,
+      "speechEnd": 161.762,
+      "end": 162.382,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "世界の精製石油市場で重要な変数である。"
+    },
+    {
+      "parentKey": "why",
+      "start": 162.382,
+      "speechEnd": 165.587,
+      "end": 165.867,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "禁止期間の延長は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 165.867,
+      "speechEnd": 172.834,
+      "end": 173.694,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "代替供給需要と輸送コストを引き上げる可能性がある。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 173.694,
+      "speechEnd": 175.784,
+      "end": 176.064,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 176.064,
+      "speechEnd": 179.478,
+      "end": 179.758,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロシアの精製所の回復、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 179.758,
+      "speechEnd": 183.242,
+      "end": 183.522,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "国内在庫と小売供給、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 183.522,
+      "speechEnd": 185.543,
+      "end": 185.823,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "トルコ、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 185.823,
+      "speechEnd": 187.982,
+      "end": 188.262,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ヨーロッパ、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 188.262,
+      "speechEnd": 197.808,
+      "end": 198.088,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アジアのバイヤーが米国やインドなどの供給源からさらに購入しているかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 198.088,
+      "speechEnd": 203.104,
+      "end": 203.964,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "9月の進捗状況に注目してください。"
+    }
+  ]
+}
