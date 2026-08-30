@@ -1,0 +1,490 @@
+{
+  "version": 3,
+  "duration": 220.839,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 640,
+  "charactersPerMinute": 173.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 16.099,
+      "text": "キエフ地域の武器庫での攻撃による死亡者数が38人に増加4ウクライナの弾薬保管所付近で未だ行方不明"
+    },
+    {
+      "key": "dek",
+      "start": 16.099,
+      "end": 38.382,
+      "text": "ロシアの攻撃は大規模な二次爆発を引き起こした。ゼレンスキー氏は、現場は依然として深刻な汚染を受けており、救助と清掃作業が続いていると述べた。"
+    },
+    {
+      "key": "body-0",
+      "start": 38.382,
+      "end": 99.93,
+      "text": "ウクライナのゼレンスキー大統領は日曜日、ロシアがキエフ州ミラの軍事施設を攻撃した後、一連の爆発が発生し、死者数は38人に達したと述べ、他にも4人が行方不明であると述べた。ロイターとAP通信は、施設には砲弾、地雷、無人機、その他の弾薬が含まれており、爆発は近くの家屋に影響を与え、救助隊が火災の大部分を消火したと報じたが、現場での汚染と不発弾のリスクは依然として高かった。"
+    },
+    {
+      "key": "body-1",
+      "start": 99.93,
+      "end": 163.469,
+      "text": "この事件はまた、ウクライナ政府内の内部説明責任を引き起こした。ゼレンスキー氏は、弾薬は家の近くに保管すべきではないと指摘し、当局は公的過失の可能性について犯罪捜査を開始した。ロシア軍は過去1週間で空爆の強度を急激に高めており、ウクライナ側は約2,000機の攻撃ドローン、1,600発以上の空爆、31発のミサイルが攻撃されたと述べ、首都での防空と民間防衛の圧力をさらに高めている。"
+    },
+    {
+      "key": "why",
+      "start": 163.469,
+      "end": 194.435,
+      "text": "戦場のエスカレーションに加えて、この事件はウクライナ自身の弾薬保管、地元の防災、説明責任システムに焦点を当て、より広範な兵器庫のセキュリティレビューを引き起こす可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 194.435,
+      "end": 220.839,
+      "text": "行方不明者の検索結果、過失の責任に関する検察官による調査、ウクライナが全国の軍用保管施設の新しいセキュリティ対策を発表しているかどうかを確認してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 6.061,
+      "end": 6.342,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "キエフ地域の武器庫での攻撃による死亡者数が"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.342,
+      "speechEnd": 15.399,
+      "end": 16.099,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "38人に増加4ウクライナの弾薬保管所付近で未だ行方不明。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.099,
+      "speechEnd": 22.997,
+      "end": 23.497,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "ロシアの攻撃は大規模な二次爆発を引き起こした。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.497,
+      "speechEnd": 26.284,
+      "end": 26.514,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ゼレンスキー氏は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.514,
+      "speechEnd": 32.505,
+      "end": 32.735,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "現場は依然として深刻な汚染を受けており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.735,
+      "speechEnd": 37.682,
+      "end": 38.382,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "救助と清掃作業が続いていると述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.382,
+      "speechEnd": 43.817,
+      "end": 44.047,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ウクライナのゼレンスキー大統領は日曜日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.047,
+      "speechEnd": 50.178,
+      "end": 50.408,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロシアがキエフ州ミラの軍事施設を攻撃した後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.408,
+      "speechEnd": 53.752,
+      "end": 53.982,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "一連の爆発が発生し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.982,
+      "speechEnd": 59.208,
+      "end": 59.438,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "死者数は38人に達したと述べ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.438,
+      "speechEnd": 65.151,
+      "end": 65.651,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "他にも4人が行方不明であると述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.651,
+      "speechEnd": 68.577,
+      "end": 68.807,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイターとAP通信は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.807,
+      "speechEnd": 71.315,
+      "end": 71.545,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "施設には砲弾、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.545,
+      "speechEnd": 73.566,
+      "end": 73.796,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "地雷、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.796,
+      "speechEnd": 75.886,
+      "end": 76.116,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "無人機、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.116,
+      "speechEnd": 80.157,
+      "end": 80.387,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "その他の弾薬が含まれており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 80.387,
+      "speechEnd": 85.334,
+      "end": 85.564,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "爆発は近くの家屋に影響を与え、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 85.564,
+      "speechEnd": 92.322,
+      "end": 92.552,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "救助隊が火災の大部分を消火したと報じたが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 92.552,
+      "speechEnd": 99.31,
+      "end": 99.93,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "現場での汚染と不発弾のリスクは依然として高かった。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.93,
+      "speechEnd": 102.578,
+      "end": 102.808,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この事件はまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.808,
+      "speechEnd": 109.984,
+      "end": 110.484,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "ウクライナ政府内の内部説明責任を引き起こした。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 110.484,
+      "speechEnd": 113.271,
+      "end": 113.501,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ゼレンスキー氏は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 113.501,
+      "speechEnd": 120.19,
+      "end": 120.42,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "弾薬は家の近くに保管すべきではないと指摘し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.42,
+      "speechEnd": 128.084,
+      "end": 128.584,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "当局は公的過失の可能性について犯罪捜査を開始した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 128.584,
+      "speechEnd": 136.666,
+      "end": 136.896,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロシア軍は過去1週間で空爆の強度を急激に高めており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 136.896,
+      "speechEnd": 140.031,
+      "end": 140.261,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ウクライナ側は約2,"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 140.261,
+      "speechEnd": 143.466,
+      "end": 143.696,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "000機の攻撃ドローン、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 143.696,
+      "speechEnd": 145.647,
+      "end": 145.877,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "1,"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 145.877,
+      "speechEnd": 149.291,
+      "end": 149.521,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "600発以上の空爆、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 149.521,
+      "speechEnd": 155.025,
+      "end": 155.255,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "31発のミサイルが攻撃されたと述べ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 155.255,
+      "speechEnd": 162.849,
+      "end": 163.469,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "首都での防空と民間防衛の圧力をさらに高めている。"
+    },
+    {
+      "parentKey": "why",
+      "start": 163.469,
+      "speechEnd": 167.441,
+      "end": 167.941,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 167.941,
+      "speechEnd": 171.982,
+      "end": 172.212,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "戦場のエスカレーションに加えて、"
+    },
+    {
+      "parentKey": "why",
+      "start": 172.212,
+      "speechEnd": 177.437,
+      "end": 177.667,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この事件はウクライナ自身の弾薬保管、"
+    },
+    {
+      "parentKey": "why",
+      "start": 177.667,
+      "speechEnd": 180.175,
+      "end": 180.405,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "地元の防災、"
+    },
+    {
+      "parentKey": "why",
+      "start": 180.405,
+      "speechEnd": 184.795,
+      "end": 185.025,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "説明責任システムに焦点を当て、"
+    },
+    {
+      "parentKey": "why",
+      "start": 185.025,
+      "speechEnd": 189.693,
+      "end": 189.973,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "より広範な兵器庫のセキュリティレビューを"
+    },
+    {
+      "parentKey": "why",
+      "start": 189.973,
+      "speechEnd": 193.735,
+      "end": 194.435,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "引き起こす可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 194.435,
+      "speechEnd": 196.525,
+      "end": 196.756,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 196.756,
+      "speechEnd": 200.378,
+      "end": 200.608,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "行方不明者の検索結果、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 200.608,
+      "speechEnd": 206.391,
+      "end": 206.621,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "過失の責任に関する検察官による調査、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 206.621,
+      "speechEnd": 214.634,
+      "end": 214.914,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ウクライナが全国の軍用保管施設の新しいセキュリティ対策を"
+    },
+    {
+      "parentKey": "watch",
+      "start": 214.914,
+      "speechEnd": 220.139,
+      "end": 220.839,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "発表しているかどうかを確認してください。"
+    }
+  ]
+}
