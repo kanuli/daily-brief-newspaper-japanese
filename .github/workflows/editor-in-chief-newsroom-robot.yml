@@ -21,6 +21,11 @@ on:
       - 'assets/js/home-current-ja.js'
       - 'assets/js/system-ja.js'
       - '.github/workflows/editor-in-chief-newsroom-robot.yml'
+  workflow_run:
+    workflows:
+      - '日本語ニュース同期・品質ゲート・Discord配信'
+      - '日本語ローリング翻訳品質修復'
+    types: [completed]
   schedule:
     - cron: '5,20,35,50 * * * *'
 
@@ -30,7 +35,9 @@ permissions:
 
 concurrency:
   group: editor-in-chief-newsroom-robot
-  cancel-in-progress: true
+  # Never kill an active patrol. A newer trigger may replace a queued patrol,
+  # but the running patrol is always allowed to publish its health snapshot.
+  cancel-in-progress: false
 
 jobs:
   patrol:
@@ -38,17 +45,17 @@ jobs:
     timeout-minutes: 8
     steps:
       - name: Patrol, publish health truth, and recover stale pages
+        id: patrol
         uses: actions/github-script@v7
         with:
           script: |
             const { owner, repo } = context.repo;
-            const crypto = require('crypto');
             const sourceRepo = 'daily-brief-newspaper';
             const HOUR = 60 * 60 * 1000;
             const MINUTE = 60 * 1000;
             const HEALTH_PATH = 'data/newsroom-health.json';
             const HEALTH_HEARTBEAT_MS = 30 * MINUTE;
-            const STUCK_RUN_MS = 30 * MINUTE;
+            const STUCK_RUN_MS = 35 * MINUTE;
 
             async function entry(repoName, path) {
               try {
@@ -79,8 +86,7 @@ jobs:
             }
 
             function ms(payload) {
-              const values = [payload?.generatedAt, payload?.lastUpdated, payload?.sourceGeneratedAt, payload?.checkedAt];
-              for (const value of values) {
+              for (const value of [payload?.generatedAt, payload?.lastUpdated, payload?.sourceGeneratedAt, payload?.checkedAt]) {
                 const stamp = Date.parse(String(value || ''));
                 if (Number.isFinite(stamp)) return stamp;
               }
@@ -102,7 +108,7 @@ jobs:
             }
 
             async function active(workflow) {
-              const r = await github.rest.actions.listWorkflowRuns({ owner, repo, workflow_id: workflow, per_page: 15 });
+              const r = await github.rest.actions.listWorkflowRuns({ owner, repo, workflow_id: workflow, per_page: 20 });
               return r.data.workflow_runs.find((run) => run.status !== 'completed') || null;
             }
 
@@ -114,13 +120,57 @@ jobs:
                   core.warning(`${workflow} already active as run ${running.id}; reason=${reason}`);
                   return { dispatched: false, active: true, runId: running.id };
                 }
-                core.warning(`${workflow} run ${running.id} is stale; cancelling before recovery`);
+                core.warning(`${workflow} run ${running.id} is older than ${Math.round(STUCK_RUN_MS / MINUTE)}m; cancelling stuck recovery`);
                 try { await github.rest.actions.cancelWorkflowRun({ owner, repo, run_id: running.id }); }
                 catch (error) { core.warning(`cancel ${workflow} ${running.id} failed: ${error.message}`); }
               }
               await github.rest.actions.createWorkflowDispatch({ owner, repo, workflow_id: workflow, ref: 'main' });
               core.warning(`ROBOT_DISPATCH ${workflow}; reason=${reason}`);
               return { dispatched: true, active: false, runId: null };
+            }
+
+            async function publishHealth(health) {
+              for (let attempt = 1; attempt <= 3; attempt += 1) {
+                const current = await entry(repo, HEALTH_PATH);
+                let oldHealth = null;
+                try { oldHealth = current?.text ? JSON.parse(current.text) : null; } catch (_) {}
+                const semantic = (value) => JSON.stringify({
+                  state: value?.state,
+                  summary: value?.summary,
+                  layers: value?.layers,
+                  recovery: value?.recovery,
+                  policy: value?.policy,
+                  robot: value?.robot,
+                });
+                const oldAssessed = Date.parse(String(oldHealth?.assessedAt || ''));
+                const heartbeatDue = !Number.isFinite(oldAssessed) || Date.now() - oldAssessed >= HEALTH_HEARTBEAT_MS;
+                const changed = semantic(oldHealth) !== semantic(health);
+                if (!changed && !heartbeatDue && current) {
+                  core.info('ROBOT_HEALTH_UNCHANGED heartbeat not due');
+                  return null;
+                }
+                try {
+                  const result = await github.rest.repos.createOrUpdateFileContents({
+                    owner,
+                    repo,
+                    path: HEALTH_PATH,
+                    branch: 'main',
+                    message: `newsroom health: ${String(health.state || 'red').toLowerCase()}`,
+                    content: Buffer.from(JSON.stringify(health, null, 2) + '\n').toString('base64'),
+                    ...(current?.sha ? { sha: current.sha } : {}),
+                  });
+                  core.warning(`ROBOT_HEALTH_PUBLISHED state=${health.state} commit=${result.data.commit.sha}`);
+                  return result.data.commit.sha;
+                } catch (error) {
+                  if ((error.status === 409 || error.status === 422) && attempt < 3) {
+                    core.warning(`health write race attempt ${attempt}; retrying`);
+                    await new Promise((resolve) => setTimeout(resolve, attempt * 1000));
+                    continue;
+                  }
+                  throw error;
+                }
+              }
+              return null;
             }
 
             const pages = [
@@ -140,10 +190,8 @@ jobs:
             ];
 
             const structural = [];
-            const pageDocuments = new Map();
             for (const [path, marker, desk] of pages) {
               const text = await raw(repo, path);
-              if (text) pageDocuments.set(path, text);
               if (!text) {
                 structural.push(`${path}:missing`);
                 continue;
@@ -162,7 +210,6 @@ jobs:
             const sourceDailyDay = day(sourceDaily?.date);
             const localDailyDay = day(localDaily?.date);
             const dailyCurrent = Boolean(sourceDailyDay && localDailyDay && localDailyDay >= sourceDailyDay);
-
             const sourceLiveMs = ms(sourceLive), localLiveMs = ms(localLive);
             const sourceDeskMs = ms(sourceDesk), localDeskMs = ms(localDesk);
             const sourceStockMs = ms(sourceStocks), localStockMs = ms(localStocks);
@@ -201,19 +248,25 @@ jobs:
             };
             const failures = Object.entries(layers).filter(([, value]) => value.current !== true).map(([name]) => name);
             const state = failures.length ? 'RED' : 'GREEN';
-            const assessedAt = new Date().toISOString();
             const health = {
-              version: 1,
-              assessedAt,
+              version: 2,
+              assessedAt: new Date().toISOString(),
               state,
               summary: state === 'GREEN' ? 'ALL_REQUIRED_NEWS_LAYERS_CURRENT' : `RECOVERY_REQUIRED:${failures.join(',')}`,
               layers,
               recovery,
+              robot: {
+                current: true,
+                runId: context.runId,
+                event: context.eventName,
+                selfHealingLoop: true,
+              },
               policy: {
                 repairRunningRemainsRed: true,
                 missingHealthFailsClosed: true,
                 liveToleranceMinutes: 1,
                 rollingToleranceMinutes: 60,
+                healthHeartbeatMinutes: 30,
               },
             };
 
@@ -224,96 +277,100 @@ jobs:
             core.info(`ROBOT Stocks source=${layers.stocks.upstream || 'missing'} japanese=${layers.stocks.japanese || 'missing'} current=${stocksCurrent} lag=${layers.stocks.lagMinutes}`);
             core.info(`ROBOT Structural current=${structuralCurrent} defects=${structural.join(',') || 'none'}`);
 
-            const oldEntry = await entry(repo, HEALTH_PATH);
-            let oldHealth = null;
-            try { oldHealth = oldEntry?.text ? JSON.parse(oldEntry.text) : null; } catch (_) {}
-            const semantic = (value) => JSON.stringify({
-              state: value?.state,
-              summary: value?.summary,
-              layers: value?.layers,
-              recovery: value?.recovery,
-              policy: value?.policy,
-            });
-            const oldAssessed = Date.parse(String(oldHealth?.assessedAt || ''));
-            const heartbeatDue = !Number.isFinite(oldAssessed) || Date.now() - oldAssessed >= HEALTH_HEARTBEAT_MS;
-            const healthChanged = semantic(oldHealth) !== semantic(health);
-            let healthCommitSha = null;
-            if (healthChanged || heartbeatDue || !oldEntry) {
-              const result = await github.rest.repos.createOrUpdateFileContents({
-                owner,
-                repo,
-                path: HEALTH_PATH,
-                branch: 'main',
-                message: `newsroom health: ${state.toLowerCase()}`,
-                content: Buffer.from(JSON.stringify(health, null, 2) + '\n').toString('base64'),
-                ...(oldEntry?.sha ? { sha: oldEntry.sha } : {}),
-              });
-              healthCommitSha = result.data.commit.sha;
-              core.warning(`ROBOT_HEALTH_PUBLISHED state=${state} commit=${healthCommitSha}`);
-            } else {
-              core.info('ROBOT_HEALTH_UNCHANGED heartbeat not due');
-            }
+            const healthCommitSha = await publishHealth(health);
 
             if (recovery.coreRequired) await dispatchRecovery('sync-japanese-news.yml', `daily=${!dailyCurrent} live=${!liveCurrent}`);
             if (recovery.rollingRequired) await dispatchRecovery('repair-extra-translation-quality.yml', `desk=${!deskCurrent} stocks=${!stocksCurrent}`);
             if (recovery.structuralRequired) await dispatchRecovery('auto-maintenance.yml', `structural=${structural.join(',')}`);
 
-            // Use exactly the same deterministic content-hash cache key as
-            // scripts/auto_repair_site.py so the two maintenance robots never
-            // rewrite each other's SYSTEM asset references.
-            async function repairSystemAssetRefs() {
-              const systemText = await raw(repo, 'assets/js/system-ja.js');
-              if (!systemText) {
-                core.warning('SYSTEM asset self-heal skipped: assets/js/system-ja.js missing');
-                return null;
-              }
-              const systemAssetVersion = crypto.createHash('sha256').update(systemText, 'utf8').digest('hex').slice(0, 10);
-              const desired = `assets/js/system-ja.js?v=${systemAssetVersion}`;
-              const replacements = [];
-              for (const [path, text] of pageDocuments.entries()) {
-                const next = text.replace(/assets\/js\/system-ja\.js(?:\?v=[^"'\s>]+)?/g, desired);
-                if (next !== text) replacements.push({ path, content: next });
-              }
-              if (!replacements.length) {
-                core.info(`ROBOT_SYSTEM_ASSET_CURRENT version=${systemAssetVersion}`);
-                return null;
-              }
-              try {
-                const branch = await github.rest.repos.getBranch({ owner, repo, branch: 'main' });
-                const parentSha = branch.data.commit.sha;
-                const parent = await github.rest.git.getCommit({ owner, repo, commit_sha: parentSha });
-                const tree = [];
-                for (const item of replacements) {
-                  const blob = await github.rest.git.createBlob({ owner, repo, content: item.content, encoding: 'utf-8' });
-                  tree.push({ path: item.path, mode: '100644', type: 'blob', sha: blob.data.sha });
-                }
-                const createdTree = await github.rest.git.createTree({ owner, repo, base_tree: parent.data.tree.sha, tree });
-                const commit = await github.rest.git.createCommit({
-                  owner, repo,
-                  message: `Refresh SYSTEM asset hash on ${replacements.length} pages`,
-                  tree: createdTree.data.sha,
-                  parents: [parentSha],
-                });
-                await github.rest.git.updateRef({ owner, repo, ref: 'heads/main', sha: commit.data.sha, force: false });
-                core.warning(`ROBOT_SYSTEM_ASSET_REPAIRED version=${systemAssetVersion} pages=${replacements.length} commit=${commit.data.sha}`);
-                return commit.data.sha;
-              } catch (error) {
-                core.warning(`SYSTEM asset self-heal deferred: ${error.message}`);
-                return null;
-              }
-            }
-
-            const assetRepairCommit = await repairSystemAssetRefs();
-
             const branch = await github.rest.repos.getBranch({ owner, repo, branch: 'main' });
             const mainSha = branch.data.commit.sha;
-            const pageRuns = await github.rest.actions.listWorkflowRuns({ owner, repo, workflow_id: 'pages.yml', per_page: 12 });
+            const pageRuns = await github.rest.actions.listWorkflowRuns({ owner, repo, workflow_id: 'pages.yml', per_page: 20 });
             const latestSuccessfulPage = pageRuns.data.workflow_runs.find((run) => run.conclusion === 'success');
             const activeForMain = pageRuns.data.workflow_runs.find((run) => run.status !== 'completed' && run.head_sha === mainSha);
             if (!activeForMain && (!latestSuccessfulPage || latestSuccessfulPage.head_sha !== mainSha)) {
               await github.rest.actions.createWorkflowDispatch({ owner, repo, workflow_id: 'pages.yml', ref: 'main' });
-              core.warning(`ROBOT_DISPATCH pages.yml; main=${mainSha}; healthCommit=${healthCommitSha || 'none'}; assetRepair=${assetRepairCommit || 'none'}`);
+              core.warning(`ROBOT_DISPATCH pages.yml; main=${mainSha}; healthCommit=${healthCommitSha || 'none'}`);
             }
 
             if (state === 'RED') core.setFailed(`EDITOR_IN_CHIEF_ROBOT_RED ${health.summary}`);
             else core.info('EDITOR_IN_CHIEF_ROBOT_GREEN all required reader layers current');
+
+      - name: Guarantee a fresh RED heartbeat if patrol crashes
+        if: ${{ always() && steps.patrol.outcome != 'success' }}
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const path = 'data/newsroom-health.json';
+            const FIVE_MINUTES = 5 * 60 * 1000;
+
+            async function currentEntry() {
+              try {
+                const r = await github.rest.repos.getContent({ owner, repo, path, ref: 'main' });
+                if (Array.isArray(r.data) || !r.data.content) return null;
+                return {
+                  sha: r.data.sha,
+                  text: Buffer.from(r.data.content, r.data.encoding || 'base64').toString('utf8'),
+                };
+              } catch (error) {
+                if (error.status === 404) return null;
+                throw error;
+              }
+            }
+
+            for (let attempt = 1; attempt <= 3; attempt += 1) {
+              const entry = await currentEntry();
+              let previous = null;
+              try { previous = entry?.text ? JSON.parse(entry.text) : null; } catch (_) {}
+              const previousMs = Date.parse(String(previous?.assessedAt || ''));
+              if (Number.isFinite(previousMs) && Date.now() - previousMs < FIVE_MINUTES) {
+                core.info('Recent health snapshot already exists; preserving detailed patrol result.');
+                return;
+              }
+
+              const fallback = {
+                version: 2,
+                assessedAt: new Date().toISOString(),
+                state: 'RED',
+                summary: 'ROBOT_EXECUTION_FAILED_BEFORE_FRESH_HEALTH_PUBLISH',
+                layers: previous?.layers || {},
+                recovery: {
+                  ...(previous?.recovery || {}),
+                  robotRequired: true,
+                },
+                robot: {
+                  current: false,
+                  runId: context.runId,
+                  event: context.eventName,
+                  selfHealingLoop: true,
+                  reason: 'patrol step failed before a fresh health snapshot could be published',
+                },
+                policy: {
+                  ...(previous?.policy || {}),
+                  repairRunningRemainsRed: true,
+                  missingHealthFailsClosed: true,
+                  healthHeartbeatMinutes: 30,
+                },
+              };
+
+              try {
+                const result = await github.rest.repos.createOrUpdateFileContents({
+                  owner,
+                  repo,
+                  path,
+                  branch: 'main',
+                  message: 'newsroom health: robot execution failure',
+                  content: Buffer.from(JSON.stringify(fallback, null, 2) + '\n').toString('base64'),
+                  ...(entry?.sha ? { sha: entry.sha } : {}),
+                });
+                core.warning(`ROBOT_FAILURE_HEARTBEAT_PUBLISHED commit=${result.data.commit.sha}`);
+                return;
+              } catch (error) {
+                if ((error.status === 409 || error.status === 422) && attempt < 3) {
+                  await new Promise((resolve) => setTimeout(resolve, attempt * 1000));
+                  continue;
+                }
+                throw error;
+              }
+            }
