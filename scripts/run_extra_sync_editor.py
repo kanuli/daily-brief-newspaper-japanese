@@ -17,6 +17,7 @@ import cantonese_snapshot as snapshot
 import furigana_safe_runtime
 import local_metadata_overrides as metadata_overrides
 import local_translation_runtime as runtime
+import newsroom_quality
 import safe_sync as safe
 import sync_and_translate as base
 import sync_cantonese_layers as extra
@@ -215,6 +216,10 @@ def _write_desk_minimum_fallback(source: dict, reason: str) -> bool:
 def main():
     base.likely_chinese_source = extra.needs_cantonese_translation
     base.TRANSLATE_KEYS.update({"impactLabel"})
+    # Install the shared editorial quality rules before the local MT runtime.
+    # This makes known semantic MT failures retry/fallback at translation time
+    # instead of surviving until the downstream publication validator.
+    newsroom_quality.install(safe)
     furigana_safe_runtime.install()
     metadata_overrides.install(runtime)
     runtime.install()
