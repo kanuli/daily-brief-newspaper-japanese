@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "assessedAt": "2026-08-31T06:29:19.556Z",
+  "assessedAt": "2026-08-31T08:45:14.602Z",
   "state": "RED",
-  "summary": "RECOVERY_REQUIRED:desk,stocks",
+  "summary": "RECOVERY_REQUIRED:live,desk,stocks",
   "layers": {
     "daily": {
       "current": true,
@@ -10,16 +10,16 @@
       "japanese": "2026-08-31"
     },
     "live": {
-      "current": true,
-      "upstream": "2026-08-31T14:00:00+08:00",
-      "japanese": "2026-08-31T14:00:00+08:00",
-      "lagMinutes": 0
+      "current": false,
+      "upstream": "2026-08-31T16:00:00+08:00",
+      "japanese": "2026-08-31T15:00:00+08:00",
+      "lagMinutes": 60
     },
     "desk": {
       "current": false,
-      "upstream": "2026-08-31T14:00:00+08:00",
+      "upstream": "2026-08-31T16:00:00+08:00",
       "japanese": "2026-08-25T16:00:00+08:00",
-      "lagMinutes": 8520
+      "lagMinutes": 8640
     },
     "stocks": {
       "current": false,
@@ -34,7 +34,7 @@
     }
   },
   "recovery": {
-    "coreRequired": false,
+    "coreRequired": true,
     "rollingRequired": true,
     "structuralRequired": false
   },
