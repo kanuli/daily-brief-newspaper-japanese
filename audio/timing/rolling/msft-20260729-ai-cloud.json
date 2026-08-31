@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 27.716,
+  "duration": 42.344,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 340.0,
-  "characters": 80,
-  "charactersPerMinute": 173.2,
+  "characters": 124,
+  "charactersPerMinute": 175.7,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.18,
@@ -21,66 +21,96 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 9.293,
-      "text": "MSFT：Reutersで最新の決算・業績情報を確認"
+      "end": 17.316,
+      "text": "マイクロソフトは、Azureで43 ％の成長でAI資本支出の懸念に対応し、クラウドの需要は依然として強力です"
     },
     {
       "key": "body-0",
-      "start": 9.293,
-      "end": 27.716,
-      "text": "Reutersを出典として、決算・業績に関する新しい検証済み情報を確認しました。詳細は出典資料の確認後に順次更新します。"
+      "start": 17.316,
+      "end": 42.344,
+      "text": "ロイター通信によると、マイクロソフトのアジュールの売上高は最新四半期で43％増加し、市場予想を上回った。 AI とクラウドは依然として主要な成長エンジンです。"
     }
   ],
   "semanticUnits": [
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 2.093,
-      "end": 2.433,
-      "pause": 0.34,
-      "intendedPause": 0.34,
-      "reason": "punctuation-semantic",
-      "text": "MSFT："
-    },
-    {
-      "parentKey": "title",
-      "start": 2.433,
-      "speechEnd": 8.432,
-      "end": 9.293,
-      "pause": 0.861,
-      "intendedPause": 0.86,
-      "reason": "punctuation-sentence",
-      "text": "Reutersで最新の決算・業績情報を確認。"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 9.293,
-      "speechEnd": 12.502,
-      "end": 12.782,
+      "speechEnd": 2.51,
+      "end": 2.79,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "Reutersを出典として、"
+      "text": "マイクロソフトは、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.79,
+      "speechEnd": 11.225,
+      "end": 11.506,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Azureで43 ％の成長でAI資本支出の懸念に対応し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 11.506,
+      "speechEnd": 16.455,
+      "end": 17.316,
+      "pause": 0.861,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "クラウドの需要は依然として強力です。"
     },
     {
       "parentKey": "body-0",
-      "start": 12.782,
-      "speechEnd": 20.036,
-      "end": 20.657,
-      "pause": 0.621,
+      "start": 17.316,
+      "speechEnd": 20.314,
+      "end": 20.594,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 20.594,
+      "speechEnd": 25.404,
+      "end": 25.744,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "マイクロソフトのアジュールの売上高は"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 25.744,
+      "speechEnd": 30.973,
+      "end": 31.253,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "最新四半期で43％増加し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 31.253,
+      "speechEnd": 34.39,
+      "end": 35.011,
+      "pause": 0.62,
       "intendedPause": 0.62,
       "reason": "punctuation-sentence",
-      "text": "決算・業績に関する新しい検証済み情報を確認しました。"
+      "text": "市場予想を上回った。"
     },
     {
       "parentKey": "body-0",
-      "start": 20.657,
-      "speechEnd": 26.935,
-      "end": 27.716,
+      "start": 35.011,
+      "speechEnd": 41.564,
+      "end": 42.344,
       "pause": 0.781,
       "intendedPause": 0.78,
       "reason": "punctuation-sentence",
-      "text": "詳細は出典資料の確認後に順次更新します。"
+      "text": "AI とクラウドは依然として主要な成長エンジンです。"
     }
   ]
 }
