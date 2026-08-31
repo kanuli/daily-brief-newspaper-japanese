@@ -113,6 +113,35 @@ jobs:
             exit 0
           fi
           git commit -m '最新ローリングニュース最低掲載版を先行公開'
+
+          # Translation/cache checkpoints can leave tracked working-tree changes
+          # after the publication files are committed. They are useful for later
+          # enhancement but must never prevent a validated minimum edition from
+          # rebasing onto a concurrently advanced main branch.
+          residual_stashed=false
+          if ! git diff --quiet || [ -n "$(git ls-files --others --exclude-standard)" ]; then
+            git stash push -u -m "rolling-minimum-residual-${GITHUB_RUN_ID}" >/tmp/rolling-stash.txt
+            cat /tmp/rolling-stash.txt
+            if ! grep -q 'No local changes to save' /tmp/rolling-stash.txt; then
+              residual_stashed=true
+              echo 'ROLLING_MINIMUM_RESIDUAL_STASHED'
+            fi
+          fi
+
+          restore_residual() {
+            if [ "$residual_stashed" != 'true' ]; then return 0; fi
+            if git stash pop; then
+              echo 'ROLLING_MINIMUM_RESIDUAL_RESTORED'
+              residual_stashed=false
+              return 0
+            fi
+            echo 'Residual cache restore conflicted after publication; discarding only non-publication residual changes.' >&2
+            git reset --hard HEAD
+            git clean -fd
+            git stash drop >/dev/null 2>&1 || true
+            residual_stashed=false
+          }
+
           for attempt in 1 2 3 4 5; do
             git fetch origin main
             if ! git rebase origin/main; then
@@ -123,10 +152,12 @@ jobs:
             fi
             if git push origin HEAD:main; then
               echo 'JAPANESE_EXTRA_MINIMUM_CURRENT_PUSH_OK'
+              restore_residual
               exit 0
             fi
             sleep $((attempt * 2))
           done
+          echo 'Minimum rolling publication could not be pushed after five clean-tree retries.' >&2
           exit 1
 
       - name: Apply optional v4 newsroom and lexical-furigana enhancement
@@ -157,18 +188,46 @@ jobs:
             exit 0
           fi
           git commit -m 'ローリングニュース編集品質を追加修復'
+
+          residual_stashed=false
+          if ! git diff --quiet || [ -n "$(git ls-files --others --exclude-standard)" ]; then
+            git stash push -u -m "rolling-enhancement-residual-${GITHUB_RUN_ID}" >/tmp/rolling-enhancement-stash.txt
+            cat /tmp/rolling-enhancement-stash.txt
+            if ! grep -q 'No local changes to save' /tmp/rolling-enhancement-stash.txt; then
+              residual_stashed=true
+              echo 'ROLLING_ENHANCEMENT_RESIDUAL_STASHED'
+            fi
+          fi
+
+          restore_residual() {
+            if [ "$residual_stashed" != 'true' ]; then return 0; fi
+            if git stash pop; then
+              echo 'ROLLING_ENHANCEMENT_RESIDUAL_RESTORED'
+              residual_stashed=false
+              return 0
+            fi
+            echo 'Optional residual cache restore conflicted; minimum/current published edition remains authoritative.' >&2
+            git reset --hard HEAD
+            git clean -fd
+            git stash drop >/dev/null 2>&1 || true
+            residual_stashed=false
+          }
+
           for attempt in 1 2 3 4 5; do
             git fetch origin main
             if ! git rebase origin/main; then
               git rebase --abort || true
               echo 'Optional rolling enhancement rebase conflict; minimum edition remains live.' >&2
+              restore_residual
               exit 0
             fi
             if git push origin HEAD:main; then
               echo 'JAPANESE_EXTRA_ENHANCEMENT_PUSH_OK'
+              restore_residual
               exit 0
             fi
             sleep $((attempt * 2))
           done
           echo 'Optional enhancement push did not complete; minimum edition remains live.' >&2
+          restore_residual
           exit 0
