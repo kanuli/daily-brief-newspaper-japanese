@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 189.336,
+  "duration": 39.732,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 340.0,
-  "characters": 654,
-  "charactersPerMinute": 207.3,
+  "characters": 124,
+  "charactersPerMinute": 187.3,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.18,
@@ -21,400 +21,96 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 15.844,
-      "text": "GoogleとMarvell、自社開発AIチップ供給協力を深化、長期調達規模最大1,200億ドル"
-    },
-    {
-      "key": "dek",
-      "start": 15.844,
-      "end": 37.949,
-      "text": "この契約には、独自のAIチップを開発するためにGoogleが必要とするネットワークとメモリ技術が含まれており、Marvellの株式オプションの取り決めが含まれています。"
+      "end": 16.837,
+      "text": "Googleとマーベル、自社開発AIチップの供給協力を深化、長期調達規模は最大1,200億ドルに"
     },
     {
       "key": "body-0",
-      "start": 37.949,
-      "end": 99.053,
-      "text": "マーベルとGoogleとの最新のコラボレーションは、Googleの社内AIチップサプライチェーンをさらに外側に拡張します。Reuters Breakingviewsは、この契約にはGoogleの社内AIチップネットワークとメモリ関連技術のサポートが含まれており、GoogleはMarvellの約5900万株を購入するオプションを取得していると指摘した。需要が限界に達すると、Googleの関連調達は2033年までに最大約1200億米ドルに達する可能性がある。"
-    },
-    {
-      "key": "body-1",
-      "start": 99.053,
-      "end": 146.088,
-      "text": "Alphabetにとって、これは同社が単一の外部GPUベンダーへの依存を減らし、TPUと自社開発のアクセラレーターを通じて垂直統合を拡大していることを反映している。長期的な調達コミットメントは、AIの設備投資が依然として高く、市場は引き続き自社開発チップのコスト効率を比較し、インフラ投資の増加を相殺するのに十分であることを意味します。"
-    },
-    {
-      "key": "why",
-      "start": 146.088,
-      "end": 169.519,
-      "text": "より深い自己開発のチップサプライチェーンは、単一の供給リスクを軽減するだけでなく、長期的な資本コミットメントを増加させることができます。"
-    },
-    {
-      "key": "watch",
-      "start": 169.519,
-      "end": 189.336,
-      "text": "Google TPUの出荷、Marvellの収益貢献、Google Cloudの成長、Alphabet AIの資本支出に注意してください。"
+      "start": 16.837,
+      "end": 39.732,
+      "text": "Reuters Breakingviews の報道、Marvell と Google の大合作、Google は 2033 年までに最大約 1,200 億億元の相次ぐ製品を採掘できます。"
     }
   ],
   "semanticUnits": [
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 3.066,
-      "end": 3.346,
+      "speechEnd": 3.139,
+      "end": 3.419,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "GoogleとMarvell、"
+      "text": "Googleとマーベル、"
     },
     {
       "parentKey": "title",
-      "start": 3.346,
-      "speechEnd": 8.502,
-      "end": 8.782,
+      "start": 3.419,
+      "speechEnd": 8.929,
+      "end": 9.209,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "自社開発AIチップ供給協力を深化、"
+      "text": "自社開発AIチップの供給協力を深化、"
     },
     {
       "parentKey": "title",
-      "start": 8.782,
-      "speechEnd": 12.335,
-      "end": 12.615,
+      "start": 9.209,
+      "speechEnd": 13.115,
+      "end": 13.396,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "長期調達規模最大1,"
+      "text": "長期調達規模は最大1,"
     },
     {
       "parentKey": "title",
-      "start": 12.615,
-      "speechEnd": 14.984,
-      "end": 15.844,
-      "pause": 0.86,
+      "start": 13.396,
+      "speechEnd": 15.976,
+      "end": 16.837,
+      "pause": 0.861,
       "intendedPause": 0.86,
       "reason": "punctuation-sentence",
-      "text": "200億ドル。"
+      "text": "200億ドルに。"
     },
     {
-      "parentKey": "dek",
-      "start": 15.844,
-      "speechEnd": 18.422,
-      "end": 18.702,
+      "parentKey": "body-0",
+      "start": 16.837,
+      "speechEnd": 20.952,
+      "end": 21.233,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "この契約には、"
+      "text": "Reuters Breakingviews の報道、"
     },
     {
-      "parentKey": "dek",
-      "start": 18.702,
-      "speechEnd": 24.485,
-      "end": 24.825,
-      "pause": 0.34,
-      "intendedPause": 0.34,
-      "reason": "semantic-boundary",
-      "text": "独自のAIチップを開発するためにGoogleが"
-    },
-    {
-      "parentKey": "dek",
-      "start": 24.825,
-      "speechEnd": 30.399,
-      "end": 30.679,
+      "parentKey": "body-0",
+      "start": 21.233,
+      "speechEnd": 25.697,
+      "end": 25.977,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "必要とするネットワークとメモリ技術が含まれており、"
-    },
-    {
-      "parentKey": "dek",
-      "start": 30.679,
-      "speechEnd": 37.089,
-      "end": 37.949,
-      "pause": 0.86,
-      "intendedPause": 0.86,
-      "reason": "punctuation-sentence",
-      "text": "Marvellの株式オプションの取り決めが含まれています。"
+      "text": "Marvell と Google の大合作、"
     },
     {
       "parentKey": "body-0",
-      "start": 37.949,
-      "speechEnd": 44.638,
-      "end": 44.918,
+      "start": 25.977,
+      "speechEnd": 32.952,
+      "end": 33.232,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "マーベルとGoogleとの最新のコラボレーションは、"
+      "text": "Google は 2033 年までに最大約 1,"
     },
     {
       "parentKey": "body-0",
-      "start": 44.918,
-      "speechEnd": 49.447,
-      "end": 49.787,
-      "pause": 0.34,
-      "intendedPause": 0.34,
-      "reason": "semantic-boundary",
-      "text": "Googleの社内AIチップサプライチェーンを"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 49.787,
-      "speechEnd": 53.061,
-      "end": 53.682,
-      "pause": 0.62,
-      "intendedPause": 0.62,
-      "reason": "punctuation-sentence",
-      "text": "さらに外側に拡張します。"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 53.682,
-      "speechEnd": 57.444,
-      "end": 57.724,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "Reuters Breakingviewsは、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 57.724,
-      "speechEnd": 68.802,
-      "end": 69.082,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "この契約にはGoogleの社内AIチップネットワークとメモリ関連技術のサポートが含まれており、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 69.082,
-      "speechEnd": 75.004,
-      "end": 75.344,
-      "pause": 0.34,
-      "intendedPause": 0.34,
-      "reason": "semantic-boundary",
-      "text": "GoogleはMarvellの約5900万株を"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 75.344,
-      "speechEnd": 80.64,
-      "end": 81.26,
-      "pause": 0.62,
-      "intendedPause": 0.62,
-      "reason": "punctuation-sentence",
-      "text": "購入するオプションを取得していると指摘した。"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 81.26,
-      "speechEnd": 84.534,
-      "end": 84.815,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "需要が限界に達すると、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 84.815,
-      "speechEnd": 87.95,
-      "end": 88.13,
-      "pause": 0.18,
-      "intendedPause": 0.18,
-      "reason": "before-key-number",
-      "text": "Googleの関連調達は"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 88.13,
-      "speechEnd": 90.847,
-      "end": 91.027,
-      "pause": 0.18,
-      "intendedPause": 0.18,
-      "reason": "key-number",
-      "text": "2033年"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 91.027,
-      "speechEnd": 98.273,
-      "end": 99.053,
-      "pause": 0.78,
+      "start": 33.232,
+      "speechEnd": 38.951,
+      "end": 39.732,
+      "pause": 0.781,
       "intendedPause": 0.78,
       "reason": "punctuation-sentence",
-      "text": "までに最大約1200億米ドルに達する可能性がある。"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 99.053,
-      "speechEnd": 101.84,
-      "end": 102.12,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "Alphabetにとって、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 102.12,
-      "speechEnd": 109.575,
-      "end": 109.856,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "これは同社が単一の外部GPUベンダーへの依存を減らし、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 109.856,
-      "speechEnd": 114.036,
-      "end": 114.376,
-      "pause": 0.34,
-      "intendedPause": 0.34,
-      "reason": "semantic-boundary",
-      "text": "TPUと自社開発のアクセラレーターを"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 114.376,
-      "speechEnd": 121.343,
-      "end": 121.964,
-      "pause": 0.62,
-      "intendedPause": 0.62,
-      "reason": "punctuation-sentence",
-      "text": "通じて垂直統合を拡大していることを反映している。"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 121.964,
-      "speechEnd": 126.005,
-      "end": 126.285,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "長期的な調達コミットメントは、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 126.285,
-      "speechEnd": 130.604,
-      "end": 130.884,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "AIの設備投資が依然として高く、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 130.884,
-      "speechEnd": 137.016,
-      "end": 137.296,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "市場は引き続き自社開発チップのコスト効率を比較し、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 137.296,
-      "speechEnd": 145.308,
-      "end": 146.088,
-      "pause": 0.78,
-      "intendedPause": 0.78,
-      "reason": "punctuation-sentence",
-      "text": "インフラ投資の増加を相殺するのに十分であることを意味します。"
-    },
-    {
-      "parentKey": "why",
-      "start": 146.088,
-      "speechEnd": 150.06,
-      "end": 150.68,
-      "pause": 0.62,
-      "intendedPause": 0.62,
-      "reason": "punctuation-sentence",
-      "text": "このニュースの重要なポイントです。"
-    },
-    {
-      "parentKey": "why",
-      "start": 150.68,
-      "speechEnd": 156.254,
-      "end": 156.534,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "より深い自己開発のチップサプライチェーンは、"
-    },
-    {
-      "parentKey": "why",
-      "start": 156.534,
-      "speechEnd": 161.55,
-      "end": 161.83,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "単一の供給リスクを軽減するだけでなく、"
-    },
-    {
-      "parentKey": "why",
-      "start": 161.83,
-      "speechEnd": 168.658,
-      "end": 169.519,
-      "pause": 0.86,
-      "intendedPause": 0.86,
-      "reason": "punctuation-sentence",
-      "text": "長期的な資本コミットメントを増加させることができます。"
-    },
-    {
-      "parentKey": "watch",
-      "start": 169.519,
-      "speechEnd": 171.609,
-      "end": 171.889,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "今後は、"
-    },
-    {
-      "parentKey": "watch",
-      "start": 171.889,
-      "speechEnd": 174.885,
-      "end": 175.165,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "Google TPUの出荷、"
-    },
-    {
-      "parentKey": "watch",
-      "start": 175.165,
-      "speechEnd": 178.37,
-      "end": 178.65,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "Marvellの収益貢献、"
-    },
-    {
-      "parentKey": "watch",
-      "start": 178.65,
-      "speechEnd": 182.343,
-      "end": 182.623,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "Google Cloudの成長、"
-    },
-    {
-      "parentKey": "watch",
-      "start": 182.623,
-      "speechEnd": 188.475,
-      "end": 189.336,
-      "pause": 0.86,
-      "intendedPause": 0.86,
-      "reason": "punctuation-sentence",
-      "text": "Alphabet AIの資本支出に注意してください。"
+      "text": "200 億億元の相次ぐ製品を採掘できます。"
     }
   ]
 }

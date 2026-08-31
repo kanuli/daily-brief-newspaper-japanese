@@ -1,0 +1,440 @@
+{
+  "version": 3,
+  "duration": 204.8,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 604,
+  "charactersPerMinute": 177.0,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 17.167,
+      "text": "イタリアが国境検問をスペインに15日間延長セウタ移民危機が続く衝撃的な神が動きの自由を根付かせる"
+    },
+    {
+      "key": "dek",
+      "start": 17.167,
+      "end": 39.909,
+      "text": "ローマは、セウタの状況はまだ正常に戻っておらず、スペインから到着する旅行者に対する一時的な検査を延長し、マドリードは以前に対策を講じていたと述べた。"
+    },
+    {
+      "key": "body-0",
+      "start": 39.909,
+      "end": 98.428,
+      "text": "イタリア政府は8月31日、スペインからの入国者に対する一時的な国境検問をさらに15日間延長すると発表した。ロイターとユーロニュースは、この措置は主に空路と海路の入国を伴うと報じた。ローマは、何千人もの非正規移民が依然としてセウタで立ち往生しており、安全と受け入れに対する圧力は解消されていないと述べた。スペインは以前、イタリアからの到着者に小切手を導入していました。"
+    },
+    {
+      "key": "body-1",
+      "start": 98.428,
+      "end": 153.13,
+      "text": "この論争は、7月末にモロッコからスペイン領北アフリカのセウタに大規模な移民が流入したことに起因している。この事件は、国境管理問題からEU加盟国間の相互信頼と自由な移動のための取り決めにまで拡大しており、両国が対策を拡大し続けると、観光、航空、港湾運営、EU移住政策の調整がより大きな政治的圧力にさらされる可能性があります。"
+    },
+    {
+      "key": "why",
+      "start": 153.13,
+      "end": 183.311,
+      "text": "EUの2つの主要加盟国が国境チェックを維持しているという事実は、セウタの危機がスペイン本土を超えており、EUの移民と自由な移動体制のストレステストになっていることを示しています。"
+    },
+    {
+      "key": "watch",
+      "start": 183.311,
+      "end": 204.8,
+      "text": "イタリアとスペインの間のさらなる延長、欧州委員会の対応、セウタの拘束者数、モロッコの国境管理の進展に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.041,
+      "end": 4.221,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "イタリアが国境検問をスペインに"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.221,
+      "speechEnd": 6.52,
+      "end": 6.7,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "15日間"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.7,
+      "speechEnd": 10.045,
+      "end": 10.385,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "after-key-number",
+      "text": "延長セウタ移民危機が"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.385,
+      "speechEnd": 16.307,
+      "end": 17.167,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "続く衝撃的な神が動きの自由を根付かせる。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.167,
+      "speechEnd": 19.327,
+      "end": 19.607,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ローマは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.607,
+      "speechEnd": 24.903,
+      "end": 25.183,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "セウタの状況はまだ正常に戻っておらず、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.183,
+      "speechEnd": 32.638,
+      "end": 32.918,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "スペインから到着する旅行者に対する一時的な検査を延長し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.918,
+      "speechEnd": 39.049,
+      "end": 39.909,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "マドリードは以前に対策を講じていたと述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.909,
+      "speechEnd": 44.787,
+      "end": 45.067,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イタリア政府は8月31日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.067,
+      "speechEnd": 51.477,
+      "end": 51.817,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "スペインからの入国者に対する一時的な国境検問を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.817,
+      "speechEnd": 57.182,
+      "end": 57.802,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "さらに15日間延長すると発表した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.802,
+      "speechEnd": 60.868,
+      "end": 61.148,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイターとユーロニュースは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.148,
+      "speechEnd": 68.603,
+      "end": 69.223,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "この措置は主に空路と海路の入国を伴うと報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.223,
+      "speechEnd": 71.383,
+      "end": 71.663,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ローマは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.663,
+      "speechEnd": 80.303,
+      "end": 80.583,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "何千人もの非正規移民が依然としてセウタで立ち往生しており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 80.583,
+      "speechEnd": 87.62,
+      "end": 88.24,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "安全と受け入れに対する圧力は解消されていないと述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 88.24,
+      "speechEnd": 90.679,
+      "end": 90.959,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "スペインは以前、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 90.959,
+      "speechEnd": 97.647,
+      "end": 98.428,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "イタリアからの到着者に小切手を導入していました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 98.428,
+      "speechEnd": 100.727,
+      "end": 101.007,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この論争は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.007,
+      "speechEnd": 113.827,
+      "end": 114.447,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "7月末にモロッコからスペイン領北アフリカのセウタに大規模な移民が流入したことに起因している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.447,
+      "speechEnd": 116.746,
+      "end": 117.026,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この事件は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.026,
+      "speechEnd": 125.805,
+      "end": 126.145,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "国境管理問題からEU加盟国間の相互信頼と自由な移動のため"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 126.145,
+      "speechEnd": 130.256,
+      "end": 130.536,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "の取り決めにまで拡大しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 130.536,
+      "speechEnd": 134.786,
+      "end": 135.067,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "両国が対策を拡大し続けると、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 135.067,
+      "speechEnd": 137.087,
+      "end": 137.367,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "観光、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 137.367,
+      "speechEnd": 139.388,
+      "end": 139.668,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "航空、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 139.668,
+      "speechEnd": 141.828,
+      "end": 142.108,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "港湾運営、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 142.108,
+      "speechEnd": 152.35,
+      "end": 153.13,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "EU移住政策の調整がより大きな政治的圧力にさらされる可能性があります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 153.13,
+      "speechEnd": 157.102,
+      "end": 157.722,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 157.722,
+      "speechEnd": 163.087,
+      "end": 163.427,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "EUの2つの主要加盟国が国境チェックを"
+    },
+    {
+      "parentKey": "why",
+      "start": 163.427,
+      "speechEnd": 166.98,
+      "end": 167.26,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "維持しているという事実は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 167.26,
+      "speechEnd": 172.973,
+      "end": 173.253,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "セウタの危機がスペイン本土を超えており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 173.253,
+      "speechEnd": 182.451,
+      "end": 183.311,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "EUの移民と自由な移動体制のストレステストになっていることを示しています。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 183.311,
+      "speechEnd": 185.401,
+      "end": 185.681,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 185.681,
+      "speechEnd": 190.628,
+      "end": 190.908,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イタリアとスペインの間のさらなる延長、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 190.908,
+      "speechEnd": 194.043,
+      "end": 194.323,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "欧州委員会の対応、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 194.323,
+      "speechEnd": 197.389,
+      "end": 197.669,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "セウタの拘束者数、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 197.669,
+      "speechEnd": 203.94,
+      "end": 204.8,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "モロッコの国境管理の進展に注目してください。"
+    }
+  ]
+}

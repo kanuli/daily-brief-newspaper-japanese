@@ -1,0 +1,420 @@
+{
+  "version": 3,
+  "duration": 225.829,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 766,
+  "charactersPerMinute": 203.5,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 16.118,
+      "text": "ゴライアスの永久移籍契約のためのマンチェスター・ユナイテッドとウェストブロム間の予備的な300万ポンドの移籍金"
+    },
+    {
+      "key": "dek",
+      "start": 16.118,
+      "end": 42.194,
+      "text": "BBCのチーフフットボール特派員は、マンチェスター・ユナイテッドが将来の再販シェアの40 ％を追加保持することで、取引の追加条件が最大760万ポンドに達する可能性があると述べた。"
+    },
+    {
+      "key": "body-0",
+      "start": 42.194,
+      "end": 113.467,
+      "text": "BBCのチーフフットボール特派員サイモン・ストーンが8月28日に報じたところによると、マンチェスター・ユナイテッドは22歳のミッドフィルダー、トビー・コリヤーを300万ポンドの初期移籍金で恒久的に移籍させることでクラウン・ウェスト・ブロムと合意し、追加の条項は全体で760万ポンドに引き上げられ、マンチェスター・ユナイテッドは将来の再販の40 ％のシェアを保持しているという。ゴーリエは昨シーズンウェストブロムとヒューストンを借りており、今年の夏にマンチェスター・ユナイテッドのミッドフィルダーを大幅に再編した後、プレースペースはさらに狭くなった。"
+    },
+    {
+      "key": "body-1",
+      "start": 113.467,
+      "end": 168.029,
+      "text": "報道によると、ゴリアテはかつてウェストブロムとヒューストンの間を選択し、ウェストブロムのより安定した見通しは最終的に重要な要因となった。このトランザクションは、バリバの負傷、メキシコへの派遣前、ヨーロッパリーグの引き分け、リーグカップの同日の引き分けとは異なり、また、ユナイテッドがファーストチームの強化と移籍期間終了時の限界的なプレーヤーの滞在を同期していることを反映しています。"
+    },
+    {
+      "key": "why",
+      "start": 168.029,
+      "end": 200.239,
+      "text": "ユーストレーニングミッドフィルダーの恒久的な売却は、マンチェスター・ユナイテッドの移籍収入とラインナップの合理化に影響を及ぼし、転売シェアの高い割合は、選手の将来の評価の財務的リターンも保持します。"
+    },
+    {
+      "key": "watch",
+      "start": 200.239,
+      "end": 225.829,
+      "text": "ウェストブロムとマンチェスター・ユナイテッドからの公式発表、個人的な条件と登録完了時間、そして移籍期間が終了する前に取引を完了できるかどうかに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 15.258,
+      "end": 16.118,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ゴライアスの永久移籍契約のためのマンチェスター・ユナイテッドとウェストブロム間の予備的な300万ポンドの移籍金。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.118,
+      "speechEnd": 19.881,
+      "end": 20.161,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "BBCのチーフフットボール特派員は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.161,
+      "speechEnd": 23.505,
+      "end": 23.845,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "マンチェスター・ユナイテッドが"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.845,
+      "speechEnd": 31.161,
+      "end": 31.441,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "将来の再販シェアの40 ％を追加保持することで、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 31.441,
+      "speechEnd": 41.334,
+      "end": 42.194,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "取引の追加条件が最大760万ポンドに達する可能性があると述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.194,
+      "speechEnd": 47.42,
+      "end": 47.76,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "BBCのチーフフットボール特派員サイモン・ストーンが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.76,
+      "speechEnd": 53.333,
+      "end": 53.613,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "8月28日に報じたところによると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.613,
+      "speechEnd": 59.954,
+      "end": 60.234,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マンチェスター・ユナイテッドは22歳のミッドフィルダー、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.234,
+      "speechEnd": 73.123,
+      "end": 73.403,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "トビー・コリヤーを300万ポンドの初期移籍金で恒久的に移籍させることでクラウン・ウェスト・ブロムと合意し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.403,
+      "speechEnd": 80.858,
+      "end": 81.138,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "追加の条項は全体で760万ポンドに引き上げられ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 81.138,
+      "speechEnd": 84.412,
+      "end": 84.753,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "マンチェスター・ユナイテッドは"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 84.753,
+      "speechEnd": 91.998,
+      "end": 92.619,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "将来の再販の40 ％のシェアを保持しているという。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 92.619,
+      "speechEnd": 99.098,
+      "end": 99.378,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ゴーリエは昨シーズンウェストブロムとヒューストンを借りており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 99.378,
+      "speechEnd": 108.296,
+      "end": 108.576,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今年の夏にマンチェスター・ユナイテッドのミッドフィルダーを大幅に再編した後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 108.576,
+      "speechEnd": 112.687,
+      "end": 113.467,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "プレースペースはさらに狭くなった。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 113.467,
+      "speechEnd": 115.836,
+      "end": 116.116,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "報道によると、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 116.116,
+      "speechEnd": 122.874,
+      "end": 123.154,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ゴリアテはかつてウェストブロムとヒューストンの間を選択し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 123.154,
+      "speechEnd": 127.961,
+      "end": 128.301,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ウェストブロムのより安定した見通しは"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 128.301,
+      "speechEnd": 131.994,
+      "end": 132.614,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "最終的に重要な要因となった。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 132.614,
+      "speechEnd": 135.61,
+      "end": 135.89,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "このトランザクションは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 135.89,
+      "speechEnd": 138.329,
+      "end": 138.609,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "バリバの負傷、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 138.609,
+      "speechEnd": 141.605,
+      "end": 141.885,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "メキシコへの派遣前、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 141.885,
+      "speechEnd": 145.09,
+      "end": 145.37,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ヨーロッパリーグの引き分け、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 145.37,
+      "speechEnd": 149.968,
+      "end": 150.248,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "リーグカップの同日の引き分けとは異なり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 150.248,
+      "speechEnd": 152.268,
+      "end": 152.549,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "また、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 152.549,
+      "speechEnd": 167.249,
+      "end": 168.029,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "ユナイテッドがファーストチームの強化と移籍期間終了時の限界的なプレーヤーの滞在を同期していることを反映しています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 168.029,
+      "speechEnd": 172.001,
+      "end": 172.621,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 172.621,
+      "speechEnd": 179.518,
+      "end": 179.798,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ユーストレーニングミッドフィルダーの恒久的な売却は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 179.798,
+      "speechEnd": 188.716,
+      "end": 188.996,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マンチェスター・ユナイテッドの移籍収入とラインナップの合理化に影響を及ぼし、"
+    },
+    {
+      "parentKey": "why",
+      "start": 188.996,
+      "speechEnd": 192.341,
+      "end": 192.621,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "転売シェアの高い割合は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 192.621,
+      "speechEnd": 199.379,
+      "end": 200.239,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "選手の将来の評価の財務的リターンも保持します。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 200.239,
+      "speechEnd": 202.329,
+      "end": 202.609,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 202.609,
+      "speechEnd": 209.576,
+      "end": 209.857,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ウェストブロムとマンチェスター・ユナイテッドからの公式発表、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 209.857,
+      "speechEnd": 214.176,
+      "end": 214.456,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "個人的な条件と登録完了時間、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 214.456,
+      "speechEnd": 219.403,
+      "end": 219.743,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "そして移籍期間が終了する前に取引を"
+    },
+    {
+      "parentKey": "watch",
+      "start": 219.743,
+      "speechEnd": 224.968,
+      "end": 225.829,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "完了できるかどうかに注目してください。"
+    }
+  ]
+}

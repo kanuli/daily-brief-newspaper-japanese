@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 202.553,
+  "duration": 42.214,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 340.0,
-  "characters": 659,
-  "charactersPerMinute": 195.2,
+  "characters": 128,
+  "charactersPerMinute": 181.9,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.18,
@@ -21,46 +21,22 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 17.306,
+      "end": 17.316,
       "text": "マイクロソフトは、Azureで43 ％の成長でAI資本支出の懸念に対応し、クラウドの需要は依然として強力です"
     },
     {
-      "key": "dek",
-      "start": 17.306,
-      "end": 36.973,
-      "text": "Copilotには3,000万人以上の有料ユーザーがおり、膨大なAIとデータセンターへの投資は依然として評価論争の中心となっています。"
-    },
-    {
       "key": "body-0",
-      "start": 36.973,
-      "end": 101.135,
-      "text": "マイクロソフトの最新の四半期業績は、AIへの投資が依然としてクラウドの成長につながる可能性があることを示しています。ロイター通信によると、Azureの四半期売上高は43 ％増加し、市場の予想を上回り、次の四半期の売上高に対する同社のガイダンスはアナリストの予想よりも優れていた。Copilotは3,000万人以上の有料ユーザーを抱えており、エンタープライズ生成AIのトライアルから継続的な支払いへの段階的なシフトを示している。"
-    },
-    {
-      "key": "body-1",
-      "start": 101.135,
-      "end": 162.869,
-      "text": "一方、マイクロソフトは依然としてデータセンター、GPU、ネットワークインフラストラクチャに非常に高い割合で投資しているため、市場は引き続き資本収益率に焦点を当てています。NVIDIA AIサーバーコスト上昇の報告が最終的に確認されれば、将来のAIインフラコストの感度も高まります。今後の焦点は、Azureの成長が資本コストを上回り続けるかどうか、そしてAI製品が支出レベルをサポートするのに十分な速さで収益化できるかどうかにあります。"
-    },
-    {
-      "key": "why",
-      "start": 162.869,
-      "end": 183.921,
-      "text": "AzureとCopilotの成長は、膨大なAI資本支出が経済的リターンを生み出すかどうかを決定するコアリーディングです。"
-    },
-    {
-      "key": "watch",
-      "start": 183.921,
-      "end": 202.553,
-      "text": "Azureの成長、Copilotの有料加入者、AIインフラストラクチャの設備投資、フリーキャッシュフローに注目してください。"
+      "start": 17.316,
+      "end": 42.214,
+      "text": "ロイター通信によると、マイクロソフトのAzureの売上高は最近の四半期に43 ％増加し、市場の予想を上回り、AIとクラウドが引き続き主要な成長エンジンとなっている。"
     }
   ],
   "semanticUnits": [
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 2.508,
-      "end": 2.788,
+      "speechEnd": 2.51,
+      "end": 2.79,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
@@ -68,9 +44,9 @@
     },
     {
       "parentKey": "title",
-      "start": 2.788,
-      "speechEnd": 11.219,
-      "end": 11.499,
+      "start": 2.79,
+      "speechEnd": 11.225,
+      "end": 11.506,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
@@ -78,89 +54,19 @@
     },
     {
       "parentKey": "title",
-      "start": 11.499,
-      "speechEnd": 16.446,
-      "end": 17.306,
-      "pause": 0.86,
+      "start": 11.506,
+      "speechEnd": 16.455,
+      "end": 17.316,
+      "pause": 0.861,
       "intendedPause": 0.86,
       "reason": "punctuation-sentence",
       "text": "クラウドの需要は依然として強力です。"
     },
     {
-      "parentKey": "dek",
-      "start": 17.306,
-      "speechEnd": 20.372,
-      "end": 20.652,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "Copilotには3,"
-    },
-    {
-      "parentKey": "dek",
-      "start": 20.652,
-      "speechEnd": 25.529,
-      "end": 25.809,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "000万人以上の有料ユーザーがおり、"
-    },
-    {
-      "parentKey": "dek",
-      "start": 25.809,
-      "speechEnd": 30.338,
-      "end": 30.678,
-      "pause": 0.34,
-      "intendedPause": 0.34,
-      "reason": "semantic-boundary",
-      "text": "膨大なAIとデータセンターへの投資は"
-    },
-    {
-      "parentKey": "dek",
-      "start": 30.678,
-      "speechEnd": 36.113,
-      "end": 36.973,
-      "pause": 0.86,
-      "intendedPause": 0.86,
-      "reason": "punctuation-sentence",
-      "text": "依然として評価論争の中心となっています。"
-    },
-    {
       "parentKey": "body-0",
-      "start": 36.973,
-      "speechEnd": 42.268,
-      "end": 42.549,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "マイクロソフトの最新の四半期業績は、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 42.549,
-      "speechEnd": 49.237,
-      "end": 49.577,
-      "pause": 0.34,
-      "intendedPause": 0.34,
-      "reason": "semantic-boundary",
-      "text": "AIへの投資が依然としてクラウドの成長につなが"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 49.577,
-      "speechEnd": 53.897,
-      "end": 54.517,
-      "pause": 0.62,
-      "intendedPause": 0.62,
-      "reason": "punctuation-sentence",
-      "text": "る可能性があることを示しています。"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 54.517,
-      "speechEnd": 57.513,
-      "end": 57.793,
+      "start": 17.316,
+      "speechEnd": 20.314,
+      "end": 20.594,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
@@ -168,19 +74,29 @@
     },
     {
       "parentKey": "body-0",
-      "start": 57.793,
-      "speechEnd": 64.691,
-      "end": 64.971,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "Azureの四半期売上高は43 ％増加し、"
+      "start": 20.594,
+      "speechEnd": 25.265,
+      "end": 25.605,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "マイクロソフトのAzureの売上高は"
     },
     {
       "parentKey": "body-0",
-      "start": 64.971,
-      "speechEnd": 68.316,
-      "end": 68.596,
+      "start": 25.605,
+      "speechEnd": 31.113,
+      "end": 31.393,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "最近の四半期に43 ％増加し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 31.393,
+      "speechEnd": 34.739,
+      "end": 35.019,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
@@ -188,253 +104,13 @@
     },
     {
       "parentKey": "body-0",
-      "start": 68.596,
-      "speechEnd": 75.285,
-      "end": 75.625,
-      "pause": 0.34,
-      "intendedPause": 0.34,
-      "reason": "semantic-boundary",
-      "text": "次の四半期の売上高に対する同社のガイダンスは"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 75.625,
-      "speechEnd": 79.805,
-      "end": 80.425,
-      "pause": 0.62,
-      "intendedPause": 0.62,
-      "reason": "punctuation-sentence",
-      "text": "アナリストの予想よりも優れていた。"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 80.425,
-      "speechEnd": 83.282,
-      "end": 83.562,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "Copilotは3,"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 83.562,
-      "speechEnd": 89.484,
-      "end": 89.765,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "000万人以上の有料ユーザーを抱えており、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 89.765,
-      "speechEnd": 100.355,
-      "end": 101.135,
-      "pause": 0.78,
+      "start": 35.019,
+      "speechEnd": 41.433,
+      "end": 42.214,
+      "pause": 0.781,
       "intendedPause": 0.78,
       "reason": "punctuation-sentence",
-      "text": "エンタープライズ生成AIのトライアルから継続的な支払いへの段階的なシフトを示している。"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 101.135,
-      "speechEnd": 103.156,
-      "end": 103.436,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "一方、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 103.436,
-      "speechEnd": 108.244,
-      "end": 108.524,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "マイクロソフトは依然としてデータセンター、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 108.524,
-      "speechEnd": 110.544,
-      "end": 110.824,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "GPU、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 110.824,
-      "speechEnd": 117.931,
-      "end": 118.211,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "ネットワークインフラストラクチャに非常に高い割合で投資しているため、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 118.211,
-      "speechEnd": 124.343,
-      "end": 124.963,
-      "pause": 0.62,
-      "intendedPause": 0.62,
-      "reason": "punctuation-sentence",
-      "text": "市場は引き続き資本収益率に焦点を当てています。"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 124.963,
-      "speechEnd": 130.049,
-      "end": 130.389,
-      "pause": 0.34,
-      "intendedPause": 0.34,
-      "reason": "semantic-boundary",
-      "text": "NVIDIA AIサーバーコスト上昇の報告が"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 130.389,
-      "speechEnd": 134.012,
-      "end": 134.292,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "最終的に確認されれば、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 134.292,
-      "speechEnd": 140.006,
-      "end": 140.626,
-      "pause": 0.62,
-      "intendedPause": 0.62,
-      "reason": "punctuation-sentence",
-      "text": "将来のAIインフラコストの感度も高まります。"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 140.626,
-      "speechEnd": 143.134,
-      "end": 143.414,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "今後の焦点は、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 143.414,
-      "speechEnd": 150.103,
-      "end": 150.383,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "Azureの成長が資本コストを上回り続けるかどうか、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 150.383,
-      "speechEnd": 162.088,
-      "end": 162.869,
-      "pause": 0.78,
-      "intendedPause": 0.78,
-      "reason": "punctuation-sentence",
-      "text": "そしてAI製品が支出レベルをサポートするのに十分な速さで収益化できるかどうかにあります。"
-    },
-    {
-      "parentKey": "why",
-      "start": 162.869,
-      "speechEnd": 166.84,
-      "end": 167.46,
-      "pause": 0.62,
-      "intendedPause": 0.62,
-      "reason": "punctuation-sentence",
-      "text": "このニュースの重要なポイントです。"
-    },
-    {
-      "parentKey": "why",
-      "start": 167.46,
-      "speechEnd": 171.71,
-      "end": 171.99,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "AzureとCopilotの成長は、"
-    },
-    {
-      "parentKey": "why",
-      "start": 171.99,
-      "speechEnd": 177.007,
-      "end": 177.347,
-      "pause": 0.34,
-      "intendedPause": 0.34,
-      "reason": "semantic-boundary",
-      "text": "膨大なAI資本支出が経済的リターンを"
-    },
-    {
-      "parentKey": "why",
-      "start": 177.347,
-      "speechEnd": 183.06,
-      "end": 183.921,
-      "pause": 0.86,
-      "intendedPause": 0.86,
-      "reason": "punctuation-sentence",
-      "text": "生み出すかどうかを決定するコアリーディングです。"
-    },
-    {
-      "parentKey": "watch",
-      "start": 183.921,
-      "speechEnd": 186.011,
-      "end": 186.291,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "今後は、"
-    },
-    {
-      "parentKey": "watch",
-      "start": 186.291,
-      "speechEnd": 189.287,
-      "end": 189.567,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "Azureの成長、"
-    },
-    {
-      "parentKey": "watch",
-      "start": 189.567,
-      "speechEnd": 192.981,
-      "end": 193.261,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "Copilotの有料加入者、"
-    },
-    {
-      "parentKey": "watch",
-      "start": 193.261,
-      "speechEnd": 197.024,
-      "end": 197.304,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "AIインフラストラクチャの設備投資、"
-    },
-    {
-      "parentKey": "watch",
-      "start": 197.304,
-      "speechEnd": 201.693,
-      "end": 202.553,
-      "pause": 0.86,
-      "intendedPause": 0.86,
-      "reason": "punctuation-sentence",
-      "text": "フリーキャッシュフローに注目してください。"
+      "text": "AIとクラウドが引き続き主要な成長エンジンとなっている。"
     }
   ]
 }

@@ -1,0 +1,320 @@
+{
+  "version": 3,
+  "duration": 146.625,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 429,
+  "charactersPerMinute": 175.5,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 12.628,
+      "text": "劇場版『ウィッチーズ前橋』キービジュアルと予告編が公開;リリースプロモーションも最終段階へ"
+    },
+    {
+      "key": "dek",
+      "start": 12.628,
+      "end": 30.972,
+      "text": "日本のMANTANWEBは28日早朝、コレクション「魔女見習い」の広報資料を更新した。作品の舞台は群馬・前橋。"
+    },
+    {
+      "key": "body-0",
+      "start": 30.972,
+      "end": 70.271,
+      "text": "群馬県前橋市を舞台にしたオリジナルアニメ「前橋ウィッチーズ」劇場集「魔女見習い」のメインビジュアルと公式予告編が公開されたと日本のMANTANWEBが28日早朝に報じた。本作は、5人の女子高生が魔女へと成長していく物語をメインプロットとしてまとめたもの。"
+    },
+    {
+      "key": "body-1",
+      "start": 70.271,
+      "end": 104.209,
+      "text": "日本のアニメ業界でも同日早朝、映画やテレビアニメの情報が続々と更新され、夏の終わりから秋にかけてのプロモーション活動が加速していることがわかる。上映会、入場特典、海外配給手配などのフォローアップに注力します。"
+    },
+    {
+      "key": "why",
+      "start": 104.209,
+      "end": 129.036,
+      "text": "正式なプレビューとメインビジュアルは、通常、映画プロモーションの最終段階を表し、その後のライセンス供与と製品の露出につながります。"
+    },
+    {
+      "key": "watch",
+      "start": 129.036,
+      "end": 146.625,
+      "text": "公開スケジュール、劇場の数、入場特典、海外ストリーミングや映画の手配に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 6.759,
+      "end": 7.099,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "punctuation-semantic",
+      "text": "劇場版『ウィッチーズ前橋』キービジュアルと予告編が公開;"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.099,
+      "speechEnd": 11.768,
+      "end": 12.628,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "リリースプロモーションも最終段階へ。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.628,
+      "speechEnd": 18.69,
+      "end": 18.97,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本のMANTANWEBは28日早朝、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.97,
+      "speechEnd": 25.868,
+      "end": 26.488,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "コレクション「魔女見習い」の広報資料を更新した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.488,
+      "speechEnd": 30.112,
+      "end": 30.972,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "作品の舞台は群馬・前橋。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 30.972,
+      "speechEnd": 55.151,
+      "end": 55.771,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "群馬県前橋市を舞台にしたオリジナルアニメ「前橋ウィッチーズ」劇場集「魔女見習い」のメインビジュアルと公式予告編が公開されたと日本のMANTANWEBが28日早朝に報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.771,
+      "speechEnd": 57.862,
+      "end": 58.142,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "本作は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.142,
+      "speechEnd": 65.319,
+      "end": 65.659,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "5人の女子高生が魔女へと成長していく物語を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.659,
+      "speechEnd": 69.491,
+      "end": 70.271,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "メインプロットとしてまとめたもの。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 70.271,
+      "speechEnd": 75.428,
+      "end": 75.708,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本のアニメ業界でも同日早朝、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 75.708,
+      "speechEnd": 81.63,
+      "end": 81.911,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "映画やテレビアニメの情報が続々と更新され、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 81.911,
+      "speechEnd": 88.251,
+      "end": 88.591,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "夏の終わりから秋にかけてのプロモーション活動が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.591,
+      "speechEnd": 92.006,
+      "end": 92.626,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "加速していることがわかる。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.626,
+      "speechEnd": 94.716,
+      "end": 94.996,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "上映会、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.996,
+      "speechEnd": 97.226,
+      "end": 97.506,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "入場特典、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.506,
+      "speechEnd": 103.429,
+      "end": 104.209,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "海外配給手配などのフォローアップに注力します。"
+    },
+    {
+      "parentKey": "why",
+      "start": 104.209,
+      "speechEnd": 108.181,
+      "end": 108.801,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 108.801,
+      "speechEnd": 113.191,
+      "end": 113.471,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "正式なプレビューとメインビジュアルは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 113.471,
+      "speechEnd": 115.492,
+      "end": 115.772,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "通常、"
+    },
+    {
+      "parentKey": "why",
+      "start": 115.772,
+      "speechEnd": 121.207,
+      "end": 121.487,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "映画プロモーションの最終段階を表し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 121.487,
+      "speechEnd": 128.176,
+      "end": 129.036,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "その後のライセンス供与と製品の露出につながります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 129.036,
+      "speechEnd": 131.127,
+      "end": 131.407,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 131.407,
+      "speechEnd": 134.055,
+      "end": 134.335,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "公開スケジュール、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 134.335,
+      "speechEnd": 136.495,
+      "end": 136.775,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "劇場の数、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 136.775,
+      "speechEnd": 139.005,
+      "end": 139.285,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "入場特典、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 139.285,
+      "speechEnd": 145.765,
+      "end": 146.625,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "海外ストリーミングや映画の手配に注意してください。"
+    }
+  ]
+}

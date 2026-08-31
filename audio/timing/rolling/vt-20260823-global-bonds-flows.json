@@ -1,0 +1,146 @@
+{
+  "version": 3,
+  "duration": 51.122,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 149,
+  "charactersPerMinute": 174.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 20.989,
+      "text": "ETF READ - THROUGH ：グローバルエクイティファンドは依然として流入を記録していますが、長期金利と石油価格の圧力が評価を制限しています"
+    },
+    {
+      "key": "body-0",
+      "start": 20.989,
+      "end": 51.122,
+      "text": "ロイター通信によると、世界の株式ファンドが過去３週間で最大の資金流入を記録した。同時に、30年米国債利回りは数年ぶりの高水準に上昇し、世界の株式市場は評価圧力にさらされた。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.834,
+      "end": 4.174,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "punctuation-semantic",
+      "text": "ETF READ - THROUGH ："
+    },
+    {
+      "parentKey": "title",
+      "start": 4.174,
+      "speechEnd": 7.519,
+      "end": 7.86,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "グローバルエクイティファンドは"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.86,
+      "speechEnd": 12.529,
+      "end": 12.81,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "依然として流入を記録していますが、"
+    },
+    {
+      "parentKey": "title",
+      "start": 12.81,
+      "speechEnd": 20.128,
+      "end": 20.989,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "長期金利と石油価格の圧力が評価を制限しています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 20.989,
+      "speechEnd": 23.986,
+      "end": 24.266,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 24.266,
+      "speechEnd": 27.89,
+      "end": 28.07,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "世界の株式ファンドが過去"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 28.07,
+      "speechEnd": 30.161,
+      "end": 30.341,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "３週間"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 30.341,
+      "speechEnd": 34.663,
+      "end": 35.283,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "で最大の資金流入を記録した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 35.283,
+      "speechEnd": 37.444,
+      "end": 37.724,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同時に、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.724,
+      "speechEnd": 44.624,
+      "end": 44.905,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "30年米国債利回りは数年ぶりの高水準に上昇し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.905,
+      "speechEnd": 50.341,
+      "end": 51.122,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "世界の株式市場は評価圧力にさらされた。"
+    }
+  ]
+}
