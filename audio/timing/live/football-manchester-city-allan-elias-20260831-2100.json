@@ -1,0 +1,510 @@
+{
+  "version": 3,
+  "duration": 214.936,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 670,
+  "charactersPerMinute": 187.0,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 19.645,
+      "text": "マンチェスター・シティ、ポメラスのウィンガー、アラン・イライアスと5年間の契約を結び、22歳のブラジル人の新しい援助を確保"
+    },
+    {
+      "key": "dek",
+      "start": 19.645,
+      "end": 41.73,
+      "text": "マンチェスター・シティは、アラン・イライアスが2031年までポンペイと契約し、約4,000万ユーロの移籍金が支払われることを確認しました。"
+    },
+    {
+      "key": "body-0",
+      "start": 41.73,
+      "end": 106.537,
+      "text": "マンチェスター・シティは、8月31日にブラジルのポメラス出身の22歳のウィンガーアラン・エリアスとの契約を正式に発表した。契約期間は2031年夏までであり、取引はまだ国際移籍手続き中である。ロイター通信は、約4,000万ユーロの送金手数料を報告した。主に右ウイングを管理し、ミッドフィールド、セカンドストライカー、さらにはフリーバックでもプレーできるアランは、今シーズン、ポメラのファーストチームの重要なメンバーになりました。"
+    },
+    {
+      "key": "body-1",
+      "start": 106.537,
+      "end": 165.46,
+      "text": "アランは、今年の夏、マンチェスター・シティで進行中の再編成に参加しています。クラブは以前から多くの新しいサポーターを紹介しており、経営陣はそのパフォーマンス、作業率、および場所の柔軟性が高く評価されていると述べた。プレミアリーグの入札形式では、マンチェスターシティは、移籍ウィンドウの最後に複数のポジションをカバーできる若いアタッカーを追加することで、フロントコートのローテーションの深さをさらに高めます。"
+    },
+    {
+      "key": "why",
+      "start": 165.46,
+      "end": 191.039,
+      "text": "これはプレミアリーグの主要入札チームの真の変更であり、新シーズンの攻撃ローテーション、プレーヤーのプレイ時間、その後の移籍市場の展開に影響します。"
+    },
+    {
+      "key": "watch",
+      "start": 191.039,
+      "end": 214.936,
+      "text": "Allanさんの国際移籍登録、初回コンテストの候補者リスト、移籍期間が終了する前にマンチェスターシティに売却や買収が行われているかどうかにご注目ください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.787,
+      "end": 3.017,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "マンチェスター・シティ、"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.017,
+      "speechEnd": 5.943,
+      "end": 6.173,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ポメラスのウィンガー、"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.173,
+      "speechEnd": 12.374,
+      "end": 12.604,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "アラン・イライアスと5年間の契約を結び、"
+    },
+    {
+      "parentKey": "title",
+      "start": 12.604,
+      "speechEnd": 18.945,
+      "end": 19.645,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "22歳のブラジル人の新しい援助を確保。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.645,
+      "speechEnd": 22.641,
+      "end": 22.871,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "マンチェスター・シティは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.871,
+      "speechEnd": 25.519,
+      "end": 25.659,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "アラン・イライアスが"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.659,
+      "speechEnd": 28.236,
+      "end": 28.377,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "2031年"
+    },
+    {
+      "parentKey": "dek",
+      "start": 28.377,
+      "speechEnd": 31.442,
+      "end": 31.672,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "までポンペイと契約し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 31.672,
+      "speechEnd": 33.693,
+      "end": 33.923,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "約4,"
+    },
+    {
+      "parentKey": "dek",
+      "start": 33.923,
+      "speechEnd": 41.03,
+      "end": 41.73,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "000万ユーロの移籍金が支払われることを確認しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.73,
+      "speechEnd": 44.726,
+      "end": 44.956,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "マンチェスター・シティは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.956,
+      "speechEnd": 59.727,
+      "end": 60.227,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "8月31日にブラジルのポメラス出身の22歳のウィンガーアラン・エリアスとの契約を正式に発表した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.227,
+      "speechEnd": 66.079,
+      "end": 66.309,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "契約期間は2031年夏までであり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.309,
+      "speechEnd": 71.187,
+      "end": 71.687,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "取引はまだ国際移籍手続き中である。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.687,
+      "speechEnd": 74.195,
+      "end": 74.425,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.425,
+      "speechEnd": 76.446,
+      "end": 76.676,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "約4,"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.676,
+      "speechEnd": 81.762,
+      "end": 82.262,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "000万ユーロの送金手数料を報告した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 82.262,
+      "speechEnd": 86.024,
+      "end": 86.254,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "主に右ウイングを管理し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 86.254,
+      "speechEnd": 88.832,
+      "end": 89.062,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ミッドフィールド、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 89.062,
+      "speechEnd": 91.919,
+      "end": 92.149,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "セカンドストライカー、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 92.149,
+      "speechEnd": 97.235,
+      "end": 97.465,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "さらにはフリーバックでもプレーできるアランは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 97.465,
+      "speechEnd": 99.695,
+      "end": 99.925,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今シーズン、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 99.925,
+      "speechEnd": 105.917,
+      "end": 106.537,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ポメラのファーストチームの重要なメンバーになりました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 106.537,
+      "speechEnd": 108.627,
+      "end": 108.857,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "アランは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.857,
+      "speechEnd": 111.156,
+      "end": 111.387,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今年の夏、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.387,
+      "speechEnd": 118.145,
+      "end": 118.645,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "マンチェスター・シティで進行中の再編成に参加しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.645,
+      "speechEnd": 125.543,
+      "end": 125.773,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "クラブは以前から多くの新しいサポーターを紹介しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 125.773,
+      "speechEnd": 129.535,
+      "end": 129.765,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "経営陣はそのパフォーマンス、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 129.765,
+      "speechEnd": 131.925,
+      "end": 132.155,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "作業率、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 132.155,
+      "speechEnd": 139.192,
+      "end": 139.692,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "および場所の柔軟性が高く評価されていると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 139.692,
+      "speechEnd": 143.873,
+      "end": 144.103,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "プレミアリーグの入札形式では、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 144.103,
+      "speechEnd": 146.89,
+      "end": 147.12,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "マンチェスターシティは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 147.12,
+      "speechEnd": 152.345,
+      "end": 152.625,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "移籍ウィンドウの最後に複数のポジションを"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 152.625,
+      "speechEnd": 157.851,
+      "end": 158.081,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "カバーできる若いアタッカーを追加することで、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 158.081,
+      "speechEnd": 164.839,
+      "end": 165.46,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "フロントコートのローテーションの深さをさらに高めます。"
+    },
+    {
+      "parentKey": "why",
+      "start": 165.46,
+      "speechEnd": 169.431,
+      "end": 169.931,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 169.931,
+      "speechEnd": 177.665,
+      "end": 177.895,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "これはプレミアリーグの主要入札チームの真の変更であり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 177.895,
+      "speechEnd": 181.797,
+      "end": 182.027,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "新シーズンの攻撃ローテーション、"
+    },
+    {
+      "parentKey": "why",
+      "start": 182.027,
+      "speechEnd": 185.371,
+      "end": 185.601,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "プレーヤーのプレイ時間、"
+    },
+    {
+      "parentKey": "why",
+      "start": 185.601,
+      "speechEnd": 190.339,
+      "end": 191.039,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "その後の移籍市場の展開に影響します。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 191.039,
+      "speechEnd": 193.129,
+      "end": 193.359,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 193.359,
+      "speechEnd": 196.843,
+      "end": 197.073,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Allanさんの国際移籍登録、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 197.073,
+      "speechEnd": 200.766,
+      "end": 200.996,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "初回コンテストの候補者リスト、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 200.996,
+      "speechEnd": 208.799,
+      "end": 209.079,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "移籍期間が終了する前にマンチェスターシティに売却や買収が"
+    },
+    {
+      "parentKey": "watch",
+      "start": 209.079,
+      "speechEnd": 214.235,
+      "end": 214.936,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "行われているかどうかにご注目ください。"
+    }
+  ]
+}

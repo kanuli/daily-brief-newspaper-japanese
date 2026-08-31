@@ -1,0 +1,570 @@
+{
+  "version": 3,
+  "duration": 247.04,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 720,
+  "charactersPerMinute": 174.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 12.496,
+      "text": "EASA、ペルシャ湾の飛行禁止勧告を9月末まで延長された海上空域警告に絞り込む"
+    },
+    {
+      "key": "dek",
+      "start": 12.496,
+      "end": 42.496,
+      "text": "欧州航空安全機関は、もはやバーレーン、クウェート、カタール、アラブ首長国連邦の上空を完全に回避することは推奨していないが、ペルシャ湾とオマーン湾の一部では高リスクの警告が引き続き行われている。"
+    },
+    {
+      "key": "body-0",
+      "start": 42.496,
+      "end": 119.944,
+      "text": "欧州航空安全機関（ EASA ）は、ペルシャ湾地域の領空警告を8月31日の9月30日まで延長し、すでに広範な制限を縮小した。最新の推奨事項では、航空会社は依然として、バーレーン、クウェート、カタール、アラブ首長国連邦のペルシャ湾水域、ならびにオマーンのマスカット飛行情報エリア内のオマーン湾水域の一部の上空を飛行することを避ける必要があります。ただし、前述の湾岸諸国の領空は慎重に評価される必要があり、地元の空港との間のフライトは、適切なリスク軽減措置を講じて運航することができます。"
+    },
+    {
+      "key": "body-1",
+      "start": 119.944,
+      "end": 184.92,
+      "text": "調整は、米国とイランの間の新たな交戦の数時間後に行われました。EASAはまた、ヨルダンの領空を完全に回避するという勧告を撤回したが、イラン、イラク、レバノンの高リスク空域の勧告が延長されている間、9月末まで航空会社に注意を払うよう求めた。航空会社にとって、これは一部の湾岸路線をより直接的な路線に復元できることを意味しますが、燃料、保険、迂回路、予期せぬ閉鎖のリスクは消えていません。"
+    },
+    {
+      "key": "why",
+      "start": 184.92,
+      "end": 221.332,
+      "text": "湾岸は、航空輸送とエネルギーのための重要な世界的なハブです。飛行禁止区域の狭小化は、いくつかの飛行効率を助けましたが、敵対行為の再開は、航空業務が依然として高い不確実性に直面していることを意味します。"
+    },
+    {
+      "key": "watch",
+      "start": 221.332,
+      "end": 247.04,
+      "text": "EASAが9月末までに警告を見直したかどうか、湾岸諸国の空港や航空会社のフライト手配、米軍とイラク軍の軍事作戦が空域を再度引き締めたかどうかに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.09,
+      "end": 2.32,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "EASA、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.32,
+      "speechEnd": 11.796,
+      "end": 12.496,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "ペルシャ湾の飛行禁止勧告を9月末まで延長された海上空域警告に絞り込む。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.496,
+      "speechEnd": 15.84,
+      "end": 16.07,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "欧州航空安全機関は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.07,
+      "speechEnd": 18.648,
+      "end": 18.878,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "もはやバーレーン、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.878,
+      "speechEnd": 20.969,
+      "end": 21.199,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "クウェート、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.199,
+      "speechEnd": 23.289,
+      "end": 23.519,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "カタール、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.519,
+      "speechEnd": 32.437,
+      "end": 32.667,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "アラブ首長国連邦の上空を完全に回避することは推奨していないが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.667,
+      "speechEnd": 36.708,
+      "end": 36.988,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ペルシャ湾とオマーン湾の一部では"
+    },
+    {
+      "parentKey": "dek",
+      "start": 36.988,
+      "speechEnd": 41.796,
+      "end": 42.496,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "高リスクの警告が引き続き行われている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.496,
+      "speechEnd": 47.094,
+      "end": 47.324,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "欧州航空安全機関（ EASA ）は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.324,
+      "speechEnd": 51.087,
+      "end": 51.227,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "ペルシャ湾地域の領空警告を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.227,
+      "speechEnd": 53.944,
+      "end": 54.084,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "8月31日"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.084,
+      "speechEnd": 58.543,
+      "end": 58.773,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "の9月30日まで延長し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.773,
+      "speechEnd": 62.744,
+      "end": 63.245,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "すでに広範な制限を縮小した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.245,
+      "speechEnd": 66.38,
+      "end": 66.61,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "最新の推奨事項では、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.61,
+      "speechEnd": 69.885,
+      "end": 70.115,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "航空会社は依然として、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.115,
+      "speechEnd": 72.275,
+      "end": 72.505,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "バーレーン、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.505,
+      "speechEnd": 74.595,
+      "end": 74.825,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "クウェート、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.825,
+      "speechEnd": 76.915,
+      "end": 77.145,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "カタール、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 77.145,
+      "speechEnd": 82.231,
+      "end": 82.461,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "アラブ首長国連邦のペルシャ湾水域、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 82.461,
+      "speechEnd": 97.511,
+      "end": 98.011,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "ならびにオマーンのマスカット飛行情報エリア内のオマーン湾水域の一部の上空を飛行することを避ける必要があります。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 98.011,
+      "speechEnd": 100.101,
+      "end": 100.331,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ただし、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 100.331,
+      "speechEnd": 107.786,
+      "end": 108.016,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "前述の湾岸諸国の領空は慎重に評価される必要があり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 108.016,
+      "speechEnd": 112.336,
+      "end": 112.566,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "地元の空港との間のフライトは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 112.566,
+      "speechEnd": 119.324,
+      "end": 119.944,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "適切なリスク軽減措置を講じて運航することができます。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 119.944,
+      "speechEnd": 122.035,
+      "end": 122.265,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "調整は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 122.265,
+      "speechEnd": 130.626,
+      "end": 131.126,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "米国とイランの間の新たな交戦の数時間後に行われました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 131.126,
+      "speechEnd": 133.564,
+      "end": 133.794,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "EASAはまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 133.794,
+      "speechEnd": 140.762,
+      "end": 140.992,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ヨルダンの領空を完全に回避するという勧告を撤回したが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 140.992,
+      "speechEnd": 143.012,
+      "end": 143.242,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "イラン、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 143.242,
+      "speechEnd": 145.263,
+      "end": 145.493,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "イラク、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 145.493,
+      "speechEnd": 152.181,
+      "end": 152.411,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "レバノンの高リスク空域の勧告が延長されている間、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 152.411,
+      "speechEnd": 158.473,
+      "end": 158.973,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "9月末まで航空会社に注意を払うよう求めた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 158.973,
+      "speechEnd": 161.551,
+      "end": 161.781,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "航空会社にとって、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 161.781,
+      "speechEnd": 172.093,
+      "end": 172.323,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "これは一部の湾岸路線をより直接的な路線に復元できることを意味しますが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 172.323,
+      "speechEnd": 174.343,
+      "end": 174.573,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "燃料、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 174.573,
+      "speechEnd": 176.594,
+      "end": 176.824,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "保険、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 176.824,
+      "speechEnd": 178.914,
+      "end": 179.144,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "迂回路、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 179.144,
+      "speechEnd": 184.3,
+      "end": 184.92,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "予期せぬ閉鎖のリスクは消えていません。"
+    },
+    {
+      "parentKey": "why",
+      "start": 184.92,
+      "speechEnd": 188.892,
+      "end": 189.392,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 189.392,
+      "speechEnd": 191.412,
+      "end": 191.642,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "湾岸は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 191.642,
+      "speechEnd": 198.749,
+      "end": 199.249,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "航空輸送とエネルギーのための重要な世界的なハブです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 199.249,
+      "speechEnd": 203.011,
+      "end": 203.241,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "飛行禁止区域の狭小化は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 203.241,
+      "speechEnd": 207.631,
+      "end": 207.861,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "いくつかの飛行効率を助けましたが、"
+    },
+    {
+      "parentKey": "why",
+      "start": 207.861,
+      "speechEnd": 210.857,
+      "end": 211.087,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "敵対行為の再開は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 211.087,
+      "speechEnd": 220.632,
+      "end": 221.332,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "航空業務が依然として高い不確実性に直面していることを意味します。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 221.332,
+      "speechEnd": 223.423,
+      "end": 223.653,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 223.653,
+      "speechEnd": 229.993,
+      "end": 230.223,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "EASAが9月末までに警告を見直したかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 230.223,
+      "speechEnd": 235.379,
+      "end": 235.609,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "湾岸諸国の空港や航空会社のフライト手配、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 235.609,
+      "speechEnd": 239.58,
+      "end": 239.86,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "米軍とイラク軍の軍事作戦が"
+    },
+    {
+      "parentKey": "watch",
+      "start": 239.86,
+      "speechEnd": 246.34,
+      "end": 247.04,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "空域を再度引き締めたかどうかに注意してください。"
+    }
+  ]
+}
