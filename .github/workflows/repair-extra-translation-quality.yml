@@ -29,9 +29,10 @@ permissions:
 
 concurrency:
   group: japanese-extra-quality-repair
-  # A new source hour supersedes an old repair. Never let an obsolete oversized
-  # translation run block the current newsroom edition.
-  cancel-in-progress: true
+  # Never kill a repair that is already translating/publishing. GitHub keeps at
+  # most one pending replacement in this group, so the newest queued edition can
+  # follow the active run without starving publication.
+  cancel-in-progress: false
 
 jobs:
   repair:
