@@ -32,6 +32,13 @@ _HARD_TARGET_PATTERNS = (
     (re.compile(r"ポジティブな選択とフィジカルディストリビューション"), "squad selection/load-management phrase is machine translation"),
     (re.compile(r"フォローアップの試合や犠牲者"), "football follow-up/injuries mistranslated with casualty wording"),
     (re.compile(r"完全なラップ結果"), "round results mistranslated as 完全なラップ結果"),
+    # Schengen / border-control failures observed in the 2026-08-31 rolling desk.
+    # These are not style preferences: the MT changed the named Schengen system
+    # into religious/divine wording and changed border checks into bank cheques.
+    (re.compile(r"衝撃的な神(?:が|を|の)"), "Schengen mistranslated as a shocking/divine god phrase"),
+    (re.compile(r"神聖なシステム"), "Schengen system mistranslated as 神聖なシステム"),
+    (re.compile(r"ディバインルーツゾーン"), "Schengen area mistranslated as ディバインルーツゾーン"),
+    (re.compile(r"(?:国境|入国|到着|旅行者)[^。\n]{0,90}小切手(?:を|が)"), "border checks mistranslated as bank cheques"),
 )
 
 # Source unit anchors: only flag a reversal when the same number is explicitly
@@ -98,6 +105,9 @@ def deterministic_postedit(source_text: str, target_text: str, field: str = "") 
         ("一元的に見直しています", "重点的に見極めています"),
         ("高リスクの拡張フェーズ", "なお拡大する恐れが高い段階"),
         ("レッドフラッグの火災警告", "レッドフラッグ警報"),
+        ("ディバインルーツゾーン", "シェンゲン圏"),
+        ("神聖なシステム", "シェンゲン制度"),
+        ("衝撃的な神が動きの自由を根付かせる", "シェンゲン圏の自由な移動に影響"),
     )
     for old, new in replacements:
         value = value.replace(old, new)
@@ -110,6 +120,13 @@ def deterministic_postedit(source_text: str, target_text: str, field: str = "") 
         value = value.replace("コントロール率", "鎮圧率")
         value = value.replace("制御率", "鎮圧率")
         value = value.replace("火災エリア", "焼失面積")
+
+    border_context = bool(re.search(r"(?:国境|入国|到着|旅行者|シェンゲン)", value)) or bool(
+        re.search(r"(?:邊境|边境|入境|旅客|申根)", source)
+    )
+    if border_context:
+        value = re.sub(r"(?<=到着者に)小切手(?=を導入)", "検査", value)
+        value = re.sub(r"(?<=旅行者に)小切手(?=を導入)", "検査", value)
 
     return value
 
