@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """Editor-in-Chief runner for resilient rolling Japanese news publication.
 
-Publication availability is a hard requirement.  The source newsroom may keep
+Publication availability is a hard requirement. The source newsroom may keep
 large rolling corpora, but the Japanese site must first secure a small current
 reader-facing edition for every desk/ticker before spending translation budget
-on depth.  One layer or one oversized queue must never starve another page.
+on depth. One layer or one oversized queue must never starve another page.
 """
 from __future__ import annotations
 
+import json
 import os
 import re
 from pathlib import Path
@@ -23,6 +24,18 @@ import self_healing_extra_sync as healing
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data"
+
+DESK_LABELS = {
+    "world": "世界",
+    "asia": "アジア",
+    "hong-kong": "香港",
+    "japan": "日本",
+    "market-economy": "マーケット・経済",
+    "technology": "AI・テクノロジー",
+    "manga-anime": "漫画・アニメ",
+    "manchester-united": "マンチェスター・ユナイテッド",
+    "football": "サッカー",
+}
 
 
 def _story_slugs(story):
@@ -111,6 +124,94 @@ def _prepare_source(name: str, source):
     return source
 
 
+def _safe_source_name(story: dict, desk: str) -> str:
+    value = str(story.get("sourceName") or "").strip()
+    if value and not base.likely_chinese_source(value):
+        return value
+    sources = story.get("sources") or []
+    if isinstance(sources, list):
+        names = [str(item.get("name") or "").strip() for item in sources if isinstance(item, dict)]
+        names = [name for name in names if name and not base.likely_chinese_source(name)]
+        if names:
+            return "／".join(names[:2])
+    return DESK_LABELS.get(desk, "報道機関")
+
+
+def _desk_minimum_story(source_story: dict, desk: str) -> dict:
+    """Create a source-backed Japanese availability card without inventing facts."""
+    label = DESK_LABELS.get(desk, "ニュース")
+    source_name = _safe_source_name(source_story, desk)
+    value = {}
+    for key in (
+        "id", "desk", "status", "sourceName", "sourceUrl", "sources", "deskSlugs",
+        "verificationMode", "verifiedAt", "primaryPublishedAt", "publishedAt",
+        "updatedAt", "generatedAt", "image",
+    ):
+        if key in source_story:
+            value[key] = source_story[key]
+    value["desk"] = desk
+    value["deskSlugs"] = list(source_story.get("deskSlugs") or [desk])
+    value["section"] = label
+    value["sectionLabel"] = label
+    value["title"] = f"{label}：{source_name}の最新確認済みニュース"
+    value["dek"] = "出典で確認済みの最新情報を先行掲載しています。"
+    value["summary"] = (
+        f"{source_name}を出典として、この分類の最新ニュースを確認しました。"
+        "完全な日本語本文は自動復旧処理で順次更新します。"
+    )
+    time_label = str(source_story.get("timeLabel") or "").strip()
+    if time_label:
+        value["timeLabel"] = time_label.replace("核實", "確認済み").replace("核实", "確認済み")
+    value["translationStatus"] = "EDITORIAL_MINIMUM_FALLBACK"
+    value["sourceItemFingerprint"] = extra.fingerprint(source_story)
+    extra.decorate_story_tree(value, "rolling")
+    return value
+
+
+def _write_desk_minimum_fallback(source: dict, reason: str) -> bool:
+    """Fail open for availability but fail closed on provenance and recovery state."""
+    if not isinstance(source, dict) or not isinstance(source.get("desks"), dict):
+        return False
+    translated = {key: value for key, value in source.items() if key != "desks"}
+    desks = {}
+    deferred = []
+    for desk, rows in source["desks"].items():
+        selected = list(rows) if isinstance(rows, list) else []
+        if not selected:
+            desks[str(desk)] = []
+            continue
+        story = selected[0]
+        if not isinstance(story, dict) or not story.get("id"):
+            desks[str(desk)] = []
+            continue
+        desks[str(desk)] = [_desk_minimum_story(story, str(desk))]
+        deferred.append(str(story.get("id")))
+    if not any(desks.values()):
+        return False
+    translated["desks"] = desks
+    translated["language"] = "ja"
+    translated["translationSource"] = "kanuli/daily-brief-newspaper"
+    translated["sourceFile"] = "desk-latest.json"
+    translated["sourceFingerprint"] = extra.fingerprint(source)
+    translated["translationSchemaVersion"] = extra.SCHEMA
+    translated["sourceParityMode"] = "editorial-minimum-fallback-v1"
+    translated["translationDegraded"] = True
+    translated["translationDeferredCount"] = len(deferred)
+    translated["translationDeferredIds"] = deferred
+    translated["translationDeferredMetadata"] = []
+    translated["translationRecoveryMode"] = "editorial-minimum-fallback-v1"
+    translated["editorSelectionMode"] = "minimum-guaranteed-edition-per-desk"
+    path = OUT / "desk-latest.json"
+    path.write_text(json.dumps(translated, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(
+        "EXTRA_DESK_EDITORIAL_MINIMUM_FALLBACK",
+        f"stories={len(deferred)}",
+        f"reason={reason[:240]}",
+        "recovery_required=true",
+    )
+    return True
+
+
 def main():
     base.likely_chinese_source = extra.needs_cantonese_translation
     base.TRANSLATE_KEYS.update({"impactLabel"})
@@ -125,7 +226,7 @@ def main():
         raise RuntimeError(f"Invalid current snapshot date: {date!r}")
 
     topic_name = f"topic-more/{date}.json"
-    # Critical small layers first.  The now-compacted all-desk guarantee comes
+    # Critical small layers first. The now-compacted all-desk guarantee comes
     # last so stocks and Daily-gap topic coverage can never be starved.
     names = ["stocks-latest.json", topic_name, "desk-latest.json"]
     changed: list[str] = []
@@ -143,6 +244,17 @@ def main():
             if healing.sync_file(name, source):
                 changed.append(name)
         except Exception as exc:
+            if name == "desk-latest.json":
+                try:
+                    if _write_desk_minimum_fallback(source, f"{type(exc).__name__}:{exc}"):
+                        changed.append(name)
+                        runtime.checkpoint_cache("editor-desk-minimum-fallback")
+                        continue
+                except Exception as fallback_exc:
+                    print(
+                        "EXTRA_DESK_EDITORIAL_MINIMUM_FALLBACK_FAILED",
+                        f"error={type(fallback_exc).__name__}:{str(fallback_exc)[:240]}",
+                    )
             failures.append(name)
             print(
                 "EXTRA_EDITOR_LAYER_FAILED_ISOLATED",
