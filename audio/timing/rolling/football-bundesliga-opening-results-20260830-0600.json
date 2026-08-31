@@ -1,0 +1,430 @@
+{
+  "version": 3,
+  "duration": 210.495,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 693,
+  "charactersPerMinute": 197.5,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 19.37,
+      "text": "ブンデスリーガ シーズン開幕: ドルトムントがハンブルクを 2-0 で破った。昇格したばかりのエルヴァースベルクが初戦でレバークーゼンに勝利"
+    },
+    {
+      "key": "dek",
+      "start": 19.37,
+      "end": 48.862,
+      "text": "ドーモントは、人口約13,000人の小さな町のチームであるエルバーズバーグが、初めてブンデスリーガでプレーしたときにレバー・グーゼンを3 -2で破ったという2つのゴールでシーズンをスタートさせました。"
+    },
+    {
+      "key": "body-0",
+      "start": 48.862,
+      "end": 84.537,
+      "text": "ブンデスリーガは29日に最初のラウンドを開始し、ドルトムントはセルホー・ギラシーと新アシスタントのジャンニス・コンスタンテリアスと共にハンブルクで2 -0を記録しました。リザーブのサムエレ・イナシオがレッドカードを獲得したにもかかわらず、ドルトムントは勝利を維持しました。"
+    },
+    {
+      "key": "body-1",
+      "start": 84.537,
+      "end": 149.409,
+      "text": "同日の最大のコールドスポットは、Shengbanma Elversbergから来ました。約13,000人の町からのチームが、レバークーゼン、ペトコフ、コール・キャンベル、デビッド・モクワとのブンデスリーガデビューで3 -2で勝利した。その他の結果には、ライプツィヒのMusson Garberに3 -0で勝利し、フランクフルトとベルリンの間で3 -3で引き分けたことが含まれます。これは、新シーズンの最初のラウンドでの多くの非常に多様な結果を反映しています。"
+    },
+    {
+      "key": "why",
+      "start": 149.409,
+      "end": 186.359,
+      "text": "最初のラウンドの結果はシーズンを決定することはできませんが、プロモーションホースの冷たいパフォーマンスと伝統的な強力なチームのオープニングパフォーマンスは、チームの競争力の早期ランキング、自信、市場の判断に影響を与えます。"
+    },
+    {
+      "key": "watch",
+      "start": 186.359,
+      "end": 210.495,
+      "text": "ドルトムントのレッドカードのサスペンション、レバー・グソンが冷たい敗北にどのように反応したか、そして次の強力なチームエンカウンターと新しいサポートに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.623,
+      "end": 3.963,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "punctuation-semantic",
+      "text": "ブンデスリーガ シーズン開幕:"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.963,
+      "speechEnd": 9.119,
+      "end": 9.739,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ドルトムントがハンブルクを 2-0 で破った。"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.739,
+      "speechEnd": 14.338,
+      "end": 14.678,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "昇格したばかりのエルヴァースベルクが"
+    },
+    {
+      "parentKey": "title",
+      "start": 14.678,
+      "speechEnd": 18.51,
+      "end": 19.37,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "初戦でレバークーゼンに勝利。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.37,
+      "speechEnd": 21.669,
+      "end": 21.949,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ドーモントは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.949,
+      "speechEnd": 24.736,
+      "end": 25.016,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "人口約13,"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.016,
+      "speechEnd": 31.496,
+      "end": 31.776,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "000人の小さな町のチームであるエルバーズバーグが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 31.776,
+      "speechEnd": 38.883,
+      "end": 39.223,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "初めてブンデスリーガでプレーしたときにレバー・グーゼンを"
+    },
+    {
+      "parentKey": "dek",
+      "start": 39.223,
+      "speechEnd": 48.002,
+      "end": 48.862,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "3 -2で破ったという2つのゴールでシーズンをスタートさせました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.862,
+      "speechEnd": 55.76,
+      "end": 56.04,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ブンデスリーガは29日に最初のラウンドを開始し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.04,
+      "speechEnd": 69.627,
+      "end": 70.247,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ドルトムントはセルホー・ギラシーと新アシスタントのジャンニス・コンスタンテリアスと共にハンブルクで2 -0を記録しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.247,
+      "speechEnd": 73.8,
+      "end": 74.14,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "リザーブのサムエレ・イナシオが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.14,
+      "speechEnd": 79.296,
+      "end": 79.576,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "レッドカードを獲得したにもかかわらず、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 79.576,
+      "speechEnd": 83.757,
+      "end": 84.537,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "ドルトムントは勝利を維持しました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.537,
+      "speechEnd": 89.135,
+      "end": 89.415,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同日の最大のコールドスポットは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 89.415,
+      "speechEnd": 94.293,
+      "end": 94.913,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "Shengbanma Elversbergから来ました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.913,
+      "speechEnd": 97.073,
+      "end": 97.353,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "約13,"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.353,
+      "speechEnd": 100.836,
+      "end": 101.117,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "000人の町からのチームが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.117,
+      "speechEnd": 103.555,
+      "end": 103.835,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "レバークーゼン、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.835,
+      "speechEnd": 105.925,
+      "end": 106.206,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ペトコフ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 106.206,
+      "speechEnd": 108.783,
+      "end": 109.064,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "コール・キャンベル、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.064,
+      "speechEnd": 116.937,
+      "end": 117.557,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "デビッド・モクワとのブンデスリーガデビューで3 -2で勝利した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.557,
+      "speechEnd": 120.553,
+      "end": 120.833,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "その他の結果には、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.833,
+      "speechEnd": 127.034,
+      "end": 127.314,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ライプツィヒのMusson Garberに3 -0で勝利し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 127.314,
+      "speechEnd": 135.954,
+      "end": 136.574,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "フランクフルトとベルリンの間で3 -3で引き分けたことが含まれます。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 136.574,
+      "speechEnd": 138.664,
+      "end": 138.944,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "これは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 138.944,
+      "speechEnd": 148.629,
+      "end": 149.409,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "新シーズンの最初のラウンドでの多くの非常に多様な結果を反映しています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 149.409,
+      "speechEnd": 153.38,
+      "end": 154.001,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 154.001,
+      "speechEnd": 162.083,
+      "end": 162.363,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "最初のラウンドの結果はシーズンを決定することはできませんが、"
+    },
+    {
+      "parentKey": "why",
+      "start": 162.363,
+      "speechEnd": 174.556,
+      "end": 174.836,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "プロモーションホースの冷たいパフォーマンスと伝統的な強力なチームのオープニングパフォーマンスは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 174.836,
+      "speechEnd": 178.807,
+      "end": 179.088,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "チームの競争力の早期ランキング、"
+    },
+    {
+      "parentKey": "why",
+      "start": 179.088,
+      "speechEnd": 181.108,
+      "end": 181.388,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "自信、"
+    },
+    {
+      "parentKey": "why",
+      "start": 181.388,
+      "speechEnd": 185.499,
+      "end": 186.359,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "市場の判断に影響を与えます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 186.359,
+      "speechEnd": 188.449,
+      "end": 188.729,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 188.729,
+      "speechEnd": 193.398,
+      "end": 193.678,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ドルトムントのレッドカードのサスペンション、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 193.678,
+      "speechEnd": 200.506,
+      "end": 200.786,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "レバー・グソンが冷たい敗北にどのように反応したか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 200.786,
+      "speechEnd": 209.635,
+      "end": 210.495,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "そして次の強力なチームエンカウンターと新しいサポートに注目してください。"
+    }
+  ]
+}
