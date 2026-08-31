@@ -1,0 +1,480 @@
+{
+  "version": 3,
+  "duration": 215.771,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 645,
+  "charactersPerMinute": 179.4,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 18.58,
+      "text": "日本は、地元のテレビ局が運営資源を共有することができる「1つのゲーム、2つの波」の民間テレビを緩和する計画"
+    },
+    {
+      "key": "dek",
+      "start": 18.58,
+      "end": 44.775,
+      "text": "無線規制委員会は、この改正が適切であると判断し、総務省は早ければ9月にも地方条例を改正して、同じ地域の民間テレビ会社が2つの電波を保持できるようにしました。"
+    },
+    {
+      "key": "body-0",
+      "start": 44.775,
+      "end": 108.809,
+      "text": "8月31日、内閣総理大臣の諮問機関である無線規制委員会は、同じ地域の民間テレビ会社が2つの放送波を開催できるようにする大臣令を改正することが適切であると判断しました。朝日新聞は、総務省が早くも9月に修正を完了したと報じた。このシステムは、運用環境がますます困難になっている地元のテレビ局を主に対象としており、事業者はさまざまなチャネルサービスを維持しながら、一部の運用リソースを統合することができる。"
+    },
+    {
+      "key": "body-1",
+      "start": 108.809,
+      "end": 165.349,
+      "text": "日本の地元人口の減少、ストリーミングプラットフォームによる従来のテレビ広告収入の流用、機器のアップグレードコストの上昇により、地元の放送業界は構造的な圧力にさらされています。「ワンラウンド、ツーウェーブ」が実施されれば、業界の合併管理、共同制作、技術インフラの新しい選択肢を提供することができますが、地元のニュースインタビュー能力やメディアの多様性に影響が出るかどうかはまだわかりません。"
+    },
+    {
+      "key": "why",
+      "start": 165.349,
+      "end": 188.42,
+      "text": "これは、放送業界の存続、地元のニュース供給とメディアの多様性に関連する、日本のローカルメディアシステムの重要な再構築です。"
+    },
+    {
+      "key": "watch",
+      "start": 188.42,
+      "end": 215.771,
+      "text": "総務省の9月の地方条例改正、最初にシステムを採用した地元のテレビ局、および合併、共有機器、またはインタビューリソースの手配があるかどうかに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.09,
+      "end": 2.32,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.32,
+      "speechEnd": 8.173,
+      "end": 8.453,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "地元のテレビ局が運営資源を共有することが"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.453,
+      "speechEnd": 11.518,
+      "end": 11.748,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "できる「1つのゲーム、"
+    },
+    {
+      "parentKey": "title",
+      "start": 11.748,
+      "speechEnd": 17.879,
+      "end": 18.58,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "2つの波」の民間テレビを緩和する計画。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.58,
+      "speechEnd": 21.785,
+      "end": 22.015,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "無線規制委員会は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.015,
+      "speechEnd": 26.334,
+      "end": 26.564,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この改正が適切であると判断し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.564,
+      "speechEnd": 33.81,
+      "end": 34.04,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "総務省は早ければ9月にも地方条例を改正して、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 34.04,
+      "speechEnd": 38.36,
+      "end": 38.64,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "同じ地域の民間テレビ会社が"
+    },
+    {
+      "parentKey": "dek",
+      "start": 38.64,
+      "speechEnd": 44.074,
+      "end": 44.775,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "2つの電波を保持できるようにしました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.775,
+      "speechEnd": 47.631,
+      "end": 47.861,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "8月31日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.861,
+      "speechEnd": 55.246,
+      "end": 55.476,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "内閣総理大臣の諮問機関である無線規制委員会は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.476,
+      "speechEnd": 59.796,
+      "end": 60.076,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "同じ地域の民間テレビ会社が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.076,
+      "speechEnd": 72.408,
+      "end": 72.908,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "2つの放送波を開催できるようにする大臣令を改正することが適切であると判断しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.908,
+      "speechEnd": 75.486,
+      "end": 75.716,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "朝日新聞は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.716,
+      "speechEnd": 82.823,
+      "end": 83.323,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "総務省が早くも9月に修正を完了したと報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 83.323,
+      "speechEnd": 85.761,
+      "end": 85.991,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "このシステムは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 85.991,
+      "speechEnd": 95.467,
+      "end": 95.697,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "運用環境がますます困難になっている地元のテレビ局を主に対象としており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 95.697,
+      "speechEnd": 102.385,
+      "end": 102.615,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "事業者はさまざまなチャネルサービスを維持しながら、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 102.615,
+      "speechEnd": 108.189,
+      "end": 108.809,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "一部の運用リソースを統合することができる。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.809,
+      "speechEnd": 112.711,
+      "end": 112.941,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本の地元人口の減少、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.941,
+      "speechEnd": 120.396,
+      "end": 120.626,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ストリーミングプラットフォームによる従来のテレビ広告収入の流用、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.626,
+      "speechEnd": 125.503,
+      "end": 125.733,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "機器のアップグレードコストの上昇により、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 125.733,
+      "speechEnd": 132.909,
+      "end": 133.409,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "地元の放送業界は構造的な圧力にさらされています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 133.409,
+      "speechEnd": 135.708,
+      "end": 135.939,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "「ワンラウンド、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 135.939,
+      "speechEnd": 140.049,
+      "end": 140.279,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ツーウェーブ」が実施されれば、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 140.279,
+      "speechEnd": 143.205,
+      "end": 143.436,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "業界の合併管理、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 143.436,
+      "speechEnd": 145.874,
+      "end": 146.104,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "共同制作、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 146.104,
+      "speechEnd": 153.211,
+      "end": 153.441,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "技術インフラの新しい選択肢を提供することができますが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 153.441,
+      "speechEnd": 160.269,
+      "end": 160.549,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "地元のニュースインタビュー能力やメディアの多様性に影響が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 160.549,
+      "speechEnd": 164.729,
+      "end": 165.349,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "出るかどうかはまだわかりません。"
+    },
+    {
+      "parentKey": "why",
+      "start": 165.349,
+      "speechEnd": 169.32,
+      "end": 169.82,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 169.82,
+      "speechEnd": 171.911,
+      "end": 172.141,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "これは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 172.141,
+      "speechEnd": 175.206,
+      "end": 175.436,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "放送業界の存続、"
+    },
+    {
+      "parentKey": "why",
+      "start": 175.436,
+      "speechEnd": 181.567,
+      "end": 181.797,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "地元のニュース供給とメディアの多様性に関連する、"
+    },
+    {
+      "parentKey": "why",
+      "start": 181.797,
+      "speechEnd": 187.72,
+      "end": 188.42,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "日本のローカルメディアシステムの重要な再構築です。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 188.42,
+      "speechEnd": 190.51,
+      "end": 190.74,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 190.74,
+      "speechEnd": 195.687,
+      "end": 195.917,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "総務省の9月の地方条例改正、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 195.917,
+      "speechEnd": 201.281,
+      "end": 201.511,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "最初にシステムを採用した地元のテレビ局、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 201.511,
+      "speechEnd": 203.95,
+      "end": 204.18,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "および合併、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 204.18,
+      "speechEnd": 206.479,
+      "end": 206.709,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "共有機器、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 206.709,
+      "speechEnd": 210.681,
+      "end": 210.961,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "またはインタビューリソースの手配が"
+    },
+    {
+      "parentKey": "watch",
+      "start": 210.961,
+      "speechEnd": 215.071,
+      "end": 215.771,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "あるかどうかに注意してください。"
+    }
+  ]
+}
