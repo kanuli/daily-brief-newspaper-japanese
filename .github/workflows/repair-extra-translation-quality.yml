@@ -37,7 +37,7 @@ concurrency:
 jobs:
   repair:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     env:
       CANTONESE_SNAPSHOT_DIR: .cantonese-snapshot/data
     steps:
@@ -99,16 +99,10 @@ jobs:
           EXTRA_DESK_BUDGET_SECONDS: '180'
         run: python scripts/run_extra_sync_editor.py
 
-      - name: Apply v4 newsroom and lexical-furigana repair to rolling layers
-        timeout-minutes: 5
-        env:
-          REMOTE_REPAIR_SCOPE: rolling
-        run: python scripts/remote_repair_all_published_quality.py
-
-      - name: Validate every published rolling Japanese layer
+      - name: Validate minimum current rolling edition
         run: python scripts/validate_extra_layers.py
 
-      - name: Publish current rolling layers
+      - name: Publish minimum current rolling edition immediately
         shell: bash
         run: |
           set -euo pipefail
@@ -117,20 +111,59 @@ jobs:
           git add data/desk-latest.json data/stocks-latest.json
           git add -A data/topic-more
           if git diff --cached --quiet; then
-            echo 'Rolling layers already match the current guaranteed edition.'
+            echo 'Minimum rolling edition already matches production.'
             exit 0
           fi
-          git commit -m '全カテゴリの最新ニュース最低掲載数を保証して同期'
+          git commit -m '最新ローリングニュース最低掲載版を先行公開'
           for attempt in 1 2 3 4 5; do
             git fetch origin main
             if ! git rebase origin/main; then
               git rebase --abort || true
-              echo 'Rolling guaranteed-edition rebase conflict; retrying.' >&2
+              echo 'Minimum rolling publication rebase conflict; retrying.' >&2
               sleep $((attempt * 2))
               continue
             fi
             if git push origin HEAD:main; then
-              echo 'JAPANESE_EXTRA_GUARANTEED_EDITION_PUSH_OK'
+              echo 'JAPANESE_EXTRA_MINIMUM_CURRENT_PUSH_OK'
+              exit 0
+            fi
+            sleep $((attempt * 2))
+          done
+          exit 1
+
+      - name: Apply optional v4 newsroom and lexical-furigana enhancement
+        timeout-minutes: 5
+        continue-on-error: true
+        env:
+          REMOTE_REPAIR_SCOPE: rolling
+        run: python scripts/remote_repair_all_published_quality.py
+
+      - name: Validate enhanced rolling Japanese layer
+        run: python scripts/validate_extra_layers.py
+
+      - name: Publish enhanced rolling layer when changed
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'daily-brief-japanese-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add data/desk-latest.json data/stocks-latest.json
+          git add -A data/topic-more
+          if git diff --cached --quiet; then
+            echo 'No post-publication enhancement changes.'
+            exit 0
+          fi
+          git commit -m 'ローリングニュース編集品質を追加修復'
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              echo 'Rolling enhancement rebase conflict; retrying.' >&2
+              sleep $((attempt * 2))
+              continue
+            fi
+            if git push origin HEAD:main; then
+              echo 'JAPANESE_EXTRA_ENHANCEMENT_PUSH_OK'
               exit 0
             fi
             sleep $((attempt * 2))
