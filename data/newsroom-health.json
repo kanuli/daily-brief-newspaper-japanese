@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "assessedAt": "2026-08-31T11:17:40.152Z",
+  "version": 2,
+  "assessedAt": "2026-08-31T11:17:52.483Z",
   "state": "RED",
   "summary": "RECOVERY_REQUIRED:live,desk,stocks",
   "layers": {
@@ -38,10 +38,17 @@
     "rollingRequired": true,
     "structuralRequired": false
   },
+  "robot": {
+    "current": true,
+    "runId": 33386289867,
+    "event": "push",
+    "selfHealingLoop": true
+  },
   "policy": {
     "repairRunningRemainsRed": true,
     "missingHealthFailsClosed": true,
     "liveToleranceMinutes": 1,
-    "rollingToleranceMinutes": 60
+    "rollingToleranceMinutes": 60,
+    "healthHeartbeatMinutes": 30
   }
 }
