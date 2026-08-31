@@ -25,7 +25,9 @@ permissions:
 
 concurrency:
   group: japanese-news-hourly
-  cancel-in-progress: true
+  # Never cancel an active translation/publication run. The newest queued run
+  # may follow it, preventing watchdog/dispatch triggers from starving output.
+  cancel-in-progress: false
 
 jobs:
   sync:
