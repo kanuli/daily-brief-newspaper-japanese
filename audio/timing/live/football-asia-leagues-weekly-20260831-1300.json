@@ -1,0 +1,430 @@
+{
+  "version": 3,
+  "duration": 185.887,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 592,
+  "charactersPerMinute": 191.1,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 10.107,
+      "text": "アジアリーグウィークエンド： BerryselがJ 1ソウルFCでKリーグのリードを拡大"
+    },
+    {
+      "key": "dek",
+      "start": 10.107,
+      "end": 36.065,
+      "text": "日本、韓国、中国、サウジアラビアの複数のリーグは、同時にトップの変化と入札の流域を経験しており、アジアのクラブシーズンにおける競争はさらに拡大しています。"
+    },
+    {
+      "key": "body-0",
+      "start": 36.065,
+      "end": 84.801,
+      "text": "アジアの複数のメジャーリーグが週末に新ラウンドを完了しました。日本のJ 1では、ゲストとして清水選手のハートビートを1 -0で破ったベリセルが12得点を記録し、東京緑地選手を2 -0で破った鹿島風門選手も12得点を記録したが、ゴール差により一時的に2位となった。Jリーグの公式ランキングも、ベルレッサーが現在トップにいることを示しています。"
+    },
+    {
+      "key": "body-1",
+      "start": 84.801,
+      "end": 136.713,
+      "text": "韓国では、ソウルFCが光州FCを5 -2でわずか9人で破り、Kリーグの優位性を16ポイントに拡大した。中国の成都融城が遼寧アイアンマンを2 -1で破り、中国スーパーリーグのリードを拡大し続けた。サウジアラビア側では、クリスティアーノ・ロナウドがアイナスのために勝利ゴールを決め、チームはアイ・タウォンに対して2 -1で勝利し、勝利スタートを維持しました。"
+    },
+    {
+      "key": "why",
+      "start": 136.713,
+      "end": 161.643,
+      "text": "複数のリーグが明らかに先行していたか、同じ週に交代し、今後数週間で入札とAFCチャンピオンシップ予選大会の新しいベンチマークを設定しました。"
+    },
+    {
+      "key": "watch",
+      "start": 161.643,
+      "end": 185.887,
+      "text": "9月2日のJ 1の次戦、状況を追うKリーグのトップ、そしてサウジアラビアと中国スーパーリーグのリーダーチームが勝ち続けることができるかどうかに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.135,
+      "end": 3.415,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-semantic",
+      "text": "アジアリーグウィークエンド："
+    },
+    {
+      "parentKey": "title",
+      "start": 3.415,
+      "speechEnd": 9.407,
+      "end": 10.107,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "BerryselがJ 1ソウルFCでKリーグのリードを拡大。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 10.107,
+      "speechEnd": 12.128,
+      "end": 12.358,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.358,
+      "speechEnd": 14.378,
+      "end": 14.608,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "韓国、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.608,
+      "speechEnd": 16.629,
+      "end": 16.859,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中国、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.859,
+      "speechEnd": 20.76,
+      "end": 20.99,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "サウジアラビアの複数のリーグは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.99,
+      "speechEnd": 27.54,
+      "end": 27.77,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同時にトップの変化と入札の流域を経験しており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.77,
+      "speechEnd": 32.02,
+      "end": 32.3,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "アジアのクラブシーズンにおける競争は"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.3,
+      "speechEnd": 35.365,
+      "end": 36.065,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "さらに拡大しています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.065,
+      "speechEnd": 39.828,
+      "end": 40.108,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "アジアの複数のメジャーリーグが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.108,
+      "speechEnd": 44.915,
+      "end": 45.415,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "週末に新ラウンドを完了しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.415,
+      "speechEnd": 48.411,
+      "end": 48.641,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本のJ 1では、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.641,
+      "speechEnd": 53.309,
+      "end": 53.589,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ゲストとして清水選手のハートビートを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.589,
+      "speechEnd": 59.651,
+      "end": 59.881,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "1 -0で破ったベリセルが12得点を記録し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.881,
+      "speechEnd": 69.426,
+      "end": 69.656,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "東京緑地選手を2 -0で破った鹿島風門選手も12得点を記録したが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.656,
+      "speechEnd": 74.533,
+      "end": 75.033,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "ゴール差により一時的に2位となった。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.033,
+      "speechEnd": 78.447,
+      "end": 78.677,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Jリーグの公式ランキングも、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 78.677,
+      "speechEnd": 84.181,
+      "end": 84.801,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ベルレッサーが現在トップにいることを示しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.801,
+      "speechEnd": 87.031,
+      "end": 87.261,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "韓国では、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 87.261,
+      "speechEnd": 94.576,
+      "end": 94.806,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ソウルFCが光州FCを5 -2でわずか9人で破り、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.806,
+      "speechEnd": 100.659,
+      "end": 101.159,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "Kリーグの優位性を16ポイントに拡大した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.159,
+      "speechEnd": 108.892,
+      "end": 109.122,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中国の成都融城が遼寧アイアンマンを2 -1で破り、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.122,
+      "speechEnd": 114.417,
+      "end": 114.917,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "中国スーパーリーグのリードを拡大し続けた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.917,
+      "speechEnd": 117.983,
+      "end": 118.213,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "サウジアラビア側では、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.213,
+      "speechEnd": 121.488,
+      "end": 121.768,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "クリスティアーノ・ロナウドが"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.768,
+      "speechEnd": 126.227,
+      "end": 126.457,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "アイナスのために勝利ゴールを決め、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 126.457,
+      "speechEnd": 132.379,
+      "end": 132.609,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "チームはアイ・タウォンに対して2 -1で勝利し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 132.609,
+      "speechEnd": 136.093,
+      "end": 136.713,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "勝利スタートを維持しました。"
+    },
+    {
+      "parentKey": "why",
+      "start": 136.713,
+      "speechEnd": 140.684,
+      "end": 141.184,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 141.184,
+      "speechEnd": 146.479,
+      "end": 146.709,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "複数のリーグが明らかに先行していたか、"
+    },
+    {
+      "parentKey": "why",
+      "start": 146.709,
+      "speechEnd": 149.775,
+      "end": 150.005,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同じ週に交代し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 150.005,
+      "speechEnd": 160.943,
+      "end": 161.643,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "今後数週間で入札とAFCチャンピオンシップ予選大会の新しいベンチマークを設定しました。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 161.643,
+      "speechEnd": 163.734,
+      "end": 163.964,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 163.964,
+      "speechEnd": 168.074,
+      "end": 168.304,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "9月2日のJ 1の次戦、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 168.304,
+      "speechEnd": 171.718,
+      "end": 171.948,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "状況を追うKリーグのトップ、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 171.948,
+      "speechEnd": 178.776,
+      "end": 179.056,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "そしてサウジアラビアと中国スーパーリーグのリーダーチームが"
+    },
+    {
+      "parentKey": "watch",
+      "start": 179.056,
+      "speechEnd": 185.187,
+      "end": 185.887,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "勝ち続けることができるかどうかに注目してください。"
+    }
+  ]
+}

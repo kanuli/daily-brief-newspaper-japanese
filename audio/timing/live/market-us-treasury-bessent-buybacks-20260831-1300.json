@@ -1,0 +1,490 @@
+{
+  "version": 3,
+  "duration": 216.686,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 638,
+  "charactersPerMinute": 176.7,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 17.325,
+      "text": "ベッセントは、米国債市場の混乱を軽視し、長期債券の買い戻しの規模が40億ドルに増加するのではないかと懸念した"
+    },
+    {
+      "key": "dek",
+      "start": 17.325,
+      "end": 44.494,
+      "text": "米国財務長官は、最近の長期金利の上昇は主にエネルギーとインフレ圧力を反映していると述べ、債券価格をコントロールするのではなく、市場の流動性を改善することを目的としていると強調した。"
+    },
+    {
+      "key": "body-0",
+      "start": 44.494,
+      "end": 98.325,
+      "text": "スコット・ベッセント米財務長官は、最近の米国長期国債利回りの上昇は市場の混乱を表しておらず、2026年の米国債の全体的なパフォーマンスは依然として回復力があると述べた。ロイター通信によると、米国10年債利回りは金曜日に約4.73 ％で終わったが、市場はイランの状況がエネルギー価格を押し上げ、インフレが再び上昇する可能性があるというリスクを消化した。"
+    },
+    {
+      "key": "body-1",
+      "start": 98.325,
+      "end": 157.186,
+      "text": "Bessent氏はまた、財務省による長期国債買い戻しの拡大を擁護した。これは1回限りで40億ドルに増加し、9月10日に開始される予定である。彼は、財務省の役割は、金利や債券価格の目標を設定するのではなく、市場を秩序正しく流動的に保つことであると強調した。投資家は、連邦準備制度理事会の政策、インフレ、40兆ドル以上の連邦債務と共に買い戻しを評価するだろう。"
+    },
+    {
+      "key": "why",
+      "start": 157.186,
+      "end": 189.356,
+      "text": "自社株買いが流動性を向上させるものの、長期金利が高いままであれば、市場の焦点は純粋に市場技術の問題ではなく、財政赤字、インフレ、連邦準備制度理事会の政策に戻るだろう。"
+    },
+    {
+      "key": "watch",
+      "start": 189.356,
+      "end": 216.686,
+      "text": "9月10日の買い戻し、市場入札の深さ、10年と30年の利回り、米国の雇用とインフレ率のデータが今週の利上げへの期待をどのように変えたかに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.299,
+      "end": 2.529,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ベッセントは、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.529,
+      "speechEnd": 6.361,
+      "end": 6.591,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国債市場の混乱を軽視し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.591,
+      "speechEnd": 10.353,
+      "end": 10.633,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "長期債券の買い戻しの規模が"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.633,
+      "speechEnd": 16.625,
+      "end": 17.325,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "40億ドルに増加するのではないかと懸念した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.325,
+      "speechEnd": 20.809,
+      "end": 21.039,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国財務長官は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.039,
+      "speechEnd": 30.862,
+      "end": 31.092,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "最近の長期金利の上昇は主にエネルギーとインフレ圧力を反映していると述べ、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 31.092,
+      "speechEnd": 35.691,
+      "end": 35.921,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "債券価格をコントロールするのではなく、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 35.921,
+      "speechEnd": 43.794,
+      "end": 44.494,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "市場の流動性を改善することを目的としていると強調した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.494,
+      "speechEnd": 49.301,
+      "end": 49.531,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "スコット・ベッセント米財務長官は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.531,
+      "speechEnd": 54.756,
+      "end": 55.036,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "最近の米国長期国債利回りの上昇は"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.036,
+      "speechEnd": 59.008,
+      "end": 59.238,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "市場の混乱を表しておらず、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.238,
+      "speechEnd": 66.274,
+      "end": 66.554,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "2026年の米国債の全体的なパフォーマンスは"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.554,
+      "speechEnd": 71.013,
+      "end": 71.513,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "依然として回復力があると述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.513,
+      "speechEnd": 74.509,
+      "end": 74.739,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.739,
+      "speechEnd": 83.936,
+      "end": 84.166,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国10年債利回りは金曜日に約4.73 ％で終わったが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 84.166,
+      "speechEnd": 89.67,
+      "end": 89.9,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "市場はイランの状況がエネルギー価格を押し上げ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 89.9,
+      "speechEnd": 94.08,
+      "end": 94.36,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "インフレが再び上昇する可能性が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 94.36,
+      "speechEnd": 97.705,
+      "end": 98.325,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "あるというリスクを消化した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 98.325,
+      "speechEnd": 101.181,
+      "end": 101.411,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Bessent氏はまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.411,
+      "speechEnd": 108.239,
+      "end": 108.739,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "財務省による長期国債買い戻しの拡大を擁護した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.739,
+      "speechEnd": 114.173,
+      "end": 114.403,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "これは1回限りで40億ドルに増加し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.403,
+      "speechEnd": 119.907,
+      "end": 120.407,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "9月10日に開始される予定である。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.407,
+      "speechEnd": 122.428,
+      "end": 122.658,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "彼は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 122.658,
+      "speechEnd": 125.445,
+      "end": 125.675,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "財務省の役割は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 125.675,
+      "speechEnd": 131.318,
+      "end": 131.548,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "金利や債券価格の目標を設定するのではなく、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 131.548,
+      "speechEnd": 138.864,
+      "end": 139.364,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "市場を秩序正しく流動的に保つことであると強調した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 139.364,
+      "speechEnd": 141.593,
+      "end": 141.823,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "投資家は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 141.823,
+      "speechEnd": 146.143,
+      "end": 146.373,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "連邦準備制度理事会の政策、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 146.373,
+      "speechEnd": 148.463,
+      "end": 148.693,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "インフレ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 148.693,
+      "speechEnd": 156.566,
+      "end": 157.186,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "40兆ドル以上の連邦債務と共に買い戻しを評価するだろう。"
+    },
+    {
+      "parentKey": "why",
+      "start": 157.186,
+      "speechEnd": 161.157,
+      "end": 161.657,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 161.657,
+      "speechEnd": 167.44,
+      "end": 167.67,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "自社株買いが流動性を向上させるものの、"
+    },
+    {
+      "parentKey": "why",
+      "start": 167.67,
+      "speechEnd": 171.92,
+      "end": 172.15,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "長期金利が高いままであれば、"
+    },
+    {
+      "parentKey": "why",
+      "start": 172.15,
+      "speechEnd": 177.724,
+      "end": 177.954,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "市場の焦点は純粋に市場技術の問題ではなく、"
+    },
+    {
+      "parentKey": "why",
+      "start": 177.954,
+      "speechEnd": 180.392,
+      "end": 180.622,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "財政赤字、"
+    },
+    {
+      "parentKey": "why",
+      "start": 180.622,
+      "speechEnd": 182.712,
+      "end": 182.942,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "インフレ、"
+    },
+    {
+      "parentKey": "why",
+      "start": 182.942,
+      "speechEnd": 188.655,
+      "end": 189.356,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "連邦準備制度理事会の政策に戻るだろう。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 189.356,
+      "speechEnd": 191.446,
+      "end": 191.676,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 191.676,
+      "speechEnd": 195.438,
+      "end": 195.668,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "9月10日の買い戻し、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 195.668,
+      "speechEnd": 198.733,
+      "end": 198.964,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "市場入札の深さ、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 198.964,
+      "speechEnd": 202.935,
+      "end": 203.165,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "10年と30年の利回り、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 203.165,
+      "speechEnd": 207.484,
+      "end": 207.764,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "米国の雇用とインフレ率のデータが"
+    },
+    {
+      "parentKey": "watch",
+      "start": 207.764,
+      "speechEnd": 215.986,
+      "end": 216.686,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "今週の利上げへの期待をどのように変えたかに注目してください。"
+    }
+  ]
+}

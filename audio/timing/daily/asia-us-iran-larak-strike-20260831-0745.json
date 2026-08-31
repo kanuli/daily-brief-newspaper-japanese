@@ -1,0 +1,470 @@
+{
+  "version": 3,
+  "duration": 209.763,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 615,
+  "charactersPerMinute": 175.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.936,
+      "text": "イランのララク島ロケットランチャーに対する米軍の再空爆軍事停止から約1か月後、ホルムズのリスクが再び上昇"
+    },
+    {
+      "key": "dek",
+      "start": 14.936,
+      "end": 42.192,
+      "text": "米国は、イラン革命防衛隊が地雷を搭載したロケットシステムを海峡に配備する準備をしていると述べた。イランはその後、ヨルダン駐留米軍に弾道ミサイルを発射し、報復すると表明した。"
+    },
+    {
+      "key": "body-0",
+      "start": 42.192,
+      "end": 99.95,
+      "text": "米当局者はロイターとAP通信に対し、8月30日にイランのララク島に設置された2基のロケット発射装置が攻撃されたことは、米軍によるイランに対する軍事行動がほぼ1カ月ぶりに公表されたことを確認した。米側は、関連施設はホルムズ海峡付近の水雷に関連する武器を配備する準備をしていたイラン革命防衛隊が運営していると述べ、イランのメディアは後に犠牲者を報告し、革命防衛隊も対応すると公表した。"
+    },
+    {
+      "key": "body-1",
+      "start": 99.95,
+      "end": 146.173,
+      "text": "イランはその後、ヨルダンの米軍の方向に弾道ミサイルを発射し、複数の接近中の標的を迎撃したと述べた。通常の状況下では、ホルムズ海峡が世界の石油輸送の約5分の1を担っているため、市場は沖合鉱山敷設、船舶転用、保険料、原油のリスクプレミアムを再評価する予定です。"
+    },
+    {
+      "key": "why",
+      "start": 146.173,
+      "end": 183.884,
+      "text": "ホルムズは世界で最も重要なエネルギーの喉の1つです。米軍の新たな武力行使とイランの報復信号は、石油価格、海運、保険、アジアから輸入されるエネルギーコスト、地域の安全保障判断に直接影響を与える。"
+    },
+    {
+      "key": "watch",
+      "start": 183.884,
+      "end": 209.763,
+      "text": "イランが米軍基地や海運ターゲットに報復するかどうか、米国が攻撃を拡大するかどうか、ホルムズ海流と地雷の除去、原油価格と海運保険料の反応に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 10.103,
+      "end": 10.383,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イランのララク島ロケットランチャーに対する米軍の再空爆軍事停止から約1か月後、"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.383,
+      "speechEnd": 14.076,
+      "end": 14.936,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ホルムズのリスクが再び上昇。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.936,
+      "speechEnd": 17.026,
+      "end": 17.306,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.306,
+      "speechEnd": 23.925,
+      "end": 24.266,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "イラン革命防衛隊が地雷を搭載したロケットシステムを"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.266,
+      "speechEnd": 29.073,
+      "end": 29.693,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "海峡に配備する準備をしていると述べた。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 29.693,
+      "speechEnd": 32.202,
+      "end": 32.482,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イランはその後、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.482,
+      "speechEnd": 37.986,
+      "end": 38.266,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ヨルダン駐留米軍に弾道ミサイルを発射し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 38.266,
+      "speechEnd": 41.332,
+      "end": 42.192,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "報復すると表明した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.192,
+      "speechEnd": 47.0,
+      "end": 47.28,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米当局者はロイターとAP通信に対し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.28,
+      "speechEnd": 59.055,
+      "end": 59.335,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "8月30日にイランのララク島に設置された2基のロケット発射装置が攻撃されたことは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.335,
+      "speechEnd": 64.073,
+      "end": 64.413,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "米軍によるイランに対する軍事行動が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.413,
+      "speechEnd": 70.893,
+      "end": 71.513,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ほぼ1カ月ぶりに公表されたことを確認した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.513,
+      "speechEnd": 73.603,
+      "end": 73.883,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米側は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.883,
+      "speechEnd": 81.129,
+      "end": 81.469,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "関連施設はホルムズ海峡付近の水雷に関連する武器を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 81.469,
+      "speechEnd": 89.064,
+      "end": 89.344,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "配備する準備をしていたイラン革命防衛隊が運営していると述べ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 89.344,
+      "speechEnd": 94.012,
+      "end": 94.292,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イランのメディアは後に犠牲者を報告し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 94.292,
+      "speechEnd": 99.17,
+      "end": 99.95,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "革命防衛隊も対応すると公表した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.95,
+      "speechEnd": 102.458,
+      "end": 102.738,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イランはその後、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.738,
+      "speechEnd": 109.148,
+      "end": 109.428,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ヨルダンの米軍の方向に弾道ミサイルを発射し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.428,
+      "speechEnd": 115.351,
+      "end": 115.971,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "複数の接近中の標的を迎撃したと述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.971,
+      "speechEnd": 119.106,
+      "end": 119.387,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "通常の状況下では、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 119.387,
+      "speechEnd": 124.752,
+      "end": 124.932,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "ホルムズ海峡が世界の石油輸送の約"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 124.932,
+      "speechEnd": 126.952,
+      "end": 127.132,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "5分"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 127.132,
+      "speechEnd": 130.337,
+      "end": 130.617,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "の1を担っているため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 130.617,
+      "speechEnd": 134.24,
+      "end": 134.52,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "市場は沖合鉱山敷設、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 134.52,
+      "speechEnd": 136.68,
+      "end": 136.96,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "船舶転用、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 136.96,
+      "speechEnd": 139.051,
+      "end": 139.331,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "保険料、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 139.331,
+      "speechEnd": 145.393,
+      "end": 146.173,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "原油のリスクプレミアムを再評価する予定です。"
+    },
+    {
+      "parentKey": "why",
+      "start": 146.173,
+      "speechEnd": 150.144,
+      "end": 150.764,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 150.764,
+      "speechEnd": 157.732,
+      "end": 158.352,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ホルムズは世界で最も重要なエネルギーの喉の1つです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 158.352,
+      "speechEnd": 164.553,
+      "end": 164.833,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米軍の新たな武力行使とイランの報復信号は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 164.833,
+      "speechEnd": 167.133,
+      "end": 167.413,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "石油価格、"
+    },
+    {
+      "parentKey": "why",
+      "start": 167.413,
+      "speechEnd": 169.433,
+      "end": 169.713,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "海運、"
+    },
+    {
+      "parentKey": "why",
+      "start": 169.713,
+      "speechEnd": 171.734,
+      "end": 172.014,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "保険、"
+    },
+    {
+      "parentKey": "why",
+      "start": 172.014,
+      "speechEnd": 176.473,
+      "end": 176.753,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アジアから輸入されるエネルギーコスト、"
+    },
+    {
+      "parentKey": "why",
+      "start": 176.753,
+      "speechEnd": 183.024,
+      "end": 183.884,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "地域の安全保障判断に直接影響を与える。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 183.884,
+      "speechEnd": 185.974,
+      "end": 186.254,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 186.254,
+      "speechEnd": 192.804,
+      "end": 193.084,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イランが米軍基地や海運ターゲットに報復するかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 193.084,
+      "speechEnd": 197.543,
+      "end": 197.823,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国が攻撃を拡大するかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 197.823,
+      "speechEnd": 201.586,
+      "end": 201.866,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ホルムズ海流と地雷の除去、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 201.866,
+      "speechEnd": 208.903,
+      "end": 209.763,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "原油価格と海運保険料の反応に注意してください。"
+    }
+  ]
+}
