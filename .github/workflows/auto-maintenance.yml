@@ -21,7 +21,7 @@ on:
       - '.github/workflows/**'
   workflow_run:
     workflows:
-      - '日本語ニュース同期・Discord即時配信'
+      - '日本語ニュース同期・品質ゲート・Discord配信'
       - '日本語ローリング翻訳品質修復'
       - '日本語版 Pages 公開・広東語版レイアウト同期'
       - 'F3ニュース読み再生成'
@@ -39,12 +39,12 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  RECOVERY_COOLDOWN_SECONDS: '900'
+  F3_RECOVERY_COOLDOWN_SECONDS: '1200'
 
 jobs:
   watchdog:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 12
     steps:
       - name: Checkout current production main
         uses: actions/checkout@v4
@@ -52,7 +52,7 @@ jobs:
           ref: main
           fetch-depth: 40
 
-      - name: Prepare minimal Python dependencies for maintenance QA
+      - name: Prepare minimal maintenance dependencies
         shell: bash
         run: |
           set -euo pipefail
@@ -61,7 +61,7 @@ jobs:
             deep-translator==1.11.4 \
             pykakasi==2.3.0
 
-      - name: Verify maintenance and self-healing scripts
+      - name: Verify maintenance scripts
         shell: bash
         run: |
           set -euo pipefail
@@ -69,13 +69,9 @@ jobs:
             scripts/validate_site.py \
             scripts/validate_layout_parity.py \
             scripts/auto_repair_site.py \
-            scripts/check_source_drift.py \
             scripts/validate_content_integrity.py \
             scripts/validate_extra_layers.py \
-            scripts/validate_furigana_readings.py \
-            scripts/self_healing_runtime.py \
-            scripts/self_healing_extra_sync.py \
-            scripts/emergency_remote_core_sync.py
+            scripts/validate_furigana_readings.py
 
       - name: Deterministic static repair
         run: python scripts/auto_repair_site.py
@@ -84,33 +80,33 @@ jobs:
         id: static_qa
         shell: bash
         run: |
-          set -euo pipefail
-          check_static() {
-            python scripts/validate_site.py --static-only && \
-            python scripts/validate_layout_parity.py && \
-            node --check assets/js/newspaper-ja.js && \
-            node --check assets/js/system-ja.js && \
-            node --check assets/js/live-guard.js && \
-            node --check assets/js/home-extras-ja.js && \
-            node --check assets/js/live-article-ja.js && \
-            node --check assets/js/topic-ja-rolling.js && \
-            node --check assets/js/stocks-ja.js
-          }
-          if check_static; then
+          set +e
+          python scripts/validate_site.py --static-only
+          a=$?
+          python scripts/validate_layout_parity.py
+          b=$?
+          node --check assets/js/newspaper-ja.js
+          c=$?
+          node --check assets/js/system-ja.js
+          d=$?
+          node --check assets/js/live-guard.js
+          e=$?
+          node --check assets/js/home-current-ja.js
+          f=$?
+          node --check assets/js/topic-ja-rolling.js
+          g=$?
+          node --check assets/js/stocks-ja.js
+          h=$?
+          set -e
+          if [ "$a" -eq 0 ] && [ "$b" -eq 0 ] && [ "$c" -eq 0 ] && [ "$d" -eq 0 ] && \
+             [ "$e" -eq 0 ] && [ "$f" -eq 0 ] && [ "$g" -eq 0 ] && [ "$h" -eq 0 ]; then
             echo 'healthy=true' >> "$GITHUB_OUTPUT"
-            echo 'recovered=false' >> "$GITHUB_OUTPUT"
-            exit 0
+          else
+            echo 'healthy=false' >> "$GITHUB_OUTPUT"
+            exit 1
           fi
-          python scripts/auto_repair_site.py
-          if check_static; then
-            echo 'healthy=true' >> "$GITHUB_OUTPUT"
-            echo 'recovered=true' >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-          echo 'healthy=false' >> "$GITHUB_OUTPUT"
-          exit 1
 
-      - name: Save automatic static repairs
+      - name: Save deterministic static repairs
         if: github.event_name != 'pull_request'
         shell: bash
         run: |
@@ -124,16 +120,21 @@ jobs:
           fi
           git commit -m 'Auto-repair Japanese site static health'
           for attempt in 1 2 3 4 5; do
+            git fetch -q origin main
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              sleep $((attempt * 2))
+              continue
+            fi
             if git push origin HEAD:main; then
               echo 'STATIC_AUTO_REPAIR_PUSH_OK'
               exit 0
             fi
-            git pull --rebase origin main
             sleep $((attempt * 2))
           done
           exit 1
 
-      - name: Check Japanese publication text/data
+      - name: Check local publication quality
         id: publication_qa
         shell: bash
         run: |
@@ -148,101 +149,73 @@ jobs:
           [ "$a" -eq 0 ] && echo 'core_healthy=true' >> "$GITHUB_OUTPUT" || echo 'core_healthy=false' >> "$GITHUB_OUTPUT"
           [ "$b" -eq 0 ] && echo 'extra_healthy=true' >> "$GITHUB_OUTPUT" || echo 'extra_healthy=false' >> "$GITHUB_OUTPUT"
           [ "$c" -eq 0 ] && echo 'furigana_healthy=true' >> "$GITHUB_OUTPUT" || echo 'furigana_healthy=false' >> "$GITHUB_OUTPUT"
-          if [ "$a" -eq 0 ] && [ "$b" -eq 0 ] && [ "$c" -eq 0 ]; then
-            echo 'healthy=true' >> "$GITHUB_OUTPUT"
-          else
-            echo 'healthy=false' >> "$GITHUB_OUTPUT"
-          fi
 
-      - name: Detect quarantined translation owners by health domain
-        id: quarantine
+      - name: Read authoritative current-main newsroom health
+        id: newsroom
+        if: github.event_name != 'pull_request'
         shell: bash
         run: |
+          set -euo pipefail
+          git fetch -q origin main
+          git show origin/main:data/newsroom-health.json > /tmp/newsroom-health.json || true
           python - <<'PY' >> "$GITHUB_OUTPUT"
           import json
+          from datetime import datetime, timezone
           from pathlib import Path
 
-          def read_count(path):
-              try:
-                  data = json.loads(path.read_text(encoding='utf-8'))
-              except Exception:
-                  return 0, []
-              ids = [str(x) for x in (data.get('translationDeferredIds') or [])]
-              metadata = [str(x) for x in (data.get('translationDeferredMetadata') or [])]
-              count = int(data.get('translationDeferredCount') or 0)
-              if data.get('translationDegraded'):
-                  count = max(count, len(ids) + len(metadata), 1)
-              return count, ids + [f'metadata:{x}' for x in metadata]
+          path = Path('/tmp/newsroom-health.json')
+          try:
+              health = json.loads(path.read_text(encoding='utf-8'))
+          except Exception:
+              health = {}
 
-          core_total = 0
-          core_files = []
-          core_owners = []
-          for name in ('latest.json', 'live.json', 'archive.json'):
-              path = Path('data') / name
-              if not path.is_file():
-                  continue
-              count, owners = read_count(path)
-              if count:
-                  core_total += count
-                  core_files.append(name)
-                  core_owners.extend(f'{name}:{x}' for x in owners)
+          def yes(value):
+              return 'true' if value is True else 'false'
 
-          extra_total = 0
-          extra_files = []
-          extra_owners = []
-          extra_paths = [Path('data/desk-latest.json'), Path('data/stocks-latest.json')]
-          topic = Path('data/topic-more')
-          if topic.is_dir():
-              extra_paths.extend(sorted(topic.glob('*.json')))
-          for path in extra_paths:
-              if not path.is_file():
-                  continue
-              count, owners = read_count(path)
-              if count:
-                  name = str(path.relative_to(Path('data')))
-                  extra_total += count
-                  extra_files.append(name)
-                  extra_owners.extend(f'{name}:{x}' for x in owners)
+          assessed = health.get('assessedAt')
+          try:
+              dt = datetime.fromisoformat(str(assessed).replace('Z', '+00:00'))
+              age = max(0, int((datetime.now(timezone.utc) - dt).total_seconds()))
+          except Exception:
+              age = 999999
 
-          total = core_total + extra_total
-          print(f'deferred={str(total > 0).lower()}')
-          print(f'count={total}')
-          print(f'core_deferred={str(core_total > 0).lower()}')
-          print(f'core_count={core_total}')
-          print(f'core_files={",".join(core_files)}')
-          print(f'core_owners={",".join(core_owners[:30])}')
-          print(f'extra_deferred={str(extra_total > 0).lower()}')
-          print(f'extra_count={extra_total}')
-          print(f'extra_files={",".join(extra_files)}')
-          print(f'extra_owners={",".join(extra_owners[:30])}')
+          layers = health.get('layers') or {}
+          core_current = (layers.get('daily') or {}).get('current') is True and (layers.get('live') or {}).get('current') is True
+          rolling_current = (layers.get('desk') or {}).get('current') is True and (layers.get('stocks') or {}).get('current') is True
+          structural_current = (layers.get('structural') or {}).get('current') is True
+          fresh = age <= 50 * 60
+          green = health.get('state') == 'GREEN' and fresh and core_current and rolling_current and structural_current
+
+          print(f'fresh={yes(fresh)}')
+          print(f'green={yes(green)}')
+          print(f'core_current={yes(core_current)}')
+          print(f'rolling_current={yes(rolling_current)}')
+          print(f'structural_current={yes(structural_current)}')
+          print(f'age_seconds={age}')
+          print(f'state={health.get("state") or "MISSING"}')
+          print(f'summary={health.get("summary") or "MISSING"}')
           PY
 
-      - name: Compare Cantonese source fingerprints by health domain
-        id: drift
+      - name: Report publication diagnostics without dispatching news recovery
+        if: github.event_name != 'pull_request'
         shell: bash
         run: |
-          set +e
-          PARITY_SCOPE=base python scripts/check_source_drift.py
-          base_code=$?
-          PARITY_SCOPE=all python scripts/check_source_drift.py
-          all_code=$?
-          set -e
-          [ "$base_code" -eq 10 ] && echo 'base_drift=true' >> "$GITHUB_OUTPUT" || echo 'base_drift=false' >> "$GITHUB_OUTPUT"
-          [ "$all_code" -eq 10 ] && echo 'all_drift=true' >> "$GITHUB_OUTPUT" || echo 'all_drift=false' >> "$GITHUB_OUTPUT"
-          if [ "$all_code" -eq 10 ] && [ "$base_code" -ne 10 ]; then
-            echo 'extra_drift=true' >> "$GITHUB_OUTPUT"
-          else
-            echo 'extra_drift=false' >> "$GITHUB_OUTPUT"
-          fi
+          echo "Local core QA: ${{ steps.publication_qa.outputs.core_healthy || 'false' }}"
+          echo "Local rolling QA: ${{ steps.publication_qa.outputs.extra_healthy || 'false' }}"
+          echo "Local furigana QA: ${{ steps.publication_qa.outputs.furigana_healthy || 'false' }}"
+          echo "Authoritative newsroom state: ${{ steps.newsroom.outputs.state || 'MISSING' }}"
+          echo "Authoritative newsroom summary: ${{ steps.newsroom.outputs.summary || 'MISSING' }}"
+          echo "Authoritative rolling current: ${{ steps.newsroom.outputs.rolling_current || 'false' }}"
+          echo 'Core/Rolling recovery dispatch is intentionally owned only by the Editor-in-Chief Newsroom Robot.'
 
       - name: Check F3 voice independently
         id: audio_qa
+        if: github.event_name != 'pull_request'
         shell: bash
         run: |
-          if [ "${{ steps.publication_qa.outputs.core_healthy }}" != 'true' ] || [ "${{ steps.publication_qa.outputs.furigana_healthy }}" != 'true' ]; then
+          if [ "${{ steps.newsroom.outputs.core_current }}" != 'true' ] || [ "${{ steps.publication_qa.outputs.furigana_healthy }}" != 'true' ]; then
             echo 'healthy=false' >> "$GITHUB_OUTPUT"
-            echo 'data_age=999999' >> "$GITHUB_OUTPUT"
-            echo 'Core publication data is not clean yet; F3 check deferred.'
+            echo 'Core publication is not ready; F3 check deferred.'
             exit 0
           fi
           set +e
@@ -250,214 +223,46 @@ jobs:
           code=$?
           set -e
           [ "$code" -eq 0 ] && echo 'healthy=true' >> "$GITHUB_OUTPUT" || echo 'healthy=false' >> "$GITHUB_OUTPUT"
-          last_data_epoch=$(git log -1 --format=%ct -- data/latest.json data/live.json 2>/dev/null || echo 0)
-          now_epoch=$(date +%s)
-          if [ "${last_data_epoch:-0}" -gt 0 ]; then
-            age=$((now_epoch-last_data_epoch))
-          else
-            age=999999
-          fi
-          echo "data_age=${age}" >> "$GITHUB_OUTPUT"
 
-      - name: Inspect supervised production workers
-        id: workers
-        env:
-          GH_TOKEN: ${{ github.token }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          gh run list --workflow sync-japanese-news.yml --branch main --limit 20 --json status,conclusion,databaseId,createdAt,headSha > /tmp/sync.json
-          gh run list --workflow repair-extra-translation-quality.yml --branch main --limit 20 --json status,conclusion,databaseId,createdAt,headSha > /tmp/repair.json
-          gh run list --workflow pages.yml --branch main --limit 20 --json status,conclusion,databaseId,createdAt,headSha > /tmp/pages.json
-          gh run list --workflow rebuild-f3-pacing.yml --branch main --limit 20 --json status,conclusion,databaseId,createdAt,headSha > /tmp/f3.json
-          python - <<'PY' >> "$GITHUB_OUTPUT"
-          import json
-          from datetime import datetime, timezone
-          now = datetime.now(timezone.utc)
-          def age_seconds(value):
-              try:
-                  return max(0, int((now-datetime.fromisoformat(value.replace('Z','+00:00'))).total_seconds()))
-              except Exception:
-                  return 999999
-          def emit(path, prefix):
-              runs = json.load(open(path, encoding='utf-8'))
-              active = [r for r in runs if r.get('status') != 'completed']
-              active_ages = [age_seconds(r.get('createdAt') or '') for r in active]
-              latest = runs[0] if runs else {}
-              streak = 0
-              for r in runs:
-                  if r.get('status') != 'completed':
-                      continue
-                  if r.get('conclusion') in {'failure','cancelled','timed_out','action_required'}:
-                      streak += 1
-                  else:
-                      break
-              print(f'{prefix}_active_count={len(active)}')
-              print(f'{prefix}_active_ids={",".join(str(r.get("databaseId")) for r in active if r.get("databaseId"))}')
-              print(f'{prefix}_active_oldest={max(active_ages) if active_ages else 0}')
-              print(f'{prefix}_latest_conclusion={latest.get("conclusion") or ""}')
-              print(f'{prefix}_latest_head={latest.get("headSha") or ""}')
-              print(f'{prefix}_latest_age={age_seconds(latest.get("createdAt") or "") if latest else 999999}')
-              print(f'{prefix}_failure_streak={streak}')
-          emit('/tmp/sync.json','sync')
-          emit('/tmp/repair.json','repair')
-          emit('/tmp/pages.json','pages')
-          emit('/tmp/f3.json','f3')
-          PY
-
-      - name: Recover Japanese core text/data sync
-        id: core_recovery
-        if: github.event_name != 'pull_request' && (steps.publication_qa.outputs.core_healthy != 'true' || steps.publication_qa.outputs.furigana_healthy != 'true' || steps.drift.outputs.base_drift == 'true' || steps.quarantine.outputs.core_deferred == 'true' || steps.workers.outputs.sync_latest_conclusion == 'failure')
-        env:
-          GH_TOKEN: ${{ github.token }}
-          ACTIVE_COUNT: ${{ steps.workers.outputs.sync_active_count }}
-          ACTIVE_OLDEST: ${{ steps.workers.outputs.sync_active_oldest }}
-          LATEST_HEAD: ${{ steps.workers.outputs.sync_latest_head }}
-          LATEST_AGE: ${{ steps.workers.outputs.sync_latest_age }}
-          FAILURE_STREAK: ${{ steps.workers.outputs.sync_failure_streak }}
-          DEFERRED: ${{ steps.quarantine.outputs.core_deferred }}
-          BASE_DRIFT: ${{ steps.drift.outputs.base_drift }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          git fetch -q origin main
-          main_sha=$(git rev-parse origin/main)
-          if [ "${ACTIVE_COUNT:-0}" -gt 0 ]; then
-            current_active=0
-            while IFS=$'\t' read -r run_id head_sha; do
-              [ -n "${run_id:-}" ] || continue
-              if [ "$head_sha" = "$main_sha" ] && [ "${ACTIVE_OLDEST:-0}" -lt 3300 ]; then
-                current_active=1
-                continue
-              fi
-              echo "Cancelling obsolete Japanese sync run ${run_id} head=${head_sha} current=${main_sha}"
-              gh run cancel "$run_id" --repo "${{ github.repository }}" || true
-            done < <(gh run list --workflow sync-japanese-news.yml --branch main --limit 20 --json status,databaseId,headSha --jq '.[] | select(.status != "completed") | [.databaseId,.headSha] | @tsv')
-            if [ "$current_active" -eq 1 ]; then
-              echo 'pending=true' >> "$GITHUB_OUTPUT"
-              echo 'A current-main Japanese text/data sync is already active.'
-              exit 0
-            fi
-            sleep 3
-          fi
-          needs_cooldown=0
-          if [ "${BASE_DRIFT:-false}" = 'true' ]; then
-            echo 'Fresh Cantonese core drift detected; bypassing recovery cooldown.'
-          else
-            if [ "${LATEST_HEAD:-}" = "$main_sha" ] && [ "${FAILURE_STREAK:-0}" -ge 2 ]; then
-              needs_cooldown=1
-            fi
-            if [ "${LATEST_HEAD:-}" = "$main_sha" ] && [ "${DEFERRED:-false}" = 'true' ]; then
-              needs_cooldown=1
-            fi
-          fi
-          if [ "$needs_cooldown" -eq 1 ] && [ "${LATEST_AGE:-999999}" -lt "${RECOVERY_COOLDOWN_SECONDS}" ]; then
-            echo 'pending=true' >> "$GITHUB_OUTPUT"
-            echo "Core recovery cooldown active (${LATEST_AGE}s < ${RECOVERY_COOLDOWN_SECONDS}s); maintenance will retry automatically."
-            exit 0
-          fi
-          gh workflow run sync-japanese-news.yml --repo "${{ github.repository }}" --ref main
-          echo 'pending=true' >> "$GITHUB_OUTPUT"
-          echo "JAPANESE_TEXT_SYNC_RECOVERY_DISPATCHED main=${main_sha} deferred=${DEFERRED:-false} drift=${BASE_DRIFT:-false}"
-
-      - name: Recover rolling translation quality independently
-        id: rolling_recovery
-        if: github.event_name != 'pull_request' && (steps.publication_qa.outputs.extra_healthy != 'true' || steps.drift.outputs.extra_drift == 'true' || steps.quarantine.outputs.extra_deferred == 'true' || steps.workers.outputs.repair_latest_conclusion == 'failure')
-        env:
-          GH_TOKEN: ${{ github.token }}
-          ACTIVE_COUNT: ${{ steps.workers.outputs.repair_active_count }}
-          LATEST_HEAD: ${{ steps.workers.outputs.repair_latest_head }}
-          LATEST_AGE: ${{ steps.workers.outputs.repair_latest_age }}
-          FAILURE_STREAK: ${{ steps.workers.outputs.repair_failure_streak }}
-          DEFERRED: ${{ steps.quarantine.outputs.extra_deferred }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          git fetch -q origin main
-          main_sha=$(git rev-parse origin/main)
-          if [ "${ACTIVE_COUNT:-0}" -gt 0 ]; then
-            echo 'pending=true' >> "$GITHUB_OUTPUT"
-            echo 'Rolling translation repair worker is already active.'
-            exit 0
-          fi
-          needs_cooldown=0
-          if [ "${LATEST_HEAD:-}" = "$main_sha" ] && [ "${FAILURE_STREAK:-0}" -ge 2 ]; then
-            needs_cooldown=1
-          fi
-          if [ "${LATEST_HEAD:-}" = "$main_sha" ] && [ "${DEFERRED:-false}" = 'true' ]; then
-            needs_cooldown=1
-          fi
-          if [ "$needs_cooldown" -eq 1 ] && [ "${LATEST_AGE:-999999}" -lt "${RECOVERY_COOLDOWN_SECONDS}" ]; then
-            echo 'pending=true' >> "$GITHUB_OUTPUT"
-            echo "Rolling-repair cooldown active (${LATEST_AGE}s < ${RECOVERY_COOLDOWN_SECONDS}s); maintenance will retry automatically."
-            exit 0
-          fi
-          gh workflow run repair-extra-translation-quality.yml --repo "${{ github.repository }}" --ref main
-          echo 'pending=true' >> "$GITHUB_OUTPUT"
-          echo "ROLLING_TRANSLATION_REPAIR_DISPATCHED main=${main_sha} deferred=${DEFERRED:-false}"
-
-      - name: Recover F3 voice after bounded F3-attempt cooldown
+      - name: Recover F3 voice only after bounded cooldown
         id: f3_recovery
-        if: github.event_name != 'pull_request' && steps.publication_qa.outputs.core_healthy == 'true' && steps.publication_qa.outputs.furigana_healthy == 'true' && steps.drift.outputs.base_drift != 'true' && steps.audio_qa.outputs.healthy != 'true'
+        if: github.event_name != 'pull_request' && steps.newsroom.outputs.core_current == 'true' && steps.publication_qa.outputs.furigana_healthy == 'true' && steps.audio_qa.outputs.healthy != 'true'
         env:
           GH_TOKEN: ${{ github.token }}
-          ACTIVE_COUNT: ${{ steps.workers.outputs.f3_active_count }}
-          F3_LATEST_AGE: ${{ steps.workers.outputs.f3_latest_age }}
         shell: bash
         run: |
           set -euo pipefail
-          if [ "${ACTIVE_COUNT:-0}" -gt 0 ]; then
+          active=$(gh run list --workflow rebuild-f3-pacing.yml --branch main --limit 20 --json status --jq '[.[] | select(.status != "completed")] | length')
+          if [ "${active:-0}" -gt 0 ]; then
             echo 'pending=true' >> "$GITHUB_OUTPUT"
             echo 'F3 worker is already active.'
             exit 0
           fi
-          # This grace period is intentionally based on the latest F3 attempt,
-          # not on the latest news commit. New hourly news cannot reset it.
-          if [ "${F3_LATEST_AGE:-999999}" -lt 1200 ]; then
+          latest_created=$(gh run list --workflow rebuild-f3-pacing.yml --branch main --limit 1 --json createdAt --jq '.[0].createdAt // ""')
+          age=$(python - "$latest_created" <<'PY'
+          from datetime import datetime, timezone
+          import sys
+          try:
+              dt = datetime.fromisoformat(sys.argv[1].replace('Z', '+00:00'))
+              print(max(0, int((datetime.now(timezone.utc)-dt).total_seconds())))
+          except Exception:
+              print(999999)
+          PY
+          )
+          if [ "$age" -lt "${F3_RECOVERY_COOLDOWN_SECONDS}" ]; then
             echo 'pending=true' >> "$GITHUB_OUTPUT"
-            echo "Recent F3 attempt is inside the 20-minute recovery cooldown (${F3_LATEST_AGE}s)."
+            echo "F3 cooldown active (${age}s)."
             exit 0
           fi
           gh workflow run rebuild-f3-pacing.yml --repo "${{ github.repository }}" --ref main
           echo 'pending=true' >> "$GITHUB_OUTPUT"
           echo 'F3_FALLBACK_RECOVERY_DISPATCHED'
 
-      - name: Recover GitHub Pages independently
-        if: github.event_name != 'pull_request'
-        env:
-          GH_TOKEN: ${{ github.token }}
-          ACTIVE_COUNT: ${{ steps.workers.outputs.pages_active_count }}
-          LATEST_CONCLUSION: ${{ steps.workers.outputs.pages_latest_conclusion }}
-          LATEST_HEAD: ${{ steps.workers.outputs.pages_latest_head }}
+      - name: Refresh last-known-good after authoritative GREEN
+        if: github.event_name != 'pull_request' && steps.static_qa.outputs.healthy == 'true' && steps.newsroom.outputs.green == 'true'
         shell: bash
         run: |
           set -euo pipefail
-          git fetch -q origin main
-          main_sha=$(git rev-parse origin/main)
-          if [ "${ACTIVE_COUNT:-0}" -gt 0 ]; then
-            echo 'Pages deployment is already active.'
-            exit 0
-          fi
-          if [ "${LATEST_CONCLUSION:-}" = 'success' ] && [ "${LATEST_HEAD:-}" = "$main_sha" ]; then
-            echo 'Pages already matches current main.'
-            exit 0
-          fi
-          gh workflow run pages.yml --repo "${{ github.repository }}" --ref main
-          echo "PAGES_RECOVERY_DISPATCHED main=${main_sha}"
-
-      - name: Refresh last-known-good only after full health
-        if: github.event_name != 'pull_request'
-        shell: bash
-        run: |
-          set -euo pipefail
-          if [ "${{ steps.static_qa.outputs.healthy }}" != 'true' ] || \
-             [ "${{ steps.publication_qa.outputs.healthy }}" != 'true' ] || \
-             [ "${{ steps.drift.outputs.all_drift }}" = 'true' ] || \
-             [ "${{ steps.quarantine.outputs.deferred }}" = 'true' ] || \
-             [ "${{ steps.audio_qa.outputs.healthy }}" != 'true' ]; then
-            echo 'Full production health not reached; known-good reference not advanced.'
-            exit 0
-          fi
           git fetch -q origin main
           sha=$(git rev-parse origin/main)
           git push --force origin "$sha:refs/heads/maintenance-known-good"
@@ -467,96 +272,29 @@ jobs:
         if: always()
         run: |
           echo "Static healthy: ${{ steps.static_qa.outputs.healthy || 'false' }}"
-          echo "Publication text/data healthy: ${{ steps.publication_qa.outputs.healthy || 'false' }}"
-          echo "Core publication healthy: ${{ steps.publication_qa.outputs.core_healthy || 'false' }}"
-          echo "Rolling translation healthy: ${{ steps.publication_qa.outputs.extra_healthy || 'false' }}"
-          echo "Furigana healthy: ${{ steps.publication_qa.outputs.furigana_healthy || 'false' }}"
-          echo "Core Cantonese drift: ${{ steps.drift.outputs.base_drift || 'unknown' }}"
-          echo "Extra-layer Cantonese drift: ${{ steps.drift.outputs.extra_drift || 'unknown' }}"
-          echo "Any Cantonese drift: ${{ steps.drift.outputs.all_drift || 'unknown' }}"
-          echo "Core quarantined owners: ${{ steps.quarantine.outputs.core_count || '0' }}"
-          echo "Rolling quarantined owners: ${{ steps.quarantine.outputs.extra_count || '0' }}"
-          echo "Core recovery pending: ${{ steps.core_recovery.outputs.pending || 'false' }}"
-          echo "Rolling recovery pending: ${{ steps.rolling_recovery.outputs.pending || 'false' }}"
-          echo "F3 recovery pending: ${{ steps.f3_recovery.outputs.pending || 'false' }}"
+          echo "Newsroom fresh: ${{ steps.newsroom.outputs.fresh || 'false' }}"
+          echo "Newsroom GREEN: ${{ steps.newsroom.outputs.green || 'false' }}"
+          echo "Newsroom core current: ${{ steps.newsroom.outputs.core_current || 'false' }}"
+          echo "Newsroom rolling current: ${{ steps.newsroom.outputs.rolling_current || 'false' }}"
           echo "F3 voice healthy: ${{ steps.audio_qa.outputs.healthy || 'false' }}"
-          echo "F3 data age seconds: ${{ steps.audio_qa.outputs.data_age || 'unknown' }}"
-          echo "Latest F3 attempt age seconds: ${{ steps.workers.outputs.f3_latest_age || 'unknown' }}"
-          echo "Sync active: ${{ steps.workers.outputs.sync_active_count || '0' }}"
-          echo "Rolling repair active: ${{ steps.workers.outputs.repair_active_count || '0' }}"
-          echo "Pages active: ${{ steps.workers.outputs.pages_active_count || '0' }}"
-          echo "F3 active: ${{ steps.workers.outputs.f3_active_count || '0' }}"
-          echo 'Japanese site maintenance cycle completed.'
+          echo "F3 recovery pending: ${{ steps.f3_recovery.outputs.pending || 'false' }}"
+          echo 'No Core/Rolling workflow is dispatched from Auto Maintenance.'
 
-      - name: Enforce truthful production-health status
+      - name: Enforce truthful reader-facing health
         if: always() && github.event_name != 'pull_request'
         shell: bash
         run: |
           set -euo pipefail
-          unhealthy=0
           if [ "${{ steps.static_qa.outputs.healthy }}" != 'true' ]; then
             echo '::error::Static Japanese site QA is not healthy.'
-            unhealthy=1
-          fi
-          if [ "${{ steps.publication_qa.outputs.core_healthy }}" != 'true' ] || [ "${{ steps.publication_qa.outputs.furigana_healthy }}" != 'true' ]; then
-            if [ "${{ steps.core_recovery.outputs.pending }}" = 'true' ]; then
-              echo '::warning::Core Japanese publication repair is active or scheduled for automatic retry.'
-            else
-              echo '::error::Core Japanese publication data is not healthy and no recovery is pending.'
-              unhealthy=1
-            fi
-          fi
-          if [ "${{ steps.publication_qa.outputs.extra_healthy }}" != 'true' ]; then
-            if [ "${{ steps.rolling_recovery.outputs.pending }}" = 'true' ]; then
-              echo '::warning::Rolling/topic Japanese repair is active or scheduled for automatic retry.'
-            else
-              echo '::error::Rolling/topic Japanese publication data is not healthy and no recovery is pending.'
-              unhealthy=1
-            fi
-          fi
-          if [ "${{ steps.drift.outputs.base_drift }}" = 'true' ]; then
-            if [ "${{ steps.core_recovery.outputs.pending }}" = 'true' ]; then
-              echo '::warning::Core Japanese publication is behind the Cantonese source; recovery is active or dispatched.'
-            else
-              echo '::error::Core Japanese publication is behind the Cantonese source and recovery did not start.'
-              unhealthy=1
-            fi
-          fi
-          if [ "${{ steps.drift.outputs.extra_drift }}" = 'true' ]; then
-            if [ "${{ steps.rolling_recovery.outputs.pending }}" = 'true' ]; then
-              echo '::warning::Rolling/topic Japanese publication is behind its Cantonese source; recovery is active or dispatched.'
-            else
-              echo '::error::Rolling/topic Japanese publication is behind its Cantonese source and recovery did not start.'
-              unhealthy=1
-            fi
-          fi
-          if [ "${{ steps.quarantine.outputs.core_deferred }}" = 'true' ]; then
-            echo '::warning::Current core Japanese publication has quarantined owners; automatic core retry remains active.'
-          fi
-          if [ "${{ steps.quarantine.outputs.extra_deferred }}" = 'true' ]; then
-            echo '::warning::Current rolling Japanese publication has quarantined owners; automatic rolling retry remains active.'
-          fi
-          if [ "${{ steps.audio_qa.outputs.healthy }}" != 'true' ]; then
-            if [ "${{ steps.drift.outputs.base_drift }}" = 'true' ] || [ "${{ steps.publication_qa.outputs.core_healthy }}" != 'true' ] || [ "${{ steps.publication_qa.outputs.furigana_healthy }}" != 'true' ]; then
-              echo '::warning::F3 audio recovery is deferred until current core text/data recovery completes.'
-            elif [ "${{ steps.f3_recovery.outputs.pending }}" = 'true' ]; then
-              echo '::warning::F3 audio recovery is active, dispatched, or inside the F3-attempt cooldown.'
-            elif [ "${{ steps.workers.outputs.f3_latest_age || '999999' }}" -lt 1200 ]; then
-              echo '::warning::The latest F3 recovery attempt is inside the 20-minute cooldown.'
-            else
-              echo '::error::F3 production audio is unhealthy beyond the cooldown and recovery did not start.'
-              unhealthy=1
-            fi
-          fi
-          # Historical failed workflow conclusions are diagnostic signals, not
-          # current health. A successfully active/dispatched recovery is a
-          # maintenance-in-progress state, not an unresolved maintenance fault.
-          if [ "$unhealthy" -ne 0 ]; then
-            echo 'AUTO_MAINTENANCE_UNRESOLVED_HEALTH_FAILURE'
             exit 1
           fi
-          if [ "${{ steps.core_recovery.outputs.pending }}" = 'true' ] || [ "${{ steps.rolling_recovery.outputs.pending }}" = 'true' ] || [ "${{ steps.f3_recovery.outputs.pending }}" = 'true' ]; then
-            echo 'AUTO_MAINTENANCE_RECOVERY_IN_PROGRESS'
-          else
-            echo 'AUTO_MAINTENANCE_PRODUCTION_HEALTH_OK'
+          if [ "${{ steps.newsroom.outputs.green }}" != 'true' ]; then
+            echo "::error::Reader-facing newsroom health is not GREEN: ${{ steps.newsroom.outputs.summary || 'MISSING' }}"
+            echo 'The Editor-in-Chief Recovery Recheck Bridge will re-run the authoritative robot after this maintenance cycle completes.'
+            exit 1
           fi
+          if [ "${{ steps.audio_qa.outputs.healthy }}" != 'true' ]; then
+            echo '::warning::News is GREEN; F3 audio remains an independent recovery domain.'
+          fi
+          echo 'AUTO_MAINTENANCE_READER_HEALTH_GREEN'
