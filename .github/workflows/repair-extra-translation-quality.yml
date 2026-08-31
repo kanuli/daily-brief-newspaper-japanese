@@ -16,12 +16,11 @@ on:
       - 'scripts/safe_sync.py'
       - 'scripts/local_translation_runtime.py'
       - '.github/workflows/repair-extra-translation-quality.yml'
-  workflow_run:
-    workflows:
-      - '日本語ニュース同期・品質ゲート・Discord配信'
-    types: [completed]
   schedule:
     # Core Daily/Live starts at :15. Guaranteed rolling page coverage follows at :45.
+    # Event-driven recovery is owned by the Editor-in-Chief Robot. The robot
+    # checks Desk/Stocks freshness first and dispatches this workflow only when
+    # rolling publication is actually stale.
     - cron: '45 * * * *'
 
 permissions:
@@ -29,9 +28,8 @@ permissions:
 
 concurrency:
   group: japanese-extra-quality-repair
-  # Never kill a repair that is already translating/publishing. GitHub keeps at
-  # most one pending replacement in this group, so the newest queued edition can
-  # follow the active run without starving publication.
+  # Never kill a repair that is already translating/publishing. A newer trigger
+  # queues behind the active guaranteed-edition publication instead of starving it.
   cancel-in-progress: false
 
 jobs:
@@ -132,16 +130,21 @@ jobs:
           exit 1
 
       - name: Apply optional v4 newsroom and lexical-furigana enhancement
+        id: optional_enhancement
         timeout-minutes: 5
         continue-on-error: true
         env:
           REMOTE_REPAIR_SCOPE: rolling
         run: python scripts/remote_repair_all_published_quality.py
 
-      - name: Validate enhanced rolling Japanese layer
+      - name: Validate optional enhanced rolling Japanese layer
+        id: enhanced_validation
+        if: steps.optional_enhancement.outcome == 'success'
+        continue-on-error: true
         run: python scripts/validate_extra_layers.py
 
-      - name: Publish enhanced rolling layer when changed
+      - name: Publish optional enhanced rolling layer when valid
+        if: steps.optional_enhancement.outcome == 'success' && steps.enhanced_validation.outcome == 'success'
         shell: bash
         run: |
           set -euo pipefail
@@ -158,9 +161,8 @@ jobs:
             git fetch origin main
             if ! git rebase origin/main; then
               git rebase --abort || true
-              echo 'Rolling enhancement rebase conflict; retrying.' >&2
-              sleep $((attempt * 2))
-              continue
+              echo 'Optional rolling enhancement rebase conflict; minimum edition remains live.' >&2
+              exit 0
             fi
             if git push origin HEAD:main; then
               echo 'JAPANESE_EXTRA_ENHANCEMENT_PUSH_OK'
@@ -168,4 +170,5 @@ jobs:
             fi
             sleep $((attempt * 2))
           done
-          exit 1
+          echo 'Optional enhancement push did not complete; minimum edition remains live.' >&2
+          exit 0
