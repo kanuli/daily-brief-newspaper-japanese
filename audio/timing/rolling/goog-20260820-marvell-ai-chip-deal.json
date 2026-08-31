@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 39.863,
+  "duration": 32.94,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 340.0,
-  "characters": 121,
-  "charactersPerMinute": 182.1,
+  "characters": 110,
+  "charactersPerMinute": 200.4,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.18,
@@ -21,106 +21,66 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 16.411,
-      "text": "Googleとマーベル、自社開発AIチップ供給で協力深化、長期調達規模は最大1,200億ドルに"
+      "end": 12.15,
+      "text": "GOOG：Reuters Breakingviewsで最新の企業・市場動向情報を確認"
     },
     {
       "key": "body-0",
-      "start": 16.411,
-      "end": 39.863,
-      "text": "Reuters Breakingviews は、マーベルとグーグルが協力関係を拡大し、グーグルは2033年までに最大約1200億ドルで関連製品を購入できると報じた。"
+      "start": 12.15,
+      "end": 32.94,
+      "text": "Reuters Breakingviewsを出典として、企業・市場動向に関する新しい検証済み情報を確認しました。詳細は出典資料の確認後に順次更新します。"
     }
   ],
   "semanticUnits": [
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 3.137,
-      "end": 3.417,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "Googleとマーベル、"
+      "speechEnd": 2.232,
+      "end": 2.572,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "punctuation-semantic",
+      "text": "GOOG："
     },
     {
       "parentKey": "title",
-      "start": 3.417,
-      "speechEnd": 8.506,
-      "end": 8.787,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "自社開発AIチップ供給で協力深化、"
-    },
-    {
-      "parentKey": "title",
-      "start": 8.787,
-      "speechEnd": 12.691,
-      "end": 12.971,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "長期調達規模は最大1,"
-    },
-    {
-      "parentKey": "title",
-      "start": 12.971,
-      "speechEnd": 15.55,
-      "end": 16.411,
+      "start": 2.572,
+      "speechEnd": 11.289,
+      "end": 12.15,
       "pause": 0.861,
       "intendedPause": 0.86,
       "reason": "punctuation-sentence",
-      "text": "200億ドルに。"
+      "text": "Reuters Breakingviewsで最新の企業・市場動向情報を確認。"
     },
     {
       "parentKey": "body-0",
-      "start": 16.411,
-      "speechEnd": 20.106,
-      "end": 20.386,
+      "start": 12.15,
+      "speechEnd": 16.962,
+      "end": 17.243,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "Reuters Breakingviews は、"
+      "text": "Reuters Breakingviewsを出典として、"
     },
     {
       "parentKey": "body-0",
-      "start": 20.386,
-      "speechEnd": 25.824,
-      "end": 26.104,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "マーベルとグーグルが協力関係を拡大し、"
+      "start": 17.243,
+      "speechEnd": 25.262,
+      "end": 25.883,
+      "pause": 0.621,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "企業・市場動向に関する新しい検証済み情報を確認しました。"
     },
     {
       "parentKey": "body-0",
-      "start": 26.104,
-      "speechEnd": 31.96,
-      "end": 32.14,
-      "pause": 0.18,
-      "intendedPause": 0.18,
-      "reason": "before-key-number",
-      "text": "グーグルは2033年までに最大約"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 32.14,
-      "speechEnd": 34.719,
-      "end": 34.899,
-      "pause": 0.18,
-      "intendedPause": 0.18,
-      "reason": "key-number",
-      "text": "1200億ドル"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 34.899,
-      "speechEnd": 39.082,
-      "end": 39.863,
+      "start": 25.883,
+      "speechEnd": 32.16,
+      "end": 32.94,
       "pause": 0.781,
       "intendedPause": 0.78,
       "reason": "punctuation-sentence",
-      "text": "で関連製品を購入できると報じた。"
+      "text": "詳細は出典資料の確認後に順次更新します。"
     }
   ]
 }

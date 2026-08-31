@@ -1,0 +1,510 @@
+{
+  "version": 3,
+  "duration": 213.603,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 576,
+  "charactersPerMinute": 161.8,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 18.69,
+      "text": "中国、農地保護に関する初の特別法を可決、地方政府に2027年から農地の総量を保護するよう義務付ける"
+    },
+    {
+      "key": "dek",
+      "start": 18.69,
+      "end": 45.058,
+      "text": "新しい法律は、定量的、定性的、生態学的保護を同じ法的枠組みに組み込み、衛星リモートセンシング、ビッグデータ、AIを使用した強化された規制を可能にします。"
+    },
+    {
+      "key": "body-0",
+      "start": 45.058,
+      "end": 101.854,
+      "text": "中国全国人民代表大会常務委員会は、耕地の保護と質の向上を目的とした最初の法律を可決し、2027年1月1日に施行する予定です。法律では、耕地は主に食料やその他の重要な農産物の生産に使用することが義務付けられており、地方自治体は行政区内の耕地の総量が削減されず、品質が向上し、生態学的機能が安定していることを保証する必要があります。"
+    },
+    {
+      "key": "body-1",
+      "start": 101.854,
+      "end": 158.379,
+      "text": "新しい法律には、農地保護と食料安全保障の責任システム、主要な幹部の退職監査、衛星リモートセンシング、ビッグデータ、クラウドコンピューティング、人工知能規制ツールも組み込まれています。近年、中国は18億エーカーの耕地というレッドラインを強調し続けており、新しい特別法により、食料安全保障、土地利用管理、地方自治体の説明責任がさらに制度化されています。"
+    },
+    {
+      "key": "why",
+      "start": 158.379,
+      "end": 191.358,
+      "text": "中国が耕地の量、質、生態保護を特別法と統合するのはこれが初めてで、地方の土地開発、農業投資、インフラ計画、食糧安全保障政策に影響を与えることになる。"
+    },
+    {
+      "key": "watch",
+      "start": 191.358,
+      "end": 213.603,
+      "text": "国務院や地方政府の支援規定、農地利用管理の実施方法、高規格農地や塩性アルカリ土地の整備投資が加速するかどうかに注目する。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.02,
+      "end": 2.3,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "中国、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.3,
+      "speechEnd": 7.386,
+      "end": 7.666,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "農地保護に関する初の特別法を可決、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.666,
+      "speechEnd": 14.285,
+      "end": 14.625,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "地方政府に2027年から農地の総量を"
+    },
+    {
+      "parentKey": "title",
+      "start": 14.625,
+      "speechEnd": 17.83,
+      "end": 18.69,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "保護するよう義務付ける。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.69,
+      "speechEnd": 21.198,
+      "end": 21.478,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "新しい法律は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.478,
+      "speechEnd": 23.569,
+      "end": 23.849,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "定量的、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.849,
+      "speechEnd": 25.939,
+      "end": 26.219,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "定性的、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.219,
+      "speechEnd": 32.141,
+      "end": 32.421,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "生態学的保護を同じ法的枠組みに組み込み、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.421,
+      "speechEnd": 35.347,
+      "end": 35.627,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "衛星リモートセンシング、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 35.627,
+      "speechEnd": 37.926,
+      "end": 38.206,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ビッグデータ、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 38.206,
+      "speechEnd": 44.198,
+      "end": 45.058,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "AIを使用した強化された規制を可能にします。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.058,
+      "speechEnd": 51.955,
+      "end": 52.235,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "中国全国人民代表大会常務委員会は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.235,
+      "speechEnd": 60.596,
+      "end": 60.876,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "耕地の保護と質の向上を目的とした最初の法律を可決し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.876,
+      "speechEnd": 67.216,
+      "end": 67.836,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "2027年1月1日に施行する予定です。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.836,
+      "speechEnd": 70.065,
+      "end": 70.345,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "法律では、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.345,
+      "speechEnd": 82.12,
+      "end": 82.4,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "耕地は主に食料やその他の重要な農産物の生産に使用することが義務付けられており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 82.4,
+      "speechEnd": 90.203,
+      "end": 90.483,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "地方自治体は行政区内の耕地の総量が削減されず、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 90.483,
+      "speechEnd": 93.13,
+      "end": 93.411,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "品質が向上し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 93.411,
+      "speechEnd": 101.074,
+      "end": 101.854,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "生態学的機能が安定していることを保証する必要があります。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.854,
+      "speechEnd": 104.572,
+      "end": 104.852,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "新しい法律には、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.852,
+      "speechEnd": 110.913,
+      "end": 111.193,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "農地保護と食料安全保障の責任システム、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.193,
+      "speechEnd": 115.164,
+      "end": 115.444,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "主要な幹部の退職監査、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.444,
+      "speechEnd": 118.37,
+      "end": 118.65,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "衛星リモートセンシング、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.65,
+      "speechEnd": 120.95,
+      "end": 121.23,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ビッグデータ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.23,
+      "speechEnd": 124.295,
+      "end": 124.575,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "クラウドコンピューティング、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 124.575,
+      "speechEnd": 129.243,
+      "end": 129.863,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "人工知能規制ツールも組み込まれています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 129.863,
+      "speechEnd": 131.953,
+      "end": 132.233,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "近年、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 132.233,
+      "speechEnd": 140.733,
+      "end": 141.013,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "中国は18億エーカーの耕地というレッドラインを強調し続けており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 141.013,
+      "speechEnd": 144.079,
+      "end": 144.359,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "新しい特別法により、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 144.359,
+      "speechEnd": 147.285,
+      "end": 147.565,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "食料安全保障、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 147.565,
+      "speechEnd": 150.143,
+      "end": 150.423,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "土地利用管理、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 150.423,
+      "speechEnd": 157.599,
+      "end": 158.379,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "地方自治体の説明責任がさらに制度化されています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 158.379,
+      "speechEnd": 162.35,
+      "end": 162.97,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 162.97,
+      "speechEnd": 165.966,
+      "end": 166.246,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "中国が耕地の量、"
+    },
+    {
+      "parentKey": "why",
+      "start": 166.246,
+      "speechEnd": 168.197,
+      "end": 168.477,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "質、"
+    },
+    {
+      "parentKey": "why",
+      "start": 168.477,
+      "speechEnd": 175.444,
+      "end": 175.724,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "生態保護を特別法と統合するのはこれが初めてで、"
+    },
+    {
+      "parentKey": "why",
+      "start": 175.724,
+      "speechEnd": 178.79,
+      "end": 179.07,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "地方の土地開発、"
+    },
+    {
+      "parentKey": "why",
+      "start": 179.07,
+      "speechEnd": 181.299,
+      "end": 181.579,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "農業投資、"
+    },
+    {
+      "parentKey": "why",
+      "start": 181.579,
+      "speechEnd": 183.809,
+      "end": 184.089,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インフラ計画、"
+    },
+    {
+      "parentKey": "why",
+      "start": 184.089,
+      "speechEnd": 190.498,
+      "end": 191.358,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "食糧安全保障政策に影響を与えることになる。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 191.358,
+      "speechEnd": 193.449,
+      "end": 193.729,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 193.729,
+      "speechEnd": 198.257,
+      "end": 198.537,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "国務院や地方政府の支援規定、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 198.537,
+      "speechEnd": 202.369,
+      "end": 202.649,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "農地利用管理の実施方法、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 202.649,
+      "speechEnd": 208.78,
+      "end": 209.12,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "高規格農地や塩性アルカリ土地の整備投資が"
+    },
+    {
+      "parentKey": "watch",
+      "start": 209.12,
+      "speechEnd": 212.743,
+      "end": 213.603,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "加速するかどうかに注目する。"
+    }
+  ]
+}

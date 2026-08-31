@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 36.519,
+  "duration": 27.638,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 340.0,
-  "characters": 104,
-  "charactersPerMinute": 170.9,
+  "characters": 80,
+  "charactersPerMinute": 173.7,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.18,
@@ -21,86 +21,66 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 14.048,
-      "text": "Palantir、通期収益予測を引き上げ、政府および商用 AI 需要は高成長を続ける"
+      "end": 9.22,
+      "text": "PLTR：Reutersで最新の決算・業績情報を確認"
     },
     {
       "key": "body-0",
-      "start": 14.048,
-      "end": 36.519,
-      "text": "ロイター通信は、パランティアの第２・四半期業績が予想を上回り、通年の収益予想を引き上げたと報じた。 AIデータ分析に対する需要は依然として強い。"
+      "start": 9.22,
+      "end": 27.638,
+      "text": "Reutersを出典として、決算・業績に関する新しい検証済み情報を確認しました。詳細は出典資料の確認後に順次更新します。"
     }
   ],
   "semanticUnits": [
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 2.232,
-      "end": 2.513,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "Palantir、"
+      "speechEnd": 2.022,
+      "end": 2.363,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "punctuation-semantic",
+      "text": "PLTR："
     },
     {
       "parentKey": "title",
-      "start": 2.513,
-      "speechEnd": 6.21,
-      "end": 6.49,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "通期収益予測を引き上げ、"
-    },
-    {
-      "parentKey": "title",
-      "start": 6.49,
-      "speechEnd": 13.187,
-      "end": 14.048,
+      "start": 2.363,
+      "speechEnd": 8.359,
+      "end": 9.22,
       "pause": 0.861,
       "intendedPause": 0.86,
       "reason": "punctuation-sentence",
-      "text": "政府および商用 AI 需要は高成長を続ける。"
+      "text": "Reutersで最新の決算・業績情報を確認。"
     },
     {
       "parentKey": "body-0",
-      "start": 14.048,
-      "speechEnd": 16.559,
-      "end": 16.84,
+      "start": 9.22,
+      "speechEnd": 12.428,
+      "end": 12.708,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "ロイター通信は、"
+      "text": "Reutersを出典として、"
     },
     {
       "parentKey": "body-0",
-      "start": 16.84,
-      "speechEnd": 23.606,
-      "end": 23.886,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "パランティアの第２・四半期業績が予想を上回り、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 23.886,
-      "speechEnd": 29.397,
-      "end": 30.018,
+      "start": 12.708,
+      "speechEnd": 19.96,
+      "end": 20.581,
       "pause": 0.621,
       "intendedPause": 0.62,
       "reason": "punctuation-sentence",
-      "text": "通年の収益予想を引き上げたと報じた。"
+      "text": "決算・業績に関する新しい検証済み情報を確認しました。"
     },
     {
       "parentKey": "body-0",
-      "start": 30.018,
-      "speechEnd": 35.738,
-      "end": 36.519,
+      "start": 20.581,
+      "speechEnd": 26.857,
+      "end": 27.638,
       "pause": 0.781,
       "intendedPause": 0.78,
       "reason": "punctuation-sentence",
-      "text": "AIデータ分析に対する需要は依然として強い。"
+      "text": "詳細は出典資料の確認後に順次更新します。"
     }
   ]
 }

@@ -1,0 +1,430 @@
+{
+  "version": 3,
+  "duration": 200.542,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 564,
+  "charactersPerMinute": 168.7,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 15.561,
+      "text": "南日本の熱帯低気圧が台風の秋の雨フロントに強化され、24時間以内に大雨のリスクを引き起こします"
+    },
+    {
+      "key": "dek",
+      "start": 15.561,
+      "end": 35.762,
+      "text": "8月31日21時、システム中心圧力は998 hPa、最大風速は毎秒15 mで、風が強くなれば台風24号となる。"
+    },
+    {
+      "key": "body-0",
+      "start": 35.762,
+      "end": 83.619,
+      "text": "日本の南海の熱帯低気圧は、8月31日遅くまで拡大し続けました。21時のデータによると、システム中心圧力は998 hPa、最大風速は中心付近で毎秒15メートル、最大瞬間風速は毎秒23メートルであり、気象局は24時間以内に台風に激化すると予想しており、風が強い場合は台風24号と命名する。"
+    },
+    {
+      "key": "body-1",
+      "start": 83.619,
+      "end": 139.989,
+      "text": "日本の複数の気象メディアは、気象庁を引用して、その後、システムがゆっくりと北に移動する可能性があると述べた。同時に日本周辺の秋雨フロントの活動により、熱帯系が送る暖かく湿った空気は、北陸、関東、東海、西日本の一部の地域で大雨のリスクを高める可能性があり、特に最近の大雨の影響を受けた地域では、土砂災害や河川水位に注意を払う必要があります。"
+    },
+    {
+      "key": "why",
+      "start": 139.989,
+      "end": 173.003,
+      "text": "これは一般的な天気予報ではありませんが、新しい熱帯システムは夜間の台風としてさらに確認することができ、今後数日間で日本の多くの地域の防災と輸送の取り決めに直接的な影響を与えるでしょう。"
+    },
+    {
+      "key": "watch",
+      "start": 173.003,
+      "end": 200.542,
+      "text": "台風24号が9月1日に正式に発生したかどうか、気象庁の最新ルート、秋雨前線の位置、北陸と太平洋側に警報級の豪雨予報があったかどうかに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.873,
+      "end": 8.103,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "南日本の熱帯低気圧が台風の秋の雨フロントに強化され、"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.103,
+      "speechEnd": 14.861,
+      "end": 15.561,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "24時間以内に大雨のリスクを引き起こします。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.561,
+      "speechEnd": 19.393,
+      "end": 19.623,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "8月31日21時、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.623,
+      "speechEnd": 25.127,
+      "end": 25.357,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "システム中心圧力は998 hPa、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.357,
+      "speechEnd": 29.537,
+      "end": 29.767,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "最大風速は毎秒15 mで、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 29.767,
+      "speechEnd": 35.062,
+      "end": 35.762,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "風が強くなれば台風24号となる。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 35.762,
+      "speechEnd": 39.803,
+      "end": 40.033,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本の南海の熱帯低気圧は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.033,
+      "speechEnd": 45.886,
+      "end": 46.386,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "8月31日遅くまで拡大し続けました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.386,
+      "speechEnd": 49.8,
+      "end": 50.03,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "21時のデータによると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.03,
+      "speechEnd": 55.534,
+      "end": 55.764,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "システム中心圧力は998 hPa、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.764,
+      "speechEnd": 62.243,
+      "end": 62.473,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "最大風速は中心付近で毎秒15メートル、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.473,
+      "speechEnd": 68.186,
+      "end": 68.416,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "最大瞬間風速は毎秒23メートルであり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.416,
+      "speechEnd": 76.847,
+      "end": 77.077,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "気象局は24時間以内に台風に激化すると予想しており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 77.077,
+      "speechEnd": 82.999,
+      "end": 83.619,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "風が強い場合は台風24号と命名する。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 83.619,
+      "speechEnd": 87.451,
+      "end": 87.681,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本の複数の気象メディアは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 87.681,
+      "speechEnd": 90.467,
+      "end": 90.698,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "気象庁を引用して、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.698,
+      "speechEnd": 92.788,
+      "end": 93.018,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "その後、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.018,
+      "speechEnd": 99.845,
+      "end": 100.346,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "システムがゆっくりと北に移動する可能性があると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 100.346,
+      "speechEnd": 106.477,
+      "end": 106.707,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同時に日本周辺の秋雨フロントの活動により、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 106.707,
+      "speechEnd": 110.887,
+      "end": 111.117,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "熱帯系が送る暖かく湿った空気は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.117,
+      "speechEnd": 113.137,
+      "end": 113.367,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "北陸、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 113.367,
+      "speechEnd": 115.388,
+      "end": 115.618,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "関東、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.618,
+      "speechEnd": 117.638,
+      "end": 117.868,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "東海、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.868,
+      "speechEnd": 126.299,
+      "end": 126.529,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "西日本の一部の地域で大雨のリスクを高める可能性があり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 126.529,
+      "speechEnd": 132.451,
+      "end": 132.681,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "特に最近の大雨の影響を受けた地域では、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 132.681,
+      "speechEnd": 139.369,
+      "end": 139.989,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "土砂災害や河川水位に注意を払う必要があります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 139.989,
+      "speechEnd": 143.96,
+      "end": 144.461,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 144.461,
+      "speechEnd": 150.731,
+      "end": 150.961,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "これは一般的な天気予報ではありませんが、"
+    },
+    {
+      "parentKey": "why",
+      "start": 150.961,
+      "speechEnd": 156.117,
+      "end": 156.397,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "新しい熱帯システムは夜間の台風として"
+    },
+    {
+      "parentKey": "why",
+      "start": 156.397,
+      "speechEnd": 160.02,
+      "end": 160.25,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "さらに確認することができ、"
+    },
+    {
+      "parentKey": "why",
+      "start": 160.25,
+      "speechEnd": 172.303,
+      "end": 173.003,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "今後数日間で日本の多くの地域の防災と輸送の取り決めに直接的な影響を与えるでしょう。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 173.003,
+      "speechEnd": 175.093,
+      "end": 175.323,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 175.323,
+      "speechEnd": 183.056,
+      "end": 183.286,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "台風24号が9月1日に正式に発生したかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 183.286,
+      "speechEnd": 186.491,
+      "end": 186.721,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "気象庁の最新ルート、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 186.721,
+      "speechEnd": 189.648,
+      "end": 189.878,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "秋雨前線の位置、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 189.878,
+      "speechEnd": 195.312,
+      "end": 195.592,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "北陸と太平洋側に警報級の豪雨予報が"
+    },
+    {
+      "parentKey": "watch",
+      "start": 195.592,
+      "speechEnd": 199.842,
+      "end": 200.542,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "あったかどうかに注意してください。"
+    }
+  ]
+}
