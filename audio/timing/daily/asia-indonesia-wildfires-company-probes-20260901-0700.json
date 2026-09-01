@@ -1,0 +1,430 @@
+{
+  "version": 3,
+  "duration": 209.058,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 632,
+  "charactersPerMinute": 181.4,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 20.023,
+      "text": "森林火災企業が関与した19の国立公園に対するインドネシアの調査により、登山が中断され、全国的に消防活動が強化されました"
+    },
+    {
+      "key": "dek",
+      "start": 20.023,
+      "end": 42.485,
+      "text": "スマトラ島とカリマンタン島では干ばつが続いており、政府は火災コンセッションを保持している企業を調査し、リスクの高い国立公園の登山ルートを閉鎖しています。"
+    },
+    {
+      "key": "body-0",
+      "start": 42.485,
+      "end": 98.364,
+      "text": "インドネシア政府は、スマトラ島とカリマンタン島の森林火災への対応を強化しました。ロイターは、環境省の高官が、当局が11,000ヘクタール以上の火災を含む火災コンセッションを保持している19の企業を調査していると述べたと引用した。政府は、火災が偶発的であったとしても、関連する企業は依然として厳格な責任の原則に従って起訴される可能性があると述べた。"
+    },
+    {
+      "key": "body-1",
+      "start": 98.364,
+      "end": 148.884,
+      "text": "インドネシア林業省は同日、9つの国立公園の登山ルートを一時的に閉鎖し、人員リスクを軽減し、資源を火災対策に集中させると発表した。いくつかの高リスク地域のホットスポットの数は減少しているが、政府は引き続き高度な警戒態勢にあり、国境を越えて広がるスモッグのリスクを減らすために地上と空中の火災を消火し続けているとAntaraは報告している。"
+    },
+    {
+      "key": "why",
+      "start": 148.884,
+      "end": 183.118,
+      "text": "大規模な森林火災は、インドネシアの公衆衛生、航空、パーム油産業に直接影響を与える可能性があり、スモッグが国境を越えて広がると、シンガポールやマレーシアなどの近隣諸国にも影響を及ぼします。"
+    },
+    {
+      "key": "watch",
+      "start": 183.118,
+      "end": 209.058,
+      "text": "ビジネス上の調査結果、国立公園の再開時期、ホットスポットと大気の質の変化、スモッグが国境を越えて近隣諸国に影響を与えているかどうかに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 10.172,
+      "end": 10.453,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "森林火災企業が関与した19の国立公園に対するインドネシアの調査により、"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.453,
+      "speechEnd": 13.518,
+      "end": 13.798,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "登山が中断され、"
+    },
+    {
+      "parentKey": "title",
+      "start": 13.798,
+      "speechEnd": 19.163,
+      "end": 20.023,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "全国的に消防活動が強化されました。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.023,
+      "speechEnd": 26.712,
+      "end": 26.992,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "スマトラ島とカリマンタン島では干ばつが続いており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.992,
+      "speechEnd": 34.517,
+      "end": 34.797,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "政府は火災コンセッションを保持している企業を調査し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 34.797,
+      "speechEnd": 41.625,
+      "end": 42.485,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "リスクの高い国立公園の登山ルートを閉鎖しています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.485,
+      "speechEnd": 45.412,
+      "end": 45.692,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インドネシア政府は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.692,
+      "speechEnd": 54.122,
+      "end": 54.743,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "スマトラ島とカリマンタン島の森林火災への対応を強化しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.743,
+      "speechEnd": 56.903,
+      "end": 57.183,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイターは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.183,
+      "speechEnd": 60.388,
+      "end": 60.668,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "環境省の高官が、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.668,
+      "speechEnd": 63.037,
+      "end": 63.317,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "当局が11,"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.317,
+      "speechEnd": 69.866,
+      "end": 70.206,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "000ヘクタール以上の火災を含む火災コンセッションを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.206,
+      "speechEnd": 78.219,
+      "end": 78.839,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "保持している19の企業を調査していると述べたと引用した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 78.839,
+      "speechEnd": 80.999,
+      "end": 81.279,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "政府は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 81.279,
+      "speechEnd": 85.599,
+      "end": 85.879,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "火災が偶発的であったとしても、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 85.879,
+      "speechEnd": 97.584,
+      "end": 98.364,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "関連する企業は依然として厳格な責任の原則に従って起訴される可能性があると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 98.364,
+      "speechEnd": 102.266,
+      "end": 102.546,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インドネシア林業省は同日、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.546,
+      "speechEnd": 109.723,
+      "end": 110.003,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "9つの国立公園の登山ルートを一時的に閉鎖し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 110.003,
+      "speechEnd": 112.999,
+      "end": 113.279,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "人員リスクを軽減し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 113.279,
+      "speechEnd": 118.783,
+      "end": 119.403,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "資源を火災対策に集中させると発表した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 119.403,
+      "speechEnd": 126.789,
+      "end": 127.069,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "いくつかの高リスク地域のホットスポットの数は減少しているが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 127.069,
+      "speechEnd": 132.364,
+      "end": 132.644,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "政府は引き続き高度な警戒態勢にあり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 132.644,
+      "speechEnd": 139.193,
+      "end": 139.533,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "国境を越えて広がるスモッグのリスクを減らすため"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 139.533,
+      "speechEnd": 148.103,
+      "end": 148.884,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "に地上と空中の火災を消火し続けているとAntaraは報告している。"
+    },
+    {
+      "parentKey": "why",
+      "start": 148.884,
+      "speechEnd": 152.855,
+      "end": 153.475,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 153.475,
+      "speechEnd": 156.68,
+      "end": 156.96,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "大規模な森林火災は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 156.96,
+      "speechEnd": 160.165,
+      "end": 160.445,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インドネシアの公衆衛生、"
+    },
+    {
+      "parentKey": "why",
+      "start": 160.445,
+      "speechEnd": 162.466,
+      "end": 162.746,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "航空、"
+    },
+    {
+      "parentKey": "why",
+      "start": 162.746,
+      "speechEnd": 169.156,
+      "end": 169.436,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "パーム油産業に直接影響を与える可能性があり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 169.436,
+      "speechEnd": 174.035,
+      "end": 174.315,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "スモッグが国境を越えて広がると、"
+    },
+    {
+      "parentKey": "why",
+      "start": 174.315,
+      "speechEnd": 182.258,
+      "end": 183.118,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "シンガポールやマレーシアなどの近隣諸国にも影響を及ぼします。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 183.118,
+      "speechEnd": 185.208,
+      "end": 185.488,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 185.488,
+      "speechEnd": 188.832,
+      "end": 189.113,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ビジネス上の調査結果、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 189.113,
+      "speechEnd": 192.596,
+      "end": 192.876,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "国立公園の再開時期、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 192.876,
+      "speechEnd": 196.848,
+      "end": 197.128,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ホットスポットと大気の質の変化、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 197.128,
+      "speechEnd": 202.771,
+      "end": 203.112,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "スモッグが国境を越えて近隣諸国に影響を"
+    },
+    {
+      "parentKey": "watch",
+      "start": 203.112,
+      "speechEnd": 208.198,
+      "end": 209.058,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "与えているかどうかに注目してください。"
+    }
+  ]
+}

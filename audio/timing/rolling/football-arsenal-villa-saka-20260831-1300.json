@@ -1,0 +1,420 @@
+{
+  "version": 3,
+  "duration": 197.068,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 661,
+  "charactersPerMinute": 201.3,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 12.905,
+      "text": "Shaka Dingjiangshan Arsenalゲストとして1 -0 Tuo Veraがプレミアリーグの勝利を維持"
+    },
+    {
+      "key": "dek",
+      "start": 12.905,
+      "end": 36.486,
+      "text": "ディフェンディングチャンピオンは、ブカヨ・サカによって59分間に2試合2勝しました。ベラは最初のシーズンで2回負けましたが、まだゴールを決めていません。"
+    },
+    {
+      "key": "body-0",
+      "start": 36.486,
+      "end": 91.12,
+      "text": "アーセナルは、8月31日の夜、アシュトンビルでプレミアリーグでシーズン2試合目の1 -0で優勝しました。Bukayo Sakaは59分にRiccardo Calafioriのローパスをゴールに近づけ、試合で唯一のゴールとなりました。結果はロイター、スカイスポーツ、および複数のイベントデータソースによって確認されました。Veraはフィールドを横切って一発も打っていませんでした。"
+    },
+    {
+      "key": "body-1",
+      "start": 91.12,
+      "end": 138.363,
+      "text": "アーセナルは6ポイントの勝利で試合を開始し、昨シーズンのチャンピオンシップで優勝した後も、守備の安定性とスモールスコアのコントロール特性を維持しました。血液が劇的に変化したベラは、2つの戦争でゼロポイントを獲得しており、まだリーグゴールを決めていません。移籍ウィンドウの最終段階での援護と攻撃的な試練の圧力がさらに増加しました。"
+    },
+    {
+      "key": "why",
+      "start": 138.363,
+      "end": 169.318,
+      "text": "現役チャンピオンの全体的な勝利を維持することは、初期のチャンピオンシップの状況に直接影響を与え、ヴェラの連続したゴールの欠如はまた、彼の再構築と移籍戦略をプレミアリーグの焦点に置いています。"
+    },
+    {
+      "key": "watch",
+      "start": 169.318,
+      "end": 197.068,
+      "text": "日曜日のアーセナルのチェルシーでのトップテスト、ベラがヒューストンで最初のポイントを獲得できるかどうか、そしてトランスファーウィンドウが閉じる前に両サイドからの最終的な援軍に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 5.086,
+      "end": 5.426,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "Shaka Dingjiangshan Arsenalゲストとして"
+    },
+    {
+      "parentKey": "title",
+      "start": 5.426,
+      "speechEnd": 12.045,
+      "end": 12.905,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "1 -0 Tuo Veraがプレミアリーグの勝利を維持。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.905,
+      "speechEnd": 16.18,
+      "end": 16.46,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ディフェンディングチャンピオンは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.46,
+      "speechEnd": 19.247,
+      "end": 19.427,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "ブカヨ・サカによって"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.427,
+      "speechEnd": 21.586,
+      "end": 21.766,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "59分"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.766,
+      "speechEnd": 25.529,
+      "end": 26.149,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "間に2試合2勝しました。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.149,
+      "speechEnd": 31.653,
+      "end": 31.933,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ベラは最初のシーズンで2回負けましたが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 31.933,
+      "speechEnd": 35.626,
+      "end": 36.486,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "まだゴールを決めていません。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.486,
+      "speechEnd": 38.785,
+      "end": 39.065,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アーセナルは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.065,
+      "speechEnd": 42.549,
+      "end": 42.829,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "8月31日の夜、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.829,
+      "speechEnd": 52.513,
+      "end": 53.133,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "アシュトンビルでプレミアリーグでシーズン2試合目の1 -0で優勝しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.133,
+      "speechEnd": 55.711,
+      "end": 55.891,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "Bukayo Sakaは"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.891,
+      "speechEnd": 58.051,
+      "end": 58.231,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "59分"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.231,
+      "speechEnd": 65.268,
+      "end": 65.548,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "にRiccardo Calafioriのローパスをゴールに近づけ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.548,
+      "speechEnd": 69.658,
+      "end": 70.279,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "試合で唯一のゴールとなりました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.279,
+      "speechEnd": 72.647,
+      "end": 72.927,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "結果はロイター、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.927,
+      "speechEnd": 75.296,
+      "end": 75.576,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "スカイスポーツ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.576,
+      "speechEnd": 82.753,
+      "end": 83.373,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "および複数のイベントデータソースによって確認されました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 83.373,
+      "speechEnd": 90.34,
+      "end": 91.12,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "Veraはフィールドを横切って一発も打っていませんでした。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.12,
+      "speechEnd": 97.251,
+      "end": 97.531,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アーセナルは6ポイントの勝利で試合を開始し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.531,
+      "speechEnd": 102.478,
+      "end": 102.758,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "昨シーズンのチャンピオンシップで優勝した後も、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.758,
+      "speechEnd": 111.188,
+      "end": 111.808,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "守備の安定性とスモールスコアのコントロール特性を維持しました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.808,
+      "speechEnd": 115.78,
+      "end": 116.06,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "血液が劇的に変化したベラは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 116.06,
+      "speechEnd": 121.912,
+      "end": 122.192,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "2つの戦争でゼロポイントを獲得しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 122.192,
+      "speechEnd": 126.442,
+      "end": 127.062,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "まだリーグゴールを決めていません。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 127.062,
+      "speechEnd": 137.583,
+      "end": 138.363,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "移籍ウィンドウの最終段階での援護と攻撃的な試練の圧力がさらに増加しました。"
+    },
+    {
+      "parentKey": "why",
+      "start": 138.363,
+      "speechEnd": 142.334,
+      "end": 142.954,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 142.954,
+      "speechEnd": 149.155,
+      "end": 149.435,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "現役チャンピオンの全体的な勝利を維持することは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 149.435,
+      "speechEnd": 155.636,
+      "end": 155.916,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "初期のチャンピオンシップの状況に直接影響を与え、"
+    },
+    {
+      "parentKey": "why",
+      "start": 155.916,
+      "speechEnd": 160.584,
+      "end": 160.864,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ヴェラの連続したゴールの欠如はまた、"
+    },
+    {
+      "parentKey": "why",
+      "start": 160.864,
+      "speechEnd": 168.458,
+      "end": 169.318,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "彼の再構築と移籍戦略をプレミアリーグの焦点に置いています。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 169.318,
+      "speechEnd": 171.409,
+      "end": 171.689,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 171.689,
+      "speechEnd": 176.914,
+      "end": 177.194,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日曜日のアーセナルのチェルシーでのトップテスト、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 177.194,
+      "speechEnd": 184.022,
+      "end": 184.302,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ベラがヒューストンで最初のポイントを獲得できるかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 184.302,
+      "speechEnd": 187.925,
+      "end": 188.265,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "そしてトランスファーウィンドウが"
+    },
+    {
+      "parentKey": "watch",
+      "start": 188.265,
+      "speechEnd": 196.208,
+      "end": 197.068,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "閉じる前に両サイドからの最終的な援軍に注目してください。"
+    }
+  ]
+}

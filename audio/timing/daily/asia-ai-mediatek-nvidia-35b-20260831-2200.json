@@ -1,0 +1,380 @@
+{
+  "version": 3,
+  "duration": 167.314,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 599,
+  "charactersPerMinute": 214.8,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.788,
+      "text": "NVIDIA が MediaTek に 35 億米ドルを投資、NVLink Fusion がカスタム AI チップを拡張"
+    },
+    {
+      "key": "dek",
+      "start": 14.788,
+      "end": 38.375,
+      "text": "NVIDIAはMediaTekの35億ドルの転換社債に加入し、両社はPCや自動車用チップからクラウドAIインフラストラクチャやカスタムXPUへの協力をさらに拡大しました。"
+    },
+    {
+      "key": "body-0",
+      "start": 38.375,
+      "end": 81.987,
+      "text": "NVIDIAとMediaTek Taiwanは8月31日に協力の深化を発表し、NVIDIAはMediaTekが発行する海外転換社債に35億ドルを投資しました。MediaTekは、NVLink Fusionプラットフォームを使用して、顧客がカスタムXPUを開発し、NVIDIAのキャビネットレベルのAIシステムにアクセスできるようにします。"
+    },
+    {
+      "key": "body-1",
+      "start": 81.987,
+      "end": 121.497,
+      "text": "このパートナーシップは、ローカルAIコンピューティングと自動車プラットフォームもカバーしています。業界では、NVIDIAは相互接続とソフトウェア標準をカスタムAIチップ市場に拡大しており、MediaTekはデータセンターと高性能コンピューティングの収益を拡大し、携帯電話チップへの依存を減らすことができます。"
+    },
+    {
+      "key": "why",
+      "start": 121.497,
+      "end": 144.859,
+      "text": "この取引は、台湾の半導体サプライチェーン、AIインフラストラクチャの競争、およびNVIDIAプラットフォーム標準の拡大にも影響を与えます。"
+    },
+    {
+      "key": "watch",
+      "start": 144.859,
+      "end": 167.314,
+      "text": "コンバーチブル用語、MediaTekの最初のNVLink Fusion顧客、クラウドプロバイダーがカスタムXPUを採用しているかどうかに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.107,
+      "end": 7.387,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "NVIDIA が MediaTek に 35 億米ドルを投資、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.387,
+      "speechEnd": 10.383,
+      "end": 10.723,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "NVLink Fusion が"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.723,
+      "speechEnd": 13.928,
+      "end": 14.788,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "カスタム AI チップを拡張。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.788,
+      "speechEnd": 18.202,
+      "end": 18.382,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "NVIDIAはMediaTekの"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.382,
+      "speechEnd": 20.891,
+      "end": 21.071,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "35億ドル"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.071,
+      "speechEnd": 24.136,
+      "end": 24.416,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "の転換社債に加入し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.416,
+      "speechEnd": 37.515,
+      "end": 38.375,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "両社はPCや自動車用チップからクラウドAIインフラストラクチャやカスタムXPUへの協力をさらに拡大しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.375,
+      "speechEnd": 42.556,
+      "end": 42.896,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "NVIDIAとMediaTek Taiwanは"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.896,
+      "speechEnd": 49.167,
+      "end": 49.447,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "8月31日に協力の深化を発表し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.447,
+      "speechEnd": 52.861,
+      "end": 53.201,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "NVIDIAはMediaTekが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.201,
+      "speechEnd": 60.168,
+      "end": 60.788,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "発行する海外転換社債に35億ドルを投資しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.788,
+      "speechEnd": 63.227,
+      "end": 63.507,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "MediaTekは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.507,
+      "speechEnd": 68.454,
+      "end": 68.734,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "NVLink Fusionプラットフォームを使用して、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.734,
+      "speechEnd": 72.984,
+      "end": 73.264,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "顧客がカスタムXPUを開発し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.264,
+      "speechEnd": 81.207,
+      "end": 81.987,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "NVIDIAのキャビネットレベルのAIシステムにアクセスできるようにします。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 81.987,
+      "speechEnd": 85.053,
+      "end": 85.333,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "このパートナーシップは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 85.333,
+      "speechEnd": 93.555,
+      "end": 94.175,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ローカルAIコンピューティングと自動車プラットフォームもカバーしています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.175,
+      "speechEnd": 96.544,
+      "end": 96.824,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "業界では、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 96.824,
+      "speechEnd": 101.91,
+      "end": 102.25,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "NVIDIAは相互接続とソフトウェア標準を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.25,
+      "speechEnd": 106.64,
+      "end": 106.92,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "カスタムAIチップ市場に拡大しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 106.92,
+      "speechEnd": 114.863,
+      "end": 115.143,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "MediaTekはデータセンターと高性能コンピューティングの収益を拡大し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.143,
+      "speechEnd": 120.717,
+      "end": 121.497,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "携帯電話チップへの依存を減らすことができます。"
+    },
+    {
+      "parentKey": "why",
+      "start": 121.497,
+      "speechEnd": 125.468,
+      "end": 126.088,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 126.088,
+      "speechEnd": 128.318,
+      "end": 128.598,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この取引は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 128.598,
+      "speechEnd": 132.152,
+      "end": 132.432,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "台湾の半導体サプライチェーン、"
+    },
+    {
+      "parentKey": "why",
+      "start": 132.432,
+      "speechEnd": 135.706,
+      "end": 135.986,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "AIインフラストラクチャの競争、"
+    },
+    {
+      "parentKey": "why",
+      "start": 135.986,
+      "speechEnd": 143.999,
+      "end": 144.859,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "およびNVIDIAプラットフォーム標準の拡大にも影響を与えます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 144.859,
+      "speechEnd": 146.949,
+      "end": 147.229,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 147.229,
+      "speechEnd": 149.947,
+      "end": 150.227,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "コンバーチブル用語、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 150.227,
+      "speechEnd": 155.801,
+      "end": 156.081,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "MediaTekの最初のNVLink Fusion顧客、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 156.081,
+      "speechEnd": 161.097,
+      "end": 161.438,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "クラウドプロバイダーがカスタムXPUを"
+    },
+    {
+      "parentKey": "watch",
+      "start": 161.438,
+      "speechEnd": 166.454,
+      "end": 167.314,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "採用しているかどうかに注目してください。"
+    }
+  ]
+}

@@ -1,0 +1,330 @@
+{
+  "version": 3,
+  "duration": 151.98,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 457,
+  "charactersPerMinute": 180.4,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 15.625,
+      "text": "大統領候補に関する合意に達するためにコソボの主要政党によって達成された政治的行き詰まりの突破口"
+    },
+    {
+      "key": "dek",
+      "start": 15.625,
+      "end": 35.294,
+      "text": "ヴェテベンドシェとLDKは、政府樹立とEU改革再開の条件を整えるため、元憲法裁判所判事ベキム・セイディウ氏を支援することで合意した。"
+    },
+    {
+      "key": "body-0",
+      "start": 35.294,
+      "end": 72.717,
+      "text": "コソボの与党ヴェテヴェンドシェと野党LDKは8月31日、法学教授で元外交官、元憲法裁判所判事のベキム・セイディウ氏を共同で大統領として支持することで合意した。両党の議席と少数民族の支持により、必要な票を獲得するチャンスがあると予想される。"
+    },
+    {
+      "key": "body-1",
+      "start": 72.717,
+      "end": 117.45,
+      "text": "コソボは過去2年間、大統領選挙と政権樹立の失敗により何度も行き詰まりを迎えてきた。この合意が履行されれば、再び早期選挙のリスクが軽減され、停滞しているEU改革と財政協定を前進させることが可能になる。しかし、本当の安定は依然として議会が首尾よく政府を樹立できるかどうかにかかっています。"
+    },
+    {
+      "key": "why",
+      "start": 117.45,
+      "end": 135.159,
+      "text": "それはバルカン半島での実際の制度的な意味合いを持つ政治的なブレークスルーでした。"
+    },
+    {
+      "key": "watch",
+      "start": 135.159,
+      "end": 151.98,
+      "text": "議会の開会時間、セイディウ氏の正式な投票、新政権のEUとセルビアとの対話にご注目ください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.878,
+      "end": 5.218,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "大統領候補に関する合意に達するため"
+    },
+    {
+      "parentKey": "title",
+      "start": 5.218,
+      "speechEnd": 14.765,
+      "end": 15.625,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "にコソボの主要政党によって達成された政治的行き詰まりの突破口。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.625,
+      "speechEnd": 18.761,
+      "end": 19.041,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ヴェテベンドシェとLDKは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.041,
+      "speechEnd": 25.521,
+      "end": 25.801,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "政府樹立とEU改革再開の条件を整えるため、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.801,
+      "speechEnd": 30.888,
+      "end": 31.228,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "元憲法裁判所判事ベキム・セイディウ氏を"
+    },
+    {
+      "parentKey": "dek",
+      "start": 31.228,
+      "speechEnd": 34.434,
+      "end": 35.294,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "支援することで合意した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 35.294,
+      "speechEnd": 43.308,
+      "end": 43.588,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "コソボの与党ヴェテヴェンドシェと野党LDKは8月31日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.588,
+      "speechEnd": 47.281,
+      "end": 47.561,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "法学教授で元外交官、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.561,
+      "speechEnd": 55.993,
+      "end": 56.333,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "元憲法裁判所判事のベキム・セイディウ氏を共同で大統領として"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.333,
+      "speechEnd": 59.678,
+      "end": 60.298,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "支持することで合意した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.298,
+      "speechEnd": 65.594,
+      "end": 65.874,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "両党の議席と少数民族の支持により、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.874,
+      "speechEnd": 71.936,
+      "end": 72.717,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "必要な票を獲得するチャンスがあると予想される。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 72.717,
+      "speechEnd": 76.201,
+      "end": 76.481,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "コソボは過去2年間、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 76.481,
+      "speechEnd": 84.703,
+      "end": 85.324,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "大統領選挙と政権樹立の失敗により何度も行き詰まりを迎えてきた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 85.324,
+      "speechEnd": 89.156,
+      "end": 89.436,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この合意が履行されれば、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 89.436,
+      "speechEnd": 93.966,
+      "end": 94.246,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "再び早期選挙のリスクが軽減され、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.246,
+      "speechEnd": 102.468,
+      "end": 103.089,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "停滞しているEU改革と財政協定を前進させることが可能になる。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.089,
+      "speechEnd": 105.109,
+      "end": 105.39,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "しかし、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 105.39,
+      "speechEnd": 109.849,
+      "end": 110.189,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "本当の安定は依然として議会が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 110.189,
+      "speechEnd": 116.67,
+      "end": 117.45,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "首尾よく政府を樹立できるかどうかにかかっています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 117.45,
+      "speechEnd": 121.422,
+      "end": 122.042,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 122.042,
+      "speechEnd": 129.22,
+      "end": 129.56,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "それはバルカン半島での実際の制度的な意味合いを"
+    },
+    {
+      "parentKey": "why",
+      "start": 129.56,
+      "speechEnd": 134.298,
+      "end": 135.159,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "持つ政治的なブレークスルーでした。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 135.159,
+      "speechEnd": 137.249,
+      "end": 137.529,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 137.529,
+      "speechEnd": 140.316,
+      "end": 140.597,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "議会の開会時間、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 140.597,
+      "speechEnd": 144.29,
+      "end": 144.57,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "セイディウ氏の正式な投票、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 144.57,
+      "speechEnd": 151.12,
+      "end": 151.98,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "新政権のEUとセルビアとの対話にご注目ください。"
+    }
+  ]
+}

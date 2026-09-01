@@ -1,0 +1,420 @@
+{
+  "version": 3,
+  "duration": 212.663,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 638,
+  "charactersPerMinute": 180.0,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 17.295,
+      "text": "ハーグ仲裁裁判所は、インダス川水条約が有効なままであると裁定しましたインドは裁定管轄権を承認することを拒否しました"
+    },
+    {
+      "key": "dek",
+      "start": 17.295,
+      "end": 41.707,
+      "text": "裁判所はまた、ラトル水力発電所について暫定措置を講じたが、インドは仲裁裁判所の権限を受け入れないことを繰り返し、インドとパキスタンの間の水資源紛争がエスカレートした。"
+    },
+    {
+      "key": "body-0",
+      "start": 41.707,
+      "end": 93.06,
+      "text": "ハーグの常設仲裁裁判所は、1960年条約の法的効力を確認し、ラトル水力発電所に対する暫定措置を発令し、8月31日にインダス川水条約仲裁事件に関する新しい判決を出しました。ロイター通信によると、この判決は、独立した中立的な専門家が技術評価を完了するまで、ダムの構造工事の一部を制限することをインドに要求している。"
+    },
+    {
+      "key": "body-1",
+      "start": 93.06,
+      "end": 146.922,
+      "text": "インド政府は、仲裁裁判所の管轄権と決定を承認することを拒否し、決定が主権上の意思決定に影響を与えないことを強調します。インドは2025年のカシミール攻撃以来、いくつかの条約の取り決めを中断している。パキスタンの農業はインダス川システムに大きく依存しているため、水の紛争は外交や安全保障の問題からエネルギー、灌漑、食料安全保障にまで拡大している。"
+    },
+    {
+      "key": "why",
+      "start": 146.922,
+      "end": 184.348,
+      "text": "この判決は、インドとパキスタンの国境を越えた水利権や大規模な水力発電プロジェクトに直接的な影響を及ぼし、インドがこれを拒否し続けると、二国間の外交摩擦や下流の水供給の不確実性が高まる可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 184.348,
+      "end": 212.663,
+      "text": "2027年までに、インドでのプロジェクト・ラトルの継続、パキスタンでのその後の外交または法的措置、世界銀行が任命した中立的な専門家による技術的判決に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.996,
+      "end": 3.276,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ハーグ仲裁裁判所は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.276,
+      "speechEnd": 10.87,
+      "end": 11.21,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "インダス川水条約が有効なままであると裁定しましたインドは"
+    },
+    {
+      "parentKey": "title",
+      "start": 11.21,
+      "speechEnd": 16.435,
+      "end": 17.295,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "裁定管轄権を承認することを拒否しました。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.295,
+      "speechEnd": 19.733,
+      "end": 20.014,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "裁判所はまた、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.014,
+      "speechEnd": 26.075,
+      "end": 26.355,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ラトル水力発電所について暫定措置を講じたが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.355,
+      "speechEnd": 33.74,
+      "end": 34.02,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インドは仲裁裁判所の権限を受け入れないことを繰り返し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 34.02,
+      "speechEnd": 40.847,
+      "end": 41.707,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "インドとパキスタンの間の水資源紛争がエスカレートした。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.707,
+      "speechEnd": 45.609,
+      "end": 45.889,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ハーグの常設仲裁裁判所は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.889,
+      "speechEnd": 52.159,
+      "end": 52.439,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "1960年条約の法的効力を確認し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.439,
+      "speechEnd": 58.431,
+      "end": 58.711,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ラトル水力発電所に対する暫定措置を発令し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.711,
+      "speechEnd": 69.579,
+      "end": 70.199,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "8月31日にインダス川水条約仲裁事件に関する新しい判決を出しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.199,
+      "speechEnd": 73.195,
+      "end": 73.475,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.475,
+      "speechEnd": 75.844,
+      "end": 76.124,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この判決は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.124,
+      "speechEnd": 83.369,
+      "end": 83.649,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "独立した中立的な専門家が技術評価を完了するまで、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 83.649,
+      "speechEnd": 88.944,
+      "end": 89.284,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ダムの構造工事の一部を制限することを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 89.284,
+      "speechEnd": 92.28,
+      "end": 93.06,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "インドに要求している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.06,
+      "speechEnd": 95.638,
+      "end": 95.918,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インド政府は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 95.918,
+      "speechEnd": 102.606,
+      "end": 102.886,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "仲裁裁判所の管轄権と決定を承認することを拒否し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.886,
+      "speechEnd": 110.829,
+      "end": 111.449,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "決定が主権上の意思決定に影響を与えないことを強調します。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.449,
+      "speechEnd": 117.858,
+      "end": 118.138,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インドは2025年のカシミール攻撃以来、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.138,
+      "speechEnd": 123.503,
+      "end": 124.123,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "いくつかの条約の取り決めを中断している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 124.123,
+      "speechEnd": 132.135,
+      "end": 132.415,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "パキスタンの農業はインダス川システムに大きく依存しているため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 132.415,
+      "speechEnd": 138.685,
+      "end": 138.965,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "水の紛争は外交や安全保障の問題からエネルギー、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 138.965,
+      "speechEnd": 140.985,
+      "end": 141.266,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "灌漑、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 141.266,
+      "speechEnd": 146.142,
+      "end": 146.922,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "食料安全保障にまで拡大している。"
+    },
+    {
+      "parentKey": "why",
+      "start": 146.922,
+      "speechEnd": 150.894,
+      "end": 151.514,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 151.514,
+      "speechEnd": 153.882,
+      "end": 154.162,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この判決は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 154.162,
+      "speechEnd": 167.818,
+      "end": 168.098,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インドとパキスタンの国境を越えた水利権や大規模な水力発電プロジェクトに直接的な影響を及ぼし、"
+    },
+    {
+      "parentKey": "why",
+      "start": 168.098,
+      "speechEnd": 171.999,
+      "end": 172.279,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インドがこれを拒否し続けると、"
+    },
+    {
+      "parentKey": "why",
+      "start": 172.279,
+      "speechEnd": 179.803,
+      "end": 180.143,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "二国間の外交摩擦や下流の水供給の不確実性が"
+    },
+    {
+      "parentKey": "why",
+      "start": 180.143,
+      "speechEnd": 183.488,
+      "end": 184.348,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "高まる可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 184.348,
+      "speechEnd": 186.438,
+      "end": 186.718,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 186.718,
+      "speechEnd": 190.341,
+      "end": 190.621,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "2027年までに、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 190.621,
+      "speechEnd": 194.94,
+      "end": 195.22,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インドでのプロジェクト・ラトルの継続、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 195.22,
+      "speechEnd": 201.281,
+      "end": 201.561,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "パキスタンでのその後の外交または法的措置、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 201.561,
+      "speechEnd": 211.803,
+      "end": 212.663,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "世界銀行が任命した中立的な専門家による技術的判決に注目してください。"
+    }
+  ]
+}

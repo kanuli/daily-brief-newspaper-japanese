@@ -1,0 +1,440 @@
+{
+  "version": 3,
+  "duration": 197.355,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 589,
+  "charactersPerMinute": 179.1,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 21.559,
+      "text": "トランプ大統領は、米国とイランの間の別の直接的な交戦である1カ月ぶりに、イランがエスカレートすれば、より深刻な打撃を受けると警告している。"
+    },
+    {
+      "key": "dek",
+      "start": 21.559,
+      "end": 41.435,
+      "text": "ホルムズ海峡近くのイランの発射施設を攻撃した後、イランはヨルダンの米軍陣地にミサイルを発射した。両国は外交信号を保持していた。"
+    },
+    {
+      "key": "body-0",
+      "start": 41.435,
+      "end": 89.162,
+      "text": "米国とイランはホルムズ海峡周辺での直接軍事交流を再開した。ロイターとAP通信は、米国がロケット弾と地雷を配備する準備をしていたとされるイランのララク島近くの施設を最初に攻撃し、イランがヨルダンの米軍陣地にミサイルを発射し、そのほとんどが迎撃されたと報じた。これは、約1ヶ月ぶりの双方間の火力の直接交換である。"
+    },
+    {
+      "key": "body-1",
+      "start": 89.162,
+      "end": 141.288,
+      "text": "ドナルド・トランプ米大統領は、イランがさらにエスカレートすれば米国はより積極的に対応し、核兵器使用の可能性を軽視すると述べた。イラン側は、さらなる攻撃が発生した場合にはより強力な対抗措置を講じると警告し、両国は依然として外交チャンネルを完全に閉鎖しておらず、「軍事的エスカレーションは限られており、外交の窓はまだ開いている」という現状を残している。"
+    },
+    {
+      "key": "why",
+      "start": 141.288,
+      "end": 171.822,
+      "text": "限られた規模であっても、直接的な消防活動は、石油価格、保険料、輸送ルート、およびアジアへのエネルギー輸入コストにすぐに影響を与える可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 171.822,
+      "end": 197.355,
+      "text": "イランがより多くのミサイルを発射するか、地雷を配備するか、次回の米軍作戦、湾岸諸国での防空警報、ホルムズ船の交通量と原油価格の対応に注意を払う。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.857,
+      "end": 3.137,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "トランプ大統領は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.137,
+      "speechEnd": 11.289,
+      "end": 11.569,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国とイランの間の別の直接的な交戦である1カ月ぶりに、"
+    },
+    {
+      "parentKey": "title",
+      "start": 11.569,
+      "speechEnd": 15.123,
+      "end": 15.403,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イランがエスカレートすれば、"
+    },
+    {
+      "parentKey": "title",
+      "start": 15.403,
+      "speechEnd": 20.698,
+      "end": 21.559,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "より深刻な打撃を受けると警告している。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.559,
+      "speechEnd": 28.526,
+      "end": 28.807,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ホルムズ海峡近くのイランの発射施設を攻撃した後、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 28.807,
+      "speechEnd": 35.356,
+      "end": 35.976,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "イランはヨルダンの米軍陣地にミサイルを発射した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 35.976,
+      "speechEnd": 40.575,
+      "end": 41.435,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "両国は外交信号を保持していた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.435,
+      "speechEnd": 49.936,
+      "end": 50.556,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "米国とイランはホルムズ海峡周辺での直接軍事交流を再開した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.556,
+      "speechEnd": 53.483,
+      "end": 53.763,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイターとAP通信は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.763,
+      "speechEnd": 58.64,
+      "end": 58.98,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "米国がロケット弾と地雷を配備する準備を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.98,
+      "speechEnd": 66.784,
+      "end": 67.064,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "していたとされるイランのララク島近くの施設を最初に攻撃し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.064,
+      "speechEnd": 73.335,
+      "end": 73.615,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イランがヨルダンの米軍陣地にミサイルを発射し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.615,
+      "speechEnd": 78.214,
+      "end": 78.834,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "そのほとんどが迎撃されたと報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 78.834,
+      "speechEnd": 80.925,
+      "end": 81.205,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "これは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 81.205,
+      "speechEnd": 88.382,
+      "end": 89.162,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "約1ヶ月ぶりの双方間の火力の直接交換である。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 89.162,
+      "speechEnd": 93.133,
+      "end": 93.413,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ドナルド・トランプ米大統領は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.413,
+      "speechEnd": 101.426,
+      "end": 101.706,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イランがさらにエスカレートすれば米国はより積極的に対応し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.706,
+      "speechEnd": 106.863,
+      "end": 107.483,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "核兵器使用の可能性を軽視すると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.483,
+      "speechEnd": 109.713,
+      "end": 109.993,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イラン側は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.993,
+      "speechEnd": 114.382,
+      "end": 114.722,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "さらなる攻撃が発生した場合には"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.722,
+      "speechEnd": 120.018,
+      "end": 120.298,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "より強力な対抗措置を講じると警告し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.298,
+      "speechEnd": 127.893,
+      "end": 128.173,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "両国は依然として外交チャンネルを完全に閉鎖しておらず、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 128.173,
+      "speechEnd": 133.329,
+      "end": 133.609,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "「軍事的エスカレーションは限られており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 133.609,
+      "speechEnd": 140.507,
+      "end": 141.288,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "外交の窓はまだ開いている」という現状を残している。"
+    },
+    {
+      "parentKey": "why",
+      "start": 141.288,
+      "speechEnd": 145.259,
+      "end": 145.879,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 145.879,
+      "speechEnd": 149.154,
+      "end": 149.434,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "限られた規模であっても、"
+    },
+    {
+      "parentKey": "why",
+      "start": 149.434,
+      "speechEnd": 152.709,
+      "end": 152.989,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "直接的な消防活動は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 152.989,
+      "speechEnd": 155.289,
+      "end": 155.569,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "石油価格、"
+    },
+    {
+      "parentKey": "why",
+      "start": 155.569,
+      "speechEnd": 157.659,
+      "end": 157.939,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "保険料、"
+    },
+    {
+      "parentKey": "why",
+      "start": 157.939,
+      "speechEnd": 160.099,
+      "end": 160.379,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "輸送ルート、"
+    },
+    {
+      "parentKey": "why",
+      "start": 160.379,
+      "speechEnd": 167.208,
+      "end": 167.548,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "およびアジアへのエネルギー輸入コストにすぐに影響を"
+    },
+    {
+      "parentKey": "why",
+      "start": 167.548,
+      "speechEnd": 170.962,
+      "end": 171.822,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "与える可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 171.822,
+      "speechEnd": 173.912,
+      "end": 174.192,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 174.192,
+      "speechEnd": 179.279,
+      "end": 179.559,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イランがより多くのミサイルを発射するか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 179.559,
+      "speechEnd": 182.346,
+      "end": 182.626,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "地雷を配備するか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 182.626,
+      "speechEnd": 185.553,
+      "end": 185.833,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "次回の米軍作戦、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 185.833,
+      "speechEnd": 189.247,
+      "end": 189.527,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "湾岸諸国での防空警報、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 189.527,
+      "speechEnd": 196.495,
+      "end": 197.355,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ホルムズ船の交通量と原油価格の対応に注意を払う。"
+    }
+  ]
+}

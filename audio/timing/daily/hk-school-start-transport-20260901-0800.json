@@ -1,0 +1,540 @@
+{
+  "version": 3,
+  "duration": 224.653,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 621,
+  "charactersPerMinute": 165.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 15.424,
+      "text": "香港運輸省は本日、共同監督を強化し、学生により多くの交通時間を確保するよう促しました"
+    },
+    {
+      "key": "dek",
+      "start": 15.424,
+      "end": 43.176,
+      "text": "運輸省は、学校の初日が通常よりも忙しくなると予想しており、鉄道、バス、フェリー、クロスボーダーの学生サービスはすでに残業とバックアップ能力を必要としています。"
+    },
+    {
+      "key": "body-0",
+      "start": 43.176,
+      "end": 105.453,
+      "text": "香港の新学年は今日から始まります。8月31日、運輸省は、最初の授業日の全体的な道路交通が通常よりも混雑すると予想されること、特に新入生は事前に公共交通機関のルートと学校への往復のフライトに精通する必要があり、フェリーに乗っている学生も船の種類とルートを確認する必要があることを再度生徒に思い出させました。当局はまた、学校が集中している地域への運転を避けるよう運転者に促している。"
+    },
+    {
+      "key": "body-1",
+      "start": 105.453,
+      "end": 164.907,
+      "text": "主要な鉄道、フランチャイズバス、フェリー、タクシー、クロスボーダー学生輸送サービスは、適切なシフト、予備ボート、人員を準備するために必要とされています。本日午前中、運輸省緊急交通調整センターを最高レベルの共同監視モードにアップグレードし、主要な乗換駅、学区、港湾、トンネルに人員を派遣して現場監視を行い、必要に応じて時間外労働や交通管理措置を講じる。"
+    },
+    {
+      "key": "why",
+      "start": 164.907,
+      "end": 198.714,
+      "text": "開業日の交通は、多くの学生、保護者、通勤者に直接影響を与えます。公共交通機関の予約容量と道路管理は、風と雨が追加の学生交通と組み合わされている場合に特に重要です。"
+    },
+    {
+      "key": "watch",
+      "start": 198.714,
+      "end": 224.653,
+      "text": "運輸省の午前中の交通状況、MTRとバスの時間外手配、主要な学区と港の交通状況、SADR嵐によって追加の遅延が引き起こされているかどうかに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.344,
+      "end": 3.624,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "香港運輸省は本日、"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.624,
+      "speechEnd": 6.899,
+      "end": 7.179,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "共同監督を強化し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.179,
+      "speechEnd": 14.564,
+      "end": 15.424,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "学生により多くの交通時間を確保するよう促しました。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.424,
+      "speechEnd": 17.584,
+      "end": 17.864,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "運輸省は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.864,
+      "speechEnd": 25.18,
+      "end": 25.46,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "学校の初日が通常よりも忙しくなると予想しており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.46,
+      "speechEnd": 27.48,
+      "end": 27.76,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "鉄道、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.76,
+      "speechEnd": 29.781,
+      "end": 30.061,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "バス、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 30.061,
+      "speechEnd": 32.081,
+      "end": 32.361,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "フェリー、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.361,
+      "speechEnd": 36.193,
+      "end": 36.533,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "クロスボーダーの学生サービスは"
+    },
+    {
+      "parentKey": "dek",
+      "start": 36.533,
+      "speechEnd": 42.316,
+      "end": 43.176,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "すでに残業とバックアップ能力を必要としています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.176,
+      "speechEnd": 48.611,
+      "end": 49.231,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "香港の新学年は今日から始まります。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.231,
+      "speechEnd": 52.087,
+      "end": 52.367,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "8月31日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.367,
+      "speechEnd": 54.527,
+      "end": 54.807,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "運輸省は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.807,
+      "speechEnd": 60.729,
+      "end": 61.069,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "最初の授業日の全体的な道路交通が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.069,
+      "speechEnd": 66.086,
+      "end": 66.366,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "通常よりも混雑すると予想されること、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.366,
+      "speechEnd": 79.603,
+      "end": 79.883,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "特に新入生は事前に公共交通機関のルートと学校への往復のフライトに精通する必要があり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 79.883,
+      "speechEnd": 87.129,
+      "end": 87.469,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "フェリーに乗っている学生も船の種類とルートを確認する必要が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 87.469,
+      "speechEnd": 92.764,
+      "end": 93.385,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "あることを再度生徒に思い出させました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 93.385,
+      "speechEnd": 95.614,
+      "end": 95.894,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "当局はまた、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 95.894,
+      "speechEnd": 104.673,
+      "end": 105.453,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "学校が集中している地域への運転を避けるよう運転者に促している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 105.453,
+      "speechEnd": 107.822,
+      "end": 108.102,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "主要な鉄道、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.102,
+      "speechEnd": 110.68,
+      "end": 110.96,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "フランチャイズバス、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 110.96,
+      "speechEnd": 112.98,
+      "end": 113.26,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "フェリー、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 113.26,
+      "speechEnd": 115.281,
+      "end": 115.561,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "タクシー、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.561,
+      "speechEnd": 119.741,
+      "end": 120.021,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "クロスボーダー学生輸送サービスは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.021,
+      "speechEnd": 122.32,
+      "end": 122.6,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "適切なシフト、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 122.6,
+      "speechEnd": 124.83,
+      "end": 125.11,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "予備ボート、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 125.11,
+      "speechEnd": 130.126,
+      "end": 130.746,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "人員を準備するために必要とされています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 130.746,
+      "speechEnd": 133.185,
+      "end": 133.465,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "本日午前中、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 133.465,
+      "speechEnd": 144.194,
+      "end": 144.474,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "運輸省緊急交通調整センターを最高レベルの共同監視モードにアップグレードし、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 144.474,
+      "speechEnd": 146.843,
+      "end": 147.123,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "主要な乗換駅、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 147.123,
+      "speechEnd": 149.144,
+      "end": 149.424,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "学区、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 149.424,
+      "speechEnd": 151.444,
+      "end": 151.724,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "港湾、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 151.724,
+      "speechEnd": 156.741,
+      "end": 157.021,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "トンネルに人員を派遣して現場監視を行い、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 157.021,
+      "speechEnd": 164.127,
+      "end": 164.907,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "必要に応じて時間外労働や交通管理措置を講じる。"
+    },
+    {
+      "parentKey": "why",
+      "start": 164.907,
+      "speechEnd": 168.879,
+      "end": 169.499,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 169.499,
+      "speechEnd": 172.564,
+      "end": 172.844,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "開業日の交通は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 172.844,
+      "speechEnd": 175.144,
+      "end": 175.424,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "多くの学生、"
+    },
+    {
+      "parentKey": "why",
+      "start": 175.424,
+      "speechEnd": 177.583,
+      "end": 177.864,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "保護者、"
+    },
+    {
+      "parentKey": "why",
+      "start": 177.864,
+      "speechEnd": 182.044,
+      "end": 182.664,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "通勤者に直接影響を与えます。"
+    },
+    {
+      "parentKey": "why",
+      "start": 182.664,
+      "speechEnd": 188.516,
+      "end": 188.796,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "公共交通機関の予約容量と道路管理は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 188.796,
+      "speechEnd": 197.854,
+      "end": 198.714,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "風と雨が追加の学生交通と組み合わされている場合に特に重要です。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 198.714,
+      "speechEnd": 200.804,
+      "end": 201.084,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 201.084,
+      "speechEnd": 205.125,
+      "end": 205.405,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "運輸省の午前中の交通状況、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 205.405,
+      "speechEnd": 209.028,
+      "end": 209.308,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "MTRとバスの時間外手配、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 209.308,
+      "speechEnd": 213.488,
+      "end": 213.768,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "主要な学区と港の交通状況、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 213.768,
+      "speechEnd": 217.531,
+      "end": 217.871,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "SADR嵐によって追加の遅延が"
+    },
+    {
+      "parentKey": "watch",
+      "start": 217.871,
+      "speechEnd": 223.793,
+      "end": 224.653,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "引き起こされているかどうかに注意してください。"
+    }
+  ]
+}

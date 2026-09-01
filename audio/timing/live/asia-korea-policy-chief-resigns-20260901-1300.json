@@ -1,0 +1,480 @@
+{
+  "version": 3,
+  "duration": 202.344,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 556,
+  "charactersPerMinute": 164.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 18.907,
+      "text": "韓国の政策部門の責任者であるキム・ロンファンの辞任住宅とレバレッジETFの論争は、イ・ジェミョン政権の再編への圧力を強めている"
+    },
+    {
+      "key": "dek",
+      "start": 18.907,
+      "end": 41.372,
+      "text": "リー大統領は、中核的な経済政策スタッフの辞任を受け入れた。住宅価格、賃貸料、株式市場政策の論争は、政府の支援を侵食している。"
+    },
+    {
+      "key": "body-0",
+      "start": 41.372,
+      "end": 99.913,
+      "text": "韓国の李大統領は、9月1日に大統領の政策部門の責任者であるキム・ロンファンの辞任を受け入れた。大統領官邸は辞任の正式な理由を公表しなかったが、ロイター通信と中華人民共和国中央通信は、住宅価格と賃料圧力、資本市場政策の論争、5月の単一株式レバレッジETFの立ち上げが、市場の不安定性を増幅し、中核的な経済政策チームを政治的圧力にさらしていると非難した。"
+    },
+    {
+      "key": "body-1",
+      "start": 99.913,
+      "end": 144.145,
+      "text": "キム・ロンファン氏は、昨年李政権が樹立されて以来、米韓貿易、半導体産業、資本市場改革、主要な経済政策を担当してきました。この離脱は、最近の閣僚の入れ替えに近いため、政府は住宅、金融市場、拡張的な財政ルートで人事と政策の調整を行う可能性があります。"
+    },
+    {
+      "key": "why",
+      "start": 144.145,
+      "end": 177.661,
+      "text": "コア政策スタッフの離職は、不動産、資本市場、産業政策の実施ペースを変える可能性があり、韓国の株式、住宅、企業投資に直接的な政策影響を及ぼす可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 177.661,
+      "end": 202.344,
+      "text": "Jin Rongfanの後継者、住宅政策が変更されたかどうか、ETF規制の調整を活用したかどうか、他の政策ラインの幹部が後に続いたかどうかに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 11.984,
+      "end": 12.214,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "韓国の政策部門の責任者であるキム・ロンファンの辞任住宅とレバレッジETFの論争は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 12.214,
+      "speechEnd": 18.206,
+      "end": 18.907,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "イ・ジェミョン政権の再編への圧力を強めている。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.907,
+      "speechEnd": 21.345,
+      "end": 21.575,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "リー大統領は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.575,
+      "speechEnd": 27.707,
+      "end": 28.207,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "中核的な経済政策スタッフの辞任を受け入れた。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 28.207,
+      "speechEnd": 30.367,
+      "end": 30.597,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "住宅価格、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 30.597,
+      "speechEnd": 32.687,
+      "end": 32.917,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "賃貸料、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.917,
+      "speechEnd": 36.54,
+      "end": 36.77,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "株式市場政策の論争は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 36.77,
+      "speechEnd": 40.672,
+      "end": 41.372,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "政府の支援を侵食している。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.372,
+      "speechEnd": 44.578,
+      "end": 44.808,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "韓国の李大統領は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.808,
+      "speechEnd": 56.722,
+      "end": 57.222,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "9月1日に大統領の政策部門の責任者であるキム・ロンファンの辞任を受け入れた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.222,
+      "speechEnd": 64.887,
+      "end": 65.117,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "大統領官邸は辞任の正式な理由を公表しなかったが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.117,
+      "speechEnd": 71.945,
+      "end": 72.175,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信と中華人民共和国中央通信は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.175,
+      "speechEnd": 75.31,
+      "end": 75.54,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "住宅価格と賃料圧力、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.54,
+      "speechEnd": 78.815,
+      "end": 79.045,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "資本市場政策の論争、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 79.045,
+      "speechEnd": 86.013,
+      "end": 86.243,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "5月の単一株式レバレッジETFの立ち上げが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 86.243,
+      "speechEnd": 90.284,
+      "end": 90.514,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "市場の不安定性を増幅し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 90.514,
+      "speechEnd": 99.293,
+      "end": 99.913,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "中核的な経済政策チームを政治的圧力にさらしていると非難した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.913,
+      "speechEnd": 102.77,
+      "end": 103.0,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "キム・ロンファン氏は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.0,
+      "speechEnd": 107.181,
+      "end": 107.411,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "昨年李政権が樹立されて以来、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.411,
+      "speechEnd": 109.571,
+      "end": 109.801,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米韓貿易、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.801,
+      "speechEnd": 112.17,
+      "end": 112.4,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "半導体産業、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.4,
+      "speechEnd": 114.908,
+      "end": 115.138,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "資本市場改革、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.138,
+      "speechEnd": 120.364,
+      "end": 120.864,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "主要な経済政策を担当してきました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.864,
+      "speechEnd": 123.233,
+      "end": 123.463,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この離脱は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 123.463,
+      "speechEnd": 128.34,
+      "end": 128.57,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "最近の閣僚の入れ替えに近いため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 128.57,
+      "speechEnd": 131.009,
+      "end": 131.239,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "政府は住宅、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 131.239,
+      "speechEnd": 133.399,
+      "end": 133.629,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "金融市場、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 133.629,
+      "speechEnd": 140.179,
+      "end": 140.459,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "拡張的な財政ルートで人事と政策の調整を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 140.459,
+      "speechEnd": 143.525,
+      "end": 144.145,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "行う可能性があります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 144.145,
+      "speechEnd": 148.116,
+      "end": 148.616,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 148.616,
+      "speechEnd": 152.518,
+      "end": 152.748,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "コア政策スタッフの離職は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 152.748,
+      "speechEnd": 154.839,
+      "end": 155.069,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "不動産、"
+    },
+    {
+      "parentKey": "why",
+      "start": 155.069,
+      "speechEnd": 157.229,
+      "end": 157.459,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "資本市場、"
+    },
+    {
+      "parentKey": "why",
+      "start": 157.459,
+      "speechEnd": 164.078,
+      "end": 164.308,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "産業政策の実施ペースを変える可能性があり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 164.308,
+      "speechEnd": 166.746,
+      "end": 166.977,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "韓国の株式、"
+    },
+    {
+      "parentKey": "why",
+      "start": 166.977,
+      "speechEnd": 168.997,
+      "end": 169.227,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "住宅、"
+    },
+    {
+      "parentKey": "why",
+      "start": 169.227,
+      "speechEnd": 176.961,
+      "end": 177.661,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "企業投資に直接的な政策影響を及ぼす可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 177.661,
+      "speechEnd": 179.752,
+      "end": 179.982,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 179.982,
+      "speechEnd": 183.117,
+      "end": 183.347,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Jin Rongfanの後継者、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 183.347,
+      "speechEnd": 187.876,
+      "end": 188.106,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "住宅政策が変更されたかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 188.106,
+      "speechEnd": 193.402,
+      "end": 193.632,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ETF規制の調整を活用したかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 193.632,
+      "speechEnd": 201.644,
+      "end": 202.344,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "他の政策ラインの幹部が後に続いたかどうかに注目してください。"
+    }
+  ]
+}
