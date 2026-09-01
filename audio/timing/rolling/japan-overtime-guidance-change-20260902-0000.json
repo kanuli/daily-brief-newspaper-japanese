@@ -1,0 +1,430 @@
+{
+  "version": 3,
+  "duration": 200.751,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 553,
+  "charactersPerMinute": 165.3,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.659,
+      "text": "労使庁は、月45時間の時間外労働指導上限を撤廃しており、規則自体は変わっていない。"
+    },
+    {
+      "key": "dek",
+      "start": 14.659,
+      "end": 34.334,
+      "text": "9月1日から、厚生労働省は事業所の状況と健康保護対策に重点を置き、45時間以上の削減を必要としなくなりました。"
+    },
+    {
+      "key": "body-0",
+      "start": 34.334,
+      "end": 94.603,
+      "text": "日本の厚生労働省は、労働基準監督署が9月1日から残業を指導する方法を変更しました。過去には、企業が法律に基づき36件の契約を締結していても、毎月の残業時間が45時間を超える限り、監督部門はしばしば削減を要求します。新しい取り決めは、企業が健康福祉保護措置を実施しているかどうかの確認に焦点を当て、各事業所の実際の状況に応じて必要な指導を提供します。"
+    },
+    {
+      "key": "body-1",
+      "start": 94.603,
+      "end": 145.743,
+      "text": "同日、厚生労働大臣の上野健一郎は、今回は使用方法の調整のみを監督し、時間外労働の法的上限を緩和しなかったと強調した。過度の作業が健康被害を引き起こす可能性があることが判明した場合でも、監督部門は改善を求めます。政府はまた、36のプロトコルと柔軟な労働時間制度に対する相談支援を強化します。"
+    },
+    {
+      "key": "why",
+      "start": 145.743,
+      "end": 172.858,
+      "text": "監督方法の変更は、企業の人員配置と労働コンプライアンスに直接影響を及ぼし、労働組合や労働組合が長時間労働の復帰に注意を払う可能性もあります。"
+    },
+    {
+      "key": "watch",
+      "start": 172.858,
+      "end": 200.751,
+      "text": "労働省の実際の実施基準、企業が特例の利用を増やしているかどうか、燃え尽き症候群に関連する苦情、労働災害、健康に関するデータに変更があるかどうかに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.16,
+      "end": 2.44,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "労使庁は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.44,
+      "speechEnd": 10.174,
+      "end": 10.454,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "月45時間の時間外労働指導上限を撤廃しており、"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.454,
+      "speechEnd": 13.798,
+      "end": 14.659,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "規則自体は変わっていない。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.659,
+      "speechEnd": 17.446,
+      "end": 17.726,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "9月1日から、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.726,
+      "speechEnd": 26.156,
+      "end": 26.437,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "厚生労働省は事業所の状況と健康保護対策に重点を置き、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.437,
+      "speechEnd": 33.474,
+      "end": 34.334,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "45時間以上の削減を必要としなくなりました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.334,
+      "speechEnd": 37.887,
+      "end": 38.167,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本の厚生労働省は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.167,
+      "speechEnd": 43.95,
+      "end": 44.291,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "労働基準監督署が9月1日から残業を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.291,
+      "speechEnd": 48.332,
+      "end": 48.952,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "指導する方法を変更しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.952,
+      "speechEnd": 51.112,
+      "end": 51.392,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "過去には、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.392,
+      "speechEnd": 58.986,
+      "end": 59.267,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "企業が法律に基づき36件の契約を締結していても、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.267,
+      "speechEnd": 66.025,
+      "end": 66.305,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "毎月の残業時間が45時間を超える限り、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.305,
+      "speechEnd": 72.088,
+      "end": 72.708,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "監督部門はしばしば削減を要求します。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.708,
+      "speechEnd": 75.495,
+      "end": 75.775,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "新しい取り決めは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.775,
+      "speechEnd": 85.391,
+      "end": 85.671,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "企業が健康福祉保護措置を実施しているかどうかの確認に焦点を当て、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 85.671,
+      "speechEnd": 93.823,
+      "end": 94.603,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "各事業所の実際の状況に応じて必要な指導を提供します。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.603,
+      "speechEnd": 96.693,
+      "end": 96.973,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同日、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 96.973,
+      "speechEnd": 101.92,
+      "end": 102.2,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "厚生労働大臣の上野健一郎は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.2,
+      "speechEnd": 107.844,
+      "end": 108.124,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今回は使用方法の調整のみを監督し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.124,
+      "speechEnd": 115.44,
+      "end": 116.06,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "時間外労働の法的上限を緩和しなかったと強調した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 116.06,
+      "speechEnd": 122.61,
+      "end": 122.95,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "過度の作業が健康被害を引き起こす可能性が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 122.95,
+      "speechEnd": 127.13,
+      "end": 127.41,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "あることが判明した場合でも、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 127.41,
+      "speechEnd": 131.591,
+      "end": 132.211,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "監督部門は改善を求めます。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 132.211,
+      "speechEnd": 134.58,
+      "end": 134.86,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "政府はまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 134.86,
+      "speechEnd": 144.963,
+      "end": 145.743,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "36のプロトコルと柔軟な労働時間制度に対する相談支援を強化します。"
+    },
+    {
+      "parentKey": "why",
+      "start": 145.743,
+      "speechEnd": 149.714,
+      "end": 150.335,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 150.335,
+      "speechEnd": 153.609,
+      "end": 153.889,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "監督方法の変更は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 153.889,
+      "speechEnd": 161.484,
+      "end": 161.764,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "企業の人員配置と労働コンプライアンスに直接影響を及ぼし、"
+    },
+    {
+      "parentKey": "why",
+      "start": 161.764,
+      "speechEnd": 168.662,
+      "end": 169.002,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "労働組合や労働組合が長時間労働の復帰に注意を"
+    },
+    {
+      "parentKey": "why",
+      "start": 169.002,
+      "speechEnd": 171.998,
+      "end": 172.858,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "払う可能性もあります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 172.858,
+      "speechEnd": 174.949,
+      "end": 175.229,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 175.229,
+      "speechEnd": 178.991,
+      "end": 179.271,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "労働省の実際の実施基準、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 179.271,
+      "speechEnd": 184.706,
+      "end": 184.986,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "企業が特例の利用を増やしているかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 184.986,
+      "speechEnd": 189.097,
+      "end": 189.377,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "燃え尽き症候群に関連する苦情、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 189.377,
+      "speechEnd": 191.537,
+      "end": 191.817,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "労働災害、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 191.817,
+      "speechEnd": 195.44,
+      "end": 195.78,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "健康に関するデータに変更が"
+    },
+    {
+      "parentKey": "watch",
+      "start": 195.78,
+      "speechEnd": 199.891,
+      "end": 200.751,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "あるかどうかに注意してください。"
+    }
+  ]
+}
