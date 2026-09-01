@@ -1,0 +1,470 @@
+{
+  "version": 3,
+  "duration": 205.009,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 607,
+  "charactersPerMinute": 177.7,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 13.603,
+      "text": "ケニアの航空労働者が2日間のストライキを終えた東アフリカのネクサス空港のフライトが徐々に再開"
+    },
+    {
+      "key": "dek",
+      "start": 13.603,
+      "end": 38.786,
+      "text": "このストライキは、ナイロビのジョモ・ケニヤッタ国際空港での遅延とキャンセルを引き起こし、労働組合は航空会社、空港、政府部門と仕事を再開するための合意に達しました。"
+    },
+    {
+      "key": "body-0",
+      "start": 38.786,
+      "end": 88.053,
+      "text": "ナイロビのジョモ・ケニヤッタ国際空港のフライト運航が正常化し始めたため、ケニアの航空労働者は9月1日に2日間のストライキを終了した。この作戦には主に航空管制と関連する空港職員が関与し、複数の地域内および国際便の遅延またはキャンセルを引き起こし、東アフリカの多国籍航空会社にフライトを調整することを余儀なくされました。"
+    },
+    {
+      "key": "body-1",
+      "start": 88.053,
+      "end": 147.909,
+      "text": "労働紛争は、長年実施されていない団体交渉契約、給与見直し、組合費、従業員福利厚生に焦点を当てています。労働組合、民間航空局、空港管理当局、関連航空会社が再開の取り決めに達した後、政府は労働問題の積み重ねに引き続き対処すると述べた。ナイロビは東アフリカの重要な航空ハブであるため、その後の回復のスピードは依然として地域のビジネスと観光の交通に影響を与えます。"
+    },
+    {
+      "key": "why",
+      "start": 147.909,
+      "end": 179.0,
+      "text": "主要な航空ハブの労働紛争は、国境を越えた物流、観光、ビジネス輸送に急速に広がる可能性があり、復帰協定は継続的な地域輸送の混乱のリスクを軽減することができます。"
+    },
+    {
+      "key": "watch",
+      "start": 179.0,
+      "end": 205.009,
+      "text": "未処理のフライトが完全にクリアされたとき、団体交渉協定が実施されたかどうか、交渉の進展が不十分であるために組合が再び行動を起こすかどうかに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 5.644,
+      "end": 5.984,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ケニアの航空労働者が2日間のストライキを"
+    },
+    {
+      "parentKey": "title",
+      "start": 5.984,
+      "speechEnd": 12.743,
+      "end": 13.603,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "終えた東アフリカのネクサス空港のフライトが徐々に再開。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.603,
+      "speechEnd": 16.181,
+      "end": 16.461,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "このストライキは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.461,
+      "speechEnd": 24.752,
+      "end": 25.033,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ナイロビのジョモ・ケニヤッタ国際空港での遅延とキャンセルを引き起こし、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.033,
+      "speechEnd": 28.029,
+      "end": 28.309,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "労働組合は航空会社、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 28.309,
+      "speechEnd": 30.329,
+      "end": 30.609,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "空港、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 30.609,
+      "speechEnd": 37.925,
+      "end": 38.786,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "政府部門と仕事を再開するための合意に達しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.786,
+      "speechEnd": 47.635,
+      "end": 47.915,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ナイロビのジョモ・ケニヤッタ国際空港のフライト運航が正常化し始めたため、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.915,
+      "speechEnd": 50.98,
+      "end": 51.161,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "ケニアの航空労働者は"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.161,
+      "speechEnd": 53.46,
+      "end": 53.64,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "9月1日"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.64,
+      "speechEnd": 58.378,
+      "end": 58.998,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "に2日間のストライキを終了した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.998,
+      "speechEnd": 67.29,
+      "end": 67.57,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この作戦には主に航空管制と関連する空港職員が関与し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.57,
+      "speechEnd": 73.98,
+      "end": 74.32,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "複数の地域内および国際便の遅延または"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.32,
+      "speechEnd": 77.456,
+      "end": 77.736,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "キャンセルを引き起こし、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 77.736,
+      "speechEnd": 82.334,
+      "end": 82.674,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "東アフリカの多国籍航空会社にフライトを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 82.674,
+      "speechEnd": 87.273,
+      "end": 88.053,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "調整することを余儀なくされました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.053,
+      "speechEnd": 90.283,
+      "end": 90.563,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "労働紛争は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.563,
+      "speechEnd": 95.858,
+      "end": 96.138,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "長年実施されていない団体交渉契約、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 96.138,
+      "speechEnd": 98.577,
+      "end": 98.857,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "給与見直し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 98.857,
+      "speechEnd": 100.948,
+      "end": 101.228,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "組合費、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.228,
+      "speechEnd": 106.593,
+      "end": 107.213,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "従業員福利厚生に焦点を当てています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.213,
+      "speechEnd": 109.373,
+      "end": 109.653,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "労働組合、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.653,
+      "speechEnd": 112.022,
+      "end": 112.302,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "民間航空局、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.302,
+      "speechEnd": 115.019,
+      "end": 115.299,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "空港管理当局、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.299,
+      "speechEnd": 120.734,
+      "end": 121.014,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "関連航空会社が再開の取り決めに達した後、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.014,
+      "speechEnd": 128.191,
+      "end": 128.811,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "政府は労働問題の積み重ねに引き続き対処すると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 128.811,
+      "speechEnd": 134.943,
+      "end": 135.223,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ナイロビは東アフリカの重要な航空ハブであるため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 135.223,
+      "speechEnd": 140.17,
+      "end": 140.51,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "その後の回復のスピードは依然として"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 140.51,
+      "speechEnd": 147.129,
+      "end": 147.909,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "地域のビジネスと観光の交通に影響を与えます。"
+    },
+    {
+      "parentKey": "why",
+      "start": 147.909,
+      "speechEnd": 151.881,
+      "end": 152.501,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 152.501,
+      "speechEnd": 156.333,
+      "end": 156.613,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "主要な航空ハブの労働紛争は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 156.613,
+      "speechEnd": 160.028,
+      "end": 160.308,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "国境を越えた物流、"
+    },
+    {
+      "parentKey": "why",
+      "start": 160.308,
+      "speechEnd": 162.328,
+      "end": 162.608,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "観光、"
+    },
+    {
+      "parentKey": "why",
+      "start": 162.608,
+      "speechEnd": 167.695,
+      "end": 167.975,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ビジネス輸送に急速に広がる可能性があり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 167.975,
+      "speechEnd": 174.525,
+      "end": 174.865,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "復帰協定は継続的な地域輸送の混乱のリスクを"
+    },
+    {
+      "parentKey": "why",
+      "start": 174.865,
+      "speechEnd": 178.139,
+      "end": 179.0,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "軽減することができます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 179.0,
+      "speechEnd": 181.09,
+      "end": 181.37,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 181.37,
+      "speechEnd": 186.526,
+      "end": 186.806,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "未処理のフライトが完全にクリアされたとき、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 186.806,
+      "speechEnd": 191.614,
+      "end": 191.894,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "団体交渉協定が実施されたかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 191.894,
+      "speechEnd": 197.538,
+      "end": 197.878,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "交渉の進展が不十分であるために組合が"
+    },
+    {
+      "parentKey": "watch",
+      "start": 197.878,
+      "speechEnd": 204.149,
+      "end": 205.009,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "再び行動を起こすかどうかに注意してください。"
+    }
+  ]
+}
