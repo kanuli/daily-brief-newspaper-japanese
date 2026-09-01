@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 29.179,
+  "duration": 203.651,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 340.0,
-  "characters": 84,
-  "charactersPerMinute": 172.7,
+  "characters": 585,
+  "charactersPerMinute": 172.4,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.18,
@@ -21,66 +21,470 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 9.99,
-      "text": "EMXC：Reutersで最新の企業・市場動向情報を確認"
+      "end": 15.207,
+      "text": "ETF READ - THROUGH ： EMフローは引き続きプラスですが、インドは地理的に高金利とは区別されています"
+    },
+    {
+      "key": "dek",
+      "start": 15.207,
+      "end": 36.414,
+      "text": "世界の新興市場国の株式ファンドは流入を維持したが、インド市場はIPOの現金引き出しと世界的な利回りの上昇による圧力にさらされたままであった。"
     },
     {
       "key": "body-0",
-      "start": 9.99,
-      "end": 29.179,
-      "text": "Reutersを出典として、企業・市場動向に関する新しい検証済み情報を確認しました。詳細は出典資料の確認後に順次更新します。"
+      "start": 36.414,
+      "end": 106.658,
+      "text": "ロイターの最新の資金フローデータによると、新興市場国の株式ファンドは8月19日までの週に約15億7000万ドルの流入を記録した。これは、グローバルファンドがEMから完全に退出していないことを反映している。アジアの株式ファンドも同じ期間に純流入を記録した。EMXCの場合、台湾、韓国、インドなどの中国以外の市場は、単一の中国要因ではなく、依然としてAIサプライチェーン、金利、および現地の政策によって推進されています。"
+    },
+    {
+      "key": "body-1",
+      "start": 106.658,
+      "end": 160.329,
+      "text": "一方、インド市場は、高い世界的な債務金利、原油価格、および流動性を吸収するための多数のIPOに直面して、高いボラティリティと小売レバレッジの低下を経験してきました。この相違は、EMXCが主に台湾と韓国の半導体、インドの収益、米ドル/金利の方向性によって推進され続けることを意味し、単一の地域が連動して上昇することはありません。"
+    },
+    {
+      "key": "why",
+      "start": 160.329,
+      "end": 181.044,
+      "text": "資金フロー、半導体サイクル、米ドル金利は、ETFの主要市場における資金の評価と配分に直接影響します。"
+    },
+    {
+      "key": "watch",
+      "start": 181.044,
+      "end": 203.651,
+      "text": "世界の新興市場ファンドの流れ、インドのIPO供給、韓国の変動、台湾のAI輸出、米ドル/長期債務利子に注目してください。"
     }
   ],
   "semanticUnits": [
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 2.023,
-      "end": 2.363,
+      "speechEnd": 3.832,
+      "end": 4.172,
       "pause": 0.34,
       "intendedPause": 0.34,
       "reason": "punctuation-semantic",
-      "text": "EMXC："
+      "text": "ETF READ - THROUGH ："
     },
     {
       "parentKey": "title",
-      "start": 2.363,
-      "speechEnd": 9.129,
-      "end": 9.99,
-      "pause": 0.861,
-      "intendedPause": 0.86,
-      "reason": "punctuation-sentence",
-      "text": "Reutersで最新の企業・市場動向情報を確認。"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 9.99,
-      "speechEnd": 13.198,
-      "end": 13.479,
+      "start": 4.172,
+      "speechEnd": 8.144,
+      "end": 8.424,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "Reutersを出典として、"
+      "text": "EMフローは引き続きプラスですが、"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.424,
+      "speechEnd": 14.347,
+      "end": 15.207,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "インドは地理的に高金利とは区別されています。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.207,
+      "speechEnd": 23.289,
+      "end": 23.57,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "世界の新興市場国の株式ファンドは流入を維持したが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.57,
+      "speechEnd": 35.554,
+      "end": 36.414,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "インド市場はIPOの現金引き出しと世界的な利回りの上昇による圧力にさらされたままであった。"
     },
     {
       "parentKey": "body-0",
-      "start": 13.479,
-      "speechEnd": 21.5,
-      "end": 22.12,
-      "pause": 0.621,
+      "start": 36.414,
+      "speechEnd": 41.779,
+      "end": 42.06,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイターの最新の資金フローデータによると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.06,
+      "speechEnd": 45.961,
+      "end": 46.302,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "新興市場国の株式ファンドは"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.302,
+      "speechEnd": 51.667,
+      "end": 51.847,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "8月19日までの週に約15億"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.847,
+      "speechEnd": 54.495,
+      "end": 54.675,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "7000万ドル"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.675,
+      "speechEnd": 57.531,
+      "end": 58.152,
+      "pause": 0.62,
       "intendedPause": 0.62,
       "reason": "punctuation-sentence",
-      "text": "企業・市場動向に関する新しい検証済み情報を確認しました。"
+      "text": "の流入を記録した。"
     },
     {
       "parentKey": "body-0",
-      "start": 22.12,
-      "speechEnd": 28.398,
-      "end": 29.179,
-      "pause": 0.781,
+      "start": 58.152,
+      "speechEnd": 60.242,
+      "end": 60.522,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "これは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.522,
+      "speechEnd": 69.232,
+      "end": 69.852,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "グローバルファンドがEMから完全に退出していないことを反映している。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.852,
+      "speechEnd": 77.029,
+      "end": 77.649,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "アジアの株式ファンドも同じ期間に純流入を記録した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 77.649,
+      "speechEnd": 80.157,
+      "end": 80.437,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "EMXCの場合、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 80.437,
+      "speechEnd": 82.458,
+      "end": 82.738,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "台湾、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 82.738,
+      "speechEnd": 84.759,
+      "end": 85.039,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "韓国、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 85.039,
+      "speechEnd": 89.359,
+      "end": 89.639,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インドなどの中国以外の市場は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 89.639,
+      "speechEnd": 93.262,
+      "end": 93.542,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "単一の中国要因ではなく、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 93.542,
+      "speechEnd": 97.096,
+      "end": 97.376,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "依然としてAIサプライチェーン、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 97.376,
+      "speechEnd": 99.396,
+      "end": 99.676,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "金利、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 99.676,
+      "speechEnd": 105.878,
+      "end": 106.658,
+      "pause": 0.78,
       "intendedPause": 0.78,
       "reason": "punctuation-sentence",
-      "text": "詳細は出典資料の確認後に順次更新します。"
+      "text": "および現地の政策によって推進されています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 106.658,
+      "speechEnd": 108.679,
+      "end": 108.959,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "一方、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.959,
+      "speechEnd": 111.328,
+      "end": 111.608,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インド市場は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.608,
+      "speechEnd": 115.022,
+      "end": 115.302,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "高い世界的な債務金利、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.302,
+      "speechEnd": 117.601,
+      "end": 117.881,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "原油価格、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.881,
+      "speechEnd": 125.894,
+      "end": 126.174,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "および流動性を吸収するための多数のIPOに直面して、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 126.174,
+      "speechEnd": 133.839,
+      "end": 134.459,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "高いボラティリティと小売レバレッジの低下を経験してきました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 134.459,
+      "speechEnd": 136.898,
+      "end": 137.178,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この相違は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 137.178,
+      "speechEnd": 142.334,
+      "end": 142.614,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "EMXCが主に台湾と韓国の半導体、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 142.614,
+      "speechEnd": 145.053,
+      "end": 145.333,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インドの収益、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 145.333,
+      "speechEnd": 152.858,
+      "end": 153.138,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米ドル/金利の方向性によって推進され続けることを意味し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 153.138,
+      "speechEnd": 159.549,
+      "end": 160.329,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "単一の地域が連動して上昇することはありません。"
+    },
+    {
+      "parentKey": "why",
+      "start": 160.329,
+      "speechEnd": 164.3,
+      "end": 164.92,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 164.92,
+      "speechEnd": 167.08,
+      "end": 167.361,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "資金フロー、"
+    },
+    {
+      "parentKey": "why",
+      "start": 167.361,
+      "speechEnd": 169.799,
+      "end": 170.079,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "半導体サイクル、"
+    },
+    {
+      "parentKey": "why",
+      "start": 170.079,
+      "speechEnd": 172.518,
+      "end": 172.798,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米ドル金利は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 172.798,
+      "speechEnd": 180.184,
+      "end": 181.044,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ETFの主要市場における資金の評価と配分に直接影響します。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 181.044,
+      "speechEnd": 183.135,
+      "end": 183.415,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 183.415,
+      "speechEnd": 188.083,
+      "end": 188.363,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "世界の新興市場ファンドの流れ、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 188.363,
+      "speechEnd": 191.29,
+      "end": 191.57,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インドのIPO供給、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 191.57,
+      "speechEnd": 193.939,
+      "end": 194.219,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "韓国の変動、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 194.219,
+      "speechEnd": 196.866,
+      "end": 197.147,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "台湾のAI輸出、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 197.147,
+      "speechEnd": 202.79,
+      "end": 203.651,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "米ドル/長期債務利子に注目してください。"
     }
   ]
 }

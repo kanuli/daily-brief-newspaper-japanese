@@ -1,0 +1,520 @@
+{
+  "version": 3,
+  "duration": 241.215,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 694,
+  "charactersPerMinute": 172.6,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 17.295,
+      "text": "Sheinの香港のリスティングは本日約136億香港ドルを調達し、ダークスポットは10 ％以上減少しました"
+    },
+    {
+      "key": "dek",
+      "start": 17.295,
+      "end": 43.581,
+      "text": "同社の株価は1株当たり48.56香港ドルで、評価額は約265億米ドルです。HKEXはオプション、デリバティブワラント資格、空売り契約を同時に開始しました。"
+    },
+    {
+      "key": "body-0",
+      "start": 43.581,
+      "end": 113.322,
+      "text": "オンラインファストファッショングループSHEINが本日香港証券取引所に上場した。ロイター通信によると、同社の株式価格は1株当たり48.56香港ドルで、売却益は約136億香港ドル（17億4000万米ドルに相当）、上場評価額は約265億米ドルとなった。公募と海外の募集はどちらも応募が殺到したが、IPO前の闇市場での取引は一時、IPO価格よりも10％以上低かったが、これは市場が依然として成長鈍化、関税、規制リスクを警戒していることを反映している。"
+    },
+    {
+      "key": "body-1",
+      "start": 113.322,
+      "end": 174.703,
+      "text": "香港証券取引所は、SHEIN株には上場日から空売りできる指定証券が含まれ、週次および月次オプションを開始することを確認した。適格な発行者は、関連するデリバティブワラントも発行できます。これは、この大規模な新規発行が個人投資家に影響を与えるだけでなく、同日に香港のデリバティブおよびリスク管理市場にも参入することを意味します。初日の取引、終値、オプションの流動性が主な観察指標となります。"
+    },
+    {
+      "key": "why",
+      "start": 174.703,
+      "end": 213.592,
+      "text": "これは、今年の香港での代表的な大規模な消費者技術のIPOの1つであり、新しい株式市場の雰囲気、香港証券取引所での取引、中国企業にとっての国際的な資金調達プラットフォームとしての香港の魅力のベンチマークとなります。"
+    },
+    {
+      "key": "watch",
+      "start": 213.592,
+      "end": 241.215,
+      "text": "SHEINの初日の営業成績、取引量、オプション、空売り活動、および関税、規制、利益見通しに関する同社のフォローアップ説明に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.971,
+      "end": 4.311,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "Sheinの香港のリスティングは"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.311,
+      "speechEnd": 10.651,
+      "end": 10.931,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "本日約136億香港ドルを調達し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.931,
+      "speechEnd": 16.435,
+      "end": 17.295,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ダークスポットは10 ％以上減少しました。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.295,
+      "speechEnd": 25.377,
+      "end": 25.657,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同社の株価は1株当たり48.56香港ドルで、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.657,
+      "speechEnd": 30.812,
+      "end": 31.432,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "評価額は約265億米ドルです。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 31.432,
+      "speechEnd": 34.289,
+      "end": 34.569,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "HKEXはオプション、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 34.569,
+      "speechEnd": 37.704,
+      "end": 37.984,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "デリバティブワラント資格、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 37.984,
+      "speechEnd": 42.721,
+      "end": 43.581,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "空売り契約を同時に開始しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.581,
+      "speechEnd": 48.319,
+      "end": 48.659,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "オンラインファストファッショングループSHEINが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.659,
+      "speechEnd": 53.396,
+      "end": 54.016,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "本日香港証券取引所に上場した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.016,
+      "speechEnd": 57.012,
+      "end": 57.292,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.292,
+      "speechEnd": 66.14,
+      "end": 66.42,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同社の株式価格は1株当たり48.56香港ドルで、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.42,
+      "speechEnd": 76.801,
+      "end": 77.081,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "売却益は約136億香港ドル（17億4000万米ドルに相当）、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 77.081,
+      "speechEnd": 83.003,
+      "end": 83.623,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "上場評価額は約265億米ドルとなった。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 83.623,
+      "speechEnd": 89.127,
+      "end": 89.407,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "公募と海外の募集はどちらも応募が殺到したが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 89.407,
+      "speechEnd": 93.726,
+      "end": 94.006,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "IPO前の闇市場での取引は一時、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 94.006,
+      "speechEnd": 99.162,
+      "end": 99.442,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "IPO価格よりも10％以上低かったが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 99.442,
+      "speechEnd": 104.179,
+      "end": 104.459,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "これは市場が依然として成長鈍化、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 104.459,
+      "speechEnd": 106.48,
+      "end": 106.76,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "関税、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 106.76,
+      "speechEnd": 112.542,
+      "end": 113.322,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "規制リスクを警戒していることを反映している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 113.322,
+      "speechEnd": 116.318,
+      "end": 116.598,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "香港証券取引所は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 116.598,
+      "speechEnd": 123.913,
+      "end": 124.193,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "SHEIN株には上場日から空売りできる指定証券が含まれ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 124.193,
+      "speechEnd": 131.369,
+      "end": 131.989,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "週次および月次オプションを開始することを確認した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 131.989,
+      "speechEnd": 134.776,
+      "end": 135.056,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "適格な発行者は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 135.056,
+      "speechEnd": 140.002,
+      "end": 140.623,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "関連するデリバティブワラントも発行できます。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 140.623,
+      "speechEnd": 142.713,
+      "end": 142.993,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "これは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 142.993,
+      "speechEnd": 151.492,
+      "end": 151.772,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この大規模な新規発行が個人投資家に影響を与えるだけでなく、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 151.772,
+      "speechEnd": 162.501,
+      "end": 163.121,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "同日に香港のデリバティブおよびリスク管理市場にも参入することを意味します。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 163.121,
+      "speechEnd": 165.42,
+      "end": 165.7,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "初日の取引、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 165.7,
+      "speechEnd": 167.721,
+      "end": 168.001,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "終値、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 168.001,
+      "speechEnd": 173.923,
+      "end": 174.703,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "オプションの流動性が主な観察指標となります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 174.703,
+      "speechEnd": 178.674,
+      "end": 179.294,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 179.294,
+      "speechEnd": 181.384,
+      "end": 181.664,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "これは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 181.664,
+      "speechEnd": 191.905,
+      "end": 192.185,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今年の香港での代表的な大規模な消費者技術のIPOの1つであり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 192.185,
+      "speechEnd": 195.599,
+      "end": 195.879,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "新しい株式市場の雰囲気、"
+    },
+    {
+      "parentKey": "why",
+      "start": 195.879,
+      "speechEnd": 199.781,
+      "end": 200.061,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "香港証券取引所での取引、"
+    },
+    {
+      "parentKey": "why",
+      "start": 200.061,
+      "speechEnd": 207.306,
+      "end": 207.646,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "中国企業にとっての国際的な資金調達プラットフォームとして"
+    },
+    {
+      "parentKey": "why",
+      "start": 207.646,
+      "speechEnd": 212.732,
+      "end": 213.592,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "の香港の魅力のベンチマークとなります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 213.592,
+      "speechEnd": 215.682,
+      "end": 215.962,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 215.962,
+      "speechEnd": 220.003,
+      "end": 220.283,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "SHEINの初日の営業成績、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 220.283,
+      "speechEnd": 222.373,
+      "end": 222.653,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "取引量、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 222.653,
+      "speechEnd": 224.813,
+      "end": 225.093,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "オプション、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 225.093,
+      "speechEnd": 227.392,
+      "end": 227.672,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "空売り活動、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 227.672,
+      "speechEnd": 230.041,
+      "end": 230.321,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "および関税、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 230.321,
+      "speechEnd": 232.341,
+      "end": 232.621,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "規制、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 232.621,
+      "speechEnd": 240.355,
+      "end": 241.215,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "利益見通しに関する同社のフォローアップ説明に注意してください。"
+    }
+  ]
+}

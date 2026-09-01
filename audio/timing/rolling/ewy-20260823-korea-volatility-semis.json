@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 29.179,
+  "duration": 191.765,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 340.0,
-  "characters": 83,
-  "charactersPerMinute": 170.7,
+  "characters": 619,
+  "charactersPerMinute": 193.7,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.18,
@@ -21,66 +21,400 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 9.99,
-      "text": "EWY：Reutersで最新の企業・市場動向情報を確認"
+      "end": 20.006,
+      "text": "ETF READ - THROUGH ： KOSPIは、高値の急落、半導体ブームとレバレッジの低迷がEWYを支配した後も不安定なままです"
+    },
+    {
+      "key": "dek",
+      "start": 20.006,
+      "end": 41.56,
+      "text": "韓国株は6月の高値から約30 ％下落しており、サムスンやSKハイニックスなどの大きな技術的重みは、依然としてAIとメモリの需要に支えられている。"
     },
     {
       "key": "body-0",
-      "start": 9.99,
-      "end": 29.179,
-      "text": "Reutersを出典として、企業・市場動向に関する新しい検証済み情報を確認しました。詳細は出典資料の確認後に順次更新します。"
+      "start": 41.56,
+      "end": 102.61,
+      "text": "ロイター通信によると、韓国株は年初の高騰の後に急激な調整を見せており、KOSPIはかつて6月の高値から約30 ％下落しており、レバレッジの高い個人投資家は大きな損失を被っている。その後、政府はいくつかのレバレッジ商品の取り決めを引き締め、市場のセンチメントは高ベータを追いかけることから、収益性、ガバナンス、流動性により焦点を当てることにシフトし、EWYの短期的なボラティリティを高く維持しました。"
+    },
+    {
+      "key": "body-1",
+      "start": 102.61,
+      "end": 149.784,
+      "text": "一方、Samsung ElectronicsとSK Hynixは、依然としてEWYの最も重要なテクノロジードライバーの1つです。AIサーバーとメモリの需要は依然として強く、サムスンはいくつかの高度なファウンドリの価格を引き上げている。これにより、EWYは韓国のデレバレッジリスクと世界的なAI半導体ブームの両方にさらされ、一貫性がない可能性があります。"
+    },
+    {
+      "key": "why",
+      "start": 149.784,
+      "end": 172.786,
+      "text": "KOSPIの流動性、小売レバレッジ、サムスン/SKハイニックスの利益はETFの方向性とボラティリティに直接影響を与えるだろう。"
+    },
+    {
+      "key": "watch",
+      "start": 172.786,
+      "end": 191.765,
+      "text": "KOSPIの取引とレバレッジの規制、サムスンとSKハイニックスのガイダンス、HBMの価格と韓国ウォンの動向に注意してください。"
     }
   ],
   "semanticUnits": [
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 2.023,
-      "end": 2.363,
+      "speechEnd": 3.832,
+      "end": 4.172,
       "pause": 0.34,
       "intendedPause": 0.34,
       "reason": "punctuation-semantic",
-      "text": "EWY："
+      "text": "ETF READ - THROUGH ："
     },
     {
       "parentKey": "title",
-      "start": 2.363,
-      "speechEnd": 9.129,
-      "end": 9.99,
-      "pause": 0.861,
-      "intendedPause": 0.86,
-      "reason": "punctuation-sentence",
-      "text": "Reutersで最新の企業・市場動向情報を確認。"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 9.99,
-      "speechEnd": 13.198,
-      "end": 13.479,
+      "start": 4.172,
+      "speechEnd": 6.471,
+      "end": 6.751,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "Reutersを出典として、"
+      "text": "KOSPIは、"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.751,
+      "speechEnd": 9.12,
+      "end": 9.4,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "高値の急落、"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.4,
+      "speechEnd": 13.998,
+      "end": 14.338,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "半導体ブームとレバレッジの低迷が"
+    },
+    {
+      "parentKey": "title",
+      "start": 14.338,
+      "speechEnd": 19.145,
+      "end": 20.006,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "EWYを支配した後も不安定なままです。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.006,
+      "speechEnd": 27.669,
+      "end": 27.949,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "韓国株は6月の高値から約30 ％下落しており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.949,
+      "speechEnd": 34.498,
+      "end": 34.778,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "サムスンやSKハイニックスなどの大きな技術的重みは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 34.778,
+      "speechEnd": 40.7,
+      "end": 41.56,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "依然としてAIとメモリの需要に支えられている。"
     },
     {
       "parentKey": "body-0",
-      "start": 13.479,
-      "speechEnd": 21.5,
-      "end": 22.12,
-      "pause": 0.621,
+      "start": 41.56,
+      "speechEnd": 44.556,
+      "end": 44.836,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.836,
+      "speechEnd": 52.639,
+      "end": 52.919,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "韓国株は年初の高騰の後に急激な調整を見せており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.919,
+      "speechEnd": 61.21,
+      "end": 61.49,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "KOSPIはかつて6月の高値から約30 ％下落しており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.49,
+      "speechEnd": 69.014,
+      "end": 69.635,
+      "pause": 0.62,
       "intendedPause": 0.62,
       "reason": "punctuation-sentence",
-      "text": "企業・市場動向に関する新しい検証済み情報を確認しました。"
+      "text": "レバレッジの高い個人投資家は大きな損失を被っている。"
     },
     {
       "parentKey": "body-0",
-      "start": 22.12,
-      "speechEnd": 28.398,
-      "end": 29.179,
-      "pause": 0.781,
+      "start": 69.635,
+      "speechEnd": 71.725,
+      "end": 72.005,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "その後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.005,
+      "speechEnd": 79.25,
+      "end": 79.53,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "政府はいくつかのレバレッジ商品の取り決めを引き締め、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 79.53,
+      "speechEnd": 85.243,
+      "end": 85.523,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "市場のセンチメントは高ベータを追いかけることから、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 85.523,
+      "speechEnd": 87.683,
+      "end": 87.963,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "収益性、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 87.963,
+      "speechEnd": 90.193,
+      "end": 90.473,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ガバナンス、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 90.473,
+      "speechEnd": 95.977,
+      "end": 96.257,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "流動性により焦点を当てることにシフトし、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 96.257,
+      "speechEnd": 101.83,
+      "end": 102.61,
+      "pause": 0.78,
       "intendedPause": 0.78,
       "reason": "punctuation-sentence",
-      "text": "詳細は出典資料の確認後に順次更新します。"
+      "text": "EWYの短期的なボラティリティを高く維持しました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.61,
+      "speechEnd": 104.631,
+      "end": 104.911,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "一方、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.911,
+      "speechEnd": 109.648,
+      "end": 109.929,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Samsung ElectronicsとSK Hynixは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.929,
+      "speechEnd": 117.732,
+      "end": 118.352,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "依然としてEWYの最も重要なテクノロジードライバーの1つです。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.352,
+      "speechEnd": 124.204,
+      "end": 124.484,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "AIサーバーとメモリの需要は依然として強く、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 124.484,
+      "speechEnd": 131.799,
+      "end": 132.419,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "サムスンはいくつかの高度なファウンドリの価格を引き上げている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 132.419,
+      "speechEnd": 134.649,
+      "end": 134.929,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "これにより、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 134.929,
+      "speechEnd": 144.543,
+      "end": 144.823,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "EWYは韓国のデレバレッジリスクと世界的なAI半導体ブームの両方にさらされ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 144.823,
+      "speechEnd": 149.004,
+      "end": 149.784,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "一貫性がない可能性があります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 149.784,
+      "speechEnd": 153.755,
+      "end": 154.375,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 154.375,
+      "speechEnd": 157.441,
+      "end": 157.721,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "KOSPIの流動性、"
+    },
+    {
+      "parentKey": "why",
+      "start": 157.721,
+      "speechEnd": 160.507,
+      "end": 160.787,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "小売レバレッジ、"
+    },
+    {
+      "parentKey": "why",
+      "start": 160.787,
+      "speechEnd": 164.41,
+      "end": 164.75,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "サムスン/SKハイニックスの利益は"
+    },
+    {
+      "parentKey": "why",
+      "start": 164.75,
+      "speechEnd": 171.926,
+      "end": 172.786,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ETFの方向性とボラティリティに直接影響を与えるだろう。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 172.786,
+      "speechEnd": 174.877,
+      "end": 175.157,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 175.157,
+      "speechEnd": 179.685,
+      "end": 179.965,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "KOSPIの取引とレバレッジの規制、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 179.965,
+      "speechEnd": 184.076,
+      "end": 184.356,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "サムスンとSKハイニックスのガイダンス、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 184.356,
+      "speechEnd": 190.905,
+      "end": 191.765,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "HBMの価格と韓国ウォンの動向に注意してください。"
     }
   ]
 }

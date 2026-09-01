@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 35.814,
+  "duration": 190.668,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 340.0,
-  "characters": 111,
-  "charactersPerMinute": 186.0,
+  "characters": 553,
+  "charactersPerMinute": 174.0,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.18,
@@ -21,22 +21,46 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 13.347,
+      "end": 13.333,
       "text": "Palantirは通年の収益予測を引き上げ、政府とビジネスのAI需要は高い成長を続けています"
     },
     {
+      "key": "dek",
+      "start": 13.333,
+      "end": 30.29,
+      "text": "同社は通期の収益見通しを約81.5億ドルに引き上げ、米国政府と米国の商業は高速拡大を維持した。"
+    },
+    {
       "key": "body-0",
-      "start": 13.347,
-      "end": 35.814,
-      "text": "ロイター通信は、パランティアの第２・四半期業績が予想を上回り、通年の収益予想を引き上げたと報じた。 AIデータ分析に対する需要は依然として強い。"
+      "start": 30.29,
+      "end": 90.009,
+      "text": "パランティアは8月3日、政府や企業からのAIデータ分析ツールへの需要が依然として旺盛であることを反映し、通期の売上高予想を従来予想の約76億5000万ドルよりも高い約81億5000万～81億5800万ドルに引き上げた。ロイターは、同社の第２・四半期の売上高と利益が市場予想を上回り、米政府事業と商業事業の両方が急速な成長を記録したと指摘した。"
+    },
+    {
+      "key": "body-1",
+      "start": 90.009,
+      "end": 143.595,
+      "text": "現段階で同社にとって鍵となるのは、単一の新規契約ではなく、高成長をより大きな顧客ベース、残りの履行義務、キャッシュフローに変換し続けることができるかどうかだ。欧州事業は依然として地域内での競争と一部の契約上の不確実性に直面しているため、その後の業績は米国の商用AIと政府需要が地域差を相殺できるかどうかのテストに引き続き焦点が当てられるだろう。"
+    },
+    {
+      "key": "why",
+      "start": 143.595,
+      "end": 170.013,
+      "text": "上向きのガイダンスは、AIプラットフォームの需要が依然として加速していることを示していますが、市場では売上高の伸びと評価額の調整も必要になります。"
+    },
+    {
+      "key": "watch",
+      "start": 170.013,
+      "end": 190.668,
+      "text": "大規模な商業契約、政府の注文、次の四半期の収益成長、RPO、フリーキャッシュフローに注目してください。"
     }
   ],
   "semanticUnits": [
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 5.51,
-      "end": 5.79,
+      "speechEnd": 5.504,
+      "end": 5.784,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
@@ -44,53 +68,323 @@
     },
     {
       "parentKey": "title",
-      "start": 5.79,
-      "speechEnd": 12.486,
-      "end": 13.347,
-      "pause": 0.861,
+      "start": 5.784,
+      "speechEnd": 12.473,
+      "end": 13.333,
+      "pause": 0.86,
       "intendedPause": 0.86,
       "reason": "punctuation-sentence",
       "text": "政府とビジネスのAI需要は高い成長を続けています。"
     },
     {
-      "parentKey": "body-0",
-      "start": 13.347,
-      "speechEnd": 15.857,
-      "end": 16.138,
+      "parentKey": "dek",
+      "start": 13.333,
+      "speechEnd": 21.764,
+      "end": 22.044,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "ロイター通信は、"
+      "text": "同社は通期の収益見通しを約81.5億ドルに引き上げ、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.044,
+      "speechEnd": 29.43,
+      "end": 30.29,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "米国政府と米国の商業は高速拡大を維持した。"
     },
     {
       "parentKey": "body-0",
-      "start": 16.138,
-      "speechEnd": 22.903,
-      "end": 23.183,
+      "start": 30.29,
+      "speechEnd": 34.331,
+      "end": 34.611,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "パランティアの第２・四半期業績が予想を上回り、"
+      "text": "パランティアは8月3日、"
     },
     {
       "parentKey": "body-0",
-      "start": 23.183,
-      "speechEnd": 28.693,
-      "end": 29.314,
-      "pause": 0.621,
+      "start": 34.611,
+      "speechEnd": 41.021,
+      "end": 41.361,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "政府や企業からのAIデータ分析ツールへの需要が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.361,
+      "speechEnd": 46.448,
+      "end": 46.728,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "依然として旺盛であることを反映し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.728,
+      "speechEnd": 54.044,
+      "end": 54.224,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "通期の売上高予想を従来予想の約76億"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.224,
+      "speechEnd": 56.802,
+      "end": 56.982,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "5000万ドル"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.982,
+      "speechEnd": 67.085,
+      "end": 67.705,
+      "pause": 0.62,
       "intendedPause": 0.62,
       "reason": "punctuation-sentence",
-      "text": "通年の収益予想を引き上げたと報じた。"
+      "text": "よりも高い約81億5000万～81億5800万ドルに引き上げた。"
     },
     {
       "parentKey": "body-0",
-      "start": 29.314,
-      "speechEnd": 35.033,
-      "end": 35.814,
-      "pause": 0.781,
+      "start": 67.705,
+      "speechEnd": 69.865,
+      "end": 70.145,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイターは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.145,
+      "speechEnd": 78.506,
+      "end": 78.786,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同社の第２・四半期の売上高と利益が市場予想を上回り、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 78.786,
+      "speechEnd": 84.29,
+      "end": 84.63,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "米政府事業と商業事業の両方が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 84.63,
+      "speechEnd": 89.229,
+      "end": 90.009,
+      "pause": 0.78,
       "intendedPause": 0.78,
       "reason": "punctuation-sentence",
-      "text": "AIデータ分析に対する需要は依然として強い。"
+      "text": "急速な成長を記録したと指摘した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.009,
+      "speechEnd": 94.886,
+      "end": 95.166,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "現段階で同社にとって鍵となるのは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 95.166,
+      "speechEnd": 98.859,
+      "end": 99.139,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "単一の新規契約ではなく、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.139,
+      "speechEnd": 103.738,
+      "end": 104.018,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "高成長をより大きな顧客ベース、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.018,
+      "speechEnd": 106.735,
+      "end": 107.015,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "残りの履行義務、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.015,
+      "speechEnd": 113.007,
+      "end": 113.627,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "キャッシュフローに変換し続けることができるかどうかだ。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 113.627,
+      "speechEnd": 126.448,
+      "end": 126.728,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "欧州事業は依然として地域内での競争と一部の契約上の不確実性に直面しているため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 126.728,
+      "speechEnd": 133.416,
+      "end": 133.757,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "その後の業績は米国の商用AIと政府需要が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 133.757,
+      "speechEnd": 142.814,
+      "end": 143.595,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "地域差を相殺できるかどうかのテストに引き続き焦点が当てられるだろう。"
+    },
+    {
+      "parentKey": "why",
+      "start": 143.595,
+      "speechEnd": 147.566,
+      "end": 148.186,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 148.186,
+      "speechEnd": 151.67,
+      "end": 151.95,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "上向きのガイダンスは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 151.95,
+      "speechEnd": 155.294,
+      "end": 155.634,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "AIプラットフォームの需要が"
+    },
+    {
+      "parentKey": "why",
+      "start": 155.634,
+      "speechEnd": 161.139,
+      "end": 161.419,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "依然として加速していることを示していますが、"
+    },
+    {
+      "parentKey": "why",
+      "start": 161.419,
+      "speechEnd": 169.153,
+      "end": 170.013,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "市場では売上高の伸びと評価額の調整も必要になります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 170.013,
+      "speechEnd": 172.103,
+      "end": 172.383,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 172.383,
+      "speechEnd": 175.519,
+      "end": 175.799,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "大規模な商業契約、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 175.799,
+      "speechEnd": 178.377,
+      "end": 178.657,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "政府の注文、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 178.657,
+      "speechEnd": 182.837,
+      "end": 183.117,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "次の四半期の収益成長、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 183.117,
+      "speechEnd": 185.138,
+      "end": 185.418,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "RPO、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 185.418,
+      "speechEnd": 189.808,
+      "end": 190.668,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "フリーキャッシュフローに注目してください。"
     }
   ]
 }
