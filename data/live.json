@@ -1,53 +1,104 @@
 {
-  "mode": "DAILY_BASELINE",
+  "mode": "LIVE",
   "date": "2026-09-01",
   "editorialStandardVersion": 3,
   "contentVersion": 3,
-  "lastUpdated": "2026-09-01T08:00:00+08:00",
-  "lastUpdatedLabel": "2026年9月1日 08:00 HKT",
-  "windowLabel": "08:00 HKT 速報版",
-  "nextUpdateLabel": "次回発行予定 09:00 HKT",
-  "newCount": 0,
-  "updatedCount": 0,
+  "lastUpdated": "2026-09-01T09:00:00+08:00",
+  "lastUpdatedLabel": "2026年9月1日 09:00 HKT",
+  "windowLabel": "09:00 HKT 速報版",
+  "nextUpdateLabel": "次回発行予定 10:00 HKT",
+  "newCount": 3,
+  "updatedCount": 1,
   "developingCount": 0,
   "coverage": {
-    "status": "DAILY_BASELINE",
-    "checkedAt": "2026-09-01T08:00:00+08:00",
+    "status": "COMPLETE",
+    "checkedAt": "2026-09-01T09:00:00+08:00",
     "deskLatestStoryCounts": {
       "world": 14,
-      "asia": 19,
+      "asia": 21,
       "hong-kong": 6,
-      "japan": 15,
-      "market-economy": 24,
-      "ai-tech": 11,
+      "japan": 16,
+      "market-economy": 27,
+      "ai-tech": 12,
       "manga-anime": 4,
       "manchester-united": 5,
       "football": 16
     },
     "deskLatestDepthMet": true,
-    "japanCountVerified": 15,
+    "japanCountVerified": 16,
     "sourceGateMet": true,
     "geographicGateMet": true,
     "footballGateMet": true,
-    "publishingGateMet": true,
-    "dailyEdition": "2026-09-01"
+    "publishingGateMet": true
   },
   "topFive": [
-    "asia-us-iran-renewed-strikes-20260901-0700",
-    "japan-residential-roads-speed-limit-20260901-0700",
-    "asia-indonesia-wildfires-company-probes-20260901-0700",
-    "market-wall-street-oil-august-close-20260901-0600",
-    "world-kosovo-president-deal-20260831-2200"
+    "world-ukraine-kyiv-drone-barrage-fifth-day-20260831-1900",
+    "japan-manufacturing-pmi-final-20260901-0900",
+    "asia-china-august-pmi-20260901-0900",
+    "asia-korea-nepal-relief-team-20260901-0900",
+    "asia-us-iran-renewed-strikes-20260901-0700"
   ],
-  "items": [],
-  "translationDegraded": false,
-  "translationDeferredCount": 0,
-  "translationDeferredIds": [],
+  "items": [
+    {
+      "id": "world-ukraine-kyiv-drone-barrage-fifth-day-20260831-1900",
+      "desk": "world",
+      "status": "UPDATED",
+      "title": "キエフ空爆6日連続直近の爆発で子ども2人を含む4人が負傷",
+      "dek": "キエフとその周辺での一連のロシアの空爆の6日目に、ウクライナのさまざまな地域で再び対空警報が鳴らされた。",
+      "summary": "9月1日早朝、キエフで別の爆発が発生し、少なくとも4人が負傷した。無人機と空襲の日々が首都の生活と物流を混乱させ続けた。",
+      "body": "9月1日の早朝、キエフで別の爆発音が聞こえ、ロイターの記者は地元で爆発音を聞いた。地方自治体は、ウクライナの大部分をカバーしていた最新の攻撃で、子供2人を含む少なくとも4人が負傷したと述べた。\n\nこれはキエフとその周辺地域に対する6日連続の集中空爆となった。日々の攻撃は家屋、倉庫、商業施設、物流施設を破壊し、防空能力を消費し続けています。高速ジェットドローンも迎撃と民間防衛の圧力を高めています。",
+      "context": "ロシア軍は最近、ドローンの密度と速度を大幅に向上させ、ウクライナはロシアのエネルギー、物流、軍事産業の標的に対する長距離反撃を強化した。",
+      "why": "首都が6日間連続で攻撃されたことは、空中戦の消費がエスカレートしており、民間人の安全、市の作戦、ウクライナの対空弾薬に直接影響を与えていることを示しています。",
+      "watchNext": "最新の犠牲者とインフラの損失、ロシア軍が7日目の攻撃を継続するかどうか、ウクライナの防空と長距離反撃の規模に注意してください。",
+      "sourceName": "Reuters／Associated Press",
+      "sourceUrl": "https://www.reuters.com/world/europe/explosions-heard-ukraines-kyiv-four-people-injured-2026-09-01/",
+      "timeLabel": "9月1日09:00 HKTに更新",
+      "sources": [
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/europe/explosions-heard-ukraines-kyiv-four-people-injured-2026-09-01/"
+        },
+        {
+          "name": "Associated Press",
+          "url": "https://apnews.com/article/db2f55ab0c3bd5d091dd4338d8bd28c8"
+        }
+      ],
+      "deskSlugs": [
+        "world"
+      ],
+      "section": "世界|ロシア・ウクライナ戦争",
+      "sectionLabel": "世界",
+      "image": null,
+      "sourceItemFingerprint": "c17b7723d6b78e9a834e952b85fb4457962a59fdbe045ba12997d7476454d2bd",
+      "audio": "audio/live/world-ukraine-kyiv-drone-barrage-fifth-day-20260831-1900.mp3",
+      "timing": "audio/timing/live/world-ukraine-kyiv-drone-barrage-fifth-day-20260831-1900.json",
+      "furigana": {
+        "section": "<ruby>世界<rt>せかい</rt></ruby>|ロシア・ウクライナ<ruby>戦争<rt>せんそう</rt></ruby>",
+        "title": "キエフ<ruby>空爆<rt>くうばく</rt></ruby>6<ruby>日連<rt>にちれん</rt></ruby><ruby>続<rt>ぞく</rt></ruby><ruby>直近<rt>ちょっきん</rt></ruby>の<ruby>爆発<rt>ばくはつ</rt></ruby>で<ruby>子<rt>こ</rt></ruby>ども<ruby>2人<rt>ふたり</rt></ruby>を<ruby>含<rt>ふく</rt></ruby>む<ruby>4人<rt>よにん</rt></ruby>が<ruby>負傷<rt>ふしょう</rt></ruby>",
+        "dek": "キエフとその<ruby>周辺<rt>しゅうへん</rt></ruby>での<ruby>一連<rt>いちれん</rt></ruby>のロシアの<ruby>空爆<rt>くうばく</rt></ruby>の6<ruby>日目<rt>にちめ</rt></ruby>に、ウクライナのさまざまな<ruby>地域<rt>ちいき</rt></ruby>で<ruby>再<rt>ふたた</rt></ruby>び<ruby>対空<rt>たいくう</rt></ruby><ruby>警報<rt>けいほう</rt></ruby>が<ruby>鳴<rt>な</rt></ruby>らされた。",
+        "summary": "<ruby>9月<rt>くがつ</rt></ruby><ruby>1日<rt>ついたち</rt></ruby><ruby>早朝<rt>そうちょう</rt></ruby>、キエフで<ruby>別<rt>べつ</rt></ruby>の<ruby>爆発<rt>ばくはつ</rt></ruby>が<ruby>発生<rt>はっせい</rt></ruby>し、<ruby>少<rt>すく</rt></ruby>なくとも<ruby>4人<rt>よにん</rt></ruby>が<ruby>負傷<rt>ふしょう</rt></ruby>した。<ruby>無人<rt>むじん</rt></ruby><ruby>機<rt>き</rt></ruby>と<ruby>空襲<rt>くうしゅう</rt></ruby>の<ruby>日々<rt>ひび</rt></ruby>が<ruby>首都<rt>しゅと</rt></ruby>の<ruby>生活<rt>せいかつ</rt></ruby>と<ruby>物流<rt>ぶつりゅう</rt></ruby>を<ruby>混乱<rt>こんらん</rt></ruby>させ<ruby>続<rt>つづ</rt></ruby>けた。",
+        "context": "ロシア<ruby>軍<rt>ぐん</rt></ruby>は<ruby>最近<rt>さいきん</rt></ruby>、ドローンの<ruby>密度<rt>みつど</rt></ruby>と<ruby>速度<rt>そくど</rt></ruby>を<ruby>大幅<rt>おおはば</rt></ruby>に<ruby>向上<rt>こうじょう</rt></ruby>させ、ウクライナはロシアのエネルギー、<ruby>物流<rt>ぶつりゅう</rt></ruby>、<ruby>軍事<rt>ぐんじ</rt></ruby><ruby>産業<rt>さんぎょう</rt></ruby>の<ruby>標的<rt>ひょうてき</rt></ruby>に<ruby>対<rt>たい</rt></ruby>する<ruby>長距離<rt>ちょうきょり</rt></ruby><ruby>反撃<rt>はんげき</rt></ruby>を<ruby>強化<rt>きょうか</rt></ruby>した。",
+        "why": "<ruby>首都<rt>しゅと</rt></ruby>が<ruby>6日間<rt>むいかかん</rt></ruby><ruby>連続<rt>れんぞく</rt></ruby>で<ruby>攻撃<rt>こうげき</rt></ruby>されたことは、<ruby>空中戦<rt>くうちゅうせん</rt></ruby>の<ruby>消費<rt>しょうひ</rt></ruby>がエスカレートしており、<ruby>民間人<rt>みんかんじん</rt></ruby>の<ruby>安全<rt>あんぜん</rt></ruby>、<ruby>市<rt>し</rt></ruby>の<ruby>作戦<rt>さくせん</rt></ruby>、ウクライナの<ruby>対空弾<rt>たいくうだん</rt></ruby><ruby>薬<rt>くすり</rt></ruby>に<ruby>直接影響<rt>ちょくせつえいきょう</rt></ruby>を<ruby>与<rt>あた</rt></ruby>えていることを<ruby>示<rt>しめ</rt></ruby>しています。",
+        "watchNext": "<ruby>最新<rt>さいしん</rt></ruby>の<ruby>犠牲者<rt>ぎせいしゃ</rt></ruby>とインフラの<ruby>損失<rt>そんしつ</rt></ruby>、ロシア<ruby>軍<rt>ぐん</rt></ruby>が7<ruby>日目<rt>にちめ</rt></ruby>の<ruby>攻撃<rt>こうげき</rt></ruby>を<ruby>継続<rt>けいぞく</rt></ruby>するかどうか、ウクライナの<ruby>防空<rt>ぼうくう</rt></ruby>と<ruby>長距離<rt>ちょうきょり</rt></ruby><ruby>反撃<rt>はんげき</rt></ruby>の<ruby>規模<rt>きぼ</rt></ruby>に<ruby>注意<rt>ちゅうい</rt></ruby>してください。",
+        "bodyParagraphs": [
+          "<ruby>9月<rt>くがつ</rt></ruby><ruby>1日<rt>ついたち</rt></ruby>の<ruby>早朝<rt>そうちょう</rt></ruby>、キエフで<ruby>別<rt>べつ</rt></ruby>の<ruby>爆発音<rt>ばくはつおん</rt></ruby>が<ruby>聞<rt>き</rt></ruby>こえ、ロイターの<ruby>記者<rt>きしゃ</rt></ruby>は<ruby>地元<rt>じもと</rt></ruby>で<ruby>爆発音<rt>ばくはつおん</rt></ruby>を<ruby>聞<rt>き</rt></ruby>いた。<ruby>地方自治体<rt>ちほうじちたい</rt></ruby>は、ウクライナの<ruby>大部分<rt>だいぶぶん</rt></ruby>をカバーしていた<ruby>最新<rt>さいしん</rt></ruby>の<ruby>攻撃<rt>こうげき</rt></ruby>で、<ruby>子供<rt>こども</rt></ruby><ruby>2人<rt>ふたり</rt></ruby>を<ruby>含<rt>ふく</rt></ruby>む<ruby>少<rt>すく</rt></ruby>なくとも<ruby>4人<rt>よにん</rt></ruby>が<ruby>負傷<rt>ふしょう</rt></ruby>したと<ruby>述<rt>の</rt></ruby>べた。",
+          "これはキエフとその<ruby>周辺<rt>しゅうへん</rt></ruby><ruby>地域<rt>ちいき</rt></ruby>に<ruby>対<rt>たい</rt></ruby>する6<ruby>日連<rt>にちれん</rt></ruby><ruby>続<rt>ぞく</rt></ruby>の<ruby>集中<rt>しゅうちゅう</rt></ruby><ruby>空爆<rt>くうばく</rt></ruby>となった。<ruby>日々<rt>ひび</rt></ruby>の<ruby>攻撃<rt>こうげき</rt></ruby>は<ruby>家屋<rt>かおく</rt></ruby>、<ruby>倉庫<rt>そうこ</rt></ruby>、<ruby>商業<rt>しょうぎょう</rt></ruby><ruby>施設<rt>しせつ</rt></ruby>、<ruby>物流<rt>ぶつりゅう</rt></ruby><ruby>施設<rt>しせつ</rt></ruby>を<ruby>破壊<rt>はかい</rt></ruby>し、<ruby>防空能力<rt>ぼうくうのうりょく</rt></ruby>を<ruby>消費<rt>しょうひ</rt></ruby>し<ruby>続<rt>つづ</rt></ruby>けています。<ruby>高速<rt>こうそく</rt></ruby>ジェットドローンも<ruby>迎撃<rt>げいげき</rt></ruby>と<ruby>民間<rt>みんかん</rt></ruby><ruby>防衛<rt>ぼうえい</rt></ruby>の<ruby>圧力<rt>あつりょく</rt></ruby>を<ruby>高<rt>たか</rt></ruby>めています。"
+        ]
+      }
+    }
+  ],
+  "translationDegraded": true,
+  "translationDeferredCount": 3,
+  "translationDeferredIds": [
+    "asia-china-august-pmi-20260901-0900",
+    "asia-korea-nepal-relief-team-20260901-0900",
+    "japan-manufacturing-pmi-final-20260901-0900"
+  ],
   "translationRecoveryMode": "owner-quarantine-v1",
   "language": "ja",
   "translationSource": "kanuli/daily-brief-newspaper",
   "sourceFile": "live.json",
-  "sourceFingerprint": "f590c1a258ce0e8aaeedb29919d9100af47124c1cb243a0ec9677b445af5986d",
+  "sourceFingerprint": "d09f0c7977ecccdf543434746e1e32d1eeec8d0a104e255f829a3a4d7d7f14dc",
   "translationSchemaVersion": "ja-furigana-v3-context-sensitive",
   "furiganaEngineVersion": "sudachi-core-mode-c+context",
   "newsroomQualityVersion": 1
