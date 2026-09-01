@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "assessedAt": "2026-09-01T05:50:22.957Z",
-  "state": "GREEN",
-  "summary": "ALL_REQUIRED_NEWS_LAYERS_CURRENT",
+  "assessedAt": "2026-09-01T06:49:34.832Z",
+  "state": "RED",
+  "summary": "RECOVERY_REQUIRED:live",
   "layers": {
     "daily": {
       "current": true,
@@ -10,16 +10,16 @@
       "japanese": "2026-09-01"
     },
     "live": {
-      "current": true,
-      "upstream": "2026-09-01T13:00:00+08:00",
+      "current": false,
+      "upstream": "2026-09-01T14:00:00+08:00",
       "japanese": "2026-09-01T13:00:00+08:00",
-      "lagMinutes": 0
+      "lagMinutes": 60
     },
     "desk": {
       "current": true,
-      "upstream": "2026-09-01T13:00:00+08:00",
+      "upstream": "2026-09-01T14:00:00+08:00",
       "japanese": "2026-09-01T13:00:00+08:00",
-      "lagMinutes": 0
+      "lagMinutes": 60
     },
     "stocks": {
       "current": true,
@@ -34,14 +34,14 @@
     }
   },
   "recovery": {
-    "coreRequired": false,
+    "coreRequired": true,
     "rollingRequired": false,
     "structuralRequired": false
   },
   "robot": {
     "current": true,
-    "runId": 33475135061,
-    "event": "workflow_dispatch",
+    "runId": 33479280103,
+    "event": "schedule",
     "selfHealingLoop": true
   },
   "policy": {
