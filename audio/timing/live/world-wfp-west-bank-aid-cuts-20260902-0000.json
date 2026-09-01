@@ -1,0 +1,460 @@
+{
+  "version": 3,
+  "duration": 200.568,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 591,
+  "charactersPerMinute": 176.8,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 17.304,
+      "text": "資金不足により、WFPはヨルダン川西岸地区の食糧援助受給者の半分を40万人から20万人に削減せざるを得なくなった"
+    },
+    {
+      "key": "dek",
+      "start": 17.304,
+      "end": 41.319,
+      "text": "国連世界食糧計画（ WFP ）によると、ヨルダン川西岸地区の食料需要は2023年以来2倍以上に増加しているが、資金不足により今月の援助は大幅に縮小している。"
+    },
+    {
+      "key": "body-0",
+      "start": 41.319,
+      "end": 96.336,
+      "text": "国連世界食糧計画（ WFP ）が9月1日に発表したところによると、ヨルダン川西岸地区で食糧支援を受ける資格のある人々の数は、資金不足のために今月40万人から20万人に半減するという。WFPは、約90万人が食料不安に直面しており、世帯の76 ％が収入の大幅な減少を経験し、3分の1が栄養価の高い食事を買う余裕がないと推定しています。"
+    },
+    {
+      "key": "body-1",
+      "start": 96.336,
+      "end": 143.967,
+      "text": "WFPはまた、ガザ支援も資金調達の圧力の影響を受けており、7月には375,000人への現金支援の価値が40 ％削減されたと指摘した。政府機関は、ガザとヨルダン川西岸地区の約200万人の食糧不足の人々を支援するために、今後6か月間にさらに3億8600万ドルが必要になると推定している。"
+    },
+    {
+      "key": "why",
+      "start": 143.967,
+      "end": 178.973,
+      "text": "援助の減少は需要の減少ではなく、不十分な資金調達によって引き起こされる供給の縮小であり、より多くの家族が食べる量を減らしたり、資産を売ったり、非公式の救済に頼ったりすることを余儀なくされる可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 178.973,
+      "end": 200.568,
+      "text": "主要ドナーからの追加資金、ガザへのWFP援助のさらなる削減、ヨルダン川西岸地区の食料価格と世帯収入に関するデータにご注目ください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.648,
+      "end": 2.878,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "資金不足により、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.878,
+      "speechEnd": 9.566,
+      "end": 9.846,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "WFPはヨルダン川西岸地区の食糧援助受給者の半分を"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.846,
+      "speechEnd": 16.604,
+      "end": 17.304,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "40万人から20万人に削減せざるを得なくなった。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.304,
+      "speechEnd": 22.042,
+      "end": 22.272,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "国連世界食糧計画（ WFP ）によると、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.272,
+      "speechEnd": 27.149,
+      "end": 27.429,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ヨルダン川西岸地区の食料需要は"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.429,
+      "speechEnd": 33.77,
+      "end": 34.0,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "2023年以来2倍以上に増加しているが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 34.0,
+      "speechEnd": 40.618,
+      "end": 41.319,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "資金不足により今月の援助は大幅に縮小している。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.319,
+      "speechEnd": 45.29,
+      "end": 45.57,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "国連世界食糧計画（ WFP ）が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.57,
+      "speechEnd": 50.865,
+      "end": 51.095,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "9月1日に発表したところによると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.095,
+      "speechEnd": 55.833,
+      "end": 56.113,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ヨルダン川西岸地区で食糧支援を受け"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.113,
+      "speechEnd": 59.736,
+      "end": 59.966,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "る資格のある人々の数は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.966,
+      "speechEnd": 63.449,
+      "end": 63.589,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "資金不足のために今月"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.589,
+      "speechEnd": 65.819,
+      "end": 65.959,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "40万人"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.959,
+      "speechEnd": 69.861,
+      "end": 70.361,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "から20万人に半減するという。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.361,
+      "speechEnd": 72.381,
+      "end": 72.611,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "WFPは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.611,
+      "speechEnd": 78.394,
+      "end": 78.624,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "約90万人が食料不安に直面しており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 78.624,
+      "speechEnd": 86.497,
+      "end": 86.727,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "世帯の76 ％が収入の大幅な減少を経験し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 86.727,
+      "speechEnd": 92.44,
+      "end": 92.72,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "3分の1が栄養価の高い食事を買う余裕が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 92.72,
+      "speechEnd": 95.716,
+      "end": 96.336,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ないと推定しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 96.336,
+      "speechEnd": 98.566,
+      "end": 98.796,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "WFPはまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 98.796,
+      "speechEnd": 104.509,
+      "end": 104.739,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ガザ支援も資金調達の圧力の影響を受けており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.739,
+      "speechEnd": 108.362,
+      "end": 108.592,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "7月には375,"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.592,
+      "speechEnd": 112.424,
+      "end": 112.704,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "000人への現金支援の価値が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.704,
+      "speechEnd": 117.093,
+      "end": 117.593,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "40 ％削減されたと指摘した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.593,
+      "speechEnd": 120.102,
+      "end": 120.332,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "政府機関は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.332,
+      "speechEnd": 124.791,
+      "end": 124.931,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "ガザとヨルダン川西岸地区の約"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 124.931,
+      "speechEnd": 127.23,
+      "end": 127.37,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "200万人"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 127.37,
+      "speechEnd": 132.386,
+      "end": 132.616,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "の食糧不足の人々を支援するために、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 132.616,
+      "speechEnd": 139.514,
+      "end": 139.794,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "今後6か月間にさらに3億8600万ドルが"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 139.794,
+      "speechEnd": 143.347,
+      "end": 143.967,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "必要になると推定している。"
+    },
+    {
+      "parentKey": "why",
+      "start": 143.967,
+      "speechEnd": 147.939,
+      "end": 148.439,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 148.439,
+      "speechEnd": 153.107,
+      "end": 153.337,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "援助の減少は需要の減少ではなく、"
+    },
+    {
+      "parentKey": "why",
+      "start": 153.337,
+      "speechEnd": 161.21,
+      "end": 161.44,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "不十分な資金調達によって引き起こされる供給の縮小であり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 161.44,
+      "speechEnd": 166.874,
+      "end": 167.104,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "より多くの家族が食べる量を減らしたり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 167.104,
+      "speechEnd": 169.612,
+      "end": 169.843,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "資産を売ったり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 169.843,
+      "speechEnd": 178.273,
+      "end": 178.973,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "非公式の救済に頼ったりすることを余儀なくされる可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 178.973,
+      "speechEnd": 181.063,
+      "end": 181.293,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 181.293,
+      "speechEnd": 184.916,
+      "end": 185.146,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "主要ドナーからの追加資金、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 185.146,
+      "speechEnd": 189.605,
+      "end": 189.835,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ガザへのWFP援助のさらなる削減、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 189.835,
+      "speechEnd": 199.868,
+      "end": 200.568,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "ヨルダン川西岸地区の食料価格と世帯収入に関するデータにご注目ください。"
+    }
+  ]
+}

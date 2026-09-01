@@ -1,0 +1,430 @@
+{
+  "version": 3,
+  "duration": 198.296,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 586,
+  "charactersPerMinute": 177.3,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.447,
+      "text": "世界的な債券売却は原油価格とインフレの懸念を悪化させ、日米欧州の長期債券利回りを押し上げる"
+    },
+    {
+      "key": "dek",
+      "start": 14.447,
+      "end": 44.606,
+      "text": "日本の10年債利回りは3%に達し、米国の10年債利回りは4.8%近く上昇した。これは、原油価格の上昇と主要中央銀行によるさらなる金利引き上げの予想が株式評価を圧迫したためである。"
+    },
+    {
+      "key": "body-0",
+      "start": 44.606,
+      "end": 104.445,
+      "text": "世界債券市場の売り圧力は9月1日にさらに深まった。ロイターのデータによると、日本の10年債利回りは約30年ぶりの高水準である3 ％に上昇し、米国の10年債利回りは約4.8 ％上昇し、英国とドイツの長期債利回りも複数年ぶりの高水準に上昇した。原油価格の上昇により、投資家はインフレが回復するペースと、主要中央銀行によるさらなる金利引き上げのリスクを再評価するようになった。"
+    },
+    {
+      "key": "body-1",
+      "start": 104.445,
+      "end": 145.942,
+      "text": "また、長期金利の高騰は、特に多額の資本支出を必要とするテクノロジー企業やAI関連企業の株式評価からも損なわれています。クロスアセットのボラティリティは9月初旬に大幅に上昇し、市場は中東の供給リスク、ユーロ圏のインフレ、米連邦準備制度理事会のタカ派のシグナルも消化した。"
+    },
+    {
+      "key": "why",
+      "start": 145.942,
+      "end": 170.22,
+      "text": "ロング債券利回りの同時上昇は、企業融資、住宅ローン、政府借入コストを上昇させ、高価な株式に直接割引率の圧力をかけるだろう。"
+    },
+    {
+      "key": "watch",
+      "start": 170.22,
+      "end": 198.296,
+      "text": "米国10年債が4.8 ％で安定しているかどうか、原油価格が90ドルを超え続けることができるかどうか、主要な中央銀行家がシグナルをさらに強化しているかどうかに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 8.291,
+      "end": 8.521,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "世界的な債券売却は原油価格とインフレの懸念を悪化させ、"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.521,
+      "speechEnd": 13.747,
+      "end": 14.447,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "日米欧州の長期債券利回りを押し上げる。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.447,
+      "speechEnd": 20.091,
+      "end": 20.321,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本の10年債利回りは3%に達し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.321,
+      "speechEnd": 27.497,
+      "end": 27.998,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "米国の10年債利回りは4.8%近く上昇した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.998,
+      "speechEnd": 30.088,
+      "end": 30.318,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "これは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 30.318,
+      "speechEnd": 39.515,
+      "end": 39.795,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "原油価格の上昇と主要中央銀行によるさらなる金利引き上げの予想が"
+    },
+    {
+      "parentKey": "dek",
+      "start": 39.795,
+      "speechEnd": 43.906,
+      "end": 44.606,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "株式評価を圧迫したためである。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.606,
+      "speechEnd": 48.02,
+      "end": 48.16,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "世界債券市場の売り圧力は"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.16,
+      "speechEnd": 50.459,
+      "end": 50.6,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "9月1日"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.6,
+      "speechEnd": 53.526,
+      "end": 54.026,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "にさらに深まった。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.026,
+      "speechEnd": 57.231,
+      "end": 57.461,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイターのデータによると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.461,
+      "speechEnd": 61.433,
+      "end": 61.573,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "日本の10年債利回りは約"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.573,
+      "speechEnd": 63.733,
+      "end": 63.873,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "30年"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.873,
+      "speechEnd": 69.377,
+      "end": 69.607,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ぶりの高水準である3 ％に上昇し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.607,
+      "speechEnd": 76.644,
+      "end": 76.874,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国の10年債利回りは約4.8 ％上昇し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.874,
+      "speechEnd": 85.166,
+      "end": 85.666,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "英国とドイツの長期債利回りも複数年ぶりの高水準に上昇した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 85.666,
+      "speechEnd": 89.08,
+      "end": 89.31,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "原油価格の上昇により、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 89.31,
+      "speechEnd": 93.839,
+      "end": 94.069,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "投資家はインフレが回復するペースと、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 94.069,
+      "speechEnd": 100.479,
+      "end": 100.759,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "主要中央銀行によるさらなる金利引き上げのリスクを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 100.759,
+      "speechEnd": 103.825,
+      "end": 104.445,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "再評価するようになった。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.445,
+      "speechEnd": 106.465,
+      "end": 106.695,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "また、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 106.695,
+      "speechEnd": 109.831,
+      "end": 110.061,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "長期金利の高騰は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 110.061,
+      "speechEnd": 123.508,
+      "end": 124.008,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "特に多額の資本支出を必要とするテクノロジー企業やAI関連企業の株式評価からも損なわれています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 124.008,
+      "speechEnd": 131.045,
+      "end": 131.276,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "クロスアセットのボラティリティは9月初旬に大幅に上昇し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 131.276,
+      "speechEnd": 134.968,
+      "end": 135.198,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "市場は中東の供給リスク、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 135.198,
+      "speechEnd": 137.846,
+      "end": 138.076,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ユーロ圏のインフレ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 138.076,
+      "speechEnd": 145.322,
+      "end": 145.942,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "米連邦準備制度理事会のタカ派のシグナルも消化した。"
+    },
+    {
+      "parentKey": "why",
+      "start": 145.942,
+      "speechEnd": 149.914,
+      "end": 150.414,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 150.414,
+      "speechEnd": 154.316,
+      "end": 154.546,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロング債券利回りの同時上昇は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 154.546,
+      "speechEnd": 156.706,
+      "end": 156.936,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "企業融資、"
+    },
+    {
+      "parentKey": "why",
+      "start": 156.936,
+      "speechEnd": 159.096,
+      "end": 159.326,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "住宅ローン、"
+    },
+    {
+      "parentKey": "why",
+      "start": 159.326,
+      "speechEnd": 163.437,
+      "end": 163.667,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "政府借入コストを上昇させ、"
+    },
+    {
+      "parentKey": "why",
+      "start": 163.667,
+      "speechEnd": 169.519,
+      "end": 170.22,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "高価な株式に直接割引率の圧力をかけるだろう。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 170.22,
+      "speechEnd": 172.31,
+      "end": 172.54,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 172.54,
+      "speechEnd": 179.786,
+      "end": 180.016,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国10年債が4.8 ％で安定しているかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 180.016,
+      "speechEnd": 187.332,
+      "end": 187.562,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "原油価格が90ドルを超え続けることができるかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 187.562,
+      "speechEnd": 197.595,
+      "end": 198.296,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "主要な中央銀行家がシグナルをさらに強化しているかどうかに注意してください。"
+    }
+  ]
+}
