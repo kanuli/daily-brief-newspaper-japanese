@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 42.58,
+  "duration": 30.145,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 340.0,
-  "characters": 103,
-  "charactersPerMinute": 145.1,
+  "characters": 79,
+  "charactersPerMinute": 157.2,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.18,
@@ -21,96 +21,66 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 19.615,
-      "text": "7月のTSMCの売上高は前年同期比44.7 ％増となり、AIと高度なプロセスの需要は引き続き下半期の成長を支えている"
+      "end": 10.196,
+      "text": "TSM：TSMCで最新の売上高・事業動向情報を確認"
     },
     {
       "key": "body-0",
-      "start": 19.615,
-      "end": 42.58,
-      "text": "TSMCの7月の連結売上高は約4,675億8,000万台湾ドルで、前月比5.6%増、前年比44.7%増でした。"
+      "start": 10.196,
+      "end": 30.145,
+      "text": "TSMCを出典として、売上高・事業動向に関する新しい検証済み情報を確認しました。詳細は出典資料の確認後に順次更新します。"
     }
   ],
   "semanticUnits": [
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 9.346,
-      "end": 9.626,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "7月のTSMCの売上高は前年同期比44.7 ％増となり、"
-    },
-    {
-      "parentKey": "title",
-      "start": 9.626,
-      "speechEnd": 13.601,
-      "end": 13.942,
+      "speechEnd": 2.022,
+      "end": 2.362,
       "pause": 0.34,
       "intendedPause": 0.34,
-      "reason": "semantic-boundary",
-      "text": "AIと高度なプロセスの需要は"
+      "reason": "punctuation-semantic",
+      "text": "TSM："
     },
     {
       "parentKey": "title",
-      "start": 13.942,
-      "speechEnd": 18.754,
-      "end": 19.615,
+      "start": 2.362,
+      "speechEnd": 9.335,
+      "end": 10.196,
       "pause": 0.861,
       "intendedPause": 0.86,
       "reason": "punctuation-sentence",
-      "text": "引き続き下半期の成長を支えている。"
+      "text": "TSMCで最新の売上高・事業動向情報を確認。"
     },
     {
       "parentKey": "body-0",
-      "start": 19.615,
-      "speechEnd": 25.613,
-      "end": 25.893,
+      "start": 10.196,
+      "speechEnd": 13.264,
+      "end": 13.544,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "TSMCの7月の連結売上高は約4,"
+      "text": "TSMCを出典として、"
     },
     {
       "parentKey": "body-0",
-      "start": 25.893,
-      "speechEnd": 29.101,
-      "end": 29.382,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "675億8,"
+      "start": 13.544,
+      "speechEnd": 22.469,
+      "end": 23.089,
+      "pause": 0.621,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "売上高・事業動向に関する新しい検証済み情報を確認しました。"
     },
     {
       "parentKey": "body-0",
-      "start": 29.382,
-      "speechEnd": 32.381,
-      "end": 32.661,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "000万台湾ドルで、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 32.661,
-      "speechEnd": 36.427,
-      "end": 36.707,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "前月比5.6%増、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 36.707,
-      "speechEnd": 41.799,
-      "end": 42.58,
+      "start": 23.089,
+      "speechEnd": 29.365,
+      "end": 30.145,
       "pause": 0.781,
       "intendedPause": 0.78,
       "reason": "punctuation-sentence",
-      "text": "前年比44.7%増でした。"
+      "text": "詳細は出典資料の確認後に順次更新します。"
     }
   ]
 }
