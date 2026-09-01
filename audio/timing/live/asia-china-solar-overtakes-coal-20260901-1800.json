@@ -1,0 +1,460 @@
+{
+  "version": 3,
+  "duration": 216.712,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 631,
+  "charactersPerMinute": 174.7,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.724,
+      "text": "中国の太陽光発電設備容量が石炭火力発電を初めて上回り、最大の電力供給カテゴリーとなった"
+    },
+    {
+      "key": "dek",
+      "start": 14.724,
+      "end": 43.147,
+      "text": "7月末時点で、太陽光発電の発電量は約12.86億キロワットで、石炭火力発電量の12.85億キロワットをわずかに上回っており、実際の発電量に占めるのは石炭火力のみである。"
+    },
+    {
+      "key": "body-0",
+      "start": 43.147,
+      "end": 91.122,
+      "text": "中国の太陽光発電設備容量は、2026年7月末時点で約12億8600万キロワットに増加し、石炭火力発電の約12億8500万キロワットを初めて上回り、太陽光発電は国内最大の設置電力カテゴリーとなった。ロイターといくつかのエネルギーメディアは、この変化を確認するために、国のエネルギー当局からのデータを引用した。"
+    },
+    {
+      "key": "body-1",
+      "start": 91.122,
+      "end": 156.646,
+      "text": "設備容量が石炭火力発電を上回っているという事実は、太陽光発電が実際の発電量の最大の源泉になっていることを意味するものではなく、太陽光発電は太陽光とグリッドの消費によって制限されているため、石炭火力発電は依然として総発電量の中で支配的な地位を占めている。しかし、この交差点は、中国の電力投資構造が引き続き新しいエネルギー源に傾いていることを反映しており、エネルギー貯蔵、送電、グリッドの柔軟性に対する需要も加速します。"
+    },
+    {
+      "key": "why",
+      "start": 156.646,
+      "end": 193.982,
+      "text": "中国は世界最大の電力市場であり、太陽光発電サプライチェーンの中心です。設置構造の変化は、石炭需要、グリッド投資、エネルギー貯蔵市場、および太陽光発電機器の世界的な需要と供給に影響を与えます。"
+    },
+    {
+      "key": "watch",
+      "start": 193.982,
+      "end": 216.712,
+      "text": "太陽光発電の実際の割合、放棄率、石炭火力利用時間、エネルギー貯蔵とクロスリージョン送電への新たな投資ラウンドに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 9.336,
+      "end": 9.566,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中国の太陽光発電設備容量が石炭火力発電を初めて上回り、"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.566,
+      "speechEnd": 14.024,
+      "end": 14.724,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "最大の電力供給カテゴリーとなった。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.724,
+      "speechEnd": 17.581,
+      "end": 17.811,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "7月末時点で、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.811,
+      "speechEnd": 25.474,
+      "end": 25.705,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "太陽光発電の発電量は約12.86億キロワットで、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.705,
+      "speechEnd": 32.044,
+      "end": 32.324,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "石炭火力発電量の12.85億キロワットを"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.324,
+      "speechEnd": 35.599,
+      "end": 35.829,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "わずかに上回っており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 35.829,
+      "speechEnd": 42.447,
+      "end": 43.147,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "実際の発電量に占めるのは石炭火力のみである。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.147,
+      "speechEnd": 48.094,
+      "end": 48.324,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中国の太陽光発電設備容量は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.324,
+      "speechEnd": 58.147,
+      "end": 58.377,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "2026年7月末時点で約12億8600万キロワットに増加し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.377,
+      "speechEnd": 62.279,
+      "end": 62.419,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "石炭火力発電の約12億"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.419,
+      "speechEnd": 65.136,
+      "end": 65.276,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "8500万キロ"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.276,
+      "speechEnd": 68.481,
+      "end": 68.711,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ワットを初めて上回り、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.711,
+      "speechEnd": 76.304,
+      "end": 76.804,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "太陽光発電は国内最大の設置電力カテゴリーとなった。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.804,
+      "speechEnd": 81.124,
+      "end": 81.354,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイターといくつかのエネルギーメディアは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 81.354,
+      "speechEnd": 85.116,
+      "end": 85.346,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この変化を確認するために、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 85.346,
+      "speechEnd": 90.502,
+      "end": 91.122,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "国のエネルギー当局からのデータを引用した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.122,
+      "speechEnd": 98.089,
+      "end": 98.319,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "設備容量が石炭火力発電を上回っているという事実は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 98.319,
+      "speechEnd": 106.47,
+      "end": 106.75,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "太陽光発電が実際の発電量の最大の源泉になっていることを"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 106.75,
+      "speechEnd": 110.024,
+      "end": 110.254,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "意味するものではなく、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 110.254,
+      "speechEnd": 119.311,
+      "end": 119.541,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "太陽光発電は太陽光とグリッドの消費によって制限されているため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 119.541,
+      "speechEnd": 129.504,
+      "end": 130.004,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "石炭火力発電は依然として総発電量の中で支配的な地位を占めている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 130.004,
+      "speechEnd": 132.024,
+      "end": 132.254,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "しかし、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 132.254,
+      "speechEnd": 134.832,
+      "end": 135.062,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この交差点は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 135.062,
+      "speechEnd": 145.582,
+      "end": 145.812,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中国の電力投資構造が引き続き新しいエネルギー源に傾いていることを反映しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 145.812,
+      "speechEnd": 148.111,
+      "end": 148.341,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "エネルギー貯蔵、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 148.341,
+      "speechEnd": 150.362,
+      "end": 150.592,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "送電、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 150.592,
+      "speechEnd": 156.026,
+      "end": 156.646,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "グリッドの柔軟性に対する需要も加速します。"
+    },
+    {
+      "parentKey": "why",
+      "start": 156.646,
+      "speechEnd": 160.617,
+      "end": 161.117,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 161.117,
+      "speechEnd": 166.551,
+      "end": 166.781,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中国は世界最大の電力市場であり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 166.781,
+      "speechEnd": 172.355,
+      "end": 172.855,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "太陽光発電サプライチェーンの中心です。"
+    },
+    {
+      "parentKey": "why",
+      "start": 172.855,
+      "speechEnd": 175.641,
+      "end": 175.871,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "設置構造の変化は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 175.871,
+      "speechEnd": 178.031,
+      "end": 178.261,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "石炭需要、"
+    },
+    {
+      "parentKey": "why",
+      "start": 178.261,
+      "speechEnd": 180.63,
+      "end": 180.86,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "グリッド投資、"
+    },
+    {
+      "parentKey": "why",
+      "start": 180.86,
+      "speechEnd": 183.507,
+      "end": 183.737,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "エネルギー貯蔵市場、"
+    },
+    {
+      "parentKey": "why",
+      "start": 183.737,
+      "speechEnd": 193.282,
+      "end": 193.982,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "および太陽光発電機器の世界的な需要と供給に影響を与えます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 193.982,
+      "speechEnd": 196.072,
+      "end": 196.302,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 196.302,
+      "speechEnd": 200.413,
+      "end": 200.643,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "太陽光発電の実際の割合、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 200.643,
+      "speechEnd": 202.802,
+      "end": 203.032,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "放棄率、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 203.032,
+      "speechEnd": 206.167,
+      "end": 206.397,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "石炭火力利用時間、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 206.397,
+      "speechEnd": 216.012,
+      "end": 216.712,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "エネルギー貯蔵とクロスリージョン送電への新たな投資ラウンドに注意してください。"
+    }
+  ]
+}
