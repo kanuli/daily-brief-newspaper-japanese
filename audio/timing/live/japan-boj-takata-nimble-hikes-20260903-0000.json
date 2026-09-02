@@ -1,0 +1,430 @@
+{
+  "version": 3,
+  "duration": 187.925,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 519,
+  "charactersPerMinute": 165.7,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.727,
+      "text": "日本銀行高田が「柔軟な」金利引き上げを推進、2026年を価格政策の転換点と呼ぶ"
+    },
+    {
+      "key": "dek",
+      "start": 14.727,
+      "end": 36.157,
+      "text": "タカタは、日本銀行に対し、固定利上げのリズムに縛られないよう要請し、連続した会合でインフレ、海外リスク、財務状況を評価すべきである。"
+    },
+    {
+      "key": "body-0",
+      "start": 36.157,
+      "end": 94.214,
+      "text": "9月2日の札幌金融経済フォーラムで、日本銀行審議委員の高田宗氏は、金融政策は各会合の経済、価格、金融状況に応じて柔軟に判断されるべきであり、固定的な金利引き上げのペースに制限されるべきではないと述べた。彼は、2026年が重要な転換点であると考えており、日本銀行は価格が目標を上回るのを防ぐための政策決定をより明確に示す必要があると考えています。"
+    },
+    {
+      "key": "body-1",
+      "start": 94.214,
+      "end": 136.224,
+      "text": "7月の会合で政策金利を1 ％から1.25 ％に引き上げることを提唱したのはタカタだけだった。日本の10年国債利回りは最近3 ％近くまで上昇しており、円も急激に変動しています。市場は、日本銀行が9月18日の会合で再び金利を引き上げるかどうかを評価しています。"
+    },
+    {
+      "key": "why",
+      "start": 136.224,
+      "end": 164.495,
+      "text": "日本銀行の利上げは、円、日本国債、住宅ローン、企業融資コストに直接影響を及ぼし、円キャリー取引を通じて世界の資産価格にも影響を与える。"
+    },
+    {
+      "key": "watch",
+      "start": 164.495,
+      "end": 187.925,
+      "text": "9月18日の日本銀行金利会議の結果、他の審査員の発言、円債と10年国債の利回り、最新の賃金とインフレ率のデータに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.107,
+      "end": 7.337,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本銀行高田が「柔軟な」金利引き上げを推進、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.337,
+      "speechEnd": 14.027,
+      "end": 14.727,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "2026年を価格政策の転換点と呼ぶ。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.727,
+      "speechEnd": 16.817,
+      "end": 17.047,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "タカタは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.047,
+      "speechEnd": 19.834,
+      "end": 20.064,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本銀行に対し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.064,
+      "speechEnd": 25.36,
+      "end": 25.59,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "固定利上げのリズムに縛られないよう要請し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.59,
+      "speechEnd": 28.935,
+      "end": 29.165,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "連続した会合でインフレ、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 29.165,
+      "speechEnd": 31.325,
+      "end": 31.555,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "海外リスク、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 31.555,
+      "speechEnd": 35.457,
+      "end": 36.157,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "財務状況を評価すべきである。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.157,
+      "speechEnd": 41.801,
+      "end": 42.031,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "9月2日の札幌金融経済フォーラムで、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.031,
+      "speechEnd": 47.327,
+      "end": 47.557,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本銀行審議委員の高田宗氏は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.557,
+      "speechEnd": 51.947,
+      "end": 52.177,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "金融政策は各会合の経済、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.177,
+      "speechEnd": 54.197,
+      "end": 54.427,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "価格、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.427,
+      "speechEnd": 60.977,
+      "end": 61.207,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "金融状況に応じて柔軟に判断されるべきであり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.207,
+      "speechEnd": 69.847,
+      "end": 70.348,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "固定的な金利引き上げのペースに制限されるべきではないと述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.348,
+      "speechEnd": 72.368,
+      "end": 72.598,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "彼は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.598,
+      "speechEnd": 79.497,
+      "end": 79.727,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "2026年が重要な転換点であると考えており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 79.727,
+      "speechEnd": 86.137,
+      "end": 86.417,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "日本銀行は価格が目標を上回るのを防ぐため"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 86.417,
+      "speechEnd": 93.594,
+      "end": 94.214,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "の政策決定をより明確に示す必要があると考えています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.214,
+      "speechEnd": 104.109,
+      "end": 104.389,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "7月の会合で政策金利を1 ％から1.25 ％に引き上げることを"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.389,
+      "speechEnd": 108.221,
+      "end": 108.721,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "提唱したのはタカタだけだった。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.721,
+      "speechEnd": 117.571,
+      "end": 117.801,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本の10年国債利回りは最近3 ％近くまで上昇しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.801,
+      "speechEnd": 121.215,
+      "end": 121.715,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "円も急激に変動しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.715,
+      "speechEnd": 123.805,
+      "end": 124.035,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "市場は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 124.035,
+      "speechEnd": 131.003,
+      "end": 131.283,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "日本銀行が9月18日の会合で再び金利を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 131.283,
+      "speechEnd": 135.603,
+      "end": 136.224,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "引き上げるかどうかを評価しています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 136.224,
+      "speechEnd": 140.195,
+      "end": 140.696,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 140.696,
+      "speechEnd": 143.901,
+      "end": 144.131,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本銀行の利上げは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 144.131,
+      "speechEnd": 146.082,
+      "end": 146.312,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "円、"
+    },
+    {
+      "parentKey": "why",
+      "start": 146.312,
+      "speechEnd": 148.542,
+      "end": 148.772,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本国債、"
+    },
+    {
+      "parentKey": "why",
+      "start": 148.772,
+      "speechEnd": 150.932,
+      "end": 151.162,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "住宅ローン、"
+    },
+    {
+      "parentKey": "why",
+      "start": 151.162,
+      "speechEnd": 156.109,
+      "end": 156.339,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "企業融資コストに直接影響を及ぼし、"
+    },
+    {
+      "parentKey": "why",
+      "start": 156.339,
+      "speechEnd": 163.795,
+      "end": 164.495,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "円キャリー取引を通じて世界の資産価格にも影響を与える。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 164.495,
+      "speechEnd": 166.585,
+      "end": 166.815,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 166.815,
+      "speechEnd": 173.156,
+      "end": 173.386,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "9月18日の日本銀行金利会議の結果、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 173.386,
+      "speechEnd": 176.382,
+      "end": 176.612,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "他の審査員の発言、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 176.612,
+      "speechEnd": 180.445,
+      "end": 180.675,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "円債と10年国債の利回り、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 180.675,
+      "speechEnd": 187.225,
+      "end": 187.925,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "最新の賃金とインフレ率のデータに注目してください。"
+    }
+  ]
+}
