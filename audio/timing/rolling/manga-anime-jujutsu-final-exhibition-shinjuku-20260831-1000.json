@@ -1,0 +1,360 @@
+{
+  "version": 3,
+  "duration": 173.819,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 504,
+  "charactersPerMinute": 174.0,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 11.94,
+      "text": "展覧会の年末に「Spellbound」が新宿に戻り、最終的な状況作成資料を追加"
+    },
+    {
+      "key": "dek",
+      "start": 11.94,
+      "end": 33.018,
+      "text": "巡回展の累計来場者数は30万人を超え、12月25日から来年1月25日まで新宿住友ビル三角広場で最終回を迎える。"
+    },
+    {
+      "key": "body-0",
+      "start": 33.018,
+      "end": 81.447,
+      "text": "「呪文の反乱」の公式発表は8月30日に行われ、「呪文の反乱」の最終展示は今年12月25日から2027年1月25日まで、東京の新宿住友ビルのトライアングルプラザで開催されます。公式には、2024年の東京都渋谷区以来、日本各地を巡回し、30万人以上の来場者を集めています。"
+    },
+    {
+      "key": "body-1",
+      "start": 81.447,
+      "end": 127.376,
+      "text": "新宿駅はツアーの最終会場として位置づけられており、コミック制作のプロセスを紹介し、さまざまな形で考えているコアな展示コンテンツを使用するほか、新宿駅は作品の最終シーンを含む未発表のクリエイティブ素材を追加し、マスタードの下に新しく描かれた最終的な展示ビジュアルを使用します。展覧会は、指定された日時に開かれます。"
+    },
+    {
+      "key": "why",
+      "start": 127.376,
+      "end": 151.843,
+      "text": "最後の駅は新しい情報を追加し、展覧会はツアーのリプレイだけでなく、漫画の終了後にアーカイブを作成するための公式の補足となりました。"
+    },
+    {
+      "key": "watch",
+      "start": 151.843,
+      "end": 173.819,
+      "text": "発券の手配、追加展示のリスト、次の四半期とアニメーションの閉幕展示会の間に新しいリンケージの発表があるかどうかに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 6.271,
+      "end": 6.551,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "展覧会の年末に「Spellbound」が新宿に戻り、"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.551,
+      "speechEnd": 11.08,
+      "end": 11.94,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "最終的な状況作成資料を追加。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 11.94,
+      "speechEnd": 18.141,
+      "end": 18.421,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "巡回展の累計来場者数は30万人を超え、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.421,
+      "speechEnd": 22.392,
+      "end": 22.572,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "12月25日から来年"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.572,
+      "speechEnd": 25.22,
+      "end": 25.4,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "1月25日"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.4,
+      "speechEnd": 32.158,
+      "end": 33.018,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "まで新宿住友ビル三角広場で最終回を迎える。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 33.018,
+      "speechEnd": 41.449,
+      "end": 41.729,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "「呪文の反乱」の公式発表は8月30日に行われ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.729,
+      "speechEnd": 46.258,
+      "end": 46.598,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "「呪文の反乱」の最終展示は"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.598,
+      "speechEnd": 55.238,
+      "end": 55.518,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今年12月25日から2027年1月25日まで、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.518,
+      "speechEnd": 63.182,
+      "end": 63.802,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "東京の新宿住友ビルのトライアングルプラザで開催されます。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.802,
+      "speechEnd": 66.031,
+      "end": 66.312,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "公式には、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.312,
+      "speechEnd": 71.676,
+      "end": 71.956,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "2024年の東京都渋谷区以来、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.956,
+      "speechEnd": 75.161,
+      "end": 75.442,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本各地を巡回し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.442,
+      "speechEnd": 80.667,
+      "end": 81.447,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "30万人以上の来場者を集めています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 81.447,
+      "speechEnd": 88.415,
+      "end": 88.695,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "新宿駅はツアーの最終会場として位置づけられており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.695,
+      "speechEnd": 92.805,
+      "end": 93.086,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "コミック制作のプロセスを紹介し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.086,
+      "speechEnd": 100.541,
+      "end": 100.821,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "さまざまな形で考えているコアな展示コンテンツを使用するほか、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 100.821,
+      "speechEnd": 110.227,
+      "end": 110.507,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "新宿駅は作品の最終シーンを含む未発表のクリエイティブ素材を追加し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 110.507,
+      "speechEnd": 119.773,
+      "end": 120.394,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "マスタードの下に新しく描かれた最終的な展示ビジュアルを使用します。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.394,
+      "speechEnd": 122.484,
+      "end": 122.764,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "展覧会は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 122.764,
+      "speechEnd": 126.596,
+      "end": 127.376,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "指定された日時に開かれます。"
+    },
+    {
+      "parentKey": "why",
+      "start": 127.376,
+      "speechEnd": 131.348,
+      "end": 131.968,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 131.968,
+      "speechEnd": 136.496,
+      "end": 136.777,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "最後の駅は新しい情報を追加し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 136.777,
+      "speechEnd": 141.096,
+      "end": 141.376,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "展覧会はツアーのリプレイだけでなく、"
+    },
+    {
+      "parentKey": "why",
+      "start": 141.376,
+      "speechEnd": 146.811,
+      "end": 147.151,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "漫画の終了後にアーカイブを作成するため"
+    },
+    {
+      "parentKey": "why",
+      "start": 147.151,
+      "speechEnd": 150.983,
+      "end": 151.843,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "の公式の補足となりました。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 151.843,
+      "speechEnd": 153.933,
+      "end": 154.214,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 154.214,
+      "speechEnd": 156.513,
+      "end": 156.793,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "発券の手配、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 156.793,
+      "speechEnd": 159.51,
+      "end": 159.79,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "追加展示のリスト、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 159.79,
+      "speechEnd": 172.959,
+      "end": 173.819,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "次の四半期とアニメーションの閉幕展示会の間に新しいリンケージの発表があるかどうかに注意してください。"
+    }
+  ]
+}

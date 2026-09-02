@@ -1,0 +1,360 @@
+{
+  "version": 3,
+  "duration": 168.072,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 484,
+  "charactersPerMinute": 172.8,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.727,
+      "text": "警察と税関による密輸疑いのある719万本のタバコの市場価値約3236万元の密輸防止検査"
+    },
+    {
+      "key": "dek",
+      "start": 14.727,
+      "end": 39.852,
+      "text": "法執行官は、香港島の南とランタオ島の北の海域で3隻のスピードボートと2台のトラックを傍受し、容疑者はその後逃走し、事件はまだ調査中です。"
+    },
+    {
+      "key": "body-0",
+      "start": 39.852,
+      "end": 82.172,
+      "text": "警察は税関と協力して、香港島の南とランタオ島の北の海域で密輸防止活動を行い、ナビゲーションライトのないスピードボートをいくつか発見し、一部の人々は陸上トラックに荷物を運びました。警察官は作戦と迎撃を開始し、最終的に3隻のスピードボートと2台のトラックを押収した。"
+    },
+    {
+      "key": "body-1",
+      "start": 82.172,
+      "end": 121.626,
+      "text": "合計約719万本の疑いのあるタバコが押収され、推定時価は約3236万元、課税対象額は約2377万元でした。その後、関係者はスピードボートまたは放棄されたボートで脱出し、事件は引き続き税関によって追跡され、逮捕はまだ発表されていません。"
+    },
+    {
+      "key": "why",
+      "start": 121.626,
+      "end": 148.045,
+      "text": "この訴訟には3000万元以上の貨物価値と多くのスピードボートが関与しており、水路の私有煙のサプライチェーンがまだかなり大きいことを反映している。"
+    },
+    {
+      "key": "watch",
+      "start": 148.045,
+      "end": 168.072,
+      "text": "その後の税関逮捕、関与した船舶やトラックの出所、上流の供給網や現地の流通網に辿り着くかどうかに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 13.867,
+      "end": 14.727,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "警察と税関による密輸疑いのある719万本のタバコの市場価値約3236万元の密輸防止検査。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.727,
+      "speechEnd": 17.305,
+      "end": 17.585,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "法執行官は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.585,
+      "speechEnd": 26.295,
+      "end": 26.475,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "香港島の南とランタオ島の北の海域で3隻のスピードボートと"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.475,
+      "speechEnd": 28.496,
+      "end": 28.676,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "2台"
+    },
+    {
+      "parentKey": "dek",
+      "start": 28.676,
+      "speechEnd": 31.394,
+      "end": 31.674,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "のトラックを傍受し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 31.674,
+      "speechEnd": 35.158,
+      "end": 35.438,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "容疑者はその後逃走し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 35.438,
+      "speechEnd": 38.992,
+      "end": 39.852,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "事件はまだ調査中です。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.852,
+      "speechEnd": 42.988,
+      "end": 43.268,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "警察は税関と協力して、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.268,
+      "speechEnd": 52.396,
+      "end": 52.676,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "香港島の南とランタオ島の北の海域で密輸防止活動を行い、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.676,
+      "speechEnd": 59.226,
+      "end": 59.506,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ナビゲーションライトのないスピードボートをいくつか発見し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.506,
+      "speechEnd": 65.847,
+      "end": 66.467,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "一部の人々は陸上トラックに荷物を運びました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.467,
+      "speechEnd": 71.275,
+      "end": 71.555,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "警察官は作戦と迎撃を開始し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.555,
+      "speechEnd": 76.015,
+      "end": 76.195,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "最終的に3隻のスピードボートと"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.195,
+      "speechEnd": 78.216,
+      "end": 78.396,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "2台"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 78.396,
+      "speechEnd": 81.392,
+      "end": 82.172,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "のトラックを押収した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.172,
+      "speechEnd": 89.628,
+      "end": 89.908,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "合計約719万本の疑いのあるタバコが押収され、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 89.908,
+      "speechEnd": 94.856,
+      "end": 95.136,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "推定時価は約3236万元、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 95.136,
+      "speechEnd": 101.477,
+      "end": 102.097,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "課税対象額は約2377万元でした。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.097,
+      "speechEnd": 104.188,
+      "end": 104.468,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "その後、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.468,
+      "speechEnd": 111.715,
+      "end": 111.995,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "関係者はスピードボートまたは放棄されたボートで脱出し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.995,
+      "speechEnd": 116.454,
+      "end": 116.734,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "事件は引き続き税関によって追跡され、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 116.734,
+      "speechEnd": 120.845,
+      "end": 121.626,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "逮捕はまだ発表されていません。"
+    },
+    {
+      "parentKey": "why",
+      "start": 121.626,
+      "speechEnd": 125.598,
+      "end": 126.218,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 126.218,
+      "speechEnd": 137.088,
+      "end": 137.368,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この訴訟には3000万元以上の貨物価値と多くのスピードボートが関与しており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 137.368,
+      "speechEnd": 141.897,
+      "end": 142.237,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "水路の私有煙のサプライチェーンが"
+    },
+    {
+      "parentKey": "why",
+      "start": 142.237,
+      "speechEnd": 147.185,
+      "end": 148.045,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "まだかなり大きいことを反映している。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 148.045,
+      "speechEnd": 150.136,
+      "end": 150.416,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 150.416,
+      "speechEnd": 153.203,
+      "end": 153.483,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "その後の税関逮捕、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 153.483,
+      "speechEnd": 157.385,
+      "end": 157.665,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "関与した船舶やトラックの出所、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 157.665,
+      "speechEnd": 167.212,
+      "end": 168.072,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "上流の供給網や現地の流通網に辿り着くかどうかに注意してください。"
+    }
+  ]
+}
