@@ -1,302 +1,69 @@
 {
   "date": "2026-09-02",
-  "generatedAt": "2026-09-02T08:00:00+08:00",
+  "generatedAt": "2026-09-02T12:00:00+08:00",
   "mode": "ROLLING_DESK_LATEST",
   "editorialStandardVersion": 3,
   "contentVersion": 3,
   "desks": {
     "world": [
       {
-        "id": "world-ukraine-drones-russia-airspace-20260902-0700",
-        "desk": "world",
+        "id": "ai-tech-sality-botnet-disruption-20260902-1200",
+        "desk": "ai-tech",
         "status": "LATEST",
-        "title": "ゼレンスキー大統領は、ウクライナの無人機がロシア領空でのリスクを高めていると述べ、航空会社や保険会社に再評価を求めた",
-        "dek": "ウクライナ大統領は、最近の長距離ドローン運用によりロシアの民間航空環境はより危険になったと述べたが、ウクライナは民間航空を標的にしていないことを強調した。",
-        "summary": "ゼレンスキー大統領は夕方の演説で、ウクライナの無人機運用によりロシア空域の安全な利用がますます困難になっていると述べ、航空業界や保険業界に対しリスクに立ち向かうよう呼び掛けた。",
-        "body": "ウクライナのゼレンスキー大統領は最近の夕方の演説で、ウクライナ軍の長距離無人機作戦によりロシア国内の多くの場所の空港や空域が継続的な危険にさらされていると述べた。国際航空会社、保険会社、ロシアの空港を利用する企業は安全保障環境を再評価する必要がある。同氏はまた、ウクライナは民間航空機を標的にしていないことを強調した。\n\nウクライナは最近、ロシアのエネルギー施設や輸送施設に対するドローン作戦を強化しており、ロシアの多くの空港は警報のため一時的に飛行を制限している。この前線は、ここ数日のキエフやその他の都市に対するロシアの空爆の激化と一致しており、国境を越えた航空、保険、物流への戦争の波及リスクが高まっている。",
-        "context": "ロシアとウクライナは最近、長距離ドローンやミサイル攻撃を強化しており、民間航空や主要インフラは空域制限や警戒警報による影響をますます受けている。",
-        "why": "航空会社や保険会社がロシア路線の引き受けや運航をさらに厳格化すれば、戦争による経済波及コストと輸送コストが増大するだろう。",
-        "watchNext": "ロシアの主要空港でさらなる大規模な航空交通規制が行われるか、保険料率の変更、そしてその後のウクライナによるロシアのエネルギー施設や港湾施設への攻撃が行われるかどうかに注目してください。",
-        "sourceName": "Reuters／烏克蘭總統府",
-        "sourceUrl": "https://www.reuters.com/business/aerospace-defense/zelenskiy-says-ukrainian-drones-have-effectively-closed-russian-airspace-2026-09-01/",
-        "timeLabel": "9月2日07:00 HKT確認済み",
+        "title": "米国と欧州は、20 年以上にわたって運用されてきた Sality ボットネットの解体に協力します。 CrowdStrike は、感染した約 15,000 ホストのコマンド チェーンを遮断します。",
+        "dek": "米国司法省、FBI、および欧州の法執行機関は、CrowdStrike および Shadowserver と協力して、ドメイン名差し押さえと P2P シンクホールを通じて Sality 制御ネットワークをブロックしました。",
+        "summary": "米国と欧州の法執行機関とクラウドストライクは、Sality マルウェアとボットネット インフラストラクチャの破壊に成功し、オペレータが感染した多数のコンピュータの制御を失ったと発表しました。",
+        "body": "米国司法省、FBI、国防刑事捜査局、およびヨーロッパの複数の法執行機関は、CrowdStrike および Shadowserver Foundation と協力して、Sality ボットネットと戦うための連携した取り組みを発表しました。 Sality は 2003 年から存在しており、ピアツーピア ネットワークを通じて感染した Windows デバイスを制御し、スパムの拡散、DDoS 攻撃、暗号通貨の窃取、その他の悪意のあるプログラムの配信に使用されています。\n\nCrowdStrike は、チームが Sality 独自の P2P 構造を使用して、偽のピア情報を注入し、シンクホールを作成し、感染したコンピューターをオペレーターから隔離したと述べました。米国と欧州の法執行機関も同時に関連ドメイン名を押収した。同社は、このネットワークが悪意のあるペイロードを 15,000 台以上の感染デバイスに配信したと推定していますが、既存の悪意のあるプログラムは依然としてユーザーや組織自身が削除する必要があります。",
+        "context": "分散型 P2P ボットネットは、従来の集中管理されたサーバーよりもダウンさせるのが難しいことが多く、Sality はインターネット上で最も長く存続するマルウェア インフラストラクチャの 1 つとなっています。",
+        "why": "この行動は、法執行機関と民間セキュリティ企業がプロトコルの弱点を直接使用して分散型ネットワークを混乱させることができることを示しており、AI時代の将来のボットネット、ランサムウェア、および自動攻撃防御のデモンストレーションとして使用できます。",
+        "watchNext": "感染通知とクリーンアップの進捗状況、オペレーターがネットワークの再構築を試みるかどうか、法執行機関が身元を公開したり、起訴したり、追加の差し押さえを行う可能性があるかどうかを監視してください。",
+        "sourceName": "美國司法部／CrowdStrike／Reuters",
+        "sourceUrl": "https://www.justice.gov/usao-cdca/pr/sality-malware-disrupted-international-cyber-takedown",
+        "timeLabel": "9月2日12:00 HKT確認済み",
         "sources": [
           {
-            "name": "Reuters",
-            "url": "https://www.reuters.com/business/aerospace-defense/zelenskiy-says-ukrainian-drones-have-effectively-closed-russian-airspace-2026-09-01/"
+            "name": "U.S. Department of Justice",
+            "url": "https://www.justice.gov/usao-cdca/pr/sality-malware-disrupted-international-cyber-takedown"
           },
           {
-            "name": "烏克蘭總統府",
-            "url": "https://www.president.gov.ua/en/news"
+            "name": "CrowdStrike",
+            "url": "https://www.crowdstrike.com/en-us/blog/inside-sality-botnet-disruption-operation/"
+          },
+          {
+            "name": "Reuters",
+            "url": "https://www.reuters.com/legal/government/russian-cybercrime-operation-being-dismantled-after-two-decades-us-officials-2026-09-01/"
           }
         ],
         "deskSlugs": [
+          "ai-tech",
           "world"
         ],
-        "section": "世界｜俄烏戰爭／航空安全",
-        "sectionLabel": "世界",
+        "section": "AI／科技｜網絡安全／惡意軟件",
+        "sectionLabel": "AI／科技",
         "image": null,
-        "sourceItemFingerprint": "0f4ea198342027a492d52b895ddc1a47123492c7a1e5809b94dc5cbc2e7ddc9e",
+        "sourceItemFingerprint": "77a78baf79025b3721145ceefde1c70bd350a66b5c75a3a8a706b33ac3d0540e",
         "furigana": {
-          "section": "<ruby>世界<rt>せかい</rt></ruby>｜<ruby>俄<rt>にわか</rt></ruby><ruby>烏<rt>からす</rt></ruby><ruby>戰爭<rt>せんそう</rt></ruby>／<ruby>航空<rt>こうくう</rt></ruby><ruby>安全<rt>あんぜん</rt></ruby>",
-          "title": "ゼレンスキー<ruby>大統領<rt>だいとうりょう</rt></ruby>は、ウクライナの<ruby>無人機<rt>むじんき</rt></ruby>がロシア<ruby>領空<rt>りょうくう</rt></ruby>でのリスクを<ruby>高<rt>たか</rt></ruby>めていると<ruby>述<rt>の</rt></ruby>べ、<ruby>航空会社<rt>こうくうがいしゃ</rt></ruby>や<ruby>保険会社<rt>ほけんがいしゃ</rt></ruby>に<ruby>再評価<rt>さいひょうか</rt></ruby>を<ruby>求<rt>もと</rt></ruby>めた",
-          "dek": "ウクライナ<ruby>大統領<rt>だいとうりょう</rt></ruby>は、<ruby>最近<rt>さいきん</rt></ruby>の<ruby>長距離<rt>ちょうきょり</rt></ruby>ドローン<ruby>運用<rt>うんよう</rt></ruby>によりロシアの<ruby>民間<rt>みんかん</rt></ruby><ruby>航空<rt>こうくう</rt></ruby><ruby>環境<rt>かんきょう</rt></ruby>はより<ruby>危険<rt>きけん</rt></ruby>になったと<ruby>述<rt>の</rt></ruby>べたが、ウクライナは<ruby>民間<rt>みんかん</rt></ruby><ruby>航空<rt>こうくう</rt></ruby>を<ruby>標的<rt>ひょうてき</rt></ruby>にしていないことを<ruby>強調<rt>きょうちょう</rt></ruby>した。",
-          "summary": "ゼレンスキー<ruby>大統領<rt>だいとうりょう</rt></ruby>は<ruby>夕方<rt>ゆうがた</rt></ruby>の<ruby>演説<rt>えんぜつ</rt></ruby>で、ウクライナの<ruby>無人<rt>むじん</rt></ruby><ruby>機運<rt>きうん</rt></ruby><ruby>用<rt>よう</rt></ruby>によりロシア<ruby>空域<rt>くういき</rt></ruby>の<ruby>安全<rt>あんぜん</rt></ruby>な<ruby>利用<rt>りよう</rt></ruby>がますます<ruby>困難<rt>こんなん</rt></ruby>になっていると<ruby>述<rt>の</rt></ruby>べ、<ruby>航空業界<rt>こうくうぎょうかい</rt></ruby>や<ruby>保険<rt>ほけん</rt></ruby><ruby>業界<rt>ぎょうかい</rt></ruby>に<ruby>対<rt>たい</rt></ruby>しリスクに<ruby>立<rt>た</rt></ruby>ち<ruby>向<rt>む</rt></ruby>かうよう<ruby>呼<rt>よ</rt></ruby>び<ruby>掛<rt>か</rt></ruby>けた。",
-          "context": "ロシアとウクライナは<ruby>最近<rt>さいきん</rt></ruby>、<ruby>長距離<rt>ちょうきょり</rt></ruby>ドローンやミサイル<ruby>攻撃<rt>こうげき</rt></ruby>を<ruby>強化<rt>きょうか</rt></ruby>しており、<ruby>民間<rt>みんかん</rt></ruby><ruby>航空<rt>こうくう</rt></ruby>や<ruby>主要<rt>しゅよう</rt></ruby>インフラは<ruby>空域<rt>くういき</rt></ruby><ruby>制限<rt>せいげん</rt></ruby>や<ruby>警戒<rt>けいかい</rt></ruby><ruby>警報<rt>けいほう</rt></ruby>による<ruby>影響<rt>えいきょう</rt></ruby>をますます<ruby>受<rt>う</rt></ruby>けている。",
-          "why": "<ruby>航空会社<rt>こうくうがいしゃ</rt></ruby>や<ruby>保険会社<rt>ほけんがいしゃ</rt></ruby>がロシア<ruby>路線<rt>ろせん</rt></ruby>の<ruby>引き受<rt>ひきう</rt></ruby>けや<ruby>運航<rt>うんこう</rt></ruby>をさらに<ruby>厳格化<rt>げんかくか</rt></ruby>すれば、<ruby>戦争<rt>せんそう</rt></ruby>による<ruby>経済<rt>けいざい</rt></ruby><ruby>波及<rt>はきゅう</rt></ruby>コストと<ruby>輸送<rt>ゆそう</rt></ruby>コストが<ruby>増大<rt>ぞうだい</rt></ruby>するだろう。",
-          "watchNext": "ロシアの<ruby>主要空港<rt>しゅようくうこう</rt></ruby>でさらなる<ruby>大規模<rt>だいきぼ</rt></ruby>な<ruby>航空<rt>こうくう</rt></ruby><ruby>交通規制<rt>こうつうきせい</rt></ruby>が<ruby>行<rt>おこな</rt></ruby>われるか、<ruby>保険料<rt>ほけんりょう</rt></ruby><ruby>率<rt>りつ</rt></ruby>の<ruby>変更<rt>へんこう</rt></ruby>、そしてその<ruby>後<rt>ご</rt></ruby>のウクライナによるロシアのエネルギー<ruby>施設<rt>しせつ</rt></ruby>や<ruby>港湾<rt>こうわん</rt></ruby><ruby>施設<rt>しせつ</rt></ruby>への<ruby>攻撃<rt>こうげき</rt></ruby>が<ruby>行<rt>おこな</rt></ruby>われるかどうかに<ruby>注目<rt>ちゅうもく</rt></ruby>してください。",
+          "section": "AI／<ruby>科技<rt>かぎ</rt></ruby>｜<ruby>網<rt>あみ</rt></ruby><ruby>絡<rt>らく</rt></ruby><ruby>安全<rt>あんぜん</rt></ruby>／<ruby>惡<rt>あく</rt></ruby><ruby>意<rt>い</rt></ruby><ruby>軟<rt>なん</rt></ruby><ruby>件<rt>けん</rt></ruby>",
+          "title": "<ruby>米国<rt>べいこく</rt></ruby>と<ruby>欧州<rt>おうしゅう</rt></ruby>は、20 <ruby>年以上<rt>ねんいじょう</rt></ruby>にわたって<ruby>運用<rt>うんよう</rt></ruby>されてきた Sality ボットネットの<ruby>解体<rt>かいたい</rt></ruby>に<ruby>協力<rt>きょうりょく</rt></ruby>します。 CrowdStrike は、<ruby>感染<rt>かんせん</rt></ruby>した<ruby>約<rt>やく</rt></ruby> 15,000 ホストのコマンド チェーンを<ruby>遮断<rt>しゃだん</rt></ruby>します。",
+          "dek": "<ruby>米国<rt>べいこく</rt></ruby><ruby>司法<rt>しほう</rt></ruby><ruby>省<rt>しょう</rt></ruby>、FBI、および<ruby>欧州<rt>おうしゅう</rt></ruby>の<ruby>法執<rt>ほっしゅう</rt></ruby><ruby>行<rt>ぎょう</rt></ruby><ruby>機関<rt>きかん</rt></ruby>は、CrowdStrike および Shadowserver と<ruby>協力<rt>きょうりょく</rt></ruby>して、ドメイン<ruby>名<rt>めい</rt></ruby><ruby>差<rt>さ</rt></ruby>し<ruby>押<rt>お</rt></ruby>さえと P2P シンクホールを<ruby>通<rt>つう</rt></ruby>じて Sality <ruby>制御<rt>せいぎょ</rt></ruby>ネットワークをブロックしました。",
+          "summary": "<ruby>米国<rt>べいこく</rt></ruby>と<ruby>欧州<rt>おうしゅう</rt></ruby>の<ruby>法<rt>ほう</rt></ruby><ruby>執行機関<rt>しっこうきかん</rt></ruby>とクラウドストライクは、Sality マルウェアとボットネット インフラストラクチャの<ruby>破壊<rt>はかい</rt></ruby>に<ruby>成功<rt>せいこう</rt></ruby>し、オペレータが<ruby>感染<rt>かんせん</rt></ruby>した<ruby>多数<rt>たすう</rt></ruby>のコンピュータの<ruby>制御<rt>せいぎょ</rt></ruby>を<ruby>失<rt>うしな</rt></ruby>ったと<ruby>発表<rt>はっぴょう</rt></ruby>しました。",
+          "context": "<ruby>分散型<rt>ぶんさんがた</rt></ruby> P2P ボットネットは、<ruby>従来<rt>じゅうらい</rt></ruby>の<ruby>集中管理<rt>しゅうちゅうかんり</rt></ruby>されたサーバーよりもダウンさせるのが<ruby>難<rt>むずか</rt></ruby>しいことが<ruby>多<rt>おお</rt></ruby>く、Sality はインターネット<ruby>上<rt>うえ</rt></ruby>で<ruby>最<rt>もっと</rt></ruby>も<ruby>長<rt>なが</rt></ruby>く<ruby>存続<rt>そんぞく</rt></ruby>するマルウェア インフラストラクチャの 1 つとなっています。",
+          "why": "この<ruby>行動<rt>こうどう</rt></ruby>は、<ruby>法<rt>ほう</rt></ruby><ruby>執行機関<rt>しっこうきかん</rt></ruby>と<ruby>民間<rt>みんかん</rt></ruby>セキュリティ<ruby>企業<rt>きぎょう</rt></ruby>がプロトコルの<ruby>弱点<rt>じゃくてん</rt></ruby>を<ruby>直接<rt>ちょくせつ</rt></ruby><ruby>使用<rt>しよう</rt></ruby>して<ruby>分散型<rt>ぶんさんがた</rt></ruby>ネットワークを<ruby>混乱<rt>こんらん</rt></ruby>させることができることを<ruby>示<rt>しめ</rt></ruby>しており、AI<ruby>時代<rt>じだい</rt></ruby>の<ruby>将来<rt>しょうらい</rt></ruby>のボットネット、ランサムウェア、および<ruby>自動<rt>じどう</rt></ruby><ruby>攻撃<rt>こうげき</rt></ruby><ruby>防御<rt>ぼうぎょ</rt></ruby>のデモンストレーションとして<ruby>使用<rt>しよう</rt></ruby>できます。",
+          "watchNext": "<ruby>感染<rt>かんせん</rt></ruby><ruby>通知<rt>つうち</rt></ruby>とクリーンアップの<ruby>進捗状況<rt>しんちょくじょうきょう</rt></ruby>、オペレーターがネットワークの<ruby>再<rt>さい</rt></ruby><ruby>構築<rt>こうちく</rt></ruby>を<ruby>試<rt>こころ</rt></ruby>みるかどうか、<ruby>法<rt>ほう</rt></ruby><ruby>執行機関<rt>しっこうきかん</rt></ruby>が<ruby>身元<rt>みもと</rt></ruby>を<ruby>公開<rt>こうかい</rt></ruby>したり、<ruby>起訴<rt>きそ</rt></ruby>したり、<ruby>追加<rt>ついか</rt></ruby>の<ruby>差し押<rt>さしお</rt></ruby>さえを<ruby>行<rt>おこな</rt></ruby>う<ruby>可能性<rt>かのうせい</rt></ruby>があるかどうかを<ruby>監視<rt>かんし</rt></ruby>してください。",
           "bodyParagraphs": [
-            "ウクライナのゼレンスキー<ruby>大統領<rt>だいとうりょう</rt></ruby>は<ruby>最近<rt>さいきん</rt></ruby>の<ruby>夕方<rt>ゆうがた</rt></ruby>の<ruby>演説<rt>えんぜつ</rt></ruby>で、ウクライナ<ruby>軍<rt>ぐん</rt></ruby>の<ruby>長距離<rt>ちょうきょり</rt></ruby><ruby>無人機<rt>むじんき</rt></ruby><ruby>作戦<rt>さくせん</rt></ruby>によりロシア<ruby>国内<rt>こくない</rt></ruby>の<ruby>多<rt>おお</rt></ruby>くの<ruby>場所<rt>ばしょ</rt></ruby>の<ruby>空港<rt>くうこう</rt></ruby>や<ruby>空域<rt>くういき</rt></ruby>が<ruby>継続的<rt>けいぞくてき</rt></ruby>な<ruby>危険<rt>きけん</rt></ruby>にさらされていると<ruby>述<rt>の</rt></ruby>べた。<ruby>国際<rt>こくさい</rt></ruby><ruby>航空会社<rt>こうくうがいしゃ</rt></ruby>、<ruby>保険会社<rt>ほけんがいしゃ</rt></ruby>、ロシアの<ruby>空港<rt>くうこう</rt></ruby>を<ruby>利用<rt>りよう</rt></ruby>する<ruby>企業<rt>きぎょう</rt></ruby>は<ruby>安全<rt>あんぜん</rt></ruby><ruby>保障<rt>ほしょう</rt></ruby><ruby>環境<rt>かんきょう</rt></ruby>を<ruby>再評価<rt>さいひょうか</rt></ruby>する<ruby>必要<rt>ひつよう</rt></ruby>がある。<ruby>同氏<rt>どうし</rt></ruby>はまた、ウクライナは<ruby>民間<rt>みんかん</rt></ruby><ruby>航空機<rt>こうくうき</rt></ruby>を<ruby>標的<rt>ひょうてき</rt></ruby>にしていないことを<ruby>強調<rt>きょうちょう</rt></ruby>した。",
-            "ウクライナは<ruby>最近<rt>さいきん</rt></ruby>、ロシアのエネルギー<ruby>施設<rt>しせつ</rt></ruby>や<ruby>輸送<rt>ゆそう</rt></ruby><ruby>施設<rt>しせつ</rt></ruby>に<ruby>対<rt>たい</rt></ruby>するドローン<ruby>作戦<rt>さくせん</rt></ruby>を<ruby>強化<rt>きょうか</rt></ruby>しており、ロシアの<ruby>多<rt>おお</rt></ruby>くの<ruby>空港<rt>くうこう</rt></ruby>は<ruby>警報<rt>けいほう</rt></ruby>のため<ruby>一時的<rt>いちじてき</rt></ruby>に<ruby>飛行<rt>ひこう</rt></ruby>を<ruby>制限<rt>せいげん</rt></ruby>している。この<ruby>前線<rt>ぜんせん</rt></ruby>は、ここ<ruby>数日<rt>すうじつ</rt></ruby>のキエフやその<ruby>他<rt>ほか</rt></ruby>の<ruby>都市<rt>とし</rt></ruby>に<ruby>対<rt>たい</rt></ruby>するロシアの<ruby>空爆<rt>くうばく</rt></ruby>の<ruby>激化<rt>げきか</rt></ruby>と<ruby>一致<rt>いっち</rt></ruby>しており、<ruby>国境<rt>こっきょう</rt></ruby>を<ruby>越<rt>こ</rt></ruby>えた<ruby>航空<rt>こうくう</rt></ruby>、<ruby>保険<rt>ほけん</rt></ruby>、<ruby>物流<rt>ぶつりゅう</rt></ruby>への<ruby>戦争<rt>せんそう</rt></ruby>の<ruby>波及<rt>はきゅう</rt></ruby>リスクが<ruby>高<rt>たか</rt></ruby>まっている。"
+            "<ruby>米国<rt>べいこく</rt></ruby><ruby>司法<rt>しほう</rt></ruby><ruby>省<rt>しょう</rt></ruby>、FBI、<ruby>国防<rt>こくぼう</rt></ruby><ruby>刑事<rt>けいじ</rt></ruby><ruby>捜査<rt>そうさ</rt></ruby><ruby>局<rt>きょく</rt></ruby>、およびヨーロッパの<ruby>複数<rt>ふくすう</rt></ruby>の<ruby>法執<rt>ほっしゅう</rt></ruby><ruby>行<rt>ぎょう</rt></ruby><ruby>機関<rt>きかん</rt></ruby>は、CrowdStrike および Shadowserver Foundation と<ruby>協力<rt>きょうりょく</rt></ruby>して、Sality ボットネットと<ruby>戦<rt>たたか</rt></ruby>うための<ruby>連携<rt>れんけい</rt></ruby>した<ruby>取り組<rt>とりく</rt></ruby>みを<ruby>発表<rt>はっぴょう</rt></ruby>しました。 Sality は 2003 <ruby>年<rt>ねん</rt></ruby>から<ruby>存在<rt>そんざい</rt></ruby>しており、ピアツーピア ネットワークを<ruby>通<rt>つう</rt></ruby>じて<ruby>感染<rt>かんせん</rt></ruby>した Windows デバイスを<ruby>制御<rt>せいぎょ</rt></ruby>し、スパムの<ruby>拡散<rt>かくさん</rt></ruby>、DDoS <ruby>攻撃<rt>こうげき</rt></ruby>、<ruby>暗号<rt>あんごう</rt></ruby><ruby>通貨<rt>つうか</rt></ruby>の<ruby>窃取<rt>せっしゅ</rt></ruby>、その<ruby>他<rt>ほか</rt></ruby>の<ruby>悪意<rt>あくい</rt></ruby>のあるプログラムの<ruby>配信<rt>はいしん</rt></ruby>に<ruby>使用<rt>しよう</rt></ruby>されています。",
+            "CrowdStrike は、チームが Sality <ruby>独自<rt>どくじ</rt></ruby>の P2P <ruby>構造<rt>こうぞう</rt></ruby>を<ruby>使用<rt>しよう</rt></ruby>して、<ruby>偽<rt>にせ</rt></ruby>のピア<ruby>情報<rt>じょうほう</rt></ruby>を<ruby>注入<rt>ちゅうにゅう</rt></ruby>し、シンクホールを<ruby>作成<rt>さくせい</rt></ruby>し、<ruby>感染<rt>かんせん</rt></ruby>したコンピューターをオペレーターから<ruby>隔離<rt>かくり</rt></ruby>したと<ruby>述<rt>の</rt></ruby>べました。<ruby>米国<rt>べいこく</rt></ruby>と<ruby>欧州<rt>おうしゅう</rt></ruby>の<ruby>法執<rt>ほっしゅう</rt></ruby><ruby>行<rt>ぎょう</rt></ruby><ruby>機関<rt>きかん</rt></ruby>も<ruby>同時<rt>どうじ</rt></ruby>に<ruby>関連<rt>かんれん</rt></ruby>ドメイン<ruby>名<rt>めい</rt></ruby>を<ruby>押収<rt>おうしゅう</rt></ruby>した。<ruby>同社<rt>どうしゃ</rt></ruby>は、このネットワークが<ruby>悪意<rt>あくい</rt></ruby>のあるペイロードを 15,000 <ruby>台<rt>だい</rt></ruby><ruby>以上<rt>いじょう</rt></ruby>の<ruby>感染<rt>かんせん</rt></ruby>デバイスに<ruby>配信<rt>はいしん</rt></ruby>したと<ruby>推定<rt>すいてい</rt></ruby>していますが、<ruby>既存<rt>きぞん</rt></ruby>の<ruby>悪意<rt>あくい</rt></ruby>のあるプログラムは<ruby>依然<rt>いぜん</rt></ruby>としてユーザーや<ruby>組織<rt>そしき</rt></ruby><ruby>自身<rt>じしん</rt></ruby>が<ruby>削除<rt>さくじょ</rt></ruby>する<ruby>必要<rt>ひつよう</rt></ruby>があります。"
           ]
         },
-        "audio": "audio/rolling/world-ukraine-drones-russia-airspace-20260902-0700.mp3",
-        "timing": "audio/timing/rolling/world-ukraine-drones-russia-airspace-20260902-0700.json",
-        "audioSpeed": 0.72,
-        "audioDeliveryProfile": "jp-tv-news-semantic-v4"
+        "audio": "audio/rolling/ai-tech-sality-botnet-disruption-20260902-1200.mp3",
+        "timing": "audio/timing/rolling/ai-tech-sality-botnet-disruption-20260902-1200.json"
       }
     ],
-    "asia": [
-      {
-        "id": "japan-asia-defense-budget-drones-ai-20260831-1800",
-        "desk": "japan",
-        "status": "LATEST",
-        "title": "日本の防衛省予算案は、ドローン、AI、長距離ミサイルに焦点を当てるために8.9兆円を求めています",
-        "dek": "日本の防衛省は、低コストの攻撃用ドローン、長距離兵器、AIコマンドシステム、防衛産業能力への投資に焦点を当て、来年度に約8.9兆円の予算要求を提案しました。",
-        "summary": "日本の新しい年間防衛予算要件は新たな高水準に達し、無人およびAI機能がコアプロジェクトに含まれており、東京が長距離攻撃、分散作戦、デジタルコマンド機能の確立を加速していることを反映しています。",
-        "body": "日本の防衛省は、来年度に約8.9兆円の予算要求を提案している。AP通信によると、この計画には、低コストの攻撃用ドローン、長距離巡航ミサイルと極超音速ミサイル、統合されたAIプラットフォーム、国防省のクラウドシステムが含まれ、国内防衛装備の研究開発と生産基盤が強化されているという。関連する項目は、まだ政府と国民議会の予算プロセスによって確認される必要があります。\n\n近年、日本は5カ年の防衛準備計画に沿って警備費を急速に増加させ、無人システムを人手不足に対処し、島嶼防衛能力を向上させるための重要なツールと見なしています。この要請は、AIがもはや物流分析だけでなく、指揮、認識、意思決定のサポートに徐々に参入していることを示しており、どのように利用規則、サイバーセキュリティ、サプライチェーンのレジリエンスを確立するかは、軍隊を拡大しながら対処する必要があるガバナンスの問題になるでしょう。",
-        "context": "日本は安全保障と防衛政策を見直し、防衛支出を増やし続けています。近年、東アジアにおけるミサイル、ドローン、空軍および海軍能力の競争は大幅に増加しています。",
-        "why": "8.9兆円の水準の要求は、日本の財政、防衛産業、地域安全保障のバランスに直接的な影響を及ぼし、AIと無人兵器の割合の増加も、自衛隊の作戦モデルが変化していることを意味します。",
-        "watchNext": "財務省の削減、年末の公式予算、AIとドローンの取得数、長距離ミサイルの配備時間、そして新しいセキュリティ戦略が関連する能力をどのように定義しているかに注意してください。",
-        "sourceName": "Associated Press",
-        "sourceUrl": "https://apnews.com/article/bdda63e2831ff47a214d786bd4e45907",
-        "timeLabel": "8月31日18:00 HKTまでに確認済み",
-        "sources": [
-          {
-            "name": "Associated Press",
-            "url": "https://apnews.com/article/bdda63e2831ff47a214d786bd4e45907"
-          }
-        ],
-        "deskSlugs": [
-          "japan",
-          "asia",
-          "ai-tech"
-        ],
-        "section": "日本|防衛/AI ＆無人システム",
-        "sectionLabel": "日本",
-        "image": null,
-        "sourceItemFingerprint": "02004b4443e320154c0acec1d176e84bba067dc92d42b423079c95fc599b2002",
-        "furigana": {
-          "section": "<ruby>日本<rt>にっぽん</rt></ruby>|<ruby>防衛<rt>ぼうえい</rt></ruby>/AI ＆<ruby>無人<rt>むじん</rt></ruby>システム",
-          "title": "<ruby>日本<rt>にっぽん</rt></ruby>の<ruby>防衛<rt>ぼうえい</rt></ruby><ruby>省<rt>しょう</rt></ruby><ruby>予算案<rt>よさんあん</rt></ruby>は、ドローン、AI、<ruby>長距離<rt>ちょうきょり</rt></ruby>ミサイルに<ruby>焦点<rt>しょうてん</rt></ruby>を<ruby>当<rt>あ</rt></ruby>てるために8.9<ruby>兆円<rt>ちょうえん</rt></ruby>を<ruby>求<rt>もと</rt></ruby>めています",
-          "dek": "<ruby>日本<rt>にっぽん</rt></ruby>の<ruby>防衛<rt>ぼうえい</rt></ruby><ruby>省<rt>しょう</rt></ruby>は、<ruby>低<rt>てい</rt></ruby>コストの<ruby>攻撃用<rt>こうげきよう</rt></ruby>ドローン、<ruby>長距離<rt>ちょうきょり</rt></ruby><ruby>兵器<rt>へいき</rt></ruby>、AIコマンドシステム、<ruby>防衛<rt>ぼうえい</rt></ruby><ruby>産業<rt>さんぎょう</rt></ruby><ruby>能力<rt>のうりょく</rt></ruby>への<ruby>投資<rt>とうし</rt></ruby>に<ruby>焦点<rt>しょうてん</rt></ruby>を<ruby>当<rt>あ</rt></ruby>て、<ruby>来年度<rt>らいねんど</rt></ruby>に<ruby>約<rt>やく</rt></ruby>8.9<ruby>兆円<rt>ちょうえん</rt></ruby>の<ruby>予算<rt>よさん</rt></ruby><ruby>要求<rt>ようきゅう</rt></ruby>を<ruby>提案<rt>ていあん</rt></ruby>しました。",
-          "summary": "<ruby>日本<rt>にっぽん</rt></ruby>の<ruby>新<rt>あたら</rt></ruby>しい<ruby>年間<rt>ねんかん</rt></ruby><ruby>防衛<rt>ぼうえい</rt></ruby><ruby>予算<rt>よさん</rt></ruby><ruby>要件<rt>ようけん</rt></ruby>は<ruby>新<rt>あら</rt></ruby>たな<ruby>高水準<rt>こうすいじゅん</rt></ruby>に<ruby>達<rt>たっ</rt></ruby>し、<ruby>無人<rt>むじん</rt></ruby>およびAI<ruby>機能<rt>きのう</rt></ruby>がコアプロジェクトに<ruby>含<rt>ふく</rt></ruby>まれており、<ruby>東京<rt>とうきょう</rt></ruby>が<ruby>長距離<rt>ちょうきょり</rt></ruby><ruby>攻撃<rt>こうげき</rt></ruby>、<ruby>分散<rt>ぶんさん</rt></ruby><ruby>作戦<rt>さくせん</rt></ruby>、デジタルコマンド<ruby>機能<rt>きのう</rt></ruby>の<ruby>確立<rt>かくりつ</rt></ruby>を<ruby>加速<rt>かそく</rt></ruby>していることを<ruby>反映<rt>はんえい</rt></ruby>しています。",
-          "context": "<ruby>日本<rt>にっぽん</rt></ruby>は<ruby>安全<rt>あんぜん</rt></ruby><ruby>保障<rt>ほしょう</rt></ruby>と<ruby>防衛<rt>ぼうえい</rt></ruby><ruby>政策<rt>せいさく</rt></ruby>を<ruby>見直<rt>みなお</rt></ruby>し、<ruby>防衛<rt>ぼうえい</rt></ruby><ruby>支出<rt>ししゅつ</rt></ruby>を<ruby>増<rt>ふ</rt></ruby>やし<ruby>続<rt>つづ</rt></ruby>けています。<ruby>近年<rt>きんねん</rt></ruby>、<ruby>東<rt>ひがし</rt></ruby>アジアにおけるミサイル、ドローン、<ruby>空軍<rt>くうぐん</rt></ruby>および<ruby>海軍<rt>かいぐん</rt></ruby><ruby>能力<rt>のうりょく</rt></ruby>の<ruby>競争<rt>きょうそう</rt></ruby>は<ruby>大幅<rt>おおはば</rt></ruby>に<ruby>増加<rt>ぞうか</rt></ruby>しています。",
-          "why": "8.9<ruby>兆円<rt>ちょうえん</rt></ruby>の<ruby>水準<rt>すいじゅん</rt></ruby>の<ruby>要求<rt>ようきゅう</rt></ruby>は、<ruby>日本<rt>にっぽん</rt></ruby>の<ruby>財政<rt>ざいせい</rt></ruby>、<ruby>防衛<rt>ぼうえい</rt></ruby><ruby>産業<rt>さんぎょう</rt></ruby>、<ruby>地域<rt>ちいき</rt></ruby><ruby>安全<rt>あんぜん</rt></ruby><ruby>保障<rt>ほしょう</rt></ruby>のバランスに<ruby>直接的<rt>ちょくせつてき</rt></ruby>な<ruby>影響<rt>えいきょう</rt></ruby>を<ruby>及<rt>およ</rt></ruby>ぼし、AIと<ruby>無人<rt>むじん</rt></ruby><ruby>兵器<rt>へいき</rt></ruby>の<ruby>割合<rt>わりあい</rt></ruby>の<ruby>増加<rt>ぞうか</rt></ruby>も、<ruby>自衛隊<rt>じえいたい</rt></ruby>の<ruby>作戦<rt>さくせん</rt></ruby>モデルが<ruby>変化<rt>へんか</rt></ruby>していることを<ruby>意味<rt>いみ</rt></ruby>します。",
-          "watchNext": "<ruby>財務省<rt>ざいむしょう</rt></ruby>の<ruby>削減<rt>さくげん</rt></ruby>、<ruby>年末<rt>ねんまつ</rt></ruby>の<ruby>公式<rt>こうしき</rt></ruby><ruby>予算<rt>よさん</rt></ruby>、AIとドローンの<ruby>取得<rt>しゅとく</rt></ruby><ruby>数<rt>すう</rt></ruby>、<ruby>長距離<rt>ちょうきょり</rt></ruby>ミサイルの<ruby>配備<rt>はいび</rt></ruby><ruby>時間<rt>じかん</rt></ruby>、そして<ruby>新<rt>あたら</rt></ruby>しいセキュリティ<ruby>戦略<rt>せんりゃく</rt></ruby>が<ruby>関連<rt>かんれん</rt></ruby>する<ruby>能力<rt>のうりょく</rt></ruby>をどのように<ruby>定義<rt>ていぎ</rt></ruby>しているかに<ruby>注意<rt>ちゅうい</rt></ruby>してください。",
-          "bodyParagraphs": [
-            "<ruby>日本<rt>にっぽん</rt></ruby>の<ruby>防衛<rt>ぼうえい</rt></ruby><ruby>省<rt>しょう</rt></ruby>は、<ruby>来年度<rt>らいねんど</rt></ruby>に<ruby>約<rt>やく</rt></ruby>8.9<ruby>兆円<rt>ちょうえん</rt></ruby>の<ruby>予算<rt>よさん</rt></ruby><ruby>要求<rt>ようきゅう</rt></ruby>を<ruby>提案<rt>ていあん</rt></ruby>している。AP<ruby>通信<rt>つうしん</rt></ruby>によると、この<ruby>計画<rt>けいかく</rt></ruby>には、<ruby>低<rt>てい</rt></ruby>コストの<ruby>攻撃用<rt>こうげきよう</rt></ruby>ドローン、<ruby>長距離<rt>ちょうきょり</rt></ruby><ruby>巡航<rt>じゅんこう</rt></ruby>ミサイルと<ruby>極<rt>きょく</rt></ruby><ruby>超音速<rt>ちょうおんそく</rt></ruby>ミサイル、<ruby>統合<rt>とうごう</rt></ruby>されたAIプラットフォーム、<ruby>国防省<rt>こくぼうしょう</rt></ruby>のクラウドシステムが<ruby>含<rt>ふく</rt></ruby>まれ、<ruby>国内<rt>こくない</rt></ruby><ruby>防衛<rt>ぼうえい</rt></ruby><ruby>装備<rt>そうび</rt></ruby>の<ruby>研究開発<rt>けんきゅうかいはつ</rt></ruby>と<ruby>生産<rt>せいさん</rt></ruby><ruby>基盤<rt>きばん</rt></ruby>が<ruby>強化<rt>きょうか</rt></ruby>されているという。<ruby>関連<rt>かんれん</rt></ruby>する<ruby>項目<rt>こうもく</rt></ruby>は、まだ<ruby>政府<rt>せいふ</rt></ruby>と<ruby>国民<rt>こくみん</rt></ruby><ruby>議会<rt>ぎかい</rt></ruby>の<ruby>予算<rt>よさん</rt></ruby>プロセスによって<ruby>確認<rt>かくにん</rt></ruby>される<ruby>必要<rt>ひつよう</rt></ruby>があります。",
-            "<ruby>近年<rt>きんねん</rt></ruby>、<ruby>日本<rt>にっぽん</rt></ruby>は5カ<ruby>年<rt>ねん</rt></ruby>の<ruby>防衛<rt>ぼうえい</rt></ruby><ruby>準備<rt>じゅんび</rt></ruby><ruby>計画<rt>けいかく</rt></ruby>に<ruby>沿<rt>そ</rt></ruby>って<ruby>警備<rt>けいび</rt></ruby><ruby>費<rt>ひ</rt></ruby>を<ruby>急速<rt>きゅうそく</rt></ruby>に<ruby>増加<rt>ぞうか</rt></ruby>させ、<ruby>無人<rt>むじん</rt></ruby>システムを<ruby>人手不足<rt>ひとでぶそく</rt></ruby>に<ruby>対処<rt>たいしょ</rt></ruby>し、<ruby>島嶼<rt>とうしょ</rt></ruby><ruby>防衛<rt>ぼうえい</rt></ruby><ruby>能力<rt>のうりょく</rt></ruby>を<ruby>向上<rt>こうじょう</rt></ruby>させるための<ruby>重要<rt>じゅうよう</rt></ruby>なツールと<ruby>見<rt>み</rt></ruby>なしています。この<ruby>要請<rt>ようせい</rt></ruby>は、AIがもはや<ruby>物流<rt>ぶつりゅう</rt></ruby><ruby>分析<rt>ぶんせき</rt></ruby>だけでなく、<ruby>指揮<rt>しき</rt></ruby>、<ruby>認識<rt>にんしき</rt></ruby>、<ruby>意思決定<rt>いしけってい</rt></ruby>のサポートに<ruby>徐々<rt>じょじょ</rt></ruby>に<ruby>参入<rt>さんにゅう</rt></ruby>していることを<ruby>示<rt>しめ</rt></ruby>しており、どのように<ruby>利用<rt>りよう</rt></ruby><ruby>規則<rt>きそく</rt></ruby>、サイバーセキュリティ、サプライチェーンのレジリエンスを<ruby>確立<rt>かくりつ</rt></ruby>するかは、<ruby>軍隊<rt>ぐんたい</rt></ruby>を<ruby>拡大<rt>かくだい</rt></ruby>しながら<ruby>対処<rt>たいしょ</rt></ruby>する<ruby>必要<rt>ひつよう</rt></ruby>があるガバナンスの<ruby>問題<rt>もんだい</rt></ruby>になるでしょう。"
-          ]
-        },
-        "audio": "audio/rolling/japan-asia-defense-budget-drones-ai-20260831-1800.mp3",
-        "timing": "audio/timing/rolling/japan-asia-defense-budget-drones-ai-20260831-1800.json",
-        "audioSpeed": 0.72,
-        "audioDeliveryProfile": "jp-tv-news-semantic-v4"
-      }
-    ],
-    "hong-kong": [
-      {
-        "id": "hk-anti-smuggling-cigarettes-20260902-0700",
-        "desk": "hong-kong",
-        "status": "LATEST",
-        "title": "警察と税関による密輸疑いのある719万本のタバコの市場価値約3236万元の密輸防止検査",
-        "dek": "法執行官は、香港島の南とランタオ島の北の海域で3隻のスピードボートと2台のトラックを傍受し、容疑者はその後逃走し、事件はまだ調査中です。",
-        "summary": "警察は税関と共に2件の水路密輸事件を取り締まり、密輸の疑いのある煙草約719万本を押収し、課税対象額は約2377万元と推定された。",
-        "body": "警察は税関と協力して、香港島の南とランタオ島の北の海域で密輸防止活動を行い、ナビゲーションライトのないスピードボートをいくつか発見し、一部の人々は陸上トラックに荷物を運びました。警察官は作戦と迎撃を開始し、最終的に3隻のスピードボートと2台のトラックを押収した。\n\n合計約719万本の疑いのあるタバコが押収され、推定時価は約3236万元、課税対象額は約2377万元でした。その後、関係者はスピードボートまたは放棄されたボートで脱出し、事件は引き続き税関によって追跡され、逮捕はまだ発表されていません。",
-        "context": "香港の密輸は長い間、水路と高速ボートを使用して陸上検査を回避してきました。法執行機関は引き続き、オフショア配送と陸上ピックアップポイントに対する措置を講じています。",
-        "why": "この訴訟には3000万元以上の貨物価値と多くのスピードボートが関与しており、水路の私有煙のサプライチェーンがまだかなり大きいことを反映している。",
-        "watchNext": "その後の税関逮捕、関与した船舶やトラックの出所、上流の供給網や現地の流通網に辿り着くかどうかに注意してください。",
-        "sourceName": "香港電台／香港海關及警方",
-        "sourceUrl": "https://news.rthk.hk/rthk/ch/component/k2/1868443-20260901.htm",
-        "timeLabel": "9月1日23:18 HKT公開・9月2日07:00 HKT確認済み",
-        "sources": [
-          {
-            "name": "香港電台",
-            "url": "https://news.rthk.hk/rthk/ch/component/k2/1868443-20260901.htm"
-          }
-        ],
-        "deskSlugs": [
-          "hong-kong"
-        ],
-        "section": "香港|セキュリティ/密輸防止",
-        "sectionLabel": "香港",
-        "image": null,
-        "sourceItemFingerprint": "34d76d305ef50c82eaabd4093a91dac42f86b2ab892779b9307a405807285017",
-        "furigana": {
-          "section": "<ruby>香港<rt>ほんこん</rt></ruby>|セキュリティ/<ruby>密輸<rt>みつゆ</rt></ruby><ruby>防止<rt>ぼうし</rt></ruby>",
-          "title": "<ruby>警察<rt>けいさつ</rt></ruby>と<ruby>税関<rt>ぜいかん</rt></ruby>による<ruby>密輸<rt>みつゆ</rt></ruby><ruby>疑<rt>うたが</rt></ruby>いのある719<ruby>万<rt>まん</rt></ruby><ruby>本<rt>ほん</rt></ruby>のタバコの<ruby>市場価値<rt>しじょうかち</rt></ruby><ruby>約<rt>やく</rt></ruby>3236<ruby>万<rt>まん</rt></ruby><ruby>元<rt>もと</rt></ruby>の<ruby>密輸<rt>みつゆ</rt></ruby><ruby>防止<rt>ぼうし</rt></ruby><ruby>検査<rt>けんさ</rt></ruby>",
-          "dek": "<ruby>法執<rt>ほっしゅう</rt></ruby><ruby>行<rt>ぎょう</rt></ruby><ruby>官<rt>かん</rt></ruby>は、<ruby>香港<rt>ほんこん</rt></ruby><ruby>島<rt>しま</rt></ruby>の<ruby>南<rt>みなみ</rt></ruby>とランタオ<ruby>島<rt>しま</rt></ruby>の<ruby>北<rt>きた</rt></ruby>の<ruby>海域<rt>かいいき</rt></ruby>で3<ruby>隻<rt>せき</rt></ruby>のスピードボートと2<ruby>台<rt>だい</rt></ruby>のトラックを<ruby>傍受<rt>ぼうじゅ</rt></ruby>し、<ruby>容疑者<rt>ようぎしゃ</rt></ruby>はその<ruby>後<rt>ご</rt></ruby><ruby>逃走<rt>とうそう</rt></ruby>し、<ruby>事件<rt>じけん</rt></ruby>はまだ<ruby>調査中<rt>ちょうさちゅう</rt></ruby>です。",
-          "summary": "<ruby>警察<rt>けいさつ</rt></ruby>は<ruby>税関<rt>ぜいかん</rt></ruby>と<ruby>共<rt>とも</rt></ruby>に<ruby>2件<rt>にけん</rt></ruby>の<ruby>水路<rt>すいろ</rt></ruby><ruby>密輸<rt>みつゆ</rt></ruby><ruby>事件<rt>じけん</rt></ruby>を<ruby>取り締<rt>とりし</rt></ruby>まり、<ruby>密輸<rt>みつゆ</rt></ruby>の<ruby>疑<rt>うたが</rt></ruby>いのある<ruby>煙草<rt>たばこ</rt></ruby><ruby>約<rt>やく</rt></ruby>719<ruby>万<rt>まん</rt></ruby><ruby>本<rt>ほん</rt></ruby>を<ruby>押収<rt>おうしゅう</rt></ruby>し、<ruby>課税対象額<rt>かぜいたいしょうがく</rt></ruby>は<ruby>約<rt>やく</rt></ruby>2377<ruby>万<rt>まん</rt></ruby><ruby>元<rt>もと</rt></ruby>と<ruby>推定<rt>すいてい</rt></ruby>された。",
-          "context": "<ruby>香港<rt>ほんこん</rt></ruby>の<ruby>密輸<rt>みつゆ</rt></ruby>は<ruby>長<rt>なが</rt></ruby>い<ruby>間<rt>かん</rt></ruby>、<ruby>水路<rt>すいろ</rt></ruby>と<ruby>高速<rt>こうそく</rt></ruby>ボートを<ruby>使用<rt>しよう</rt></ruby>して<ruby>陸上<rt>りくじょう</rt></ruby><ruby>検査<rt>けんさ</rt></ruby>を<ruby>回避<rt>かいひ</rt></ruby>してきました。<ruby>法執<rt>ほっしゅう</rt></ruby><ruby>行<rt>ぎょう</rt></ruby><ruby>機関<rt>きかん</rt></ruby>は<ruby>引き続<rt>ひきつづ</rt></ruby>き、オフショア<ruby>配送<rt>はいそう</rt></ruby>と<ruby>陸上<rt>りくじょう</rt></ruby>ピックアップポイントに<ruby>対<rt>たい</rt></ruby>する<ruby>措置<rt>そち</rt></ruby>を<ruby>講<rt>こう</rt></ruby>じています。",
-          "why": "この<ruby>訴訟<rt>そしょう</rt></ruby>には3000<ruby>万<rt>まん</rt></ruby><ruby>元<rt>もと</rt></ruby><ruby>以上<rt>いじょう</rt></ruby>の<ruby>貨物<rt>かもつ</rt></ruby><ruby>価値<rt>かち</rt></ruby>と<ruby>多<rt>おお</rt></ruby>くのスピードボートが<ruby>関与<rt>かんよ</rt></ruby>しており、<ruby>水路<rt>すいろ</rt></ruby>の<ruby>私有<rt>しゆう</rt></ruby><ruby>煙<rt>けむり</rt></ruby>のサプライチェーンがまだかなり<ruby>大<rt>おお</rt></ruby>きいことを<ruby>反映<rt>はんえい</rt></ruby>している。",
-          "watchNext": "その<ruby>後<rt>ご</rt></ruby>の<ruby>税関<rt>ぜいかん</rt></ruby><ruby>逮捕<rt>たいほ</rt></ruby>、<ruby>関与<rt>かんよ</rt></ruby>した<ruby>船舶<rt>せんぱく</rt></ruby>やトラックの<ruby>出所<rt>しゅっしょ</rt></ruby>、<ruby>上流<rt>じょうりゅう</rt></ruby>の<ruby>供給<rt>きょうきゅう</rt></ruby><ruby>網<rt>あみ</rt></ruby>や<ruby>現地<rt>げんち</rt></ruby>の<ruby>流通<rt>りゅうつう</rt></ruby><ruby>網<rt>あみ</rt></ruby>に<ruby>辿<rt>たど</rt></ruby>り<ruby>着<rt>つ</rt></ruby>くかどうかに<ruby>注意<rt>ちゅうい</rt></ruby>してください。",
-          "bodyParagraphs": [
-            "<ruby>警察<rt>けいさつ</rt></ruby>は<ruby>税関<rt>ぜいかん</rt></ruby>と<ruby>協力<rt>きょうりょく</rt></ruby>して、<ruby>香港<rt>ほんこん</rt></ruby><ruby>島<rt>しま</rt></ruby>の<ruby>南<rt>みなみ</rt></ruby>とランタオ<ruby>島<rt>しま</rt></ruby>の<ruby>北<rt>きた</rt></ruby>の<ruby>海域<rt>かいいき</rt></ruby>で<ruby>密輸<rt>みつゆ</rt></ruby><ruby>防止<rt>ぼうし</rt></ruby><ruby>活動<rt>かつどう</rt></ruby>を<ruby>行<rt>おこな</rt></ruby>い、ナビゲーションライトのないスピードボートをいくつか<ruby>発見<rt>はっけん</rt></ruby>し、<ruby>一部<rt>いちぶ</rt></ruby>の<ruby>人々<rt>ひとびと</rt></ruby>は<ruby>陸上<rt>りくじょう</rt></ruby>トラックに<ruby>荷物<rt>にもつ</rt></ruby>を<ruby>運<rt>はこ</rt></ruby>びました。<ruby>警察官<rt>けいさつかん</rt></ruby>は<ruby>作戦<rt>さくせん</rt></ruby>と<ruby>迎撃<rt>げいげき</rt></ruby>を<ruby>開始<rt>かいし</rt></ruby>し、<ruby>最終的<rt>さいしゅうてき</rt></ruby>に3<ruby>隻<rt>せき</rt></ruby>のスピードボートと2<ruby>台<rt>だい</rt></ruby>のトラックを<ruby>押収<rt>おうしゅう</rt></ruby>した。",
-            "<ruby>合計<rt>ごうけい</rt></ruby><ruby>約<rt>やく</rt></ruby>719<ruby>万<rt>まん</rt></ruby><ruby>本<rt>ほん</rt></ruby>の<ruby>疑<rt>うたが</rt></ruby>いのあるタバコが<ruby>押収<rt>おうしゅう</rt></ruby>され、<ruby>推定<rt>すいてい</rt></ruby><ruby>時価<rt>じか</rt></ruby>は<ruby>約<rt>やく</rt></ruby>3236<ruby>万<rt>まん</rt></ruby><ruby>元<rt>もと</rt></ruby>、<ruby>課税対象額<rt>かぜいたいしょうがく</rt></ruby>は<ruby>約<rt>やく</rt></ruby>2377<ruby>万<rt>まん</rt></ruby><ruby>元<rt>もと</rt></ruby>でした。その<ruby>後<rt>ご</rt></ruby>、<ruby>関係者<rt>かんけいしゃ</rt></ruby>はスピードボートまたは<ruby>放棄<rt>ほうき</rt></ruby>されたボートで<ruby>脱出<rt>だっしゅつ</rt></ruby>し、<ruby>事件<rt>じけん</rt></ruby>は<ruby>引き続<rt>ひきつづ</rt></ruby>き<ruby>税関<rt>ぜいかん</rt></ruby>によって<ruby>追跡<rt>ついせき</rt></ruby>され、<ruby>逮捕<rt>たいほ</rt></ruby>はまだ<ruby>発表<rt>はっぴょう</rt></ruby>されていません。"
-          ]
-        },
-        "audio": "audio/rolling/hk-anti-smuggling-cigarettes-20260902-0700.mp3",
-        "timing": "audio/timing/rolling/hk-anti-smuggling-cigarettes-20260902-0700.json",
-        "audioSpeed": 0.72,
-        "audioDeliveryProfile": "jp-tv-news-semantic-v4"
-      }
-    ],
-    "japan": [
-      {
-        "id": "japan-us-yen-coordination-20260902-0700",
-        "desk": "japan",
-        "status": "LATEST",
-        "title": "日米財務省は、日本円の秩序ある変動は市場の安定に関連していると片山氏は述べ、引き続き為替市場を調整することに合意した",
-        "dek": "円が1ドル＝160円の水準に近づくなか、片山さつき氏はG20期間中にベッセント米財務長官と会談し、為替レートを維持することの重要性を改めて主張した。",
-        "summary": "日本の財務写真Yamagoyukiは、日本と米国は、日本円の秩序ある変動と世界市場の安定を確保するために、外国為替市場で引き続き調整することに合意したと述べた。",
-        "body": "G 20財務大臣会合の間にロバート・ベッセント米財務長官と会談した後、日本の財務写真山郷氏は、両国が緊密な調整を継続することに合意し、円の秩序ある変動が世界の金融市場の安定にとって重要であると信じていると述べた。円は最近再び弱くなり、1ドル当たり160水準に近づいており、市場の関心を介入リスクに向け直している。\n\n片山氏は、現在の為替相場の動きが無秩序であるとは説明せず、日銀の政策についてコメントすることを拒否した。会合では、日米が前回のまれな共同介入後も政策コミュニケーションを維持しており、市場は引き続き口頭での警告と実際の行動の距離を評価していくことが示された。",
-        "context": "円安、原油価格の上昇、日本のロング債利回りは約3 ％に達し、輸入インフレと政策正常化の圧力が高まった。",
-        "why": "日米間の為替レート調整は、日本円、アジア資産、日本のインプットコストに直接影響を及ぼし、また、新たな介入に対する市場の価格設定を変更する可能性があります。",
-        "watchNext": "円が再び160円台でピークに達しているかどうか、財務省が口頭での介入を拡大しているかどうか、そして日本銀行の9月の会合に先立って金利シグナルが示されているかどうかに注目してください。",
-        "sourceName": "Reuters",
-        "sourceUrl": "https://www.reuters.com/world/asia-pacific/japan-us-agreed-orderly-yen-movement-critical-market-stability-finance-minister-2026-09-01/",
-        "timeLabel": "09/02 07:00 HKT認証",
-        "sources": [
-          {
-            "name": "Reuters",
-            "url": "https://www.reuters.com/world/asia-pacific/japan-us-agreed-orderly-yen-movement-critical-market-stability-finance-minister-2026-09-01/"
-          }
-        ],
-        "deskSlugs": [
-          "japan",
-          "market-economy"
-        ],
-        "section": "日本|金融/為替レート",
-        "sectionLabel": "日本",
-        "image": null,
-        "sourceItemFingerprint": "8ee153850aa65977d855edc9d0bb89f8978bbe70ef147a633c3eb15e73381cc7",
-        "furigana": {
-          "section": "<ruby>日本<rt>にっぽん</rt></ruby>|<ruby>金融<rt>きんゆう</rt></ruby>/<ruby>為替<rt>かわせ</rt></ruby>レート",
-          "title": "<ruby>日米<rt>にちべい</rt></ruby><ruby>財務省<rt>ざいむしょう</rt></ruby>は、<ruby>日本円<rt>にほんえん</rt></ruby>の<ruby>秩序<rt>ちつじょ</rt></ruby>ある<ruby>変動<rt>へんどう</rt></ruby>は<ruby>市場<rt>しじょう</rt></ruby>の<ruby>安定<rt>あんてい</rt></ruby>に<ruby>関連<rt>かんれん</rt></ruby>していると<ruby>片山<rt>かたやま</rt></ruby><ruby>氏<rt>し</rt></ruby>は<ruby>述<rt>の</rt></ruby>べ、<ruby>引き続<rt>ひきつづ</rt></ruby>き<ruby>為替市場<rt>かわせしじょう</rt></ruby>を<ruby>調整<rt>ちょうせい</rt></ruby>することに<ruby>合意<rt>ごうい</rt></ruby>した",
-          "dek": "<ruby>円<rt>えん</rt></ruby>が1ドル＝160<ruby>円<rt>えん</rt></ruby>の<ruby>水準<rt>すいじゅん</rt></ruby>に<ruby>近<rt>ちか</rt></ruby>づくなか、<ruby>片山<rt>かたやま</rt></ruby>さつき<ruby>氏<rt>し</rt></ruby>はG20<ruby>期間中<rt>きかんちゅう</rt></ruby>にベッセント<ruby>米<rt>べい</rt></ruby><ruby>財務<rt>ざいむ</rt></ruby><ruby>長官<rt>ちょうかん</rt></ruby>と<ruby>会談<rt>かいだん</rt></ruby>し、<ruby>為替<rt>かわせ</rt></ruby>レートを<ruby>維持<rt>いじ</rt></ruby>することの<ruby>重要性<rt>じゅうようせい</rt></ruby>を<ruby>改<rt>あらた</rt></ruby>めて<ruby>主張<rt>しゅちょう</rt></ruby>した。",
-          "summary": "<ruby>日本<rt>にっぽん</rt></ruby>の<ruby>財務<rt>ざいむ</rt></ruby><ruby>写真<rt>しゃしん</rt></ruby>Yamagoyukiは、<ruby>日本<rt>にっぽん</rt></ruby>と<ruby>米国<rt>べいこく</rt></ruby>は、<ruby>日本円<rt>にほんえん</rt></ruby>の<ruby>秩序<rt>ちつじょ</rt></ruby>ある<ruby>変動<rt>へんどう</rt></ruby>と<ruby>世界<rt>せかい</rt></ruby><ruby>市場<rt>しじょう</rt></ruby>の<ruby>安定<rt>あんてい</rt></ruby>を<ruby>確保<rt>かくほ</rt></ruby>するために、<ruby>外国為替市場<rt>がいこくかわせしじょう</rt></ruby>で<ruby>引き続<rt>ひきつづ</rt></ruby>き<ruby>調整<rt>ちょうせい</rt></ruby>することに<ruby>合意<rt>ごうい</rt></ruby>したと<ruby>述<rt>の</rt></ruby>べた。",
-          "context": "<ruby>円安<rt>えんやす</rt></ruby>、<ruby>原油価格<rt>げんゆかかく</rt></ruby>の<ruby>上昇<rt>じょうしょう</rt></ruby>、<ruby>日本<rt>にっぽん</rt></ruby>のロング<ruby>債<rt>さい</rt></ruby><ruby>利回<rt>りまわ</rt></ruby>りは<ruby>約<rt>やく</rt></ruby>3 ％に<ruby>達<rt>たっ</rt></ruby>し、<ruby>輸入<rt>ゆにゅう</rt></ruby>インフレと<ruby>政策<rt>せいさく</rt></ruby><ruby>正常化<rt>せいじょうか</rt></ruby>の<ruby>圧力<rt>あつりょく</rt></ruby>が<ruby>高<rt>たか</rt></ruby>まった。",
-          "why": "<ruby>日米間<rt>にちべいかん</rt></ruby>の<ruby>為替<rt>かわせ</rt></ruby>レート<ruby>調整<rt>ちょうせい</rt></ruby>は、<ruby>日本円<rt>にほんえん</rt></ruby>、アジア<ruby>資産<rt>しさん</rt></ruby>、<ruby>日本<rt>にっぽん</rt></ruby>のインプットコストに<ruby>直接影響<rt>ちょくせつえいきょう</rt></ruby>を<ruby>及<rt>およ</rt></ruby>ぼし、また、<ruby>新<rt>あら</rt></ruby>たな<ruby>介入<rt>かいにゅう</rt></ruby>に<ruby>対<rt>たい</rt></ruby>する<ruby>市場<rt>しじょう</rt></ruby>の<ruby>価格設定<rt>かかくせってい</rt></ruby>を<ruby>変更<rt>へんこう</rt></ruby>する<ruby>可能性<rt>かのうせい</rt></ruby>があります。",
-          "watchNext": "<ruby>円<rt>えん</rt></ruby>が<ruby>再<rt>ふたた</rt></ruby>び160<ruby>円台<rt>えんだい</rt></ruby>でピークに<ruby>達<rt>たっ</rt></ruby>しているかどうか、<ruby>財務<rt>ざいむ</rt></ruby><ruby>省<rt>しょう</rt></ruby>が<ruby>口頭<rt>こうとう</rt></ruby>での<ruby>介入<rt>かいにゅう</rt></ruby>を<ruby>拡大<rt>かくだい</rt></ruby>しているかどうか、そして<ruby>日本銀行<rt>にっぽんぎんこう</rt></ruby>の<ruby>9月<rt>くがつ</rt></ruby>の<ruby>会合<rt>かいごう</rt></ruby>に<ruby>先立<rt>さきだ</rt></ruby>って<ruby>金利<rt>きんり</rt></ruby>シグナルが<ruby>示<rt>しめ</rt></ruby>されているかどうかに<ruby>注目<rt>ちゅうもく</rt></ruby>してください。",
-          "bodyParagraphs": [
-            "G 20<ruby>財務<rt>ざいむ</rt></ruby><ruby>大臣<rt>だいじん</rt></ruby><ruby>会合<rt>かいごう</rt></ruby>の<ruby>間<rt>ま</rt></ruby>にロバート・ベッセント<ruby>米<rt>べい</rt></ruby><ruby>財務<rt>ざいむ</rt></ruby><ruby>長官<rt>ちょうかん</rt></ruby>と<ruby>会談<rt>かいだん</rt></ruby>した<ruby>後<rt>あと</rt></ruby>、<ruby>日本<rt>にっぽん</rt></ruby>の<ruby>財務<rt>ざいむ</rt></ruby><ruby>写真<rt>しゃしん</rt></ruby><ruby>山郷<rt>やまごう</rt></ruby><ruby>氏<rt>し</rt></ruby>は、<ruby>両国<rt>りょうごく</rt></ruby>が<ruby>緊密<rt>きんみつ</rt></ruby>な<ruby>調整<rt>ちょうせい</rt></ruby>を<ruby>継続<rt>けいぞく</rt></ruby>することに<ruby>合意<rt>ごうい</rt></ruby>し、<ruby>円<rt>えん</rt></ruby>の<ruby>秩序<rt>ちつじょ</rt></ruby>ある<ruby>変動<rt>へんどう</rt></ruby>が<ruby>世界<rt>せかい</rt></ruby>の<ruby>金融<rt>きんゆう</rt></ruby><ruby>市場<rt>しじょう</rt></ruby>の<ruby>安定<rt>あんてい</rt></ruby>にとって<ruby>重要<rt>じゅうよう</rt></ruby>であると<ruby>信<rt>しん</rt></ruby>じていると<ruby>述<rt>の</rt></ruby>べた。<ruby>円<rt>えん</rt></ruby>は<ruby>最近<rt>さいきん</rt></ruby><ruby>再<rt>ふたた</rt></ruby>び<ruby>弱<rt>よわ</rt></ruby>くなり、1ドル<ruby>当<rt>あ</rt></ruby>たり160<ruby>水準<rt>すいじゅん</rt></ruby>に<ruby>近<rt>ちか</rt></ruby>づいており、<ruby>市場<rt>しじょう</rt></ruby>の<ruby>関心<rt>かんしん</rt></ruby>を<ruby>介入<rt>かいにゅう</rt></ruby>リスクに<ruby>向<rt>む</rt></ruby>け<ruby>直<rt>なお</rt></ruby>している。",
-            "<ruby>片山<rt>かたやま</rt></ruby><ruby>氏<rt>し</rt></ruby>は、<ruby>現在<rt>げんざい</rt></ruby>の<ruby>為替<rt>かわせ</rt></ruby><ruby>相場<rt>そうば</rt></ruby>の<ruby>動<rt>うご</rt></ruby>きが<ruby>無秩序<rt>むちつじょ</rt></ruby>であるとは<ruby>説明<rt>せつめい</rt></ruby>せず、<ruby>日銀<rt>にちぎん</rt></ruby>の<ruby>政策<rt>せいさく</rt></ruby>についてコメントすることを<ruby>拒否<rt>きょひ</rt></ruby>した。<ruby>会合<rt>かいごう</rt></ruby>では、<ruby>日米<rt>にちべい</rt></ruby>が<ruby>前回<rt>ぜんかい</rt></ruby>のまれな<ruby>共同<rt>きょうどう</rt></ruby><ruby>介入<rt>かいにゅう</rt></ruby><ruby>後<rt>ご</rt></ruby>も<ruby>政策<rt>せいさく</rt></ruby>コミュニケーションを<ruby>維持<rt>いじ</rt></ruby>しており、<ruby>市場<rt>しじょう</rt></ruby>は<ruby>引き続<rt>ひきつづ</rt></ruby>き<ruby>口頭<rt>こうとう</rt></ruby>での<ruby>警告<rt>けいこく</rt></ruby>と<ruby>実際<rt>じっさい</rt></ruby>の<ruby>行動<rt>こうどう</rt></ruby>の<ruby>距離<rt>きょり</rt></ruby>を<ruby>評価<rt>ひょうか</rt></ruby>していくことが<ruby>示<rt>しめ</rt></ruby>された。"
-          ]
-        },
-        "audio": "audio/rolling/japan-us-yen-coordination-20260902-0700.mp3",
-        "timing": "audio/timing/rolling/japan-us-yen-coordination-20260902-0700.json",
-        "audioSpeed": 0.72,
-        "audioDeliveryProfile": "jp-tv-news-semantic-v4"
-      }
-    ],
-    "market-economy": [
-      {
-        "id": "japan-us-yen-coordination-20260902-0700",
-        "desk": "japan",
-        "status": "LATEST",
-        "title": "日米財務省は、日本円の秩序ある変動は市場の安定に関連していると片山氏は述べ、引き続き為替市場を調整することに合意した",
-        "dek": "円が1ドル＝160円の水準に近づくなか、片山さつき氏はG20期間中にベッセント米財務長官と会談し、為替レートを維持することの重要性を改めて主張した。",
-        "summary": "日本の財務写真Yamagoyukiは、日本と米国は、日本円の秩序ある変動と世界市場の安定を確保するために、外国為替市場で引き続き調整することに合意したと述べた。",
-        "body": "G 20財務大臣会合の間にロバート・ベッセント米財務長官と会談した後、日本の財務写真山郷氏は、両国が緊密な調整を継続することに合意し、円の秩序ある変動が世界の金融市場の安定にとって重要であると信じていると述べた。円は最近再び弱くなり、1ドル当たり160水準に近づいており、市場の関心を介入リスクに向け直している。\n\n片山氏は、現在の為替相場の動きが無秩序であるとは説明せず、日銀の政策についてコメントすることを拒否した。会合では、日米が前回のまれな共同介入後も政策コミュニケーションを維持しており、市場は引き続き口頭での警告と実際の行動の距離を評価していくことが示された。",
-        "context": "円安、原油価格の上昇、日本のロング債利回りは約3 ％に達し、輸入インフレと政策正常化の圧力が高まった。",
-        "why": "日米間の為替レート調整は、日本円、アジア資産、日本のインプットコストに直接影響を及ぼし、また、新たな介入に対する市場の価格設定を変更する可能性があります。",
-        "watchNext": "円が再び160円台でピークに達しているかどうか、財務省が口頭での介入を拡大しているかどうか、そして日本銀行の9月の会合に先立って金利シグナルが示されているかどうかに注目してください。",
-        "sourceName": "Reuters",
-        "sourceUrl": "https://www.reuters.com/world/asia-pacific/japan-us-agreed-orderly-yen-movement-critical-market-stability-finance-minister-2026-09-01/",
-        "timeLabel": "09/02 07:00 HKT認証",
-        "sources": [
-          {
-            "name": "Reuters",
-            "url": "https://www.reuters.com/world/asia-pacific/japan-us-agreed-orderly-yen-movement-critical-market-stability-finance-minister-2026-09-01/"
-          }
-        ],
-        "deskSlugs": [
-          "japan",
-          "market-economy"
-        ],
-        "section": "日本|金融/為替レート",
-        "sectionLabel": "日本",
-        "image": null,
-        "sourceItemFingerprint": "8ee153850aa65977d855edc9d0bb89f8978bbe70ef147a633c3eb15e73381cc7",
-        "furigana": {
-          "section": "<ruby>日本<rt>にっぽん</rt></ruby>|<ruby>金融<rt>きんゆう</rt></ruby>/<ruby>為替<rt>かわせ</rt></ruby>レート",
-          "title": "<ruby>日米<rt>にちべい</rt></ruby><ruby>財務省<rt>ざいむしょう</rt></ruby>は、<ruby>日本円<rt>にほんえん</rt></ruby>の<ruby>秩序<rt>ちつじょ</rt></ruby>ある<ruby>変動<rt>へんどう</rt></ruby>は<ruby>市場<rt>しじょう</rt></ruby>の<ruby>安定<rt>あんてい</rt></ruby>に<ruby>関連<rt>かんれん</rt></ruby>していると<ruby>片山<rt>かたやま</rt></ruby><ruby>氏<rt>し</rt></ruby>は<ruby>述<rt>の</rt></ruby>べ、<ruby>引き続<rt>ひきつづ</rt></ruby>き<ruby>為替市場<rt>かわせしじょう</rt></ruby>を<ruby>調整<rt>ちょうせい</rt></ruby>することに<ruby>合意<rt>ごうい</rt></ruby>した",
-          "dek": "<ruby>円<rt>えん</rt></ruby>が1ドル＝160<ruby>円<rt>えん</rt></ruby>の<ruby>水準<rt>すいじゅん</rt></ruby>に<ruby>近<rt>ちか</rt></ruby>づくなか、<ruby>片山<rt>かたやま</rt></ruby>さつき<ruby>氏<rt>し</rt></ruby>はG20<ruby>期間中<rt>きかんちゅう</rt></ruby>にベッセント<ruby>米<rt>べい</rt></ruby><ruby>財務<rt>ざいむ</rt></ruby><ruby>長官<rt>ちょうかん</rt></ruby>と<ruby>会談<rt>かいだん</rt></ruby>し、<ruby>為替<rt>かわせ</rt></ruby>レートを<ruby>維持<rt>いじ</rt></ruby>することの<ruby>重要性<rt>じゅうようせい</rt></ruby>を<ruby>改<rt>あらた</rt></ruby>めて<ruby>主張<rt>しゅちょう</rt></ruby>した。",
-          "summary": "<ruby>日本<rt>にっぽん</rt></ruby>の<ruby>財務<rt>ざいむ</rt></ruby><ruby>写真<rt>しゃしん</rt></ruby>Yamagoyukiは、<ruby>日本<rt>にっぽん</rt></ruby>と<ruby>米国<rt>べいこく</rt></ruby>は、<ruby>日本円<rt>にほんえん</rt></ruby>の<ruby>秩序<rt>ちつじょ</rt></ruby>ある<ruby>変動<rt>へんどう</rt></ruby>と<ruby>世界<rt>せかい</rt></ruby><ruby>市場<rt>しじょう</rt></ruby>の<ruby>安定<rt>あんてい</rt></ruby>を<ruby>確保<rt>かくほ</rt></ruby>するために、<ruby>外国為替市場<rt>がいこくかわせしじょう</rt></ruby>で<ruby>引き続<rt>ひきつづ</rt></ruby>き<ruby>調整<rt>ちょうせい</rt></ruby>することに<ruby>合意<rt>ごうい</rt></ruby>したと<ruby>述<rt>の</rt></ruby>べた。",
-          "context": "<ruby>円安<rt>えんやす</rt></ruby>、<ruby>原油価格<rt>げんゆかかく</rt></ruby>の<ruby>上昇<rt>じょうしょう</rt></ruby>、<ruby>日本<rt>にっぽん</rt></ruby>のロング<ruby>債<rt>さい</rt></ruby><ruby>利回<rt>りまわ</rt></ruby>りは<ruby>約<rt>やく</rt></ruby>3 ％に<ruby>達<rt>たっ</rt></ruby>し、<ruby>輸入<rt>ゆにゅう</rt></ruby>インフレと<ruby>政策<rt>せいさく</rt></ruby><ruby>正常化<rt>せいじょうか</rt></ruby>の<ruby>圧力<rt>あつりょく</rt></ruby>が<ruby>高<rt>たか</rt></ruby>まった。",
-          "why": "<ruby>日米間<rt>にちべいかん</rt></ruby>の<ruby>為替<rt>かわせ</rt></ruby>レート<ruby>調整<rt>ちょうせい</rt></ruby>は、<ruby>日本円<rt>にほんえん</rt></ruby>、アジア<ruby>資産<rt>しさん</rt></ruby>、<ruby>日本<rt>にっぽん</rt></ruby>のインプットコストに<ruby>直接影響<rt>ちょくせつえいきょう</rt></ruby>を<ruby>及<rt>およ</rt></ruby>ぼし、また、<ruby>新<rt>あら</rt></ruby>たな<ruby>介入<rt>かいにゅう</rt></ruby>に<ruby>対<rt>たい</rt></ruby>する<ruby>市場<rt>しじょう</rt></ruby>の<ruby>価格設定<rt>かかくせってい</rt></ruby>を<ruby>変更<rt>へんこう</rt></ruby>する<ruby>可能性<rt>かのうせい</rt></ruby>があります。",
-          "watchNext": "<ruby>円<rt>えん</rt></ruby>が<ruby>再<rt>ふたた</rt></ruby>び160<ruby>円台<rt>えんだい</rt></ruby>でピークに<ruby>達<rt>たっ</rt></ruby>しているかどうか、<ruby>財務<rt>ざいむ</rt></ruby><ruby>省<rt>しょう</rt></ruby>が<ruby>口頭<rt>こうとう</rt></ruby>での<ruby>介入<rt>かいにゅう</rt></ruby>を<ruby>拡大<rt>かくだい</rt></ruby>しているかどうか、そして<ruby>日本銀行<rt>にっぽんぎんこう</rt></ruby>の<ruby>9月<rt>くがつ</rt></ruby>の<ruby>会合<rt>かいごう</rt></ruby>に<ruby>先立<rt>さきだ</rt></ruby>って<ruby>金利<rt>きんり</rt></ruby>シグナルが<ruby>示<rt>しめ</rt></ruby>されているかどうかに<ruby>注目<rt>ちゅうもく</rt></ruby>してください。",
-          "bodyParagraphs": [
-            "G 20<ruby>財務<rt>ざいむ</rt></ruby><ruby>大臣<rt>だいじん</rt></ruby><ruby>会合<rt>かいごう</rt></ruby>の<ruby>間<rt>ま</rt></ruby>にロバート・ベッセント<ruby>米<rt>べい</rt></ruby><ruby>財務<rt>ざいむ</rt></ruby><ruby>長官<rt>ちょうかん</rt></ruby>と<ruby>会談<rt>かいだん</rt></ruby>した<ruby>後<rt>あと</rt></ruby>、<ruby>日本<rt>にっぽん</rt></ruby>の<ruby>財務<rt>ざいむ</rt></ruby><ruby>写真<rt>しゃしん</rt></ruby><ruby>山郷<rt>やまごう</rt></ruby><ruby>氏<rt>し</rt></ruby>は、<ruby>両国<rt>りょうごく</rt></ruby>が<ruby>緊密<rt>きんみつ</rt></ruby>な<ruby>調整<rt>ちょうせい</rt></ruby>を<ruby>継続<rt>けいぞく</rt></ruby>することに<ruby>合意<rt>ごうい</rt></ruby>し、<ruby>円<rt>えん</rt></ruby>の<ruby>秩序<rt>ちつじょ</rt></ruby>ある<ruby>変動<rt>へんどう</rt></ruby>が<ruby>世界<rt>せかい</rt></ruby>の<ruby>金融<rt>きんゆう</rt></ruby><ruby>市場<rt>しじょう</rt></ruby>の<ruby>安定<rt>あんてい</rt></ruby>にとって<ruby>重要<rt>じゅうよう</rt></ruby>であると<ruby>信<rt>しん</rt></ruby>じていると<ruby>述<rt>の</rt></ruby>べた。<ruby>円<rt>えん</rt></ruby>は<ruby>最近<rt>さいきん</rt></ruby><ruby>再<rt>ふたた</rt></ruby>び<ruby>弱<rt>よわ</rt></ruby>くなり、1ドル<ruby>当<rt>あ</rt></ruby>たり160<ruby>水準<rt>すいじゅん</rt></ruby>に<ruby>近<rt>ちか</rt></ruby>づいており、<ruby>市場<rt>しじょう</rt></ruby>の<ruby>関心<rt>かんしん</rt></ruby>を<ruby>介入<rt>かいにゅう</rt></ruby>リスクに<ruby>向<rt>む</rt></ruby>け<ruby>直<rt>なお</rt></ruby>している。",
-            "<ruby>片山<rt>かたやま</rt></ruby><ruby>氏<rt>し</rt></ruby>は、<ruby>現在<rt>げんざい</rt></ruby>の<ruby>為替<rt>かわせ</rt></ruby><ruby>相場<rt>そうば</rt></ruby>の<ruby>動<rt>うご</rt></ruby>きが<ruby>無秩序<rt>むちつじょ</rt></ruby>であるとは<ruby>説明<rt>せつめい</rt></ruby>せず、<ruby>日銀<rt>にちぎん</rt></ruby>の<ruby>政策<rt>せいさく</rt></ruby>についてコメントすることを<ruby>拒否<rt>きょひ</rt></ruby>した。<ruby>会合<rt>かいごう</rt></ruby>では、<ruby>日米<rt>にちべい</rt></ruby>が<ruby>前回<rt>ぜんかい</rt></ruby>のまれな<ruby>共同<rt>きょうどう</rt></ruby><ruby>介入<rt>かいにゅう</rt></ruby><ruby>後<rt>ご</rt></ruby>も<ruby>政策<rt>せいさく</rt></ruby>コミュニケーションを<ruby>維持<rt>いじ</rt></ruby>しており、<ruby>市場<rt>しじょう</rt></ruby>は<ruby>引き続<rt>ひきつづ</rt></ruby>き<ruby>口頭<rt>こうとう</rt></ruby>での<ruby>警告<rt>けいこく</rt></ruby>と<ruby>実際<rt>じっさい</rt></ruby>の<ruby>行動<rt>こうどう</rt></ruby>の<ruby>距離<rt>きょり</rt></ruby>を<ruby>評価<rt>ひょうか</rt></ruby>していくことが<ruby>示<rt>しめ</rt></ruby>された。"
-          ]
-        },
-        "audio": "audio/rolling/japan-us-yen-coordination-20260902-0700.mp3",
-        "timing": "audio/timing/rolling/japan-us-yen-coordination-20260902-0700.json",
-        "audioSpeed": 0.72,
-        "audioDeliveryProfile": "jp-tv-news-semantic-v4"
-      }
-    ],
-    "ai-tech": [
-      {
-        "id": "japan-asia-defense-budget-drones-ai-20260831-1800",
-        "desk": "japan",
-        "status": "LATEST",
-        "title": "日本の防衛省予算案は、ドローン、AI、長距離ミサイルに焦点を当てるために8.9兆円を求めています",
-        "dek": "日本の防衛省は、低コストの攻撃用ドローン、長距離兵器、AIコマンドシステム、防衛産業能力への投資に焦点を当て、来年度に約8.9兆円の予算要求を提案しました。",
-        "summary": "日本の新しい年間防衛予算要件は新たな高水準に達し、無人およびAI機能がコアプロジェクトに含まれており、東京が長距離攻撃、分散作戦、デジタルコマンド機能の確立を加速していることを反映しています。",
-        "body": "日本の防衛省は、来年度に約8.9兆円の予算要求を提案している。AP通信によると、この計画には、低コストの攻撃用ドローン、長距離巡航ミサイルと極超音速ミサイル、統合されたAIプラットフォーム、国防省のクラウドシステムが含まれ、国内防衛装備の研究開発と生産基盤が強化されているという。関連する項目は、まだ政府と国民議会の予算プロセスによって確認される必要があります。\n\n近年、日本は5カ年の防衛準備計画に沿って警備費を急速に増加させ、無人システムを人手不足に対処し、島嶼防衛能力を向上させるための重要なツールと見なしています。この要請は、AIがもはや物流分析だけでなく、指揮、認識、意思決定のサポートに徐々に参入していることを示しており、どのように利用規則、サイバーセキュリティ、サプライチェーンのレジリエンスを確立するかは、軍隊を拡大しながら対処する必要があるガバナンスの問題になるでしょう。",
-        "context": "日本は安全保障と防衛政策を見直し、防衛支出を増やし続けています。近年、東アジアにおけるミサイル、ドローン、空軍および海軍能力の競争は大幅に増加しています。",
-        "why": "8.9兆円の水準の要求は、日本の財政、防衛産業、地域安全保障のバランスに直接的な影響を及ぼし、AIと無人兵器の割合の増加も、自衛隊の作戦モデルが変化していることを意味します。",
-        "watchNext": "財務省の削減、年末の公式予算、AIとドローンの取得数、長距離ミサイルの配備時間、そして新しいセキュリティ戦略が関連する能力をどのように定義しているかに注意してください。",
-        "sourceName": "Associated Press",
-        "sourceUrl": "https://apnews.com/article/bdda63e2831ff47a214d786bd4e45907",
-        "timeLabel": "8月31日18:00 HKTまでに確認済み",
-        "sources": [
-          {
-            "name": "Associated Press",
-            "url": "https://apnews.com/article/bdda63e2831ff47a214d786bd4e45907"
-          }
-        ],
-        "deskSlugs": [
-          "japan",
-          "asia",
-          "ai-tech"
-        ],
-        "section": "日本|防衛/AI ＆無人システム",
-        "sectionLabel": "日本",
-        "image": null,
-        "sourceItemFingerprint": "02004b4443e320154c0acec1d176e84bba067dc92d42b423079c95fc599b2002",
-        "furigana": {
-          "section": "<ruby>日本<rt>にっぽん</rt></ruby>|<ruby>防衛<rt>ぼうえい</rt></ruby>/AI ＆<ruby>無人<rt>むじん</rt></ruby>システム",
-          "title": "<ruby>日本<rt>にっぽん</rt></ruby>の<ruby>防衛<rt>ぼうえい</rt></ruby><ruby>省<rt>しょう</rt></ruby><ruby>予算案<rt>よさんあん</rt></ruby>は、ドローン、AI、<ruby>長距離<rt>ちょうきょり</rt></ruby>ミサイルに<ruby>焦点<rt>しょうてん</rt></ruby>を<ruby>当<rt>あ</rt></ruby>てるために8.9<ruby>兆円<rt>ちょうえん</rt></ruby>を<ruby>求<rt>もと</rt></ruby>めています",
-          "dek": "<ruby>日本<rt>にっぽん</rt></ruby>の<ruby>防衛<rt>ぼうえい</rt></ruby><ruby>省<rt>しょう</rt></ruby>は、<ruby>低<rt>てい</rt></ruby>コストの<ruby>攻撃用<rt>こうげきよう</rt></ruby>ドローン、<ruby>長距離<rt>ちょうきょり</rt></ruby><ruby>兵器<rt>へいき</rt></ruby>、AIコマンドシステム、<ruby>防衛<rt>ぼうえい</rt></ruby><ruby>産業<rt>さんぎょう</rt></ruby><ruby>能力<rt>のうりょく</rt></ruby>への<ruby>投資<rt>とうし</rt></ruby>に<ruby>焦点<rt>しょうてん</rt></ruby>を<ruby>当<rt>あ</rt></ruby>て、<ruby>来年度<rt>らいねんど</rt></ruby>に<ruby>約<rt>やく</rt></ruby>8.9<ruby>兆円<rt>ちょうえん</rt></ruby>の<ruby>予算<rt>よさん</rt></ruby><ruby>要求<rt>ようきゅう</rt></ruby>を<ruby>提案<rt>ていあん</rt></ruby>しました。",
-          "summary": "<ruby>日本<rt>にっぽん</rt></ruby>の<ruby>新<rt>あたら</rt></ruby>しい<ruby>年間<rt>ねんかん</rt></ruby><ruby>防衛<rt>ぼうえい</rt></ruby><ruby>予算<rt>よさん</rt></ruby><ruby>要件<rt>ようけん</rt></ruby>は<ruby>新<rt>あら</rt></ruby>たな<ruby>高水準<rt>こうすいじゅん</rt></ruby>に<ruby>達<rt>たっ</rt></ruby>し、<ruby>無人<rt>むじん</rt></ruby>およびAI<ruby>機能<rt>きのう</rt></ruby>がコアプロジェクトに<ruby>含<rt>ふく</rt></ruby>まれており、<ruby>東京<rt>とうきょう</rt></ruby>が<ruby>長距離<rt>ちょうきょり</rt></ruby><ruby>攻撃<rt>こうげき</rt></ruby>、<ruby>分散<rt>ぶんさん</rt></ruby><ruby>作戦<rt>さくせん</rt></ruby>、デジタルコマンド<ruby>機能<rt>きのう</rt></ruby>の<ruby>確立<rt>かくりつ</rt></ruby>を<ruby>加速<rt>かそく</rt></ruby>していることを<ruby>反映<rt>はんえい</rt></ruby>しています。",
-          "context": "<ruby>日本<rt>にっぽん</rt></ruby>は<ruby>安全<rt>あんぜん</rt></ruby><ruby>保障<rt>ほしょう</rt></ruby>と<ruby>防衛<rt>ぼうえい</rt></ruby><ruby>政策<rt>せいさく</rt></ruby>を<ruby>見直<rt>みなお</rt></ruby>し、<ruby>防衛<rt>ぼうえい</rt></ruby><ruby>支出<rt>ししゅつ</rt></ruby>を<ruby>増<rt>ふ</rt></ruby>やし<ruby>続<rt>つづ</rt></ruby>けています。<ruby>近年<rt>きんねん</rt></ruby>、<ruby>東<rt>ひがし</rt></ruby>アジアにおけるミサイル、ドローン、<ruby>空軍<rt>くうぐん</rt></ruby>および<ruby>海軍<rt>かいぐん</rt></ruby><ruby>能力<rt>のうりょく</rt></ruby>の<ruby>競争<rt>きょうそう</rt></ruby>は<ruby>大幅<rt>おおはば</rt></ruby>に<ruby>増加<rt>ぞうか</rt></ruby>しています。",
-          "why": "8.9<ruby>兆円<rt>ちょうえん</rt></ruby>の<ruby>水準<rt>すいじゅん</rt></ruby>の<ruby>要求<rt>ようきゅう</rt></ruby>は、<ruby>日本<rt>にっぽん</rt></ruby>の<ruby>財政<rt>ざいせい</rt></ruby>、<ruby>防衛<rt>ぼうえい</rt></ruby><ruby>産業<rt>さんぎょう</rt></ruby>、<ruby>地域<rt>ちいき</rt></ruby><ruby>安全<rt>あんぜん</rt></ruby><ruby>保障<rt>ほしょう</rt></ruby>のバランスに<ruby>直接的<rt>ちょくせつてき</rt></ruby>な<ruby>影響<rt>えいきょう</rt></ruby>を<ruby>及<rt>およ</rt></ruby>ぼし、AIと<ruby>無人<rt>むじん</rt></ruby><ruby>兵器<rt>へいき</rt></ruby>の<ruby>割合<rt>わりあい</rt></ruby>の<ruby>増加<rt>ぞうか</rt></ruby>も、<ruby>自衛隊<rt>じえいたい</rt></ruby>の<ruby>作戦<rt>さくせん</rt></ruby>モデルが<ruby>変化<rt>へんか</rt></ruby>していることを<ruby>意味<rt>いみ</rt></ruby>します。",
-          "watchNext": "<ruby>財務省<rt>ざいむしょう</rt></ruby>の<ruby>削減<rt>さくげん</rt></ruby>、<ruby>年末<rt>ねんまつ</rt></ruby>の<ruby>公式<rt>こうしき</rt></ruby><ruby>予算<rt>よさん</rt></ruby>、AIとドローンの<ruby>取得<rt>しゅとく</rt></ruby><ruby>数<rt>すう</rt></ruby>、<ruby>長距離<rt>ちょうきょり</rt></ruby>ミサイルの<ruby>配備<rt>はいび</rt></ruby><ruby>時間<rt>じかん</rt></ruby>、そして<ruby>新<rt>あたら</rt></ruby>しいセキュリティ<ruby>戦略<rt>せんりゃく</rt></ruby>が<ruby>関連<rt>かんれん</rt></ruby>する<ruby>能力<rt>のうりょく</rt></ruby>をどのように<ruby>定義<rt>ていぎ</rt></ruby>しているかに<ruby>注意<rt>ちゅうい</rt></ruby>してください。",
-          "bodyParagraphs": [
-            "<ruby>日本<rt>にっぽん</rt></ruby>の<ruby>防衛<rt>ぼうえい</rt></ruby><ruby>省<rt>しょう</rt></ruby>は、<ruby>来年度<rt>らいねんど</rt></ruby>に<ruby>約<rt>やく</rt></ruby>8.9<ruby>兆円<rt>ちょうえん</rt></ruby>の<ruby>予算<rt>よさん</rt></ruby><ruby>要求<rt>ようきゅう</rt></ruby>を<ruby>提案<rt>ていあん</rt></ruby>している。AP<ruby>通信<rt>つうしん</rt></ruby>によると、この<ruby>計画<rt>けいかく</rt></ruby>には、<ruby>低<rt>てい</rt></ruby>コストの<ruby>攻撃用<rt>こうげきよう</rt></ruby>ドローン、<ruby>長距離<rt>ちょうきょり</rt></ruby><ruby>巡航<rt>じゅんこう</rt></ruby>ミサイルと<ruby>極<rt>きょく</rt></ruby><ruby>超音速<rt>ちょうおんそく</rt></ruby>ミサイル、<ruby>統合<rt>とうごう</rt></ruby>されたAIプラットフォーム、<ruby>国防省<rt>こくぼうしょう</rt></ruby>のクラウドシステムが<ruby>含<rt>ふく</rt></ruby>まれ、<ruby>国内<rt>こくない</rt></ruby><ruby>防衛<rt>ぼうえい</rt></ruby><ruby>装備<rt>そうび</rt></ruby>の<ruby>研究開発<rt>けんきゅうかいはつ</rt></ruby>と<ruby>生産<rt>せいさん</rt></ruby><ruby>基盤<rt>きばん</rt></ruby>が<ruby>強化<rt>きょうか</rt></ruby>されているという。<ruby>関連<rt>かんれん</rt></ruby>する<ruby>項目<rt>こうもく</rt></ruby>は、まだ<ruby>政府<rt>せいふ</rt></ruby>と<ruby>国民<rt>こくみん</rt></ruby><ruby>議会<rt>ぎかい</rt></ruby>の<ruby>予算<rt>よさん</rt></ruby>プロセスによって<ruby>確認<rt>かくにん</rt></ruby>される<ruby>必要<rt>ひつよう</rt></ruby>があります。",
-            "<ruby>近年<rt>きんねん</rt></ruby>、<ruby>日本<rt>にっぽん</rt></ruby>は5カ<ruby>年<rt>ねん</rt></ruby>の<ruby>防衛<rt>ぼうえい</rt></ruby><ruby>準備<rt>じゅんび</rt></ruby><ruby>計画<rt>けいかく</rt></ruby>に<ruby>沿<rt>そ</rt></ruby>って<ruby>警備<rt>けいび</rt></ruby><ruby>費<rt>ひ</rt></ruby>を<ruby>急速<rt>きゅうそく</rt></ruby>に<ruby>増加<rt>ぞうか</rt></ruby>させ、<ruby>無人<rt>むじん</rt></ruby>システムを<ruby>人手不足<rt>ひとでぶそく</rt></ruby>に<ruby>対処<rt>たいしょ</rt></ruby>し、<ruby>島嶼<rt>とうしょ</rt></ruby><ruby>防衛<rt>ぼうえい</rt></ruby><ruby>能力<rt>のうりょく</rt></ruby>を<ruby>向上<rt>こうじょう</rt></ruby>させるための<ruby>重要<rt>じゅうよう</rt></ruby>なツールと<ruby>見<rt>み</rt></ruby>なしています。この<ruby>要請<rt>ようせい</rt></ruby>は、AIがもはや<ruby>物流<rt>ぶつりゅう</rt></ruby><ruby>分析<rt>ぶんせき</rt></ruby>だけでなく、<ruby>指揮<rt>しき</rt></ruby>、<ruby>認識<rt>にんしき</rt></ruby>、<ruby>意思決定<rt>いしけってい</rt></ruby>のサポートに<ruby>徐々<rt>じょじょ</rt></ruby>に<ruby>参入<rt>さんにゅう</rt></ruby>していることを<ruby>示<rt>しめ</rt></ruby>しており、どのように<ruby>利用<rt>りよう</rt></ruby><ruby>規則<rt>きそく</rt></ruby>、サイバーセキュリティ、サプライチェーンのレジリエンスを<ruby>確立<rt>かくりつ</rt></ruby>するかは、<ruby>軍隊<rt>ぐんたい</rt></ruby>を<ruby>拡大<rt>かくだい</rt></ruby>しながら<ruby>対処<rt>たいしょ</rt></ruby>する<ruby>必要<rt>ひつよう</rt></ruby>があるガバナンスの<ruby>問題<rt>もんだい</rt></ruby>になるでしょう。"
-          ]
-        },
-        "audio": "audio/rolling/japan-asia-defense-budget-drones-ai-20260831-1800.mp3",
-        "timing": "audio/timing/rolling/japan-asia-defense-budget-drones-ai-20260831-1800.json",
-        "audioSpeed": 0.72,
-        "audioDeliveryProfile": "jp-tv-news-semantic-v4"
-      }
-    ],
+    "asia": [],
+    "hong-kong": [],
+    "japan": [],
+    "market-economy": [],
+    "ai-tech": [],
     "manga-anime": [
       {
         "id": "manga-anime-jujutsu-final-exhibition-shinjuku-20260831-1000",
@@ -348,121 +115,20 @@
         "audioDeliveryProfile": "jp-tv-news-semantic-v4"
       }
     ],
-    "manchester-united": [
-      {
-        "id": "manutd-dan-gore-luton-loan-20260901-0600",
-        "desk": "manchester-united",
-        "status": "LATEST",
-        "title": "マンチェスター・ユナイテッドのミッドフィルダーであるダン・ゴアは、条件付きバイアウトオプションを含む1シーズンの契約をルートンに貸し出した",
-        "dek": "マンチェスター・ユナイテッドは、21歳のユーストレーニングミッドフィルダーが2026/27シーズン終了までレンタルされることを確認した。ジャック・ウィルシャーがコーチを務めるルートンは、プレミアリーグからの昇進を目指して戦っている。",
-        "summary": "マンチェスター・ユナイテッドは移籍期間の終わりにユース選手育成の取り決めを担当し、ダン・ゴアはシーズンの間ルートンに移籍し、ルートンはこの契約には条件付きのバイアウトオプションがあると発表した。",
-        "body": "マンチェスター・ユナイテッドは、ミッドフィルダーのダン・ゴアが2026/27シーズン終了までルートンにレンタルで加入することに合意したことを確認した。マンチェスター・ユナイテッド・ユース・トレーニング出身のゴアは、公式トーナメントでファーストチームを代表しており、過去にはイングランドのローグループローンの経験が何度もあり、ロダムの最後のシーズンで安定したプレー時間を再確立しました。\n\nLuton氏は、今年の夏、チームの7人目の新兵であり、契約には条件付きの恒久的な移籍オプションが含まれていると述べた。ジャック・ウィルシャー監督は、ゴアの対決、所持、コート上の個性を大切にしています。マンチェスター・ユナイテッドにとって、この取り決めは、固定されたプレー時間と、条件付きでプレーヤーの長期的な居場所を再評価するためのスペースの両方を提供します。",
-        "context": "マンチェスター・ユナイテッドは、今年の夏もファーストチームとユーストレーニングの階層を再編成し続けており、移籍窓口の終わりのローン契約は、チームメンバーの数と若手選手の育成パスを管理する上で重要な部分を占めています。",
-        "why": "1チームの経験を持つマンチェスター・ユナイテッドのユース選手であるゴアは、中長期的なクラブの見通しに直接影響を与えています。今回は条件付きのバイアウト条項があります。",
-        "watchNext": "ルートンでのゴアの選出タイミング、買収条項のトリガー条件、マンチェスター・ユナイテッドがユースローンを完了できるか、移籍期間が終了する前にファーストチーム契約を完了できるかどうかに注目してください。",
-        "sourceName": "Manchester United／Luton Town",
-        "sourceUrl": "https://www.manutd.com/en/news/luton-loan-for-dan-gore-31-august-2026",
-        "timeLabel": "9月1日06:00 HKTまでに確認済み",
-        "sources": [
-          {
-            "name": "Manchester United",
-            "url": "https://www.manutd.com/en/news/luton-loan-for-dan-gore-31-august-2026"
-          },
-          {
-            "name": "Luton Town via confirmed reporting",
-            "url": "https://thepeoplesperson.com/2026/08/31/official-man-united-youngster-dan-gore-secures-fascinating-loan-move-to-ambitious-luton-town-314833/"
-          }
-        ],
-        "deskSlugs": [
-          "manchester-united",
-          "football"
-        ],
-        "section": "マンチェスター・ユナイテッド|トランスファー/ユース",
-        "sectionLabel": "曼聯",
-        "image": null,
-        "sourceItemFingerprint": "0c0f051252b4bf408e799a03197a11f92347e5a4a49bcd1c2e19d026690fe1ca",
-        "furigana": {
-          "section": "マンチェスター・ユナイテッド|トランスファー/ユース",
-          "title": "マンチェスター・ユナイテッドのミッドフィルダーであるダン・ゴアは、<ruby>条件付<rt>じょうけんつ</rt></ruby>きバイアウトオプションを<ruby>含<rt>ふく</rt></ruby>む1シーズンの<ruby>契約<rt>けいやく</rt></ruby>をルートンに<ruby>貸し出<rt>かしだ</rt></ruby>した",
-          "dek": "マンチェスター・ユナイテッドは、<ruby>21歳<rt>にじゅういっさい</rt></ruby>のユーストレーニングミッドフィルダーが2026/27シーズン<ruby>終了<rt>しゅうりょう</rt></ruby>までレンタルされることを<ruby>確認<rt>かくにん</rt></ruby>した。ジャック・ウィルシャーがコーチを<ruby>務<rt>つと</rt></ruby>めるルートンは、プレミアリーグからの<ruby>昇進<rt>しょうしん</rt></ruby>を<ruby>目指<rt>めざ</rt></ruby>して<ruby>戦<rt>たたか</rt></ruby>っている。",
-          "summary": "マンチェスター・ユナイテッドは<ruby>移籍<rt>いせき</rt></ruby><ruby>期間<rt>きかん</rt></ruby>の<ruby>終<rt>お</rt></ruby>わりにユース<ruby>選手<rt>せんしゅ</rt></ruby><ruby>育成<rt>いくせい</rt></ruby>の<ruby>取り決<rt>とりき</rt></ruby>めを<ruby>担当<rt>たんとう</rt></ruby>し、ダン・ゴアはシーズンの<ruby>間<rt>あいだ</rt></ruby>ルートンに<ruby>移籍<rt>いせき</rt></ruby>し、ルートンはこの<ruby>契約<rt>けいやく</rt></ruby>には<ruby>条件<rt>じょうけん</rt></ruby><ruby>付<rt>つ</rt></ruby>きのバイアウトオプションがあると<ruby>発表<rt>はっぴょう</rt></ruby>した。",
-          "context": "マンチェスター・ユナイテッドは、<ruby>今年<rt>ことし</rt></ruby>の<ruby>夏<rt>なつ</rt></ruby>もファーストチームとユーストレーニングの<ruby>階層<rt>かいそう</rt></ruby>を<ruby>再<rt>さい</rt></ruby><ruby>編成<rt>へんせい</rt></ruby>し<ruby>続<rt>つづ</rt></ruby>けており、<ruby>移籍<rt>いせき</rt></ruby><ruby>窓口<rt>まどぐち</rt></ruby>の<ruby>終<rt>お</rt></ruby>わりのローン<ruby>契約<rt>けいやく</rt></ruby>は、チームメンバーの<ruby>数<rt>かず</rt></ruby>と<ruby>若手<rt>わかて</rt></ruby><ruby>選手<rt>せんしゅ</rt></ruby>の<ruby>育成<rt>いくせい</rt></ruby>パスを<ruby>管理<rt>かんり</rt></ruby>する<ruby>上<rt>うえ</rt></ruby>で<ruby>重要<rt>じゅうよう</rt></ruby>な<ruby>部分<rt>ぶぶん</rt></ruby>を<ruby>占<rt>し</rt></ruby>めています。",
-          "why": "1チームの<ruby>経験<rt>けいけん</rt></ruby>を<ruby>持<rt>も</rt></ruby>つマンチェスター・ユナイテッドのユース<ruby>選手<rt>せんしゅ</rt></ruby>であるゴアは、<ruby>中長期的<rt>ちゅうちょうきてき</rt></ruby>なクラブの<ruby>見通<rt>みとお</rt></ruby>しに<ruby>直接影響<rt>ちょくせつえいきょう</rt></ruby>を<ruby>与<rt>あた</rt></ruby>えています。<ruby>今回<rt>こんかい</rt></ruby>は<ruby>条件付<rt>じょうけんつ</rt></ruby>きのバイアウト<ruby>条項<rt>じょうこう</rt></ruby>があります。",
-          "watchNext": "ルートンでのゴアの<ruby>選出<rt>せんしゅつ</rt></ruby>タイミング、<ruby>買収<rt>ばいしゅう</rt></ruby><ruby>条項<rt>じょうこう</rt></ruby>のトリガー<ruby>条件<rt>じょうけん</rt></ruby>、マンチェスター・ユナイテッドがユースローンを<ruby>完了<rt>かんりょう</rt></ruby>できるか、<ruby>移籍<rt>いせき</rt></ruby><ruby>期間<rt>きかん</rt></ruby>が<ruby>終了<rt>しゅうりょう</rt></ruby>する<ruby>前<rt>まえ</rt></ruby>にファーストチーム<ruby>契約<rt>けいやく</rt></ruby>を<ruby>完了<rt>かんりょう</rt></ruby>できるかどうかに<ruby>注目<rt>ちゅうもく</rt></ruby>してください。",
-          "bodyParagraphs": [
-            "マンチェスター・ユナイテッドは、ミッドフィルダーのダン・ゴアが2026/27シーズン<ruby>終了<rt>しゅうりょう</rt></ruby>までルートンにレンタルで<ruby>加入<rt>かにゅう</rt></ruby>することに<ruby>合意<rt>ごうい</rt></ruby>したことを<ruby>確認<rt>かくにん</rt></ruby>した。マンチェスター・ユナイテッド・ユース・トレーニング<ruby>出身<rt>しゅっしん</rt></ruby>のゴアは、<ruby>公式<rt>こうしき</rt></ruby>トーナメントでファーストチームを<ruby>代表<rt>だいひょう</rt></ruby>しており、<ruby>過去<rt>かこ</rt></ruby>にはイングランドのローグループローンの<ruby>経験<rt>けいけん</rt></ruby>が<ruby>何度<rt>なんど</rt></ruby>もあり、ロダムの<ruby>最後<rt>さいご</rt></ruby>のシーズンで<ruby>安定<rt>あんてい</rt></ruby>したプレー<ruby>時間<rt>じかん</rt></ruby>を<ruby>再<rt>さい</rt></ruby><ruby>確立<rt>かくりつ</rt></ruby>しました。",
-            "Luton<ruby>氏<rt>し</rt></ruby>は、<ruby>今年<rt>こんねん</rt></ruby>の<ruby>夏<rt>なつ</rt></ruby>、チームの7<ruby>人目<rt>ひとめ</rt></ruby>の<ruby>新兵<rt>しんぺい</rt></ruby>であり、<ruby>契約<rt>けいやく</rt></ruby>には<ruby>条件付<rt>じょうけんつ</rt></ruby>きの<ruby>恒久的<rt>こうきゅうてき</rt></ruby>な<ruby>移籍<rt>いせき</rt></ruby>オプションが<ruby>含<rt>ふく</rt></ruby>まれていると<ruby>述<rt>の</rt></ruby>べた。ジャック・ウィルシャー<ruby>監督<rt>かんとく</rt></ruby>は、ゴアの<ruby>対決<rt>たいけつ</rt></ruby>、<ruby>所持<rt>しょじ</rt></ruby>、コート<ruby>上<rt>うえ</rt></ruby>の<ruby>個性<rt>こせい</rt></ruby>を<ruby>大切<rt>たいせつ</rt></ruby>にしています。マンチェスター・ユナイテッドにとって、この<ruby>取り決<rt>とりき</rt></ruby>めは、<ruby>固定<rt>こてい</rt></ruby>されたプレー<ruby>時間<rt>じかん</rt></ruby>と、<ruby>条件付<rt>じょうけんつ</rt></ruby>きでプレーヤーの<ruby>長期的<rt>ちょうきてき</rt></ruby>な<ruby>居場所<rt>いばしょ</rt></ruby>を<ruby>再評価<rt>さいひょうか</rt></ruby>するためのスペースの<ruby>両方<rt>りょうほう</rt></ruby>を<ruby>提供<rt>ていきょう</rt></ruby>します。"
-          ]
-        },
-        "audio": "audio/rolling/manutd-dan-gore-luton-loan-20260901-0600.mp3",
-        "timing": "audio/timing/rolling/manutd-dan-gore-luton-loan-20260901-0600.json",
-        "audioSpeed": 0.72,
-        "audioDeliveryProfile": "jp-tv-news-semantic-v4"
-      }
-    ],
-    "football": [
-      {
-        "id": "football-man-city-enzo-fernandez-20260902-0700",
-        "desk": "football",
-        "status": "LATEST",
-        "title": "マンチェスター・シティがエンツォ・フェルナンデスの英国移籍金マッチを1億2500万ポンドで締めくくったと報じられている",
-        "dek": "ロイターとガーディアンは、マンチェスター・シティとチェルシーがアルゼンチンのミッドフィルダーのための固定移籍金契約に達したと報じており、契約は完了しつつある。",
-        "summary": "マンチェスター・シティは、1億2500万ポンドでチェルシーからエンツォ・フェルナンデスと契約し、クラブの移籍記録と一致することに合意したと伝えられている。",
-        "body": "ロイターとガーディアンは、マンチェスター・シティがアルゼンチンのミッドフィルダー、エンツォ・フェルナンデスのためにチェルシーと1億2500万ポンドの固定移籍金契約を結んだと報じた。登録が完了すると、この契約はイングランドクラブの選手移籍金記録と一致し、マンチェスター・シティ史上最大の買収となる。\n\nフェルナンデスは2023年にベンフィーによってチェルシーに加わり、この動きはまた、2つのプレミアリーグ入札チームのミッドフィールド構成を再形成するでしょう。移籍ウィンドウの最終段階にニュースが表示されるため、最も重要な次のステップは、まだクラブの公式発表と登録確認です。",
-        "context": "ヨーロッパのメジャーリーグでは、移籍期間の最終日にいくつかの大きな取引が行われ、マンチェスターシティも他の事前補強を完了しました。",
-        "why": "正式に完了した場合、1億2500万ポンドの取引は、マンチェスター・シティとチェルシー・ミッドフィールドの強さと財政配分を直接変えることになります。",
-        "watchNext": "マンチェスター・シティとチェルシーからの公式発表、選手登録が完了しているかどうか、そして最後のスロットでチェルシーの代替ミッドフィールド契約に注目してください。",
-        "sourceName": "Reuters／The Guardian",
-        "sourceUrl": "https://www.reuters.com/sports/soccer/man-city-agree-sign-fernandez-chelsea-british-record-fee-reports-2026-09-01/",
-        "timeLabel": "09/02 07:00 HKT認証",
-        "sources": [
-          {
-            "name": "Reuters",
-            "url": "https://www.reuters.com/sports/soccer/man-city-agree-sign-fernandez-chelsea-british-record-fee-reports-2026-09-01/"
-          },
-          {
-            "name": "The Guardian",
-            "url": "https://www.theguardian.com/football/live/2026/sep/01/football-transfer-deadline-day-fernandez-alvarez-mudryk-ndiaye-latest-news-updates"
-          }
-        ],
-        "deskSlugs": [
-          "football"
-        ],
-        "section": "サッカー|プレミアリーグ/移籍",
-        "sectionLabel": "足球",
-        "image": null,
-        "sourceItemFingerprint": "a519976a6db0ffeca81f12356c6b50ba8e031453bbe69ba186b759c2265cd60e",
-        "furigana": {
-          "section": "サッカー|プレミアリーグ/<ruby>移籍<rt>いせき</rt></ruby>",
-          "title": "マンチェスター・シティがエンツォ・フェルナンデスの<ruby>英国<rt>えいこく</rt></ruby><ruby>移籍<rt>いせき</rt></ruby><ruby>金<rt>きん</rt></ruby>マッチを1<ruby>億<rt>おく</rt></ruby>2500<ruby>万<rt>まん</rt></ruby>ポンドで<ruby>締<rt>し</rt></ruby>めくくったと<ruby>報<rt>ほう</rt></ruby>じられている",
-          "dek": "ロイターとガーディアンは、マンチェスター・シティとチェルシーがアルゼンチンのミッドフィルダーのための<ruby>固定<rt>こてい</rt></ruby><ruby>移籍金<rt>いせききん</rt></ruby><ruby>契約<rt>けいやく</rt></ruby>に<ruby>達<rt>たっ</rt></ruby>したと<ruby>報<rt>ほう</rt></ruby>じており、<ruby>契約<rt>けいやく</rt></ruby>は<ruby>完了<rt>かんりょう</rt></ruby>しつつある。",
-          "summary": "マンチェスター・シティは、1<ruby>億<rt>おく</rt></ruby>2500<ruby>万<rt>まん</rt></ruby>ポンドでチェルシーからエンツォ・フェルナンデスと<ruby>契約<rt>けいやく</rt></ruby>し、クラブの<ruby>移籍<rt>いせき</rt></ruby><ruby>記録<rt>きろく</rt></ruby>と<ruby>一致<rt>いっち</rt></ruby>することに<ruby>合意<rt>ごうい</rt></ruby>したと<ruby>伝<rt>つた</rt></ruby>えられている。",
-          "context": "ヨーロッパのメジャーリーグでは、<ruby>移籍<rt>いせき</rt></ruby><ruby>期間<rt>きかん</rt></ruby>の<ruby>最終日<rt>さいしゅうび</rt></ruby>にいくつかの<ruby>大<rt>おお</rt></ruby>きな<ruby>取引<rt>とりひき</rt></ruby>が<ruby>行<rt>おこな</rt></ruby>われ、マンチェスターシティも<ruby>他<rt>た</rt></ruby>の<ruby>事前<rt>じぜん</rt></ruby><ruby>補強<rt>ほきょう</rt></ruby>を<ruby>完了<rt>かんりょう</rt></ruby>しました。",
-          "why": "<ruby>正式<rt>せいしき</rt></ruby>に<ruby>完了<rt>かんりょう</rt></ruby>した<ruby>場合<rt>ばあい</rt></ruby>、1<ruby>億<rt>おく</rt></ruby>2500<ruby>万<rt>まん</rt></ruby>ポンドの<ruby>取引<rt>とりひき</rt></ruby>は、マンチェスター・シティとチェルシー・ミッドフィールドの<ruby>強<rt>つよ</rt></ruby>さと<ruby>財政<rt>ざいせい</rt></ruby><ruby>配分<rt>はいぶん</rt></ruby>を<ruby>直接<rt>ちょくせつ</rt></ruby><ruby>変<rt>か</rt></ruby>えることになります。",
-          "watchNext": "マンチェスター・シティとチェルシーからの<ruby>公式発表<rt>こうしきはっぴょう</rt></ruby>、<ruby>選手<rt>せんしゅ</rt></ruby><ruby>登録<rt>とうろく</rt></ruby>が<ruby>完了<rt>かんりょう</rt></ruby>しているかどうか、そして<ruby>最後<rt>さいご</rt></ruby>のスロットでチェルシーの<ruby>代替<rt>だいたい</rt></ruby>ミッドフィールド<ruby>契約<rt>けいやく</rt></ruby>に<ruby>注目<rt>ちゅうもく</rt></ruby>してください。",
-          "bodyParagraphs": [
-            "ロイターとガーディアンは、マンチェスター・シティがアルゼンチンのミッドフィルダー、エンツォ・フェルナンデスのためにチェルシーと1<ruby>億<rt>おく</rt></ruby>2500<ruby>万<rt>まん</rt></ruby>ポンドの<ruby>固定<rt>こてい</rt></ruby><ruby>移籍<rt>いせき</rt></ruby><ruby>金<rt>きん</rt></ruby><ruby>契約<rt>けいやく</rt></ruby>を<ruby>結<rt>むす</rt></ruby>んだと<ruby>報<rt>ほう</rt></ruby>じた。<ruby>登録<rt>とうろく</rt></ruby>が<ruby>完了<rt>かんりょう</rt></ruby>すると、この<ruby>契約<rt>けいやく</rt></ruby>はイングランドクラブの<ruby>選手<rt>せんしゅ</rt></ruby><ruby>移籍<rt>いせき</rt></ruby><ruby>金<rt>きん</rt></ruby><ruby>記録<rt>きろく</rt></ruby>と<ruby>一致<rt>いっち</rt></ruby>し、マンチェスター・シティ<ruby>史上最大<rt>しじょうさいだい</rt></ruby>の<ruby>買収<rt>ばいしゅう</rt></ruby>となる。",
-            "フェルナンデスは2023<ruby>年<rt>ねん</rt></ruby>にベンフィーによってチェルシーに<ruby>加<rt>くわ</rt></ruby>わり、この<ruby>動<rt>うご</rt></ruby>きはまた、2つのプレミアリーグ<ruby>入札<rt>にゅうさつ</rt></ruby>チームのミッドフィールド<ruby>構成<rt>こうせい</rt></ruby>を<ruby>再<rt>さい</rt></ruby><ruby>形成<rt>けいせい</rt></ruby>するでしょう。<ruby>移籍<rt>いせき</rt></ruby>ウィンドウの<ruby>最終段階<rt>さいしゅうだんかい</rt></ruby>にニュースが<ruby>表示<rt>ひょうじ</rt></ruby>されるため、<ruby>最<rt>もっと</rt></ruby>も<ruby>重要<rt>じゅうよう</rt></ruby>な<ruby>次<rt>つぎ</rt></ruby>のステップは、まだクラブの<ruby>公式発表<rt>こうしきはっぴょう</rt></ruby>と<ruby>登録<rt>とうろく</rt></ruby><ruby>確認<rt>かくにん</rt></ruby>です。"
-          ]
-        },
-        "audio": "audio/rolling/football-man-city-enzo-fernandez-20260902-0700.mp3",
-        "timing": "audio/timing/rolling/football-man-city-enzo-fernandez-20260902-0700.json",
-        "audioSpeed": 0.72,
-        "audioDeliveryProfile": "jp-tv-news-semantic-v4"
-      }
-    ]
+    "manchester-united": [],
+    "football": []
   },
   "editorSelectionMode": "minimum-guaranteed-edition-per-desk",
   "sourceDeskStoryCounts": {
-    "world": 26,
-    "asia": 42,
-    "hong-kong": 11,
-    "japan": 30,
-    "market-economy": 55,
-    "ai-tech": 24,
+    "world": 32,
+    "asia": 48,
+    "hong-kong": 12,
+    "japan": 37,
+    "market-economy": 66,
+    "ai-tech": 29,
     "manga-anime": 6,
-    "manchester-united": 6,
-    "football": 27
+    "manchester-united": 7,
+    "football": 32
   },
   "selectedDeskStoryCounts": {
     "world": 1,
@@ -479,15 +145,22 @@
   "language": "ja",
   "translationSource": "kanuli/daily-brief-newspaper",
   "sourceFile": "desk-latest.json",
-  "sourceFingerprint": "1031081a99369696cc97aced26c2902788c639f5f850baa9d7bb42ce9a445d07",
+  "sourceFingerprint": "2874e04ef2d237b52be627e5ee5bfe45f7a49e5ac9a212cde626fe6235d0f407",
   "translationSchemaVersion": "ja-cantonese-extra-v2-full-parity",
   "sourceParityMode": "owner-quarantine-v1",
-  "translationDegraded": false,
-  "translationDeferredCount": 0,
-  "translationDeferredIds": [],
+  "translationDegraded": true,
+  "translationDeferredCount": 6,
+  "translationDeferredIds": [
+    "ai-tech-sality-botnet-disruption-20260902-1200",
+    "football-crystal-palace-chilwell-timber-signings-20260902-1200",
+    "hk-school-start-transport-20260901-0800",
+    "japan-boj-takata-nimble-rate-hikes-20260902-1200",
+    "market-asia-stocks-oil-bonds-selloff-20260902-1200",
+    "mu-rashford-return-ipswich-20260902-0600"
+  ],
   "translationDeferredMetadata": [],
   "translationRecoveryMode": "owner-quarantine-v1",
   "translationBudgetSeconds": 180,
-  "translationElapsedSeconds": 16,
-  "translationBudgetExhausted": false
+  "translationElapsedSeconds": 202,
+  "translationBudgetExhausted": true
 }
