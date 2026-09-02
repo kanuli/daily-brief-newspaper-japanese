@@ -1,0 +1,400 @@
+{
+  "version": 3,
+  "duration": 156.343,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 448,
+  "charactersPerMinute": 171.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 12.221,
+      "text": "ロシア軍がオデッサを再び攻撃、インフラや住居が被害、少なくとも8人が負傷"
+    },
+    {
+      "key": "dek",
+      "start": 12.221,
+      "end": 32.873,
+      "text": "黒海に面したウクライナの主要港湾都市は継続的に攻撃を受け、24階建ての住宅や複数の車が損傷し、エネルギーや輸出施設へのリスクが続いている。"
+    },
+    {
+      "key": "body-0",
+      "start": 32.873,
+      "end": 70.934,
+      "text": "ウクライナのオデッサの軍事省は、ロシア軍が水曜日に再び黒海の港湾都市を攻撃し、インフラストラクチャー、家屋、車両に損害を与えたと述べた。その後、当局は負傷者数を少なくとも8人に更新し、24階建ての住宅も影響を受けました。"
+    },
+    {
+      "key": "body-1",
+      "start": 70.934,
+      "end": 106.902,
+      "text": "オデッサはウクライナで最も重要な海上輸出拠点の1つであり、ロシア軍が最近港湾、エネルギー、鉄道施設を連続的に攻撃したことで、食料やその他の輸出物流が妨げられ、地元の電力供給や民間施設にさらなる圧力がかかるリスクが高まっている。"
+    },
+    {
+      "key": "why",
+      "start": 106.902,
+      "end": 135.07,
+      "text": "オデッサは人々の生計、エネルギー、輸出ルートにも関わっています。攻撃が続けば、黒海の海運、食料供給、戦時経済に影響が出る可能性がある。"
+    },
+    {
+      "key": "watch",
+      "start": 135.07,
+      "end": 156.343,
+      "text": "死傷者とインフラの損傷のさらなる増加、港湾業務の混乱、そしてウクライナがさらなる防空支援を要請するかどうかに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.111,
+      "end": 4.391,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロシア軍がオデッサを再び攻撃、"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.391,
+      "speechEnd": 7.597,
+      "end": 7.877,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インフラや住居が被害、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.877,
+      "speechEnd": 11.361,
+      "end": 12.221,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "少なくとも8人が負傷。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.221,
+      "speechEnd": 19.886,
+      "end": 20.166,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "黒海に面したウクライナの主要港湾都市は継続的に攻撃を受け、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.166,
+      "speechEnd": 26.577,
+      "end": 26.857,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "24階建ての住宅や複数の車が損傷し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.857,
+      "speechEnd": 32.013,
+      "end": 32.873,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "エネルギーや輸出施設へのリスクが続いている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 32.873,
+      "speechEnd": 37.054,
+      "end": 37.334,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ウクライナのオデッサの軍事省は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.334,
+      "speechEnd": 44.651,
+      "end": 44.931,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロシア軍が水曜日に再び黒海の港湾都市を攻撃し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.931,
+      "speechEnd": 47.509,
+      "end": 47.789,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インフラストラクチャー、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.789,
+      "speechEnd": 49.81,
+      "end": 50.09,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "家屋、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.09,
+      "speechEnd": 54.619,
+      "end": 55.24,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "車両に損害を与えたと述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.24,
+      "speechEnd": 57.33,
+      "end": 57.61,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "その後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.61,
+      "speechEnd": 64.369,
+      "end": 64.649,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "当局は負傷者数を少なくとも8人に更新し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.649,
+      "speechEnd": 70.154,
+      "end": 70.934,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "24階建ての住宅も影響を受けました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 70.934,
+      "speechEnd": 78.599,
+      "end": 78.879,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "オデッサはウクライナで最も重要な海上輸出拠点の1つであり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 78.879,
+      "speechEnd": 82.015,
+      "end": 82.295,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロシア軍が最近港湾、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.295,
+      "speechEnd": 84.386,
+      "end": 84.666,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "エネルギー、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.666,
+      "speechEnd": 89.892,
+      "end": 90.172,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "鉄道施設を連続的に攻撃したことで、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.172,
+      "speechEnd": 95.677,
+      "end": 95.957,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "食料やその他の輸出物流が妨げられ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 95.957,
+      "speechEnd": 102.507,
+      "end": 102.847,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "地元の電力供給や民間施設にさらなる圧力が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.847,
+      "speechEnd": 106.122,
+      "end": 106.902,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "かかるリスクが高まっている。"
+    },
+    {
+      "parentKey": "why",
+      "start": 106.902,
+      "speechEnd": 110.874,
+      "end": 111.494,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 111.494,
+      "speechEnd": 114.63,
+      "end": 114.91,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "オデッサは人々の生計、"
+    },
+    {
+      "parentKey": "why",
+      "start": 114.91,
+      "speechEnd": 117.0,
+      "end": 117.28,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "エネルギー、"
+    },
+    {
+      "parentKey": "why",
+      "start": 117.28,
+      "speechEnd": 120.834,
+      "end": 121.454,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "輸出ルートにも関わっています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 121.454,
+      "speechEnd": 123.963,
+      "end": 124.243,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "攻撃が続けば、"
+    },
+    {
+      "parentKey": "why",
+      "start": 124.243,
+      "speechEnd": 126.612,
+      "end": 126.892,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "黒海の海運、"
+    },
+    {
+      "parentKey": "why",
+      "start": 126.892,
+      "speechEnd": 129.192,
+      "end": 129.472,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "食料供給、"
+    },
+    {
+      "parentKey": "why",
+      "start": 129.472,
+      "speechEnd": 134.21,
+      "end": 135.07,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "戦時経済に影響が出る可能性がある。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 135.07,
+      "speechEnd": 137.161,
+      "end": 137.441,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 137.441,
+      "speechEnd": 142.388,
+      "end": 142.668,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "死傷者とインフラの損傷のさらなる増加、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 142.668,
+      "speechEnd": 145.595,
+      "end": 145.875,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "港湾業務の混乱、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 145.875,
+      "speechEnd": 150.544,
+      "end": 150.884,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "そしてウクライナがさらなる防空支援を"
+    },
+    {
+      "parentKey": "watch",
+      "start": 150.884,
+      "speechEnd": 155.483,
+      "end": 156.343,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "要請するかどうかに注目してください。"
+    }
+  ]
+}
