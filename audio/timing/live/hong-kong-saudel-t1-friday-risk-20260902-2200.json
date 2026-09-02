@@ -1,0 +1,440 @@
+{
+  "version": 3,
+  "duration": 195.318,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 558,
+  "charactersPerMinute": 171.4,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 18.927,
+      "text": "台風3号が金曜日頃に再発したかどうかを評価するために、スディロが引き返したり、珠江河口天文台に近づいたりすることはまれです。"
+    },
+    {
+      "key": "dek",
+      "start": 18.927,
+      "end": 46.159,
+      "text": "警報信号1号は維持され、熱帯暴風雨は香港の東約300キロメートルに及んでいました。木曜日に西に曲がった後、経路と強度については依然として大きな不確実性がありました。"
+    },
+    {
+      "key": "body-0",
+      "start": 46.159,
+      "end": 100.728,
+      "text": "香港天文台は9月2日、熱帯暴風雨スディロが正午に香港の東約300キロメートルにあり、中央付近の最大持続風速は時速約65キロメートルで、南シナ海の北東に浮かび、その後西に曲がり、広東省の東海岸に沿って移動することが予想されたと述べた。香港警報信号1号は維持され、香港の沖合と高地の間に強風が吹いており、海面には波が押し寄せていました。"
+    },
+    {
+      "key": "body-1",
+      "start": 100.728,
+      "end": 149.263,
+      "text": "天文台は、スディロが金曜日頃に珠江河口に接近する機会があったことを指摘したが、その強風地域と香港との間の距離と、3号強風信号を再発行するかどうかの現地の風力評価に応じて、強度と経路には依然として大きな不確実性があった。一般市民と海事活動家は、最新の熱帯サイクロンと強風警報に注意を払う必要があります。"
+    },
+    {
+      "key": "why",
+      "start": 149.263,
+      "end": 173.84,
+      "text": "台風レベルとルートの変更は、交通、学校、フライト、アウトドアアクティビティ、国境を越えた旅程に直接影響します。"
+    },
+    {
+      "key": "watch",
+      "start": 173.84,
+      "end": 195.318,
+      "text": "天文台の最新の位置、台風3号の評価、オフショア風、金曜日から土曜日までのレインバンドと風の変化に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.873,
+      "end": 8.103,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "台風3号が金曜日頃に再発したかどうかを評価するために、"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.103,
+      "speechEnd": 11.169,
+      "end": 11.399,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "スディロが引き返したり、"
+    },
+    {
+      "parentKey": "title",
+      "start": 11.399,
+      "speechEnd": 18.227,
+      "end": 18.927,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "珠江河口天文台に近づいたりすることはまれです。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.927,
+      "speechEnd": 22.411,
+      "end": 22.641,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "警報信号1号は維持され、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.641,
+      "speechEnd": 26.473,
+      "end": 26.613,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "熱帯暴風雨は香港の東約"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.613,
+      "speechEnd": 28.843,
+      "end": 28.983,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "300キロ"
+    },
+    {
+      "parentKey": "dek",
+      "start": 28.983,
+      "speechEnd": 32.327,
+      "end": 32.827,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "メートルに及んでいました。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.827,
+      "speechEnd": 36.381,
+      "end": 36.611,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "木曜日に西に曲がった後、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 36.611,
+      "speechEnd": 45.459,
+      "end": 46.159,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "経路と強度については依然として大きな不確実性がありました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.159,
+      "speechEnd": 50.619,
+      "end": 50.849,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "香港天文台は9月2日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.849,
+      "speechEnd": 59.349,
+      "end": 59.579,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "熱帯暴風雨スディロが正午に香港の東約300キロメートルにあり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.579,
+      "speechEnd": 68.01,
+      "end": 68.24,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中央付近の最大持続風速は時速約65キロメートルで、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.24,
+      "speechEnd": 72.072,
+      "end": 72.302,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "南シナ海の北東に浮かび、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.302,
+      "speechEnd": 75.228,
+      "end": 75.458,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "その後西に曲がり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.458,
+      "speechEnd": 83.61,
+      "end": 84.11,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "広東省の東海岸に沿って移動することが予想されたと述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 84.11,
+      "speechEnd": 88.569,
+      "end": 88.799,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "香港警報信号1号は維持され、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 88.799,
+      "speechEnd": 95.558,
+      "end": 95.788,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "香港の沖合と高地の間に強風が吹いており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 95.788,
+      "speechEnd": 100.108,
+      "end": 100.728,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "海面には波が押し寄せていました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 100.728,
+      "speechEnd": 103.027,
+      "end": 103.257,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "天文台は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.257,
+      "speechEnd": 109.667,
+      "end": 109.947,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "スディロが金曜日頃に珠江河口に接近する機会が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.947,
+      "speechEnd": 113.431,
+      "end": 113.661,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "あったことを指摘したが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 113.661,
+      "speechEnd": 119.723,
+      "end": 119.953,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "その強風地域と香港との間の距離と、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 119.953,
+      "speechEnd": 128.871,
+      "end": 129.101,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "3号強風信号を再発行するかどうかの現地の風力評価に応じて、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 129.101,
+      "speechEnd": 136.487,
+      "end": 136.987,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "強度と経路には依然として大きな不確実性があった。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 136.987,
+      "speechEnd": 141.097,
+      "end": 141.327,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "一般市民と海事活動家は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 141.327,
+      "speechEnd": 148.643,
+      "end": 149.263,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "最新の熱帯サイクロンと強風警報に注意を払う必要があります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 149.263,
+      "speechEnd": 153.235,
+      "end": 153.735,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 153.735,
+      "speechEnd": 157.985,
+      "end": 158.215,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "台風レベルとルートの変更は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 158.215,
+      "speechEnd": 160.236,
+      "end": 160.466,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "交通、"
+    },
+    {
+      "parentKey": "why",
+      "start": 160.466,
+      "speechEnd": 162.486,
+      "end": 162.716,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "学校、"
+    },
+    {
+      "parentKey": "why",
+      "start": 162.716,
+      "speechEnd": 164.807,
+      "end": 165.037,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "フライト、"
+    },
+    {
+      "parentKey": "why",
+      "start": 165.037,
+      "speechEnd": 167.963,
+      "end": 168.193,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "アウトドアアクティビティ、"
+    },
+    {
+      "parentKey": "why",
+      "start": 168.193,
+      "speechEnd": 173.14,
+      "end": 173.84,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "国境を越えた旅程に直接影響します。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 173.84,
+      "speechEnd": 175.93,
+      "end": 176.16,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 176.16,
+      "speechEnd": 179.853,
+      "end": 180.083,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "天文台の最新の位置、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 180.083,
+      "speechEnd": 183.149,
+      "end": 183.379,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "台風3号の評価、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 183.379,
+      "speechEnd": 185.608,
+      "end": 185.838,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "オフショア風、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 185.838,
+      "speechEnd": 194.617,
+      "end": 195.318,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "金曜日から土曜日までのレインバンドと風の変化に注意してください。"
+    }
+  ]
+}

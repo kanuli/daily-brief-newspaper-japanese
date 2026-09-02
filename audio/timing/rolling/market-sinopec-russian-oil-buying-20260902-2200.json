@@ -1,0 +1,420 @@
+{
+  "version": 3,
+  "duration": 210.416,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 614,
+  "charactersPerMinute": 175.1,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 18.133,
+      "text": "シノペックはロシア産原油の購入を日量40万バレル以上に増加。中東の供給制約がアジアの原油の流れを再構築"
+    },
+    {
+      "key": "dek",
+      "start": 18.133,
+      "end": 37.809,
+      "text": "国営製油会社はESPOなどロシア産原油を買い占め、スポットプレミアムをつり上げ、中国の地元製油所からの低価格供給を圧迫している。"
+    },
+    {
+      "key": "body-0",
+      "start": 37.809,
+      "end": 95.24,
+      "text": "ロイター通信は9月2日、SinopecがESPO、Sokol、Uralsを含む10月の積荷期間中にロシアの原油購入を大幅に増加させ、1日あたり40万バレル以上に相当する最大約20隻の船舶の合計量であるとトレーダーを引用した。Sinopecは、精製マージンの改善、中東での供給の制限、イランの輸出への圧力の中で、ロシアの石油を代替供給源として使用しました。"
+    },
+    {
+      "key": "body-1",
+      "start": 95.24,
+      "end": 156.434,
+      "text": "大手国営精製業者による集中購入も、ESPOなどのロシア産石油のプレミアムを押し上げており、伝統的に割引価格のロシア産原油とイラン産原油に依存していた地元の中国製油所はより高いコストに直面しており、一部の製油所ではブラジル、カナダ、イラク産原油の買い戻しが必要になる可能性がある。供給のタイトさが続くと、アジアの精製マージン、原油フロー、スポットスプレッドはすべてさらに変化する可能性があります。"
+    },
+    {
+      "key": "why",
+      "start": 156.434,
+      "end": 188.717,
+      "text": "中国は世界最大の原油輸入国の一つであり、大手製油所による調達構造の変化は、ロシアの原油プレミアム、アジアのスポット市場、他の製油所の供給コストに影響を与えるだろう。"
+    },
+    {
+      "key": "watch",
+      "start": 188.717,
+      "end": 210.416,
+      "text": "ロシアのESPOプレミアム、イランの輸出、中国の現地製油所の稼働率、中東からの原油供給の回復速度に注目してほしい。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 8.849,
+      "end": 9.469,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "シノペックはロシア産原油の購入を日量40万バレル以上に増加。"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.469,
+      "speechEnd": 17.273,
+      "end": 18.133,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "中東の供給制約がアジアの原油の流れを再構築。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.133,
+      "speechEnd": 25.38,
+      "end": 25.66,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "国営製油会社はESPOなどロシア産原油を買い占め、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.66,
+      "speechEnd": 29.283,
+      "end": 29.563,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "スポットプレミアムをつり上げ、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 29.563,
+      "speechEnd": 36.949,
+      "end": 37.809,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "中国の地元製油所からの低価格供給を圧迫している。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.809,
+      "speechEnd": 41.92,
+      "end": 42.2,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信は9月2日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.2,
+      "speechEnd": 45.126,
+      "end": 45.406,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "SinopecがESPO、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.406,
+      "speechEnd": 47.497,
+      "end": 47.777,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Sokol、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.777,
+      "speechEnd": 58.228,
+      "end": 58.508,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Uralsを含む10月の積荷期間中にロシアの原油購入を大幅に増加させ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.508,
+      "speechEnd": 72.513,
+      "end": 73.134,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "1日あたり40万バレル以上に相当する最大約20隻の船舶の合計量であるとトレーダーを引用した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.134,
+      "speechEnd": 75.433,
+      "end": 75.713,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Sinopecは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.713,
+      "speechEnd": 78.988,
+      "end": 79.268,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "精製マージンの改善、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 79.268,
+      "speechEnd": 82.961,
+      "end": 83.241,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "中東での供給の制限、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 83.241,
+      "speechEnd": 87.421,
+      "end": 87.701,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イランの輸出への圧力の中で、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 87.701,
+      "speechEnd": 94.46,
+      "end": 95.24,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "ロシアの石油を代替供給源として使用しました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 95.24,
+      "speechEnd": 100.675,
+      "end": 100.955,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "大手国営精製業者による集中購入も、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 100.955,
+      "speechEnd": 108.48,
+      "end": 108.76,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ESPOなどのロシア産石油のプレミアムを押し上げており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.76,
+      "speechEnd": 124.786,
+      "end": 125.066,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "伝統的に割引価格のロシア産原油とイラン産原油に依存していた地元の中国製油所はより高いコストに直面しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 125.066,
+      "speechEnd": 128.968,
+      "end": 129.248,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "一部の製油所ではブラジル、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 129.248,
+      "speechEnd": 131.338,
+      "end": 131.618,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "カナダ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 131.618,
+      "speechEnd": 138.516,
+      "end": 139.137,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "イラク産原油の買い戻しが必要になる可能性がある。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 139.137,
+      "speechEnd": 142.342,
+      "end": 142.622,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "供給のタイトさが続くと、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 142.622,
+      "speechEnd": 146.036,
+      "end": 146.316,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アジアの精製マージン、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 146.316,
+      "speechEnd": 148.546,
+      "end": 148.826,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "原油フロー、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 148.826,
+      "speechEnd": 155.654,
+      "end": 156.434,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "スポットスプレッドはすべてさらに変化する可能性があります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 156.434,
+      "speechEnd": 160.406,
+      "end": 161.026,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 161.026,
+      "speechEnd": 168.481,
+      "end": 168.762,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "中国は世界最大の原油輸入国の一つであり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 168.762,
+      "speechEnd": 173.987,
+      "end": 174.267,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "大手製油所による調達構造の変化は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 174.267,
+      "speechEnd": 177.821,
+      "end": 178.101,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロシアの原油プレミアム、"
+    },
+    {
+      "parentKey": "why",
+      "start": 178.101,
+      "speechEnd": 181.097,
+      "end": 181.377,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アジアのスポット市場、"
+    },
+    {
+      "parentKey": "why",
+      "start": 181.377,
+      "speechEnd": 187.857,
+      "end": 188.717,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "他の製油所の供給コストに影響を与えるだろう。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 188.717,
+      "speechEnd": 190.808,
+      "end": 191.088,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 191.088,
+      "speechEnd": 194.641,
+      "end": 194.921,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロシアのESPOプレミアム、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 194.921,
+      "speechEnd": 197.221,
+      "end": 197.501,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イランの輸出、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 197.501,
+      "speechEnd": 202.169,
+      "end": 202.449,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "中国の現地製油所の稼働率、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 202.449,
+      "speechEnd": 209.556,
+      "end": 210.416,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "中東からの原油供給の回復速度に注目してほしい。"
+    }
+  ]
+}

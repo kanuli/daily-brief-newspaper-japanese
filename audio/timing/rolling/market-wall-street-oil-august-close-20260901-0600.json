@@ -1,0 +1,430 @@
+{
+  "version": 3,
+  "duration": 210.573,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 620,
+  "charactersPerMinute": 176.7,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.1,
+      "text": "原油価格の高騰でインフレと利上げへの懸念が高まり、8月最終取引日の米国株は下落した。"
+    },
+    {
+      "key": "dek",
+      "start": 14.1,
+      "end": 42.618,
+      "text": "S&P500は0.36%下落、ナスダックは0.16%下落、ダウは0.71%下落した。 3つの主要指数は8月も引き続き上昇を記録し、エネルギー株もその傾向に逆行して堅調となった。"
+    },
+    {
+      "key": "body-0",
+      "start": 42.618,
+      "end": 92.493,
+      "text": "米国の3大株価指数はすべて、8月の最終取引日に下落した。S&P 500は0.36 ％、ナスダックは0.16 ％、ダウ・ジョーンズ工業平均は0.71 ％下落したとロイターは報じた。中東での戦争とホルムズ海峡でのリスクが原油価格を押し上げ、エネルギーコストがインフレ圧力を長引かせるのではないかという懸念を新たにしている。"
+    },
+    {
+      "key": "body-1",
+      "start": 92.493,
+      "end": 146.298,
+      "text": "1日の下落にもかかわらず、3つの指数は全体として8月に上昇を記録し、NACはAI関連の株に支えられ、ダウは5ヶ月連続で上昇しました。連邦準備制度理事会（ FRB ）議長のケビン・ウォーシュ（ Kevin Warsh ）氏のタカ派的なレトリックは、9月の利上げでの価格引き上げにもつながり、長期金利、エネルギー価格、テクノロジー株価は再びクロスアセット取引の主力となった。"
+    },
+    {
+      "key": "why",
+      "start": 146.298,
+      "end": 187.274,
+      "text": "米国株式市場の終了は、アジアの朝市場にとって重要なリスクベンチマークを提供します。原油価格の上昇と金利上昇の予想が同時期に行われると、9月1日のアジア株式、米ドル、長期債のパフォーマンスに直接影響を与える可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 187.274,
+      "end": 210.573,
+      "text": "アジアの開放後のエネルギー対テック格差、米ドル対国債利回りの動き、9月の連邦準備制度理事会の利上げオッズの最新の市場価格に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.107,
+      "end": 7.387,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "原油価格の高騰でインフレと利上げへの懸念が高まり、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.387,
+      "speechEnd": 13.239,
+      "end": 14.1,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "8月最終取引日の米国株は下落した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.1,
+      "speechEnd": 19.047,
+      "end": 19.327,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "S&P500は0.36%下落、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.327,
+      "speechEnd": 23.786,
+      "end": 24.066,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ナスダックは0.16%下落、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.066,
+      "speechEnd": 28.246,
+      "end": 28.866,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ダウは0.71%下落した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 28.866,
+      "speechEnd": 35.625,
+      "end": 35.905,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "3つの主要指数は8月も引き続き上昇を記録し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 35.905,
+      "speechEnd": 41.757,
+      "end": 42.618,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "エネルギー株もその傾向に逆行して堅調となった。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.618,
+      "speechEnd": 47.146,
+      "end": 47.427,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国の3大株価指数はすべて、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.427,
+      "speechEnd": 52.164,
+      "end": 52.784,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "8月の最終取引日に下落した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.784,
+      "speechEnd": 57.174,
+      "end": 57.454,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "S&P 500は0.36 ％、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.454,
+      "speechEnd": 61.286,
+      "end": 61.566,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ナスダックは0.16 ％、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.566,
+      "speechEnd": 65.259,
+      "end": 65.599,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ダウ・ジョーンズ工業平均は"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.599,
+      "speechEnd": 71.382,
+      "end": 72.002,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "0.71 ％下落したとロイターは報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.002,
+      "speechEnd": 80.711,
+      "end": 80.991,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "中東での戦争とホルムズ海峡でのリスクが原油価格を押し上げ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 80.991,
+      "speechEnd": 87.053,
+      "end": 87.393,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "エネルギーコストがインフレ圧力を長引かせるのでは"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 87.393,
+      "speechEnd": 91.713,
+      "end": 92.493,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "ないかという懸念を新たにしている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.493,
+      "speechEnd": 96.534,
+      "end": 96.814,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "1日の下落にもかかわらず、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 96.814,
+      "speechEnd": 103.503,
+      "end": 103.783,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "3つの指数は全体として8月に上昇を記録し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.783,
+      "speechEnd": 107.824,
+      "end": 108.104,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "NACはAI関連の株に支えられ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.104,
+      "speechEnd": 113.051,
+      "end": 113.671,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ダウは5ヶ月連続で上昇しました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 113.671,
+      "speechEnd": 126.77,
+      "end": 127.05,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "連邦準備制度理事会（ FRB ）議長のケビン・ウォーシュ（ Kevin Warsh ）氏のタカ派的なレトリックは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 127.05,
+      "speechEnd": 133.181,
+      "end": 133.461,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "9月の利上げでの価格引き上げにもつながり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 133.461,
+      "speechEnd": 135.691,
+      "end": 135.971,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "長期金利、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 135.971,
+      "speechEnd": 138.34,
+      "end": 138.62,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "エネルギー価格、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 138.62,
+      "speechEnd": 145.518,
+      "end": 146.298,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "テクノロジー株価は再びクロスアセット取引の主力となった。"
+    },
+    {
+      "parentKey": "why",
+      "start": 146.298,
+      "speechEnd": 150.269,
+      "end": 150.889,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 150.889,
+      "speechEnd": 154.582,
+      "end": 154.862,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国株式市場の終了は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 154.862,
+      "speechEnd": 162.457,
+      "end": 163.077,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "アジアの朝市場にとって重要なリスクベンチマークを提供します。"
+    },
+    {
+      "parentKey": "why",
+      "start": 163.077,
+      "speechEnd": 171.159,
+      "end": 171.439,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "原油価格の上昇と金利上昇の予想が同時期に行われると、"
+    },
+    {
+      "parentKey": "why",
+      "start": 171.439,
+      "speechEnd": 175.411,
+      "end": 175.691,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "9月1日のアジア株式、"
+    },
+    {
+      "parentKey": "why",
+      "start": 175.691,
+      "speechEnd": 177.781,
+      "end": 178.061,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米ドル、"
+    },
+    {
+      "parentKey": "why",
+      "start": 178.061,
+      "speechEnd": 182.659,
+      "end": 182.999,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "長期債のパフォーマンスに直接影響を"
+    },
+    {
+      "parentKey": "why",
+      "start": 182.999,
+      "speechEnd": 186.414,
+      "end": 187.274,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "与える可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 187.274,
+      "speechEnd": 189.364,
+      "end": 189.644,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 189.644,
+      "speechEnd": 194.452,
+      "end": 194.732,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アジアの開放後のエネルギー対テック格差、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 194.732,
+      "speechEnd": 198.564,
+      "end": 198.844,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米ドル対国債利回りの動き、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 198.844,
+      "speechEnd": 209.713,
+      "end": 210.573,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "9月の連邦準備制度理事会の利上げオッズの最新の市場価格に注目してください。"
+    }
+  ]
+}
