@@ -1,0 +1,430 @@
+{
+  "version": 3,
+  "duration": 198.504,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 586,
+  "charactersPerMinute": 177.1,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 15.562,
+      "text": "欧州連合（ EU ）加盟国、ロシア外交官ライプツィヒ空港でのドローン事件が欧州とロシアの外交嵐にエスカレート"
+    },
+    {
+      "key": "dek",
+      "start": 15.562,
+      "end": 43.739,
+      "text": "欧州連合（ EU ）、フランス、オランダ、ベルギーはロシア側の代表を召喚した。カラス氏はこの事件を「国家によるテロ支援」と特徴づけ、欧州ではさらなる制裁が検討されていると述べた。"
+    },
+    {
+      "key": "body-0",
+      "start": 43.739,
+      "end": 99.4,
+      "text": "EUの外務省は9月2日にロシアの駐EU大使を召喚し、フランス、オランダ、ベルギーもロシアの外交官を召喚して、8月にライプチヒ/ハレー空港でドローンが爆発したというドイツの主張に対応した。欧州連合（ EU ）の外交・安全保障政策担当上級代表を務めるカラス氏は、この事件は「国家が支援するテロリズム」を特徴としており、欧州は共通の対応策を検討する必要があると述べた。"
+    },
+    {
+      "key": "body-1",
+      "start": 99.4,
+      "end": 143.653,
+      "text": "ドイツはベルリンにあるロシア領事館とロシア文化センターの閉鎖を発表した。ロシアは申し立てを否定し、報復すると述べた。フランスはまた、ロシアの石油輸出を支援した影の艦隊を含むEUレベルでの制裁強化を提案し、この事件を単一の安全保障調査から欧州とロシアの外交および制裁問題にさらに変えた。"
+    },
+    {
+      "key": "why",
+      "start": 143.653,
+      "end": 178.143,
+      "text": "いくつかの国が同時にロシア側の代表を召喚し、この事件がドイツとロシアの二国間レベルを超えていることを示した。これは、新たなEU制裁とより厳格な重要インフラ保護を引き起こす可能性がある。"
+    },
+    {
+      "key": "watch",
+      "start": 178.143,
+      "end": 198.504,
+      "text": "追加のEU制裁リスト、NATO声明、ロシアの対抗措置、およびドイツの調査から公表可能な証拠に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.553,
+      "end": 3.783,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "欧州連合（ EU ）加盟国、"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.783,
+      "speechEnd": 10.123,
+      "end": 10.403,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ロシア外交官ライプツィヒ空港でのドローン事件が"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.403,
+      "speechEnd": 14.862,
+      "end": 15.562,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "欧州とロシアの外交嵐にエスカレート。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.562,
+      "speechEnd": 18.419,
+      "end": 18.649,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "欧州連合（ EU ）、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.649,
+      "speechEnd": 20.739,
+      "end": 20.969,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "フランス、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.969,
+      "speechEnd": 23.059,
+      "end": 23.289,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "オランダ、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.289,
+      "speechEnd": 28.375,
+      "end": 28.875,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "ベルギーはロシア側の代表を召喚した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 28.875,
+      "speechEnd": 36.609,
+      "end": 36.839,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "カラス氏はこの事件を「国家によるテロ支援」と特徴づけ、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 36.839,
+      "speechEnd": 43.039,
+      "end": 43.739,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "欧州ではさらなる制裁が検討されていると述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.739,
+      "speechEnd": 51.612,
+      "end": 51.842,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "EUの外務省は9月2日にロシアの駐EU大使を召喚し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.842,
+      "speechEnd": 53.932,
+      "end": 54.162,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "フランス、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.162,
+      "speechEnd": 56.252,
+      "end": 56.482,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "オランダ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.482,
+      "speechEnd": 61.499,
+      "end": 61.729,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ベルギーもロシアの外交官を召喚して、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.729,
+      "speechEnd": 67.024,
+      "end": 67.304,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "8月にライプチヒ/ハレー空港でドローンが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.304,
+      "speechEnd": 72.32,
+      "end": 72.82,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "爆発したというドイツの主張に対応した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.82,
+      "speechEnd": 83.967,
+      "end": 84.197,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "欧州連合（ EU ）の外交・安全保障政策担当上級代表を務めるカラス氏は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 84.197,
+      "speechEnd": 91.582,
+      "end": 91.812,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この事件は「国家が支援するテロリズム」を特徴としており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 91.812,
+      "speechEnd": 98.779,
+      "end": 99.4,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "欧州は共通の対応策を検討する必要があると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.4,
+      "speechEnd": 108.387,
+      "end": 108.887,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "ドイツはベルリンにあるロシア領事館とロシア文化センターの閉鎖を発表した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.887,
+      "speechEnd": 112.789,
+      "end": 113.019,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロシアは申し立てを否定し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 113.019,
+      "speechEnd": 115.666,
+      "end": 116.166,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "報復すると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 116.166,
+      "speechEnd": 118.535,
+      "end": 118.765,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "フランスはまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.765,
+      "speechEnd": 124.339,
+      "end": 124.619,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ロシアの石油輸出を支援した影の艦隊を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 124.619,
+      "speechEnd": 130.192,
+      "end": 130.422,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "含むEUレベルでの制裁強化を提案し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 130.422,
+      "speechEnd": 143.033,
+      "end": 143.653,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "この事件を単一の安全保障調査から欧州とロシアの外交および制裁問題にさらに変えた。"
+    },
+    {
+      "parentKey": "why",
+      "start": 143.653,
+      "speechEnd": 147.624,
+      "end": 148.124,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 148.124,
+      "speechEnd": 154.743,
+      "end": 154.973,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "いくつかの国が同時にロシア側の代表を召喚し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 154.973,
+      "speechEnd": 161.243,
+      "end": 161.523,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "この事件がドイツとロシアの二国間レベルを"
+    },
+    {
+      "parentKey": "why",
+      "start": 161.523,
+      "speechEnd": 164.728,
+      "end": 165.228,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "超えていることを示した。"
+    },
+    {
+      "parentKey": "why",
+      "start": 165.228,
+      "speechEnd": 167.318,
+      "end": 167.548,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "これは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 167.548,
+      "speechEnd": 173.679,
+      "end": 173.959,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "新たなEU制裁とより厳格な重要インフラ保護を"
+    },
+    {
+      "parentKey": "why",
+      "start": 173.959,
+      "speechEnd": 177.443,
+      "end": 178.143,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "引き起こす可能性がある。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 178.143,
+      "speechEnd": 180.233,
+      "end": 180.463,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 180.463,
+      "speechEnd": 183.668,
+      "end": 183.898,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "追加のEU制裁リスト、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 183.898,
+      "speechEnd": 186.476,
+      "end": 186.706,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "NATO声明、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 186.706,
+      "speechEnd": 189.562,
+      "end": 189.792,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロシアの対抗措置、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 189.792,
+      "speechEnd": 197.804,
+      "end": 198.504,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "およびドイツの調査から公表可能な証拠に注意してください。"
+    }
+  ]
+}

@@ -1,0 +1,450 @@
+{
+  "version": 3,
+  "duration": 194.978,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 579,
+  "charactersPerMinute": 178.2,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 11.938,
+      "text": "RBIは非居住者預金のルピー急増への支援を強化し、外国為替の「火力」を拡大"
+    },
+    {
+      "key": "dek",
+      "start": 11.938,
+      "end": 40.027,
+      "text": "ルピーは原油価格を反転させ、米国財務省の金利圧力は約2か月ぶりの高値に上昇した。銀行界は、中央銀行が毎日ドルを売っていると述べ、FCNRの預金も大幅に増加した。"
+    },
+    {
+      "key": "body-0",
+      "start": 40.027,
+      "end": 84.939,
+      "text": "原油価格の高騰と米国の長期金利の上昇を背景に、インドルピーは9月2日も堅調に推移し、1米ドル当たり95ルピーを上回った。ロイター通信は、投機的な売り圧力を抑制し、為替レートを安定させるために、インド準備銀行が市場開設前と取引時間中に何日も連続して米ドルを売却したと銀行界を引用した。"
+    },
+    {
+      "key": "body-1",
+      "start": 84.939,
+      "end": 140.026,
+      "text": "中央銀行の介入能力を支えるもう1つの要因は、最近の非居住者のインドの外貨預金の急増です。優遇スワップ協定を通じた銀行システムへの資金の流入も、市場の流動性を高めました。インドの外貨準備高は過去最高です。インドはエネルギー輸入に大きく依存しているため、原油価格が1バレル当たり100ドルに近づき続けている場合、ルピーは依然として新たな基本的な圧力に直面するだろう。"
+    },
+    {
+      "key": "why",
+      "start": 140.026,
+      "end": 168.762,
+      "text": "インドはアジアの主要なエネルギー輸入国であり、中央銀行が為替レートを安定させることができるかどうかは、輸入インフレ、金利政策、外国資本の流れに直接影響します。"
+    },
+    {
+      "key": "watch",
+      "start": 168.762,
+      "end": 194.978,
+      "text": "RBIドルの介入、外貨準備、FCNR資金の継続的な流入、原油価格が100ドルを超えた後にルピーが95水準付近に維持できるかどうかに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 6.828,
+      "end": 7.058,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "RBIは非居住者預金のルピー急増への支援を強化し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.058,
+      "speechEnd": 11.238,
+      "end": 11.938,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "外国為替の「火力」を拡大。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 11.938,
+      "speechEnd": 16.885,
+      "end": 17.115,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ルピーは原油価格を反転させ、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.115,
+      "speechEnd": 21.087,
+      "end": 21.227,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "米国財務省の金利圧力は約"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.227,
+      "speechEnd": 23.317,
+      "end": 23.457,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "2か月"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.457,
+      "speechEnd": 26.592,
+      "end": 27.092,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "ぶりの高値に上昇した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.092,
+      "speechEnd": 29.322,
+      "end": 29.552,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "銀行界は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 29.552,
+      "speechEnd": 34.917,
+      "end": 35.147,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中央銀行が毎日ドルを売っていると述べ、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 35.147,
+      "speechEnd": 39.327,
+      "end": 40.027,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "FCNRの預金も大幅に増加した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.027,
+      "speechEnd": 47.831,
+      "end": 48.061,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "原油価格の高騰と米国の長期金利の上昇を背景に、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.061,
+      "speechEnd": 53.913,
+      "end": 54.143,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "インドルピーは9月2日も堅調に推移し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.143,
+      "speechEnd": 59.508,
+      "end": 60.008,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "1米ドル当たり95ルピーを上回った。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.008,
+      "speechEnd": 62.516,
+      "end": 62.746,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.746,
+      "speechEnd": 66.787,
+      "end": 67.017,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "投機的な売り圧力を抑制し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.017,
+      "speechEnd": 71.058,
+      "end": 71.288,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "為替レートを安定させるために、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.288,
+      "speechEnd": 79.858,
+      "end": 80.138,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "インド準備銀行が市場開設前と取引時間中に何日も連続して米ドルを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 80.138,
+      "speechEnd": 84.319,
+      "end": 84.939,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "売却したと銀行界を引用した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.939,
+      "speechEnd": 91.418,
+      "end": 91.648,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中央銀行の介入能力を支えるもう1つの要因は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.648,
+      "speechEnd": 97.71,
+      "end": 98.21,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "最近の非居住者のインドの外貨預金の急増です。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 98.21,
+      "speechEnd": 105.735,
+      "end": 105.965,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "優遇スワップ協定を通じた銀行システムへの資金の流入も、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 105.965,
+      "speechEnd": 110.075,
+      "end": 110.576,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "市場の流動性を高めました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 110.576,
+      "speechEnd": 114.826,
+      "end": 115.326,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "インドの外貨準備高は過去最高です。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.326,
+      "speechEnd": 121.457,
+      "end": 121.687,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "インドはエネルギー輸入に大きく依存しているため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.687,
+      "speechEnd": 125.589,
+      "end": 125.729,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "原油価格が1バレル当たり"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 125.729,
+      "speechEnd": 127.958,
+      "end": 128.098,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "100ドル"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 128.098,
+      "speechEnd": 131.373,
+      "end": 131.603,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "に近づき続けている場合、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 131.603,
+      "speechEnd": 139.406,
+      "end": 140.026,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ルピーは依然として新たな基本的な圧力に直面するだろう。"
+    },
+    {
+      "parentKey": "why",
+      "start": 140.026,
+      "speechEnd": 143.998,
+      "end": 144.498,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 144.498,
+      "speechEnd": 150.35,
+      "end": 150.58,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "インドはアジアの主要なエネルギー輸入国であり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 150.58,
+      "speechEnd": 158.244,
+      "end": 158.474,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中央銀行が為替レートを安定させることができるかどうかは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 158.474,
+      "speechEnd": 160.774,
+      "end": 161.004,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "輸入インフレ、"
+    },
+    {
+      "parentKey": "why",
+      "start": 161.004,
+      "speechEnd": 163.442,
+      "end": 163.672,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "金利政策、"
+    },
+    {
+      "parentKey": "why",
+      "start": 163.672,
+      "speechEnd": 168.062,
+      "end": 168.762,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "外国資本の流れに直接影響します。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 168.762,
+      "speechEnd": 170.852,
+      "end": 171.082,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 171.082,
+      "speechEnd": 173.799,
+      "end": 174.029,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "RBIドルの介入、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 174.029,
+      "speechEnd": 176.119,
+      "end": 176.35,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "外貨準備、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 176.35,
+      "speechEnd": 180.182,
+      "end": 180.412,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "FCNR資金の継続的な流入、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 180.412,
+      "speechEnd": 186.612,
+      "end": 186.893,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "原油価格が100ドルを超えた後にルピーが"
+    },
+    {
+      "parentKey": "watch",
+      "start": 186.893,
+      "speechEnd": 194.278,
+      "end": 194.978,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "95水準付近に維持できるかどうかに注目してください。"
+    }
+  ]
+}
