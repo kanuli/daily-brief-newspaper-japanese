@@ -1,0 +1,400 @@
+{
+  "version": 3,
+  "duration": 204.225,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 672,
+  "charactersPerMinute": 197.4,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 13.395,
+      "text": "Google、Ad Tech Business Splitを回避米国裁判所がAdXの強制販売を否定"
+    },
+    {
+      "key": "dek",
+      "start": 13.395,
+      "end": 37.947,
+      "text": "裁判所は以前、Googleがパブリッシャーの広告サーバーと取引プラットフォームの市場で違法な独占権を持っていると裁定しましたが、今回は資産のスピンオフではなく行動的救済を選択しました。"
+    },
+    {
+      "key": "body-0",
+      "start": 37.947,
+      "end": 89.092,
+      "text": "米国連邦裁判所のレオニー・ブリンケマ判事は9月2日、アルファベットが所有するGoogleにAdX広告取引プラットフォームの販売を依頼するという司法省の提案を却下した。裁判所は以前、Googleがパブリッシャーのアドサーバーとアドエクスチェンジ市場を違法に独占していると裁定していたが、裁判官は強制販売は必要な救済策ではないと裁定し、多くの行動制限に切り替えた。"
+    },
+    {
+      "key": "body-1",
+      "start": 89.092,
+      "end": 143.775,
+      "text": "この判決は、Googleがコア広告技術資産を一時的に保持できることを意味しますが、裁判所の要求に応じていくつかの商業的取り決めを調整する必要があります。米国の規制当局は近年、大手テック企業のプラットフォームを解体して競争を復活させようと何度も試みてきたが、この結果は、大手テック企業に対する他の独占禁止法訴訟がどのように改善されるかにも影響を与えるだろう。"
+    },
+    {
+      "key": "why",
+      "start": 143.775,
+      "end": 176.614,
+      "text": "裁判所は資産分割を拒否し、Googleの短期的な構造的リスクを軽減しましたが、行動制限は依然として広告トランザクションプロセス、競争環境、およびパブリッシャーの収益を変える可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 176.614,
+      "end": 204.225,
+      "text": "裁判所の最終的な救済命令、司法省が異議を申し立てているかどうか、GoogleがAdXとパブリッシャーのアドサーバーの商業的取り決めをどのように調整しているかを確認してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.09,
+      "end": 2.37,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Google、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.37,
+      "speechEnd": 8.641,
+      "end": 8.981,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "Ad Tech Business Splitを回避米国裁判所が"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.981,
+      "speechEnd": 12.534,
+      "end": 13.395,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "AdXの強制販売を否定。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.395,
+      "speechEnd": 15.973,
+      "end": 16.253,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "裁判所は以前、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.253,
+      "speechEnd": 28.933,
+      "end": 29.213,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Googleがパブリッシャーの広告サーバーと取引プラットフォームの市場で違法な独占権を持っていると裁定しましたが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 29.213,
+      "speechEnd": 37.087,
+      "end": 37.947,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "今回は資産のスピンオフではなく行動的救済を選択しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.947,
+      "speechEnd": 46.099,
+      "end": 46.379,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国連邦裁判所のレオニー・ブリンケマ判事は9月2日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.379,
+      "speechEnd": 60.801,
+      "end": 61.422,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "アルファベットが所有するGoogleにAdX広告取引プラットフォームの販売を依頼するという司法省の提案を却下した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.422,
+      "speechEnd": 64.0,
+      "end": 64.28,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "裁判所は以前、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.28,
+      "speechEnd": 70.759,
+      "end": 71.099,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "Googleがパブリッシャーのアドサーバーとアドエクスチェンジ市場を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.099,
+      "speechEnd": 75.907,
+      "end": 76.187,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "違法に独占していると裁定していたが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.187,
+      "speechEnd": 83.851,
+      "end": 84.131,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "裁判官は強制販売は必要な救済策ではないと裁定し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 84.131,
+      "speechEnd": 88.312,
+      "end": 89.092,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "多くの行動制限に切り替えた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 89.092,
+      "speechEnd": 91.461,
+      "end": 91.741,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この判決は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.741,
+      "speechEnd": 101.008,
+      "end": 101.288,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Googleがコア広告技術資産を一時的に保持できることを意味しますが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.288,
+      "speechEnd": 108.255,
+      "end": 108.595,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "裁判所の要求に応じていくつかの商業的取り決めを"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.595,
+      "speechEnd": 111.94,
+      "end": 112.56,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "調整する必要があります。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.56,
+      "speechEnd": 116.601,
+      "end": 116.881,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国の規制当局は近年、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 116.881,
+      "speechEnd": 120.922,
+      "end": 121.262,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "大手テック企業のプラットフォームを"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.262,
+      "speechEnd": 127.672,
+      "end": 127.952,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "解体して競争を復活させようと何度も試みてきたが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 127.952,
+      "speechEnd": 130.251,
+      "end": 130.531,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この結果は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 130.531,
+      "speechEnd": 136.454,
+      "end": 136.794,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "大手テック企業に対する他の独占禁止法訴訟が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 136.794,
+      "speechEnd": 142.995,
+      "end": 143.775,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "どのように改善されるかにも影響を与えるだろう。"
+    },
+    {
+      "parentKey": "why",
+      "start": 143.775,
+      "speechEnd": 147.747,
+      "end": 148.367,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 148.367,
+      "speechEnd": 152.338,
+      "end": 152.618,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "裁判所は資産分割を拒否し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 152.618,
+      "speechEnd": 159.098,
+      "end": 159.378,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Googleの短期的な構造的リスクを軽減しましたが、"
+    },
+    {
+      "parentKey": "why",
+      "start": 159.378,
+      "speechEnd": 166.067,
+      "end": 166.347,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "行動制限は依然として広告トランザクションプロセス、"
+    },
+    {
+      "parentKey": "why",
+      "start": 166.347,
+      "speechEnd": 168.507,
+      "end": 168.787,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "競争環境、"
+    },
+    {
+      "parentKey": "why",
+      "start": 168.787,
+      "speechEnd": 175.754,
+      "end": 176.614,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "およびパブリッシャーの収益を変える可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 176.614,
+      "speechEnd": 178.705,
+      "end": 178.985,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 178.985,
+      "speechEnd": 183.374,
+      "end": 183.654,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "裁判所の最終的な救済命令、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 183.654,
+      "speechEnd": 188.671,
+      "end": 188.951,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "司法省が異議を申し立てているかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 188.951,
+      "speechEnd": 197.312,
+      "end": 197.652,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "GoogleがAdXとパブリッシャーのアドサーバーの商業的取り決めを"
+    },
+    {
+      "parentKey": "watch",
+      "start": 197.652,
+      "speechEnd": 203.365,
+      "end": 204.225,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "どのように調整しているかを確認してください。"
+    }
+  ]
+}

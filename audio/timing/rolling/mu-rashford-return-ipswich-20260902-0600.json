@@ -1,0 +1,410 @@
+{
+  "version": 3,
+  "duration": 199.602,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 667,
+  "charactersPerMinute": 200.5,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 12.009,
+      "text": "ラッシュフォードはアルトフォードに戻り、カヴィンクは彼の帰還を「非常に良い」と呼んだ。"
+    },
+    {
+      "key": "dek",
+      "start": 12.009,
+      "end": 44.14,
+      "text": "マンチェスター・ユナイテッドが5 -2でイェルシニアを破った後、カヴィック監督はチームに戻った後、ラシュフォードのトレーニングと試合姿勢を公に確認した。クラブはまた、彼が今シーズンの最初のホームリーグでプレーしていたことを確認した。"
+    },
+    {
+      "key": "body-0",
+      "start": 44.14,
+      "end": 97.295,
+      "text": "マンチェスター・ユナイテッドはアウトフォードでイェーツウィッチを5 -2で破り、ラッシュフォードはホームリーグで初めてチームに戻った。クラブの公式の試合後のコンテンツは彼の復帰を確認した。一方、カヴィックは試合後の記者会見で、ラシュフォードはトレーニングでファーストチームに復帰して以来「非常に良い」パフォーマンスを発揮していると述べ、選手たちが2度目のチャンスをつかむ必要性を強調した。"
+    },
+    {
+      "key": "body-1",
+      "start": 97.295,
+      "end": 146.48,
+      "text": "ラシュフォードは過去2シーズン、アストン・ヴィラとバルセロナにレンタルされていたが、今夏、バルセロナが発動しなかった買収条項でマンチェスター・ユナイテッドに戻ってきた。彼はこの試合で得点しませんでしたが、彼のポジションと左幅はマンチェスター・ユナイテッドの改善された攻撃構造の一部となりました。スレーブ・フェルナンディス将軍はハットトリックを演じました。"
+    },
+    {
+      "key": "why",
+      "start": 146.48,
+      "end": 174.22,
+      "text": "これは、今シーズンのユナイテッドの攻撃体制における重要な人事変更であり、カジンクが元レンタルされたコアプレーヤーをどのように再統合できるかを直接示しています。"
+    },
+    {
+      "key": "watch",
+      "start": 174.22,
+      "end": 199.602,
+      "text": "エバートンへのラッシュフォードの次の再選の入札と、カヴィックがラッシュフォード、ムビオモ、そして残りのストライカーの間でどのように席を分けるかに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.111,
+      "end": 4.391,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ラッシュフォードはアルトフォードに戻り、"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.391,
+      "speechEnd": 11.149,
+      "end": 12.009,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "カヴィンクは彼の帰還を「非常に良い」と呼んだ。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.009,
+      "speechEnd": 15.353,
+      "end": 15.693,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "マンチェスター・ユナイテッドが"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.693,
+      "speechEnd": 20.291,
+      "end": 20.571,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "5 -2でイェルシニアを破った後、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.571,
+      "speechEnd": 24.612,
+      "end": 24.892,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "カヴィック監督はチームに戻った後、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.892,
+      "speechEnd": 31.511,
+      "end": 32.131,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ラシュフォードのトレーニングと試合姿勢を公に確認した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.131,
+      "speechEnd": 34.43,
+      "end": 34.71,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "クラブはまた、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 34.71,
+      "speechEnd": 43.28,
+      "end": 44.14,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "彼が今シーズンの最初のホームリーグでプレーしていたことを確認した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.14,
+      "speechEnd": 47.414,
+      "end": 47.754,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "マンチェスター・ユナイテッドは"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.754,
+      "speechEnd": 53.746,
+      "end": 54.026,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アウトフォードでイェーツウィッチを5 -2で破り、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.026,
+      "speechEnd": 59.669,
+      "end": 60.29,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ラッシュフォードはホームリーグで初めてチームに戻った。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.29,
+      "speechEnd": 67.953,
+      "end": 68.573,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "クラブの公式の試合後のコンテンツは彼の復帰を確認した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.573,
+      "speechEnd": 70.594,
+      "end": 70.874,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "一方、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.874,
+      "speechEnd": 75.054,
+      "end": 75.334,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "カヴィックは試合後の記者会見で、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.334,
+      "speechEnd": 88.92,
+      "end": 89.2,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ラシュフォードはトレーニングでファーストチームに復帰して以来「非常に良い」パフォーマンスを発揮していると述べ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 89.2,
+      "speechEnd": 96.515,
+      "end": 97.295,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "選手たちが2度目のチャンスをつかむ必要性を強調した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.295,
+      "speechEnd": 101.127,
+      "end": 101.407,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ラシュフォードは過去2シーズン、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.407,
+      "speechEnd": 107.469,
+      "end": 107.749,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アストン・ヴィラとバルセロナにレンタルされていたが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.749,
+      "speechEnd": 109.769,
+      "end": 110.049,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今夏、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 110.049,
+      "speechEnd": 119.246,
+      "end": 119.866,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "バルセロナが発動しなかった買収条項でマンチェスター・ユナイテッドに戻ってきた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 119.866,
+      "speechEnd": 125.3,
+      "end": 125.58,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "彼はこの試合で得点しませんでしたが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 125.58,
+      "speechEnd": 137.285,
+      "end": 137.905,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "彼のポジションと左幅はマンチェスター・ユナイテッドの改善された攻撃構造の一部となりました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 137.905,
+      "speechEnd": 141.946,
+      "end": 142.286,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "スレーブ・フェルナンディス将軍は"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 142.286,
+      "speechEnd": 145.7,
+      "end": 146.48,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "ハットトリックを演じました。"
+    },
+    {
+      "parentKey": "why",
+      "start": 146.48,
+      "speechEnd": 150.451,
+      "end": 151.071,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 151.071,
+      "speechEnd": 153.161,
+      "end": 153.441,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "これは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 153.441,
+      "speechEnd": 162.011,
+      "end": 162.291,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今シーズンのユナイテッドの攻撃体制における重要な人事変更であり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 162.291,
+      "speechEnd": 167.516,
+      "end": 167.856,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "カジンクが元レンタルされたコアプレーヤーを"
+    },
+    {
+      "parentKey": "why",
+      "start": 167.856,
+      "speechEnd": 173.36,
+      "end": 174.22,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "どのように再統合できるかを直接示しています。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 174.22,
+      "speechEnd": 176.31,
+      "end": 176.59,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 176.59,
+      "speechEnd": 182.443,
+      "end": 182.723,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "エバートンへのラッシュフォードの次の再選の入札と、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 182.723,
+      "speechEnd": 185.997,
+      "end": 186.277,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "カヴィックがラッシュフォード、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 186.277,
+      "speechEnd": 188.368,
+      "end": 188.648,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ムビオモ、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 188.648,
+      "speechEnd": 194.848,
+      "end": 195.188,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "そして残りのストライカーの間でどのように席を"
+    },
+    {
+      "parentKey": "watch",
+      "start": 195.188,
+      "speechEnd": 198.742,
+      "end": 199.602,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "分けるかに注目してください。"
+    }
+  ]
+}
