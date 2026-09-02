@@ -1,0 +1,410 @@
+{
+  "version": 3,
+  "duration": 181.995,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 565,
+  "charactersPerMinute": 186.3,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 18.02,
+      "text": "ゼレンスキー氏によると、ウクライナのドローンはロシア領空での利害関係を高めており、航空会社と保険会社に再評価を促しているという。"
+    },
+    {
+      "key": "dek",
+      "start": 18.02,
+      "end": 41.058,
+      "text": "ウクライナ大統領は、最近の長距離ドローン作戦はロシアの民間航空環境をより危険にしていると述べたが、ウクライナ側は民間航空を標的にしていないと強調した。"
+    },
+    {
+      "key": "body-0",
+      "start": 41.058,
+      "end": 90.54,
+      "text": "ウクライナのゼレンスキー大統領は、最新の夕方のスピーチで、ウクライナ軍の長距離ドローン作戦により、多くのロシアの空港と空域が継続的なリスクにさらされており、国際航空会社、保険会社、およびロシアの空港を使用する企業は安全環境を再評価する必要があると述べた。同時に、ウクライナは民間航空機を標的にしていないと強調した。"
+    },
+    {
+      "key": "body-1",
+      "start": 90.54,
+      "end": 135.192,
+      "text": "ウクライナは最近、ロシアのエネルギーと輸送施設に対するドローン作戦を強化しており、いくつかのロシアの空港はアラームのために飛行を一時的に制限している。この前線は、キエフや他の都市へのロシアの空襲と並行してエスカレートし、戦争から国境を越えた航空、保険、物流への波及のリスクを拡大しました。"
+    },
+    {
+      "key": "why",
+      "start": 135.192,
+      "end": 157.175,
+      "text": "航空会社と保険会社がロシアの路線の適用範囲と運航をさらに厳しくすると、戦争の経済的および交通の波及コストが上昇します。"
+    },
+    {
+      "key": "watch",
+      "start": 157.175,
+      "end": 181.995,
+      "text": "さらなる大規模な航空交通規制、保険料の変更、その後のウクライナによるロシアのエネルギーと港湾施設への攻撃については、ロシアの主要空港に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.274,
+      "end": 3.505,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ゼレンスキー氏によると、"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.505,
+      "speechEnd": 11.029,
+      "end": 11.259,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ウクライナのドローンはロシア領空での利害関係を高めており、"
+    },
+    {
+      "parentKey": "title",
+      "start": 11.259,
+      "speechEnd": 17.32,
+      "end": 18.02,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "航空会社と保険会社に再評価を促しているという。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.02,
+      "speechEnd": 20.946,
+      "end": 21.176,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ウクライナ大統領は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.176,
+      "speechEnd": 25.566,
+      "end": 25.846,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "最近の長距離ドローン作戦は"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.846,
+      "speechEnd": 32.882,
+      "end": 33.112,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロシアの民間航空環境をより危険にしていると述べたが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 33.112,
+      "speechEnd": 40.358,
+      "end": 41.058,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "ウクライナ側は民間航空を標的にしていないと強調した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.058,
+      "speechEnd": 45.447,
+      "end": 45.677,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ウクライナのゼレンスキー大統領は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.677,
+      "speechEnd": 49.44,
+      "end": 49.67,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "最新の夕方のスピーチで、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.67,
+      "speechEnd": 55.034,
+      "end": 55.264,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ウクライナ軍の長距離ドローン作戦により、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.264,
+      "speechEnd": 59.166,
+      "end": 59.446,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "多くのロシアの空港と空域が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.446,
+      "speechEnd": 63.417,
+      "end": 63.647,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "継続的なリスクにさらされており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.647,
+      "speechEnd": 66.016,
+      "end": 66.246,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "国際航空会社、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.246,
+      "speechEnd": 68.406,
+      "end": 68.636,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "保険会社、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.636,
+      "speechEnd": 73.931,
+      "end": 74.211,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "およびロシアの空港を使用する企業は"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.211,
+      "speechEnd": 79.854,
+      "end": 80.354,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "安全環境を再評価する必要があると述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 80.354,
+      "speechEnd": 82.514,
+      "end": 82.744,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同時に、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 82.744,
+      "speechEnd": 89.92,
+      "end": 90.54,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ウクライナは民間航空機を標的にしていないと強調した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.54,
+      "speechEnd": 93.327,
+      "end": 93.557,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ウクライナは最近、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.557,
+      "speechEnd": 101.638,
+      "end": 101.868,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロシアのエネルギーと輸送施設に対するドローン作戦を強化しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.868,
+      "speechEnd": 106.815,
+      "end": 107.095,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "いくつかのロシアの空港はアラームのため"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.095,
+      "speechEnd": 111.345,
+      "end": 111.845,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "に飛行を一時的に制限している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.845,
+      "speechEnd": 114.214,
+      "end": 114.444,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この前線は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.444,
+      "speechEnd": 122.247,
+      "end": 122.477,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "キエフや他の都市へのロシアの空襲と並行してエスカレートし、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 122.477,
+      "speechEnd": 126.727,
+      "end": 126.957,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "戦争から国境を越えた航空、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 126.957,
+      "speechEnd": 128.977,
+      "end": 129.207,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "保険、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 129.207,
+      "speechEnd": 134.572,
+      "end": 135.192,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "物流への波及のリスクを拡大しました。"
+    },
+    {
+      "parentKey": "why",
+      "start": 135.192,
+      "speechEnd": 139.163,
+      "end": 139.663,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 139.663,
+      "speechEnd": 148.651,
+      "end": 148.881,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "航空会社と保険会社がロシアの路線の適用範囲と運航をさらに厳しくすると、"
+    },
+    {
+      "parentKey": "why",
+      "start": 148.881,
+      "speechEnd": 156.475,
+      "end": 157.175,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "戦争の経済的および交通の波及コストが上昇します。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 157.175,
+      "speechEnd": 159.265,
+      "end": 159.495,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 159.495,
+      "speechEnd": 163.954,
+      "end": 164.184,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "さらなる大規模な航空交通規制、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 164.184,
+      "speechEnd": 166.831,
+      "end": 167.061,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "保険料の変更、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 167.061,
+      "speechEnd": 176.188,
+      "end": 176.418,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "その後のウクライナによるロシアのエネルギーと港湾施設への攻撃については、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 176.418,
+      "speechEnd": 181.295,
+      "end": 181.995,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "ロシアの主要空港に注目してください。"
+    }
+  ]
+}

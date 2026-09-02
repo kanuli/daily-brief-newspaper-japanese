@@ -1,0 +1,370 @@
+{
+  "version": 3,
+  "duration": 191.347,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 587,
+  "charactersPerMinute": 184.1,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 17.933,
+      "text": "ゼレンスキー大統領は、ウクライナの無人機がロシア領空でのリスクを高めていると述べ、航空会社や保険会社に再評価を求めた"
+    },
+    {
+      "key": "dek",
+      "start": 17.933,
+      "end": 41.501,
+      "text": "ウクライナ大統領は、最近の長距離ドローン運用によりロシアの民間航空環境はより危険になったと述べたが、ウクライナは民間航空を標的にしていないことを強調した。"
+    },
+    {
+      "key": "body-0",
+      "start": 41.501,
+      "end": 92.838,
+      "text": "ウクライナのゼレンスキー大統領は最近の夕方の演説で、ウクライナ軍の長距離無人機作戦によりロシア国内の多くの場所の空港や空域が継続的な危険にさらされていると述べた。国際航空会社、保険会社、ロシアの空港を利用する企業は安全保障環境を再評価する必要がある。同氏はまた、ウクライナは民間航空機を標的にしていないことを強調した。"
+    },
+    {
+      "key": "body-1",
+      "start": 92.838,
+      "end": 139.394,
+      "text": "ウクライナは最近、ロシアのエネルギー施設や輸送施設に対するドローン作戦を強化しており、ロシアの多くの空港は警報のため一時的に飛行を制限している。この前線は、ここ数日のキエフやその他の都市に対するロシアの空爆の激化と一致しており、国境を越えた航空、保険、物流への戦争の波及リスクが高まっている。"
+    },
+    {
+      "key": "why",
+      "start": 139.394,
+      "end": 161.638,
+      "text": "航空会社や保険会社がロシア路線の引き受けや運航をさらに厳格化すれば、戦争による経済波及コストと輸送コストが増大するだろう。"
+    },
+    {
+      "key": "watch",
+      "start": 161.638,
+      "end": 191.347,
+      "text": "ロシアの主要空港でさらなる大規模な航空交通規制が行われるか、保険料率の変更、そしてその後のウクライナによるロシアのエネルギー施設や港湾施設への攻撃が行われるかどうかに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.344,
+      "end": 3.624,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ゼレンスキー大統領は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.624,
+      "speechEnd": 11.497,
+      "end": 11.777,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ウクライナの無人機がロシア領空でのリスクを高めていると述べ、"
+    },
+    {
+      "parentKey": "title",
+      "start": 11.777,
+      "speechEnd": 17.073,
+      "end": 17.933,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "航空会社や保険会社に再評価を求めた。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.933,
+      "speechEnd": 20.859,
+      "end": 21.139,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ウクライナ大統領は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.139,
+      "speechEnd": 28.942,
+      "end": 29.282,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "最近の長距離ドローン運用によりロシアの民間航空環境は"
+    },
+    {
+      "parentKey": "dek",
+      "start": 29.282,
+      "speechEnd": 32.975,
+      "end": 33.255,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "より危険になったと述べたが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 33.255,
+      "speechEnd": 40.64,
+      "end": 41.501,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ウクライナは民間航空を標的にしていないことを強調した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.501,
+      "speechEnd": 49.095,
+      "end": 49.375,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ウクライナのゼレンスキー大統領は最近の夕方の演説で、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.375,
+      "speechEnd": 54.74,
+      "end": 55.08,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ウクライナ軍の長距離無人機作戦により"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.08,
+      "speechEnd": 65.67,
+      "end": 66.29,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ロシア国内の多くの場所の空港や空域が継続的な危険にさらされていると述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.29,
+      "speechEnd": 68.659,
+      "end": 68.939,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "国際航空会社、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.939,
+      "speechEnd": 71.099,
+      "end": 71.379,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "保険会社、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.379,
+      "speechEnd": 75.49,
+      "end": 75.83,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ロシアの空港を利用する企業は"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.83,
+      "speechEnd": 81.194,
+      "end": 81.815,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "安全保障環境を再評価する必要がある。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 81.815,
+      "speechEnd": 84.114,
+      "end": 84.394,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同氏はまた、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 84.394,
+      "speechEnd": 92.058,
+      "end": 92.838,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "ウクライナは民間航空機を標的にしていないことを強調した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.838,
+      "speechEnd": 95.625,
+      "end": 95.905,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ウクライナは最近、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 95.905,
+      "speechEnd": 104.753,
+      "end": 105.033,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロシアのエネルギー施設や輸送施設に対するドローン作戦を強化しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 105.033,
+      "speechEnd": 113.185,
+      "end": 113.805,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ロシアの多くの空港は警報のため一時的に飛行を制限している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 113.805,
+      "speechEnd": 116.174,
+      "end": 116.454,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この前線は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 116.454,
+      "speechEnd": 126.905,
+      "end": 127.185,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ここ数日のキエフやその他の都市に対するロシアの空爆の激化と一致しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 127.185,
+      "speechEnd": 130.39,
+      "end": 130.67,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "国境を越えた航空、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 130.67,
+      "speechEnd": 132.691,
+      "end": 132.971,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "保険、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 132.971,
+      "speechEnd": 138.614,
+      "end": 139.394,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "物流への戦争の波及リスクが高まっている。"
+    },
+    {
+      "parentKey": "why",
+      "start": 139.394,
+      "speechEnd": 143.366,
+      "end": 143.986,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 143.986,
+      "speechEnd": 153.182,
+      "end": 153.462,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "航空会社や保険会社がロシア路線の引き受けや運航をさらに厳格化すれば、"
+    },
+    {
+      "parentKey": "why",
+      "start": 153.462,
+      "speechEnd": 160.778,
+      "end": 161.638,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "戦争による経済波及コストと輸送コストが増大するだろう。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 161.638,
+      "speechEnd": 163.728,
+      "end": 164.008,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 164.008,
+      "speechEnd": 172.648,
+      "end": 172.928,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロシアの主要空港でさらなる大規模な航空交通規制が行われるか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 172.928,
+      "speechEnd": 175.854,
+      "end": 176.134,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "保険料率の変更、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 176.134,
+      "speechEnd": 190.487,
+      "end": 191.347,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "そしてその後のウクライナによるロシアのエネルギー施設や港湾施設への攻撃が行われるかどうかに注目してください。"
+    }
+  ]
+}
