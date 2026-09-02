@@ -1,0 +1,420 @@
+{
+  "version": 3,
+  "duration": 188.63,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 531,
+  "charactersPerMinute": 168.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 16.77,
+      "text": "サドルは今朝、台風1号を維持し、金曜日に台風3号を再評価するために南シナ海の北東をさまよった"
+    },
+    {
+      "key": "dek",
+      "start": 16.77,
+      "end": 40.568,
+      "text": "観測所は、金曜日に珠江河口に近い可能性のある広東省の東海岸に広がるシェーダーの徐々に西に向かうことを指しています。強度にはまだ大きな変化があります。"
+    },
+    {
+      "key": "body-0",
+      "start": 40.568,
+      "end": 83.462,
+      "text": "9月3日の早朝に香港天文台によって更新された熱帯低気圧「サドル」は、今朝、南シナ海の北東部で徐々に西に曲がり、広東省の東海岸を横切っています。サドルと北東モンスーンの影響を受けて、香港の沖合や高地間で強風が吹いており、今朝は1号警報信号が維持されます。"
+    },
+    {
+      "key": "body-1",
+      "start": 83.462,
+      "end": 137.458,
+      "text": "天文台は、シェーダーが金曜日に再び珠江河口に近づく可能性があると予想していますが、その時点で強度にかなりのばらつきがあるため、実際の経路、強度、および地域の風の状況に応じて3号強風信号を再発行するかどうかを評価します。このアップデートでは、以前の「低確率3」評価よりも珠江河口に近い追加のバックエンド経路リスクが追加されます。"
+    },
+    {
+      "key": "why",
+      "start": 137.458,
+      "end": 164.593,
+      "text": "台風アセスメントから新しいバックエンド経路のリスクが浮上し、金曜日の輸送、屋外活動、オフショア事業、および事業運営の取り決めに影響を与えます。"
+    },
+    {
+      "key": "watch",
+      "start": 164.593,
+      "end": 188.63,
+      "text": "日中の天文台の最新の位置と強度の予測、金曜日の珠江河口までの距離、そして3号強風信号の評価が上がったかどうかに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.578,
+      "end": 2.808,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "サドルは今朝、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.808,
+      "speechEnd": 6.083,
+      "end": 6.313,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "台風1号を維持し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.313,
+      "speechEnd": 11.469,
+      "end": 11.749,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "金曜日に台風3号を再評価するため"
+    },
+    {
+      "parentKey": "title",
+      "start": 11.749,
+      "speechEnd": 16.07,
+      "end": 16.77,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "に南シナ海の北東をさまよった。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.77,
+      "speechEnd": 18.93,
+      "end": 19.16,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "観測所は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.16,
+      "speechEnd": 28.009,
+      "end": 28.289,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "金曜日に珠江河口に近い可能性のある広東省の東海岸に広が"
+    },
+    {
+      "parentKey": "dek",
+      "start": 28.289,
+      "speechEnd": 34.7,
+      "end": 35.2,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "るシェーダーの徐々に西に向かうことを指しています。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 35.2,
+      "speechEnd": 39.868,
+      "end": 40.568,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "強度にはまだ大きな変化があります。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.568,
+      "speechEnd": 52.135,
+      "end": 52.365,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "9月3日の早朝に香港天文台によって更新された熱帯低気圧「サドル」は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.365,
+      "speechEnd": 54.455,
+      "end": 54.685,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今朝、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.685,
+      "speechEnd": 60.26,
+      "end": 60.49,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "南シナ海の北東部で徐々に西に曲がり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.49,
+      "speechEnd": 65.158,
+      "end": 65.658,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "広東省の東海岸を横切っています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.658,
+      "speechEnd": 70.606,
+      "end": 70.836,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "サドルと北東モンスーンの影響を受けて、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.836,
+      "speechEnd": 77.595,
+      "end": 77.825,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "香港の沖合や高地間で強風が吹いており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 77.825,
+      "speechEnd": 82.841,
+      "end": 83.462,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "今朝は1号警報信号が維持されます。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 83.462,
+      "speechEnd": 85.761,
+      "end": 85.991,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "天文台は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 85.991,
+      "speechEnd": 93.377,
+      "end": 93.657,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "シェーダーが金曜日に再び珠江河口に近づく可能性が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.657,
+      "speechEnd": 97.28,
+      "end": 97.51,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "あると予想していますが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.51,
+      "speechEnd": 103.712,
+      "end": 103.942,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "その時点で強度にかなりのばらつきがあるため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.942,
+      "speechEnd": 106.311,
+      "end": 106.541,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "実際の経路、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 106.541,
+      "speechEnd": 108.562,
+      "end": 108.792,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "強度、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.792,
+      "speechEnd": 116.108,
+      "end": 116.388,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "および地域の風の状況に応じて3号強風信号を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 116.388,
+      "speechEnd": 120.569,
+      "end": 121.069,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "再発行するかどうかを評価します。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.069,
+      "speechEnd": 124.065,
+      "end": 124.295,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "このアップデートでは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 124.295,
+      "speechEnd": 136.837,
+      "end": 137.458,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "以前の「低確率3」評価よりも珠江河口に近い追加のバックエンド経路リスクが追加されます。"
+    },
+    {
+      "parentKey": "why",
+      "start": 137.458,
+      "speechEnd": 141.429,
+      "end": 141.929,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 141.929,
+      "speechEnd": 149.385,
+      "end": 149.615,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "台風アセスメントから新しいバックエンド経路のリスクが浮上し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 149.615,
+      "speechEnd": 152.124,
+      "end": 152.354,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "金曜日の輸送、"
+    },
+    {
+      "parentKey": "why",
+      "start": 152.354,
+      "speechEnd": 154.514,
+      "end": 154.744,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "屋外活動、"
+    },
+    {
+      "parentKey": "why",
+      "start": 154.744,
+      "speechEnd": 157.183,
+      "end": 157.413,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "オフショア事業、"
+    },
+    {
+      "parentKey": "why",
+      "start": 157.413,
+      "speechEnd": 163.893,
+      "end": 164.593,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "および事業運営の取り決めに影響を与えます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 164.593,
+      "speechEnd": 166.683,
+      "end": 166.913,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 166.913,
+      "speechEnd": 173.811,
+      "end": 174.042,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日中の天文台の最新の位置と強度の予測、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 174.042,
+      "speechEnd": 178.571,
+      "end": 178.801,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "金曜日の珠江河口までの距離、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 178.801,
+      "speechEnd": 182.912,
+      "end": 183.192,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "そして3号強風信号の評価が"
+    },
+    {
+      "parentKey": "watch",
+      "start": 183.192,
+      "speechEnd": 187.93,
+      "end": 188.63,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "上がったかどうかに注意してください。"
+    }
+  ]
+}
