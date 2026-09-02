@@ -1,0 +1,390 @@
+{
+  "version": 3,
+  "duration": 178.077,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 535,
+  "charactersPerMinute": 180.3,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.439,
+      "text": "EUはロシア人個人に追加制裁を課す準備をしている。ドイツは今後数週間以内にリストに追加すると発表"
+    },
+    {
+      "key": "dek",
+      "start": 14.439,
+      "end": 39.812,
+      "text": "ドイツ外相は、EUは引き続きロシアに圧力をかけると述べた。この措置発表の前夜、ベルリンはライプツィヒ空港での無人機攻撃未遂へのロシアの関与を​​非難したばかりだった。"
+    },
+    {
+      "key": "body-0",
+      "start": 39.812,
+      "end": 83.353,
+      "text": "ドイツのヨハン・ヴァーデプル外相は9月2日にアイルランドで開かれたEU会議で、EUはロシアに対して広範な制裁を課しているが、今後数週間でさらに多くのロシア人を制裁リストに追加する検討を続けると述べた。同氏は、EUはモスクワへの圧力を強めると同時に、ウクライナへの支持を維持していると述べた。"
+    },
+    {
+      "key": "body-1",
+      "start": 83.353,
+      "end": 126.139,
+      "text": "この関連声明は、ドイツ政府が8月にライプツィヒ・ハレ空港での無人機攻撃未遂にロシアが関与したと非難した直後に発表された。ドイツは外交的対抗措置を発表し、ロシアは関連する非難を否定した。新たな制裁が実施された場合、上場個人、資産凍結、渡航制限が焦点となる。"
+    },
+    {
+      "key": "why",
+      "start": 126.139,
+      "end": 155.822,
+      "text": "新たな制裁は欧州とロシアの間の外交・金融摩擦を拡大する可能性があるほか、国内の治安事件と対ロシア政策とのより直接的な関係を反映するEUの姿勢も反映している。"
+    },
+    {
+      "key": "watch",
+      "start": 155.822,
+      "end": 178.077,
+      "text": "EUの公式制裁リスト、ドイツの調査で得られた証拠、ロシアの対抗措置、他の加盟国が追加措置を追加するかどうかに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 6.41,
+      "end": 7.03,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "EUはロシア人個人に追加制裁を課す準備をしている。"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.03,
+      "speechEnd": 13.579,
+      "end": 14.439,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ドイツは今後数週間以内にリストに追加すると発表。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.439,
+      "speechEnd": 16.948,
+      "end": 17.228,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ドイツ外相は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.228,
+      "speechEnd": 22.453,
+      "end": 23.073,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "EUは引き続きロシアに圧力をかけると述べた。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.073,
+      "speechEnd": 26.696,
+      "end": 26.976,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この措置発表の前夜、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.976,
+      "speechEnd": 35.128,
+      "end": 35.468,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ベルリンはライプツィヒ空港での無人機攻撃未遂へのロシアの関与を"
+    },
+    {
+      "parentKey": "dek",
+      "start": 35.468,
+      "speechEnd": 38.952,
+      "end": 39.812,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "​​非難したばかりだった。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.812,
+      "speechEnd": 44.062,
+      "end": 44.402,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ドイツのヨハン・ヴァーデプル外相は"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.402,
+      "speechEnd": 50.812,
+      "end": 51.092,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "9月2日にアイルランドで開かれたEU会議で、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.092,
+      "speechEnd": 57.084,
+      "end": 57.364,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "EUはロシアに対して広範な制裁を課しているが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.364,
+      "speechEnd": 62.659,
+      "end": 62.999,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "今後数週間でさらに多くのロシア人を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.999,
+      "speechEnd": 68.294,
+      "end": 68.914,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "制裁リストに追加する検討を続けると述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.914,
+      "speechEnd": 71.074,
+      "end": 71.354,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同氏は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.354,
+      "speechEnd": 77.067,
+      "end": 77.348,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "EUはモスクワへの圧力を強めると同時に、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 77.348,
+      "speechEnd": 82.573,
+      "end": 83.353,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "ウクライナへの支持を維持していると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 83.353,
+      "speechEnd": 86.279,
+      "end": 86.559,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この関連声明は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 86.559,
+      "speechEnd": 101.678,
+      "end": 102.299,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ドイツ政府が8月にライプツィヒ・ハレ空港での無人機攻撃未遂にロシアが関与したと非難した直後に発表された。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.299,
+      "speechEnd": 107.245,
+      "end": 107.525,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ドイツは外交的対抗措置を発表し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.525,
+      "speechEnd": 112.054,
+      "end": 112.674,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ロシアは関連する非難を否定した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.674,
+      "speechEnd": 116.994,
+      "end": 117.274,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "新たな制裁が実施された場合、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.274,
+      "speechEnd": 119.504,
+      "end": 119.784,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "上場個人、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 119.784,
+      "speechEnd": 121.874,
+      "end": 122.154,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "資産凍結、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 122.154,
+      "speechEnd": 125.359,
+      "end": 126.139,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "渡航制限が焦点となる。"
+    },
+    {
+      "parentKey": "why",
+      "start": 126.139,
+      "speechEnd": 130.11,
+      "end": 130.73,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 130.73,
+      "speechEnd": 137.907,
+      "end": 138.247,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "新たな制裁は欧州とロシアの間の外交・金融摩擦を"
+    },
+    {
+      "parentKey": "why",
+      "start": 138.247,
+      "speechEnd": 142.009,
+      "end": 142.289,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "拡大する可能性があるほか、"
+    },
+    {
+      "parentKey": "why",
+      "start": 142.289,
+      "speechEnd": 150.162,
+      "end": 150.502,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "国内の治安事件と対ロシア政策とのより直接的な関係を"
+    },
+    {
+      "parentKey": "why",
+      "start": 150.502,
+      "speechEnd": 154.961,
+      "end": 155.822,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "反映するEUの姿勢も反映している。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 155.822,
+      "speechEnd": 157.912,
+      "end": 158.192,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 158.192,
+      "speechEnd": 161.466,
+      "end": 161.746,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "EUの公式制裁リスト、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 161.746,
+      "speechEnd": 165.787,
+      "end": 166.068,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ドイツの調査で得られた証拠、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 166.068,
+      "speechEnd": 168.924,
+      "end": 169.204,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロシアの対抗措置、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 169.204,
+      "speechEnd": 177.217,
+      "end": 178.077,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "他の加盟国が追加措置を追加するかどうかに注目してください。"
+    }
+  ]
+}

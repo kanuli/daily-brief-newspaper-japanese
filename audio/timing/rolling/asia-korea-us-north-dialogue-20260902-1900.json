@@ -1,0 +1,370 @@
+{
+  "version": 3,
+  "duration": 180.14,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 493,
+  "charactersPerMinute": 164.2,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 19.526,
+      "text": "李在明氏は米朝対話再開に向けた条件づくりを訴えた。韓国は再び半島に休戦協定から平和の枠組みへの移行を求めている。"
+    },
+    {
+      "key": "dek",
+      "start": 19.526,
+      "end": 39.618,
+      "text": "韓国大統領は、韓国には平和と協力を推進する責任があると述べ、任期中に戦時作戦指揮権の移管を推進すると改めて表明した。"
+    },
+    {
+      "key": "body-0",
+      "start": 39.618,
+      "end": 83.668,
+      "text": "韓国の李在明大統領は9月2日の朝鮮半島平和会議で、韓国は米国と北朝鮮が対話を再開し、朝鮮半島を対立休戦から平和、協力、共同繁栄へと促進するための条件づくりを支援すべきだと述べた。同政権は常に北朝鮮との連絡経路を維持することを主張してきた。"
+    },
+    {
+      "key": "body-1",
+      "start": 83.668,
+      "end": 133.619,
+      "text": "しかし、北朝鮮は依然として韓国を敵対国に指定しており、両国間の主要な連絡ルートは回復していない。李在明氏はまた、2030年の任期満了までに米国から韓国への戦時作戦指揮権の移管を完了したいとの希望を改めて表明し、李在明氏の半島政策には外交接触と自主防衛の強化の両方が含まれていることを示した。"
+    },
+    {
+      "key": "why",
+      "start": 133.619,
+      "end": 158.862,
+      "text": "韓国が米朝間の再交渉を推進できるかどうかは、北東アジアでの軍事配備、核リスク、米韓同盟の取り決めに直接影響を与えるだろう。"
+    },
+    {
+      "key": "watch",
+      "start": 158.862,
+      "end": 180.14,
+      "text": "北朝鮮が応じるかどうか、米国が正式接触を提案するかどうか、韓米軍事演習の取り決めや作戦指揮権の移管交渉に注目が集まる。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 8.361,
+      "end": 8.981,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "李在明氏は米朝対話再開に向けた条件づくりを訴えた。"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.981,
+      "speechEnd": 18.665,
+      "end": 19.526,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "韓国は再び半島に休戦協定から平和の枠組みへの移行を求めている。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.526,
+      "speechEnd": 22.243,
+      "end": 22.523,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "韓国大統領は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.523,
+      "speechEnd": 29.908,
+      "end": 30.188,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "韓国には平和と協力を推進する責任があると述べ、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 30.188,
+      "speechEnd": 38.758,
+      "end": 39.618,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "任期中に戦時作戦指揮権の移管を推進すると改めて表明した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.618,
+      "speechEnd": 43.381,
+      "end": 43.561,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "韓国の李在明大統領は"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.561,
+      "speechEnd": 45.93,
+      "end": 46.11,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "9月2日"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.11,
+      "speechEnd": 50.011,
+      "end": 50.291,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "の朝鮮半島平和会議で、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.291,
+      "speechEnd": 56.074,
+      "end": 56.354,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "韓国は米国と北朝鮮が対話を再開し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.354,
+      "speechEnd": 61.092,
+      "end": 61.372,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "朝鮮半島を対立休戦から平和、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.372,
+      "speechEnd": 63.393,
+      "end": 63.673,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "協力、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.673,
+      "speechEnd": 69.595,
+      "end": 69.935,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "共同繁栄へと促進するための条件づくりを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.935,
+      "speechEnd": 73.07,
+      "end": 73.691,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "支援すべきだと述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.691,
+      "speechEnd": 82.887,
+      "end": 83.668,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "同政権は常に北朝鮮との連絡経路を維持することを主張してきた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 83.668,
+      "speechEnd": 85.688,
+      "end": 85.968,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "しかし、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 85.968,
+      "speechEnd": 93.144,
+      "end": 93.425,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "北朝鮮は依然として韓国を敵対国に指定しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.425,
+      "speechEnd": 99.347,
+      "end": 99.967,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "両国間の主要な連絡ルートは回復していない。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.967,
+      "speechEnd": 102.823,
+      "end": 103.104,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "李在明氏はまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.104,
+      "speechEnd": 113.485,
+      "end": 113.825,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "2030年の任期満了までに米国から韓国への戦時作戦指揮権の移管を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 113.825,
+      "speechEnd": 119.677,
+      "end": 119.958,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "完了したいとの希望を改めて表明し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 119.958,
+      "speechEnd": 129.154,
+      "end": 129.494,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "李在明氏の半島政策には外交接触と自主防衛の強化の両方が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 129.494,
+      "speechEnd": 132.839,
+      "end": 133.619,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "含まれていることを示した。"
+    },
+    {
+      "parentKey": "why",
+      "start": 133.619,
+      "speechEnd": 137.59,
+      "end": 138.21,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 138.21,
+      "speechEnd": 145.038,
+      "end": 145.318,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "韓国が米朝間の再交渉を推進できるかどうかは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 145.318,
+      "speechEnd": 149.081,
+      "end": 149.361,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "北東アジアでの軍事配備、"
+    },
+    {
+      "parentKey": "why",
+      "start": 149.361,
+      "speechEnd": 151.381,
+      "end": 151.661,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "核リスク、"
+    },
+    {
+      "parentKey": "why",
+      "start": 151.661,
+      "speechEnd": 158.002,
+      "end": 158.862,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "米韓同盟の取り決めに直接影響を与えるだろう。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 158.862,
+      "speechEnd": 160.952,
+      "end": 161.232,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 161.232,
+      "speechEnd": 164.855,
+      "end": 165.135,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "北朝鮮が応じるかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 165.135,
+      "speechEnd": 170.221,
+      "end": 170.501,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国が正式接触を提案するかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 170.501,
+      "speechEnd": 179.28,
+      "end": 180.14,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "韓米軍事演習の取り決めや作戦指揮権の移管交渉に注目が集まる。"
+    }
+  ]
+}

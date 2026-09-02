@@ -1,0 +1,410 @@
+{
+  "version": 3,
+  "duration": 194.351,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 593,
+  "charactersPerMinute": 183.1,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 21.298,
+      "text": "干ばつの影響を受けたハンガリー、ルーマニアのトウモロコシ生産は、EU 2026年の生産量が約20年ぶりの低水準に低下すると予想されています"
+    },
+    {
+      "key": "dek",
+      "start": 21.298,
+      "end": 48.976,
+      "text": "高温と持続的な干ばつにより、中欧と東欧の伝統的な納屋は輸出の利点を奪われ、農家はヒマワリなどの干ばつ耐性の高い作物に切り替え、EUの輸入は依存しているか、さらに増加しています。"
+    },
+    {
+      "key": "body-0",
+      "start": 48.976,
+      "end": 106.304,
+      "text": "ロイターは9月2日、ハンガリーとルーマニアが近年繰り返し熱波と干ばつに見舞われており、トウモロコシの生産量は引き続き減少していると報じた。欧州委員会は現在、EU全体のトウモロコシ生産量が2026年に約5010万トンに達すると予想しており、20年ぶりの低水準に近づき、過去3年間の平均を約20 ％下回っています。ハンガリーは従来の純輸出国から徐々に輸入国に移行しています。"
+    },
+    {
+      "key": "body-1",
+      "start": 106.304,
+      "end": 154.233,
+      "text": "農家はトウモロコシを削減し、ヒマワリやその他の水使用量の少ない作物に切り替えていますが、灌漑も水不足のために制限されています。中東欧の土壌水分が持続的に低下している場合、ヨーロッパの飼料、食品、バイオ燃料のサプライチェーンは海外の供給源により依存する必要があり、気候リスクが食料価格にさらに伝播する可能性があります。"
+    },
+    {
+      "key": "why",
+      "start": 154.233,
+      "end": 175.103,
+      "text": "これは単なる1シーズンの農業問題ではなく、ヨーロッパの農業構造と輸入依存の極端な気候変動の本当の兆候です。"
+    },
+    {
+      "key": "watch",
+      "start": 175.103,
+      "end": 194.351,
+      "text": "秋の降雨量、EUの最終収穫データ、トウモロコシの輸入量、次のシーズンの農家の作付面積に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.18,
+      "end": 4.411,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "干ばつの影響を受けたハンガリー、"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.411,
+      "speechEnd": 8.591,
+      "end": 8.821,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ルーマニアのトウモロコシ生産は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.821,
+      "speechEnd": 13.211,
+      "end": 13.491,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "EU 2026年の生産量が"
+    },
+    {
+      "parentKey": "title",
+      "start": 13.491,
+      "speechEnd": 20.597,
+      "end": 21.298,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "約20年ぶりの低水準に低下すると予想されています。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.298,
+      "speechEnd": 25.757,
+      "end": 25.987,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "高温と持続的な干ばつにより、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.987,
+      "speechEnd": 33.024,
+      "end": 33.254,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中欧と東欧の伝統的な納屋は輸出の利点を奪われ、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 33.254,
+      "speechEnd": 41.058,
+      "end": 41.288,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "農家はヒマワリなどの干ばつ耐性の高い作物に切り替え、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 41.288,
+      "speechEnd": 45.05,
+      "end": 45.28,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "EUの輸入は依存しているか、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 45.28,
+      "speechEnd": 48.276,
+      "end": 48.976,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "さらに増加しています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.976,
+      "speechEnd": 52.46,
+      "end": 52.69,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイターは9月2日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.69,
+      "speechEnd": 61.608,
+      "end": 61.839,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ハンガリーとルーマニアが近年繰り返し熱波と干ばつに見舞われており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.839,
+      "speechEnd": 68.527,
+      "end": 69.027,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "トウモロコシの生産量は引き続き減少していると報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.027,
+      "speechEnd": 72.302,
+      "end": 72.532,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "欧州委員会は現在、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.532,
+      "speechEnd": 76.852,
+      "end": 77.132,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "EU全体のトウモロコシ生産量が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 77.132,
+      "speechEnd": 85.214,
+      "end": 85.444,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "2026年に約5010万トンに達すると予想しており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 85.444,
+      "speechEnd": 89.834,
+      "end": 90.064,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "20年ぶりの低水準に近づき、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 90.064,
+      "speechEnd": 96.962,
+      "end": 97.462,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "過去3年間の平均を約20 ％下回っています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 97.462,
+      "speechEnd": 105.683,
+      "end": 106.304,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ハンガリーは従来の純輸出国から徐々に輸入国に移行しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 106.304,
+      "speechEnd": 110.345,
+      "end": 110.575,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "農家はトウモロコシを削減し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 110.575,
+      "speechEnd": 119.075,
+      "end": 119.305,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ヒマワリやその他の水使用量の少ない作物に切り替えていますが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 119.305,
+      "speechEnd": 124.67,
+      "end": 125.17,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "灌漑も水不足のために制限されています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 125.17,
+      "speechEnd": 131.929,
+      "end": 132.159,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中東欧の土壌水分が持続的に低下している場合、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 132.159,
+      "speechEnd": 134.806,
+      "end": 135.036,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ヨーロッパの飼料、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 135.036,
+      "speechEnd": 137.057,
+      "end": 137.287,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "食品、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 137.287,
+      "speechEnd": 140.701,
+      "end": 140.981,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "バイオ燃料のサプライチェーンは"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 140.981,
+      "speechEnd": 146.346,
+      "end": 146.576,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "海外の供給源により依存する必要があり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 146.576,
+      "speechEnd": 153.613,
+      "end": 154.233,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "気候リスクが食料価格にさらに伝播する可能性があります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 154.233,
+      "speechEnd": 158.205,
+      "end": 158.705,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 158.705,
+      "speechEnd": 164.697,
+      "end": 164.927,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "これは単なる1シーズンの農業問題ではなく、"
+    },
+    {
+      "parentKey": "why",
+      "start": 164.927,
+      "speechEnd": 174.403,
+      "end": 175.103,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "ヨーロッパの農業構造と輸入依存の極端な気候変動の本当の兆候です。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 175.103,
+      "speechEnd": 177.193,
+      "end": 177.423,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 177.423,
+      "speechEnd": 179.932,
+      "end": 180.162,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "秋の降雨量、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 180.162,
+      "speechEnd": 183.227,
+      "end": 183.457,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "EUの最終収穫データ、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 183.457,
+      "speechEnd": 186.593,
+      "end": 186.823,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "トウモロコシの輸入量、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 186.823,
+      "speechEnd": 193.651,
+      "end": 194.351,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "次のシーズンの農家の作付面積に注意してください。"
+    }
+  ]
+}
