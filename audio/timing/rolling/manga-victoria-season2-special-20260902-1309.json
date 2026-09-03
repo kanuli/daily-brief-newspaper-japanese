@@ -1,0 +1,350 @@
+{
+  "version": 3,
+  "duration": 151.327,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 444,
+  "charactersPerMinute": 176.0,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 12.148,
+      "text": "《手札が多めのビクトリア》宣布製作第2季及新作特別篇 9月8日先播總集篇"
+    },
+    {
+      "key": "dek",
+      "start": 12.148,
+      "end": 35.02,
+      "text": "9月1日深夜に第1シーズンが放送された後、公式は第2シーズンと新たな特別エピソードが制作中であることを認め、新たなビジュアルを公開した。"
+    },
+    {
+      "key": "body-0",
+      "start": 35.02,
+      "end": 72.529,
+      "text": "TVアニメ『盾の勇者の成り上がり』第1シーズンの最終話が9月1日深夜に日本で放送された後、プロデューサーより新たな特別エピソードの発表と第2シーズンの制作が決定し、ヴィクトリア、ノンナ、ジェフリーが登場する新ビジュアルが公開された。"
+    },
+    {
+      "key": "body-1",
+      "start": 72.529,
+      "end": 116.164,
+      "text": "正式スケジュールも9月8日深夜0時30分から放送される予定だ。総括章「これまでとこれから」では、主人公3人の出会いから別れ、再会、そして家族になるまでの経験を振り返ります。 ORICON NEWSとCrunchyroll Newsはいずれも9月2日、関連する制作ニュースを確認した。"
+    },
+    {
+      "key": "why",
+      "start": 116.164,
+      "end": 134.996,
+      "text": "新季度特別篇動アニメーション系列後製作の正式確認、直接影響作品後上映、製作及び粉絲注目。"
+    },
+    {
+      "key": "watch",
+      "start": 134.996,
+      "end": 151.327,
+      "text": "シーズン2やスペシャルエピソードの放送日や制作ラインナップ、新たな予告編などの正式発表に注目だ。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 11.288,
+      "end": 12.148,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "《手札が多めのビクトリア》宣布製作第2季及新作特別篇 9月8日先播總集篇。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.148,
+      "speechEnd": 19.255,
+      "end": 19.535,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "9月1日深夜に第1シーズンが放送された後、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.535,
+      "speechEnd": 25.597,
+      "end": 25.937,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "公式は第2シーズンと新たな特別エピソードが"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.937,
+      "speechEnd": 29.839,
+      "end": 30.119,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "制作中であることを認め、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 30.119,
+      "speechEnd": 34.16,
+      "end": 35.02,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "新たなビジュアルを公開した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 35.02,
+      "speechEnd": 39.201,
+      "end": 39.541,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "TVアニメ『盾の勇者の成り上が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.541,
+      "speechEnd": 43.234,
+      "end": 43.414,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "り』第1シーズンの最終話が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.414,
+      "speechEnd": 45.713,
+      "end": 45.893,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "9月1日"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.893,
+      "speechEnd": 50.422,
+      "end": 50.702,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "深夜に日本で放送された後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.702,
+      "speechEnd": 60.596,
+      "end": 60.876,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "プロデューサーより新たな特別エピソードの発表と第2シーズンの制作が決定し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.876,
+      "speechEnd": 63.106,
+      "end": 63.386,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ヴィクトリア、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.386,
+      "speechEnd": 65.407,
+      "end": 65.687,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ノンナ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.687,
+      "speechEnd": 71.749,
+      "end": 72.529,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "ジェフリーが登場する新ビジュアルが公開された。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 72.529,
+      "speechEnd": 75.246,
+      "end": 75.426,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "正式スケジュールも"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 75.426,
+      "speechEnd": 77.865,
+      "end": 78.045,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "9月8日"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 78.045,
+      "speechEnd": 83.898,
+      "end": 84.518,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "深夜0時30分から放送される予定だ。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.518,
+      "speechEnd": 89.256,
+      "end": 89.536,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "総括章「これまでとこれから」では、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 89.536,
+      "speechEnd": 93.786,
+      "end": 94.067,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "主人公3人の出会いから別れ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.067,
+      "speechEnd": 96.087,
+      "end": 96.367,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "再会、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 96.367,
+      "speechEnd": 102.011,
+      "end": 102.631,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "そして家族になるまでの経験を振り返ります。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.631,
+      "speechEnd": 110.853,
+      "end": 111.133,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ORICON NEWSとCrunchyroll Newsはいずれも9月2日、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.133,
+      "speechEnd": 115.383,
+      "end": 116.164,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "関連する制作ニュースを確認した。"
+    },
+    {
+      "parentKey": "why",
+      "start": 116.164,
+      "speechEnd": 120.135,
+      "end": 120.755,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 120.755,
+      "speechEnd": 127.514,
+      "end": 127.794,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "新季度特別篇動アニメーション系列後製作の正式確認、"
+    },
+    {
+      "parentKey": "why",
+      "start": 127.794,
+      "speechEnd": 130.929,
+      "end": 131.21,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "直接影響作品後上映、"
+    },
+    {
+      "parentKey": "why",
+      "start": 131.21,
+      "speechEnd": 134.136,
+      "end": 134.996,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "製作及び粉絲注目。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 134.996,
+      "speechEnd": 137.086,
+      "end": 137.367,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 137.367,
+      "speechEnd": 144.613,
+      "end": 144.893,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "シーズン2やスペシャルエピソードの放送日や制作ラインナップ、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 144.893,
+      "speechEnd": 150.467,
+      "end": 151.327,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "新たな予告編などの正式発表に注目だ。"
+    }
+  ]
+}
