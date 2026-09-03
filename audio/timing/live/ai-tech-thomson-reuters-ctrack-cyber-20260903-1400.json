@@ -1,0 +1,470 @@
+{
+  "version": 3,
+  "duration": 199.811,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 646,
+  "charactersPerMinute": 194.0,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 17.377,
+      "text": "トムソン・ロイターの C-Track がサイバー事件を明らかに、米国とカナダの裁判所ファイルの一部が許可なくアクセスされていた"
+    },
+    {
+      "key": "dek",
+      "start": 17.377,
+      "end": 44.373,
+      "text": "事故には米国の11州、米領ヴァージン諸島、カナダが関与した。オンタリオ州の3つの主要な裁判所は、現在、裁判所の金融取引システムが影響を受けている兆候はないと述べた。"
+    },
+    {
+      "key": "body-0",
+      "start": 44.373,
+      "end": 94.115,
+      "text": "ロイターとオンタリオ州3裁判所の共同声明によると、トムソン・ロイターは3月に一部のC - Trackファイルへのアクセスを確認した調査に続いて、6月30日にクラウド環境で不正行為を検出した。C - Trackは、米国の11の州、米領ヴァージン諸島、およびカナダの司法制度の一部が関与する事件を含む、デジタル裁判記録を管理するために使用されます。"
+    },
+    {
+      "key": "body-1",
+      "start": 94.115,
+      "end": 139.391,
+      "text": "オンタリオ州裁判所は、情報には裁判記録が含まれていると述べたが、現在、裁判所の金融取引を処理するシステムが影響を受けたという兆候はないと述べた。トムソン・ロイターは追加のセキュリティ対策を講じ、法執行機関に通知した。プラットフォームはまだ稼働しており、影響を受ける可能性のある人々のためのサポートチャネルが設定されています。"
+    },
+    {
+      "key": "why",
+      "start": 139.391,
+      "end": 173.195,
+      "text": "このインシデントは、サードパーティのクラウドソフトウェアに依存する公的司法インフラストラクチャの集中リスクを再度示し、その後のデータ侵害の範囲と通知義務は、政府調達と情報セキュリティ基準に影響を与える可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 173.195,
+      "end": 199.811,
+      "text": "Thomson Reutersが開示するデータの人数と種類、州およびカナダの規制当局による調査、および個々の通知または信用監視措置が必要かどうかに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.972,
+      "end": 4.252,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "トムソン・ロイターの C-Track が"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.252,
+      "speechEnd": 7.666,
+      "end": 7.896,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "サイバー事件を明らかに、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.896,
+      "speechEnd": 13.052,
+      "end": 13.332,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "米国とカナダの裁判所ファイルの一部が"
+    },
+    {
+      "parentKey": "title",
+      "start": 13.332,
+      "speechEnd": 16.676,
+      "end": 17.377,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "許可なくアクセスされていた。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.377,
+      "speechEnd": 21.209,
+      "end": 21.439,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "事故には米国の11州、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.439,
+      "speechEnd": 24.365,
+      "end": 24.595,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米領ヴァージン諸島、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.595,
+      "speechEnd": 27.382,
+      "end": 27.883,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "カナダが関与した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.883,
+      "speechEnd": 33.108,
+      "end": 33.338,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "オンタリオ州の3つの主要な裁判所は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 33.338,
+      "speechEnd": 35.359,
+      "end": 35.589,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "現在、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 35.589,
+      "speechEnd": 39.143,
+      "end": 39.423,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "裁判所の金融取引システムが"
+    },
+    {
+      "parentKey": "dek",
+      "start": 39.423,
+      "speechEnd": 43.673,
+      "end": 44.373,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "影響を受けている兆候はないと述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.373,
+      "speechEnd": 51.132,
+      "end": 51.362,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイターとオンタリオ州3裁判所の共同声明によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.362,
+      "speechEnd": 62.371,
+      "end": 62.601,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "トムソン・ロイターは3月に一部のC - Trackファイルへのアクセスを確認した調査に続いて、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.601,
+      "speechEnd": 69.778,
+      "end": 70.278,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "6月30日にクラウド環境で不正行為を検出した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.278,
+      "speechEnd": 72.716,
+      "end": 72.946,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "C - Trackは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.946,
+      "speechEnd": 75.942,
+      "end": 76.173,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国の11の州、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.173,
+      "speechEnd": 79.099,
+      "end": 79.329,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米領ヴァージン諸島、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 79.329,
+      "speechEnd": 87.272,
+      "end": 87.502,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "およびカナダの司法制度の一部が関与する事件を含む、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 87.502,
+      "speechEnd": 93.494,
+      "end": 94.115,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "デジタル裁判記録を管理するために使用されます。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.115,
+      "speechEnd": 97.111,
+      "end": 97.341,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "オンタリオ州裁判所は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.341,
+      "speechEnd": 102.915,
+      "end": 103.145,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "情報には裁判記録が含まれていると述べたが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.145,
+      "speechEnd": 105.166,
+      "end": 105.396,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "現在、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 105.396,
+      "speechEnd": 110.412,
+      "end": 110.692,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "裁判所の金融取引を処理するシステムが"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 110.692,
+      "speechEnd": 115.221,
+      "end": 115.722,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "影響を受けたという兆候はないと述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.722,
+      "speechEnd": 121.156,
+      "end": 121.386,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "トムソン・ロイターは追加のセキュリティ対策を講じ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.386,
+      "speechEnd": 124.591,
+      "end": 125.092,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "法執行機関に通知した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 125.092,
+      "speechEnd": 129.203,
+      "end": 129.433,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "プラットフォームはまだ稼働しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 129.433,
+      "speechEnd": 134.24,
+      "end": 134.52,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "影響を受ける可能性のある人々のため"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 134.52,
+      "speechEnd": 138.771,
+      "end": 139.391,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "のサポートチャネルが設定されています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 139.391,
+      "speechEnd": 143.362,
+      "end": 143.862,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 143.862,
+      "speechEnd": 146.58,
+      "end": 146.81,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "このインシデントは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 146.81,
+      "speechEnd": 158.307,
+      "end": 158.537,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "サードパーティのクラウドソフトウェアに依存する公的司法インフラストラクチャの集中リスクを再度示し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 158.537,
+      "speechEnd": 163.693,
+      "end": 163.923,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "その後のデータ侵害の範囲と通知義務は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 163.923,
+      "speechEnd": 168.8,
+      "end": 169.08,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "政府調達と情報セキュリティ基準に影響を"
+    },
+    {
+      "parentKey": "why",
+      "start": 169.08,
+      "speechEnd": 172.494,
+      "end": 173.195,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "与える可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 173.195,
+      "speechEnd": 175.285,
+      "end": 175.515,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 175.515,
+      "speechEnd": 178.581,
+      "end": 178.861,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "Thomson Reutersが"
+    },
+    {
+      "parentKey": "watch",
+      "start": 178.861,
+      "speechEnd": 182.554,
+      "end": 182.784,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "開示するデータの人数と種類、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 182.784,
+      "speechEnd": 188.706,
+      "end": 188.936,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "州およびカナダの規制当局による調査、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 188.936,
+      "speechEnd": 194.65,
+      "end": 194.93,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "および個々の通知または信用監視措置が"
+    },
+    {
+      "parentKey": "watch",
+      "start": 194.93,
+      "speechEnd": 199.11,
+      "end": 199.811,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "必要かどうかに注意してください。"
+    }
+  ]
+}

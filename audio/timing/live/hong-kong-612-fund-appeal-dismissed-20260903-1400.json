@@ -1,0 +1,440 @@
+{
+  "version": 3,
+  "duration": 188.134,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 524,
+  "charactersPerMinute": 167.1,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 12.895,
+      "text": "612ファンド控訴陳日俊ら「未登録組合」5人の有罪判決が支持された"
+    },
+    {
+      "key": "dek",
+      "start": 12.895,
+      "end": 32.052,
+      "text": "高等裁判所は、5人の基金受託者の控訴を棄却し、2022年にそれぞれ4,000香港ドルの罰金を支持した。"
+    },
+    {
+      "key": "body-0",
+      "start": 32.052,
+      "end": 92.976,
+      "text": "AP通信によると、香港の裁判所は木曜日、612人道援助基金の5人の受託者による上訴を棄却した。この基金は、2019年に反政府デモで逮捕され、2021年に活動を停止した人々に法的および医療的支援を提供しました。2022年、5人は協会条例に基づく登録または免除の申請を怠ったとして有罪判決を受け、それぞれ4,000香港ドルの罰金を科されました。"
+    },
+    {
+      "key": "body-1",
+      "start": 92.976,
+      "end": 137.572,
+      "text": "5人はまた、その年に国家安全保障法に違反した疑いで逮捕されたが、それ以来、関連する国家安全保障法の罪で起訴されていない。この異議申し立ての決定は、協会の登録に関する法的紛争に焦点を当てています。このケースは、協会や民間基金の運営と規制を伴うため、国内外で懸念されています。"
+    },
+    {
+      "key": "why",
+      "start": 137.572,
+      "end": 168.44,
+      "text": "控訴の結果は、ファンドが登録団体であるかどうかについての裁判所の法的扱いをさらに確認した。これは、香港市民社会の組織とコンプライアンスリスクにとって参考になる重要性を持っている。"
+    },
+    {
+      "key": "watch",
+      "start": 168.44,
+      "end": 188.134,
+      "text": "被告がさらなる上訴を提起したかどうか、および協会条例の適用範囲についての裁判所判決の詳細な根拠に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 6.201,
+      "end": 6.341,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "612ファンド控訴陳日俊ら「未登録組合」"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.341,
+      "speechEnd": 8.362,
+      "end": 8.502,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "5人"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.502,
+      "speechEnd": 12.194,
+      "end": 12.895,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "の有罪判決が支持された。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.895,
+      "speechEnd": 15.542,
+      "end": 15.772,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "高等裁判所は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.772,
+      "speechEnd": 21.416,
+      "end": 21.646,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "5人の基金受託者の控訴を棄却し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.646,
+      "speechEnd": 26.175,
+      "end": 26.405,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "2022年にそれぞれ4,"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.405,
+      "speechEnd": 31.352,
+      "end": 32.052,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "000香港ドルの罰金を支持した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 32.052,
+      "speechEnd": 34.769,
+      "end": 34.999,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "AP通信によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.999,
+      "speechEnd": 38.901,
+      "end": 39.131,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "香港の裁判所は木曜日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.131,
+      "speechEnd": 42.894,
+      "end": 43.034,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "612人道援助基金の"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.034,
+      "speechEnd": 45.054,
+      "end": 45.194,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "5人"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.194,
+      "speechEnd": 49.862,
+      "end": 50.362,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "の受託者による上訴を棄却した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.362,
+      "speechEnd": 52.662,
+      "end": 52.892,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この基金は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.892,
+      "speechEnd": 58.744,
+      "end": 58.975,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "2019年に反政府デモで逮捕され、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.975,
+      "speechEnd": 69.983,
+      "end": 70.483,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "2021年に活動を停止した人々に法的および医療的支援を提供しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.483,
+      "speechEnd": 73.201,
+      "end": 73.431,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "2022年、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.431,
+      "speechEnd": 78.238,
+      "end": 78.518,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "5人は協会条例に基づく登録または"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 78.518,
+      "speechEnd": 83.813,
+      "end": 84.044,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "免除の申請を怠ったとして有罪判決を受け、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 84.044,
+      "speechEnd": 86.621,
+      "end": 86.852,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "それぞれ4,"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 86.852,
+      "speechEnd": 92.356,
+      "end": 92.976,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "000香港ドルの罰金を科されました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.976,
+      "speechEnd": 95.345,
+      "end": 95.575,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "5人はまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 95.575,
+      "speechEnd": 103.588,
+      "end": 103.818,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "その年に国家安全保障法に違反した疑いで逮捕されたが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.818,
+      "speechEnd": 105.977,
+      "end": 106.208,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "それ以来、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 106.208,
+      "speechEnd": 113.384,
+      "end": 113.884,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "関連する国家安全保障法の罪で起訴されていない。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 113.884,
+      "speechEnd": 117.647,
+      "end": 117.877,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この異議申し立ての決定は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.877,
+      "speechEnd": 124.217,
+      "end": 124.717,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "協会の登録に関する法的紛争に焦点を当てています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 124.717,
+      "speechEnd": 127.016,
+      "end": 127.246,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "このケースは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 127.246,
+      "speechEnd": 133.029,
+      "end": 133.259,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "協会や民間基金の運営と規制を伴うため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 133.259,
+      "speechEnd": 136.952,
+      "end": 137.572,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "国内外で懸念されています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 137.572,
+      "speechEnd": 141.544,
+      "end": 142.044,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 142.044,
+      "speechEnd": 144.552,
+      "end": 144.782,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "控訴の結果は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 144.782,
+      "speechEnd": 149.66,
+      "end": 149.94,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ファンドが登録団体であるかどうかについて"
+    },
+    {
+      "parentKey": "why",
+      "start": 149.94,
+      "speechEnd": 155.165,
+      "end": 155.665,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "の裁判所の法的扱いをさらに確認した。"
+    },
+    {
+      "parentKey": "why",
+      "start": 155.665,
+      "speechEnd": 157.756,
+      "end": 157.986,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "これは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 157.986,
+      "speechEnd": 167.74,
+      "end": 168.44,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "香港市民社会の組織とコンプライアンスリスクにとって参考になる重要性を持っている。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 168.44,
+      "speechEnd": 170.53,
+      "end": 170.76,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 170.76,
+      "speechEnd": 176.474,
+      "end": 176.704,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "被告がさらなる上訴を提起したかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 176.704,
+      "speechEnd": 187.434,
+      "end": 188.134,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "および協会条例の適用範囲についての裁判所判決の詳細な根拠に注意してください。"
+    }
+  ]
+}

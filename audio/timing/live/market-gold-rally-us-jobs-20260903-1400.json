@@ -1,0 +1,470 @@
+{
+  "version": 3,
+  "duration": 202.188,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 557,
+  "charactersPerMinute": 165.3,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 19.388,
+      "text": "金価格は1 ％以上上昇し、4,400ドル上昇し、米国財務省の利回りは低下し、非農業データが次の焦点になる"
+    },
+    {
+      "key": "dek",
+      "start": 19.388,
+      "end": 40.427,
+      "text": "ある時点で4,434ドル前後の現金で、市場は米イラン紛争のリスクオフプレミアムを維持しながら、FRBの9月の金利動向を再評価した。"
+    },
+    {
+      "key": "body-0",
+      "start": 40.427,
+      "end": 100.377,
+      "text": "ロイター通信によると、現物金は木曜日に1 ％以上上昇して約4,434.70ドルになり、米国の金先物も約4,480ドルに上昇した。米ドルの弱体化と米国債利回りの低下は、無利子金保有の相対コストを低下させた。市場は、連邦準備制度理事会（ FRB ）の9月の会合で金利の方向性を再評価するために、9月4日に米国の非農業雇用統計が発表されるのを待っている。"
+    },
+    {
+      "key": "body-1",
+      "start": 100.377,
+      "end": 146.683,
+      "text": "金は地政学的リスクにも裏打ちされており、米イラクの軍事紛争はエネルギーと安全な避難所資産のボラティリティを高め続けています。しかし、雇用データが予想よりも大幅に強く、金利引き上げの機会を押し上げると、金価格も急速に回復する可能性があるため、今回の上昇は依然として金利予想と米ドルの方向性に大きく依存しています。"
+    },
+    {
+      "key": "why",
+      "start": 146.683,
+      "end": 175.023,
+      "text": "金が4,400ドルを突破したことは、市場ヘッジと政策期待の再燃、ならびに貴金属、鉱業株、および一部のインフレ取引への影響を反映しています。"
+    },
+    {
+      "key": "watch",
+      "start": 175.023,
+      "end": 202.188,
+      "text": "9月4日の非農業雇用創出、失業、賃金上昇、米国債利回り、米ドル、連邦準備制度理事会の9月の利上げ価格に関するデータに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.32,
+      "end": 4.55,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "金価格は1 ％以上上昇し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.55,
+      "speechEnd": 6.501,
+      "end": 6.731,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "4,"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.731,
+      "speechEnd": 9.797,
+      "end": 10.027,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "400ドル上昇し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.027,
+      "speechEnd": 14.347,
+      "end": 14.577,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国財務省の利回りは低下し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 14.577,
+      "speechEnd": 18.688,
+      "end": 19.388,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "非農業データが次の焦点になる。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.388,
+      "speechEnd": 22.175,
+      "end": 22.405,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ある時点で4,"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.405,
+      "speechEnd": 27.283,
+      "end": 27.513,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "434ドル前後の現金で、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.513,
+      "speechEnd": 33.993,
+      "end": 34.223,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "市場は米イラン紛争のリスクオフプレミアムを維持しながら、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 34.223,
+      "speechEnd": 39.727,
+      "end": 40.427,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "FRBの9月の金利動向を再評価した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.427,
+      "speechEnd": 43.424,
+      "end": 43.654,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.654,
+      "speechEnd": 50.691,
+      "end": 50.921,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "現物金は木曜日に1 ％以上上昇して約4,"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.921,
+      "speechEnd": 55.311,
+      "end": 55.541,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "434.70ドルになり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.541,
+      "speechEnd": 59.512,
+      "end": 59.742,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国の金先物も約4,"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.742,
+      "speechEnd": 63.366,
+      "end": 63.866,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "480ドルに上昇した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.866,
+      "speechEnd": 69.231,
+      "end": 69.461,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米ドルの弱体化と米国債利回りの低下は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.461,
+      "speechEnd": 75.593,
+      "end": 76.093,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "無利子金保有の相対コストを低下させた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.093,
+      "speechEnd": 78.183,
+      "end": 78.413,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "市場は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 78.413,
+      "speechEnd": 89.84,
+      "end": 90.07,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "連邦準備制度理事会（ FRB ）の9月の会合で金利の方向性を再評価するために、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 90.07,
+      "speechEnd": 95.993,
+      "end": 96.273,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "9月4日に米国の非農業雇用統計が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 96.273,
+      "speechEnd": 99.757,
+      "end": 100.377,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "発表されるのを待っている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 100.377,
+      "speechEnd": 106.439,
+      "end": 106.669,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "金は地政学的リスクにも裏打ちされており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 106.669,
+      "speechEnd": 117.12,
+      "end": 117.62,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "米イラクの軍事紛争はエネルギーと安全な避難所資産のボラティリティを高め続けています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.62,
+      "speechEnd": 119.641,
+      "end": 119.871,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "しかし、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 119.871,
+      "speechEnd": 124.679,
+      "end": 124.909,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "雇用データが予想よりも大幅に強く、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 124.909,
+      "speechEnd": 129.368,
+      "end": 129.598,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "金利引き上げの機会を押し上げると、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 129.598,
+      "speechEnd": 135.033,
+      "end": 135.263,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "金価格も急速に回復する可能性があるため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 135.263,
+      "speechEnd": 146.063,
+      "end": 146.683,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "今回の上昇は依然として金利予想と米ドルの方向性に大きく依存しています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 146.683,
+      "speechEnd": 150.655,
+      "end": 151.155,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 151.155,
+      "speechEnd": 153.315,
+      "end": 153.545,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "金が4,"
+    },
+    {
+      "parentKey": "why",
+      "start": 153.545,
+      "speechEnd": 157.865,
+      "end": 158.095,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "400ドルを突破したことは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 158.095,
+      "speechEnd": 161.927,
+      "end": 162.157,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "市場ヘッジと政策期待の再燃、"
+    },
+    {
+      "parentKey": "why",
+      "start": 162.157,
+      "speechEnd": 164.875,
+      "end": 165.105,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ならびに貴金属、"
+    },
+    {
+      "parentKey": "why",
+      "start": 165.105,
+      "speechEnd": 167.195,
+      "end": 167.425,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "鉱業株、"
+    },
+    {
+      "parentKey": "why",
+      "start": 167.425,
+      "speechEnd": 174.323,
+      "end": 175.023,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "および一部のインフレ取引への影響を反映しています。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 175.023,
+      "speechEnd": 177.114,
+      "end": 177.344,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 177.344,
+      "speechEnd": 182.152,
+      "end": 182.382,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "9月4日の非農業雇用創出、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 182.382,
+      "speechEnd": 184.402,
+      "end": 184.632,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "失業、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 184.632,
+      "speechEnd": 186.792,
+      "end": 187.022,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "賃金上昇、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 187.022,
+      "speechEnd": 189.391,
+      "end": 189.621,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国債利回り、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 189.621,
+      "speechEnd": 191.712,
+      "end": 191.942,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米ドル、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 191.942,
+      "speechEnd": 201.488,
+      "end": 202.188,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "連邦準備制度理事会の9月の利上げ価格に関するデータに注目してください。"
+    }
+  ]
+}

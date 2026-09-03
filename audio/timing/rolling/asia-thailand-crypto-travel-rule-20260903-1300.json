@@ -1,0 +1,420 @@
+{
+  "version": 3,
+  "duration": 214.1,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 703,
+  "charactersPerMinute": 197.0,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 20.363,
+      "text": "タイは暗号化資産に対するトラベルルールを導入しています。トレーダーは自己ホスト型ウォレットを検証し、情報を 5 年間保持する必要があります"
+    },
+    {
+      "key": "dek",
+      "start": 20.363,
+      "end": 48.32,
+      "text": "新しい規制は2027年2月27日に施行され、マネーロンダリング対策とテクノロジー犯罪の監督を強化するために、デジタル資産運営者に支払者と受取人の情報を送信することが義務付けられる。"
+    },
+    {
+      "key": "body-0",
+      "start": 48.32,
+      "end": 104.474,
+      "text": "タイ証券取引委員会は、新しいデジタル資産移転リスク管理規則を発表しました。主な要件には、取引の開始者と受益者の特定、カウンターパーティのサービスプロバイダーに対するデューデリジェンスの実施、セルフカストディウォレットが関与する場合のウォレットの所有権または管理の検証が含まれます。関連情報は転送命令とともに送信する必要があり、オペレーターは取引記録を少なくとも 5 年間保存する必要もあります。"
+    },
+    {
+      "key": "body-1",
+      "start": 104.474,
+      "end": 157.082,
+      "text": "この規則は2027年2月27日に発効する予定で、規制当局はFATFのマネーロンダリング対策基準を遵守し、マネーロンダリングやテクノロジー犯罪の経路としての暗号資産の使用を減らすとしている。取引所とウォレット サービス プロバイダーにとって、次のフェーズでは顧客情報のアップグレード、クロスプラットフォームのメッセージ交換、セルフホスト型ウォレットの検証プロセスに焦点が当てられます。"
+    },
+    {
+      "key": "why",
+      "start": 157.082,
+      "end": 183.293,
+      "text": "フォントその後、ヨーロッパはあなたの分析\"どのようにResourceは、プロセスを食べることができます。物理チャネルは、あなたの継続的なResource、"
+    },
+    {
+      "key": "watch",
+      "start": 183.293,
+      "end": 214.1,
+      "text": "タイの通信事業者がセルフホスト型ウォレットの検証、国境を越えたデータ転送の取り決めをどのように実装しているか、また規則が発効する前にさらなる技術的ガイダンスがあるかどうかに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.246,
+      "end": 7.866,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "タイは暗号化資産に対するトラベルルールを導入しています。"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.866,
+      "speechEnd": 13.37,
+      "end": 13.65,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "トレーダーは自己ホスト型ウォレットを検証し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 13.65,
+      "speechEnd": 19.503,
+      "end": 20.363,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "情報を 5 年間保持する必要があります。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.363,
+      "speechEnd": 28.445,
+      "end": 28.725,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "新しい規制は2027年2月27日に施行され、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 28.725,
+      "speechEnd": 37.085,
+      "end": 37.366,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マネーロンダリング対策とテクノロジー犯罪の監督を強化するために、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 37.366,
+      "speechEnd": 43.288,
+      "end": 43.628,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "デジタル資産運営者に支払者と受取人の情報を"
+    },
+    {
+      "parentKey": "dek",
+      "start": 43.628,
+      "speechEnd": 47.46,
+      "end": 48.32,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "送信することが義務付けられる。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.32,
+      "speechEnd": 51.455,
+      "end": 51.735,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "タイ証券取引委員会は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.735,
+      "speechEnd": 58.911,
+      "end": 59.532,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "新しいデジタル資産移転リスク管理規則を発表しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.532,
+      "speechEnd": 62.04,
+      "end": 62.32,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "主な要件には、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.32,
+      "speechEnd": 66.709,
+      "end": 66.989,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "取引の開始者と受益者の特定、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.989,
+      "speechEnd": 75.071,
+      "end": 75.351,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "カウンターパーティのサービスプロバイダーに対するデューデリジェンスの実施、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.351,
+      "speechEnd": 78.695,
+      "end": 79.036,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "セルフカストディウォレットが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 79.036,
+      "speechEnd": 87.466,
+      "end": 88.086,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "関与する場合のウォレットの所有権または管理の検証が含まれます。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 88.086,
+      "speechEnd": 94.774,
+      "end": 95.055,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "関連情報は転送命令とともに送信する必要があり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 95.055,
+      "speechEnd": 103.694,
+      "end": 104.474,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "オペレーターは取引記録を少なくとも 5 年間保存する必要もあります。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.474,
+      "speechEnd": 112.695,
+      "end": 112.975,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この規則は2027年2月27日に発効する予定で、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.975,
+      "speechEnd": 120.848,
+      "end": 121.128,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "規制当局はFATFのマネーロンダリング対策基準を遵守し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.128,
+      "speechEnd": 127.12,
+      "end": 127.46,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "マネーロンダリングやテクノロジー犯罪の経路として"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 127.46,
+      "speechEnd": 132.686,
+      "end": 133.306,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "の暗号資産の使用を減らすとしている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 133.306,
+      "speechEnd": 138.88,
+      "end": 139.16,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "取引所とウォレット サービス プロバイダーにとって、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 139.16,
+      "speechEnd": 144.106,
+      "end": 144.386,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "次のフェーズでは顧客情報のアップグレード、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 144.386,
+      "speechEnd": 148.427,
+      "end": 148.707,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "クロスプラットフォームのメッセージ交換、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 148.707,
+      "speechEnd": 156.302,
+      "end": 157.082,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "セルフホスト型ウォレットの検証プロセスに焦点が当てられます。"
+    },
+    {
+      "parentKey": "why",
+      "start": 157.082,
+      "speechEnd": 161.053,
+      "end": 161.673,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 161.673,
+      "speechEnd": 164.042,
+      "end": 164.322,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "フォントその後、"
+    },
+    {
+      "parentKey": "why",
+      "start": 164.322,
+      "speechEnd": 170.662,
+      "end": 170.942,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ヨーロッパはあなたの分析\"どのようにResourceは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 170.942,
+      "speechEnd": 175.192,
+      "end": 175.813,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "プロセスを食べることができます。"
+    },
+    {
+      "parentKey": "why",
+      "start": 175.813,
+      "speechEnd": 178.181,
+      "end": 178.461,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "物理チャネルは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 178.461,
+      "speechEnd": 182.433,
+      "end": 183.293,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-comma",
+      "text": "あなたの継続的なResource、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 183.293,
+      "speechEnd": 185.383,
+      "end": 185.663,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 185.663,
+      "speechEnd": 192.491,
+      "end": 192.771,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "タイの通信事業者がセルフホスト型ウォレットの検証、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 192.771,
+      "speechEnd": 198.066,
+      "end": 198.406,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "国境を越えたデータ転送の取り決めを"
+    },
+    {
+      "parentKey": "watch",
+      "start": 198.406,
+      "speechEnd": 201.959,
+      "end": 202.24,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "どのように実装しているか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 202.24,
+      "speechEnd": 208.789,
+      "end": 209.129,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "また規則が発効する前にさらなる技術的ガイダンスが"
+    },
+    {
+      "parentKey": "watch",
+      "start": 209.129,
+      "speechEnd": 213.239,
+      "end": 214.1,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "あるかどうかに注目してください。"
+    }
+  ]
+}
