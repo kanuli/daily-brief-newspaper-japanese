@@ -1,0 +1,430 @@
+{
+  "version": 3,
+  "duration": 190.772,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 567,
+  "charactersPerMinute": 178.3,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 20.74,
+      "text": "カナダは、40年ぶりに乗用車製造をカナダに戻すために、鉄道車両を介して更新するために47億ドル以上を入札しています"
+    },
+    {
+      "key": "dek",
+      "start": 20.74,
+      "end": 41.269,
+      "text": "オンタリオ州とケベック州では、313台の新しいバスがアルストムによって建設され、オタワは「カナダの購入」ポリシーで現地のサプライチェーンを強化します。"
+    },
+    {
+      "key": "body-0",
+      "start": 41.269,
+      "end": 86.598,
+      "text": "カナダのマーク・カーニー首相は、連邦政府がVIA Rail向けの新世代長距離、地域、遠隔路線バス313台の調達と維持に47億ドル以上を投資すると発表した。車両はサンダーベイとラ・ポカティエールで製造され、エンジニアリングはケベック州で行われ、700近くの雇用をサポートすると予想されています。"
+    },
+    {
+      "key": "body-1",
+      "start": 86.598,
+      "end": 136.587,
+      "text": "カナダが国内で鉄道バスを介して生産するのは40年ぶりの2度目であり、政府の「カナダ製品を購入する」方針の重要な事例となっています。既存の長距離車両の一部は何十年も使用されてきました。オタワはまた、鉄道の更新を、単一の海外供給源への依存を減らすことに結びつけ、輸送インフラを産業および貿易政策のツールにしています。"
+    },
+    {
+      "key": "why",
+      "start": 136.587,
+      "end": 164.347,
+      "text": "大規模な公共調達は、北米の鉄道サプライチェーン、鉄鋼、部品の需要に直接影響を及ぼし、産業政策による外部依存を減らす国の傾向も反映しています。"
+    },
+    {
+      "key": "watch",
+      "start": 164.347,
+      "end": 190.772,
+      "text": "配送スケジュール、カナダのサプライヤー比率、コスト管理、米国とカナダの貿易政策が国境を越えた製造フットプリントにさらに影響を与えるかどうかに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.16,
+      "end": 2.39,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "カナダは、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.39,
+      "speechEnd": 8.939,
+      "end": 9.169,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "40年ぶりに乗用車製造をカナダに戻すために、"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.169,
+      "speechEnd": 13.907,
+      "end": 14.047,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "鉄道車両を介して更新するために"
+    },
+    {
+      "parentKey": "title",
+      "start": 14.047,
+      "speechEnd": 16.694,
+      "end": 16.835,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "47億ドル"
+    },
+    {
+      "parentKey": "title",
+      "start": 16.835,
+      "speechEnd": 20.039,
+      "end": 20.74,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "以上を入札しています。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.74,
+      "speechEnd": 24.154,
+      "end": 24.384,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "オンタリオ州とケベック州では、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.384,
+      "speechEnd": 31.769,
+      "end": 31.999,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "313台の新しいバスがアルストムによって建設され、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 31.999,
+      "speechEnd": 40.569,
+      "end": 41.269,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "オタワは「カナダの購入」ポリシーで現地のサプライチェーンを強化します。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.269,
+      "speechEnd": 45.519,
+      "end": 45.749,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "カナダのマーク・カーニー首相は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.749,
+      "speechEnd": 53.065,
+      "end": 53.295,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "連邦政府がVIA Rail向けの新世代長距離、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.295,
+      "speechEnd": 55.315,
+      "end": 55.545,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "地域、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.545,
+      "speechEnd": 61.258,
+      "end": 61.398,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "遠隔路線バス313台の調達と維持に"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.398,
+      "speechEnd": 64.046,
+      "end": 64.186,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "47億ドル"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.186,
+      "speechEnd": 67.948,
+      "end": 68.448,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "以上を投資すると発表した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.448,
+      "speechEnd": 74.37,
+      "end": 74.601,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "車両はサンダーベイとラ・ポカティエールで製造され、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.601,
+      "speechEnd": 78.99,
+      "end": 79.22,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "エンジニアリングはケベック州で行われ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 79.22,
+      "speechEnd": 85.978,
+      "end": 86.598,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "700近くの雇用をサポートすると予想されています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 86.598,
+      "speechEnd": 92.799,
+      "end": 93.079,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "カナダが国内で鉄道バスを介して生産するのは"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.079,
+      "speechEnd": 97.538,
+      "end": 97.768,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "40年ぶりの2度目であり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.768,
+      "speechEnd": 106.477,
+      "end": 106.977,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "政府の「カナダ製品を購入する」方針の重要な事例となっています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 106.977,
+      "speechEnd": 115.129,
+      "end": 115.629,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "既存の長距離車両の一部は何十年も使用されてきました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.629,
+      "speechEnd": 117.859,
+      "end": 118.089,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "オタワはまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.089,
+      "speechEnd": 120.876,
+      "end": 121.106,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "鉄道の更新を、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.106,
+      "speechEnd": 128.282,
+      "end": 128.512,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "単一の海外供給源への依存を減らすことに結びつけ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 128.512,
+      "speechEnd": 135.967,
+      "end": 136.587,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "輸送インフラを産業および貿易政策のツールにしています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 136.587,
+      "speechEnd": 140.559,
+      "end": 141.059,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 141.059,
+      "speechEnd": 144.333,
+      "end": 144.563,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "大規模な公共調達は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 144.563,
+      "speechEnd": 148.047,
+      "end": 148.277,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "北米の鉄道サプライチェーン、"
+    },
+    {
+      "parentKey": "why",
+      "start": 148.277,
+      "speechEnd": 150.297,
+      "end": 150.528,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "鉄鋼、"
+    },
+    {
+      "parentKey": "why",
+      "start": 150.528,
+      "speechEnd": 155.056,
+      "end": 155.286,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "部品の需要に直接影響を及ぼし、"
+    },
+    {
+      "parentKey": "why",
+      "start": 155.286,
+      "speechEnd": 163.647,
+      "end": 164.347,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "産業政策による外部依存を減らす国の傾向も反映しています。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 164.347,
+      "speechEnd": 166.437,
+      "end": 166.667,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 166.667,
+      "speechEnd": 169.245,
+      "end": 169.475,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "配送スケジュール、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 169.475,
+      "speechEnd": 172.75,
+      "end": 172.98,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "カナダのサプライヤー比率、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 172.98,
+      "speechEnd": 175.279,
+      "end": 175.509,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "コスト管理、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 175.509,
+      "speechEnd": 185.263,
+      "end": 185.543,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "米国とカナダの貿易政策が国境を越えた製造フットプリントにさらに影響を"
+    },
+    {
+      "parentKey": "watch",
+      "start": 185.543,
+      "speechEnd": 190.072,
+      "end": 190.772,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "与えるかどうかに注意してください。"
+    }
+  ]
+}

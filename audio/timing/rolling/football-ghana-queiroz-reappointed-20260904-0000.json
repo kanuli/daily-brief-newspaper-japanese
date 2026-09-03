@@ -1,0 +1,350 @@
+{
+  "version": 3,
+  "duration": 164.545,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 517,
+  "charactersPerMinute": 188.5,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 16.064,
+      "text": "カルロス・ケイロスが退任して2か月後にガーナに戻り、9月のインターナショナルで新任期を開始"
+    },
+    {
+      "key": "dek",
+      "start": 16.064,
+      "end": 36.296,
+      "text": "ガーナサッカー協会は再び73歳のポルトガル人コーチを起用し、2027年アフリカネイションズカップ予選大会と代表チームの再編成を目指した。"
+    },
+    {
+      "key": "body-0",
+      "start": 36.296,
+      "end": 76.486,
+      "text": "ガーナサッカー協会は、カルロス・ケイロスがブラックスターズのヘッドコーチとして戻ってきたことを確認しました。この73歳のポルトガル人コーチは今年の夏のワールドカップの後に辞任したが、FAは彼の国際的な経験と以前のマネージャーのパフォーマンスが計画の次の段階に適していると考えている。"
+    },
+    {
+      "key": "body-1",
+      "start": 76.486,
+      "end": 115.657,
+      "text": "ケイロズの新しい任期は9月下旬に国際的な窓口から始まり、ガーナは現在2027年のアフリカネイションズカップを担当している。短期間での同じコーチの再任は、トーナメント後に完全に再建するのではなく、戦術的および人事の継続性を維持するFAの傾向を反映しています。"
+    },
+    {
+      "key": "why",
+      "start": 115.657,
+      "end": 141.392,
+      "text": "ガーナはアフリカの伝統的な強力なチームであり、コーチの再任は、次の予選での代表チームの選考、戦術的方向性、競争力に直接影響します。"
+    },
+    {
+      "key": "watch",
+      "start": 141.392,
+      "end": 164.545,
+      "text": "Queirozの最初の選手名簿、コートジボワールなどのイベントへの展開、FAが長期契約と技術チームの取り決めを発表したかどうかに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.763,
+      "end": 3.943,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "カルロス・ケイロスが退任して"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.943,
+      "speechEnd": 6.033,
+      "end": 6.213,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "2か月"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.213,
+      "speechEnd": 9.0,
+      "end": 9.281,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "後にガーナに戻り、"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.281,
+      "speechEnd": 15.203,
+      "end": 16.064,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "9月のインターナショナルで新任期を開始。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.064,
+      "speechEnd": 24.843,
+      "end": 25.123,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ガーナサッカー協会は再び73歳のポルトガル人コーチを起用し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.123,
+      "speechEnd": 35.436,
+      "end": 36.296,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "2027年アフリカネイションズカップ予選大会と代表チームの再編成を目指した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.296,
+      "speechEnd": 39.362,
+      "end": 39.642,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ガーナサッカー協会は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.642,
+      "speechEnd": 45.565,
+      "end": 45.905,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "カルロス・ケイロスがブラックスターズのヘッドコーチとして"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.905,
+      "speechEnd": 49.807,
+      "end": 50.427,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "戻ってきたことを確認しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.427,
+      "speechEnd": 55.793,
+      "end": 56.133,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "この73歳のポルトガル人コーチは"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.133,
+      "speechEnd": 61.638,
+      "end": 61.918,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今年の夏のワールドカップの後に辞任したが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.918,
+      "speechEnd": 70.07,
+      "end": 70.41,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "FAは彼の国際的な経験と以前のマネージャーのパフォーマンスが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.41,
+      "speechEnd": 75.706,
+      "end": 76.486,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "計画の次の段階に適していると考えている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 76.486,
+      "speechEnd": 84.639,
+      "end": 84.919,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ケイロズの新しい任期は9月下旬に国際的な窓口から始まり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.919,
+      "speechEnd": 93.489,
+      "end": 94.11,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ガーナは現在2027年のアフリカネイションズカップを担当している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.11,
+      "speechEnd": 98.848,
+      "end": 99.128,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "短期間での同じコーチの再任は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.128,
+      "speechEnd": 104.633,
+      "end": 104.913,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "トーナメント後に完全に再建するのではなく、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.913,
+      "speechEnd": 114.877,
+      "end": 115.657,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "戦術的および人事の継続性を維持するFAの傾向を反映しています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 115.657,
+      "speechEnd": 119.629,
+      "end": 120.249,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 120.249,
+      "speechEnd": 126.52,
+      "end": 126.8,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ガーナはアフリカの伝統的な強力なチームであり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 126.8,
+      "speechEnd": 129.379,
+      "end": 129.659,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "コーチの再任は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 129.659,
+      "speechEnd": 133.979,
+      "end": 134.259,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "次の予選での代表チームの選考、"
+    },
+    {
+      "parentKey": "why",
+      "start": 134.259,
+      "speechEnd": 137.046,
+      "end": 137.326,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "戦術的方向性、"
+    },
+    {
+      "parentKey": "why",
+      "start": 137.326,
+      "speechEnd": 140.531,
+      "end": 141.392,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "競争力に直接影響します。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 141.392,
+      "speechEnd": 143.482,
+      "end": 143.762,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 143.762,
+      "speechEnd": 147.525,
+      "end": 147.805,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Queirozの最初の選手名簿、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 147.805,
+      "speechEnd": 153.031,
+      "end": 153.311,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "コートジボワールなどのイベントへの展開、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 153.311,
+      "speechEnd": 158.607,
+      "end": 158.947,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "FAが長期契約と技術チームの取り決めを"
+    },
+    {
+      "parentKey": "watch",
+      "start": 158.947,
+      "speechEnd": 163.685,
+      "end": 164.545,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "発表したかどうかに注目してください。"
+    }
+  ]
+}

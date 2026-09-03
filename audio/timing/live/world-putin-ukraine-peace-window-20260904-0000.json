@@ -1,0 +1,380 @@
+{
+  "version": 3,
+  "duration": 172.696,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 536,
+  "charactersPerMinute": 186.2,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 20.671,
+      "text": "プーチン大統領は、ロシアとウクライナの間に和平合意の可能性はまだあるとしながらも、決定権は交戦当事者に戻さなければならないと強調"
+    },
+    {
+      "key": "dek",
+      "start": 20.671,
+      "end": 43.353,
+      "text": "ロシア大統領はウラジオストクフォーラムで交渉の合図を送り、報復と戦場での優位性についての議論を繰り返した。外交窓口には依然として激しい軍事的圧力が伴う。"
+    },
+    {
+      "key": "body-0",
+      "start": 43.353,
+      "end": 82.094,
+      "text": "プーチン大統領はウラジオストク東部経済フォーラムで、ロシアとウクライナの戦争を解決するための合意は最終的には両国間でのみ達成できると述べ、米国との接触は続いていると付け加えた。彼は交渉の可能性にオープンなままだったが、新しい停戦スケジュールや具体的な条件は提案しなかった。"
+    },
+    {
+      "key": "body-1",
+      "start": 82.094,
+      "end": 122.848,
+      "text": "同じ機会に、プーチン大統領は、ロシアはインフラ攻撃に報復し、戦場でのロシア軍の優位性を維持すると強調した。ウクライナの外交官は、国際調停における最近の進展を、外交チャネルが機能していることを示していると説明したが、実施可能な停戦協定には依然として大きなギャップがあった。"
+    },
+    {
+      "key": "why",
+      "start": 122.848,
+      "end": 147.822,
+      "text": "交渉の実質的な進展は、欧州の安全保障、エネルギー価格、食料供給、制裁政策のリスクプレミアムを変更する可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 147.822,
+      "end": 172.696,
+      "text": "ロシアとウクライナが直接交渉の取り決めを発表するかどうか、米国の調停の詳細、両国間に検証可能な停戦または緊張緩和があるかどうかに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.787,
+      "end": 3.017,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "プーチン大統領は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.017,
+      "speechEnd": 9.079,
+      "end": 9.359,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ロシアとウクライナの間に和平合意の可能性は"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.359,
+      "speechEnd": 12.564,
+      "end": 12.794,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "まだあるとしながらも、"
+    },
+    {
+      "parentKey": "title",
+      "start": 12.794,
+      "speechEnd": 19.971,
+      "end": 20.671,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "決定権は交戦当事者に戻さなければならないと強調。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.671,
+      "speechEnd": 27.569,
+      "end": 27.799,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロシア大統領はウラジオストクフォーラムで交渉の合図を送り、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.799,
+      "speechEnd": 34.767,
+      "end": 35.267,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "報復と戦場での優位性についての議論を繰り返した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 35.267,
+      "speechEnd": 42.653,
+      "end": 43.353,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "外交窓口には依然として激しい軍事的圧力が伴う。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.353,
+      "speechEnd": 49.276,
+      "end": 49.506,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "プーチン大統領はウラジオストク東部経済フォーラムで、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.506,
+      "speechEnd": 55.707,
+      "end": 55.987,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ロシアとウクライナの戦争を解決するための合意は"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.987,
+      "speechEnd": 62.607,
+      "end": 62.837,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "最終的には両国間でのみ達成できると述べ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.837,
+      "speechEnd": 67.854,
+      "end": 68.354,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "米国との接触は続いていると付け加えた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.354,
+      "speechEnd": 73.719,
+      "end": 73.949,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "彼は交渉の可能性にオープンなままだったが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.949,
+      "speechEnd": 81.474,
+      "end": 82.094,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "新しい停戦スケジュールや具体的な条件は提案しなかった。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.094,
+      "speechEnd": 84.603,
+      "end": 84.833,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同じ機会に、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.833,
+      "speechEnd": 87.62,
+      "end": 87.85,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "プーチン大統領は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 87.85,
+      "speechEnd": 91.334,
+      "end": 91.564,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロシアはインフラ攻撃に報復し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.564,
+      "speechEnd": 98.322,
+      "end": 98.823,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "戦場でのロシア軍の優位性を維持すると強調した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 98.823,
+      "speechEnd": 102.306,
+      "end": 102.537,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ウクライナの外交官は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.537,
+      "speechEnd": 107.344,
+      "end": 107.574,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "国際調停における最近の進展を、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.574,
+      "speechEnd": 114.194,
+      "end": 114.424,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "外交チャネルが機能していることを示していると説明したが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.424,
+      "speechEnd": 122.228,
+      "end": 122.848,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "実施可能な停戦協定には依然として大きなギャップがあった。"
+    },
+    {
+      "parentKey": "why",
+      "start": 122.848,
+      "speechEnd": 126.819,
+      "end": 127.319,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 127.319,
+      "speechEnd": 130.873,
+      "end": 131.103,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "交渉の実質的な進展は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 131.103,
+      "speechEnd": 134.169,
+      "end": 134.399,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "欧州の安全保障、"
+    },
+    {
+      "parentKey": "why",
+      "start": 134.399,
+      "speechEnd": 136.768,
+      "end": 136.998,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "エネルギー価格、"
+    },
+    {
+      "parentKey": "why",
+      "start": 136.998,
+      "speechEnd": 139.297,
+      "end": 139.527,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "食料供給、"
+    },
+    {
+      "parentKey": "why",
+      "start": 139.527,
+      "speechEnd": 147.122,
+      "end": 147.822,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "制裁政策のリスクプレミアムを変更する可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 147.822,
+      "speechEnd": 149.913,
+      "end": 150.143,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 150.143,
+      "speechEnd": 157.598,
+      "end": 157.828,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロシアとウクライナが直接交渉の取り決めを発表するかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 157.828,
+      "speechEnd": 161.034,
+      "end": 161.264,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国の調停の詳細、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 161.264,
+      "speechEnd": 165.932,
+      "end": 166.212,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "両国間に検証可能な停戦または"
+    },
+    {
+      "parentKey": "watch",
+      "start": 166.212,
+      "speechEnd": 171.995,
+      "end": 172.696,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "緊張緩和があるかどうかに注意してください。"
+    }
+  ]
+}

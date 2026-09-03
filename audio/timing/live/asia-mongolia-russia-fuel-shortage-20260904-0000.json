@@ -1,0 +1,350 @@
+{
+  "version": 3,
+  "duration": 163.396,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 515,
+  "charactersPerMinute": 189.1,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 15.913,
+      "text": "圧力下にあるロシアの燃料供給がモンゴルのガソリンスタンド小隊Changlongを流出させ、一部の地域で配給"
+    },
+    {
+      "key": "dek",
+      "start": 15.913,
+      "end": 34.613,
+      "text": "ウクライナの石油精製所へのドローン攻撃とロシア国内の季節的な需要が供給圧力を押し上げ、モンゴルはロシアの輸入に頼っています。"
+    },
+    {
+      "key": "body-0",
+      "start": 34.613,
+      "end": 71.855,
+      "text": "モンゴルは、ロシアの厳しい燃料供給の波及効果に苦しんでいる。モンゴル当局者は、一部の地域ではガソリンスタンドが出現し、配給措置が講じられ、燃料の小売価格も上昇していると述べた。ロシアはモンゴルの精製石油供給の最も重要な供給源である。"
+    },
+    {
+      "key": "body-1",
+      "start": 71.855,
+      "end": 116.283,
+      "text": "ロシアのいくつかの製油所に対する最近のドローン攻撃は、国内の季節的な需要とメンテナンス要因と相まって、供給を引き締めています。モンゴルは、いくつかのロシアの輸出制限の下で特別な供給取り決めを享受していますが、実際の出荷ボラティリティは、依然として単一の供給源に依存する高いエネルギー安全保障リスクを示しています。"
+    },
+    {
+      "key": "why",
+      "start": 116.283,
+      "end": 141.707,
+      "text": "継続的な燃料不足は、モンゴルのインフレと輸送コストを押し上げるだけでなく、ウランバートルの供給源と予備政策の多様化を加速させる可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 141.707,
+      "end": 163.396,
+      "text": "ロシア製油所の回復の進捗状況、モンゴルへの実際の輸出量、配給措置の拡大、モンゴル政府の代替輸入取り決めに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.46,
+      "end": 4.74,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "圧力下にあるロシアの燃料供給が"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.74,
+      "speechEnd": 11.847,
+      "end": 12.077,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "モンゴルのガソリンスタンド小隊Changlongを流出させ、"
+    },
+    {
+      "parentKey": "title",
+      "start": 12.077,
+      "speechEnd": 15.213,
+      "end": 15.913,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "一部の地域で配給。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.913,
+      "speechEnd": 29.014,
+      "end": 29.244,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ウクライナの石油精製所へのドローン攻撃とロシア国内の季節的な需要が供給圧力を押し上げ、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 29.244,
+      "speechEnd": 33.912,
+      "end": 34.613,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "モンゴルはロシアの輸入に頼っています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.613,
+      "speechEnd": 36.842,
+      "end": 37.072,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "モンゴルは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.072,
+      "speechEnd": 43.553,
+      "end": 44.053,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "ロシアの厳しい燃料供給の波及効果に苦しんでいる。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.053,
+      "speechEnd": 46.91,
+      "end": 47.14,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "モンゴル当局者は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.14,
+      "speechEnd": 52.784,
+      "end": 53.014,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "一部の地域ではガソリンスタンドが出現し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.014,
+      "speechEnd": 56.22,
+      "end": 56.45,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "配給措置が講じられ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.45,
+      "speechEnd": 61.815,
+      "end": 62.316,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "燃料の小売価格も上昇していると述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.316,
+      "speechEnd": 71.235,
+      "end": 71.855,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ロシアはモンゴルの精製石油供給の最も重要な供給源である。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 71.855,
+      "speechEnd": 79.381,
+      "end": 79.611,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロシアのいくつかの製油所に対する最近のドローン攻撃は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 79.611,
+      "speechEnd": 85.603,
+      "end": 85.834,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "国内の季節的な需要とメンテナンス要因と相まって、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 85.834,
+      "speechEnd": 89.039,
+      "end": 89.539,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "供給を引き締めています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 89.539,
+      "speechEnd": 91.769,
+      "end": 91.999,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "モンゴルは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.999,
+      "speechEnd": 101.754,
+      "end": 101.985,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "いくつかのロシアの輸出制限の下で特別な供給取り決めを享受していますが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.985,
+      "speechEnd": 105.399,
+      "end": 105.629,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "実際の出荷ボラティリティは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 105.629,
+      "speechEnd": 115.663,
+      "end": 116.283,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "依然として単一の供給源に依存する高いエネルギー安全保障リスクを示しています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 116.283,
+      "speechEnd": 120.255,
+      "end": 120.755,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 120.755,
+      "speechEnd": 123.961,
+      "end": 124.191,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "継続的な燃料不足は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 124.191,
+      "speechEnd": 130.671,
+      "end": 130.901,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "モンゴルのインフレと輸送コストを押し上げるだけでなく、"
+    },
+    {
+      "parentKey": "why",
+      "start": 130.901,
+      "speechEnd": 137.033,
+      "end": 137.314,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ウランバートルの供給源と予備政策の多様化を"
+    },
+    {
+      "parentKey": "why",
+      "start": 137.314,
+      "speechEnd": 141.007,
+      "end": 141.707,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "加速させる可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 141.707,
+      "speechEnd": 143.797,
+      "end": 144.027,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 144.027,
+      "speechEnd": 148.348,
+      "end": 148.578,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロシア製油所の回復の進捗状況、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 148.578,
+      "speechEnd": 152.271,
+      "end": 152.501,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "モンゴルへの実際の輸出量、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 152.501,
+      "speechEnd": 155.358,
+      "end": 155.588,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "配給措置の拡大、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 155.588,
+      "speechEnd": 162.696,
+      "end": 163.396,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "モンゴル政府の代替輸入取り決めに注目してください。"
+    }
+  ]
+}
