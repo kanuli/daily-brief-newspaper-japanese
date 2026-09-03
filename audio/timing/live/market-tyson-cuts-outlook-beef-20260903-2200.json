@@ -1,0 +1,420 @@
+{
+  "version": 3,
+  "duration": 194.9,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 538,
+  "charactersPerMinute": 165.6,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 16.618,
+      "text": "タイソン、通期予想を1カ月以内に下方修正。米国牛肉業界の利益は牛不足と価格変動で打撃"
+    },
+    {
+      "key": "dek",
+      "start": 16.618,
+      "end": 38.542,
+      "text": "同社は、2026年度の調整後営業利益予想を18.5億ドルから20.5億ドルに下方修正し、売上高成長目標も下方修正した。"
+    },
+    {
+      "key": "body-0",
+      "start": 38.542,
+      "end": 91.624,
+      "text": "タイソン・フーズは木曜日、2026会計年度の調整後営業利益予想を当初の21億～23億ドルから18億5000万～20億5000万ドルに引き下げた。通年の売上高成長率予想も2.5～3.5％から1.5～2％に引き下げられた。同社が業績予想を下方修正するのはこの１カ月で２回目で、この報道を受けて株価は大きく圧迫された。"
+    },
+    {
+      "key": "body-1",
+      "start": 91.624,
+      "end": 144.848,
+      "text": "同社は圧力の原因として、米国における牛の供給逼迫、生体牛価格の変動、牛肉事業の利益圧縮を挙げている。米国の食肉加工業者はこれまで、牛の供給不足を理由に生産能力を調整しており、政府も一部の低関税牛肉の輸入を増やすことで小売価格の圧力を緩和しようとしており、供給問題が企業利益と消費者物価の両方に影響を与えていることを示している。"
+    },
+    {
+      "key": "why",
+      "start": 144.848,
+      "end": 171.053,
+      "text": "大手食品会社は、牛肉の供給逼迫が単なる小売価格の問題ではなく、加工会社の利益を直接的に侵食していることを反映し、再び指針を引き下げた。"
+    },
+    {
+      "key": "watch",
+      "start": 171.053,
+      "end": 194.9,
+      "text": "タイソンの牛肉事業の損失、工場のリストラ、生体牛の価格、米国産牛肉の輸入政策にさらなる調整が行われるかどうかに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.02,
+      "end": 2.25,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "タイソン、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.25,
+      "speechEnd": 7.894,
+      "end": 8.394,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "通期予想を1カ月以内に下方修正。"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.394,
+      "speechEnd": 15.918,
+      "end": 16.618,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "米国牛肉業界の利益は牛不足と価格変動で打撃。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.618,
+      "speechEnd": 18.709,
+      "end": 18.939,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同社は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.939,
+      "speechEnd": 25.348,
+      "end": 25.628,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "2026年度の調整後営業利益予想を"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.628,
+      "speechEnd": 32.665,
+      "end": 32.895,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "18.5億ドルから20.5億ドルに下方修正し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.895,
+      "speechEnd": 37.842,
+      "end": 38.542,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "売上高成長目標も下方修正した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.542,
+      "speechEnd": 41.816,
+      "end": 42.046,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "タイソン・フーズは木曜日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.046,
+      "speechEnd": 49.014,
+      "end": 49.294,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "2026会計年度の調整後営業利益予想を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.294,
+      "speechEnd": 61.486,
+      "end": 61.986,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "当初の21億～23億ドルから18億5000万～20億5000万ドルに引き下げた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.986,
+      "speechEnd": 68.187,
+      "end": 68.327,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "通年の売上高成長率予想も2.5～"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.327,
+      "speechEnd": 70.696,
+      "end": 70.836,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "3.5％"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.836,
+      "speechEnd": 75.991,
+      "end": 76.491,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "から1.5～2％に引き下げられた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.491,
+      "speechEnd": 85.479,
+      "end": 85.709,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同社が業績予想を下方修正するのはこの１カ月で２回目で、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 85.709,
+      "speechEnd": 91.004,
+      "end": 91.624,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "この報道を受けて株価は大きく圧迫された。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.624,
+      "speechEnd": 95.247,
+      "end": 95.477,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同社は圧力の原因として、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 95.477,
+      "speechEnd": 99.17,
+      "end": 99.4,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国における牛の供給逼迫、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.4,
+      "speechEnd": 102.326,
+      "end": 102.556,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "生体牛価格の変動、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.556,
+      "speechEnd": 106.945,
+      "end": 107.445,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "牛肉事業の利益圧縮を挙げている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.445,
+      "speechEnd": 112.67,
+      "end": 112.9,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国の食肉加工業者はこれまで、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.9,
+      "speechEnd": 120.146,
+      "end": 120.376,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "牛の供給不足を理由に生産能力を調整しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.376,
+      "speechEnd": 129.921,
+      "end": 130.201,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "政府も一部の低関税牛肉の輸入を増やすことで小売価格の圧力を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 130.201,
+      "speechEnd": 133.476,
+      "end": 133.706,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "緩和しようとしており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 133.706,
+      "speechEnd": 140.325,
+      "end": 140.605,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "供給問題が企業利益と消費者物価の両方に影響を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 140.605,
+      "speechEnd": 144.227,
+      "end": 144.848,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "与えていることを示している。"
+    },
+    {
+      "parentKey": "why",
+      "start": 144.848,
+      "speechEnd": 148.819,
+      "end": 149.319,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 149.319,
+      "speechEnd": 152.175,
+      "end": 152.405,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "大手食品会社は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 152.405,
+      "speechEnd": 159.372,
+      "end": 159.603,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "牛肉の供給逼迫が単なる小売価格の問題ではなく、"
+    },
+    {
+      "parentKey": "why",
+      "start": 159.603,
+      "speechEnd": 166.918,
+      "end": 167.148,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "加工会社の利益を直接的に侵食していることを反映し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 167.148,
+      "speechEnd": 170.353,
+      "end": 171.053,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "再び指針を引き下げた。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 171.053,
+      "speechEnd": 173.143,
+      "end": 173.373,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 173.373,
+      "speechEnd": 177.344,
+      "end": 177.574,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "タイソンの牛肉事業の損失、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 177.574,
+      "speechEnd": 179.943,
+      "end": 180.173,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "工場のリストラ、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 180.173,
+      "speechEnd": 182.681,
+      "end": 182.911,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "生体牛の価格、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 182.911,
+      "speechEnd": 189.112,
+      "end": 189.392,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "米国産牛肉の輸入政策にさらなる調整が"
+    },
+    {
+      "parentKey": "watch",
+      "start": 189.392,
+      "speechEnd": 194.199,
+      "end": 194.9,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "行われるかどうかに注目してください。"
+    }
+  ]
+}
