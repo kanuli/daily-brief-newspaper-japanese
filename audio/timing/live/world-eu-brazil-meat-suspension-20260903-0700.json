@@ -1,0 +1,430 @@
+{
+  "version": 3,
+  "duration": 199.837,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 590,
+  "charactersPerMinute": 177.1,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.704,
+      "text": "9月3日からのEUによるブラジルの食肉抗菌薬の輸入停止規制コンプライアンス保証が不十分"
+    },
+    {
+      "key": "dek",
+      "start": 14.704,
+      "end": 33.133,
+      "text": "新しいEU規則が施行され、ブラジルは抗菌薬の要件を満たす第三国のリストに含まれていません。EUもブラジルの審査を進めています。"
+    },
+    {
+      "key": "body-0",
+      "start": 33.133,
+      "end": 85.837,
+      "text": "輸入動物および動物製品の抗菌剤に関するEU規則は、9月3日に正式に申請段階に入りました。欧州委員会は、輸出国は自国の生産システムが特定の抗菌薬による成長促進のEU禁止の要件を満たしていることを証明する必要があると述べた。ブラジルは現在、規則を満たしている第三国のリストに含まれていないため、関連する欧州への食肉輸出は一時停止される。"
+    },
+    {
+      "key": "body-1",
+      "start": 85.837,
+      "end": 137.887,
+      "text": "同時に、EUは、監査人がブラジルでオンサイトレビューを実施していることを指摘した。つまり、フォローアップ調整の余地がまだあることを意味する。ブラジルは牛肉と家禽の世界的な主要輸出国であり、制限が続く場合、輸出業者は供給を再分配する必要があるかもしれませんが、ヨーロッパのバイヤーは他の供給源からの購入を増やすかもしれません。"
+    },
+    {
+      "key": "why",
+      "start": 137.887,
+      "end": 171.929,
+      "text": "この措置は、食品の安全性、ブラジルの農産物輸出、およびヨーロッパの食肉サプライチェーンにも影響を及ぼします。より長く続くと、世界の食肉貿易の流れの一部が変わる可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 171.929,
+      "end": 199.837,
+      "text": "ブラジルでのEUの監査結果、ブラジルが新しいコンプライアンス保証を提出しているかどうか、牛肉、家禽価格、その他の輸出市場に対する制限の影響に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 14.004,
+      "end": 14.704,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "9月3日からのEUによるブラジルの食肉抗菌薬の輸入停止規制コンプライアンス保証が不十分。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.704,
+      "speechEnd": 18.466,
+      "end": 18.696,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "新しいEU規則が施行され、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.696,
+      "speechEnd": 27.474,
+      "end": 27.974,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "ブラジルは抗菌薬の要件を満たす第三国のリストに含まれていません。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.974,
+      "speechEnd": 32.433,
+      "end": 33.133,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "EUもブラジルの審査を進めています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 33.133,
+      "speechEnd": 40.588,
+      "end": 40.818,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "輸入動物および動物製品の抗菌剤に関するEU規則は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.818,
+      "speechEnd": 46.949,
+      "end": 47.449,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "9月3日に正式に申請段階に入りました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.449,
+      "speechEnd": 50.166,
+      "end": 50.396,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "欧州委員会は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.396,
+      "speechEnd": 54.507,
+      "end": 54.787,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "輸出国は自国の生産システムが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.787,
+      "speechEnd": 68.024,
+      "end": 68.524,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "特定の抗菌薬による成長促進のEU禁止の要件を満たしていることを証明する必要があると述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.524,
+      "speechEnd": 71.241,
+      "end": 71.471,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ブラジルは現在、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.471,
+      "speechEnd": 78.508,
+      "end": 78.738,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "規則を満たしている第三国のリストに含まれていないため、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 78.738,
+      "speechEnd": 85.217,
+      "end": 85.837,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "関連する欧州への食肉輸出は一時停止される。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 85.837,
+      "speechEnd": 87.997,
+      "end": 88.227,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同時に、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.227,
+      "speechEnd": 90.247,
+      "end": 90.477,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "EUは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.477,
+      "speechEnd": 95.354,
+      "end": 95.634,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "監査人がブラジルでオンサイトレビューを"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 95.634,
+      "speechEnd": 99.466,
+      "end": 99.966,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "実施していることを指摘した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.966,
+      "speechEnd": 101.986,
+      "end": 102.216,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "つまり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.216,
+      "speechEnd": 108.626,
+      "end": 109.126,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "フォローアップ調整の余地がまだあることを意味する。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.126,
+      "speechEnd": 116.72,
+      "end": 116.95,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ブラジルは牛肉と家禽の世界的な主要輸出国であり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 116.95,
+      "speechEnd": 119.667,
+      "end": 119.897,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "制限が続く場合、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 119.897,
+      "speechEnd": 127.909,
+      "end": 128.139,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "輸出業者は供給を再分配する必要があるかもしれませんが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 128.139,
+      "speechEnd": 133.992,
+      "end": 134.272,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ヨーロッパのバイヤーは他の供給源からの購入を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 134.272,
+      "speechEnd": 137.267,
+      "end": 137.887,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "増やすかもしれません。"
+    },
+    {
+      "parentKey": "why",
+      "start": 137.887,
+      "speechEnd": 141.859,
+      "end": 142.359,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 142.359,
+      "speechEnd": 144.727,
+      "end": 144.957,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この措置は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 144.957,
+      "speechEnd": 147.744,
+      "end": 147.974,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "食品の安全性、"
+    },
+    {
+      "parentKey": "why",
+      "start": 147.974,
+      "speechEnd": 151.458,
+      "end": 151.688,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ブラジルの農産物輸出、"
+    },
+    {
+      "parentKey": "why",
+      "start": 151.688,
+      "speechEnd": 159.491,
+      "end": 159.991,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "およびヨーロッパの食肉サプライチェーンにも影響を及ぼします。"
+    },
+    {
+      "parentKey": "why",
+      "start": 159.991,
+      "speechEnd": 162.778,
+      "end": 163.008,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "より長く続くと、"
+    },
+    {
+      "parentKey": "why",
+      "start": 163.008,
+      "speechEnd": 171.229,
+      "end": 171.929,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "世界の食肉貿易の流れの一部が変わる可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 171.929,
+      "speechEnd": 174.019,
+      "end": 174.249,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 174.249,
+      "speechEnd": 178.15,
+      "end": 178.38,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ブラジルでのEUの監査結果、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 178.38,
+      "speechEnd": 183.466,
+      "end": 183.746,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ブラジルが新しいコンプライアンス保証を"
+    },
+    {
+      "parentKey": "watch",
+      "start": 183.746,
+      "speechEnd": 186.881,
+      "end": 187.111,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "提出しているかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 187.111,
+      "speechEnd": 189.132,
+      "end": 189.362,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "牛肉、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 189.362,
+      "speechEnd": 191.522,
+      "end": 191.752,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "家禽価格、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 191.752,
+      "speechEnd": 199.137,
+      "end": 199.837,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "その他の輸出市場に対する制限の影響に注目してください。"
+    }
+  ]
+}

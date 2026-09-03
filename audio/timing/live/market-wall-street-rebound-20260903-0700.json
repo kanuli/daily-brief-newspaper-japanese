@@ -1,0 +1,450 @@
+{
+  "version": 3,
+  "duration": 214.727,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 638,
+  "charactersPerMinute": 178.3,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 16.608,
+      "text": "米国株はトリプルディップテクノロジー株を終えてリバウンドを牽引、10年米国債利回りは4.78 ％に低下"
+    },
+    {
+      "key": "dek",
+      "start": 16.608,
+      "end": 41.333,
+      "text": "S&P 500はNACで0.5 ％、ダウで0.6 ％上昇した。NVIDIAは3 ％以上上昇したが、原油価格と政府債務リスクは依然として市場のリスク選好を圧迫した。"
+    },
+    {
+      "key": "body-0",
+      "start": 41.333,
+      "end": 102.587,
+      "text": "ウォール街は9月2日に3日連続の下落を終えた。S&P 500は7,666.60ポイントで0.5 ％上昇した。ダウは295.07ポイント上昇して53,061.95ポイントとなり、0.6 ％上昇した。NASDAQコンポジットインデックスは0.5 ％上昇した。Nvidiaは3 ％以上上昇し、大規模なテクノロジー株がメインのバックストップとなり、Russell 2000 Small Cap Indexは1.1 ％上昇しました。"
+    },
+    {
+      "key": "body-1",
+      "start": 102.587,
+      "end": 157.922,
+      "text": "債券市場では、米国10年国債利回りが前日の約4.79 ％から4.78 ％に微減し、評価圧力が一時的に緩和されたが、ブレント原油は1バレルあたり約95.63ドルのままだった。今週、市場の焦点が米国の雇用データとそれに続くインフレデータに移行しているため、投資家は依然としてエネルギー価格、財政リスク、FRBの政策方向性を評価する必要があります。"
+    },
+    {
+      "key": "why",
+      "start": 157.922,
+      "end": 183.075,
+      "text": "テック株の上昇を維持する能力は、長期金利と安定した原油価格に依存します。雇用とインフレのデータもまた、9月の金利予想を直接変えるでしょう。"
+    },
+    {
+      "key": "watch",
+      "start": 183.075,
+      "end": 214.727,
+      "text": "米国の非農業部門の雇用者数、10年間の米国金利が最近の高値を上回っているかどうか、原油価格のトレンド、NVIDIAのような大手テック株が引き続き上昇し続けることができるかどうかに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 5.086,
+      "end": 5.366,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "米国株はトリプルディップテクノロジー株を"
+    },
+    {
+      "parentKey": "title",
+      "start": 5.366,
+      "speechEnd": 8.711,
+      "end": 8.941,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "終えてリバウンドを牽引、"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.941,
+      "speechEnd": 15.908,
+      "end": 16.608,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "10年米国債利回りは4.78 ％に低下。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.608,
+      "speechEnd": 21.137,
+      "end": 21.367,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "S&P 500はNACで0.5 ％、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.367,
+      "speechEnd": 25.199,
+      "end": 25.7,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "ダウで0.6 ％上昇した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.7,
+      "speechEnd": 30.995,
+      "end": 31.225,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "NVIDIAは3 ％以上上昇したが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 31.225,
+      "speechEnd": 35.405,
+      "end": 35.685,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "原油価格と政府債務リスクは"
+    },
+    {
+      "parentKey": "dek",
+      "start": 35.685,
+      "speechEnd": 40.632,
+      "end": 41.333,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "依然として市場のリスク選好を圧迫した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.333,
+      "speechEnd": 49.066,
+      "end": 49.567,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "ウォール街は9月2日に3日連続の下落を終えた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.567,
+      "speechEnd": 52.702,
+      "end": 52.932,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "S&P 500は7,"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.932,
+      "speechEnd": 59.76,
+      "end": 60.26,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "666.60ポイントで0.5 ％上昇した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.26,
+      "speechEnd": 67.088,
+      "end": 67.318,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ダウは295.07ポイント上昇して53,"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.318,
+      "speechEnd": 71.708,
+      "end": 71.938,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "061.95ポイントとなり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.938,
+      "speechEnd": 75.143,
+      "end": 75.643,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "0.6 ％上昇した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.643,
+      "speechEnd": 81.914,
+      "end": 82.414,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "NASDAQコンポジットインデックスは0.5 ％上昇した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 82.414,
+      "speechEnd": 87.082,
+      "end": 87.312,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Nvidiaは3 ％以上上昇し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 87.312,
+      "speechEnd": 93.165,
+      "end": 93.395,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "大規模なテクノロジー株がメインのバックストップとなり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 93.395,
+      "speechEnd": 98.203,
+      "end": 98.483,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "Russell 2000 Small Cap Indexは"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 98.483,
+      "speechEnd": 101.966,
+      "end": 102.587,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "1.1 ％上昇しました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.587,
+      "speechEnd": 104.955,
+      "end": 105.186,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "債券市場では、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 105.186,
+      "speechEnd": 116.961,
+      "end": 117.191,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国10年国債利回りが前日の約4.79 ％から4.78 ％に微減し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.191,
+      "speechEnd": 121.998,
+      "end": 122.228,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "評価圧力が一時的に緩和されたが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 122.228,
+      "speechEnd": 131.425,
+      "end": 131.925,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "ブレント原油は1バレルあたり約95.63ドルのままだった。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 131.925,
+      "speechEnd": 133.946,
+      "end": 134.176,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今週、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 134.176,
+      "speechEnd": 143.513,
+      "end": 143.743,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "市場の焦点が米国の雇用データとそれに続くインフレデータに移行しているため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 143.743,
+      "speechEnd": 148.341,
+      "end": 148.571,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "投資家は依然としてエネルギー価格、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 148.571,
+      "speechEnd": 150.87,
+      "end": 151.101,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "財政リスク、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 151.101,
+      "speechEnd": 157.302,
+      "end": 157.922,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "FRBの政策方向性を評価する必要があります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 157.922,
+      "speechEnd": 161.893,
+      "end": 162.393,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 162.393,
+      "speechEnd": 166.574,
+      "end": 166.804,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "テック株の上昇を維持する能力は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 166.804,
+      "speechEnd": 172.866,
+      "end": 173.366,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "長期金利と安定した原油価格に依存します。"
+    },
+    {
+      "parentKey": "why",
+      "start": 173.366,
+      "speechEnd": 176.78,
+      "end": 177.01,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "雇用とインフレのデータもまた、"
+    },
+    {
+      "parentKey": "why",
+      "start": 177.01,
+      "speechEnd": 182.375,
+      "end": 183.075,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "9月の金利予想を直接変えるでしょう。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 183.075,
+      "speechEnd": 185.165,
+      "end": 185.395,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 185.395,
+      "speechEnd": 190.272,
+      "end": 190.503,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国の非農業部門の雇用者数、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 190.503,
+      "speechEnd": 198.445,
+      "end": 198.676,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "10年間の米国金利が最近の高値を上回っているかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 198.676,
+      "speechEnd": 201.95,
+      "end": 202.18,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "原油価格のトレンド、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 202.18,
+      "speechEnd": 206.221,
+      "end": 206.501,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "NVIDIAのような大手テック株が"
+    },
+    {
+      "parentKey": "watch",
+      "start": 206.501,
+      "speechEnd": 214.026,
+      "end": 214.727,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "引き続き上昇し続けることができるかどうかに注目してください。"
+    }
+  ]
+}
