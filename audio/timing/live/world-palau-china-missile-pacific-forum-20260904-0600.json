@@ -1,0 +1,390 @@
+{
+  "version": 3,
+  "duration": 172.095,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 493,
+  "charactersPerMinute": 171.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 15.932,
+      "text": "パラオ、太平洋諸島諸国に中国のミサイル実験発射、北京のアンチフィンガー大騒動で統一を求める"
+    },
+    {
+      "key": "dek",
+      "start": 15.932,
+      "end": 37.717,
+      "text": "太平洋諸島フォーラムは、安全保障と台湾の関与に関する意見の相違を再確認し、中国の最近の太平洋弾道ミサイル実験がサミットの焦点となった。"
+    },
+    {
+      "key": "body-0",
+      "start": 37.717,
+      "end": 85.948,
+      "text": "開催国であるパラオの太平洋諸島フォーラムでは、スランジェル・ウィップス・ジュニア大統領が我々は、加盟国に対し、地域の主権、透明性及び安全を強調し、最近の中国の太平洋での弾道ミサイル実験について統一的な声明を出すよう求める。中国は、銃撃は安全であると回答し、パラオが事件を政治化したと批判した。"
+    },
+    {
+      "key": "body-1",
+      "start": 85.948,
+      "end": 123.294,
+      "text": "首脳会談は台湾の参加や中国の影響力問題にも牽引され、多くの島嶼国の代表レベルも懸念された。最近、米国とオーストラリアは同時に太平洋の安全保障とインフラへの投資を増やしており、このフォーラムは大国が競争するための外交的な場となっています。"
+    },
+    {
+      "key": "why",
+      "start": 123.294,
+      "end": 150.707,
+      "text": "軍事活動の透明性に関する地域の共通の立場は、太平洋における中国、米国、オーストラリア、台湾の外交・安全保障情勢に影響を与える。"
+    },
+    {
+      "key": "watch",
+      "start": 150.707,
+      "end": 172.095,
+      "text": "フォーラムの最終的なコミュニケ、島嶼国がミサイル実験に共同で言及したかどうか、そして中国のその後の外交対応に注意を払ってください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.021,
+      "end": 2.251,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "パラオ、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.251,
+      "speechEnd": 9.149,
+      "end": 9.379,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "太平洋諸島諸国に中国のミサイル実験発射、"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.379,
+      "speechEnd": 15.231,
+      "end": 15.932,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "北京のアンチフィンガー大騒動で統一を求める。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.932,
+      "speechEnd": 19.346,
+      "end": 19.576,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "太平洋諸島フォーラムは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.576,
+      "speechEnd": 27.101,
+      "end": 27.331,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "安全保障と台湾の関与に関する意見の相違を再確認し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.331,
+      "speechEnd": 33.741,
+      "end": 34.021,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "中国の最近の太平洋弾道ミサイル実験が"
+    },
+    {
+      "parentKey": "dek",
+      "start": 34.021,
+      "speechEnd": 37.017,
+      "end": 37.717,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "サミットの焦点となった。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.717,
+      "speechEnd": 44.267,
+      "end": 44.497,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "開催国であるパラオの太平洋諸島フォーラムでは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.497,
+      "speechEnd": 50.141,
+      "end": 50.371,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "スランジェル・ウィップス・ジュニア大統領が我々は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.371,
+      "speechEnd": 52.949,
+      "end": 53.179,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "加盟国に対し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.179,
+      "speechEnd": 55.618,
+      "end": 55.848,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "地域の主権、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.848,
+      "speechEnd": 60.377,
+      "end": 60.607,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "透明性及び安全を強調し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.607,
+      "speechEnd": 68.271,
+      "end": 68.551,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "最近の中国の太平洋での弾道ミサイル実験について"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.551,
+      "speechEnd": 73.08,
+      "end": 73.58,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "統一的な声明を出すよう求める。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.58,
+      "speechEnd": 75.74,
+      "end": 75.97,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中国は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.97,
+      "speechEnd": 79.942,
+      "end": 80.172,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "銃撃は安全であると回答し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 80.172,
+      "speechEnd": 85.328,
+      "end": 85.948,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "パラオが事件を政治化したと批判した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 85.948,
+      "speechEnd": 93.891,
+      "end": 94.121,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "首脳会談は台湾の参加や中国の影響力問題にも牽引され、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.121,
+      "speechEnd": 99.904,
+      "end": 100.404,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "多くの島嶼国の代表レベルも懸念された。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 100.404,
+      "speechEnd": 102.425,
+      "end": 102.655,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "最近、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.655,
+      "speechEnd": 113.873,
+      "end": 114.103,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国とオーストラリアは同時に太平洋の安全保障とインフラへの投資を増やしており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.103,
+      "speechEnd": 118.841,
+      "end": 119.121,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "このフォーラムは大国が競争するため"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 119.121,
+      "speechEnd": 122.674,
+      "end": 123.294,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "の外交的な場となっています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 123.294,
+      "speechEnd": 127.266,
+      "end": 127.766,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 127.766,
+      "speechEnd": 135.082,
+      "end": 135.312,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "軍事活動の透明性に関する地域の共通の立場は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 135.312,
+      "speechEnd": 138.726,
+      "end": 138.956,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "太平洋における中国、"
+    },
+    {
+      "parentKey": "why",
+      "start": 138.956,
+      "speechEnd": 140.977,
+      "end": 141.207,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国、"
+    },
+    {
+      "parentKey": "why",
+      "start": 141.207,
+      "speechEnd": 143.506,
+      "end": 143.736,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "オーストラリア、"
+    },
+    {
+      "parentKey": "why",
+      "start": 143.736,
+      "speechEnd": 150.007,
+      "end": 150.707,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "台湾の外交・安全保障情勢に影響を与える。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 150.707,
+      "speechEnd": 152.798,
+      "end": 153.028,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 153.028,
+      "speechEnd": 156.86,
+      "end": 157.09,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "フォーラムの最終的なコミュニケ、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 157.09,
+      "speechEnd": 163.918,
+      "end": 164.148,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "島嶼国がミサイル実験に共同で言及したかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 164.148,
+      "speechEnd": 171.395,
+      "end": 172.095,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "そして中国のその後の外交対応に注意を払ってください。"
+    }
+  ]
+}
