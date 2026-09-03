@@ -1,0 +1,310 @@
+{
+  "version": 3,
+  "duration": 143.177,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 420,
+  "charactersPerMinute": 176.0,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 10.385,
+      "text": "大阪「あべちか」劫案公開通緝疑犯被捕 涉刺傷女子後搶走手袋"
+    },
+    {
+      "key": "dek",
+      "start": 10.385,
+      "end": 30.817,
+      "text": "大阪府警が追跡していたベトナム人男が東京の入管関連施設に出頭した後逮捕された。この事件は公的指名手配から犯罪捜査の段階に移された。"
+    },
+    {
+      "key": "body-0",
+      "start": 30.817,
+      "end": 66.767,
+      "text": "大阪市天王寺区の地下街「あべちか」で女性を刃物で刺し、現金などが入ったハンドバッグを盗んだ疑いで、日本の警察はベトナム人の男を逮捕した。警察は以前から容疑者を公的に指名手配しており、この事件は強盗未遂と殺人の疑いで捜査されている。"
+    },
+    {
+      "key": "body-1",
+      "start": 66.767,
+      "end": 98.928,
+      "text": "日本のメディア報道によると、男はその後、東京の入管関連施設に現れ、居場所を把握した警察が逮捕した。捜査の焦点は、犯行動機や刃物や盗品の行方、大阪から東京への移動中に他人に幇助されたかどうかなどである。"
+    },
+    {
+      "key": "why",
+      "start": 98.928,
+      "end": 125.135,
+      "text": "容疑者が逮捕されれば、差し迫った公安のリスクが軽減され、警察は事件が単独で犯行に及んだかどうかをさらに明確にし、逃走経路を回復することができる。"
+    },
+    {
+      "key": "watch",
+      "start": 125.135,
+      "end": 143.177,
+      "text": "大阪府警の正式な逮捕容疑の発表や容疑者の自白、被害者の状態、検察の立件の有無に注目が集まる。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 9.685,
+      "end": 10.385,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "大阪「あべちか」劫案公開通緝疑犯被捕 涉刺傷女子後搶走手袋。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 10.385,
+      "speechEnd": 15.192,
+      "end": 15.472,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "大阪府警が追跡していたベトナム人男が"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.472,
+      "speechEnd": 21.464,
+      "end": 21.965,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "東京の入管関連施設に出頭した後逮捕された。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.965,
+      "speechEnd": 30.116,
+      "end": 30.817,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "この事件は公的指名手配から犯罪捜査の段階に移された。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 30.817,
+      "speechEnd": 40.223,
+      "end": 40.453,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "大阪市天王寺区の地下街「あべちか」で女性を刃物で刺し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.453,
+      "speechEnd": 46.305,
+      "end": 46.535,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "現金などが入ったハンドバッグを盗んだ疑いで、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.535,
+      "speechEnd": 51.97,
+      "end": 52.47,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "日本の警察はベトナム人の男を逮捕した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.47,
+      "speechEnd": 59.089,
+      "end": 59.319,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "警察は以前から容疑者を公的に指名手配しており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.319,
+      "speechEnd": 66.147,
+      "end": 66.767,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "この事件は強盗未遂と殺人の疑いで捜査されている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 66.767,
+      "speechEnd": 70.39,
+      "end": 70.62,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本のメディア報道によると、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 70.62,
+      "speechEnd": 72.92,
+      "end": 73.15,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "男はその後、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 73.15,
+      "speechEnd": 77.121,
+      "end": 77.351,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "東京の入管関連施設に現れ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 77.351,
+      "speechEnd": 81.671,
+      "end": 82.171,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "居場所を把握した警察が逮捕した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.171,
+      "speechEnd": 84.749,
+      "end": 84.979,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "捜査の焦点は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.979,
+      "speechEnd": 89.438,
+      "end": 89.668,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "犯行動機や刃物や盗品の行方、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 89.668,
+      "speechEnd": 98.308,
+      "end": 98.928,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "大阪から東京への移動中に他人に幇助されたかどうかなどである。"
+    },
+    {
+      "parentKey": "why",
+      "start": 98.928,
+      "speechEnd": 102.899,
+      "end": 103.4,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 103.4,
+      "speechEnd": 106.814,
+      "end": 107.044,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "容疑者が逮捕されれば、"
+    },
+    {
+      "parentKey": "why",
+      "start": 107.044,
+      "speechEnd": 111.572,
+      "end": 111.803,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "差し迫った公安のリスクが軽減され、"
+    },
+    {
+      "parentKey": "why",
+      "start": 111.803,
+      "speechEnd": 119.885,
+      "end": 120.115,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "警察は事件が単独で犯行に及んだかどうかをさらに明確にし、"
+    },
+    {
+      "parentKey": "why",
+      "start": 120.115,
+      "speechEnd": 124.435,
+      "end": 125.135,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "逃走経路を回復することができる。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 125.135,
+      "speechEnd": 127.225,
+      "end": 127.455,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 127.455,
+      "speechEnd": 134.98,
+      "end": 135.21,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "大阪府警の正式な逮捕容疑の発表や容疑者の自白、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 135.21,
+      "speechEnd": 137.857,
+      "end": 138.088,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "被害者の状態、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 138.088,
+      "speechEnd": 142.477,
+      "end": 143.177,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "検察の立件の有無に注目が集まる。"
+    }
+  ]
+}
