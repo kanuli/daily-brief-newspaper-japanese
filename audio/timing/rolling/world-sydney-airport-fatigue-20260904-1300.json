@@ -1,0 +1,390 @@
+{
+  "version": 3,
+  "duration": 177.502,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 527,
+  "charactersPerMinute": 178.1,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 15.705,
+      "text": "シドニー空港で衝突寸前、航空管制疲労のリスクが明らかに、勤務中の10人中5人が高リスクに分類"
+    },
+    {
+      "key": "dek",
+      "start": 15.705,
+      "end": 34.615,
+      "text": "ロイターが取得した內部紀錄示、7 月 27 日の架台Qantas 客機跑道衝突時、多名空管員すでに系統標示為高疲労勞風險。"
+    },
+    {
+      "key": "body-0",
+      "start": 34.615,
+      "end": 81.039,
+      "text": "ロイターが入手した内部記録によると、7月27日にカンタス航空の飛行機がシドニー空港付近で墜落したとき、勤務中の10人の航空管制官のうち5人が疲労リスクが高く、1人が中程度のリスクに分類された。事故に直接関与した3人のコントローラーのうち、2人は高リスク、1人は中リスクです。"
+    },
+    {
+      "key": "body-1",
+      "start": 81.039,
+      "end": 129.462,
+      "text": "オーストラリア運輸安全局（ ATSB ）は、事故にはDHC -8とボーイング737の滑走路調整エラーが関与していることを確認し、事故を深刻な事故として挙げています。この事件はまた、世界中の複数の地上の航空管制官の人員が逼迫しており、任務スケジューリングと疲労管理が再び航空安全の焦点となっている時代にも発生しました。"
+    },
+    {
+      "key": "why",
+      "start": 129.462,
+      "end": 154.488,
+      "text": "疲労と人員不足が組織的な要因であることが判明した場合、オーストラリアの航空管制スケジュールとリスク管理システムを調整する必要があるかもしれない。"
+    },
+    {
+      "key": "watch",
+      "start": 154.488,
+      "end": 177.502,
+      "text": "ATSBの調査の進捗状況、オーストラリア航空の人員とスケジュール対策、そして同様の滑走路侵入事件が再び起こるかどうかに注目してほしい。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.484,
+      "end": 3.764,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "シドニー空港で衝突寸前、"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.764,
+      "speechEnd": 8.363,
+      "end": 8.643,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "航空管制疲労のリスクが明らかに、"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.643,
+      "speechEnd": 14.845,
+      "end": 15.705,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "勤務中の10人中5人が高リスクに分類。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.705,
+      "speechEnd": 19.398,
+      "end": 19.678,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイターが取得した內部紀錄示、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.678,
+      "speechEnd": 27.622,
+      "end": 27.902,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "7 月 27 日の架台Qantas 客機跑道衝突時、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.902,
+      "speechEnd": 33.755,
+      "end": 34.615,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "多名空管員すでに系統標示為高疲労勞風險。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.615,
+      "speechEnd": 39.284,
+      "end": 39.564,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイターが入手した内部記録によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.564,
+      "speechEnd": 45.417,
+      "end": 45.757,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "7月27日にカンタス航空の飛行機が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.757,
+      "speechEnd": 50.147,
+      "end": 50.427,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "シドニー空港付近で墜落したとき、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.427,
+      "speechEnd": 56.21,
+      "end": 56.39,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "勤務中の10人の航空管制官のうち"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.39,
+      "speechEnd": 58.411,
+      "end": 58.591,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "5人"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.591,
+      "speechEnd": 61.448,
+      "end": 61.728,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "が疲労リスクが高く、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.728,
+      "speechEnd": 66.536,
+      "end": 67.156,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "1人が中程度のリスクに分類された。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.156,
+      "speechEnd": 73.915,
+      "end": 74.195,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "事故に直接関与した3人のコントローラーのうち、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.195,
+      "speechEnd": 76.843,
+      "end": 77.123,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "2人は高リスク、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 77.123,
+      "speechEnd": 80.259,
+      "end": 81.039,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "1人は中リスクです。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 81.039,
+      "speechEnd": 85.847,
+      "end": 86.127,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "オーストラリア運輸安全局（ ATSB ）は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 86.127,
+      "speechEnd": 94.628,
+      "end": 94.968,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "事故にはDHC -8とボーイング737の滑走路調整エラーが"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.968,
+      "speechEnd": 98.661,
+      "end": 98.941,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "関与していることを確認し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 98.941,
+      "speechEnd": 104.167,
+      "end": 104.787,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "事故を深刻な事故として挙げています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.787,
+      "speechEnd": 107.435,
+      "end": 107.715,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この事件はまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.715,
+      "speechEnd": 116.356,
+      "end": 116.636,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "世界中の複数の地上の航空管制官の人員が逼迫しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 116.636,
+      "speechEnd": 120.747,
+      "end": 121.087,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "任務スケジューリングと疲労管理が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.087,
+      "speechEnd": 128.682,
+      "end": 129.462,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "再び航空安全の焦点となっている時代にも発生しました。"
+    },
+    {
+      "parentKey": "why",
+      "start": 129.462,
+      "speechEnd": 133.434,
+      "end": 134.054,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 134.054,
+      "speechEnd": 141.998,
+      "end": 142.278,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "疲労と人員不足が組織的な要因であることが判明した場合、"
+    },
+    {
+      "parentKey": "why",
+      "start": 142.278,
+      "speechEnd": 149.037,
+      "end": 149.377,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "オーストラリアの航空管制スケジュールとリスク管理システムを"
+    },
+    {
+      "parentKey": "why",
+      "start": 149.377,
+      "speechEnd": 153.627,
+      "end": 154.488,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "調整する必要があるかもしれない。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 154.488,
+      "speechEnd": 156.578,
+      "end": 156.858,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 156.858,
+      "speechEnd": 160.691,
+      "end": 160.971,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ATSBの調査の進捗状況、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 160.971,
+      "speechEnd": 166.127,
+      "end": 166.407,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "オーストラリア航空の人員とスケジュール対策、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 166.407,
+      "speechEnd": 171.285,
+      "end": 171.625,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "そして同様の滑走路侵入事件が"
+    },
+    {
+      "parentKey": "watch",
+      "start": 171.625,
+      "speechEnd": 176.642,
+      "end": 177.502,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "再び起こるかどうかに注目してほしい。"
+    }
+  ]
+}
