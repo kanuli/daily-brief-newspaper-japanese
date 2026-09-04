@@ -1,0 +1,58 @@
+name: Voice Furigana Production Probe
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Syntax check new feature code
+        run: |
+          python -m py_compile scripts/sync_and_translate.py scripts/generate_supertonic_f3.py scripts/validate_site.py scripts/auto_repair_site.py
+          node --check assets/js/newspaper-ja.js
+          node --check assets/js/system-ja.js
+      - name: Show production workers
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: kanuli/daily-brief-newspaper-japanese
+        run: |
+          echo '=== F3 REBUILD ==='
+          gh run list --repo "$REPO" --workflow rebuild-f3-pacing.yml --branch main --limit 8 --json databaseId,status,conclusion,headSha,createdAt,updatedAt
+          echo '=== SYNC ==='
+          gh run list --repo "$REPO" --workflow sync-japanese-news.yml --branch main --limit 8 --json databaseId,status,conclusion,headSha,createdAt,updatedAt
+          echo '=== PAGES ==='
+          gh run list --repo "$REPO" --workflow pages.yml --branch main --limit 8 --json databaseId,status,conclusion,headSha,createdAt,updatedAt
+          echo '=== MAINTENANCE ==='
+          gh run list --repo "$REPO" --workflow auto-maintenance.yml --branch main --limit 8 --json databaseId,status,conclusion,headSha,createdAt,updatedAt
+      - name: Inspect current production feature output
+        run: |
+          git fetch origin main
+          git checkout origin/main -- data audio || true
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          latest=json.loads(Path('data/latest.json').read_text(encoding='utf-8'))
+          first=(latest.get('articles') or [{}])[0]
+          print('HAS_FURIGANA', isinstance(first.get('furigana'),dict))
+          print('AUDIO_SPEED', first.get('audioSpeed'))
+          print('DELIVERY_PROFILE',first.get('audioDeliveryProfile'))
+          print('TIMING_PATH', first.get('timing'))
+          timing=Path(str(first.get('timing') or ''))
+          print('TIMING_EXISTS', timing.is_file())
+          if timing.is_file():
+              t=json.loads(timing.read_text(encoding='utf-8'))
+              print('TIMING_SPEED',t.get('speed'),'PROFILE',t.get('deliveryProfile'),'CPM',t.get('charactersPerMinute'),'TARGET',t.get('targetMaxCharactersPerMinute'),'SEGMENTS',len(t.get('segments') or []),'UNITS',len(t.get('semanticUnits') or []),'DURATION',t.get('duration'))
+              reasons=sorted({str(u.get('reason')) for u in (t.get('semanticUnits') or [])})
+              pauses=[(u.get('pause'),u.get('intendedPause')) for u in (t.get('semanticUnits') or []) if float(u.get('intendedPause') or 0)>0]
+              max_drift=max((abs(float(a)-float(b)) for a,b in pauses),default=0)
+              print('PAUSE_REASONS',','.join(reasons))
+              print('MAX_PAUSE_DRIFT',round(max_drift,4))
+          PY
+      # v4 fixed-pause refresh
