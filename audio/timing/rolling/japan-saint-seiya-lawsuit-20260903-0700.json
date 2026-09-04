@@ -1,0 +1,450 @@
+{
+  "version": 3,
+  "duration": 211.304,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 622,
+  "charactersPerMinute": 176.6,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 10.139,
+      "text": "聖闘士星矢の元マネージャーが28億円以上の資金を流用"
+    },
+    {
+      "key": "dek",
+      "start": 10.139,
+      "end": 39.013,
+      "text": "Chejia Zhengmeiの下の3つの会社は、コミックIPとクリエイター会社の両方のガバナンスリスクを伴う、元マネージャーや他の人による長期間にわたる会社資金の中断のない使用を参照して、民事訴訟を提起しました。"
+    },
+    {
+      "key": "body-0",
+      "start": 39.013,
+      "end": 94.699,
+      "text": "9月2日、『聖闘士星矢』、『リング・ニ・カケロ』等の著者であるチャ・ティアン・ゼンメイの関連会社は、会社の資金を長期間にわたって流用した疑いで、28億円以上の請求額で元管理者および関連者に対して民事訴訟を提起したと発表した。日本の複数のメディアは、同社が申し立てによって引き起こされた全体的な損害がより大きく、訴訟はまだ裁判所で保留中であると述べたと報じた。"
+    },
+    {
+      "key": "body-1",
+      "start": 94.699,
+      "end": 147.313,
+      "text": "元田正美は記者会見で、この事件は彼の信頼に大きな打撃を与えたと語った。本件は、個人及び会社の財務上の負債に加えて、長期的なコミックIP運用における著作権収入、会社の資金管理及び内部統制の問題にも触れており、現在、公開情報は主に原告側からのものであり、関連する負債は依然として司法手続によって決定される必要がある。"
+    },
+    {
+      "key": "why",
+      "start": 147.313,
+      "end": 186.478,
+      "text": "大規模なクリエイターIPの背後にある企業のガバナンスと資金管理は、著作権所有者、パートナー企業、および長期ライセンス事業に直接影響を与えます。ケースはまた、業界が財務モニタリングを再検討することを促す可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 186.478,
+      "end": 211.304,
+      "text": "被告の対応、東京地区裁判の進捗状況、実際の損害賠償額の判断、本件が関連する著作物及びライセンス事業に影響を及ぼすかどうかに留意する。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.623,
+      "end": 3.803,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "聖闘士星矢の元マネージャーが"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.803,
+      "speechEnd": 6.033,
+      "end": 6.213,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "28億円"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.213,
+      "speechEnd": 9.279,
+      "end": 10.139,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "以上の資金を流用。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 10.139,
+      "speechEnd": 15.295,
+      "end": 15.575,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Chejia Zhengmeiの下の3つの会社は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.575,
+      "speechEnd": 22.612,
+      "end": 22.892,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "コミックIPとクリエイター会社の両方のガバナンスリスクを伴う、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.892,
+      "speechEnd": 34.041,
+      "end": 34.321,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "元マネージャーや他の人による長期間にわたる会社資金の中断のない使用を参照して、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 34.321,
+      "speechEnd": 38.153,
+      "end": 39.013,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "民事訴訟を提起しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.013,
+      "speechEnd": 41.521,
+      "end": 41.801,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "9月2日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.801,
+      "speechEnd": 44.17,
+      "end": 44.451,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "『聖闘士星矢』、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.451,
+      "speechEnd": 52.812,
+      "end": 53.092,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "『リング・ニ・カケロ』等の著者であるチャ・ティアン・ゼンメイの関連会社は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.092,
+      "speechEnd": 59.502,
+      "end": 59.782,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "会社の資金を長期間にわたって流用した疑いで、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.782,
+      "speechEnd": 73.369,
+      "end": 73.989,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "28億円以上の請求額で元管理者および関連者に対して民事訴訟を提起したと発表した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.989,
+      "speechEnd": 77.334,
+      "end": 77.614,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本の複数のメディアは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 77.614,
+      "speechEnd": 86.532,
+      "end": 86.812,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同社が申し立てによって引き起こされた全体的な損害がより大きく、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 86.812,
+      "speechEnd": 93.919,
+      "end": 94.699,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "訴訟はまだ裁判所で保留中であると述べたと報じた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.699,
+      "speechEnd": 98.323,
+      "end": 98.603,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "元田正美は記者会見で、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 98.603,
+      "speechEnd": 105.919,
+      "end": 106.539,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "この事件は彼の信頼に大きな打撃を与えたと語った。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 106.539,
+      "speechEnd": 108.629,
+      "end": 108.909,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "本件は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.909,
+      "speechEnd": 114.762,
+      "end": 115.042,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "個人及び会社の財務上の負債に加えて、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.042,
+      "speechEnd": 121.104,
+      "end": 121.384,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "長期的なコミックIP運用における著作権収入、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.384,
+      "speechEnd": 128.979,
+      "end": 129.259,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "会社の資金管理及び内部統制の問題にも触れており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 129.259,
+      "speechEnd": 131.279,
+      "end": 131.559,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "現在、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 131.559,
+      "speechEnd": 137.482,
+      "end": 137.762,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "公開情報は主に原告側からのものであり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 137.762,
+      "speechEnd": 142.988,
+      "end": 143.328,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "関連する負債は依然として司法手続によって"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 143.328,
+      "speechEnd": 146.533,
+      "end": 147.313,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "決定される必要がある。"
+    },
+    {
+      "parentKey": "why",
+      "start": 147.313,
+      "speechEnd": 151.285,
+      "end": 151.905,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 151.905,
+      "speechEnd": 160.684,
+      "end": 160.964,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "大規模なクリエイターIPの背後にある企業のガバナンスと資金管理は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 160.964,
+      "speechEnd": 163.542,
+      "end": 163.822,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "著作権所有者、"
+    },
+    {
+      "parentKey": "why",
+      "start": 163.822,
+      "speechEnd": 166.261,
+      "end": 166.541,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "パートナー企業、"
+    },
+    {
+      "parentKey": "why",
+      "start": 166.541,
+      "speechEnd": 173.369,
+      "end": 173.989,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "および長期ライセンス事業に直接影響を与えます。"
+    },
+    {
+      "parentKey": "why",
+      "start": 173.989,
+      "speechEnd": 176.219,
+      "end": 176.499,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ケースはまた、"
+    },
+    {
+      "parentKey": "why",
+      "start": 176.499,
+      "speechEnd": 182.003,
+      "end": 182.343,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "業界が財務モニタリングを再検討することを"
+    },
+    {
+      "parentKey": "why",
+      "start": 182.343,
+      "speechEnd": 185.618,
+      "end": 186.478,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "促す可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 186.478,
+      "speechEnd": 188.569,
+      "end": 188.849,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 188.849,
+      "speechEnd": 191.148,
+      "end": 191.428,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "被告の対応、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 191.428,
+      "speechEnd": 195.4,
+      "end": 195.68,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "東京地区裁判の進捗状況、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 195.68,
+      "speechEnd": 199.303,
+      "end": 199.583,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "実際の損害賠償額の判断、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 199.583,
+      "speechEnd": 206.551,
+      "end": 206.891,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "本件が関連する著作物及びライセンス事業に影響を"
+    },
+    {
+      "parentKey": "watch",
+      "start": 206.891,
+      "speechEnd": 210.444,
+      "end": 211.304,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "及ぼすかどうかに留意する。"
+    }
+  ]
+}
