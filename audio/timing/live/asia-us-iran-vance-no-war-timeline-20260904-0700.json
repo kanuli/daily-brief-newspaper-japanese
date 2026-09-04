@@ -1,0 +1,380 @@
+{
+  "version": 3,
+  "duration": 174.707,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 526,
+  "charactersPerMinute": 180.6,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 16.559,
+      "text": "バンス氏は、米国とイランの紛争は現段階では「戦争」ではないと述べ、終結の期限を設定することを拒否"
+    },
+    {
+      "key": "dek",
+      "start": 16.559,
+      "end": 42.826,
+      "text": "米国の副大統領は、主要な戦いは長い間終わったと述べたが、イランの船舶への攻撃は依然として状況を再開する可能性があり、ワシントンは当分の間交渉を再開しないと認めた。"
+    },
+    {
+      "key": "body-0",
+      "start": 42.826,
+      "end": 85.79,
+      "text": "J.D.ヴァンス米副大統領はホワイトハウスの説明会で、イランとの現在の紛争を「戦争」と呼ぶつもりはないと述べ、大規模な作戦がしばらく前から終わっているという事実を挙げた。しかし、彼はまた、状況が時折エスカレートすることを認め、紛争がいつ終わるかのスケジュールを設定することを拒否しました。"
+    },
+    {
+      "key": "body-1",
+      "start": 85.79,
+      "end": 124.343,
+      "text": "ヴァンス氏は、米国側は現在、ホルムズ海峡でのイランの海運と商船の脅威を阻止することに焦点を当てており、イランが関連する行動を停止するまで交渉を再開しないと述べた。米国とイランによる最近の攻撃は、原油価格と世界的なエネルギー供給リスクを再燃させた。"
+    },
+    {
+      "key": "why",
+      "start": 124.343,
+      "end": 153.019,
+      "text": "ワシントンが終了時間を設定することを拒否したことは、中東の安全保障と石油価格のリスクが世界市場と地域の軍事展開に影響を与え続ける可能性があることを意味する。"
+    },
+    {
+      "key": "watch",
+      "start": 153.019,
+      "end": 174.707,
+      "text": "イランが商船への攻撃を停止するかどうか、米国とイランが交渉を再開するかどうか、ホルムズの輸送量、その後の空爆に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.23,
+      "end": 2.46,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "バンス氏は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.46,
+      "speechEnd": 11.1,
+      "end": 11.33,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国とイランの紛争は現段階では「戦争」ではないと述べ、"
+    },
+    {
+      "parentKey": "title",
+      "start": 11.33,
+      "speechEnd": 15.859,
+      "end": 16.559,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "終結の期限を設定することを拒否。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.559,
+      "speechEnd": 19.764,
+      "end": 19.994,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国の副大統領は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.994,
+      "speechEnd": 25.917,
+      "end": 26.147,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "主要な戦いは長い間終わったと述べたが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.147,
+      "speechEnd": 31.721,
+      "end": 32.001,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "イランの船舶への攻撃は依然として状況を"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.001,
+      "speechEnd": 35.416,
+      "end": 35.646,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "再開する可能性があり、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 35.646,
+      "speechEnd": 42.126,
+      "end": 42.826,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "ワシントンは当分の間交渉を再開しないと認めた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.826,
+      "speechEnd": 49.236,
+      "end": 49.466,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "J.D.ヴァンス米副大統領はホワイトハウスの説明会で、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.466,
+      "speechEnd": 57.967,
+      "end": 58.197,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "イランとの現在の紛争を「戦争」と呼ぶつもりはないと述べ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.197,
+      "speechEnd": 66.419,
+      "end": 66.919,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "大規模な作戦がしばらく前から終わっているという事実を挙げた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.919,
+      "speechEnd": 68.94,
+      "end": 69.17,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "しかし、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.17,
+      "speechEnd": 71.26,
+      "end": 71.491,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "彼はまた、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.491,
+      "speechEnd": 76.507,
+      "end": 76.737,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "状況が時折エスカレートすることを認め、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.737,
+      "speechEnd": 81.197,
+      "end": 81.477,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "紛争がいつ終わるかのスケジュールを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 81.477,
+      "speechEnd": 85.17,
+      "end": 85.79,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "設定することを拒否しました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 85.79,
+      "speechEnd": 88.159,
+      "end": 88.389,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ヴァンス氏は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.389,
+      "speechEnd": 91.107,
+      "end": 91.337,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国側は現在、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.337,
+      "speechEnd": 97.817,
+      "end": 98.097,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ホルムズ海峡でのイランの海運と商船の脅威を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 98.097,
+      "speechEnd": 102.487,
+      "end": 102.717,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "阻止することに焦点を当てており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.717,
+      "speechEnd": 111.217,
+      "end": 111.717,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "イランが関連する行動を停止するまで交渉を再開しないと述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.717,
+      "speechEnd": 116.247,
+      "end": 116.477,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国とイランによる最近の攻撃は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 116.477,
+      "speechEnd": 123.723,
+      "end": 124.343,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "原油価格と世界的なエネルギー供給リスクを再燃させた。"
+    },
+    {
+      "parentKey": "why",
+      "start": 124.343,
+      "speechEnd": 128.315,
+      "end": 128.815,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 128.815,
+      "speechEnd": 135.922,
+      "end": 136.152,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ワシントンが終了時間を設定することを拒否したことは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 136.152,
+      "speechEnd": 141.936,
+      "end": 142.216,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "中東の安全保障と石油価格のリスクが"
+    },
+    {
+      "parentKey": "why",
+      "start": 142.216,
+      "speechEnd": 152.319,
+      "end": 153.019,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "世界市場と地域の軍事展開に影響を与え続ける可能性があることを意味する。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 153.019,
+      "speechEnd": 155.11,
+      "end": 155.34,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 155.34,
+      "speechEnd": 161.123,
+      "end": 161.353,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "イランが商船への攻撃を停止するかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 161.353,
+      "speechEnd": 166.509,
+      "end": 166.739,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国とイランが交渉を再開するかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 166.739,
+      "speechEnd": 169.457,
+      "end": 169.687,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ホルムズの輸送量、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 169.687,
+      "speechEnd": 174.007,
+      "end": 174.707,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "その後の空爆に注意してください。"
+    }
+  ]
+}

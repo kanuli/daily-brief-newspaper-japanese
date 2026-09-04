@@ -1,0 +1,410 @@
+{
+  "version": 3,
+  "duration": 189.309,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 604,
+  "charactersPerMinute": 191.4,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 16.001,
+      "text": "ロシア、ドイツのゲーテ・インスティテュートの本拠地ベルリンの閉鎖、モスクワでの文化的外交報復のエスカレーションを発表"
+    },
+    {
+      "key": "dek",
+      "start": 16.001,
+      "end": 42.03,
+      "text": "ロシア側は、ドイツのライプツィヒ空港でのドローン事件により、ロシア文化センターと領事館が閉鎖された後、モスクワ、サンクトペテルブルク、エカテリンブルクのゲーテ研究所を閉鎖すると発表した。"
+    },
+    {
+      "key": "body-0",
+      "start": 42.03,
+      "end": 86.735,
+      "text": "ロシアは、モスクワ、サンクトペテルブルク、エカテリンブルクにあるドイツのゲーテ・インスティテュートの文化センターの閉鎖を発表しました。セルゲイ・ラブロフ外相は、これはドイツがベルリンのロシア家文化センターとボンのロシア領事館を閉鎖したことへの対応であり、両国間の文化交流の経路がさらに狭まったことを意味すると述べた。"
+    },
+    {
+      "key": "body-1",
+      "start": 86.735,
+      "end": 134.21,
+      "text": "ドイツは以前、ライプチヒ/ハレー空港での爆発的なドローン事件についてロシアを非難し、外交的および文化的制限を発表した。ロシアは事件への関与を否定し、申し立ては政治的操作であると述べた。ヨーロッパ諸国はまた、最近、破壊工作、ドローン、混戦作戦の疑いでロシアへの外交圧力を強化している。"
+    },
+    {
+      "key": "why",
+      "start": 134.21,
+      "end": 166.041,
+      "text": "文化的・領事的チャネルの弱体化は、ドイツ・ロシア間の社会的交流や危機的なコミュニケーションをより困難にし、欧州・ロシア間の対立が軍事や制裁から市民制度にまで拡大していることを反映している。"
+    },
+    {
+      "key": "watch",
+      "start": 166.041,
+      "end": 189.309,
+      "text": "ゲーテ・インスティテュートの実際の閉鎖、ドイツがさらなる対抗措置を講じたかどうか、そしてロシアとの混合戦争の申し立てに対するEUの共同対応に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.021,
+      "end": 2.251,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロシア、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.251,
+      "speechEnd": 8.034,
+      "end": 8.264,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ドイツのゲーテ・インスティテュートの本拠地ベルリンの閉鎖、"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.264,
+      "speechEnd": 15.301,
+      "end": 16.001,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "モスクワでの文化的外交報復のエスカレーションを発表。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.001,
+      "speechEnd": 18.301,
+      "end": 18.531,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロシア側は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.531,
+      "speechEnd": 23.966,
+      "end": 24.196,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ドイツのライプツィヒ空港でのドローン事件により、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.196,
+      "speechEnd": 29.561,
+      "end": 29.791,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロシア文化センターと領事館が閉鎖された後、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 29.791,
+      "speechEnd": 31.881,
+      "end": 32.111,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "モスクワ、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.111,
+      "speechEnd": 34.829,
+      "end": 35.059,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "サンクトペテルブルク、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 35.059,
+      "speechEnd": 41.33,
+      "end": 42.03,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "エカテリンブルクのゲーテ研究所を閉鎖すると発表した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.03,
+      "speechEnd": 44.12,
+      "end": 44.35,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロシアは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.35,
+      "speechEnd": 46.44,
+      "end": 46.67,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "モスクワ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.67,
+      "speechEnd": 49.388,
+      "end": 49.618,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "サンクトペテルブルク、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.618,
+      "speechEnd": 59.651,
+      "end": 60.151,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "エカテリンブルクにあるドイツのゲーテ・インスティテュートの文化センターの閉鎖を発表しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.151,
+      "speechEnd": 63.566,
+      "end": 63.796,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "セルゲイ・ラブロフ外相は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.796,
+      "speechEnd": 72.366,
+      "end": 72.646,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "これはドイツがベルリンのロシア家文化センターとボンのロシア領事館を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.646,
+      "speechEnd": 76.478,
+      "end": 76.708,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "閉鎖したことへの対応であり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.708,
+      "speechEnd": 86.115,
+      "end": 86.735,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "両国間の文化交流の経路がさらに狭まったことを意味すると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 86.735,
+      "speechEnd": 89.173,
+      "end": 89.403,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ドイツは以前、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 89.403,
+      "speechEnd": 98.531,
+      "end": 98.761,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ライプチヒ/ハレー空港での爆発的なドローン事件についてロシアを非難し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 98.761,
+      "speechEnd": 104.684,
+      "end": 105.184,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "外交的および文化的制限を発表した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 105.184,
+      "speechEnd": 109.782,
+      "end": 110.012,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロシアは事件への関与を否定し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 110.012,
+      "speechEnd": 115.726,
+      "end": 116.226,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "申し立ては政治的操作であると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 116.226,
+      "speechEnd": 119.292,
+      "end": 119.522,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ヨーロッパ諸国はまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 119.522,
+      "speechEnd": 121.543,
+      "end": 121.773,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "最近、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.773,
+      "speechEnd": 123.933,
+      "end": 124.163,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "破壊工作、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 124.163,
+      "speechEnd": 126.253,
+      "end": 126.483,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ドローン、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 126.483,
+      "speechEnd": 133.59,
+      "end": 134.21,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "混戦作戦の疑いでロシアへの外交圧力を強化している。"
+    },
+    {
+      "parentKey": "why",
+      "start": 134.21,
+      "speechEnd": 138.182,
+      "end": 138.682,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 138.682,
+      "speechEnd": 143.559,
+      "end": 143.789,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "文化的・領事的チャネルの弱体化は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 143.789,
+      "speechEnd": 153.265,
+      "end": 153.495,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ドイツ・ロシア間の社会的交流や危機的なコミュニケーションをより困難にし、"
+    },
+    {
+      "parentKey": "why",
+      "start": 153.495,
+      "speechEnd": 165.34,
+      "end": 166.041,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "欧州・ロシア間の対立が軍事や制裁から市民制度にまで拡大していることを反映している。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 166.041,
+      "speechEnd": 168.131,
+      "end": 168.361,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 168.361,
+      "speechEnd": 172.472,
+      "end": 172.702,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ゲーテ・インスティテュートの実際の閉鎖、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 172.702,
+      "speechEnd": 178.067,
+      "end": 178.297,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ドイツがさらなる対抗措置を講じたかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 178.297,
+      "speechEnd": 188.609,
+      "end": 189.309,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "そしてロシアとの混合戦争の申し立てに対するEUの共同対応に注目してください。"
+    }
+  ]
+}

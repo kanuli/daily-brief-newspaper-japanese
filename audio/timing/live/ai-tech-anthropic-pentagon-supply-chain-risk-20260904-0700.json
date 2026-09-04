@@ -1,0 +1,400 @@
+{
+  "version": 3,
+  "duration": 191.269,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 622,
+  "charactersPerMinute": 195.1,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 17.883,
+      "text": "米国国防総省関係者は、Anthropicは依然としてサプライチェーンのリスクであり、政府の内部シグナルが異なることを繰り返している"
+    },
+    {
+      "key": "dek",
+      "start": 17.883,
+      "end": 42.875,
+      "text": "商務長官はAnthropicへの信頼を新たにしたと述べているが、ペンタゴンのトップマネジメントは最近、同社が依然としてサプライチェーンのリスクマーカーを維持していると述べた。"
+    },
+    {
+      "key": "body-0",
+      "start": 42.875,
+      "end": 97.504,
+      "text": "米国防総省の研究・エンジニアリング担当副ディレクターであるエミール・マイケル氏は、人工知能企業のAnthropicは依然として国防総省と国防産業によって「サプライチェーンリスク」と見なされていると述べた。この発表は、ハワード・ラトニック商務長官がトランプ政権内で同社について完全な全会一致がなかったことを示唆して、政権がAnthropicへの信頼を新たにしたと述べた後に行われた。"
+    },
+    {
+      "key": "body-1",
+      "start": 97.504,
+      "end": 133.897,
+      "text": "Anthropicとペンタゴンは、クロードモデルの軍事使用の限界について、以前は対立していた。連邦裁判所は8月、Anthropicに対する国防総省の処分の1つが違法であると判決を下したが、同社は依然として別の法定リスクフラグと関連する訴訟に直面している。"
+    },
+    {
+      "key": "why",
+      "start": 133.897,
+      "end": 165.142,
+      "text": "Anthropicは世界有数のAIモデルサプライヤーの1つであり、防衛調達の制限は、政府のAI競争、請負業者の技術選択、および企業と政府のガバナンスの境界に影響を与えます。"
+    },
+    {
+      "key": "watch",
+      "start": 165.142,
+      "end": 191.269,
+      "text": "国防総省がマーキングを正式に調整したかどうか、その後の裁判所の決定、およびAnthropicが軍事使用の条件を政府と再交渉したかどうかに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.763,
+      "end": 3.993,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国国防総省関係者は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.993,
+      "speechEnd": 10.263,
+      "end": 10.494,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Anthropicは依然としてサプライチェーンのリスクであり、"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.494,
+      "speechEnd": 17.182,
+      "end": 17.883,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "政府の内部シグナルが異なることを繰り返している。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.883,
+      "speechEnd": 23.526,
+      "end": 23.806,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "商務長官はAnthropicへの信頼を"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.806,
+      "speechEnd": 27.499,
+      "end": 27.729,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "新たにしたと述べているが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.729,
+      "speechEnd": 32.467,
+      "end": 32.697,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ペンタゴンのトップマネジメントは最近、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.697,
+      "speechEnd": 38.829,
+      "end": 39.109,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "同社が依然としてサプライチェーンのリスクマーカーを"
+    },
+    {
+      "parentKey": "dek",
+      "start": 39.109,
+      "speechEnd": 42.175,
+      "end": 42.875,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "維持していると述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.875,
+      "speechEnd": 53.744,
+      "end": 53.975,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国防総省の研究・エンジニアリング担当副ディレクターであるエミール・マイケル氏は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.975,
+      "speechEnd": 58.225,
+      "end": 58.505,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "人工知能企業のAnthropicは"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.505,
+      "speechEnd": 70.489,
+      "end": 70.989,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "依然として国防総省と国防産業によって「サプライチェーンリスク」と見なされていると述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.989,
+      "speechEnd": 73.428,
+      "end": 73.658,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この発表は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.658,
+      "speechEnd": 77.978,
+      "end": 78.258,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ハワード・ラトニック商務長官が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 78.258,
+      "speechEnd": 87.595,
+      "end": 87.825,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "トランプ政権内で同社について完全な全会一致がなかったことを示唆して、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 87.825,
+      "speechEnd": 92.005,
+      "end": 92.285,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "政権がAnthropicへの信頼を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 92.285,
+      "speechEnd": 96.884,
+      "end": 97.504,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "新たにしたと述べた後に行われた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.504,
+      "speechEnd": 100.779,
+      "end": 101.009,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Anthropicとペンタゴンは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.009,
+      "speechEnd": 106.513,
+      "end": 106.744,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "クロードモデルの軍事使用の限界について、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 106.744,
+      "speechEnd": 109.67,
+      "end": 110.17,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "以前は対立していた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 110.17,
+      "speechEnd": 113.724,
+      "end": 113.954,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "連邦裁判所は8月、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 113.954,
+      "speechEnd": 120.224,
+      "end": 120.505,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "Anthropicに対する国防総省の処分の1つが"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.505,
+      "speechEnd": 124.476,
+      "end": 124.706,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "違法であると判決を下したが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 124.706,
+      "speechEnd": 133.276,
+      "end": 133.897,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "同社は依然として別の法定リスクフラグと関連する訴訟に直面している。"
+    },
+    {
+      "parentKey": "why",
+      "start": 133.897,
+      "speechEnd": 137.868,
+      "end": 138.368,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 138.368,
+      "speechEnd": 146.033,
+      "end": 146.263,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Anthropicは世界有数のAIモデルサプライヤーの1つであり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 146.263,
+      "speechEnd": 149.398,
+      "end": 149.628,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "防衛調達の制限は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 149.628,
+      "speechEnd": 152.485,
+      "end": 152.715,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "政府のAI競争、"
+    },
+    {
+      "parentKey": "why",
+      "start": 152.715,
+      "speechEnd": 155.85,
+      "end": 156.08,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "請負業者の技術選択、"
+    },
+    {
+      "parentKey": "why",
+      "start": 156.08,
+      "speechEnd": 164.442,
+      "end": 165.142,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "および企業と政府のガバナンスの境界に影響を与えます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 165.142,
+      "speechEnd": 167.232,
+      "end": 167.462,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 167.462,
+      "speechEnd": 174.43,
+      "end": 174.66,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "国防総省がマーキングを正式に調整したかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 174.66,
+      "speechEnd": 178.144,
+      "end": 178.374,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "その後の裁判所の決定、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 178.374,
+      "speechEnd": 181.718,
+      "end": 181.998,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "およびAnthropicが"
+    },
+    {
+      "parentKey": "watch",
+      "start": 181.998,
+      "speechEnd": 190.568,
+      "end": 191.269,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "軍事使用の条件を政府と再交渉したかどうかに注意してください。"
+    }
+  ]
+}
