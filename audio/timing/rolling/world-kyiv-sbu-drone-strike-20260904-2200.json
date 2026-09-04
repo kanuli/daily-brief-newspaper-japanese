@@ -1,0 +1,360 @@
+{
+  "version": 3,
+  "duration": 171.703,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 513,
+  "charactersPerMinute": 179.3,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 10.894,
+      "text": "俄軍無人機擊中基輔烏克蘭安全局總部 市中心最少5人受傷"
+    },
+    {
+      "key": "dek",
+      "start": 10.894,
+      "end": 33.141,
+      "text": "攻撃場所はアヤソフィアの近くでした。キエフは最近、昼夜を問わず無人機やミサイルによる攻撃を受けており、同市の安全保障上の圧力は高まり続けている。"
+    },
+    {
+      "key": "body-0",
+      "start": 33.141,
+      "end": 79.622,
+      "text": "ウクライナのゼレンスキー大統領は9月4日、ロシアの無人機がキエフのヴォロディミルスカ通りにあるウクライナ安全保障局（ SBU ）の本部を攻撃し、局長のオフィスエリアを標的にしたとロイター通りに引用された。キエフ市長は、少なくとも5人が負傷したと述べた。敷地は歴史的中心部にあり、アヤソフィア大聖堂の隣にあります。"
+    },
+    {
+      "key": "body-1",
+      "start": 79.622,
+      "end": 121.503,
+      "text": "AP通信は同日、ロシア軍が最近キエフへの攻撃を夜間から昼間に延長し、ドローンとミサイルの警報が交通、仕事、日常生活を繰り返し妨害していると報じた。治安機関本部へのこの直接攻撃は、ロシア側が依然として価値の高い政府施設を標的にすることができることを示しています。"
+    },
+    {
+      "key": "why",
+      "start": 121.503,
+      "end": 145.831,
+      "text": "治安局本部への攻撃は軍事的・政治的意義があり、ウクライナ首都の防空能力と政府機関の継続的運営がさらに試されることになる。"
+    },
+    {
+      "key": "watch",
+      "start": 145.831,
+      "end": 171.703,
+      "text": "SBU施設の被害状況、負傷者の状況、ウクライナが傍受データを公開するかどうか、そしてロシアとウクライナによる新たな報復遠隔攻撃があるかどうかに注目してほしい。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 10.034,
+      "end": 10.894,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "俄軍無人機擊中基輔烏克蘭安全局總部 市中心最少5人受傷。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 10.894,
+      "speechEnd": 15.353,
+      "end": 15.973,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "攻撃場所はアヤソフィアの近くでした。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.973,
+      "speechEnd": 18.342,
+      "end": 18.623,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "キエフは最近、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.623,
+      "speechEnd": 25.869,
+      "end": 26.149,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "昼夜を問わず無人機やミサイルによる攻撃を受けており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.149,
+      "speechEnd": 32.281,
+      "end": 33.141,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "同市の安全保障上の圧力は高まり続けている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 33.141,
+      "speechEnd": 39.691,
+      "end": 39.971,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ウクライナのゼレンスキー大統領は9月4日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.971,
+      "speechEnd": 53.279,
+      "end": 53.559,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロシアの無人機がキエフのヴォロディミルスカ通りにあるウクライナ安全保障局（ SBU ）の本部を攻撃し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.559,
+      "speechEnd": 60.736,
+      "end": 61.356,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "局長のオフィスエリアを標的にしたとロイター通りに引用された。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.356,
+      "speechEnd": 63.865,
+      "end": 64.145,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "キエフ市長は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.145,
+      "speechEnd": 69.231,
+      "end": 69.851,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "少なくとも5人が負傷したと述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.851,
+      "speechEnd": 74.381,
+      "end": 74.661,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "敷地は歴史的中心部にあり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.661,
+      "speechEnd": 78.841,
+      "end": 79.622,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "アヤソフィア大聖堂の隣にあります。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 79.622,
+      "speechEnd": 82.409,
+      "end": 82.689,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "AP通信は同日、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.689,
+      "speechEnd": 90.493,
+      "end": 90.773,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロシア軍が最近キエフへの攻撃を夜間から昼間に延長し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.773,
+      "speechEnd": 94.675,
+      "end": 94.955,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ドローンとミサイルの警報が交通、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.955,
+      "speechEnd": 96.975,
+      "end": 97.255,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "仕事、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.255,
+      "speechEnd": 102.83,
+      "end": 103.45,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "日常生活を繰り返し妨害していると報じた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.45,
+      "speechEnd": 108.536,
+      "end": 108.816,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "治安機関本部へのこの直接攻撃は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.816,
+      "speechEnd": 117.038,
+      "end": 117.379,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ロシア側が依然として価値の高い政府施設を標的にすることが"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.379,
+      "speechEnd": 120.723,
+      "end": 121.503,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "できることを示しています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 121.503,
+      "speechEnd": 125.475,
+      "end": 126.095,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 126.095,
+      "speechEnd": 133.62,
+      "end": 133.9,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "治安局本部への攻撃は軍事的・政治的意義があり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 133.9,
+      "speechEnd": 141.217,
+      "end": 141.557,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ウクライナ首都の防空能力と政府機関の継続的運営が"
+    },
+    {
+      "parentKey": "why",
+      "start": 141.557,
+      "speechEnd": 144.971,
+      "end": 145.831,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "さらに試されることになる。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 145.831,
+      "speechEnd": 147.921,
+      "end": 148.202,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 148.202,
+      "speechEnd": 151.755,
+      "end": 152.035,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "SBU施設の被害状況、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 152.035,
+      "speechEnd": 154.544,
+      "end": 154.824,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "負傷者の状況、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 154.824,
+      "speechEnd": 159.91,
+      "end": 160.19,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ウクライナが傍受データを公開するかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 160.19,
+      "speechEnd": 166.601,
+      "end": 166.941,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "そしてロシアとウクライナによる新たな報復遠隔攻撃が"
+    },
+    {
+      "parentKey": "watch",
+      "start": 166.941,
+      "speechEnd": 170.843,
+      "end": 171.703,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "あるかどうかに注目してほしい。"
+    }
+  ]
+}
