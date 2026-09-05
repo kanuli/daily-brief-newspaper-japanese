@@ -1,0 +1,102 @@
+{
+  "version": 3,
+  "duration": 35.265,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 107,
+  "charactersPerMinute": 182.0,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 9.082,
+      "text": "マンチェスター・ユナイテッド：Reutersの最新確認済みニュース"
+    },
+    {
+      "key": "dek",
+      "start": 9.082,
+      "end": 16.777,
+      "text": "出典で確認済みの最新情報を先行掲載しています。"
+    },
+    {
+      "key": "body-0",
+      "start": 16.777,
+      "end": 35.265,
+      "text": "Reutersを出典として、この分類の最新ニュースを確認しました。完全な日本語本文は自動復旧処理で順次更新します。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.208,
+      "end": 3.548,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "punctuation-semantic",
+      "text": "マンチェスター・ユナイテッド："
+    },
+    {
+      "parentKey": "title",
+      "start": 3.548,
+      "speechEnd": 8.221,
+      "end": 9.082,
+      "pause": 0.861,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "Reutersの最新確認済みニュース。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 9.082,
+      "speechEnd": 15.916,
+      "end": 16.777,
+      "pause": 0.861,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "出典で確認済みの最新情報を先行掲載しています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 16.777,
+      "speechEnd": 19.985,
+      "end": 20.265,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Reutersを出典として、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 20.265,
+      "speechEnd": 25.844,
+      "end": 26.465,
+      "pause": 0.621,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "この分類の最新ニュースを確認しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 26.465,
+      "speechEnd": 34.484,
+      "end": 35.265,
+      "pause": 0.781,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "完全な日本語本文は自動復旧処理で順次更新します。"
+    }
+  ]
+}

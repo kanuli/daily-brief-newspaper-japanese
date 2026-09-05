@@ -1,0 +1,102 @@
+{
+  "version": 3,
+  "duration": 36.728,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 105,
+  "charactersPerMinute": 171.5,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 9.221,
+      "text": "漫画・アニメ：ORICON NEWSの最新確認済みニュース"
+    },
+    {
+      "key": "dek",
+      "start": 9.221,
+      "end": 16.916,
+      "text": "出典で確認済みの最新情報を先行掲載しています。"
+    },
+    {
+      "key": "body-0",
+      "start": 16.916,
+      "end": 36.728,
+      "text": "ORICON NEWSを出典として、この分類の最新ニュースを確認しました。完全な日本語本文は自動復旧処理で順次更新します。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.231,
+      "end": 2.572,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "punctuation-semantic",
+      "text": "漫画・アニメ："
+    },
+    {
+      "parentKey": "title",
+      "start": 2.572,
+      "speechEnd": 8.36,
+      "end": 9.221,
+      "pause": 0.861,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ORICON NEWSの最新確認済みニュース。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 9.221,
+      "speechEnd": 16.055,
+      "end": 16.916,
+      "pause": 0.861,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "出典で確認済みの最新情報を先行掲載しています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 16.916,
+      "speechEnd": 21.448,
+      "end": 21.729,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ORICON NEWSを出典として、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 21.729,
+      "speechEnd": 27.307,
+      "end": 27.928,
+      "pause": 0.621,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "この分類の最新ニュースを確認しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 27.928,
+      "speechEnd": 35.947,
+      "end": 36.728,
+      "pause": 0.781,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "完全な日本語本文は自動復旧処理で順次更新します。"
+    }
+  ]
+}
