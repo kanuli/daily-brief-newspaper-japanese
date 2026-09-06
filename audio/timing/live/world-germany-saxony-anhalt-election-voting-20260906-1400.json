@@ -1,0 +1,470 @@
+{
+  "version": 3,
+  "duration": 231.445,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 708,
+  "charactersPerMinute": 183.5,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.655,
+      "text": "ドイツのザクセン＝アンハルト州は、第二次世界大戦後初の極右州政府を率いるためにAfDに投票した"
+    },
+    {
+      "key": "dek",
+      "start": 14.655,
+      "end": 47.829,
+      "text": "日曜日、ドイツ東部のザクセン＝アンハルト州で州議会選挙が行われ、AfDが選挙前の世論調査をリードした。その結果は、主流政党の政治的ファイアウォールが極右政党の権力掌握を妨げ続けることができるかどうかを試すだろう。"
+    },
+    {
+      "key": "body-0",
+      "start": 47.829,
+      "end": 104.587,
+      "text": "ドイツ東部のザクセン＝アンハルト州では、日曜日に州議会選挙が行われ、ドイツの代替案（ AfD ）が選挙前の世論調査の優位性を州政府の支配に変えることができるかどうかに焦点が当てられた。ロイターは、AfDの候補者ウルリッヒ・ジーグムント氏の派閥が複数の選挙前世論調査でCDUをリードし、最終的に議席の過半数を獲得した場合、AfDは他の政党の協力なしに州政府を形成する可能性があると報じた。"
+    },
+    {
+      "key": "body-1",
+      "start": 104.587,
+      "end": 165.725,
+      "text": "AfDが最大の政党になっても、ガバナンスは議席の分配と他の政党が5 ％の閾値を超えるかどうかに依存します。ドイツの主要政党は長い間AfDとの協力を拒否してきたため、AfDが絶対多数を獲得できなかった場合でも、CDUは依然として連立政権や少数政権を結成しようとする可能性がある。この選挙はまた、極右が権力を握るのを阻止するためのフリードリヒ・メルツ首相と伝統的なドイツの政党の戦略の重要なテストと見なされた。"
+    },
+    {
+      "key": "why",
+      "start": 165.725,
+      "end": 203.538,
+      "text": "AfDが州レベルで幹部のリーダーシップを獲得すれば、第二次世界大戦後のドイツの政治における重要なタブーを破り、2029年の連邦選挙に先立ち、政党間の競争、移民政策、EU内の政治に影響を与える可能性がある。"
+    },
+    {
+      "key": "watch",
+      "start": 203.538,
+      "end": 231.445,
+      "text": "投票率、出口調査、最終的なAfDとCDUの議席、5 ％のしきい値に近い小政党のパフォーマンス、および選挙後の政党横断的な内閣の取り決めに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.762,
+      "end": 3.992,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ドイツのザクセン＝アンハルト州は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.992,
+      "speechEnd": 13.955,
+      "end": 14.655,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "第二次世界大戦後初の極右州政府を率いるためにAfDに投票した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.655,
+      "speechEnd": 16.746,
+      "end": 16.976,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日曜日、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.976,
+      "speechEnd": 24.012,
+      "end": 24.242,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ドイツ東部のザクセン＝アンハルト州で州議会選挙が行われ、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.242,
+      "speechEnd": 28.98,
+      "end": 29.48,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "AfDが選挙前の世論調査をリードした。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 29.48,
+      "speechEnd": 31.779,
+      "end": 32.009,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "その結果は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.009,
+      "speechEnd": 37.513,
+      "end": 37.793,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "主流政党の政治的ファイアウォールが"
+    },
+    {
+      "parentKey": "dek",
+      "start": 37.793,
+      "speechEnd": 47.129,
+      "end": 47.829,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "極右政党の権力掌握を妨げ続けることができるかどうかを試すだろう。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.829,
+      "speechEnd": 52.637,
+      "end": 52.867,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ドイツ東部のザクセン＝アンハルト州では、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.867,
+      "speechEnd": 57.117,
+      "end": 57.347,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日曜日に州議会選挙が行われ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.347,
+      "speechEnd": 60.9,
+      "end": 61.18,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ドイツの代替案（ AfD ）が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.18,
+      "speechEnd": 74.278,
+      "end": 74.778,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "選挙前の世論調査の優位性を州政府の支配に変えることができるかどうかに焦点が当てられた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.778,
+      "speechEnd": 76.938,
+      "end": 77.168,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイターは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 77.168,
+      "speechEnd": 82.602,
+      "end": 82.882,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "AfDの候補者ウルリッヒ・ジーグムント氏の派閥が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 82.882,
+      "speechEnd": 87.968,
+      "end": 88.199,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "複数の選挙前世論調査でCDUをリードし、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 88.199,
+      "speechEnd": 93.563,
+      "end": 93.793,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "最終的に議席の過半数を獲得した場合、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 93.793,
+      "speechEnd": 99.506,
+      "end": 99.786,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "AfDは他の政党の協力なしに州政府を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 99.786,
+      "speechEnd": 103.967,
+      "end": 104.587,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "形成する可能性があると報じた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.587,
+      "speechEnd": 108.697,
+      "end": 108.927,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "AfDが最大の政党になっても、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.927,
+      "speechEnd": 114.153,
+      "end": 114.433,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ガバナンスは議席の分配と他の政党が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.433,
+      "speechEnd": 120.424,
+      "end": 120.924,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "5 ％の閾値を超えるかどうかに依存します。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.924,
+      "speechEnd": 129.215,
+      "end": 129.445,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ドイツの主要政党は長い間AfDとの協力を拒否してきたため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 129.445,
+      "speechEnd": 134.81,
+      "end": 135.04,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "AfDが絶対多数を獲得できなかった場合でも、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 135.04,
+      "speechEnd": 140.683,
+      "end": 140.964,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "CDUは依然として連立政権や少数政権を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 140.964,
+      "speechEnd": 145.074,
+      "end": 145.574,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "結成しようとする可能性がある。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 145.574,
+      "speechEnd": 148.082,
+      "end": 148.312,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この選挙はまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 148.312,
+      "speechEnd": 153.329,
+      "end": 153.609,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "極右が権力を握るのを阻止するため"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 153.609,
+      "speechEnd": 165.104,
+      "end": 165.725,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "のフリードリヒ・メルツ首相と伝統的なドイツの政党の戦略の重要なテストと見なされた。"
+    },
+    {
+      "parentKey": "why",
+      "start": 165.725,
+      "speechEnd": 169.696,
+      "end": 170.196,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 170.196,
+      "speechEnd": 176.606,
+      "end": 176.836,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "AfDが州レベルで幹部のリーダーシップを獲得すれば、"
+    },
+    {
+      "parentKey": "why",
+      "start": 176.836,
+      "speechEnd": 185.614,
+      "end": 185.844,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "第二次世界大戦後のドイツの政治における重要なタブーを破り、"
+    },
+    {
+      "parentKey": "why",
+      "start": 185.844,
+      "speechEnd": 190.93,
+      "end": 191.16,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "2029年の連邦選挙に先立ち、"
+    },
+    {
+      "parentKey": "why",
+      "start": 191.16,
+      "speechEnd": 193.947,
+      "end": 194.177,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "政党間の競争、"
+    },
+    {
+      "parentKey": "why",
+      "start": 194.177,
+      "speechEnd": 196.616,
+      "end": 196.846,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "移民政策、"
+    },
+    {
+      "parentKey": "why",
+      "start": 196.846,
+      "speechEnd": 202.837,
+      "end": 203.538,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "EU内の政治に影響を与える可能性がある。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 203.538,
+      "speechEnd": 205.628,
+      "end": 205.858,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 205.858,
+      "speechEnd": 207.948,
+      "end": 208.178,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "投票率、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 208.178,
+      "speechEnd": 210.477,
+      "end": 210.707,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "出口調査、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 210.707,
+      "speechEnd": 214.26,
+      "end": 214.49,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "最終的なAfDとCDUの議席、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 214.49,
+      "speechEnd": 221.388,
+      "end": 221.618,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "5 ％のしきい値に近い小政党のパフォーマンス、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 221.618,
+      "speechEnd": 230.745,
+      "end": 231.445,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "および選挙後の政党横断的な内閣の取り決めに注意してください。"
+    }
+  ]
+}

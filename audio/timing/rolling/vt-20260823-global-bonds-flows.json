@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 50.495,
+  "duration": 29.179,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 340.0,
-  "characters": 144,
-  "charactersPerMinute": 171.1,
+  "characters": 82,
+  "charactersPerMinute": 168.6,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.18,
@@ -21,126 +21,66 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 20.361,
-      "text": "ETFのリードスルー：世界の株式ファンドは依然として流入を記録しているが、長期債券金利と原油価格の圧力により評価額が制限されている"
+      "end": 9.99,
+      "text": "VT：Reutersで最新の企業・市場動向情報を確認"
     },
     {
       "key": "body-0",
-      "start": 20.361,
-      "end": 50.495,
-      "text": "ロイター通信によると、世界の株式ファンドが過去３週間で最大の資金流入を記録した。同時に、30年米国債利回りは数年ぶりの高水準に上昇し、世界の株式市場は評価圧力にさらされた。"
+      "start": 9.99,
+      "end": 29.179,
+      "text": "Reutersを出典として、企業・市場動向に関する新しい検証済み情報を確認しました。詳細は出典資料の確認後に順次更新します。"
     }
   ],
   "semanticUnits": [
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 2.927,
-      "end": 3.268,
+      "speechEnd": 2.023,
+      "end": 2.363,
       "pause": 0.34,
       "intendedPause": 0.34,
       "reason": "punctuation-semantic",
-      "text": "ETFのリードスルー："
+      "text": "VT："
     },
     {
       "parentKey": "title",
-      "start": 3.268,
-      "speechEnd": 10.656,
-      "end": 10.936,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "世界の株式ファンドは依然として流入を記録しているが、"
-    },
-    {
-      "parentKey": "title",
-      "start": 10.936,
-      "speechEnd": 15.885,
-      "end": 16.225,
-      "pause": 0.34,
-      "intendedPause": 0.34,
-      "reason": "semantic-boundary",
-      "text": "長期債券金利と原油価格の圧力により"
-    },
-    {
-      "parentKey": "title",
-      "start": 16.225,
-      "speechEnd": 19.501,
-      "end": 20.361,
+      "start": 2.363,
+      "speechEnd": 9.129,
+      "end": 9.99,
       "pause": 0.861,
       "intendedPause": 0.86,
       "reason": "punctuation-sentence",
-      "text": "評価額が制限されている。"
+      "text": "Reutersで最新の企業・市場動向情報を確認。"
     },
     {
       "parentKey": "body-0",
-      "start": 20.361,
-      "speechEnd": 23.359,
-      "end": 23.639,
+      "start": 9.99,
+      "speechEnd": 13.198,
+      "end": 13.479,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "ロイター通信によると、"
+      "text": "Reutersを出典として、"
     },
     {
       "parentKey": "body-0",
-      "start": 23.639,
-      "speechEnd": 27.263,
-      "end": 27.443,
-      "pause": 0.18,
-      "intendedPause": 0.18,
-      "reason": "before-key-number",
-      "text": "世界の株式ファンドが過去"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 27.443,
-      "speechEnd": 29.534,
-      "end": 29.714,
-      "pause": 0.18,
-      "intendedPause": 0.18,
-      "reason": "key-number",
-      "text": "３週間"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 29.714,
-      "speechEnd": 34.036,
-      "end": 34.656,
-      "pause": 0.62,
+      "start": 13.479,
+      "speechEnd": 21.5,
+      "end": 22.12,
+      "pause": 0.621,
       "intendedPause": 0.62,
       "reason": "punctuation-sentence",
-      "text": "で最大の資金流入を記録した。"
+      "text": "企業・市場動向に関する新しい検証済み情報を確認しました。"
     },
     {
       "parentKey": "body-0",
-      "start": 34.656,
-      "speechEnd": 36.817,
-      "end": 37.097,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "同時に、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 37.097,
-      "speechEnd": 43.997,
-      "end": 44.278,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "30年米国債利回りは数年ぶりの高水準に上昇し、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 44.278,
-      "speechEnd": 49.714,
-      "end": 50.495,
-      "pause": 0.78,
+      "start": 22.12,
+      "speechEnd": 28.398,
+      "end": 29.179,
+      "pause": 0.781,
       "intendedPause": 0.78,
       "reason": "punctuation-sentence",
-      "text": "世界の株式市場は評価圧力にさらされた。"
+      "text": "詳細は出典資料の確認後に順次更新します。"
     }
   ]
 }
