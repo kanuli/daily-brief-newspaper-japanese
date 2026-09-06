@@ -19,9 +19,23 @@
   ],
   "coverage": {
     "status": "DAILY_BASELINE",
-    "publishingGateMet": true,
+    "publishingGateMet": false,
     "deskLatestDepthMet": true,
-    "qaNote": "08:00 Daily baseline uses the current verified Rolling Desk reservoir; Live resumes at 09:00 HKT."
+    "deskLatestStoryCounts": {
+      "world": 132,
+      "asia": 139,
+      "hong-kong": 38,
+      "japan": 117,
+      "market-economy": 207,
+      "ai-tech": 93,
+      "manga-anime": 20,
+      "manchester-united": 18,
+      "football": 90
+    },
+    "japanCountVerified": 117,
+    "sourceGateMet": false,
+    "geographicGateMet": false,
+    "footballGateMet": false
   },
   "items": [],
   "translationDegraded": false,
@@ -31,7 +45,7 @@
   "language": "ja",
   "translationSource": "kanuli/daily-brief-newspaper",
   "sourceFile": "live.json",
-  "sourceFingerprint": "0541162ef027d55b6525c18bb0cabc9f18ce9cbf8235f9ccbe0d1de209aabab3",
+  "sourceFingerprint": "30885940aaaeacf08da316bdb04ddeff97ed69cea24deb976ca2a2e863fc9ebb",
   "translationSchemaVersion": "ja-furigana-v3-context-sensitive",
   "furiganaEngineVersion": "sudachi-core-mode-c+context",
   "newsroomQualityVersion": 1
