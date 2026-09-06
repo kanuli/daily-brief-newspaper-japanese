@@ -1,0 +1,86 @@
+{
+  "version": 3,
+  "duration": 33.28,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 117,
+  "charactersPerMinute": 210.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 12.217,
+      "text": "ICE：Intercontinental Exchangeで最新の企業・市場動向情報を確認"
+    },
+    {
+      "key": "body-0",
+      "start": 12.217,
+      "end": 33.28,
+      "text": "Intercontinental Exchangeを出典として、企業・市場動向に関する新しい検証済み情報を確認しました。詳細は出典資料の確認後に順次更新します。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.022,
+      "end": 2.362,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "punctuation-semantic",
+      "text": "ICE："
+    },
+    {
+      "parentKey": "title",
+      "start": 2.362,
+      "speechEnd": 11.356,
+      "end": 12.217,
+      "pause": 0.861,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "Intercontinental Exchangeで最新の企業・市場動向情報を確認。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 12.217,
+      "speechEnd": 17.306,
+      "end": 17.586,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Intercontinental Exchangeを出典として、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 17.586,
+      "speechEnd": 25.604,
+      "end": 26.225,
+      "pause": 0.621,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "企業・市場動向に関する新しい検証済み情報を確認しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 26.225,
+      "speechEnd": 32.499,
+      "end": 33.28,
+      "pause": 0.781,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "詳細は出典資料の確認後に順次更新します。"
+    }
+  ]
+}

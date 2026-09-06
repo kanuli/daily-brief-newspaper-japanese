@@ -1,0 +1,460 @@
+{
+  "version": 3,
+  "duration": 207.543,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 559,
+  "charactersPerMinute": 161.6,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 11.64,
+      "text": "関東から東北への暴風雨リスクのエスカレーション東京川が洪水危険水位に達する"
+    },
+    {
+      "key": "dek",
+      "start": 11.64,
+      "end": 46.468,
+      "text": "本州の太平洋側では、台風24号と秋の雨の前線によって降水量が増え、東京、千葉、神奈川、伊豆諸島では高級な砂と川の警報が出され、東北は今日も直線降水帯に対して厳重に警戒しなければなりません。"
+    },
+    {
+      "key": "body-0",
+      "start": 46.468,
+      "end": 97.581,
+      "text": "9月7日の朝、台風24号周辺の暖かく湿った空気と秋の雨の前線が、日本の本州の太平洋側の雨をさらに強めました。FNNは、千葉勝浦市が1時間あたり44.5ミリの雨量を記録し、東京伊豆諸島と千葉・神奈川地域の一部では砂災害警報レベルが高く、東京都杉並区善福寺川も一時的に洪水の危険レベルに達したと報告した。"
+    },
+    {
+      "key": "body-1",
+      "start": 97.581,
+      "end": 155.518,
+      "text": "気象庁によると、9月2日から7日にかけて前線と台風24号によって引き起こされた大雨と強風は、依然として進行中の重要な気象事象です。現在でも東北、関東花心、東シナ海では直線降水ベルトが可能であり、太平洋側の24時間降水量は現地で約200 mmに達する可能性があり、通勤交通、河川水位、山岳地帯における土砂災害のリスクは依然として高い。"
+    },
+    {
+      "key": "why",
+      "start": 155.518,
+      "end": 181.536,
+      "text": "大雨は、人口密度の高い首都圏と北東交通回廊に侵入し、朝の通勤、鉄道の運行、低地の安全に直接影響を与えています。"
+    },
+    {
+      "key": "watch",
+      "start": 181.536,
+      "end": 207.543,
+      "text": "気象庁がJR東日本などの輸送事業者に対して、新たな直線降水ベルトや特別警報、河川水位の変化、停車や減勤などを発令しているかどうかに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.525,
+      "end": 7.805,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "関東から東北への暴風雨リスクのエスカレーション東京川が"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.805,
+      "speechEnd": 10.94,
+      "end": 11.64,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "洪水危険水位に達する。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 11.64,
+      "speechEnd": 15.472,
+      "end": 15.703,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "本州の太平洋側では、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.703,
+      "speechEnd": 23.367,
+      "end": 23.597,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "台風24号と秋の雨の前線によって降水量が増え、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.597,
+      "speechEnd": 25.617,
+      "end": 25.847,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "東京、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.847,
+      "speechEnd": 27.868,
+      "end": 28.098,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "千葉、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 28.098,
+      "speechEnd": 30.188,
+      "end": 30.418,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "神奈川、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 30.418,
+      "speechEnd": 36.41,
+      "end": 36.64,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "伊豆諸島では高級な砂と川の警報が出され、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 36.64,
+      "speechEnd": 45.768,
+      "end": 46.468,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "東北は今日も直線降水帯に対して厳重に警戒しなければなりません。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.468,
+      "speechEnd": 49.742,
+      "end": 49.973,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "9月7日の朝、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.973,
+      "speechEnd": 57.915,
+      "end": 58.145,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "台風24号周辺の暖かく湿った空気と秋の雨の前線が、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.145,
+      "speechEnd": 65.601,
+      "end": 66.101,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "日本の本州の太平洋側の雨をさらに強めました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.101,
+      "speechEnd": 68.191,
+      "end": 68.421,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "FNNは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.421,
+      "speechEnd": 76.643,
+      "end": 76.873,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "千葉勝浦市が1時間あたり44.5ミリの雨量を記録し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.873,
+      "speechEnd": 83.352,
+      "end": 83.632,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "東京伊豆諸島と千葉・神奈川地域の一部では"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 83.632,
+      "speechEnd": 87.046,
+      "end": 87.276,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "砂災害警報レベルが高く、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 87.276,
+      "speechEnd": 96.961,
+      "end": 97.581,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "東京都杉並区善福寺川も一時的に洪水の危険レベルに達したと報告した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.581,
+      "speechEnd": 100.159,
+      "end": 100.389,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "気象庁によると、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 100.389,
+      "speechEnd": 108.193,
+      "end": 108.473,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "9月2日から7日にかけて前線と台風24号によって"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.473,
+      "speechEnd": 112.793,
+      "end": 113.023,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "引き起こされた大雨と強風は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 113.023,
+      "speechEnd": 118.736,
+      "end": 119.236,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "依然として進行中の重要な気象事象です。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 119.236,
+      "speechEnd": 121.814,
+      "end": 122.044,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "現在でも東北、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 122.044,
+      "speechEnd": 124.483,
+      "end": 124.713,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "関東花心、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 124.713,
+      "speechEnd": 130.705,
+      "end": 130.935,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "東シナ海では直線降水ベルトが可能であり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 130.935,
+      "speechEnd": 136.091,
+      "end": 136.371,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "太平洋側の24時間降水量は"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 136.371,
+      "speechEnd": 141.875,
+      "end": 142.105,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "現地で約200 mmに達する可能性があり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 142.105,
+      "speechEnd": 144.404,
+      "end": 144.634,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "通勤交通、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 144.634,
+      "speechEnd": 147.073,
+      "end": 147.303,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "河川水位、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 147.303,
+      "speechEnd": 154.898,
+      "end": 155.518,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "山岳地帯における土砂災害のリスクは依然として高い。"
+    },
+    {
+      "parentKey": "why",
+      "start": 155.518,
+      "speechEnd": 159.489,
+      "end": 159.989,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 159.989,
+      "speechEnd": 162.08,
+      "end": 162.31,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "大雨は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 162.31,
+      "speechEnd": 170.043,
+      "end": 170.273,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "人口密度の高い首都圏と北東交通回廊に侵入し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 170.273,
+      "speechEnd": 172.573,
+      "end": 172.803,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "朝の通勤、"
+    },
+    {
+      "parentKey": "why",
+      "start": 172.803,
+      "speechEnd": 175.172,
+      "end": 175.402,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "鉄道の運行、"
+    },
+    {
+      "parentKey": "why",
+      "start": 175.402,
+      "speechEnd": 180.836,
+      "end": 181.536,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "低地の安全に直接影響を与えています。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 181.536,
+      "speechEnd": 183.627,
+      "end": 183.857,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 183.857,
+      "speechEnd": 190.336,
+      "end": 190.567,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "気象庁がJR東日本などの輸送事業者に対して、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 190.567,
+      "speechEnd": 195.513,
+      "end": 195.743,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "新たな直線降水ベルトや特別警報、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 195.743,
+      "speechEnd": 198.809,
+      "end": 199.039,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "河川水位の変化、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 199.039,
+      "speechEnd": 206.843,
+      "end": 207.543,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "停車や減勤などを発令しているかどうかに注意してください。"
+    }
+  ]
+}

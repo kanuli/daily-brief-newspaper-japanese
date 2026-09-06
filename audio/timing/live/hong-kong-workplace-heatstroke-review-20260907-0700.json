@@ -1,0 +1,410 @@
+{
+  "version": 3,
+  "duration": 197.016,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 605,
+  "charactersPerMinute": 184.2,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 17.047,
+      "text": "労働省は、中・高シーズンの職業病の作業熱警告の新バージョンを研究しており、今シーズン後半に見直します。"
+    },
+    {
+      "key": "dek",
+      "start": 17.047,
+      "end": 42.803,
+      "text": "労働委員会のXu Zhesen委員は、政府は熱中症を職業病として分類することにオープンであり、今年の夏のデータに基づいて新しく改訂された労働関連の熱警報システムを評価すると述べた。"
+    },
+    {
+      "key": "body-0",
+      "start": 42.803,
+      "end": 95.454,
+      "text": "労働省のXu Zhesen局長は、政府は熱中症を職業病として上場することにオープンであるが、その状態が労働環境や労働モードと因果関係があることを証明する方法などの医学的問題に対処する必要があると述べた。労働省はまた、今年の夏のデータを照合して、新しく調整された職場の暑さ警報システムが、次の暑い季節の前にさらに改訂される必要があるかどうかを評価します。"
+    },
+    {
+      "key": "body-1",
+      "start": 95.454,
+      "end": 149.627,
+      "text": "RTHKとWireless Newsは、労働省が警告自体は停止命令ではないと強調したが、雇用主は依然として労働安全衛生条例の下で、シェーディング、換気、冷却装置の提供、高強度労働時間の調整など、熱関連のリスクを評価および管理する責任があると報じた。当局はまた、現在のメカニズムを直接的かつ包括的に単一のWBGT指数に置き換えることはないと指摘した。"
+    },
+    {
+      "key": "why",
+      "start": 149.627,
+      "end": 174.442,
+      "text": "熱中症が職業病のリストに含まれている場合、労働災害の認識、雇用主の責任、屋外および高温労働者の保護措置に影響を及ぼします。"
+    },
+    {
+      "key": "watch",
+      "start": 174.442,
+      "end": 197.016,
+      "text": "この夏の労働省のデータレビュー、職業病同定研究、次の暑い季節の前に警告閾値または休暇ガイドラインが改訂されるかどうかに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.23,
+      "end": 2.46,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "労働省は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.46,
+      "speechEnd": 12.563,
+      "end": 12.793,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中・高シーズンの職業病の作業熱警告の新バージョンを研究しており、"
+    },
+    {
+      "parentKey": "title",
+      "start": 12.793,
+      "speechEnd": 16.347,
+      "end": 17.047,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "今シーズン後半に見直します。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.047,
+      "speechEnd": 22.133,
+      "end": 22.363,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "労働委員会のXu Zhesen委員は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.363,
+      "speechEnd": 30.446,
+      "end": 30.676,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "政府は熱中症を職業病として分類することにオープンであり、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 30.676,
+      "speechEnd": 42.103,
+      "end": 42.803,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "今年の夏のデータに基づいて新しく改訂された労働関連の熱警報システムを評価すると述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.803,
+      "speechEnd": 47.332,
+      "end": 47.562,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "労働省のXu Zhesen局長は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.562,
+      "speechEnd": 55.854,
+      "end": 56.084,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "政府は熱中症を職業病として上場することにオープンであるが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.084,
+      "speechEnd": 61.937,
+      "end": 62.217,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "その状態が労働環境や労働モードと因果関係が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.217,
+      "speechEnd": 71.693,
+      "end": 72.193,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "あることを証明する方法などの医学的問題に対処する必要があると述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.193,
+      "speechEnd": 74.632,
+      "end": 74.862,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "労働省はまた、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.862,
+      "speechEnd": 78.973,
+      "end": 79.203,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今年の夏のデータを照合して、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 79.203,
+      "speechEnd": 85.195,
+      "end": 85.426,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "新しく調整された職場の暑さ警報システムが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 85.426,
+      "speechEnd": 91.139,
+      "end": 91.419,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "次の暑い季節の前にさらに改訂される必要が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 91.419,
+      "speechEnd": 94.833,
+      "end": 95.454,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "あるかどうかを評価します。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 95.454,
+      "speechEnd": 99.077,
+      "end": 99.307,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "RTHKとWireless Newsは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.307,
+      "speechEnd": 106.902,
+      "end": 107.132,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "労働省が警告自体は停止命令ではないと強調したが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.132,
+      "speechEnd": 113.681,
+      "end": 113.912,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "雇用主は依然として労働安全衛生条例の下で、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 113.912,
+      "speechEnd": 116.211,
+      "end": 116.441,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "シェーディング、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 116.441,
+      "speechEnd": 118.462,
+      "end": 118.692,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "換気、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.692,
+      "speechEnd": 121.827,
+      "end": 122.057,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "冷却装置の提供、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 122.057,
+      "speechEnd": 126.377,
+      "end": 126.607,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "高強度労働時間の調整など、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 126.607,
+      "speechEnd": 133.993,
+      "end": 134.493,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "熱関連のリスクを評価および管理する責任があると報じた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 134.493,
+      "speechEnd": 136.723,
+      "end": 136.953,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "当局はまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 136.953,
+      "speechEnd": 149.007,
+      "end": 149.627,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "現在のメカニズムを直接的かつ包括的に単一のWBGT指数に置き換えることはないと指摘した。"
+    },
+    {
+      "parentKey": "why",
+      "start": 149.627,
+      "speechEnd": 153.599,
+      "end": 154.099,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 154.099,
+      "speechEnd": 159.882,
+      "end": 160.112,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "熱中症が職業病のリストに含まれている場合、"
+    },
+    {
+      "parentKey": "why",
+      "start": 160.112,
+      "speechEnd": 162.69,
+      "end": 162.921,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "労働災害の認識、"
+    },
+    {
+      "parentKey": "why",
+      "start": 162.921,
+      "speechEnd": 165.568,
+      "end": 165.798,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "雇用主の責任、"
+    },
+    {
+      "parentKey": "why",
+      "start": 165.798,
+      "speechEnd": 173.742,
+      "end": 174.442,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "屋外および高温労働者の保護措置に影響を及ぼします。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 174.442,
+      "speechEnd": 176.532,
+      "end": 176.762,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 176.762,
+      "speechEnd": 181.082,
+      "end": 181.312,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この夏の労働省のデータレビュー、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 181.312,
+      "speechEnd": 184.378,
+      "end": 184.608,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "職業病同定研究、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 184.608,
+      "speechEnd": 188.998,
+      "end": 189.278,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "次の暑い季節の前に警告閾値または"
+    },
+    {
+      "parentKey": "watch",
+      "start": 189.278,
+      "speechEnd": 196.315,
+      "end": 197.016,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "休暇ガイドラインが改訂されるかどうかに注意してください。"
+    }
+  ]
+}
