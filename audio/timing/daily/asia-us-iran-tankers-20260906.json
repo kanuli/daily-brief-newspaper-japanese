@@ -1,0 +1,390 @@
+{
+  "version": 3,
+  "duration": 179.122,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 525,
+  "charactersPerMinute": 175.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 16.122,
+      "text": "米軍がイランの原油運搬船3隻を攻撃し、イランのミサイルが米軍艦を攻撃した後、ホルムズが急上昇するリスク"
+    },
+    {
+      "key": "dek",
+      "start": 16.122,
+      "end": 38.436,
+      "text": "米中央司令部は、この作戦はイラン革命防衛隊が2隻の米軍艦に弾道ミサイルを発射したことに対応したものであり、米軍人は負傷していないと述べた。"
+    },
+    {
+      "key": "body-0",
+      "start": 38.436,
+      "end": 78.444,
+      "text": "米軍は9月5日、イラン革命防衛隊がこの地域の米海軍艦船2隻に弾道ミサイルを発射した後、イランの原油運搬船3隻を攻撃したと述べた。ロイターとAP通信は、米国人員に負傷者はなく、2隻の船舶が深刻な損傷を受け、空の航空母艦が破壊されたと報告した。"
+    },
+    {
+      "key": "body-1",
+      "start": 78.444,
+      "end": 128.556,
+      "text": "イラン側はまた、米国と関連する船舶を攻撃したと主張し、米国がイランの船舶への干渉を継続すれば、より強力な対応が必要になると警告した。ホルムズ海峡は依然として世界で最も重要なエネルギー輸送レーンの1つであり、軍事作戦は石油タンカーと輸出ネットワークに直接触れ、石油価格、保険、フェリーのスケジュールを再び危険にさらしています。"
+    },
+    {
+      "key": "why",
+      "start": 128.556,
+      "end": 157.843,
+      "text": "原油運搬船への直接攻撃は、紛争を軍事目標からエネルギー物流にまで拡大し、アジアの輸入業者、世界の原油価格、海運リスクに直接的な影響を及ぼしています。"
+    },
+    {
+      "key": "watch",
+      "start": 157.843,
+      "end": 179.122,
+      "text": "米国船舶や商船へのイランのさらなる攻撃、拡大した米国の攻撃、ホルムズでの実際の流れと石油価格の反応に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 6.271,
+      "end": 6.551,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米軍がイランの原油運搬船3隻を攻撃し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.551,
+      "speechEnd": 11.567,
+      "end": 11.848,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イランのミサイルが米軍艦を攻撃した後、"
+    },
+    {
+      "parentKey": "title",
+      "start": 11.848,
+      "speechEnd": 15.262,
+      "end": 16.122,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ホルムズが急上昇するリスク。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.122,
+      "speechEnd": 18.978,
+      "end": 19.259,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米中央司令部は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.259,
+      "speechEnd": 23.927,
+      "end": 24.267,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "この作戦はイラン革命防衛隊が"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.267,
+      "speechEnd": 32.907,
+      "end": 33.187,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "2隻の米軍艦に弾道ミサイルを発射したことに対応したものであり、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 33.187,
+      "speechEnd": 37.576,
+      "end": 38.436,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "米軍人は負傷していないと述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.436,
+      "speechEnd": 41.85,
+      "end": 42.131,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米軍は9月5日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.131,
+      "speechEnd": 53.348,
+      "end": 53.628,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イラン革命防衛隊がこの地域の米海軍艦船2隻に弾道ミサイルを発射した後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.628,
+      "speechEnd": 60.247,
+      "end": 60.868,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "イランの原油運搬船3隻を攻撃したと述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.868,
+      "speechEnd": 63.794,
+      "end": 64.074,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイターとAP通信は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.074,
+      "speechEnd": 67.697,
+      "end": 67.977,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国人員に負傷者はなく、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.977,
+      "speechEnd": 72.645,
+      "end": 72.925,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "2隻の船舶が深刻な損傷を受け、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.925,
+      "speechEnd": 77.663,
+      "end": 78.444,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "空の航空母艦が破壊されたと報告した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 78.444,
+      "speechEnd": 80.882,
+      "end": 81.162,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イラン側はまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 81.162,
+      "speechEnd": 86.806,
+      "end": 87.086,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国と関連する船舶を攻撃したと主張し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 87.086,
+      "speechEnd": 92.869,
+      "end": 93.149,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国がイランの船舶への干渉を継続すれば、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.149,
+      "speechEnd": 98.444,
+      "end": 99.065,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "より強力な対応が必要になると警告した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.065,
+      "speechEnd": 109.516,
+      "end": 109.796,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ホルムズ海峡は依然として世界で最も重要なエネルギー輸送レーンの1つであり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.796,
+      "speechEnd": 116.763,
+      "end": 117.043,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "軍事作戦は石油タンカーと輸出ネットワークに直接触れ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.043,
+      "speechEnd": 119.343,
+      "end": 119.623,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "石油価格、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 119.623,
+      "speechEnd": 121.643,
+      "end": 121.923,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "保険、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.923,
+      "speechEnd": 127.776,
+      "end": 128.556,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "フェリーのスケジュールを再び危険にさらしています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 128.556,
+      "speechEnd": 132.528,
+      "end": 133.148,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 133.148,
+      "speechEnd": 137.398,
+      "end": 137.678,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "原油運搬船への直接攻撃は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 137.678,
+      "speechEnd": 144.228,
+      "end": 144.508,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "紛争を軍事目標からエネルギー物流にまで拡大し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 144.508,
+      "speechEnd": 147.643,
+      "end": 147.923,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アジアの輸入業者、"
+    },
+    {
+      "parentKey": "why",
+      "start": 147.923,
+      "speechEnd": 151.059,
+      "end": 151.339,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "世界の原油価格、"
+    },
+    {
+      "parentKey": "why",
+      "start": 151.339,
+      "speechEnd": 156.982,
+      "end": 157.843,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "海運リスクに直接的な影響を及ぼしています。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 157.843,
+      "speechEnd": 159.933,
+      "end": 160.213,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 160.213,
+      "speechEnd": 165.857,
+      "end": 166.137,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国船舶や商船へのイランのさらなる攻撃、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 166.137,
+      "speechEnd": 169.481,
+      "end": 169.761,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "拡大した米国の攻撃、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 169.761,
+      "speechEnd": 178.261,
+      "end": 179.122,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ホルムズでの実際の流れと石油価格の反応に注意してください。"
+    }
+  ]
+}

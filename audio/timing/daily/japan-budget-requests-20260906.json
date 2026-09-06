@@ -1,0 +1,400 @@
+{
+  "version": 3,
+  "duration": 176.327,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 496,
+  "charactersPerMinute": 168.8,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.935,
+      "text": "日本の2027年予算案は、パンデミック規模の金利が政策支出と並行して上昇することを求めている"
+    },
+    {
+      "key": "dek",
+      "start": 14.935,
+      "end": 36.772,
+      "text": "社会保障、防衛、国債利子などの固定支出は、地方自治体の高い政策アジェンダと相まって、財政的制約をさらに悪化させました。"
+    },
+    {
+      "key": "body-0",
+      "start": 36.772,
+      "end": 84.852,
+      "text": "ロイター通信によると、日本の省庁が提出した2027年の予算見積もりは、パンデミックに近い割合にまで膨れ上がっている。高志首相の政策アジェンダに加えて、社会保障、防衛支出、国債利子などの厳格な支出が増加し続けているため、政府は債務管理と政策投資の拡大のトレードオフを行うことがより困難になっています。"
+    },
+    {
+      "key": "body-1",
+      "start": 84.852,
+      "end": 131.615,
+      "text": "日本の公的債務水準は長い間高い水準にあり、最近の国債利回りの上昇により、政府のリファイナンスコストが増加しています。予算要求は最終的な予算と同じではなく、財務省による見直しと政治的調整がまだ必要ですが、現在の数字は、さまざまな部門の資金ニーズと財政への高金利環境の直接的な影響を反映しています。"
+    },
+    {
+      "key": "why",
+      "start": 131.615,
+      "end": 157.975,
+      "text": "予算規模は、税制、債券発行、国債市場、政策実施空間に直接関係しており、日本のマクロリスクの重要な指標となっています。"
+    },
+    {
+      "key": "watch",
+      "start": 157.975,
+      "end": 176.327,
+      "text": "年末の財務省の予算圧縮の最終的な取り決め、国債の発行計画、社会保障と防衛支出に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.947,
+      "end": 5.227,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本の2027年予算案は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 5.227,
+      "speechEnd": 14.075,
+      "end": 14.935,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "パンデミック規模の金利が政策支出と並行して上昇することを求めている。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.935,
+      "speechEnd": 17.165,
+      "end": 17.445,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "社会保障、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.445,
+      "speechEnd": 19.465,
+      "end": 19.745,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "防衛、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.745,
+      "speechEnd": 23.925,
+      "end": 24.206,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "国債利子などの固定支出は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.206,
+      "speechEnd": 30.128,
+      "end": 30.408,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "地方自治体の高い政策アジェンダと相まって、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 30.408,
+      "speechEnd": 35.912,
+      "end": 36.772,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "財政的制約をさらに悪化させました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.772,
+      "speechEnd": 39.768,
+      "end": 40.048,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.048,
+      "speechEnd": 47.99,
+      "end": 48.27,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本の省庁が提出した2027年の予算見積もりは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.27,
+      "speechEnd": 53.705,
+      "end": 54.325,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "パンデミックに近い割合にまで膨れ上がっている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.325,
+      "speechEnd": 59.759,
+      "end": 60.039,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "高志首相の政策アジェンダに加えて、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.039,
+      "speechEnd": 62.269,
+      "end": 62.549,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "社会保障、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.549,
+      "speechEnd": 64.778,
+      "end": 65.058,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "防衛支出、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.058,
+      "speechEnd": 71.677,
+      "end": 71.957,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "国債利子などの厳格な支出が増加し続けているため、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.957,
+      "speechEnd": 80.596,
+      "end": 80.936,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "政府は債務管理と政策投資の拡大のトレードオフを行うことが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 80.936,
+      "speechEnd": 84.072,
+      "end": 84.852,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "より困難になっています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.852,
+      "speechEnd": 91.192,
+      "end": 91.472,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本の公的債務水準は長い間高い水準にあり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.472,
+      "speechEnd": 95.652,
+      "end": 95.932,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "最近の国債利回りの上昇により、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 95.932,
+      "speechEnd": 101.367,
+      "end": 101.987,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "政府のリファイナンスコストが増加しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.987,
+      "speechEnd": 108.257,
+      "end": 108.537,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "予算要求は最終的な予算と同じではなく、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.537,
+      "speechEnd": 116.131,
+      "end": 116.412,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "財務省による見直しと政治的調整がまだ必要ですが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 116.412,
+      "speechEnd": 119.059,
+      "end": 119.339,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "現在の数字は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 119.339,
+      "speechEnd": 130.835,
+      "end": 131.615,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "さまざまな部門の資金ニーズと財政への高金利環境の直接的な影響を反映しています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 131.615,
+      "speechEnd": 135.586,
+      "end": 136.206,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 136.206,
+      "speechEnd": 138.506,
+      "end": 138.786,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "予算規模は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 138.786,
+      "speechEnd": 140.806,
+      "end": 141.086,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "税制、"
+    },
+    {
+      "parentKey": "why",
+      "start": 141.086,
+      "speechEnd": 143.176,
+      "end": 143.456,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "債券発行、"
+    },
+    {
+      "parentKey": "why",
+      "start": 143.456,
+      "speechEnd": 145.616,
+      "end": 145.896,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "国債市場、"
+    },
+    {
+      "parentKey": "why",
+      "start": 145.896,
+      "speechEnd": 150.982,
+      "end": 151.262,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "政策実施空間に直接関係しており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 151.262,
+      "speechEnd": 157.115,
+      "end": 157.975,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "日本のマクロリスクの重要な指標となっています。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 157.975,
+      "speechEnd": 160.065,
+      "end": 160.345,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 160.345,
+      "speechEnd": 166.964,
+      "end": 167.244,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "年末の財務省の予算圧縮の最終的な取り決め、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 167.244,
+      "speechEnd": 170.031,
+      "end": 170.311,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "国債の発行計画、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 170.311,
+      "speechEnd": 175.466,
+      "end": 176.327,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "社会保障と防衛支出に注意してください。"
+    }
+  ]
+}

@@ -1,0 +1,390 @@
+{
+  "version": 3,
+  "duration": 176.509,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 506,
+  "charactersPerMinute": 172.0,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 12.826,
+      "text": "岐阜本町ケーキ店火災2人死亡3人負傷警察推力負傷・ガソリン報告調査"
+    },
+    {
+      "key": "dek",
+      "start": 12.826,
+      "end": 34.541,
+      "text": "本潮市のケーキ屋と住宅が夜遅くに火災を起こし、現場の誰かが誰かが刺されてガソリンを捨てられたと報告し、警察は犯罪事件があったかどうかを調査しています。"
+    },
+    {
+      "key": "body-0",
+      "start": 34.541,
+      "end": 82.254,
+      "text": "9月5日午後9時頃、岐阜県本総市宗慶にあるケーキ屋と住居が火災を起こし、約3時間後に消火され、約300平方メートルにまで焼失しました。警察は焼失した建物内で2人の遺体を発見し、他に3人が病院に搬送されました。店は事件当時閉店していましたが、店員とその友人を含む11人が建物内にいました。"
+    },
+    {
+      "key": "body-1",
+      "start": 82.254,
+      "end": 122.829,
+      "text": "警察は、「誰かが刺された」と「ガソリンを投棄された後に火事になった」という110件の報告を受けました。9月6日午前時点で、2人の死亡者の身元はまだ確認されておらず、警察は残りの人からの情報を求め、紛争や犯罪事件が発生したかどうかを調査しています。"
+    },
+    {
+      "key": "why",
+      "start": 122.829,
+      "end": 146.925,
+      "text": "この事件には複数の死傷者と可能性のある犯罪要因が関与しており、その後の警察の調査と身元確認により、事件の性質が決定されます。"
+    },
+    {
+      "key": "watch",
+      "start": 146.925,
+      "end": 176.509,
+      "text": "岐阜県警は、死亡者の身元、負傷者3人の状態、火災調査の結果、逮捕された人物や正式に刑事事件として登録された人物がいるかどうかを公表していることに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.066,
+      "end": 3.206,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "岐阜本町ケーキ店火災"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.206,
+      "speechEnd": 5.227,
+      "end": 5.367,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "2人"
+    },
+    {
+      "parentKey": "title",
+      "start": 5.367,
+      "speechEnd": 12.125,
+      "end": 12.826,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "死亡3人負傷警察推力負傷・ガソリン報告調査。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.826,
+      "speechEnd": 19.584,
+      "end": 19.814,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "本潮市のケーキ屋と住宅が夜遅くに火災を起こし、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.814,
+      "speechEnd": 27.27,
+      "end": 27.5,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "現場の誰かが誰かが刺されてガソリンを捨てられたと報告し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.5,
+      "speechEnd": 33.841,
+      "end": 34.541,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "警察は犯罪事件があったかどうかを調査しています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.541,
+      "speechEnd": 38.373,
+      "end": 38.603,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "9月5日午後9時頃、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.603,
+      "speechEnd": 46.477,
+      "end": 46.707,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "岐阜県本総市宗慶にあるケーキ屋と住居が火災を起こし、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.707,
+      "speechEnd": 50.54,
+      "end": 50.77,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "約3時間後に消火され、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.77,
+      "speechEnd": 56.135,
+      "end": 56.635,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "約300平方メートルにまで焼失しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.635,
+      "speechEnd": 63.324,
+      "end": 63.554,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "警察は焼失した建物内で2人の遺体を発見し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.554,
+      "speechEnd": 68.292,
+      "end": 68.792,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "他に3人が病院に搬送されました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.792,
+      "speechEnd": 73.879,
+      "end": 74.109,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "店は事件当時閉店していましたが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.109,
+      "speechEnd": 81.634,
+      "end": 82.254,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "店員とその友人を含む11人が建物内にいました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.254,
+      "speechEnd": 84.275,
+      "end": 84.505,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "警察は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.505,
+      "speechEnd": 93.424,
+      "end": 93.564,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "「誰かが刺された」と「ガソリンを投棄された後に火事になった」という"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.564,
+      "speechEnd": 95.724,
+      "end": 95.864,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "110件"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 95.864,
+      "speechEnd": 98.582,
+      "end": 99.082,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "の報告を受けました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.082,
+      "speechEnd": 102.984,
+      "end": 103.214,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "9月6日午前時点で、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.214,
+      "speechEnd": 109.973,
+      "end": 110.203,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "2人の死亡者の身元はまだ確認されておらず、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 110.203,
+      "speechEnd": 114.941,
+      "end": 115.171,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "警察は残りの人からの情報を求め、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.171,
+      "speechEnd": 122.208,
+      "end": 122.829,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "紛争や犯罪事件が発生したかどうかを調査しています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 122.829,
+      "speechEnd": 126.8,
+      "end": 127.3,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 127.3,
+      "speechEnd": 136.637,
+      "end": 136.867,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この事件には複数の死傷者と可能性のある犯罪要因が関与しており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 136.867,
+      "speechEnd": 142.302,
+      "end": 142.532,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "その後の警察の調査と身元確認により、"
+    },
+    {
+      "parentKey": "why",
+      "start": 142.532,
+      "speechEnd": 146.225,
+      "end": 146.925,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "事件の性質が決定されます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 146.925,
+      "speechEnd": 149.016,
+      "end": 149.246,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 149.246,
+      "speechEnd": 151.545,
+      "end": 151.775,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "岐阜県警は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 151.775,
+      "speechEnd": 154.493,
+      "end": 154.723,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "死亡者の身元、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 154.723,
+      "speechEnd": 157.928,
+      "end": 158.158,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "負傷者3人の状態、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 158.158,
+      "speechEnd": 161.015,
+      "end": 161.245,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "火災調査の結果、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 161.245,
+      "speechEnd": 169.258,
+      "end": 169.538,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "逮捕された人物や正式に刑事事件として登録された人物が"
+    },
+    {
+      "parentKey": "watch",
+      "start": 169.538,
+      "speechEnd": 175.809,
+      "end": 176.509,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "いるかどうかを公表していることに注意してください。"
+    }
+  ]
+}
