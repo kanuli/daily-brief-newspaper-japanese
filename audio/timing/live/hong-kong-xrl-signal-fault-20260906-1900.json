@@ -1,0 +1,480 @@
+{
+  "version": 3,
+  "duration": 209.424,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 607,
+  "charactersPerMinute": 173.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 17.883,
+      "text": "西九龍高速鉄道の信号障害により、北行きが45分間遮断されたことがある遅延後、少なくとも15本の列車が復旧した"
+    },
+    {
+      "key": "dek",
+      "start": 17.883,
+      "end": 48.034,
+      "text": "運輸省によると、MTRはトラブルシューティングを完了し、高速鉄道サービスは徐々に通常に戻りました。影響を受けるフライトには、深セン、広州、および多くの長距離本土の目的地が含まれます。"
+    },
+    {
+      "key": "body-0",
+      "start": 48.034,
+      "end": 93.943,
+      "text": "サウスチャイナモーニングポストは、香港運輸局と12306を引用して、午前8時30分頃に西九龍駅で信号障害が発生し、北行きの高速鉄道サービスが遅延したと報告した。運輸省は後に、MTRは午前9時15分頃に完成し、列車は徐々に通常運転を再開し、故障による主な中断は約45分であったと述べた。"
+    },
+    {
+      "key": "body-1",
+      "start": 93.943,
+      "end": 147.95,
+      "text": "12306は、西九龍からの少なくとも15の北行き列車が福田、深セン、広州、福州、張家界、西安、天津、成都に遅延したことを示している。システムは復旧しましたが、今回の事故は、クロスボーダー高速鉄道の単一信号障害が短距離および長距離シャトルサービスにすぐに影響を与える可能性があることを再度示しています。"
+    },
+    {
+      "key": "why",
+      "start": 147.95,
+      "end": 182.182,
+      "text": "障害は解消されましたが、短期間のコア信号の問題により、いくつかの国境を越えたルートが遅れています。同様の事故が混雑している時間帯に発生した場合、港湾交通と本土接続に大きな影響を与える可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 182.182,
+      "end": 209.424,
+      "text": "MTRが故障の技術的理由を公表しているかどうか、その後のスケジュール調整があるかどうか、運輸省またはMTRがシステムチェックまたは予防措置を提案するかどうかに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.738,
+      "end": 4.968,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "西九龍高速鉄道の信号障害により、"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.968,
+      "speechEnd": 11.727,
+      "end": 11.957,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "北行きが45分間遮断されたことがある遅延後、"
+    },
+    {
+      "parentKey": "title",
+      "start": 11.957,
+      "speechEnd": 17.182,
+      "end": 17.883,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "少なくとも15本の列車が復旧した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.883,
+      "speechEnd": 20.53,
+      "end": 20.76,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "運輸省によると、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.76,
+      "speechEnd": 25.638,
+      "end": 25.868,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "MTRはトラブルシューティングを完了し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.868,
+      "speechEnd": 31.72,
+      "end": 32.221,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "高速鉄道サービスは徐々に通常に戻りました。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.221,
+      "speechEnd": 35.356,
+      "end": 35.586,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "影響を受けるフライトには、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 35.586,
+      "speechEnd": 37.676,
+      "end": 37.906,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "深セン、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 37.906,
+      "speechEnd": 39.927,
+      "end": 40.157,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "広州、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 40.157,
+      "speechEnd": 47.334,
+      "end": 48.034,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "および多くの長距離本土の目的地が含まれます。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.034,
+      "speechEnd": 51.587,
+      "end": 51.817,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "サウスチャイナモーニングポストは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.817,
+      "speechEnd": 57.81,
+      "end": 58.04,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "香港運輸局と12306を引用して、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.04,
+      "speechEnd": 65.425,
+      "end": 65.655,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "午前8時30分頃に西九龍駅で信号障害が発生し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.655,
+      "speechEnd": 71.856,
+      "end": 72.357,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "北行きの高速鉄道サービスが遅延したと報告した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.357,
+      "speechEnd": 74.935,
+      "end": 75.165,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "運輸省は後に、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.165,
+      "speechEnd": 80.46,
+      "end": 80.69,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "MTRは午前9時15分頃に完成し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 80.69,
+      "speechEnd": 85.637,
+      "end": 85.867,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "列車は徐々に通常運転を再開し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 85.867,
+      "speechEnd": 93.322,
+      "end": 93.943,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "故障による主な中断は約45分であったと述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.943,
+      "speechEnd": 97.078,
+      "end": 97.308,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "12306は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.308,
+      "speechEnd": 104.763,
+      "end": 104.994,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "西九龍からの少なくとも15の北行き列車が福田、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.994,
+      "speechEnd": 107.084,
+      "end": 107.314,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "深セン、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.314,
+      "speechEnd": 109.334,
+      "end": 109.564,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "広州、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.564,
+      "speechEnd": 111.585,
+      "end": 111.815,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "福州、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.815,
+      "speechEnd": 113.975,
+      "end": 114.205,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "張家界、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.205,
+      "speechEnd": 116.226,
+      "end": 116.456,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "西安、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 116.456,
+      "speechEnd": 118.476,
+      "end": 118.706,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "天津、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.706,
+      "speechEnd": 122.957,
+      "end": 123.457,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "成都に遅延したことを示している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 123.457,
+      "speechEnd": 127.01,
+      "end": 127.24,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "システムは復旧しましたが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 127.24,
+      "speechEnd": 129.818,
+      "end": 130.048,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今回の事故は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 130.048,
+      "speechEnd": 135.344,
+      "end": 135.624,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "クロスボーダー高速鉄道の単一信号障害が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 135.624,
+      "speechEnd": 147.329,
+      "end": 147.95,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "短距離および長距離シャトルサービスにすぐに影響を与える可能性があることを再度示しています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 147.95,
+      "speechEnd": 151.921,
+      "end": 152.421,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 152.421,
+      "speechEnd": 155.766,
+      "end": 155.996,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "障害は解消されましたが、"
+    },
+    {
+      "parentKey": "why",
+      "start": 155.996,
+      "speechEnd": 159.828,
+      "end": 160.058,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "短期間のコア信号の問題により、"
+    },
+    {
+      "parentKey": "why",
+      "start": 160.058,
+      "speechEnd": 166.12,
+      "end": 166.62,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "いくつかの国境を越えたルートが遅れています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 166.62,
+      "speechEnd": 173.17,
+      "end": 173.4,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同様の事故が混雑している時間帯に発生した場合、"
+    },
+    {
+      "parentKey": "why",
+      "start": 173.4,
+      "speechEnd": 181.482,
+      "end": 182.182,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "港湾交通と本土接続に大きな影響を与える可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 182.182,
+      "speechEnd": 184.272,
+      "end": 184.502,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 184.502,
+      "speechEnd": 191.4,
+      "end": 191.63,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "MTRが故障の技術的理由を公表しているかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 191.63,
+      "speechEnd": 196.856,
+      "end": 197.086,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "その後のスケジュール調整があるかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 197.086,
+      "speechEnd": 202.033,
+      "end": 202.313,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "運輸省またはMTRがシステムチェックまたは"
+    },
+    {
+      "parentKey": "watch",
+      "start": 202.313,
+      "speechEnd": 208.724,
+      "end": 209.424,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "予防措置を提案するかどうかに注意してください。"
+    }
+  ]
+}

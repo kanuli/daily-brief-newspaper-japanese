@@ -1,0 +1,360 @@
+{
+  "version": 3,
+  "duration": 167.68,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 486,
+  "charactersPerMinute": 173.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 22.456,
+      "text": "日本は、米国からの新鮮なジャガイモの輸入禁止の包括的な解除を推進しています。レビュー北海道の農業団体は、検疫と生産のリスクを懸念しています"
+    },
+    {
+      "key": "dek",
+      "start": 22.456,
+      "end": 37.743,
+      "text": "農林水産省は、具体的な流行予防条件を決定する前に、病害虫のリスク評価についてさらに説明します。"
+    },
+    {
+      "key": "body-0",
+      "start": 37.743,
+      "end": 80.32,
+      "text": "日本の農林水産省は、米国からの新鮮なジャガイモの輸入制限を完全に解除するかどうかの見直しを進めている。当局は、流行予防対策のさらなる研究を必要とするいくつかの害虫や病気を特定し、隔離措置の次の段階と市場アクセス条件を決定する前に、今月中に説明を行う予定です。"
+    },
+    {
+      "key": "body-1",
+      "start": 80.32,
+      "end": 126.382,
+      "text": "日本は、外国の害虫や病気のリスクを減らすために、原則として新鮮なジャガイモの輸入を制限していましたが、特定の加工用途については限定的な免除が行われています。北海道は日本の主要なジャガイモ産地であり、地方自治体や農業団体は、科学的なリスク管理と国内生産の保護を前提とした開放を求めています。"
+    },
+    {
+      "key": "why",
+      "start": 126.382,
+      "end": 149.814,
+      "text": "決定は日米農産物貿易や検疫制度、北海道農家の収入などに関わるもので、他の農産物交渉の参考になる可能性もある。"
+    },
+    {
+      "key": "watch",
+      "start": 149.814,
+      "end": 167.68,
+      "text": "農水水産省のリスクステートメント、最終的な検疫条件、北海道および農業団体の立場に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.09,
+      "end": 2.37,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.37,
+      "speechEnd": 11.986,
+      "end": 12.606,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "米国からの新鮮なジャガイモの輸入禁止の包括的な解除を推進しています。"
+    },
+    {
+      "parentKey": "title",
+      "start": 12.606,
+      "speechEnd": 16.857,
+      "end": 17.137,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "レビュー北海道の農業団体は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 17.137,
+      "speechEnd": 21.596,
+      "end": 22.456,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "検疫と生産のリスクを懸念しています。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.456,
+      "speechEnd": 25.034,
+      "end": 25.314,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "農林水産省は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.314,
+      "speechEnd": 31.167,
+      "end": 31.447,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "具体的な流行予防条件を決定する前に、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 31.447,
+      "speechEnd": 36.882,
+      "end": 37.743,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "病害虫のリスク評価についてさらに説明します。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.743,
+      "speechEnd": 41.296,
+      "end": 41.576,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本の農林水産省は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.576,
+      "speechEnd": 47.708,
+      "end": 48.048,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "米国からの新鮮なジャガイモの輸入制限を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.048,
+      "speechEnd": 53.971,
+      "end": 54.591,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "完全に解除するかどうかの見直しを進めている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.591,
+      "speechEnd": 56.681,
+      "end": 56.961,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "当局は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.961,
+      "speechEnd": 67.065,
+      "end": 67.345,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "流行予防対策のさらなる研究を必要とするいくつかの害虫や病気を特定し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.345,
+      "speechEnd": 74.731,
+      "end": 75.011,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "隔離措置の次の段階と市場アクセス条件を決定する前に、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.011,
+      "speechEnd": 79.54,
+      "end": 80.32,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "今月中に説明を行う予定です。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 80.32,
+      "speechEnd": 82.41,
+      "end": 82.69,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.69,
+      "speechEnd": 88.334,
+      "end": 88.614,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "外国の害虫や病気のリスクを減らすために、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.614,
+      "speechEnd": 96.14,
+      "end": 96.42,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "原則として新鮮なジャガイモの輸入を制限していましたが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 96.42,
+      "speechEnd": 103.736,
+      "end": 104.356,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "特定の加工用途については限定的な免除が行われています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.356,
+      "speechEnd": 110.627,
+      "end": 110.907,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "北海道は日本の主要なジャガイモ産地であり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 110.907,
+      "speechEnd": 114.739,
+      "end": 115.019,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "地方自治体や農業団体は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.019,
+      "speechEnd": 120.872,
+      "end": 121.213,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "科学的なリスク管理と国内生産の保護を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.213,
+      "speechEnd": 125.602,
+      "end": 126.382,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "前提とした開放を求めています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 126.382,
+      "speechEnd": 130.354,
+      "end": 130.974,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 130.974,
+      "speechEnd": 136.409,
+      "end": 136.689,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "決定は日米農産物貿易や検疫制度、"
+    },
+    {
+      "parentKey": "why",
+      "start": 136.689,
+      "speechEnd": 142.542,
+      "end": 142.822,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "北海道農家の収入などに関わるもので、"
+    },
+    {
+      "parentKey": "why",
+      "start": 142.822,
+      "speechEnd": 148.954,
+      "end": 149.814,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "他の農産物交渉の参考になる可能性もある。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 149.814,
+      "speechEnd": 151.905,
+      "end": 152.185,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 152.185,
+      "speechEnd": 156.365,
+      "end": 156.645,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "農水水産省のリスクステートメント、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 156.645,
+      "speechEnd": 159.711,
+      "end": 159.991,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "最終的な検疫条件、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 159.991,
+      "speechEnd": 166.82,
+      "end": 167.68,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "北海道および農業団体の立場に注意してください。"
+    }
+  ]
+}

@@ -1,0 +1,460 @@
+{
+  "version": 3,
+  "duration": 221.283,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 685,
+  "charactersPerMinute": 185.7,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 17.165,
+      "text": "Zaporizhzhzhye原子力発電所周辺の地域停戦は、ディーゼル枯渇のリスクを回避するために外部送電線を修理します"
+    },
+    {
+      "key": "dek",
+      "start": 17.165,
+      "end": 42.991,
+      "text": "IAEAは、原子力発電所周辺のロシアとウクライナの間で一時的な地域停戦を仲介し、ウクライナの技術者は8月20日に損傷した外部送電線の修理を許可された。"
+    },
+    {
+      "key": "body-0",
+      "start": 42.991,
+      "end": 103.93,
+      "text": "ロイターと国際原子力機関からの報告によると、ウクライナの技術者が地雷を除去した後、330 kVのFerosplavna -1外部電力線を修理できるようにするために、Zaporozhye原子力発電所の近くで現地の停戦が実施されたことが示されています。ラインは8月20日以来戦闘によって中断されており、それ以来、6つの原子炉と使用済み燃料冷却システムに電力を供給するために非常用ディーゼル発電機に依存しています。"
+    },
+    {
+      "key": "body-1",
+      "start": 103.93,
+      "end": 155.88,
+      "text": "IAEAは、現場のディーゼル埋蔵量が減少しており、外部電力が復旧しない場合や新しい燃料を安全に供給できない場合、原子力発電所は数日以内にフルステーションの停止の危険にさらされる可能性があると警告している。これは、原子力事故を避けるためにIAEAが推進した別の部分的な停戦であり、修理作業の継続は最前線の安全状況に依存します。"
+    },
+    {
+      "key": "why",
+      "start": 155.88,
+      "end": 191.025,
+      "text": "長期間ディーゼルに依存することは、原子力発電所にとってリスクの高い状態であり、安全ウィンドウ内で外部電力を回復できない場合、燃料供給または発電機の故障は、原子力安全リスクを急速に増加させる可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 191.025,
+      "end": 221.283,
+      "text": "Ferosplavna -1線が再接続されているかどうか、ディーゼルの埋蔵量、ロシアとウクライナの双方が地域の停戦を延長または中断するかどうかなど、IAEAが確認した修理に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.664,
+      "end": 7.894,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Zaporizhzhzhye原子力発電所周辺の地域停戦は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.894,
+      "speechEnd": 12.492,
+      "end": 12.772,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ディーゼル枯渇のリスクを回避するため"
+    },
+    {
+      "parentKey": "title",
+      "start": 12.772,
+      "speechEnd": 16.465,
+      "end": 17.165,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "に外部送電線を修理します。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.165,
+      "speechEnd": 19.395,
+      "end": 19.625,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "IAEAは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.625,
+      "speechEnd": 30.145,
+      "end": 30.375,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "原子力発電所周辺のロシアとウクライナの間で一時的な地域停戦を仲介し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 30.375,
+      "speechEnd": 33.371,
+      "end": 33.511,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "ウクライナの技術者は"
+    },
+    {
+      "parentKey": "dek",
+      "start": 33.511,
+      "speechEnd": 36.089,
+      "end": 36.229,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "8月20日"
+    },
+    {
+      "parentKey": "dek",
+      "start": 36.229,
+      "speechEnd": 42.291,
+      "end": 42.991,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "に損傷した外部送電線の修理を許可された。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.991,
+      "speechEnd": 49.122,
+      "end": 49.352,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイターと国際原子力機関からの報告によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.352,
+      "speechEnd": 54.438,
+      "end": 54.668,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ウクライナの技術者が地雷を除去した後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.668,
+      "speechEnd": 61.775,
+      "end": 62.055,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "330 kVのFerosplavna -1外部電力線を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.055,
+      "speechEnd": 65.887,
+      "end": 66.117,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "修理できるようにするために、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.117,
+      "speechEnd": 73.642,
+      "end": 73.922,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "Zaporozhye原子力発電所の近くで現地の停戦が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.922,
+      "speechEnd": 77.963,
+      "end": 78.463,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "実施されたことが示されています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 78.463,
+      "speechEnd": 85.778,
+      "end": 86.009,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ラインは8月20日以来戦闘によって中断されており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 86.009,
+      "speechEnd": 88.168,
+      "end": 88.398,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "それ以来、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 88.398,
+      "speechEnd": 97.526,
+      "end": 97.806,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "6つの原子炉と使用済み燃料冷却システムに電力を供給するため"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 97.806,
+      "speechEnd": 103.31,
+      "end": 103.93,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "に非常用ディーゼル発電機に依存しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.93,
+      "speechEnd": 106.159,
+      "end": 106.389,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "IAEAは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 106.389,
+      "speechEnd": 111.336,
+      "end": 111.566,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "現場のディーゼル埋蔵量が減少しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.566,
+      "speechEnd": 117.349,
+      "end": 117.629,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "外部電力が復旧しない場合や新しい燃料を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.629,
+      "speechEnd": 121.252,
+      "end": 121.482,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "安全に供給できない場合、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.482,
+      "speechEnd": 134.372,
+      "end": 134.872,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "原子力発電所は数日以内にフルステーションの停止の危険にさらされる可能性があると警告している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 134.872,
+      "speechEnd": 136.962,
+      "end": 137.192,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "これは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 137.192,
+      "speechEnd": 142.278,
+      "end": 142.558,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "原子力事故を避けるためにIAEAが"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 142.558,
+      "speechEnd": 147.644,
+      "end": 147.874,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "推進した別の部分的な停戦であり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 147.874,
+      "speechEnd": 155.259,
+      "end": 155.88,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "修理作業の継続は最前線の安全状況に依存します。"
+    },
+    {
+      "parentKey": "why",
+      "start": 155.88,
+      "speechEnd": 159.851,
+      "end": 160.351,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 160.351,
+      "speechEnd": 165.228,
+      "end": 165.458,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "長期間ディーゼルに依存することは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 165.458,
+      "speechEnd": 171.659,
+      "end": 171.889,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "原子力発電所にとってリスクの高い状態であり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 171.889,
+      "speechEnd": 178.02,
+      "end": 178.25,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "安全ウィンドウ内で外部電力を回復できない場合、"
+    },
+    {
+      "parentKey": "why",
+      "start": 178.25,
+      "speechEnd": 182.709,
+      "end": 182.939,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "燃料供給または発電機の故障は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 182.939,
+      "speechEnd": 190.325,
+      "end": 191.025,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "原子力安全リスクを急速に増加させる可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 191.025,
+      "speechEnd": 193.115,
+      "end": 193.345,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 193.345,
+      "speechEnd": 196.968,
+      "end": 197.248,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "Ferosplavna -1線が"
+    },
+    {
+      "parentKey": "watch",
+      "start": 197.248,
+      "speechEnd": 200.732,
+      "end": 200.962,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "再接続されているかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 200.962,
+      "speechEnd": 203.888,
+      "end": 204.118,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ディーゼルの埋蔵量、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 204.118,
+      "speechEnd": 207.532,
+      "end": 207.812,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ロシアとウクライナの双方が"
+    },
+    {
+      "parentKey": "watch",
+      "start": 207.812,
+      "speechEnd": 214.71,
+      "end": 214.94,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "地域の停戦を延長または中断するかどうかなど、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 214.94,
+      "speechEnd": 220.583,
+      "end": 221.283,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "IAEAが確認した修理に注目してください。"
+    }
+  ]
+}
