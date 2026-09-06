@@ -1,0 +1,390 @@
+{
+  "version": 3,
+  "duration": 193.959,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 552,
+  "charactersPerMinute": 170.8,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.845,
+      "text": "日本の大雨が交通影響を拡大JR東日本が7日間のマルチライン予防駐車場の取り決めを発表"
+    },
+    {
+      "key": "dek",
+      "start": 14.845,
+      "end": 35.256,
+      "text": "山形新幹線、東北、新越線の一部が影響を受けており、JR東日本のリマインダーは降雨量に応じて調整される可能性があります。"
+    },
+    {
+      "key": "body-0",
+      "start": 35.256,
+      "end": 88.786,
+      "text": "FNNジャパンは、9月7日に大雨が予想されるため、JR東日本が複数のルートの予防的な運営体制を発表したことを確認しました。山形側では福島～新宿線・仙山線の山形新幹線の一部区間が停車区間となっており、新潟側では会津若松～押白川線のみの早期停車が予定されており、上越線の一部区間が遅延・停車する可能性がある。"
+    },
+    {
+      "key": "body-1",
+      "start": 88.786,
+      "end": 140.954,
+      "text": "JR東日本の公式運行情報には、山形新幹線も大雨に関連する予防事項として記載されており、翌日には一部の列車が停車したことが確認されている。直線降水ベルトのリスクが7日間に延長されたため、降雨量、ルートの安全性チェック、河川の水位に応じて実際の停止エリアが調整される場合があります。出発前に最新のフライトを確認する必要があります。"
+    },
+    {
+      "key": "why",
+      "start": 140.954,
+      "end": 167.556,
+      "text": "予防的なシャットダウンは、月曜日の通勤や地域間の交通に直接的な影響を及ぼし、天候リスクが予測段階から鉄道運行決定に移行することを反映しています。"
+    },
+    {
+      "key": "watch",
+      "start": 167.556,
+      "end": 193.959,
+      "text": "早朝のＪＲ東日本の直近の運行発表、山形新幹線の復旧時期や入線時期、気象庁が大雨や直線降水ベルトの警報をさらに増やしたかどうかに注目してほしい。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 6.27,
+      "end": 6.55,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "日本の大雨が交通影響を拡大JR東日本が"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.55,
+      "speechEnd": 14.144,
+      "end": 14.845,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "7日間のマルチライン予防駐車場の取り決めを発表。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.845,
+      "speechEnd": 17.562,
+      "end": 17.792,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "山形新幹線、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.792,
+      "speechEnd": 19.812,
+      "end": 20.042,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "東北、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.042,
+      "speechEnd": 24.571,
+      "end": 24.801,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "新越線の一部が影響を受けており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.801,
+      "speechEnd": 28.354,
+      "end": 28.634,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "JR東日本のリマインダーは"
+    },
+    {
+      "parentKey": "dek",
+      "start": 28.634,
+      "speechEnd": 34.556,
+      "end": 35.256,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "降雨量に応じて調整される可能性があります。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 35.256,
+      "speechEnd": 37.904,
+      "end": 38.134,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "FNNジャパンは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.134,
+      "speechEnd": 43.777,
+      "end": 44.007,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "9月7日に大雨が予想されるため、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.007,
+      "speechEnd": 51.113,
+      "end": 51.393,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "JR東日本が複数のルートの予防的な運営体制を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.393,
+      "speechEnd": 55.295,
+      "end": 55.795,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "発表したことを確認しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.795,
+      "speechEnd": 66.664,
+      "end": 66.944,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "山形側では福島～新宿線・仙山線の山形新幹線の一部区間が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.944,
+      "speechEnd": 70.497,
+      "end": 70.727,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "停車区間となっており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.727,
+      "speechEnd": 80.55,
+      "end": 80.78,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "新潟側では会津若松～押白川線のみの早期停車が予定されており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 80.78,
+      "speechEnd": 88.166,
+      "end": 88.786,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "上越線の一部区間が遅延・停車する可能性がある。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.786,
+      "speechEnd": 93.384,
+      "end": 93.614,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "JR東日本の公式運行情報には、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.614,
+      "speechEnd": 102.323,
+      "end": 102.553,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "山形新幹線も大雨に関連する予防事項として記載されており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.553,
+      "speechEnd": 109.868,
+      "end": 110.368,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "翌日には一部の列車が停車したことが確認されている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 110.368,
+      "speechEnd": 117.893,
+      "end": 118.123,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "直線降水ベルトのリスクが7日間に延長されたため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.123,
+      "speechEnd": 120.213,
+      "end": 120.443,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "降雨量、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.443,
+      "speechEnd": 123.648,
+      "end": 123.878,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ルートの安全性チェック、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 123.878,
+      "speechEnd": 129.521,
+      "end": 129.801,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "河川の水位に応じて実際の停止エリアが"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 129.801,
+      "speechEnd": 133.354,
+      "end": 133.854,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "調整される場合があります。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 133.854,
+      "speechEnd": 140.334,
+      "end": 140.954,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "出発前に最新のフライトを確認する必要があります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 140.954,
+      "speechEnd": 144.925,
+      "end": 145.425,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 145.425,
+      "speechEnd": 148.908,
+      "end": 149.139,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "予防的なシャットダウンは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 149.139,
+      "speechEnd": 157.429,
+      "end": 157.659,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "月曜日の通勤や地域間の交通に直接的な影響を及ぼし、"
+    },
+    {
+      "parentKey": "why",
+      "start": 157.659,
+      "speechEnd": 166.856,
+      "end": 167.556,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "天候リスクが予測段階から鉄道運行決定に移行することを反映しています。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 167.556,
+      "speechEnd": 169.646,
+      "end": 169.876,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 169.876,
+      "speechEnd": 175.659,
+      "end": 175.889,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "早朝のＪＲ東日本の直近の運行発表、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 175.889,
+      "speechEnd": 181.671,
+      "end": 181.901,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "山形新幹線の復旧時期や入線時期、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 181.901,
+      "speechEnd": 187.823,
+      "end": 188.103,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "気象庁が大雨や直線降水ベルトの警報を"
+    },
+    {
+      "parentKey": "watch",
+      "start": 188.103,
+      "speechEnd": 193.259,
+      "end": 193.959,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "さらに増やしたかどうかに注目してほしい。"
+    }
+  ]
+}

@@ -1,0 +1,330 @@
+{
+  "version": 3,
+  "duration": 185.287,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 506,
+  "charactersPerMinute": 163.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 13.053,
+      "text": "長崎大村250公斤戰時不発彈安全處理完了西九州新幹線及び道路恢復"
+    },
+    {
+      "key": "dek",
+      "start": 13.053,
+      "end": 37.317,
+      "text": "陸上自衛隊が郡内の河川や河川の安全運用を完了し、大村市は避難指示を解除し、処理中に西九州新幹線の一部と周辺道路がしばらく閉鎖されました。"
+    },
+    {
+      "key": "body-0",
+      "start": 37.317,
+      "end": 84.848,
+      "text": "長崎放送テレビ長崎は、大村市で以前に発見された約250 kgの弾丸は発射されず、6日朝に陸上自衛隊によって処分され、11時35分頃に警備が完了し、作戦が完了すると発表したと報じた。市は直ちに避難指示、道路交通規制、および半径約283メートル以内の関連する避難所の配置を解除した。"
+    },
+    {
+      "key": "body-1",
+      "start": 84.848,
+      "end": 132.5,
+      "text": "産業界との連携のため、長崎への西九州新幹線武雄温泉や大村線の一部が一旦休止され、国道34号線付近でも交通規制が実施されました。この爆弾は、第二次世界大戦中に米軍が地元に同様の爆弾を投下したときに残されたと言われています。この処分後、鉄道と道路は修復されました。"
+    },
+    {
+      "key": "why",
+      "start": 132.5,
+      "end": 158.785,
+      "text": "今回の不発彈位置は西九州新幹線主要道路に直接影響を及ぼし、時遺遺物貿易協議会現代公共交通と地方都市計画による国際影響を示している。"
+    },
+    {
+      "key": "watch",
+      "start": 158.785,
+      "end": 185.287,
+      "text": "JR九州の個別便遅延は依然として発生しているのか、また大村市や長崎県が同地域における河川事業のフォローアップや不燃調査の取り決めを発表するのかに注目だ。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 12.192,
+      "end": 13.053,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "長崎大村250公斤戰時不発彈安全處理完了西九州新幹線及び道路恢復。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.053,
+      "speechEnd": 21.692,
+      "end": 21.972,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "陸上自衛隊が郡内の河川や河川の安全運用を完了し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.972,
+      "speechEnd": 26.013,
+      "end": 26.293,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "大村市は避難指示を解除し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.293,
+      "speechEnd": 32.842,
+      "end": 33.182,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "処理中に西九州新幹線の一部と周辺道路が"
+    },
+    {
+      "parentKey": "dek",
+      "start": 33.182,
+      "speechEnd": 36.457,
+      "end": 37.317,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "しばらく閉鎖されました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.317,
+      "speechEnd": 41.079,
+      "end": 41.359,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "長崎放送テレビ長崎は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.359,
+      "speechEnd": 50.138,
+      "end": 50.418,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "大村市で以前に発見された約250 kgの弾丸は発射されず、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.418,
+      "speechEnd": 56.131,
+      "end": 56.411,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "6日朝に陸上自衛隊によって処分され、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.411,
+      "speechEnd": 61.567,
+      "end": 61.847,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "11時35分頃に警備が完了し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.847,
+      "speechEnd": 66.793,
+      "end": 67.413,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "作戦が完了すると発表したと報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.413,
+      "speechEnd": 70.618,
+      "end": 70.898,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "市は直ちに避難指示、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.898,
+      "speechEnd": 73.615,
+      "end": 73.896,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "道路交通規制、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.896,
+      "speechEnd": 84.068,
+      "end": 84.848,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "および半径約283メートル以内の関連する避難所の配置を解除した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.848,
+      "speechEnd": 88.471,
+      "end": 88.751,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "産業界との連携のため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.751,
+      "speechEnd": 99.759,
+      "end": 100.039,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "長崎への西九州新幹線武雄温泉や大村線の一部が一旦休止され、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 100.039,
+      "speechEnd": 107.912,
+      "end": 108.532,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "国道34号線付近でも交通規制が実施されました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.532,
+      "speechEnd": 110.901,
+      "end": 111.181,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この爆弾は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.181,
+      "speechEnd": 118.914,
+      "end": 119.254,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "第二次世界大戦中に米軍が地元に同様の爆弾を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 119.254,
+      "speechEnd": 124.48,
+      "end": 125.1,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "投下したときに残されたと言われています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 125.1,
+      "speechEnd": 127.399,
+      "end": 127.679,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この処分後、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 127.679,
+      "speechEnd": 131.72,
+      "end": 132.5,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "鉄道と道路は修復されました。"
+    },
+    {
+      "parentKey": "why",
+      "start": 132.5,
+      "speechEnd": 136.471,
+      "end": 137.091,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 137.091,
+      "speechEnd": 146.985,
+      "end": 147.265,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今回の不発彈位置は西九州新幹線主要道路に直接影響を及ぼし、"
+    },
+    {
+      "parentKey": "why",
+      "start": 147.265,
+      "speechEnd": 157.924,
+      "end": 158.785,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "時遺遺物貿易協議会現代公共交通と地方都市計画による国際影響を示している。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 158.785,
+      "speechEnd": 160.875,
+      "end": 161.155,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 161.155,
+      "speechEnd": 168.261,
+      "end": 168.541,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "JR九州の個別便遅延は依然として発生しているのか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 168.541,
+      "speechEnd": 184.426,
+      "end": 185.287,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "また大村市や長崎県が同地域における河川事業のフォローアップや不燃調査の取り決めを発表するのかに注目だ。"
+    }
+  ]
+}
