@@ -1,0 +1,380 @@
+{
+  "version": 3,
+  "duration": 180.976,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 589,
+  "charactersPerMinute": 195.3,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 11.87,
+      "text": "女子英超開季多隊報捷 曼城3比1疲れ伯明翰、利物浦四球大勝"
+    },
+    {
+      "key": "dek",
+      "start": 11.87,
+      "end": 34.248,
+      "text": "マンチェスター・シティのディフェンディングはカディジャ・ショーに2度敗れ、バーミンガムに進出した。リバプールは4 -0でチャールトンに敗れ、アーセナルとトッテナムも成功した。"
+    },
+    {
+      "key": "body-0",
+      "start": 34.248,
+      "end": 85.038,
+      "text": "女子プレミアリーグ2026/27シーズンは、日曜日に主要な第1ラウンドイベントでキックオフします。ディフェンディングチャンピオンのマンチェスター・シティは、ホームでマルコ・バーミンガムを3 -1で破り、メアリー・ファウラーが49分で開幕し、続いてハディージャ・ショーが55分と86分で開幕しました。バーミンガムは90分でオセアン・フルトレによって回復されました。"
+    },
+    {
+      "key": "body-1",
+      "start": 85.038,
+      "end": 128.322,
+      "text": "別の試合では、リバプールがベン・マシェルトンを4 -0で破り、キャプテンのグレース・フィスクが2得点、ヴィヴィアン・エンデマンとコーネリア・カポックスも得点した。ロイターの第1ラウンドラウンドの報道によると、アーセナルはバレットを1 -0で、トッテナムはウェズリアンを3 -1で、クリスタルパレスはエバートンを1 -0で破った。"
+    },
+    {
+      "key": "why",
+      "start": 128.322,
+      "end": 155.655,
+      "text": "最初のラウンドの結果は、最初にディフェンディングチームとプロモーションチームの競争力を反映しており、新シーズンの入札と保護傾向の最初の公式サンプルも提供します。"
+    },
+    {
+      "key": "watch",
+      "start": 155.655,
+      "end": 180.976,
+      "text": "エバートンIの交代プロセスに関するクリスタルパレスの調査、ならびにマンチェスターシティ、リバプール、アーセナルの次のラインナップと負傷者の変更にご注目ください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.734,
+      "end": 8.014,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "女子英超開季多隊報捷 曼城3比1疲れ伯明翰、"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.014,
+      "speechEnd": 11.01,
+      "end": 11.87,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "利物浦四球大勝。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 11.87,
+      "speechEnd": 16.26,
+      "end": 16.6,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "マンチェスター・シティのディフェンディングは"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.6,
+      "speechEnd": 20.153,
+      "end": 20.433,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "カディジャ・ショーに2度敗れ、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.433,
+      "speechEnd": 23.708,
+      "end": 24.328,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "バーミンガムに進出した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.328,
+      "speechEnd": 29.484,
+      "end": 29.764,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "リバプールは4 -0でチャールトンに敗れ、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 29.764,
+      "speechEnd": 33.388,
+      "end": 34.248,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "アーセナルとトッテナムも成功した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.248,
+      "speechEnd": 41.424,
+      "end": 41.704,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "女子プレミアリーグ2026/27シーズンは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.704,
+      "speechEnd": 47.975,
+      "end": 48.595,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "日曜日に主要な第1ラウンドイベントでキックオフします。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.595,
+      "speechEnd": 53.96,
+      "end": 54.24,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ディフェンディングチャンピオンのマンチェスター・シティは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.24,
+      "speechEnd": 60.72,
+      "end": 61.0,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ホームでマルコ・バーミンガムを3 -1で破り、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.0,
+      "speechEnd": 66.226,
+      "end": 66.506,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "メアリー・ファウラーが49分で開幕し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.506,
+      "speechEnd": 69.781,
+      "end": 70.121,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "続いてハディージャ・ショーが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.121,
+      "speechEnd": 75.625,
+      "end": 76.245,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "55分と86分で開幕しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.245,
+      "speechEnd": 84.258,
+      "end": 85.038,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "バーミンガムは90分でオセアン・フルトレによって回復されました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 85.038,
+      "speechEnd": 87.616,
+      "end": 87.896,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "別の試合では、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 87.896,
+      "speechEnd": 94.097,
+      "end": 94.378,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "リバプールがベン・マシェルトンを4 -0で破り、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.378,
+      "speechEnd": 99.046,
+      "end": 99.326,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "キャプテンのグレース・フィスクが2得点、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.326,
+      "speechEnd": 105.806,
+      "end": 106.426,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ヴィヴィアン・エンデマンとコーネリア・カポックスも得点した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 106.426,
+      "speechEnd": 111.721,
+      "end": 112.001,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイターの第1ラウンドラウンドの報道によると、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.001,
+      "speechEnd": 116.461,
+      "end": 116.741,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アーセナルはバレットを1 -0で、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 116.741,
+      "speechEnd": 121.548,
+      "end": 121.828,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "トッテナムはウェズリアンを3 -1で、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.828,
+      "speechEnd": 127.542,
+      "end": 128.322,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "クリスタルパレスはエバートンを1 -0で破った。"
+    },
+    {
+      "parentKey": "why",
+      "start": 128.322,
+      "speechEnd": 132.293,
+      "end": 132.913,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 132.913,
+      "speechEnd": 136.467,
+      "end": 136.747,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "最初のラウンドの結果は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 136.747,
+      "speechEnd": 145.456,
+      "end": 145.737,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "最初にディフェンディングチームとプロモーションチームの競争力を反映しており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 145.737,
+      "speechEnd": 154.794,
+      "end": 155.655,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "新シーズンの入札と保護傾向の最初の公式サンプルも提供します。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 155.655,
+      "speechEnd": 157.745,
+      "end": 158.025,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 158.025,
+      "speechEnd": 165.62,
+      "end": 165.9,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "エバートンIの交代プロセスに関するクリスタルパレスの調査、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 165.9,
+      "speechEnd": 169.523,
+      "end": 169.803,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ならびにマンチェスターシティ、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 169.803,
+      "speechEnd": 171.963,
+      "end": 172.243,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "リバプール、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 172.243,
+      "speechEnd": 180.116,
+      "end": 180.976,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "アーセナルの次のラインナップと負傷者の変更にご注目ください。"
+    }
+  ]
+}
