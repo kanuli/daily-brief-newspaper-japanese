@@ -1,0 +1,380 @@
+{
+  "version": 3,
+  "duration": 196.336,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 649,
+  "charactersPerMinute": 198.3,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 18.411,
+      "text": "ベルギーのFAは、Balogunの一時停止論争を説明するために、FIFAへのEnfentinoの再選要請を支持することを拒否します"
+    },
+    {
+      "key": "dek",
+      "start": 18.411,
+      "end": 43.441,
+      "text": "ベルギーのFAは、ワールドカップでの赤いメダルの停止とFIFAのガバナンスの透明性の欠如を指摘し、FIFA評議会に10月にこの事件について正式に議論するよう要請した。"
+    },
+    {
+      "key": "body-0",
+      "start": 43.441,
+      "end": 85.255,
+      "text": "ベルギー王立サッカー協会は、FIFAが米国のフォワードFolarin Balogunのワールドカップ出場停止の完全な説明を提供するまで、ジャンニ・インファンティーノ大統領の次期入札を支持しないと述べた。協会は、事件の2か月後、懲戒手続きと意思決定の透明性に関する多くの疑問に答えられなかったと述べた。"
+    },
+    {
+      "key": "body-1",
+      "start": 85.255,
+      "end": 138.829,
+      "text": "Balogunは、ボスニアとのワールドカップで優勝した後、ベルギーとのノックアウト試合でプレーすることを許可される前に、自動的に1試合中断されるべきでした。ベルギーのFAはその資格に異議を申し立てたが、FIFAはベルギーが元の懲戒手続きの当事者ではないという理由で拒否した。ベルギーは現在、この事件を10月15日にFIFA理事会の議題に入れるよう要請している。"
+    },
+    {
+      "key": "why",
+      "start": 138.829,
+      "end": 166.568,
+      "text": "ナショナル・フットボール・アソシエーションはFIFA会長への支持を公に撤回し、この事件をシングルプレーヤーの懲戒紛争から国際的なサッカーガバナンスの問題にエスカレートさせた。"
+    },
+    {
+      "key": "watch",
+      "start": 166.568,
+      "end": 196.336,
+      "text": "FIFAが完全な懲戒の根拠を公表しているかどうか、取締役会が10月15日に事件について話し合っているかどうか、そして他のUEFAがベルギーのリードに従っているかどうかを確認してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.717,
+      "end": 2.997,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ベルギーのFAは、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.997,
+      "speechEnd": 8.71,
+      "end": 8.99,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Balogunの一時停止論争を説明するために、"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.99,
+      "speechEnd": 13.728,
+      "end": 14.068,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "FIFAへのEnfentinoの再選要請を"
+    },
+    {
+      "parentKey": "title",
+      "start": 14.068,
+      "speechEnd": 17.551,
+      "end": 18.411,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "支持することを拒否します。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.411,
+      "speechEnd": 21.128,
+      "end": 21.408,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ベルギーのFAは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.408,
+      "speechEnd": 32.834,
+      "end": 33.114,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ワールドカップでの赤いメダルの停止とFIFAのガバナンスの透明性の欠如を指摘し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 33.114,
+      "speechEnd": 38.548,
+      "end": 38.888,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "FIFA評議会に10月にこの事件について"
+    },
+    {
+      "parentKey": "dek",
+      "start": 38.888,
+      "speechEnd": 42.581,
+      "end": 43.441,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "正式に議論するよう要請した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.441,
+      "speechEnd": 47.273,
+      "end": 47.553,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ベルギー王立サッカー協会は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.553,
+      "speechEnd": 60.163,
+      "end": 60.443,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "FIFAが米国のフォワードFolarin Balogunのワールドカップ出場停止の完全な説明を提供するまで、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.443,
+      "speechEnd": 68.316,
+      "end": 68.936,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ジャンニ・インファンティーノ大統領の次期入札を支持しないと述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.936,
+      "speechEnd": 71.026,
+      "end": 71.306,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "協会は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.306,
+      "speechEnd": 74.093,
+      "end": 74.373,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "事件の2か月後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.373,
+      "speechEnd": 84.475,
+      "end": 85.255,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "懲戒手続きと意思決定の透明性に関する多くの疑問に答えられなかったと述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 85.255,
+      "speechEnd": 87.484,
+      "end": 87.764,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Balogunは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 87.764,
+      "speechEnd": 92.363,
+      "end": 92.643,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ボスニアとのワールドカップで優勝した後、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.643,
+      "speechEnd": 100.585,
+      "end": 100.865,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ベルギーとのノックアウト試合でプレーすることを許可される前に、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 100.865,
+      "speechEnd": 106.438,
+      "end": 107.059,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "自動的に1試合中断されるべきでした。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.059,
+      "speechEnd": 113.329,
+      "end": 113.609,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ベルギーのFAはその資格に異議を申し立てたが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 113.609,
+      "speechEnd": 120.576,
+      "end": 120.916,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "FIFAはベルギーが元の懲戒手続きの当事者では"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.916,
+      "speechEnd": 124.469,
+      "end": 125.089,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ないという理由で拒否した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 125.089,
+      "speechEnd": 127.806,
+      "end": 128.086,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ベルギーは現在、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 128.086,
+      "speechEnd": 138.049,
+      "end": 138.829,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "この事件を10月15日にFIFA理事会の議題に入れるよう要請している。"
+    },
+    {
+      "parentKey": "why",
+      "start": 138.829,
+      "speechEnd": 142.8,
+      "end": 143.42,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 143.42,
+      "speechEnd": 147.6,
+      "end": 147.94,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ナショナル・フットボール・アソシエーションは"
+    },
+    {
+      "parentKey": "why",
+      "start": 147.94,
+      "speechEnd": 153.166,
+      "end": 153.446,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "FIFA会長への支持を公に撤回し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 153.446,
+      "speechEnd": 165.708,
+      "end": 166.568,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "この事件をシングルプレーヤーの懲戒紛争から国際的なサッカーガバナンスの問題にエスカレートさせた。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 166.568,
+      "speechEnd": 168.658,
+      "end": 168.938,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 168.938,
+      "speechEnd": 176.183,
+      "end": 176.463,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "FIFAが完全な懲戒の根拠を公表しているかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 176.463,
+      "speechEnd": 182.037,
+      "end": 182.377,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "取締役会が10月15日に事件について"
+    },
+    {
+      "parentKey": "watch",
+      "start": 182.377,
+      "speechEnd": 185.582,
+      "end": 185.862,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "話し合っているかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 185.862,
+      "speechEnd": 195.476,
+      "end": 196.336,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "そして他のUEFAがベルギーのリードに従っているかどうかを確認してください。"
+    }
+  ]
+}

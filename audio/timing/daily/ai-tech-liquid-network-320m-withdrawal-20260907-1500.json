@@ -1,0 +1,450 @@
+{
+  "version": 3,
+  "duration": 194.691,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 681,
+  "charactersPerMinute": 209.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 13.135,
+      "text": "リキッドネットワーク約3億2000万ドルビットコイン盗難ネットワークが新しい取引を一時停止"
+    },
+    {
+      "key": "dek",
+      "start": 13.135,
+      "end": 35.172,
+      "text": "約4,000ビットコインがアライアンスウォレットから引き出されました。関係者はホワイトハットハッカーであると主張し、ネットワークオペレーターはまだ侵害を調査しています。"
+    },
+    {
+      "key": "body-0",
+      "start": 35.172,
+      "end": 89.301,
+      "text": "ビットコインサイドチェーンLiquid Networkは、日曜日にコンソーシアムウォレットから約4,000ビットコインが引き出され、その時点で約3億2,000万ドルの価値があると述べた。関係者は自分自身を「ホワイトハットハッカー」と呼んでいますが、彼の身元と資金が返還されるかどうかは独立して確認されていません。Liquidは、リスクのさらなる拡大を避けるために新しい取引を一時停止しました。"
+    },
+    {
+      "key": "body-1",
+      "start": 89.301,
+      "end": 139.883,
+      "text": "Liquidは、引き出しは関連するトランザクションを処理する権限を与えられたSideSwapを通じて行われ、関連する暗号化キーは侵害されていないと述べました。このインシデントにより、サイドチェーン、クロスチェーンビリング、およびフェデレーションホスティングアーキテクチャのセキュリティリスクに焦点が戻され、その後の技術調査によってネットワークがいつ復元されるかが決定されます。"
+    },
+    {
+      "key": "why",
+      "start": 139.883,
+      "end": 164.848,
+      "text": "9桁のドル規模の資産転送は、デジタル資産インフラストラクチャのセキュリティ制御、為替リスク管理、サイドチェーン資産に対するユーザーの信頼性を直接テストします。"
+    },
+    {
+      "key": "watch",
+      "start": 164.848,
+      "end": 194.691,
+      "text": "LiquidとBlockstreamからの技術的なインシデントレポート、資金が返却されるかどうか、取引が再開される時期、およびL - BTCへのアクセスが関連取引所によって制限されるかどうかに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.205,
+      "end": 3.385,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "リキッドネットワーク約3億"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.385,
+      "speechEnd": 5.893,
+      "end": 6.073,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "2000万ドル"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.073,
+      "speechEnd": 12.275,
+      "end": 13.135,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ビットコイン盗難ネットワークが新しい取引を一時停止。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.135,
+      "speechEnd": 15.155,
+      "end": 15.435,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "約4,"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.435,
+      "speechEnd": 22.054,
+      "end": 22.675,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "000ビットコインがアライアンスウォレットから引き出されました。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.675,
+      "speechEnd": 27.97,
+      "end": 28.25,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "関係者はホワイトハットハッカーであると主張し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 28.25,
+      "speechEnd": 34.312,
+      "end": 35.172,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ネットワークオペレーターはまだ侵害を調査しています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 35.172,
+      "speechEnd": 39.561,
+      "end": 39.842,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ビットコインサイドチェーンLiquid Networkは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.842,
+      "speechEnd": 45.416,
+      "end": 45.696,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日曜日にコンソーシアムウォレットから約4,"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.696,
+      "speechEnd": 49.528,
+      "end": 49.808,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "000ビットコインが引き出され、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.808,
+      "speechEnd": 53.501,
+      "end": 53.781,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "その時点で約3億2,"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.781,
+      "speechEnd": 58.031,
+      "end": 58.651,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "000万ドルの価値があると述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.651,
+      "speechEnd": 66.455,
+      "end": 66.735,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "関係者は自分自身を「ホワイトハットハッカー」と呼んでいますが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.735,
+      "speechEnd": 72.1,
+      "end": 72.44,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "彼の身元と資金が返還されるかどうかは"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.44,
+      "speechEnd": 76.272,
+      "end": 76.892,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "独立して確認されていません。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.892,
+      "speechEnd": 79.052,
+      "end": 79.332,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Liquidは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 79.332,
+      "speechEnd": 83.443,
+      "end": 83.783,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "リスクのさらなる拡大を避けるため"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 83.783,
+      "speechEnd": 88.521,
+      "end": 89.301,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "に新しい取引を一時停止しました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 89.301,
+      "speechEnd": 91.461,
+      "end": 91.741,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Liquidは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.741,
+      "speechEnd": 96.061,
+      "end": 96.401,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "引き出しは関連するトランザクションを"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 96.401,
+      "speechEnd": 104.065,
+      "end": 104.345,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "処理する権限を与えられたSideSwapを通じて行われ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.345,
+      "speechEnd": 111.591,
+      "end": 112.212,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "関連する暗号化キーは侵害されていないと述べました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.212,
+      "speechEnd": 115.208,
+      "end": 115.488,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "このインシデントにより、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.488,
+      "speechEnd": 117.787,
+      "end": 118.067,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "サイドチェーン、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.067,
+      "speechEnd": 120.924,
+      "end": 121.204,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "クロスチェーンビリング、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.204,
+      "speechEnd": 129.983,
+      "end": 130.263,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "およびフェデレーションホスティングアーキテクチャのセキュリティリスクに焦点が戻され、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 130.263,
+      "speechEnd": 134.722,
+      "end": 135.062,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "その後の技術調査によってネットワークが"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 135.062,
+      "speechEnd": 139.103,
+      "end": 139.883,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "いつ復元されるかが決定されます。"
+    },
+    {
+      "parentKey": "why",
+      "start": 139.883,
+      "speechEnd": 143.855,
+      "end": 144.475,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 144.475,
+      "speechEnd": 148.656,
+      "end": 148.936,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "9桁のドル規模の資産転送は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 148.936,
+      "speechEnd": 153.952,
+      "end": 154.232,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "デジタル資産インフラストラクチャのセキュリティ制御、"
+    },
+    {
+      "parentKey": "why",
+      "start": 154.232,
+      "speechEnd": 156.671,
+      "end": 156.951,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "為替リスク管理、"
+    },
+    {
+      "parentKey": "why",
+      "start": 156.951,
+      "speechEnd": 163.988,
+      "end": 164.848,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "サイドチェーン資産に対するユーザーの信頼性を直接テストします。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 164.848,
+      "speechEnd": 166.939,
+      "end": 167.219,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 167.219,
+      "speechEnd": 174.186,
+      "end": 174.466,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "LiquidとBlockstreamからの技術的なインシデントレポート、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 174.466,
+      "speechEnd": 178.159,
+      "end": 178.439,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "資金が返却されるかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 178.439,
+      "speechEnd": 181.714,
+      "end": 181.994,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "取引が再開される時期、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 181.994,
+      "speechEnd": 186.174,
+      "end": 186.515,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "およびL - BTCへのアクセスが"
+    },
+    {
+      "parentKey": "watch",
+      "start": 186.515,
+      "speechEnd": 193.83,
+      "end": 194.691,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "関連取引所によって制限されるかどうかに注意してください。"
+    }
+  ]
+}

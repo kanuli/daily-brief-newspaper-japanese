@@ -1,0 +1,480 @@
+{
+  "version": 3,
+  "duration": 215.719,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 554,
+  "charactersPerMinute": 154.1,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 17.157,
+      "text": "李家超：第1次5カ年計画は、長期的な民生政策報告に焦点を当て、同時に年次措置を提案"
+    },
+    {
+      "key": "dek",
+      "start": 17.157,
+      "end": 46.639,
+      "text": "政府は、香港の最初の5カ年計画と新しい政策演説を9月16日に発表する予定である。この2つの文書は、それぞれ中長期的な方向性と年間の政策措置に対処している。"
+    },
+    {
+      "key": "body-0",
+      "start": 46.639,
+      "end": 107.759,
+      "text": "李嘉秋行政長官は、政府が過去２カ月間に香港の最初の５カ年計画と新たな施政方針演説について国民の意見を集めたと述べた。 2つの文書は同日の9月16日に発表される予定で、同氏は、5カ年計画では長期戦略を用いて経済発展を促進し、国民生活を改善する一方、施政方針演説では住宅、医療、その他の生活対策について年次ベースで提案すると述べた。"
+    },
+    {
+      "key": "body-1",
+      "start": 107.759,
+      "end": 157.781,
+      "text": "李家超氏は、同日の公開は2つの文書の補完関係を国民が理解するのに役立つと指摘した。政府はこれまでに、金融、革新的な技術、教育を新たな成長の原動力として挙げている。市場は、同計画が定量化可能な中期目標を定めるかどうか、また年次対策が長期的な資源配分とどのように連携するかに注目するだろう。"
+    },
+    {
+      "key": "why",
+      "start": 157.781,
+      "end": 184.556,
+      "text": "計画は人々の生活と経済発展をカバーしており、これは今後数年間の公共政策の優先順位、資源配分、産業の方向性に影響を与えます。"
+    },
+    {
+      "key": "watch",
+      "start": 184.556,
+      "end": 215.719,
+      "text": "9月16日の公式文書に記載されている定量的な目標、住宅と医療の対策、経済成長政策、および政府が5年間の実施の進捗状況をどのように測定しているかに注意を払ってください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.09,
+      "end": 2.43,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "punctuation-semantic",
+      "text": "李家超："
+    },
+    {
+      "parentKey": "title",
+      "start": 2.43,
+      "speechEnd": 6.332,
+      "end": 6.612,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "第1次5カ年計画は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.612,
+      "speechEnd": 12.255,
+      "end": 12.535,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "長期的な民生政策報告に焦点を当て、"
+    },
+    {
+      "parentKey": "title",
+      "start": 12.535,
+      "speechEnd": 16.297,
+      "end": 17.157,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "同時に年次措置を提案。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.157,
+      "speechEnd": 19.317,
+      "end": 19.597,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "政府は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.597,
+      "speechEnd": 26.982,
+      "end": 27.322,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "香港の最初の5カ年計画と新しい政策演説を"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.322,
+      "speechEnd": 32.826,
+      "end": 33.446,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "9月16日に発表する予定である。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 33.446,
+      "speechEnd": 36.651,
+      "end": 36.931,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この2つの文書は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 36.931,
+      "speechEnd": 45.779,
+      "end": 46.639,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "それぞれ中長期的な方向性と年間の政策措置に対処している。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.639,
+      "speechEnd": 50.471,
+      "end": 50.751,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "李嘉秋行政長官は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.751,
+      "speechEnd": 62.873,
+      "end": 63.213,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "政府が過去２カ月間に香港の最初の５カ年計画と新たな施政方針演説について"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.213,
+      "speechEnd": 67.254,
+      "end": 67.874,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "国民の意見を集めたと述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.874,
+      "speechEnd": 71.358,
+      "end": 71.538,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "2つの文書は同日の"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.538,
+      "speechEnd": 74.325,
+      "end": 74.505,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "9月16日"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.505,
+      "speechEnd": 77.918,
+      "end": 78.198,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "に発表される予定で、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 78.198,
+      "speechEnd": 80.358,
+      "end": 80.638,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同氏は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 80.638,
+      "speechEnd": 88.72,
+      "end": 89.0,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "5カ年計画では長期戦略を用いて経済発展を促進し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 89.0,
+      "speechEnd": 92.832,
+      "end": 93.112,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "国民生活を改善する一方、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 93.112,
+      "speechEnd": 96.665,
+      "end": 96.945,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "施政方針演説では住宅、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 96.945,
+      "speechEnd": 98.965,
+      "end": 99.245,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "医療、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 99.245,
+      "speechEnd": 106.979,
+      "end": 107.759,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "その他の生活対策について年次ベースで提案すると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.759,
+      "speechEnd": 110.197,
+      "end": 110.477,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "李家超氏は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 110.477,
+      "speechEnd": 117.584,
+      "end": 117.924,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "同日の公開は2つの文書の補完関係を国民が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.924,
+      "speechEnd": 121.965,
+      "end": 122.585,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "理解するのに役立つと指摘した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 122.585,
+      "speechEnd": 125.72,
+      "end": 126.0,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "政府はこれまでに、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 126.0,
+      "speechEnd": 128.02,
+      "end": 128.3,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "金融、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 128.3,
+      "speechEnd": 130.948,
+      "end": 131.228,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "革新的な技術、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 131.228,
+      "speechEnd": 137.498,
+      "end": 138.118,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "教育を新たな成長の原動力として挙げている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 138.118,
+      "speechEnd": 140.208,
+      "end": 140.488,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "市場は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 140.488,
+      "speechEnd": 147.176,
+      "end": 147.457,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同計画が定量化可能な中期目標を定めるかどうか、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 147.457,
+      "speechEnd": 157.001,
+      "end": 157.781,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "また年次対策が長期的な資源配分とどのように連携するかに注目するだろう。"
+    },
+    {
+      "parentKey": "why",
+      "start": 157.781,
+      "speechEnd": 161.753,
+      "end": 162.373,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 162.373,
+      "speechEnd": 168.922,
+      "end": 169.202,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "計画は人々の生活と経済発展をカバーしており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 169.202,
+      "speechEnd": 176.169,
+      "end": 176.449,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "これは今後数年間の公共政策の優先順位、"
+    },
+    {
+      "parentKey": "why",
+      "start": 176.449,
+      "speechEnd": 178.608,
+      "end": 178.888,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "資源配分、"
+    },
+    {
+      "parentKey": "why",
+      "start": 178.888,
+      "speechEnd": 183.696,
+      "end": 184.556,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "産業の方向性に影響を与えます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 184.556,
+      "speechEnd": 186.646,
+      "end": 186.926,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 186.926,
+      "speechEnd": 195.007,
+      "end": 195.288,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "9月16日の公式文書に記載されている定量的な目標、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 195.288,
+      "speechEnd": 198.074,
+      "end": 198.354,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "住宅と医療の対策、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 198.354,
+      "speechEnd": 201.42,
+      "end": 201.7,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "経済成長政策、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 201.7,
+      "speechEnd": 208.597,
+      "end": 208.937,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "および政府が5年間の実施の進捗状況を"
+    },
+    {
+      "parentKey": "watch",
+      "start": 208.937,
+      "speechEnd": 214.859,
+      "end": 215.719,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "どのように測定しているかに注意を払ってください。"
+    }
+  ]
+}

@@ -1,0 +1,350 @@
+{
+  "version": 3,
+  "duration": 159.608,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 457,
+  "charactersPerMinute": 171.8,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.868,
+      "text": "東京～仙台間の東北新幹線は、人身事故により運休し、午前8時50分に運行を再開した。"
+    },
+    {
+      "key": "dek",
+      "start": 14.868,
+      "end": 36.018,
+      "text": "JR東日本によると、東京～仙台間の上り線・下り線は午前中に一度停止し、FNNによると8時50分頃に運行を再開したという。"
+    },
+    {
+      "key": "body-0",
+      "start": 36.018,
+      "end": 76.233,
+      "text": "FNNはJR東日本の発表として、月曜日朝の人身事故のため、東北新幹線の東京－仙台駅間の上下線が一時運転を見合わせ、午前8時50分頃に運転を再開したと伝えた。事故は朝のラッシュアワー中に発生し、地域をまたぐ乗客の移動スケジュールに一時的な影響が出た。"
+    },
+    {
+      "key": "body-1",
+      "start": 76.233,
+      "end": 110.864,
+      "text": "JR東日本のこの日の運行情報によると、東北新幹線は通常運転に戻りましたが、山形新幹線と一部の乗り入れ線は依然として大雨の影響で運休やダイヤ調整が続いています。乗客は引き続き天気やリアルタイムの列車情報に注意する必要があります。"
+    },
+    {
+      "key": "why",
+      "start": 110.864,
+      "end": 137.431,
+      "text": "この事故は、東京から仙台までのコア区間に影響を与え、同日の豪雨による鉄道の調整に重ねられ、旅行者の旅行の不確実性が高まりました。"
+    },
+    {
+      "key": "watch",
+      "start": 137.431,
+      "end": 159.608,
+      "text": "JR東日本が発表した遅延率、その後のフライトの再開、大雨が他の東北新幹線や入線に影響を与えたかどうかに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.808,
+      "end": 5.088,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "東京～仙台間の東北新幹線は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 5.088,
+      "speechEnd": 8.572,
+      "end": 8.852,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "人身事故により運休し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.852,
+      "speechEnd": 14.008,
+      "end": 14.868,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "午前8時50分に運行を再開した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.868,
+      "speechEnd": 17.864,
+      "end": 18.144,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "JR東日本によると、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.144,
+      "speechEnd": 25.739,
+      "end": 26.019,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "東京～仙台間の上り線・下り線は午前中に一度停止し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.019,
+      "speechEnd": 29.015,
+      "end": 29.195,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "FNNによると8時"
+    },
+    {
+      "parentKey": "dek",
+      "start": 29.195,
+      "speechEnd": 31.285,
+      "end": 31.465,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "50分"
+    },
+    {
+      "parentKey": "dek",
+      "start": 31.465,
+      "speechEnd": 35.158,
+      "end": 36.018,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "頃に運行を再開したという。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.018,
+      "speechEnd": 40.477,
+      "end": 40.757,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "FNNはJR東日本の発表として、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.757,
+      "speechEnd": 45.147,
+      "end": 45.427,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "月曜日朝の人身事故のため、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.427,
+      "speechEnd": 54.694,
+      "end": 54.974,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "東北新幹線の東京－仙台駅間の上下線が一時運転を見合わせ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.974,
+      "speechEnd": 61.872,
+      "end": 62.492,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "午前8時50分頃に運転を再開したと伝えた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.492,
+      "speechEnd": 67.509,
+      "end": 67.789,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "事故は朝のラッシュアワー中に発生し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.789,
+      "speechEnd": 75.453,
+      "end": 76.233,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "地域をまたぐ乗客の移動スケジュールに一時的な影響が出た。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 76.233,
+      "speechEnd": 81.738,
+      "end": 82.018,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "JR東日本のこの日の運行情報によると、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.018,
+      "speechEnd": 87.801,
+      "end": 88.081,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "東北新幹線は通常運転に戻りましたが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.081,
+      "speechEnd": 93.307,
+      "end": 93.647,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "山形新幹線と一部の乗り入れ線は"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.647,
+      "speechEnd": 101.102,
+      "end": 101.722,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "依然として大雨の影響で運休やダイヤ調整が続いています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.722,
+      "speechEnd": 110.083,
+      "end": 110.864,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "乗客は引き続き天気やリアルタイムの列車情報に注意する必要があります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 110.864,
+      "speechEnd": 114.835,
+      "end": 115.455,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 115.455,
+      "speechEnd": 117.755,
+      "end": 118.035,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この事故は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 118.035,
+      "speechEnd": 124.166,
+      "end": 124.446,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "東京から仙台までのコア区間に影響を与え、"
+    },
+    {
+      "parentKey": "why",
+      "start": 124.446,
+      "speechEnd": 130.369,
+      "end": 130.649,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同日の豪雨による鉄道の調整に重ねられ、"
+    },
+    {
+      "parentKey": "why",
+      "start": 130.649,
+      "speechEnd": 136.571,
+      "end": 137.431,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "旅行者の旅行の不確実性が高まりました。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 137.431,
+      "speechEnd": 139.522,
+      "end": 139.802,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 139.802,
+      "speechEnd": 143.913,
+      "end": 144.193,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "JR東日本が発表した遅延率、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 144.193,
+      "speechEnd": 147.467,
+      "end": 147.747,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "その後のフライトの再開、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 147.747,
+      "speechEnd": 153.74,
+      "end": 154.08,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "大雨が他の東北新幹線や入線に影響を"
+    },
+    {
+      "parentKey": "watch",
+      "start": 154.08,
+      "speechEnd": 158.748,
+      "end": 159.608,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "与えたかどうかに注意してください。"
+    }
+  ]
+}

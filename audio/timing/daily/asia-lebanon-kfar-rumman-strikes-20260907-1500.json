@@ -1,0 +1,380 @@
+{
+  "version": 3,
+  "duration": 167.053,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 473,
+  "charactersPerMinute": 169.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.239,
+      "text": "レバノン南部でのイスラエルの空爆では、子どもや救急隊員を含む少なくとも11人が死亡した。"
+    },
+    {
+      "key": "dek",
+      "start": 14.239,
+      "end": 34.404,
+      "text": "レバノン国営通信社は、カファロマンの家屋と民間車が攻撃され、6月の停戦後、国境の状況が再びエスカレートしたと伝えた。"
+    },
+    {
+      "key": "body-0",
+      "start": 34.404,
+      "end": 79.573,
+      "text": "月曜日の朝早く、レバノン南部のカファロマンにイスラエルの空爆が当たった。レバノンの国営通信社は、家と民間車に衝突した攻撃で、子ども2人と救急車2人を含む少なくとも11人が死亡し、5人が負傷したと述べた。報告によると、この攻撃の前に避難警告は出されていません。"
+    },
+    {
+      "key": "body-1",
+      "start": 79.573,
+      "end": 118.937,
+      "text": "米国が仲介した停戦は6月に達成されたが、イスラエル軍はレバノン南部で活動を続けた。イスラエル軍はカファルマンの攻撃の詳細にまだ対応していない。別の場所では、ヒズボラの施設を攻撃するとの避難通知が出された。空襲の連続により、再び停戦が試されました。"
+    },
+    {
+      "key": "why",
+      "start": 118.937,
+      "end": 145.225,
+      "text": "民間人と救急車労働者の死は、レバノン・イスラエル停戦の崩壊と地域紛争のエスカレートのリスクと同様に、外交的および人道的圧力を増大させます。"
+    },
+    {
+      "key": "watch",
+      "start": 145.225,
+      "end": 167.053,
+      "text": "標的の説明、ヒズボラに対するレバノン政府の対応、米国の調停がさらなる交戦を防ぐことができるかどうかに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 5.086,
+      "end": 5.366,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "レバノン南部でのイスラエルの空爆では、"
+    },
+    {
+      "parentKey": "title",
+      "start": 5.366,
+      "speechEnd": 13.379,
+      "end": 14.239,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "子どもや救急隊員を含む少なくとも11人が死亡した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.239,
+      "speechEnd": 17.584,
+      "end": 17.864,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "レバノン国営通信社は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.864,
+      "speechEnd": 23.647,
+      "end": 23.927,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "カファロマンの家屋と民間車が攻撃され、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.927,
+      "speechEnd": 26.993,
+      "end": 27.273,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "6月の停戦後、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.273,
+      "speechEnd": 33.544,
+      "end": 34.404,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "国境の状況が再びエスカレートしたと伝えた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.404,
+      "speechEnd": 37.261,
+      "end": 37.541,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "月曜日の朝早く、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.541,
+      "speechEnd": 44.787,
+      "end": 45.407,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "レバノン南部のカファロマンにイスラエルの空爆が当たった。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.407,
+      "speechEnd": 49.03,
+      "end": 49.311,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "レバノンの国営通信社は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.311,
+      "speechEnd": 53.909,
+      "end": 54.189,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "家と民間車に衝突した攻撃で、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.189,
+      "speechEnd": 57.673,
+      "end": 57.853,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "子ども2人と救急車"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.853,
+      "speechEnd": 59.874,
+      "end": 60.054,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "2人"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.054,
+      "speechEnd": 65.14,
+      "end": 65.42,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "を含む少なくとも11人が死亡し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.42,
+      "speechEnd": 69.113,
+      "end": 69.733,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "5人が負傷したと述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.733,
+      "speechEnd": 72.102,
+      "end": 72.382,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "報告によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.382,
+      "speechEnd": 78.792,
+      "end": 79.573,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "この攻撃の前に避難警告は出されていません。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 79.573,
+      "speechEnd": 86.471,
+      "end": 86.751,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国が仲介した停戦は6月に達成されたが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 86.751,
+      "speechEnd": 92.255,
+      "end": 92.875,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "イスラエル軍はレバノン南部で活動を続けた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.875,
+      "speechEnd": 100.331,
+      "end": 100.951,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "イスラエル軍はカファルマンの攻撃の詳細にまだ対応していない。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 100.951,
+      "speechEnd": 103.459,
+      "end": 103.739,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "別の場所では、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.739,
+      "speechEnd": 110.637,
+      "end": 111.257,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ヒズボラの施設を攻撃するとの避難通知が出された。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.257,
+      "speechEnd": 114.114,
+      "end": 114.394,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "空襲の連続により、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.394,
+      "speechEnd": 118.157,
+      "end": 118.937,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "再び停戦が試されました。"
+    },
+    {
+      "parentKey": "why",
+      "start": 118.937,
+      "speechEnd": 122.908,
+      "end": 123.528,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 123.528,
+      "speechEnd": 128.266,
+      "end": 128.546,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "民間人と救急車労働者の死は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 128.546,
+      "speechEnd": 137.953,
+      "end": 138.233,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "レバノン・イスラエル停戦の崩壊と地域紛争のエスカレートのリスクと同様に、"
+    },
+    {
+      "parentKey": "why",
+      "start": 138.233,
+      "speechEnd": 144.364,
+      "end": 145.225,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "外交的および人道的圧力を増大させます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 145.225,
+      "speechEnd": 147.315,
+      "end": 147.595,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 147.595,
+      "speechEnd": 149.964,
+      "end": 150.244,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "標的の説明、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 150.244,
+      "speechEnd": 155.33,
+      "end": 155.61,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ヒズボラに対するレバノン政府の対応、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 155.61,
+      "speechEnd": 161.533,
+      "end": 161.873,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "米国の調停がさらなる交戦を防ぐことが"
+    },
+    {
+      "parentKey": "watch",
+      "start": 161.873,
+      "speechEnd": 166.193,
+      "end": 167.053,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "できるかどうかに注意してください。"
+    }
+  ]
+}

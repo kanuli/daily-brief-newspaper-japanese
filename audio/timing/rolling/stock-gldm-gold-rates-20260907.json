@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 29.179,
+  "duration": 173.61,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 340.0,
-  "characters": 84,
-  "charactersPerMinute": 172.7,
+  "characters": 473,
+  "charactersPerMinute": 163.5,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.18,
@@ -21,66 +21,420 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 9.99,
-      "text": "GLDM：Reutersで最新の企業・市場動向情報を確認"
+      "end": 17.925,
+      "text": "ETF READ - THROUGH ：金は約4,393ドルに下落、強力な雇用がFRBの利上げ賭けを押し上げる"
+    },
+    {
+      "key": "dek",
+      "start": 17.925,
+      "end": 49.643,
+      "text": "9月7日、金スポットは約0.8％下落し、オンス当たり4,392.88ドルとなった。好調な米国雇用統計を受けて、市場が9月に利上げする可能性が高まった。今週のインフレ統計が次の鍵となった。"
     },
     {
       "key": "body-0",
-      "start": 9.99,
-      "end": 29.179,
-      "text": "Reutersを出典として、企業・市場動向に関する新しい検証済み情報を確認しました。詳細は出典資料の確認後に順次更新します。"
+      "start": 49.643,
+      "end": 100.676,
+      "text": "ロイター通信によると、9月7日の金現物相場は約0.8％下落してオンス当たり4,392.88ドルとなり、米国12月金先物も約0.8％下落した。 8月の雇用統計が好調だったため、市場では連邦準備制度が9月16日に利上げする可能性が高まった。債券金利の上昇により、無利子の金の魅力は弱まった。"
+    },
+    {
+      "key": "body-1",
+      "start": 100.676,
+      "end": 135.587,
+      "text": "GLDMは金価格を直接反映しており、次の鍵となるのは今週のPPIとCPIだ。インフレが高止まりすれば、米ドルと実質金利が金価格を抑制し続ける可能性がある。データが沈静化すれば、中東情勢と安全地帯への需要が再び優勢になる可能性がある。"
+    },
+    {
+      "key": "why",
+      "start": 135.587,
+      "end": 154.488,
+      "text": "利上げ期待の高まりにより金保有の機会費用が増加するが、地政学的リスクにより下値は限定される。"
+    },
+    {
+      "key": "watch",
+      "start": 154.488,
+      "end": 173.61,
+      "text": "米国のPPI、CPI、9月FRB会合の価格、米ドル、10年実質金利に注目してください。"
     }
   ],
   "semanticUnits": [
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 2.023,
-      "end": 2.363,
+      "speechEnd": 3.832,
+      "end": 4.172,
       "pause": 0.34,
       "intendedPause": 0.34,
       "reason": "punctuation-semantic",
-      "text": "GLDM："
+      "text": "ETF READ - THROUGH ："
     },
     {
       "parentKey": "title",
-      "start": 2.363,
-      "speechEnd": 9.129,
-      "end": 9.99,
-      "pause": 0.861,
-      "intendedPause": 0.86,
-      "reason": "punctuation-sentence",
-      "text": "Reutersで最新の企業・市場動向情報を確認。"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 9.99,
-      "speechEnd": 13.198,
-      "end": 13.479,
+      "start": 4.172,
+      "speechEnd": 6.541,
+      "end": 6.821,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "Reutersを出典として、"
+      "text": "金は約4,"
     },
     {
-      "parentKey": "body-0",
-      "start": 13.479,
-      "speechEnd": 21.5,
-      "end": 22.12,
-      "pause": 0.621,
+      "parentKey": "title",
+      "start": 6.821,
+      "speechEnd": 10.653,
+      "end": 10.933,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "393ドルに下落、"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.933,
+      "speechEnd": 17.065,
+      "end": 17.925,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "強力な雇用がFRBの利上げ賭けを押し上げる。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.925,
+      "speechEnd": 20.503,
+      "end": 20.783,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "9月7日、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.783,
+      "speechEnd": 25.451,
+      "end": 25.732,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "金スポットは約0.8％下落し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.732,
+      "speechEnd": 28.379,
+      "end": 28.659,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "オンス当たり4,"
+    },
+    {
+      "parentKey": "dek",
+      "start": 28.659,
+      "speechEnd": 33.118,
+      "end": 33.739,
+      "pause": 0.62,
       "intendedPause": 0.62,
       "reason": "punctuation-sentence",
-      "text": "企業・市場動向に関する新しい検証済み情報を確認しました。"
+      "text": "392.88ドルとなった。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 33.739,
+      "speechEnd": 37.849,
+      "end": 38.13,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "好調な米国雇用統計を受けて、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 38.13,
+      "speechEnd": 43.634,
+      "end": 44.254,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "市場が9月に利上げする可能性が高まった。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 44.254,
+      "speechEnd": 48.783,
+      "end": 49.643,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "今週のインフレ統計が次の鍵となった。"
     },
     {
       "parentKey": "body-0",
-      "start": 22.12,
-      "speechEnd": 28.398,
-      "end": 29.179,
-      "pause": 0.781,
+      "start": 49.643,
+      "speechEnd": 52.639,
+      "end": 52.919,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.919,
+      "speechEnd": 57.727,
+      "end": 57.907,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "9月7日の金現物相場は約"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.907,
+      "speechEnd": 60.137,
+      "end": 60.317,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "0.8％"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.317,
+      "speechEnd": 63.94,
+      "end": 64.22,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "下落してオンス当たり4,"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.22,
+      "speechEnd": 68.679,
+      "end": 68.959,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "392.88ドルとなり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.959,
+      "speechEnd": 75.648,
+      "end": 76.268,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "米国12月金先物も約0.8％下落した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.268,
+      "speechEnd": 81.354,
+      "end": 81.634,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "8月の雇用統計が好調だったため、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 81.634,
+      "speechEnd": 84.979,
+      "end": 85.159,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "市場では連邦準備制度が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 85.159,
+      "speechEnd": 87.946,
+      "end": 88.126,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "9月16日"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 88.126,
+      "speechEnd": 92.098,
+      "end": 92.718,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "に利上げする可能性が高まった。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 92.718,
+      "speechEnd": 95.714,
+      "end": 95.994,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "債券金利の上昇により、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 95.994,
+      "speechEnd": 99.896,
+      "end": 100.676,
+      "pause": 0.78,
       "intendedPause": 0.78,
       "reason": "punctuation-sentence",
-      "text": "詳細は出典資料の確認後に順次更新します。"
+      "text": "無利子の金の魅力は弱まった。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 100.676,
+      "speechEnd": 105.483,
+      "end": 105.763,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "GLDMは金価格を直接反映しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 105.763,
+      "speechEnd": 110.71,
+      "end": 111.331,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "次の鍵となるのは今週のPPIとCPIだ。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.331,
+      "speechEnd": 114.814,
+      "end": 115.094,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インフレが高止まりすれば、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.094,
+      "speechEnd": 122.201,
+      "end": 122.821,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "米ドルと実質金利が金価格を抑制し続ける可能性がある。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 122.821,
+      "speechEnd": 126.027,
+      "end": 126.307,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "データが沈静化すれば、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 126.307,
+      "speechEnd": 134.807,
+      "end": 135.587,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "中東情勢と安全地帯への需要が再び優勢になる可能性がある。"
+    },
+    {
+      "parentKey": "why",
+      "start": 135.587,
+      "speechEnd": 139.559,
+      "end": 140.179,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 140.179,
+      "speechEnd": 147.983,
+      "end": 148.263,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "利上げ期待の高まりにより金保有の機会費用が増加するが、"
+    },
+    {
+      "parentKey": "why",
+      "start": 148.263,
+      "speechEnd": 153.628,
+      "end": 154.488,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "地政学的リスクにより下値は限定される。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 154.488,
+      "speechEnd": 156.578,
+      "end": 156.858,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 156.858,
+      "speechEnd": 159.227,
+      "end": 159.507,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国のPPI、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 159.507,
+      "speechEnd": 161.528,
+      "end": 161.808,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "CPI、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 161.808,
+      "speechEnd": 165.431,
+      "end": 165.711,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "9月FRB会合の価格、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 165.711,
+      "speechEnd": 167.801,
+      "end": 168.081,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米ドル、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 168.081,
+      "speechEnd": 172.75,
+      "end": 173.61,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "10年実質金利に注目してください。"
     }
   ]
 }
