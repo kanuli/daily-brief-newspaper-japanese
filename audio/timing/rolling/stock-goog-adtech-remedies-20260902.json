@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 205.558,
+  "duration": 160.078,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 340.0,
-  "characters": 658,
-  "charactersPerMinute": 192.1,
+  "characters": 496,
+  "charactersPerMinute": 185.9,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.18,
@@ -27,32 +27,32 @@
     {
       "key": "dek",
       "start": 12.985,
-      "end": 44.088,
-      "text": "米国の裁判所は、GoogleにAdXの売却を義務付けるという司法省の計画を却下し、その代わりにリアルタイム入札へのアクセスや競合他社による撤退などの行動的救済措置を利用して同社の広告技術事業を制限した。"
+      "end": 43.112,
+      "text": "米国の裁判所は、GoogleにAdXの売却を義務付けるという司法省の計画を却下し、代わりにリアルタイム入札へのアクセスや競合他社による撤退などの行動的救済策を用いて同社の広告技術事業を制限した。"
     },
     {
       "key": "body-0",
-      "start": 44.088,
-      "end": 102.677,
-      "text": "米国連邦判事レオニー・ブリンケマ氏は9月2日、GoogleにAdX広告交換プラットフォームの売却を求める司法省の救済措置を拒否した。裁判所は以前、Googleがパブリッシャーの広告サーバーとアドエクスチェンジ市場において違法な独占的行為を行っているとの判決を下した。最新の判決では、グーグルに対し、競合他社に入札情報へのよりリアルタイムなアクセスを提供するよう求めるなど、行動的救済策が採用されている。"
+      "start": 43.112,
+      "end": 81.93,
+      "text": "9月2日、米国連邦判事のレオニー・ブリンケマ氏は、グーグルに対し広告交換プラットフォーム「AdX」の売却を求める司法省の救済計画を拒否し、代わりにグーグルに対し競合他社へのリアルタイム入札情報へのアクセスの提供を求めるなどの行動的救済策を採用した。"
     },
     {
       "key": "body-1",
-      "start": 102.677,
-      "end": 151.858,
-      "text": "アルファベットの場合、構造売却のリスクは一時的に低下したが、法務コストやコンプライアンスコストがなくなったわけではない。広告テクノロジーは依然として規制の焦点となっている。その後の施行の詳細、法務省がさらなる法的措置を講じるかどうか、是正措置が広告プラットフォームの経済的利益に及ぼす影響は依然として市場の評価に影響を与えるだろう。"
+      "start": 81.93,
+      "end": 119.341,
+      "text": "アルファベットの場合、構造売却のリスクは一時的に低下したが、法務コストやコンプライアンスコストがなくなったわけではない。その後の実施の詳細、法務省の措置および是正措置が広告プラットフォームの経済的利益に及ぼす影響は、依然として評価の焦点となっている。"
     },
     {
       "key": "why",
-      "start": 151.858,
-      "end": 180.864,
-      "text": "AdX の強制販売を回避することで短期的な構造リスクは軽減されますが、裁判所は依然として大幅な競争救済策を要求しており、規制上の割引は完全には解除されていません。"
+      "start": 119.341,
+      "end": 141.656,
+      "text": "AdX の強制販売を回避することで短期的な構造リスクは軽減されますが、規制上の割引が完全に解除されるわけではありません。"
     },
     {
       "key": "watch",
-      "start": 180.864,
-      "end": 205.558,
-      "text": "救済措置が最終的にどのように実施されるか、司法省のその後の措置、公開オークションへのアクセスに対するGoogleの広告事業の運営上の対応に注目してほしい。"
+      "start": 141.656,
+      "end": 160.078,
+      "text": "是正措置がどのように実施されるか、司法省のその後の措置、Googleの広告ビジネスの対応に注目してください。"
     }
   ],
   "semanticUnits": [
@@ -60,7 +60,7 @@
       "parentKey": "title",
       "start": 0.0,
       "speechEnd": 7.246,
-      "end": 7.527,
+      "end": 7.526,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
@@ -68,7 +68,7 @@
     },
     {
       "parentKey": "title",
-      "start": 7.527,
+      "start": 7.526,
       "speechEnd": 12.125,
       "end": 12.985,
       "pause": 0.86,
@@ -79,8 +79,8 @@
     {
       "parentKey": "dek",
       "start": 12.985,
-      "speechEnd": 15.912,
-      "end": 16.192,
+      "speechEnd": 15.911,
+      "end": 16.191,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
@@ -88,9 +88,9 @@
     },
     {
       "parentKey": "dek",
-      "start": 16.192,
-      "speechEnd": 25.111,
-      "end": 25.391,
+      "start": 16.191,
+      "speechEnd": 25.11,
+      "end": 25.39,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
@@ -98,119 +98,69 @@
     },
     {
       "parentKey": "dek",
-      "start": 25.391,
-      "speechEnd": 43.228,
-      "end": 44.088,
+      "start": 25.39,
+      "speechEnd": 42.251,
+      "end": 43.112,
       "pause": 0.86,
       "intendedPause": 0.86,
       "reason": "punctuation-sentence",
-      "text": "その代わりにリアルタイム入札へのアクセスや競合他社による撤退などの行動的救済措置を利用して同社の広告技術事業を制限した。"
+      "text": "代わりにリアルタイム入札へのアクセスや競合他社による撤退などの行動的救済策を用いて同社の広告技術事業を制限した。"
     },
     {
       "parentKey": "body-0",
-      "start": 44.088,
-      "speechEnd": 51.335,
-      "end": 51.615,
+      "start": 43.112,
+      "speechEnd": 45.62,
+      "end": 45.9,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "米国連邦判事レオニー・ブリンケマ氏は9月2日、"
+      "text": "9月2日、"
     },
     {
       "parentKey": "body-0",
-      "start": 51.615,
-      "speechEnd": 57.816,
-      "end": 58.156,
+      "start": 45.9,
+      "speechEnd": 51.544,
+      "end": 51.824,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国連邦判事のレオニー・ブリンケマ氏は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.824,
+      "speechEnd": 59.279,
+      "end": 59.619,
       "pause": 0.34,
       "intendedPause": 0.34,
       "reason": "semantic-boundary",
-      "text": "GoogleにAdX広告交換プラットフォームの売却を"
+      "text": "グーグルに対し広告交換プラットフォーム「AdX」の売却を"
     },
     {
       "parentKey": "body-0",
-      "start": 58.156,
-      "speechEnd": 63.243,
-      "end": 63.863,
-      "pause": 0.62,
-      "intendedPause": 0.62,
-      "reason": "punctuation-sentence",
-      "text": "求める司法省の救済措置を拒否した。"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 63.863,
-      "speechEnd": 66.441,
-      "end": 66.721,
+      "start": 59.619,
+      "speechEnd": 64.566,
+      "end": 64.846,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "裁判所は以前、"
+      "text": "求める司法省の救済計画を拒否し、"
     },
     {
       "parentKey": "body-0",
-      "start": 66.721,
-      "speechEnd": 80.656,
-      "end": 81.277,
-      "pause": 0.62,
-      "intendedPause": 0.62,
-      "reason": "punctuation-sentence",
-      "text": "Googleがパブリッシャーの広告サーバーとアドエクスチェンジ市場において違法な独占的行為を行っているとの判決を下した。"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 81.277,
-      "speechEnd": 84.273,
-      "end": 84.553,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "最新の判決では、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 84.553,
-      "speechEnd": 87.131,
-      "end": 87.411,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "グーグルに対し、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 87.411,
-      "speechEnd": 93.543,
-      "end": 93.883,
-      "pause": 0.34,
-      "intendedPause": 0.34,
-      "reason": "semantic-boundary",
-      "text": "競合他社に入札情報へのよりリアルタイムなアクセスを"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 93.883,
-      "speechEnd": 97.366,
-      "end": 97.647,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "提供するよう求めるなど、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 97.647,
-      "speechEnd": 101.897,
-      "end": 102.677,
+      "start": 64.846,
+      "speechEnd": 81.15,
+      "end": 81.93,
       "pause": 0.78,
       "intendedPause": 0.78,
       "reason": "punctuation-sentence",
-      "text": "行動的救済策が採用されている。"
+      "text": "代わりにグーグルに対し競合他社へのリアルタイム入札情報へのアクセスの提供を求めるなどの行動的救済策を採用した。"
     },
     {
       "parentKey": "body-1",
-      "start": 102.677,
-      "speechEnd": 105.603,
-      "end": 105.884,
+      "start": 81.93,
+      "speechEnd": 84.857,
+      "end": 85.137,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
@@ -218,9 +168,9 @@
     },
     {
       "parentKey": "body-1",
-      "start": 105.884,
-      "speechEnd": 111.458,
-      "end": 111.738,
+      "start": 85.137,
+      "speechEnd": 90.711,
+      "end": 90.991,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
@@ -228,9 +178,9 @@
     },
     {
       "parentKey": "body-1",
-      "start": 111.738,
-      "speechEnd": 116.197,
-      "end": 116.537,
+      "start": 90.991,
+      "speechEnd": 95.45,
+      "end": 95.79,
       "pause": 0.34,
       "intendedPause": 0.34,
       "reason": "semantic-boundary",
@@ -238,9 +188,9 @@
     },
     {
       "parentKey": "body-1",
-      "start": 116.537,
-      "speechEnd": 119.603,
-      "end": 120.223,
+      "start": 95.79,
+      "speechEnd": 98.856,
+      "end": 99.476,
       "pause": 0.62,
       "intendedPause": 0.62,
       "reason": "punctuation-sentence",
@@ -248,59 +198,49 @@
     },
     {
       "parentKey": "body-1",
-      "start": 120.223,
-      "speechEnd": 126.912,
-      "end": 127.532,
-      "pause": 0.62,
-      "intendedPause": 0.62,
-      "reason": "punctuation-sentence",
-      "text": "広告テクノロジーは依然として規制の焦点となっている。"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 127.532,
-      "speechEnd": 130.668,
-      "end": 130.948,
+      "start": 99.476,
+      "speechEnd": 102.681,
+      "end": 102.961,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "その後の施行の詳細、"
+      "text": "その後の実施の詳細、"
     },
     {
       "parentKey": "body-1",
-      "start": 130.948,
-      "speechEnd": 137.149,
-      "end": 137.429,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "法務省がさらなる法的措置を講じるかどうか、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 137.429,
-      "speechEnd": 144.885,
-      "end": 145.225,
+      "start": 102.961,
+      "speechEnd": 107.978,
+      "end": 108.318,
       "pause": 0.34,
       "intendedPause": 0.34,
       "reason": "semantic-boundary",
-      "text": "是正措置が広告プラットフォームの経済的利益に及ぼす影響は"
+      "text": "法務省の措置および是正措置が"
     },
     {
       "parentKey": "body-1",
-      "start": 145.225,
-      "speechEnd": 151.078,
-      "end": 151.858,
+      "start": 108.318,
+      "speechEnd": 114.17,
+      "end": 114.45,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "広告プラットフォームの経済的利益に及ぼす影響は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.45,
+      "speechEnd": 118.561,
+      "end": 119.341,
       "pause": 0.78,
       "intendedPause": 0.78,
       "reason": "punctuation-sentence",
-      "text": "依然として市場の評価に影響を与えるだろう。"
+      "text": "依然として評価の焦点となっている。"
     },
     {
       "parentKey": "why",
-      "start": 151.858,
-      "speechEnd": 155.83,
-      "end": 156.45,
+      "start": 119.341,
+      "speechEnd": 123.313,
+      "end": 123.933,
       "pause": 0.62,
       "intendedPause": 0.62,
       "reason": "punctuation-sentence",
@@ -308,9 +248,9 @@
     },
     {
       "parentKey": "why",
-      "start": 156.45,
-      "speechEnd": 165.926,
-      "end": 166.206,
+      "start": 123.933,
+      "speechEnd": 133.409,
+      "end": 133.689,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
@@ -318,29 +258,19 @@
     },
     {
       "parentKey": "why",
-      "start": 166.206,
-      "speechEnd": 173.731,
-      "end": 174.011,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "裁判所は依然として大幅な競争救済策を要求しており、"
-    },
-    {
-      "parentKey": "why",
-      "start": 174.011,
-      "speechEnd": 180.003,
-      "end": 180.864,
+      "start": 133.689,
+      "speechEnd": 140.796,
+      "end": 141.656,
       "pause": 0.86,
       "intendedPause": 0.86,
       "reason": "punctuation-sentence",
-      "text": "規制上の割引は完全には解除されていません。"
+      "text": "規制上の割引が完全に解除されるわけではありません。"
     },
     {
       "parentKey": "watch",
-      "start": 180.864,
-      "speechEnd": 182.954,
-      "end": 183.234,
+      "start": 141.656,
+      "speechEnd": 143.746,
+      "end": 144.026,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
@@ -348,19 +278,19 @@
     },
     {
       "parentKey": "watch",
-      "start": 183.234,
-      "speechEnd": 189.157,
-      "end": 189.437,
+      "start": 144.026,
+      "speechEnd": 148.973,
+      "end": 149.253,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "救済措置が最終的にどのように実施されるか、"
+      "text": "是正措置がどのように実施されるか、"
     },
     {
       "parentKey": "watch",
-      "start": 189.437,
-      "speechEnd": 192.99,
-      "end": 193.27,
+      "start": 149.253,
+      "speechEnd": 152.807,
+      "end": 153.087,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
@@ -368,13 +298,13 @@
     },
     {
       "parentKey": "watch",
-      "start": 193.27,
-      "speechEnd": 204.697,
-      "end": 205.558,
+      "start": 153.087,
+      "speechEnd": 159.218,
+      "end": 160.078,
       "pause": 0.86,
       "intendedPause": 0.86,
       "reason": "punctuation-sentence",
-      "text": "公開オークションへのアクセスに対するGoogleの広告事業の運営上の対応に注目してほしい。"
+      "text": "Googleの広告ビジネスの対応に注目してください。"
     }
   ]
 }

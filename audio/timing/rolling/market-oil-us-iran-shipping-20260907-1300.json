@@ -1,0 +1,370 @@
+{
+  "version": 3,
+  "duration": 167.993,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 502,
+  "charactersPerMinute": 179.3,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 12.498,
+      "text": "米国とイランの船舶攻撃により、供給リスクのブレント原油価格が約97ドルに上昇"
+    },
+    {
+      "key": "dek",
+      "start": 12.498,
+      "end": 28.899,
+      "text": "ホルムズ海峡の情勢は再び緊迫しており、市場は中東原油に対する長年の障害のリスクプレミアムを説明している。"
+    },
+    {
+      "key": "body-0",
+      "start": 28.899,
+      "end": 72.173,
+      "text": "ロイター通信によると、米国とイランによるホルムズ海峡内外の船舶への最近の攻撃は、中東のエネルギー供給の長期的な混乱に対する懸念を引き起こしている。ブレント原油は月曜日にアジアで79セント上昇して1バレル97.07ドルとなり、ウェスト・テキサス・インターミディエイトは92.28ドルとなった。"
+    },
+    {
+      "key": "body-1",
+      "start": 72.173,
+      "end": 115.183,
+      "text": "原油価格の上昇は、海上禁止区域を発表するイランの計画を反映している。ホルムズは依然として世界のエネルギー貿易の主要なゲートウェイであり、商船の通行、保険、または護衛のコストがさらに増加すると、その影響は原油市場から輸送、製造、消費者価格に伝わる可能性があります。"
+    },
+    {
+      "key": "why",
+      "start": 115.183,
+      "end": 141.614,
+      "text": "エネルギー価格の上昇は、世界的なインフレ、中央銀行の金利経路、企業の輸送コストに影響を及ぼし、アジアの輸入エネルギー経済にとって重要なリスクです。"
+    },
+    {
+      "key": "watch",
+      "start": 141.614,
+      "end": 167.993,
+      "text": "ブレント原油価格が1バレルあたり97ドル近くを維持できるかどうか、ホルムズの実際の船の流れ、そして米国とイラクでの次の軍事作戦に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.902,
+      "end": 4.182,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国とイランの船舶攻撃により、"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.182,
+      "speechEnd": 11.638,
+      "end": 12.498,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "供給リスクのブレント原油価格が約97ドルに上昇。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.498,
+      "speechEnd": 18.142,
+      "end": 18.423,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ホルムズ海峡の情勢は再び緊迫しており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.423,
+      "speechEnd": 28.039,
+      "end": 28.899,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "市場は中東原油に対する長年の障害のリスクプレミアムを説明している。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 28.899,
+      "speechEnd": 31.895,
+      "end": 32.175,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 32.175,
+      "speechEnd": 40.607,
+      "end": 40.887,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国とイランによるホルムズ海峡内外の船舶への最近の攻撃は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.887,
+      "speechEnd": 50.084,
+      "end": 50.705,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "中東のエネルギー供給の長期的な混乱に対する懸念を引き起こしている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.705,
+      "speechEnd": 62.829,
+      "end": 63.109,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ブレント原油は月曜日にアジアで79セント上昇して1バレル97.07ドルとなり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.109,
+      "speechEnd": 67.22,
+      "end": 67.56,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ウェスト・テキサス・インターミディエイトは"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.56,
+      "speechEnd": 71.393,
+      "end": 72.173,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "92.28ドルとなった。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 72.173,
+      "speechEnd": 75.309,
+      "end": 75.589,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "原油価格の上昇は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 75.589,
+      "speechEnd": 82.905,
+      "end": 83.526,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "海上禁止区域を発表するイランの計画を反映している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 83.526,
+      "speechEnd": 92.096,
+      "end": 92.376,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ホルムズは依然として世界のエネルギー貿易の主要なゲートウェイであり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.376,
+      "speechEnd": 94.885,
+      "end": 95.165,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "商船の通行、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 95.165,
+      "speechEnd": 97.186,
+      "end": 97.466,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "保険、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.466,
+      "speechEnd": 102.413,
+      "end": 102.693,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "または護衛のコストがさらに増加すると、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.693,
+      "speechEnd": 106.735,
+      "end": 107.015,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "その影響は原油市場から輸送、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.015,
+      "speechEnd": 109.036,
+      "end": 109.316,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "製造、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.316,
+      "speechEnd": 114.402,
+      "end": 115.183,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "消費者価格に伝わる可能性があります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 115.183,
+      "speechEnd": 119.154,
+      "end": 119.775,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 119.775,
+      "speechEnd": 122.98,
+      "end": 123.26,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "エネルギー価格の上昇は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 123.26,
+      "speechEnd": 125.978,
+      "end": 126.258,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "世界的なインフレ、"
+    },
+    {
+      "parentKey": "why",
+      "start": 126.258,
+      "speechEnd": 129.602,
+      "end": 129.882,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "中央銀行の金利経路、"
+    },
+    {
+      "parentKey": "why",
+      "start": 129.882,
+      "speechEnd": 134.481,
+      "end": 134.761,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "企業の輸送コストに影響を及ぼし、"
+    },
+    {
+      "parentKey": "why",
+      "start": 134.761,
+      "speechEnd": 140.754,
+      "end": 141.614,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "アジアの輸入エネルギー経済にとって重要なリスクです。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 141.614,
+      "speechEnd": 143.705,
+      "end": 143.985,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 143.985,
+      "speechEnd": 148.723,
+      "end": 148.903,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "ブレント原油価格が1バレルあたり"
+    },
+    {
+      "parentKey": "watch",
+      "start": 148.903,
+      "speechEnd": 151.342,
+      "end": 151.522,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "97ドル"
+    },
+    {
+      "parentKey": "watch",
+      "start": 151.522,
+      "speechEnd": 155.285,
+      "end": 155.565,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "近くを維持できるかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 155.565,
+      "speechEnd": 159.397,
+      "end": 159.677,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ホルムズの実際の船の流れ、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 159.677,
+      "speechEnd": 167.133,
+      "end": 167.993,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "そして米国とイラクでの次の軍事作戦に注意してください。"
+    }
+  ]
+}

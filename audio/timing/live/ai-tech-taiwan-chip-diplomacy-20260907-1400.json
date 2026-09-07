@@ -1,0 +1,390 @@
+{
+  "version": 3,
+  "duration": 185.757,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 597,
+  "charactersPerMinute": 192.8,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 12.289,
+      "text": "台湾、外部協力のための新しいチップとしてチップ外交AIサプライチェーンを強化"
+    },
+    {
+      "key": "dek",
+      "start": 12.289,
+      "end": 37.697,
+      "text": "AIコンピューティングパワーに対する世界的な需要が高まっており、同盟国がサプライチェーンの多様化を要求している中、台湾は大規模な展示会で高度なチップと信頼できる供給の役割を強調しています。"
+    },
+    {
+      "key": "body-0",
+      "start": 37.697,
+      "end": 84.611,
+      "text": "ロイター通信は、台湾が最近の大規模な産業展示会でAI革命の主要なチップサプライヤーとしての役割をさらに強調し、半導体の能力を民主的なパートナーシップとサプライチェーンの信頼性と結びつけたと報じた。各国がAIインフラと高度なチップ生産能力を競い合う中、台湾の技術と製造能力は、外交と産業政策における重要なチップになりつつあります。"
+    },
+    {
+      "key": "body-1",
+      "start": 84.611,
+      "end": 125.645,
+      "text": "同時に、台湾はAI産業の成長成果を共有し、海外投資を拡大し、コアR ＆ Dと高度な製造優位性のバランスを維持するためのパートナーからの要請に直面しています。この「チップ外交」は、AIサーバー、データセンター、高度なプロセスのグローバルなレイアウトに影響を与えます。"
+    },
+    {
+      "key": "why",
+      "start": 125.645,
+      "end": 158.284,
+      "text": "サプライチェーンのレイアウトは、世界のAIコンピューティングパワーのコスト、キャパシティセキュリティ、テクノロジー業界への投資の方向性に直接影響を与え、台湾と主要な経済パートナーとの関係にも影響を与えます。"
+    },
+    {
+      "key": "watch",
+      "start": 158.284,
+      "end": 185.757,
+      "text": "米国、欧州、アジアのパートナーとの台湾の新しい投資またはサプライチェーン契約、ならびに高度なプロセスとAIチップ生産能力の海外レイアウトに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.021,
+      "end": 2.251,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "台湾、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.251,
+      "speechEnd": 7.268,
+      "end": 7.548,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "外部協力のための新しいチップとして"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.548,
+      "speechEnd": 11.589,
+      "end": 12.289,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "チップ外交AIサプライチェーンを強化。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.289,
+      "speechEnd": 19.954,
+      "end": 20.184,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "AIコンピューティングパワーに対する世界的な需要が高まっており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.184,
+      "speechEnd": 26.803,
+      "end": 27.033,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同盟国がサプライチェーンの多様化を要求している中、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.033,
+      "speechEnd": 36.997,
+      "end": 37.697,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "台湾は大規模な展示会で高度なチップと信頼できる供給の役割を強調しています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.697,
+      "speechEnd": 40.206,
+      "end": 40.436,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.436,
+      "speechEnd": 53.675,
+      "end": 53.905,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "台湾が最近の大規模な産業展示会でAI革命の主要なチップサプライヤーとしての役割をさらに強調し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.905,
+      "speechEnd": 65.262,
+      "end": 65.763,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "半導体の能力を民主的なパートナーシップとサプライチェーンの信頼性と結びつけたと報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.763,
+      "speechEnd": 73.009,
+      "end": 73.239,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "各国がAIインフラと高度なチップ生産能力を競い合う中、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.239,
+      "speechEnd": 76.653,
+      "end": 76.883,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "台湾の技術と製造能力は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.883,
+      "speechEnd": 83.991,
+      "end": 84.611,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "外交と産業政策における重要なチップになりつつあります。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.611,
+      "speechEnd": 86.771,
+      "end": 87.001,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同時に、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 87.001,
+      "speechEnd": 92.714,
+      "end": 92.944,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "台湾はAI産業の成長成果を共有し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.944,
+      "speechEnd": 96.15,
+      "end": 96.38,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "海外投資を拡大し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 96.38,
+      "speechEnd": 103.348,
+      "end": 103.628,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "コアR ＆ Dと高度な製造優位性のバランスを維持するため"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.628,
+      "speechEnd": 108.505,
+      "end": 109.005,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "のパートナーからの要請に直面しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.005,
+      "speechEnd": 112.35,
+      "end": 112.58,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この「チップ外交」は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.58,
+      "speechEnd": 114.81,
+      "end": 115.04,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "AIサーバー、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.04,
+      "speechEnd": 117.339,
+      "end": 117.569,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "データセンター、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.569,
+      "speechEnd": 125.025,
+      "end": 125.645,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "高度なプロセスのグローバルなレイアウトに影響を与えます。"
+    },
+    {
+      "parentKey": "why",
+      "start": 125.645,
+      "speechEnd": 129.616,
+      "end": 130.117,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 130.117,
+      "speechEnd": 133.531,
+      "end": 133.761,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "サプライチェーンのレイアウトは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 133.761,
+      "speechEnd": 138.917,
+      "end": 139.147,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "世界のAIコンピューティングパワーのコスト、"
+    },
+    {
+      "parentKey": "why",
+      "start": 139.147,
+      "speechEnd": 141.934,
+      "end": 142.164,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "キャパシティセキュリティ、"
+    },
+    {
+      "parentKey": "why",
+      "start": 142.164,
+      "speechEnd": 150.177,
+      "end": 150.407,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "テクノロジー業界への投資の方向性に直接影響を与え、"
+    },
+    {
+      "parentKey": "why",
+      "start": 150.407,
+      "speechEnd": 157.584,
+      "end": 158.284,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "台湾と主要な経済パートナーとの関係にも影響を与えます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 158.284,
+      "speechEnd": 160.375,
+      "end": 160.605,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 160.605,
+      "speechEnd": 162.625,
+      "end": 162.855,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 162.855,
+      "speechEnd": 164.876,
+      "end": 165.106,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "欧州、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 165.106,
+      "speechEnd": 171.447,
+      "end": 171.727,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "アジアのパートナーとの台湾の新しい投資または"
+    },
+    {
+      "parentKey": "watch",
+      "start": 171.727,
+      "speechEnd": 174.375,
+      "end": 174.605,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "サプライチェーン契約、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 174.605,
+      "speechEnd": 185.057,
+      "end": 185.757,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "ならびに高度なプロセスとAIチップ生産能力の海外レイアウトに注意してください。"
+    }
+  ]
+}
