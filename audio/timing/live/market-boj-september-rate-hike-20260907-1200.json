@@ -1,0 +1,360 @@
+{
+  "version": 3,
+  "duration": 175.334,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 514,
+  "charactersPerMinute": 175.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 18.768,
+      "text": "ハイマーケットの経済アドバイザーは、9月の日本銀行の利上げが市場の25ポイントの上昇をほぼ完全に吸収すると予想している。"
+    },
+    {
+      "key": "dek",
+      "start": 18.768,
+      "end": 35.236,
+      "text": "金利引き上げに反対しているリフレアドバイザーの海田卓二氏は、円安とインフレが今月の政策調整窓口になったと述べた。"
+    },
+    {
+      "key": "body-0",
+      "start": 35.236,
+      "end": 85.493,
+      "text": "高市隆首相の経済顧問である会田卓二氏は、日本銀行は9月17日から18日にかけての政策会議で金利を引き上げると予想されており、来年1月までに四半期ごとに引き上げる可能性があると述べた。ロイターは、AIDAが過去に時期尚早の引き締めに反対するリフレ主義者であったことを指摘し、この判断の変化は市場の注目を集めていると指摘した。"
+    },
+    {
+      "key": "body-1",
+      "start": 85.493,
+      "end": 118.917,
+      "text": "市場は今月、25 bpsの利上げが1.25 ％になる可能性をほぼ完全に消化しています。円安と輸入インフレは引き続き政策圧力を高めたが、片山五月財務大臣は日銀の金融政策決定は独立していると繰り返し述べた。"
+    },
+    {
+      "key": "why",
+      "start": 118.917,
+      "end": 148.7,
+      "text": "日本銀行が予定通りに金利を引き上げれば、円、国債、銀行株に直接影響を及ぼし、キャリー取引を通じた世界的な資本フローに影響を与える可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 148.7,
+      "end": 175.334,
+      "text": "9月17日から18日にかけて開催される日銀総会、上田和夫氏の政策ガイダンス、円高の動き、政府による利上げに関する最新の発表にご注目ください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.25,
+      "end": 4.48,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ハイマーケットの経済アドバイザーは、"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.48,
+      "speechEnd": 12.563,
+      "end": 12.843,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "9月の日本銀行の利上げが市場の25ポイントの上昇を"
+    },
+    {
+      "parentKey": "title",
+      "start": 12.843,
+      "speechEnd": 18.068,
+      "end": 18.768,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "ほぼ完全に吸収すると予想している。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.768,
+      "speechEnd": 26.781,
+      "end": 27.011,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "金利引き上げに反対しているリフレアドバイザーの海田卓二氏は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.011,
+      "speechEnd": 34.536,
+      "end": 35.236,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "円安とインフレが今月の政策調整窓口になったと述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 35.236,
+      "speechEnd": 41.855,
+      "end": 42.085,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "高市隆首相の経済顧問である会田卓二氏は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.085,
+      "speechEnd": 51.491,
+      "end": 51.771,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "日本銀行は9月17日から18日にかけての政策会議で金利を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.771,
+      "speechEnd": 55.813,
+      "end": 56.043,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "引き上げると予想されており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.043,
+      "speechEnd": 64.334,
+      "end": 64.834,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "来年1月までに四半期ごとに引き上げる可能性があると述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.834,
+      "speechEnd": 66.994,
+      "end": 67.224,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイターは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.224,
+      "speechEnd": 77.675,
+      "end": 77.905,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "AIDAが過去に時期尚早の引き締めに反対するリフレ主義者であったことを指摘し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 77.905,
+      "speechEnd": 84.873,
+      "end": 85.493,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "この判断の変化は市場の注目を集めていると指摘した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 85.493,
+      "speechEnd": 87.862,
+      "end": 88.092,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "市場は今月、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.092,
+      "speechEnd": 95.477,
+      "end": 95.758,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "25 bpsの利上げが1.25 ％になる可能性を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 95.758,
+      "speechEnd": 99.311,
+      "end": 99.811,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "ほぼ完全に消化しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.811,
+      "speechEnd": 106.57,
+      "end": 106.8,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "円安と輸入インフレは引き続き政策圧力を高めたが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 106.8,
+      "speechEnd": 114.115,
+      "end": 114.396,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "片山五月財務大臣は日銀の金融政策決定は"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.396,
+      "speechEnd": 118.297,
+      "end": 118.917,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "独立していると繰り返し述べた。"
+    },
+    {
+      "parentKey": "why",
+      "start": 118.917,
+      "speechEnd": 122.889,
+      "end": 123.389,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 123.389,
+      "speechEnd": 129.311,
+      "end": 129.541,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本銀行が予定通りに金利を引き上げれば、"
+    },
+    {
+      "parentKey": "why",
+      "start": 129.541,
+      "speechEnd": 131.492,
+      "end": 131.722,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "円、"
+    },
+    {
+      "parentKey": "why",
+      "start": 131.722,
+      "speechEnd": 133.743,
+      "end": 133.973,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "国債、"
+    },
+    {
+      "parentKey": "why",
+      "start": 133.973,
+      "speechEnd": 137.805,
+      "end": 138.035,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "銀行株に直接影響を及ぼし、"
+    },
+    {
+      "parentKey": "why",
+      "start": 138.035,
+      "speechEnd": 144.306,
+      "end": 144.586,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "キャリー取引を通じた世界的な資本フローに影響を"
+    },
+    {
+      "parentKey": "why",
+      "start": 144.586,
+      "speechEnd": 148.0,
+      "end": 148.7,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "与える可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 148.7,
+      "speechEnd": 150.79,
+      "end": 151.021,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 151.021,
+      "speechEnd": 158.685,
+      "end": 158.915,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "9月17日から18日にかけて開催される日銀総会、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 158.915,
+      "speechEnd": 163.931,
+      "end": 164.161,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "上田和夫氏の政策ガイダンス、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 164.161,
+      "speechEnd": 166.53,
+      "end": 166.76,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "円高の動き、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 166.76,
+      "speechEnd": 174.634,
+      "end": 175.334,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "政府による利上げに関する最新の発表にご注目ください。"
+    }
+  ]
+}

@@ -1,0 +1,360 @@
+{
+  "version": 3,
+  "duration": 171.755,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 508,
+  "charactersPerMinute": 177.5,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 15.075,
+      "text": "税関空港で約6 kgのマリファナの疑いのある花が押収され、本日38歳の男性によって贈られました"
+    },
+    {
+      "key": "dek",
+      "start": 15.075,
+      "end": 33.209,
+      "text": "疑わしい最初の毒物を含む手荷物の2箱がバンコクから到着しました。この事件は西九龍地方裁判所で処理されました。"
+    },
+    {
+      "key": "body-0",
+      "start": 33.209,
+      "end": 76.354,
+      "text": "香港税関は、9月5日に香港国際空港で荷物ケースを破ったと述べた。タイのバンコクから到着した38歳の本土の男性は、彼の手荷物に約6 kgの大麻の疑いのある花と、最初の毒の疑いのある製品2箱を発見しました。大麻の疑いのある花の推定市場価値は約130万香港ドルです。"
+    },
+    {
+      "key": "body-1",
+      "start": 76.354,
+      "end": 122.275,
+      "text": "この男性はその後、今日西九龍地方裁判所に持ち込まれた危険な薬物の人身売買1件と最初の毒物の所持1件で起訴されました。税関は、リスク評価とインテリジェンス分析に基づいて国境を越えた麻薬取引を引き続き取り締まると述べ、渡航者に出身地不明の物品を他人に代わって持ち込まないように促した。"
+    },
+    {
+      "key": "why",
+      "start": 122.275,
+      "end": 150.973,
+      "text": "この事件には、国境を越えた麻薬密輸と空港での刑事訴追が含まれており、法執行機関が乗客の荷物を使って麻薬密輸ルートを標的にし続けていることも反映されています。"
+    },
+    {
+      "key": "watch",
+      "start": 150.973,
+      "end": 171.755,
+      "text": "裁判手続き、検察による事件の開示、税関が関連する人身売買ネットワークを解放するかどうか、またはその後の逮捕に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 8.292,
+      "end": 8.522,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "税関空港で約6 kgのマリファナの疑いのある花が押収され、"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.522,
+      "speechEnd": 14.375,
+      "end": 15.075,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "本日38歳の男性によって贈られました。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.075,
+      "speechEnd": 21.416,
+      "end": 21.696,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "疑わしい最初の毒物を含む手荷物の2箱が"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.696,
+      "speechEnd": 25.041,
+      "end": 25.541,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "バンコクから到着しました。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.541,
+      "speechEnd": 32.509,
+      "end": 33.209,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "この事件は西九龍地方裁判所で処理されました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 33.209,
+      "speechEnd": 35.509,
+      "end": 35.739,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "香港税関は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 35.739,
+      "speechEnd": 44.031,
+      "end": 44.531,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "9月5日に香港国際空港で荷物ケースを破ったと述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.531,
+      "speechEnd": 51.778,
+      "end": 52.008,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "タイのバンコクから到着した38歳の本土の男性は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.008,
+      "speechEnd": 59.185,
+      "end": 59.415,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "彼の手荷物に約6 kgの大麻の疑いのある花と、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.415,
+      "speechEnd": 65.965,
+      "end": 66.465,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "最初の毒の疑いのある製品2箱を発見しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.465,
+      "speechEnd": 71.412,
+      "end": 71.692,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "大麻の疑いのある花の推定市場価値は"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.692,
+      "speechEnd": 75.734,
+      "end": 76.354,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "約130万香港ドルです。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 76.354,
+      "speechEnd": 79.42,
+      "end": 79.65,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この男性はその後、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 79.65,
+      "speechEnd": 88.29,
+      "end": 88.43,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "今日西九龍地方裁判所に持ち込まれた危険な薬物の人身売買"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.43,
+      "speechEnd": 90.451,
+      "end": 90.591,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "1件"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.591,
+      "speechEnd": 96.932,
+      "end": 97.432,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "と最初の毒物の所持1件で起訴されました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.432,
+      "speechEnd": 99.453,
+      "end": 99.683,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "税関は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.683,
+      "speechEnd": 105.188,
+      "end": 105.468,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "リスク評価とインテリジェンス分析に基づいて国境を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 105.468,
+      "speechEnd": 111.251,
+      "end": 111.481,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "越えた麻薬取引を引き続き取り締まると述べ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.481,
+      "speechEnd": 121.655,
+      "end": 122.275,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "渡航者に出身地不明の物品を他人に代わって持ち込まないように促した。"
+    },
+    {
+      "parentKey": "why",
+      "start": 122.275,
+      "speechEnd": 126.247,
+      "end": 126.747,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 126.747,
+      "speechEnd": 129.255,
+      "end": 129.485,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この事件には、"
+    },
+    {
+      "parentKey": "why",
+      "start": 129.485,
+      "speechEnd": 138.195,
+      "end": 138.425,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "国境を越えた麻薬密輸と空港での刑事訴追が含まれており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 138.425,
+      "speechEnd": 144.766,
+      "end": 145.046,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "法執行機関が乗客の荷物を使って麻薬密輸ルートを"
+    },
+    {
+      "parentKey": "why",
+      "start": 145.046,
+      "speechEnd": 150.272,
+      "end": 150.973,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "標的にし続けていることも反映されています。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 150.973,
+      "speechEnd": 153.063,
+      "end": 153.293,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 153.293,
+      "speechEnd": 155.592,
+      "end": 155.823,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "裁判手続き、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 155.823,
+      "speechEnd": 159.028,
+      "end": 159.258,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "検察による事件の開示、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 159.258,
+      "speechEnd": 165.738,
+      "end": 165.968,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "税関が関連する人身売買ネットワークを解放するかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 165.968,
+      "speechEnd": 171.055,
+      "end": 171.755,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "またはその後の逮捕に注意してください。"
+    }
+  ]
+}
