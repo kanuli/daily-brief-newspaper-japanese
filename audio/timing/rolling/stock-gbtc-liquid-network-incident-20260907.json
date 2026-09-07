@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 29.179,
+  "duration": 195.03,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 340.0,
-  "characters": 84,
-  "charactersPerMinute": 172.7,
+  "characters": 663,
+  "charactersPerMinute": 204.0,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.18,
@@ -21,66 +21,420 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 9.99,
-      "text": "GBTC：Reutersで最新の企業・市場動向情報を確認"
+      "end": 18.422,
+      "text": "ETFのリードスルー：リキッドネットワークから約3億2000万ドルのビットコインが引き出し、ネットワークは新規取引を一時停止"
+    },
+    {
+      "key": "dek",
+      "start": 18.422,
+      "end": 47.416,
+      "text": "ビットコインサイドチェーンのリキッドネットワークは、約3億2000万ドル相当の約4000BTCがアライアンスのウォレットから引き出されたと発表した。この事件により、暗号化市場インフラのリスクプレミアムが増大しました。"
     },
     {
       "key": "body-0",
-      "start": 9.99,
-      "end": 29.179,
-      "text": "Reutersを出典として、企業・市場動向に関する新しい検証済み情報を確認しました。詳細は出典資料の確認後に順次更新します。"
+      "start": 47.416,
+      "end": 92.637,
+      "text": "Liquid Networkは9月7日、約3億2,000万ドル相当の約4,000ビットコインがコンソーシアムの財布から引き出されたと述べ、加害者を「ホワイトハットハッカーとされる」と説明した。ネットワークは新しいトランザクションを一時停止しており、関連するトランザクションに使用された暗号キーは侵害されていないと言われています。"
+    },
+    {
+      "key": "body-1",
+      "start": 92.637,
+      "end": 142.528,
+      "text": "GBTCの資産は依然としてビットコインスポットであり、このインシデントはGBTCの侵入と同等ではありません。しかし、Liquidはビットコインの金融インフラストラクチャの1つであり、大規模な資本イベントは、カストディ、サイドチェーン、取引インフラストラクチャに対する市場のリスク感度を高め、BTCおよびETFの資本フローのボラティリティを悪化させる可能性があります。"
+    },
+    {
+      "key": "why",
+      "start": 142.528,
+      "end": 172.496,
+      "text": "このイベントは GBTC 資産に直接的な影響を与えるものではありませんが、全体的な暗号化リスク選好に影響を与える可能性のある大規模なビットコイン インフラストラクチャ リスク イベントです。"
+    },
+    {
+      "key": "watch",
+      "start": 172.496,
+      "end": 195.03,
+      "text": "Liquidの追跡調査、資金の宛先、ネットワーク回復の取り決め、BTCスポット価格、米国ビットコインETFの資金の流れに注目してください。"
     }
   ],
   "semanticUnits": [
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 2.023,
-      "end": 2.363,
+      "speechEnd": 2.926,
+      "end": 3.266,
       "pause": 0.34,
       "intendedPause": 0.34,
       "reason": "punctuation-semantic",
-      "text": "GBTC："
+      "text": "ETFのリードスルー："
     },
     {
       "parentKey": "title",
-      "start": 2.363,
-      "speechEnd": 9.129,
-      "end": 9.99,
-      "pause": 0.861,
-      "intendedPause": 0.86,
-      "reason": "punctuation-sentence",
-      "text": "Reutersで最新の企業・市場動向情報を確認。"
+      "start": 3.266,
+      "speechEnd": 6.819,
+      "end": 6.999,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "リキッドネットワークから約3億"
     },
     {
-      "parentKey": "body-0",
-      "start": 9.99,
-      "speechEnd": 13.198,
-      "end": 13.479,
+      "parentKey": "title",
+      "start": 6.999,
+      "speechEnd": 9.507,
+      "end": 9.687,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "2000万ドル"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.687,
+      "speechEnd": 13.032,
+      "end": 13.312,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "Reutersを出典として、"
+      "text": "のビットコインが引き出し、"
     },
     {
-      "parentKey": "body-0",
-      "start": 13.479,
-      "speechEnd": 21.5,
-      "end": 22.12,
-      "pause": 0.621,
+      "parentKey": "title",
+      "start": 13.312,
+      "speechEnd": 17.561,
+      "end": 18.422,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ネットワークは新規取引を一時停止。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.422,
+      "speechEnd": 22.95,
+      "end": 23.23,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ビットコインサイドチェーンのリキッドネットワークは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.23,
+      "speechEnd": 29.849,
+      "end": 30.189,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "約3億2000万ドル相当の約4000BTCが"
+    },
+    {
+      "parentKey": "dek",
+      "start": 30.189,
+      "speechEnd": 36.32,
+      "end": 36.94,
+      "pause": 0.62,
       "intendedPause": 0.62,
       "reason": "punctuation-sentence",
-      "text": "企業・市場動向に関する新しい検証済み情報を確認しました。"
+      "text": "アライアンスのウォレットから引き出されたと発表した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 36.94,
+      "speechEnd": 39.587,
+      "end": 39.867,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この事件により、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 39.867,
+      "speechEnd": 46.556,
+      "end": 47.416,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "暗号化市場インフラのリスクプレミアムが増大しました。"
     },
     {
       "parentKey": "body-0",
-      "start": 22.12,
-      "speechEnd": 28.398,
-      "end": 29.179,
-      "pause": 0.781,
+      "start": 47.416,
+      "speechEnd": 52.293,
+      "end": 52.573,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Liquid Networkは9月7日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.573,
+      "speechEnd": 54.941,
+      "end": 55.221,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "約3億2,"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.221,
+      "speechEnd": 59.262,
+      "end": 59.542,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "000万ドル相当の約4,"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.542,
+      "speechEnd": 66.858,
+      "end": 67.138,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "000ビットコインがコンソーシアムの財布から引き出されたと述べ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.138,
+      "speechEnd": 73.896,
+      "end": 74.516,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "加害者を「ホワイトハットハッカーとされる」と説明した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.516,
+      "speechEnd": 81.065,
+      "end": 81.345,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ネットワークは新しいトランザクションを一時停止しており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 81.345,
+      "speechEnd": 87.267,
+      "end": 87.607,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "関連するトランザクションに使用された暗号キーは"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 87.607,
+      "speechEnd": 91.856,
+      "end": 92.637,
+      "pause": 0.78,
       "intendedPause": 0.78,
       "reason": "punctuation-sentence",
-      "text": "詳細は出典資料の確認後に順次更新します。"
+      "text": "侵害されていないと言われています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.637,
+      "speechEnd": 98.976,
+      "end": 99.257,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "GBTCの資産は依然としてビットコインスポットであり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.257,
+      "speechEnd": 106.781,
+      "end": 107.401,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このインシデントはGBTCの侵入と同等ではありません。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.401,
+      "speechEnd": 109.421,
+      "end": 109.701,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "しかし、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.701,
+      "speechEnd": 116.181,
+      "end": 116.461,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Liquidはビットコインの金融インフラストラクチャの1つであり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 116.461,
+      "speechEnd": 119.805,
+      "end": 120.085,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "大規模な資本イベントは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.085,
+      "speechEnd": 122.314,
+      "end": 122.594,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "カストディ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 122.594,
+      "speechEnd": 124.893,
+      "end": 125.173,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "サイドチェーン、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 125.173,
+      "speechEnd": 131.444,
+      "end": 131.724,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "取引インフラストラクチャに対する市場のリスク感度を高め、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 131.724,
+      "speechEnd": 137.576,
+      "end": 137.916,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "BTCおよびETFの資本フローのボラティリティを"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 137.916,
+      "speechEnd": 141.748,
+      "end": 142.528,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "悪化させる可能性があります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 142.528,
+      "speechEnd": 146.499,
+      "end": 147.119,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 147.119,
+      "speechEnd": 153.111,
+      "end": 153.451,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "このイベントは GBTC 資産に直接的な影響を"
+    },
+    {
+      "parentKey": "why",
+      "start": 153.451,
+      "speechEnd": 157.561,
+      "end": 157.841,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "与えるものではありませんが、"
+    },
+    {
+      "parentKey": "why",
+      "start": 157.841,
+      "speechEnd": 171.636,
+      "end": 172.496,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "全体的な暗号化リスク選好に影響を与える可能性のある大規模なビットコイン インフラストラクチャ リスク イベントです。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 172.496,
+      "speechEnd": 174.586,
+      "end": 174.866,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 174.866,
+      "speechEnd": 177.792,
+      "end": 178.072,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Liquidの追跡調査、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 178.072,
+      "speechEnd": 180.441,
+      "end": 180.721,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "資金の宛先、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 180.721,
+      "speechEnd": 183.787,
+      "end": 184.067,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ネットワーク回復の取り決め、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 184.067,
+      "speechEnd": 186.714,
+      "end": 186.994,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "BTCスポット価格、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 186.994,
+      "speechEnd": 194.17,
+      "end": 195.03,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "米国ビットコインETFの資金の流れに注目してください。"
     }
   ]
 }

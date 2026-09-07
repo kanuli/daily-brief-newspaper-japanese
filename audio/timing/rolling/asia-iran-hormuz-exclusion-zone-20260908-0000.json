@@ -1,0 +1,390 @@
+{
+  "version": 3,
+  "duration": 173.061,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 506,
+  "charactersPerMinute": 175.4,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 12.776,
+      "text": "イランはホルムズ海峡の近くに立ち入り禁止区域を設け、米国に報復を警告しようとしている"
+    },
+    {
+      "key": "dek",
+      "start": 12.776,
+      "end": 33.079,
+      "text": "テヘランは新たな海上制限水域を発表すると発表したが、最近の米国とイランの相互攻撃により、世界のエネルギー航路のリスクが再び高まっている。"
+    },
+    {
+      "key": "body-0",
+      "start": 33.079,
+      "end": 70.777,
+      "text": "イランは月曜日、ホルムズ海峡の近くに新しい非海域ゾーンを開設し、関連する海域を通過しようとする船舶に制限を課すことを計画していると述べた。イランの国家安全保障当局者はまた、米国が再びイランの資産を攻撃した場合、テヘランは報復すると警告した。"
+    },
+    {
+      "key": "body-1",
+      "start": 70.777,
+      "end": 116.711,
+      "text": "米国とイランは最近、湾岸諸国で互いに攻撃し合っており、米国はイランの石油輸出に対する封鎖と制裁を強化している。ホルムズ海峡は世界で最も重要なエネルギー輸送ルートの1つであり、新しい航行制限、軍事作戦、船舶への攻撃は、石油価格、保険、輸送コストを急速に引き上げる可能性があります。"
+    },
+    {
+      "key": "why",
+      "start": 116.711,
+      "end": 149.272,
+      "text": "ホルムズ海峡は世界的に大量の石油とガスの輸送を行っており、新しい禁止措置の実施は、アジアのエネルギー供給、海上安全保障、輸入コストに直接的な影響を与える可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 149.272,
+      "end": 173.061,
+      "text": "イランが発表した立ち入り禁止区域の実際の範囲と実施、米海軍の対応、商船の流用、国際石油価格と海運保険費用の変化に注意を払う。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.177,
+      "end": 7.457,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イランはホルムズ海峡の近くに立ち入り禁止区域を設け、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.457,
+      "speechEnd": 11.916,
+      "end": 12.776,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "米国に報復を警告しようとしている。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.776,
+      "speechEnd": 20.51,
+      "end": 20.79,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "テヘランは新たな海上制限水域を発表すると発表したが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.79,
+      "speechEnd": 25.946,
+      "end": 26.226,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "最近の米国とイランの相互攻撃により、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.226,
+      "speechEnd": 32.218,
+      "end": 33.079,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "世界のエネルギー航路のリスクが再び高まっている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 33.079,
+      "speechEnd": 35.726,
+      "end": 36.006,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イランは月曜日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.006,
+      "speechEnd": 43.253,
+      "end": 43.533,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ホルムズ海峡の近くに新しい非海域ゾーンを開設し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.533,
+      "speechEnd": 49.734,
+      "end": 50.074,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "関連する海域を通過しようとする船舶に制限を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.074,
+      "speechEnd": 54.185,
+      "end": 54.805,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "課すことを計画していると述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.805,
+      "speechEnd": 60.24,
+      "end": 60.52,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イランの国家安全保障当局者はまた、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.52,
+      "speechEnd": 66.233,
+      "end": 66.513,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国が再びイランの資産を攻撃した場合、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.513,
+      "speechEnd": 69.997,
+      "end": 70.777,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "テヘランは報復すると警告した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 70.777,
+      "speechEnd": 73.982,
+      "end": 74.262,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国とイランは最近、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 74.262,
+      "speechEnd": 78.861,
+      "end": 79.141,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "湾岸諸国で互いに攻撃し合っており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 79.141,
+      "speechEnd": 87.014,
+      "end": 87.634,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "米国はイランの石油輸出に対する封鎖と制裁を強化している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 87.634,
+      "speechEnd": 96.553,
+      "end": 96.833,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ホルムズ海峡は世界で最も重要なエネルギー輸送ルートの1つであり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 96.833,
+      "speechEnd": 99.62,
+      "end": 99.9,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "新しい航行制限、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.9,
+      "speechEnd": 102.13,
+      "end": 102.41,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "軍事作戦、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.41,
+      "speechEnd": 105.057,
+      "end": 105.337,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "船舶への攻撃は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 105.337,
+      "speechEnd": 107.637,
+      "end": 107.917,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "石油価格、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.917,
+      "speechEnd": 109.937,
+      "end": 110.218,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "保険、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 110.218,
+      "speechEnd": 115.931,
+      "end": 116.711,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "輸送コストを急速に引き上げる可能性があります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 116.711,
+      "speechEnd": 120.683,
+      "end": 121.303,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 121.303,
+      "speechEnd": 130.221,
+      "end": 130.501,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ホルムズ海峡は世界的に大量の石油とガスの輸送を行っており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 130.501,
+      "speechEnd": 134.403,
+      "end": 134.683,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "新しい禁止措置の実施は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 134.683,
+      "speechEnd": 137.819,
+      "end": 138.099,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アジアのエネルギー供給、"
+    },
+    {
+      "parentKey": "why",
+      "start": 138.099,
+      "speechEnd": 141.095,
+      "end": 141.375,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "海上安全保障、"
+    },
+    {
+      "parentKey": "why",
+      "start": 141.375,
+      "speechEnd": 148.412,
+      "end": 149.272,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "輸入コストに直接的な影響を与える可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 149.272,
+      "speechEnd": 151.363,
+      "end": 151.643,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 151.643,
+      "speechEnd": 159.168,
+      "end": 159.448,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イランが発表した立ち入り禁止区域の実際の範囲と実施、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 159.448,
+      "speechEnd": 162.026,
+      "end": 162.306,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米海軍の対応、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 162.306,
+      "speechEnd": 164.814,
+      "end": 165.094,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "商船の流用、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 165.094,
+      "speechEnd": 172.201,
+      "end": 173.061,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "国際石油価格と海運保険費用の変化に注意を払う。"
+    }
+  ]
+}
