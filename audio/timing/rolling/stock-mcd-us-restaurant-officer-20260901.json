@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 28.473,
+  "duration": 28.97,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 340.0,
-  "characters": 80,
-  "charactersPerMinute": 168.6,
+  "characters": 87,
+  "charactersPerMinute": 180.2,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.18,
@@ -21,52 +21,52 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 9.429,
-      "text": "PLTR：PwC USで最新の企業・市場動向情報を確認"
+      "end": 9.711,
+      "text": "MCD：McDonald'sで最新の企業・市場動向情報を確認"
     },
     {
       "key": "body-0",
-      "start": 9.429,
-      "end": 28.473,
-      "text": "PwC USを出典として、企業・市場動向に関する新しい検証済み情報を確認しました。詳細は出典資料の確認後に順次更新します。"
+      "start": 9.711,
+      "end": 28.97,
+      "text": "McDonald'sを出典として、企業・市場動向に関する新しい検証済み情報を確認しました。詳細は出典資料の確認後に順次更新します。"
     }
   ],
   "semanticUnits": [
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 2.022,
-      "end": 2.362,
+      "speechEnd": 2.023,
+      "end": 2.363,
       "pause": 0.34,
       "intendedPause": 0.34,
       "reason": "punctuation-semantic",
-      "text": "PLTR："
+      "text": "MCD："
     },
     {
       "parentKey": "title",
-      "start": 2.362,
-      "speechEnd": 8.568,
-      "end": 9.429,
+      "start": 2.363,
+      "speechEnd": 8.85,
+      "end": 9.711,
       "pause": 0.861,
       "intendedPause": 0.86,
       "reason": "punctuation-sentence",
-      "text": "PwC USで最新の企業・市場動向情報を確認。"
+      "text": "McDonald'sで最新の企業・市場動向情報を確認。"
     },
     {
       "parentKey": "body-0",
-      "start": 9.429,
-      "speechEnd": 12.497,
-      "end": 12.778,
+      "start": 9.711,
+      "speechEnd": 12.989,
+      "end": 13.269,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "PwC USを出典として、"
+      "text": "McDonald'sを出典として、"
     },
     {
       "parentKey": "body-0",
-      "start": 12.778,
-      "speechEnd": 20.796,
-      "end": 21.417,
+      "start": 13.269,
+      "speechEnd": 21.291,
+      "end": 21.911,
       "pause": 0.621,
       "intendedPause": 0.62,
       "reason": "punctuation-sentence",
@@ -74,9 +74,9 @@
     },
     {
       "parentKey": "body-0",
-      "start": 21.417,
-      "speechEnd": 27.693,
-      "end": 28.473,
+      "start": 21.911,
+      "speechEnd": 28.189,
+      "end": 28.97,
       "pause": 0.781,
       "intendedPause": 0.78,
       "reason": "punctuation-sentence",

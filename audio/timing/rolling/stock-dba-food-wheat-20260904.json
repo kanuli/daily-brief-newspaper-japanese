@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 30.981,
+  "duration": 29.179,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 340.0,
-  "characters": 100,
-  "charactersPerMinute": 193.7,
+  "characters": 83,
+  "charactersPerMinute": 170.7,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.18,
@@ -21,52 +21,52 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 11.102,
-      "text": "META：Meta Engineeringで最新の企業・市場動向情報を確認"
+      "end": 9.99,
+      "text": "DBA：Reutersで最新の企業・市場動向情報を確認"
     },
     {
       "key": "body-0",
-      "start": 11.102,
-      "end": 30.981,
-      "text": "Meta Engineeringを出典として、企業・市場動向に関する新しい検証済み情報を確認しました。詳細は出典資料の確認後に順次更新します。"
+      "start": 9.99,
+      "end": 29.179,
+      "text": "Reutersを出典として、企業・市場動向に関する新しい検証済み情報を確認しました。詳細は出典資料の確認後に順次更新します。"
     }
   ],
   "semanticUnits": [
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 2.092,
-      "end": 2.432,
+      "speechEnd": 2.023,
+      "end": 2.363,
       "pause": 0.34,
       "intendedPause": 0.34,
       "reason": "punctuation-semantic",
-      "text": "META："
+      "text": "DBA："
     },
     {
       "parentKey": "title",
-      "start": 2.432,
-      "speechEnd": 10.241,
-      "end": 11.102,
+      "start": 2.363,
+      "speechEnd": 9.129,
+      "end": 9.99,
       "pause": 0.861,
       "intendedPause": 0.86,
       "reason": "punctuation-sentence",
-      "text": "Meta Engineeringで最新の企業・市場動向情報を確認。"
+      "text": "Reutersで最新の企業・市場動向情報を確認。"
     },
     {
       "parentKey": "body-0",
-      "start": 11.102,
-      "speechEnd": 15.006,
-      "end": 15.287,
+      "start": 9.99,
+      "speechEnd": 13.198,
+      "end": 13.479,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "Meta Engineeringを出典として、"
+      "text": "Reutersを出典として、"
     },
     {
       "parentKey": "body-0",
-      "start": 15.287,
-      "speechEnd": 23.305,
-      "end": 23.925,
+      "start": 13.479,
+      "speechEnd": 21.5,
+      "end": 22.12,
       "pause": 0.621,
       "intendedPause": 0.62,
       "reason": "punctuation-sentence",
@@ -74,9 +74,9 @@
     },
     {
       "parentKey": "body-0",
-      "start": 23.925,
-      "speechEnd": 30.201,
-      "end": 30.981,
+      "start": 22.12,
+      "speechEnd": 28.398,
+      "end": 29.179,
       "pause": 0.781,
       "intendedPause": 0.78,
       "reason": "punctuation-sentence",
