@@ -1,0 +1,390 @@
+{
+  "version": 3,
+  "duration": 176.901,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 595,
+  "charactersPerMinute": 201.8,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 13.752,
+      "text": "マンチェスター・ユナイテッドは、エバートンとキャヴィックに2 -2でプッシュされ、2度のリードを失った。"
+    },
+    {
+      "key": "dek",
+      "start": 13.752,
+      "end": 38.079,
+      "text": "マンチェスター・ユナイテッドは3つのリーグのそれぞれで2ゴールを譲った。メイトランド・ナイルズはロングショットを埋め合わせ、レッドデビルズのためにわずか1ポイントを獲得した。"
+    },
+    {
+      "key": "body-0",
+      "start": 38.079,
+      "end": 86.498,
+      "text": "マンチェスター・ユナイテッドのゲストであるブライアン・ムベウモが最初に記録を樹立し、チリケ・ジョージが並んだ後、ベンジャミン・シェシュコが88分で再びレッドデビルズをリードした。しかし、エバートンに初めて参加したエインズリー・メイトランド＝ナイルズは、96分間のロングショットで2 -2を記録し、マンチェスター・ユナイテッドは3回すべてのチャンスを逃した。"
+    },
+    {
+      "key": "body-1",
+      "start": 86.498,
+      "end": 132.619,
+      "text": "監督のマイケル・キャリックは試合後、キャッチを逃すのはイライラしていると認めた。マンチェスター・ユナイテッドは、今シーズンの3つのリーグ戦のそれぞれで2ゴールを失っており、守備の安定性が引き続き大きな懸念事項となっています。チームは次の試合でヨーロッパリーグに移籍し、マーカス・ラッシュフォードも軽度の不快感のために交代すると評価されます。"
+    },
+    {
+      "key": "why",
+      "start": 132.619,
+      "end": 160.848,
+      "text": "2つの連続したゴールを失ったことは、ゲームの防御構造と最終ステージのコントロールがまだ不十分であることを示しており、リーグとヨーロッパの競争力に直接影響を与えます。"
+    },
+    {
+      "key": "watch",
+      "start": 160.848,
+      "end": 176.901,
+      "text": "ラッシュフォードの体調、サバ州に対するEUのローテーションの取り決め、防衛後の候補者に注意を払う。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.414,
+      "end": 3.694,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マンチェスター・ユナイテッドは、"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.694,
+      "speechEnd": 9.477,
+      "end": 9.757,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "エバートンとキャヴィックに2 -2でプッシュされ、"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.757,
+      "speechEnd": 12.892,
+      "end": 13.752,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "2度のリードを失った。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.752,
+      "speechEnd": 17.027,
+      "end": 17.367,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "マンチェスター・ユナイテッドは"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.367,
+      "speechEnd": 23.22,
+      "end": 23.84,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "3つのリーグのそれぞれで2ゴールを譲った。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.84,
+      "speechEnd": 30.11,
+      "end": 30.39,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "メイトランド・ナイルズはロングショットを埋め合わせ、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 30.39,
+      "speechEnd": 37.218,
+      "end": 38.079,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "レッドデビルズのためにわずか1ポイントを獲得した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.079,
+      "speechEnd": 47.415,
+      "end": 47.695,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マンチェスター・ユナイテッドのゲストであるブライアン・ムベウモが最初に記録を樹立し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.695,
+      "speechEnd": 51.178,
+      "end": 51.459,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "チリケ・ジョージが並んだ後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.459,
+      "speechEnd": 54.663,
+      "end": 55.004,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ベンジャミン・シェシュコが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.004,
+      "speechEnd": 60.995,
+      "end": 61.616,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "88分で再びレッドデビルズをリードした。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.616,
+      "speechEnd": 63.636,
+      "end": 63.916,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "しかし、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.916,
+      "speechEnd": 71.162,
+      "end": 71.442,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "エバートンに初めて参加したエインズリー・メイトランド＝ナイルズは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.442,
+      "speechEnd": 77.852,
+      "end": 78.132,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "96分間のロングショットで2 -2を記録し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 78.132,
+      "speechEnd": 81.407,
+      "end": 81.747,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "マンチェスター・ユナイテッドは"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 81.747,
+      "speechEnd": 85.718,
+      "end": 86.498,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "3回すべてのチャンスを逃した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 86.498,
+      "speechEnd": 90.818,
+      "end": 91.098,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "監督のマイケル・キャリックは試合後、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.098,
+      "speechEnd": 95.766,
+      "end": 96.386,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "キャッチを逃すのはイライラしていると認めた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 96.386,
+      "speechEnd": 99.8,
+      "end": 100.08,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マンチェスター・ユナイテッドは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 100.08,
+      "speechEnd": 108.859,
+      "end": 109.139,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今シーズンの3つのリーグ戦のそれぞれで2ゴールを失っており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.139,
+      "speechEnd": 115.758,
+      "end": 116.378,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "守備の安定性が引き続き大きな懸念事項となっています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 116.378,
+      "speechEnd": 121.604,
+      "end": 121.884,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "チームは次の試合でヨーロッパリーグに移籍し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.884,
+      "speechEnd": 127.945,
+      "end": 128.286,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "マーカス・ラッシュフォードも軽度の不快感のため"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 128.286,
+      "speechEnd": 131.839,
+      "end": 132.619,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "に交代すると評価されます。"
+    },
+    {
+      "parentKey": "why",
+      "start": 132.619,
+      "speechEnd": 136.59,
+      "end": 137.211,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 137.211,
+      "speechEnd": 142.366,
+      "end": 142.646,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "2つの連続したゴールを失ったことは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 142.646,
+      "speechEnd": 148.429,
+      "end": 148.769,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ゲームの防御構造と最終ステージのコントロールが"
+    },
+    {
+      "parentKey": "why",
+      "start": 148.769,
+      "speechEnd": 153.577,
+      "end": 153.857,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "まだ不十分であることを示しており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 153.857,
+      "speechEnd": 159.988,
+      "end": 160.848,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "リーグとヨーロッパの競争力に直接影響を与えます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 160.848,
+      "speechEnd": 162.938,
+      "end": 163.218,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 163.218,
+      "speechEnd": 166.214,
+      "end": 166.494,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ラッシュフォードの体調、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 166.494,
+      "speechEnd": 171.859,
+      "end": 172.139,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "サバ州に対するEUのローテーションの取り決め、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 172.139,
+      "speechEnd": 176.041,
+      "end": 176.901,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "防衛後の候補者に注意を払う。"
+    }
+  ]
+}
