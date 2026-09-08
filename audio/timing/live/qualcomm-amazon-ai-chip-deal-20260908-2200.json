@@ -1,0 +1,420 @@
+{
+  "version": 3,
+  "duration": 219.141,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 743,
+  "charactersPerMinute": 203.4,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 12.217,
+      "text": "QualcommとAmazonが提携し、最大2500万株のAIデータセンターチップワラントを開発"
+    },
+    {
+      "key": "dek",
+      "start": 12.217,
+      "end": 41.536,
+      "text": "両当事者は、共同で複数世代のカスタマイズされたAI推論チップと高速光接続ソリューションを開発します。クアルコムは、1株あたり161.26ドルの行使価格でAmazonに令状を発行しました。"
+    },
+    {
+      "key": "body-0",
+      "start": 41.536,
+      "end": 96.419,
+      "text": "Qualcommは火曜日、AWS AIデータセンター向けにカスタマイズされたチップを共同開発するために、Amazonとの複数世代の製品パートナーシップを発表しました。これは、最大1.6テラビット/秒のトレーニング済みモデルと高速光接続ソリューションを実行するためのAI推論に焦点を当てています。Qualcommはまた、チップ設計プロセスを加速するために、AWSを使用してAIインフラストラクチャとサービスを拡張する予定です。"
+    },
+    {
+      "key": "body-1",
+      "start": 96.419,
+      "end": 157.804,
+      "text": "クアルコムが米国証券取引委員会に提出した書類によると、同社はアマゾン関連会社に1株あたり161.26ドルで最大2500万株のクアルコム株式を購入するワラントを発行している。これらの権利は、商業契約、注文、実際の購入のバッチで付与され、関連する支払い基準額は最大600億ドルになる。この取り決めは、クアルコムがモバイルチップ市場から大規模なAIデータセンターインフラストラクチャにさらに拡大していることを示しています。"
+    },
+    {
+      "key": "why",
+      "start": 157.804,
+      "end": 192.928,
+      "text": "アマゾンは世界最大のクラウドインフラストラクチャプロバイダーの1つであり、計画されている拡張は、クアルコムの大規模データセンターに新しい収益源を創出し、AI推論チップと高速相互接続市場での競争を増加させる可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 192.928,
+      "end": 219.141,
+      "text": "AWSの実際の調達規模、カスタマイズされたチップの最初のバッチの展開時間、クアルコムのデータセンター収益の貢献、ワラントの残りの株式の権利帰属の進捗状況に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.762,
+      "end": 3.992,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "QualcommとAmazonが提携し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.992,
+      "speechEnd": 11.516,
+      "end": 12.217,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "最大2500万株のAIデータセンターチップワラントを開発。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.217,
+      "speechEnd": 14.794,
+      "end": 15.024,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "両当事者は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.024,
+      "speechEnd": 26.868,
+      "end": 27.368,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "共同で複数世代のカスタマイズされたAI推論チップと高速光接続ソリューションを開発します。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.368,
+      "speechEnd": 29.667,
+      "end": 29.897,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "クアルコムは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 29.897,
+      "speechEnd": 40.836,
+      "end": 41.536,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "1株あたり161.26ドルの行使価格でAmazonに令状を発行しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.536,
+      "speechEnd": 44.462,
+      "end": 44.692,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Qualcommは火曜日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.692,
+      "speechEnd": 53.818,
+      "end": 54.049,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "AWS AIデータセンター向けにカスタマイズされたチップを共同開発するために、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.049,
+      "speechEnd": 61.991,
+      "end": 62.491,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "Amazonとの複数世代の製品パートナーシップを発表しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.491,
+      "speechEnd": 64.581,
+      "end": 64.811,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "これは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.811,
+      "speechEnd": 79.999,
+      "end": 80.499,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "最大1.6テラビット/秒のトレーニング済みモデルと高速光接続ソリューションを実行するためのAI推論に焦点を当てています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 80.499,
+      "speechEnd": 83.147,
+      "end": 83.377,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Qualcommはまた、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 83.377,
+      "speechEnd": 87.905,
+      "end": 88.135,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "チップ設計プロセスを加速するために、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 88.135,
+      "speechEnd": 95.799,
+      "end": 96.419,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "AWSを使用してAIインフラストラクチャとサービスを拡張する予定です。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 96.419,
+      "speechEnd": 103.804,
+      "end": 104.034,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "クアルコムが米国証券取引委員会に提出した書類によると、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.034,
+      "speechEnd": 108.98,
+      "end": 109.12,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "同社はアマゾン関連会社に1株あたり"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.12,
+      "speechEnd": 112.674,
+      "end": 112.814,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "161.26ドル"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.814,
+      "speechEnd": 121.871,
+      "end": 122.371,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "で最大2500万株のクアルコム株式を購入するワラントを発行している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 122.371,
+      "speechEnd": 124.948,
+      "end": 125.178,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "これらの権利は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 125.178,
+      "speechEnd": 127.408,
+      "end": 127.638,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "商業契約、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 127.638,
+      "speechEnd": 129.658,
+      "end": 129.888,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "注文、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 129.888,
+      "speechEnd": 134.069,
+      "end": 134.299,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "実際の購入のバッチで付与され、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 134.299,
+      "speechEnd": 140.778,
+      "end": 141.278,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "関連する支払い基準額は最大600億ドルになる。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 141.278,
+      "speechEnd": 143.856,
+      "end": 144.086,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この取り決めは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 144.086,
+      "speechEnd": 157.184,
+      "end": 157.804,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "クアルコムがモバイルチップ市場から大規模なAIデータセンターインフラストラクチャにさらに拡大していることを示しています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 157.804,
+      "speechEnd": 161.775,
+      "end": 162.275,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 162.275,
+      "speechEnd": 171.611,
+      "end": 171.841,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "アマゾンは世界最大のクラウドインフラストラクチャプロバイダーの1つであり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 171.841,
+      "speechEnd": 174.906,
+      "end": 175.136,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "計画されている拡張は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 175.136,
+      "speechEnd": 182.521,
+      "end": 182.751,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "クアルコムの大規模データセンターに新しい収益源を創出し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 182.751,
+      "speechEnd": 188.255,
+      "end": 188.535,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "AI推論チップと高速相互接続市場での競争を"
+    },
+    {
+      "parentKey": "why",
+      "start": 188.535,
+      "speechEnd": 192.228,
+      "end": 192.928,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "増加させる可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 192.928,
+      "speechEnd": 195.018,
+      "end": 195.248,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 195.248,
+      "speechEnd": 198.592,
+      "end": 198.822,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "AWSの実際の調達規模、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 198.822,
+      "speechEnd": 205.58,
+      "end": 205.81,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "カスタマイズされたチップの最初のバッチの展開時間、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 205.81,
+      "speechEnd": 210.199,
+      "end": 210.429,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "クアルコムのデータセンター収益の貢献、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 210.429,
+      "speechEnd": 218.441,
+      "end": 219.141,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "ワラントの残りの株式の権利帰属の進捗状況に注意してください。"
+    }
+  ]
+}
