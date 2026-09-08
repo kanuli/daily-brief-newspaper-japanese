@@ -1,0 +1,360 @@
+{
+  "version": 3,
+  "duration": 160.679,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 449,
+  "charactersPerMinute": 167.7,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 18.642,
+      "text": "日本の8月のFX準備高は、資産を消費するための日本円の大規模購入で過去最大の1ヶ月間の下落を記録しました"
+    },
+    {
+      "key": "dek",
+      "start": 18.642,
+      "end": 36.09,
+      "text": "財務省のデータによると、796億ドルの外貨準備が約1.208兆ドルに減少し、市場評価が持続可能性を妨げている。"
+    },
+    {
+      "key": "body-0",
+      "start": 36.09,
+      "end": 79.796,
+      "text": "日本の財務省によると、外国為替準備金は8月末に約1,208兆ドルに減少し、1か月で796億ドル減少した。日本は7月末から8月末にかけて円を大規模に買い、ドルを売り、米国債を中心とした外貨資産を使用して、円が数十年ぶりの安値まで下落するのを防ごうとした。"
+    },
+    {
+      "key": "body-1",
+      "start": 79.796,
+      "end": 119.728,
+      "text": "日本銀行が9月に金利を引き上げることへの期待を高めている一方で、介入は一時円を著しく反発させた。外貨準備の急激な減少により、投資家は、円が再び急落した場合に日本が直接介入を続けるかどうか、そして金融政策により依存する必要があるかどうかをより懸念しています。"
+    },
+    {
+      "key": "why",
+      "start": 119.728,
+      "end": 140.164,
+      "text": "準備金の変化は、介入の実際のコストを反映しており、次の政策手段の市場の判断にも影響を与えます。"
+    },
+    {
+      "key": "watch",
+      "start": 140.164,
+      "end": 160.679,
+      "text": "9月17 -18日の日本銀行総会、154 -155円水準、財務省の介入によるデータに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.111,
+      "end": 4.391,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本の8月のFX準備高は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.391,
+      "speechEnd": 11.917,
+      "end": 12.097,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "資産を消費するための日本円の大規模購入で過去最大の"
+    },
+    {
+      "parentKey": "title",
+      "start": 12.097,
+      "speechEnd": 14.188,
+      "end": 14.368,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "1ヶ月"
+    },
+    {
+      "parentKey": "title",
+      "start": 14.368,
+      "speechEnd": 17.782,
+      "end": 18.642,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "間の下落を記録しました。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.642,
+      "speechEnd": 21.987,
+      "end": 22.267,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "財務省のデータによると、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.267,
+      "speechEnd": 30.768,
+      "end": 31.049,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "796億ドルの外貨準備が約1.208兆ドルに減少し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 31.049,
+      "speechEnd": 35.229,
+      "end": 36.09,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "市場評価が持続可能性を妨げている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.09,
+      "speechEnd": 39.504,
+      "end": 39.784,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本の財務省によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.784,
+      "speechEnd": 44.592,
+      "end": 44.872,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "外国為替準備金は8月末に約1,"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.872,
+      "speechEnd": 48.705,
+      "end": 48.985,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "208兆ドルに減少し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.985,
+      "speechEnd": 54.56,
+      "end": 55.18,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "1か月で796億ドル減少した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.18,
+      "speechEnd": 62.287,
+      "end": 62.568,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本は7月末から8月末にかけて円を大規模に買い、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.568,
+      "speechEnd": 64.867,
+      "end": 65.147,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ドルを売り、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.147,
+      "speechEnd": 71.07,
+      "end": 71.35,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国債を中心とした外貨資産を使用して、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.35,
+      "speechEnd": 79.015,
+      "end": 79.796,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "円が数十年ぶりの安値まで下落するのを防ごうとした。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 79.796,
+      "speechEnd": 88.994,
+      "end": 89.274,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本銀行が9月に金利を引き上げることへの期待を高めている一方で、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 89.274,
+      "speechEnd": 94.221,
+      "end": 94.841,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "介入は一時円を著しく反発させた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.841,
+      "speechEnd": 98.465,
+      "end": 98.745,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "外貨準備の急激な減少により、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 98.745,
+      "speechEnd": 100.975,
+      "end": 101.255,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "投資家は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.255,
+      "speechEnd": 108.99,
+      "end": 109.27,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "円が再び急落した場合に日本が直接介入を続けるかどうか、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.27,
+      "speechEnd": 114.426,
+      "end": 114.766,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "そして金融政策により依存する必要が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.766,
+      "speechEnd": 118.947,
+      "end": 119.728,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "あるかどうかをより懸念しています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 119.728,
+      "speechEnd": 123.699,
+      "end": 124.32,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 124.32,
+      "speechEnd": 126.828,
+      "end": 127.108,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "準備金の変化は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 127.108,
+      "speechEnd": 132.125,
+      "end": 132.406,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "介入の実際のコストを反映しており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 132.406,
+      "speechEnd": 139.304,
+      "end": 140.164,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "次の政策手段の市場の判断にも影響を与えます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 140.164,
+      "speechEnd": 142.255,
+      "end": 142.535,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 142.535,
+      "speechEnd": 148.876,
+      "end": 149.156,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "9月17 -18日の日本銀行総会、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 149.156,
+      "speechEnd": 153.755,
+      "end": 154.035,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "154 -155円水準、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 154.035,
+      "speechEnd": 159.819,
+      "end": 160.679,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "財務省の介入によるデータに注目してください。"
+    }
+  ]
+}

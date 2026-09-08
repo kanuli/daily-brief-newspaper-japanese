@@ -1,0 +1,410 @@
+{
+  "version": 3,
+  "duration": 174.733,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 500,
+  "charactersPerMinute": 171.7,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 17.305,
+      "text": "ナイジェリアのダンゴテ製油所は、アフリカ最大のIPOを同時に開始するために、1日あたり140万バレルに拡大される"
+    },
+    {
+      "key": "dek",
+      "start": 17.305,
+      "end": 36.294,
+      "text": "同社は、IPOを通じて容量を倍増させ、約16億ドルを調達するために約143億ドルを投資する予定です。"
+    },
+    {
+      "key": "body-0",
+      "start": 36.294,
+      "end": 90.226,
+      "text": "ダンゴテ精製所は月曜日に約143億ドルの拡大計画を発表し、2029年までに精製能力を1日当たり70万バレルから140万バレルに倍増することを目標としている。同日、同社は約16億3000万米ドルを調達する計画を含む新規株式公開文書に署名した。これは正常に完了すれば、アフリカ最大の上場プロジェクトの1つになるだろう。"
+    },
+    {
+      "key": "body-1",
+      "start": 90.226,
+      "end": 132.95,
+      "text": "2024年に委託されたこの巨大製油所は、ナイジェリアの精製石油供給構造を変革し、アフリカとヨーロッパに航空燃料を輸出しました。同社はまた、資金を拡張やその他のエネルギープロジェクトに使用する予定であり、投資家は建設コスト、資金調達、原油供給の取り決めに焦点を当てます。"
+    },
+    {
+      "key": "why",
+      "start": 132.95,
+      "end": 155.196,
+      "text": "ダブルキャパシティと市場投入ファイナンスは、アフリカの精製石油供給、精製マージン、エネルギー資本市場に影響を与えます。"
+    },
+    {
+      "key": "watch",
+      "start": 155.196,
+      "end": 174.733,
+      "text": "9月中旬のIPO需要、規制手続き、拡大資金調達、2029年のキャパシティタイムラインに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.902,
+      "end": 4.182,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ナイジェリアのダンゴテ製油所は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.182,
+      "speechEnd": 10.452,
+      "end": 10.732,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アフリカ最大のIPOを同時に開始するために、"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.732,
+      "speechEnd": 16.445,
+      "end": 17.305,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "1日あたり140万バレルに拡大される。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.305,
+      "speechEnd": 19.395,
+      "end": 19.675,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同社は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.675,
+      "speechEnd": 23.856,
+      "end": 24.136,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "IPOを通じて容量を倍増させ、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.136,
+      "speechEnd": 29.013,
+      "end": 29.193,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "約16億ドルを調達するために約"
+    },
+    {
+      "parentKey": "dek",
+      "start": 29.193,
+      "speechEnd": 32.049,
+      "end": 32.229,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "143億ドル"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.229,
+      "speechEnd": 35.434,
+      "end": 36.294,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "を投資する予定です。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.294,
+      "speechEnd": 40.405,
+      "end": 40.585,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "ダンゴテ精製所は月曜日に約"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.585,
+      "speechEnd": 43.441,
+      "end": 43.621,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "143億ドル"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.621,
+      "speechEnd": 47.035,
+      "end": 47.315,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "の拡大計画を発表し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.315,
+      "speechEnd": 62.225,
+      "end": 62.845,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "2029年までに精製能力を1日当たり70万バレルから140万バレルに倍増することを目標としている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.845,
+      "speechEnd": 64.935,
+      "end": 65.215,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.215,
+      "speechEnd": 72.53,
+      "end": 72.87,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "同社は約16億3000万米ドルを調達する計画を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.87,
+      "speechEnd": 77.956,
+      "end": 78.576,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "含む新規株式公開文書に署名した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 78.576,
+      "speechEnd": 82.548,
+      "end": 82.828,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "これは正常に完了すれば、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 82.828,
+      "speechEnd": 89.446,
+      "end": 90.226,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "アフリカ最大の上場プロジェクトの1つになるだろう。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.226,
+      "speechEnd": 97.054,
+      "end": 97.334,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "2024年に委託されたこの巨大製油所は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.334,
+      "speechEnd": 103.465,
+      "end": 103.745,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ナイジェリアの精製石油供給構造を変革し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.745,
+      "speechEnd": 109.18,
+      "end": 109.8,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "アフリカとヨーロッパに航空燃料を輸出しました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.8,
+      "speechEnd": 112.099,
+      "end": 112.379,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同社はまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.379,
+      "speechEnd": 120.6,
+      "end": 120.88,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "資金を拡張やその他のエネルギープロジェクトに使用する予定であり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.88,
+      "speechEnd": 124.085,
+      "end": 124.365,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "投資家は建設コスト、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 124.365,
+      "speechEnd": 126.525,
+      "end": 126.805,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "資金調達、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 126.805,
+      "speechEnd": 132.169,
+      "end": 132.95,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "原油供給の取り決めに焦点を当てます。"
+    },
+    {
+      "parentKey": "why",
+      "start": 132.95,
+      "speechEnd": 136.921,
+      "end": 137.541,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 137.541,
+      "speechEnd": 142.209,
+      "end": 142.489,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ダブルキャパシティと市場投入ファイナンスは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 142.489,
+      "speechEnd": 146.599,
+      "end": 146.879,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アフリカの精製石油供給、"
+    },
+    {
+      "parentKey": "why",
+      "start": 146.879,
+      "speechEnd": 149.388,
+      "end": 149.668,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "精製マージン、"
+    },
+    {
+      "parentKey": "why",
+      "start": 149.668,
+      "speechEnd": 154.336,
+      "end": 155.196,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "エネルギー資本市場に影響を与えます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 155.196,
+      "speechEnd": 157.286,
+      "end": 157.566,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 157.566,
+      "speechEnd": 161.189,
+      "end": 161.469,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "9月中旬のIPO需要、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 161.469,
+      "speechEnd": 163.768,
+      "end": 164.048,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "規制手続き、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 164.048,
+      "speechEnd": 166.626,
+      "end": 166.906,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "拡大資金調達、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 166.906,
+      "speechEnd": 173.873,
+      "end": 174.733,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "2029年のキャパシティタイムラインに注意してください。"
+    }
+  ]
+}

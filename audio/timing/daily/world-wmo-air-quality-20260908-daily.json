@@ -1,0 +1,430 @@
+{
+  "version": 3,
+  "duration": 163.056,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 432,
+  "charactersPerMinute": 159.0,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 15.771,
+      "text": "世界気象機関（ WMO ）は、国境を越えて広がる山火事や熱波による大気汚染のリスクについて警告している。"
+    },
+    {
+      "key": "dek",
+      "start": 15.771,
+      "end": 34.612,
+      "text": "新しい報告書によると、極端な暑さ、山火事の煙、エアロゾル、地表オゾンが公衆衛生上の負担を増やしている。"
+    },
+    {
+      "key": "body-0",
+      "start": 34.612,
+      "end": 82.826,
+      "text": "世界気象機関の最新の大気質レポートによると、極端な暑さと山火事は、煙、粒子状物質、地表オゾン濃度を増加させる可能性があります。汚染は気流と国境を越え、火災現場から遠く離れた都市や人口に影響を与える可能性があります。子供、高齢者、心肺疾患を持つ人々は特に脆弱です。"
+    },
+    {
+      "key": "body-1",
+      "start": 82.826,
+      "end": 119.689,
+      "text": "温暖化はまた、一部の地域で山火事の季節や熱波を長引かせ、大気汚染や気候変動のリスクを増幅させます。WMOは、各国に対し、大気質モニタリング、火災警報、公衆衛生対策を別々に扱うのではなく組み合わせるよう要請しています。"
+    },
+    {
+      "key": "why",
+      "start": 119.689,
+      "end": 142.483,
+      "text": "大気汚染は、直接的な火災被害がない場合、重大な健康上および経済上のコストを引き起こす可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 142.483,
+      "end": 163.056,
+      "text": "大都市の大気質警報、山火事シーズンの傾向、国境を越えたモニタリングが強化されているかどうかに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.832,
+      "end": 4.112,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "世界気象機関（ WMO ）は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.112,
+      "speechEnd": 14.911,
+      "end": 15.771,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "国境を越えて広がる山火事や熱波による大気汚染のリスクについて警告している。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.771,
+      "speechEnd": 18.976,
+      "end": 19.256,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "新しい報告書によると、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.256,
+      "speechEnd": 21.625,
+      "end": 21.905,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "極端な暑さ、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.905,
+      "speechEnd": 24.622,
+      "end": 24.902,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "山火事の煙、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.902,
+      "speechEnd": 27.132,
+      "end": 27.412,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "エアロゾル、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.412,
+      "speechEnd": 33.752,
+      "end": 34.612,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "地表オゾンが公衆衛生上の負担を増やしている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.612,
+      "speechEnd": 41.092,
+      "end": 41.372,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "世界気象機関の最新の大気質レポートによると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.372,
+      "speechEnd": 45.482,
+      "end": 45.762,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "極端な暑さと山火事は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.762,
+      "speechEnd": 47.713,
+      "end": 47.993,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "煙、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.993,
+      "speechEnd": 50.362,
+      "end": 50.642,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "粒子状物質、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.642,
+      "speechEnd": 56.634,
+      "end": 57.254,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "地表オゾン濃度を増加させる可能性があります。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.254,
+      "speechEnd": 61.504,
+      "end": 61.784,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "汚染は気流と国境を越え、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.784,
+      "speechEnd": 67.706,
+      "end": 68.046,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "火災現場から遠く離れた都市や人口に影響を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.046,
+      "speechEnd": 71.46,
+      "end": 72.08,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "与える可能性があります。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.08,
+      "speechEnd": 74.101,
+      "end": 74.381,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "子供、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.381,
+      "speechEnd": 76.471,
+      "end": 76.751,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "高齢者、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.751,
+      "speechEnd": 82.046,
+      "end": 82.826,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "心肺疾患を持つ人々は特に脆弱です。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.826,
+      "speechEnd": 85.334,
+      "end": 85.614,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "温暖化はまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 85.614,
+      "speechEnd": 92.651,
+      "end": 92.931,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "一部の地域で山火事の季節や熱波を長引かせ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.931,
+      "speechEnd": 98.575,
+      "end": 99.195,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "大気汚染や気候変動のリスクを増幅させます。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.195,
+      "speechEnd": 101.355,
+      "end": 101.635,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "WMOは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.635,
+      "speechEnd": 104.143,
+      "end": 104.423,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "各国に対し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.423,
+      "speechEnd": 107.21,
+      "end": 107.49,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "大気質モニタリング、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.49,
+      "speechEnd": 109.65,
+      "end": 109.93,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "火災警報、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.93,
+      "speechEnd": 114.319,
+      "end": 114.659,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "公衆衛生対策を別々に扱うのでは"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.659,
+      "speechEnd": 118.909,
+      "end": 119.689,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "なく組み合わせるよう要請しています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 119.689,
+      "speechEnd": 123.66,
+      "end": 124.28,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 124.28,
+      "speechEnd": 126.719,
+      "end": 126.999,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "大気汚染は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 126.999,
+      "speechEnd": 131.388,
+      "end": 131.668,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "直接的な火災被害がない場合、"
+    },
+    {
+      "parentKey": "why",
+      "start": 131.668,
+      "speechEnd": 137.521,
+      "end": 137.861,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "重大な健康上および経済上のコストを"
+    },
+    {
+      "parentKey": "why",
+      "start": 137.861,
+      "speechEnd": 141.623,
+      "end": 142.483,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "引き起こす可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 142.483,
+      "speechEnd": 144.573,
+      "end": 144.854,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 144.854,
+      "speechEnd": 148.198,
+      "end": 148.478,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "大都市の大気質警報、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 148.478,
+      "speechEnd": 152.24,
+      "end": 152.52,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "山火事シーズンの傾向、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 152.52,
+      "speechEnd": 156.561,
+      "end": 156.901,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "国境を越えたモニタリングが"
+    },
+    {
+      "parentKey": "watch",
+      "start": 156.901,
+      "speechEnd": 162.196,
+      "end": 163.056,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "強化されているかどうかに注意してください。"
+    }
+  ]
+}

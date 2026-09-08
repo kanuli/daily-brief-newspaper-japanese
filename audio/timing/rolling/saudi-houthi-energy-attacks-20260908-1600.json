@@ -1,0 +1,380 @@
+{
+  "version": 3,
+  "duration": 169.482,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 493,
+  "charactersPerMinute": 174.5,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.381,
+      "text": "フーシ派武装勢力がサウジのエネルギー施設を攻撃、73人が負傷、一部業務が一時停止"
+    },
+    {
+      "key": "dek",
+      "start": 14.381,
+      "end": 41.011,
+      "text": "サウジアラビア南部の複数のエネルギー施設と都市が攻撃されて火災が発生し、石油市場の供給リスクが再び高まった。当局は、負傷者には女性と子供も含まれていると発表した。"
+    },
+    {
+      "key": "body-0",
+      "start": 41.011,
+      "end": 91.268,
+      "text": "イエメンの反政府勢力フーシ派は火曜日、サウジアラビア南部に一連の攻撃を開始し、複数のエネルギー施設や都市に影響を与えた。サウジアラビアは、この攻撃により女性と子供を含む73人が負傷したと発表した。一部の石油施設や公共施設は一時的に操業を停止し、その後緊急チームが消火活動や安全対策を開始した。"
+    },
+    {
+      "key": "body-1",
+      "start": 91.268,
+      "end": 121.154,
+      "text": "この事件は、中東のエネルギーと海運の安全保障が引き続き圧迫されている中で発生した。市場は施設への被害の程度と、攻撃がより広範な地域供給リスクに発展する可能性があるかどうかを評価している。"
+    },
+    {
+      "key": "why",
+      "start": 121.154,
+      "end": 146.528,
+      "text": "サウジアラビアは世界の主要な石油輸出国であり、エネルギー施設への攻撃は原油リスクプレミアムと輸送コストを急速に引き上げる可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 146.528,
+      "end": 169.482,
+      "text": "攻撃された施設の復旧時間、サウジアラビアの対応、フーシ派のフォローアップ行動、原油価格と輸送がさらに混乱するかどうかに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 6.48,
+      "end": 6.76,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "フーシ派武装勢力がサウジのエネルギー施設を攻撃、"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.76,
+      "speechEnd": 9.687,
+      "end": 9.967,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "73人が負傷、"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.967,
+      "speechEnd": 13.521,
+      "end": 14.381,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "一部業務が一時停止。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.381,
+      "speechEnd": 21.07,
+      "end": 21.411,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "サウジアラビア南部の複数のエネルギー施設と都市が"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.411,
+      "speechEnd": 25.104,
+      "end": 25.384,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "攻撃されて火災が発生し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.384,
+      "speechEnd": 30.47,
+      "end": 31.091,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "石油市場の供給リスクが再び高まった。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 31.091,
+      "speechEnd": 33.181,
+      "end": 33.461,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "当局は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 33.461,
+      "speechEnd": 40.151,
+      "end": 41.011,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "負傷者には女性と子供も含まれていると発表した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.011,
+      "speechEnd": 46.446,
+      "end": 46.726,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イエメンの反政府勢力フーシ派は火曜日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.726,
+      "speechEnd": 52.509,
+      "end": 52.79,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "サウジアラビア南部に一連の攻撃を開始し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.79,
+      "speechEnd": 59.061,
+      "end": 59.681,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "複数のエネルギー施設や都市に影響を与えた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.681,
+      "speechEnd": 62.329,
+      "end": 62.609,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "サウジアラビアは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.609,
+      "speechEnd": 67.765,
+      "end": 67.945,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "この攻撃により女性と子供を含む"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.945,
+      "speechEnd": 70.175,
+      "end": 70.355,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "73人"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.355,
+      "speechEnd": 73.561,
+      "end": 74.181,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "が負傷したと発表した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.181,
+      "speechEnd": 82.752,
+      "end": 83.032,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "一部の石油施設や公共施設は一時的に操業を停止し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 83.032,
+      "speechEnd": 90.488,
+      "end": 91.268,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "その後緊急チームが消火活動や安全対策を開始した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.268,
+      "speechEnd": 93.567,
+      "end": 93.847,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この事件は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.847,
+      "speechEnd": 99.143,
+      "end": 99.483,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "中東のエネルギーと海運の安全保障が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.483,
+      "speechEnd": 104.361,
+      "end": 104.981,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "引き続き圧迫されている中で発生した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.981,
+      "speechEnd": 109.441,
+      "end": 109.721,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "市場は施設への被害の程度と、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.721,
+      "speechEnd": 116.549,
+      "end": 116.89,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "攻撃がより広範な地域供給リスクに発展する可能性が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 116.89,
+      "speechEnd": 120.374,
+      "end": 121.154,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "あるかどうかを評価している。"
+    },
+    {
+      "parentKey": "why",
+      "start": 121.154,
+      "speechEnd": 125.126,
+      "end": 125.746,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 125.746,
+      "speechEnd": 132.714,
+      "end": 132.994,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "サウジアラビアは世界の主要な石油輸出国であり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 132.994,
+      "speechEnd": 141.007,
+      "end": 141.347,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "エネルギー施設への攻撃は原油リスクプレミアムと輸送コストを"
+    },
+    {
+      "parentKey": "why",
+      "start": 141.347,
+      "speechEnd": 145.668,
+      "end": 146.528,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "急速に引き上げる可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 146.528,
+      "speechEnd": 148.618,
+      "end": 148.898,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 148.898,
+      "speechEnd": 153.01,
+      "end": 153.29,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "攻撃された施設の復旧時間、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 153.29,
+      "speechEnd": 156.286,
+      "end": 156.566,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "サウジアラビアの対応、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 156.566,
+      "speechEnd": 160.259,
+      "end": 160.539,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "フーシ派のフォローアップ行動、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 160.539,
+      "speechEnd": 168.622,
+      "end": 169.482,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "原油価格と輸送がさらに混乱するかどうかに注目してください。"
+    }
+  ]
+}

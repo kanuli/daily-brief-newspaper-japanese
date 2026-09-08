@@ -1,0 +1,380 @@
+{
+  "version": 3,
+  "duration": 161.593,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 438,
+  "charactersPerMinute": 162.6,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 13.532,
+      "text": "北朝鮮とロシア初のトゥーメン川高速道路と橋が国境を越えた物流リンクを正式に開通"
+    },
+    {
+      "key": "dek",
+      "start": 13.532,
+      "end": 32.5,
+      "text": "新しい橋は既存の鉄道回廊を補完し、両国は制裁と地政学的圧力の下で輸送と経済貿易のつながりを拡大し続けています。"
+    },
+    {
+      "key": "body-0",
+      "start": 32.5,
+      "end": 72.425,
+      "text": "北朝鮮とロシアは月曜日、トゥーメン川を横断する最初の道路橋を正式に開通させ、既存の鉄道路線に道路貨物と人員を追加した。このプロジェクトは、長年にわたり両国間の国境物流協力の拡大のための重要なプロジェクトと見なされており、現在正式に稼働しています。"
+    },
+    {
+      "key": "body-1",
+      "start": 72.425,
+      "end": 120.646,
+      "text": "近年、朝鮮民主主義人民共和国とロシアは軍事、外交、経済の分野で急速に接近しており、欧米諸国も両国間の材料や技術の交換を注意深く監視している。道路橋は国境を越えた輸送の柔軟性を高めますが、実際の貨物流量の規模は依然として税関手配、道路容量、制裁環境に依存します。"
+    },
+    {
+      "key": "why",
+      "start": 120.646,
+      "end": 139.198,
+      "text": "道路アクセスを追加すると、単一の鉄道線への依存が軽減され、材料交換の効率が向上します。"
+    },
+    {
+      "key": "watch",
+      "start": 139.198,
+      "end": 161.593,
+      "text": "運用後の貨物量、国境管理の取り決め、米国、韓国、日本が制裁違反の可能性を監視していることに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 6.201,
+      "end": 6.541,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "北朝鮮とロシア初のトゥーメン川高速道路と橋が"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.541,
+      "speechEnd": 12.672,
+      "end": 13.532,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "国境を越えた物流リンクを正式に開通。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.532,
+      "speechEnd": 19.036,
+      "end": 19.316,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "新しい橋は既存の鉄道回廊を補完し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.316,
+      "speechEnd": 28.095,
+      "end": 28.435,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "両国は制裁と地政学的圧力の下で輸送と経済貿易のつなが"
+    },
+    {
+      "parentKey": "dek",
+      "start": 28.435,
+      "speechEnd": 31.64,
+      "end": 32.5,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "りを拡大し続けています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 32.5,
+      "speechEnd": 36.262,
+      "end": 36.542,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "北朝鮮とロシアは月曜日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.542,
+      "speechEnd": 44.136,
+      "end": 44.416,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "トゥーメン川を横断する最初の道路橋を正式に開通させ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.416,
+      "speechEnd": 51.174,
+      "end": 51.794,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "既存の鉄道路線に道路貨物と人員を追加した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.794,
+      "speechEnd": 54.721,
+      "end": 55.001,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "このプロジェクトは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.001,
+      "speechEnd": 62.664,
+      "end": 63.005,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "長年にわたり両国間の国境物流協力の拡大のため"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.005,
+      "speechEnd": 67.742,
+      "end": 68.022,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "の重要なプロジェクトと見なされており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.022,
+      "speechEnd": 71.645,
+      "end": 72.425,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "現在正式に稼働しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 72.425,
+      "speechEnd": 74.515,
+      "end": 74.795,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "近年、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 74.795,
+      "speechEnd": 81.414,
+      "end": 81.694,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "朝鮮民主主義人民共和国とロシアは軍事、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 81.694,
+      "speechEnd": 83.715,
+      "end": 83.995,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "外交、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 83.995,
+      "speechEnd": 88.384,
+      "end": 88.664,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "経済の分野で急速に接近しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.664,
+      "speechEnd": 95.004,
+      "end": 95.344,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "欧米諸国も両国間の材料や技術の交換を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 95.344,
+      "speechEnd": 98.758,
+      "end": 99.378,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "注意深く監視している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.378,
+      "speechEnd": 107.251,
+      "end": 107.531,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "道路橋は国境を越えた輸送の柔軟性を高めますが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.531,
+      "speechEnd": 113.801,
+      "end": 114.082,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "実際の貨物流量の規模は依然として税関手配、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.082,
+      "speechEnd": 116.311,
+      "end": 116.591,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "道路容量、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 116.591,
+      "speechEnd": 119.866,
+      "end": 120.646,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "制裁環境に依存します。"
+    },
+    {
+      "parentKey": "why",
+      "start": 120.646,
+      "speechEnd": 124.617,
+      "end": 125.237,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 125.237,
+      "speechEnd": 128.721,
+      "end": 129.001,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "道路アクセスを追加すると、"
+    },
+    {
+      "parentKey": "why",
+      "start": 129.001,
+      "speechEnd": 133.808,
+      "end": 134.088,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "単一の鉄道線への依存が軽減され、"
+    },
+    {
+      "parentKey": "why",
+      "start": 134.088,
+      "speechEnd": 138.338,
+      "end": 139.198,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "材料交換の効率が向上します。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 139.198,
+      "speechEnd": 141.288,
+      "end": 141.568,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 141.568,
+      "speechEnd": 144.216,
+      "end": 144.496,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "運用後の貨物量、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 144.496,
+      "speechEnd": 147.701,
+      "end": 147.981,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "国境管理の取り決め、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 147.981,
+      "speechEnd": 150.001,
+      "end": 150.281,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 150.281,
+      "speechEnd": 152.302,
+      "end": 152.582,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "韓国、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 152.582,
+      "speechEnd": 160.733,
+      "end": 161.593,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "日本が制裁違反の可能性を監視していることに注意してください。"
+    }
+  ]
+}

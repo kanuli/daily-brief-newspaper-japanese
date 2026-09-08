@@ -1,0 +1,330 @@
+{
+  "version": 3,
+  "duration": 151.327,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 464,
+  "charactersPerMinute": 184.0,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 13.676,
+      "text": "ロシア、サンクトペテルブルクのドイツ総領事館を閉鎖。ドローン紛争で外交関係が再び悪化"
+    },
+    {
+      "key": "dek",
+      "start": 13.676,
+      "end": 29.939,
+      "text": "モスクワはドイツに報復し、ロシア総領事館や文化センターを閉鎖し、ゲーテ研究所のロシアでの活動停止を要求した。"
+    },
+    {
+      "key": "body-0",
+      "start": 29.939,
+      "end": 70.647,
+      "text": "ロシア外務省は月曜、サンクトペテルブルクのドイツ総領事館の閉鎖を発表し、ドイツ・ゲーテ研究所のロシア文化センターの業務停止と関係者に9月13日までの国外退去を要求した。この措置は、ドイツがボンのロシア総領事館とベルリンのロシア文化センターを閉鎖したことへの報復であった。"
+    },
+    {
+      "key": "body-1",
+      "start": 70.647,
+      "end": 114.142,
+      "text": "ドイツは先に、ライプツィヒ・ハレ空港での無人機事件へのロシアの関与を​​非難したが、ロシア政府は非難を否定した。今回の外交・文化機関の相互閉鎖は、ウクライナ戦争、制裁、安全保障紛争によりすでに悪化しているロシアとドイツ間の公式コミュニケーションの余地をさらに狭めることとなった。"
+    },
+    {
+      "key": "why",
+      "start": 114.142,
+      "end": 133.462,
+      "text": "在外公館の閉鎖は領事業務や危機伝達を弱めるだけでなく、さらなる相互制裁を招く可能性もある。"
+    },
+    {
+      "key": "watch",
+      "start": 133.462,
+      "end": 151.327,
+      "text": "ドイツの事後措置やゲーテ・インスティチュートの避難体制、そして両国が外交人員をさらに削減するかどうかに注目だ。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.021,
+      "end": 2.301,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロシア、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.301,
+      "speechEnd": 7.388,
+      "end": 8.008,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "サンクトペテルブルクのドイツ総領事館を閉鎖。"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.008,
+      "speechEnd": 12.816,
+      "end": 13.676,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ドローン紛争で外交関係が再び悪化。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.676,
+      "speechEnd": 16.951,
+      "end": 17.231,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "モスクワはドイツに報復し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.231,
+      "speechEnd": 22.179,
+      "end": 22.459,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロシア総領事館や文化センターを閉鎖し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.459,
+      "speechEnd": 29.078,
+      "end": 29.939,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ゲーテ研究所のロシアでの活動停止を要求した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 29.939,
+      "speechEnd": 33.214,
+      "end": 33.494,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロシア外務省は月曜、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 33.494,
+      "speechEnd": 40.114,
+      "end": 40.394,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "サンクトペテルブルクのドイツ総領事館の閉鎖を発表し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.394,
+      "speechEnd": 48.059,
+      "end": 48.239,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "ドイツ・ゲーテ研究所のロシア文化センターの業務停止と関係者に"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.239,
+      "speechEnd": 50.887,
+      "end": 51.067,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "9月13日"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.067,
+      "speechEnd": 55.247,
+      "end": 55.868,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "までの国外退去を要求した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.868,
+      "speechEnd": 58.237,
+      "end": 58.517,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この措置は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.517,
+      "speechEnd": 65.764,
+      "end": 66.104,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ドイツがボンのロシア総領事館とベルリンのロシア文化センターを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.104,
+      "speechEnd": 69.867,
+      "end": 70.647,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "閉鎖したことへの報復であった。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 70.647,
+      "speechEnd": 73.225,
+      "end": 73.505,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ドイツは先に、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 73.505,
+      "speechEnd": 82.912,
+      "end": 83.192,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ライプツィヒ・ハレ空港での無人機事件へのロシアの関与を​​非難したが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 83.192,
+      "speechEnd": 87.652,
+      "end": 88.272,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ロシア政府は非難を否定した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.272,
+      "speechEnd": 93.568,
+      "end": 93.848,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今回の外交・文化機関の相互閉鎖は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.848,
+      "speechEnd": 96.287,
+      "end": 96.567,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ウクライナ戦争、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 96.567,
+      "speechEnd": 98.588,
+      "end": 98.868,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "制裁、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 98.868,
+      "speechEnd": 113.362,
+      "end": 114.142,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "安全保障紛争によりすでに悪化しているロシアとドイツ間の公式コミュニケーションの余地をさらに狭めることとなった。"
+    },
+    {
+      "parentKey": "why",
+      "start": 114.142,
+      "speechEnd": 118.114,
+      "end": 118.734,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 118.734,
+      "speechEnd": 126.887,
+      "end": 127.167,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "在外公館の閉鎖は領事業務や危機伝達を弱めるだけでなく、"
+    },
+    {
+      "parentKey": "why",
+      "start": 127.167,
+      "speechEnd": 132.602,
+      "end": 133.462,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "さらなる相互制裁を招く可能性もある。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 133.462,
+      "speechEnd": 135.553,
+      "end": 135.833,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 135.833,
+      "speechEnd": 142.313,
+      "end": 142.593,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ドイツの事後措置やゲーテ・インスティチュートの避難体制、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 142.593,
+      "speechEnd": 150.467,
+      "end": 151.327,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "そして両国が外交人員をさらに削減するかどうかに注目だ。"
+    }
+  ]
+}

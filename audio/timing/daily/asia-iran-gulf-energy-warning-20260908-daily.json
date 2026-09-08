@@ -1,0 +1,380 @@
+{
+  "version": 3,
+  "duration": 175.125,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 525,
+  "charactersPerMinute": 179.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 18.066,
+      "text": "イラン、米国の湾岸エネルギー資産が報復のリスクに直面していると警告、ホルムズ郊外に新たな立ち入り禁止区域を計画"
+    },
+    {
+      "key": "dek",
+      "start": 18.066,
+      "end": 42.891,
+      "text": "米国とイランが先週末に再び互いの船舶を攻撃したことを受け、イラン政府は湾岸に新たな立ち入り禁止水域を発表すると発表しており、エネルギーと海運のリスクは高まり続けている。"
+    },
+    {
+      "key": "body-0",
+      "start": 42.891,
+      "end": 84.633,
+      "text": "イラン外務省と軍は月曜日、特に湾岸地域の米国のエネルギーインフラに言及し、米国がイラン資産をさらに攻撃する場合には報復に直面すると述べた。イラン政府はまた、ホルムズ海峡外に新たな制限水域を数日中に発表する予定で、無許可船舶は制裁や妨害の対象となる可能性があると述べた。"
+    },
+    {
+      "key": "body-1",
+      "start": 84.633,
+      "end": 133.687,
+      "text": "米国とイランが週末に互いの船舶を攻撃したことを受け、原油価格は約６週間ぶりの高値まで上昇した。ホルムズは依然として世界で最も重要なエネルギー回廊の一つです。航行制限が追加されれば、保険料、貨物運賃、原油のリスクプレミアムが上昇する可能性があり、また近隣諸国が代替輸出ルートの模索を加速する可能性もある。"
+    },
+    {
+      "key": "why",
+      "start": 133.687,
+      "end": 155.027,
+      "text": "新たな制限区域が導入されれば、地政学的リスクが実質的な輸送コストとエネルギー供給コストに換算されることになる。"
+    },
+    {
+      "key": "watch",
+      "start": 155.027,
+      "end": 175.125,
+      "text": "イランによる立ち入り禁止区域の座標や取り締まり方法の発表、米国の対応、タンカーの迂回、原油価格に注目だ。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.021,
+      "end": 2.301,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イラン、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.301,
+      "speechEnd": 5.855,
+      "end": 6.195,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "米国の湾岸エネルギー資産が"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.195,
+      "speechEnd": 10.515,
+      "end": 10.795,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "報復のリスクに直面していると警告、"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.795,
+      "speechEnd": 17.206,
+      "end": 18.066,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ホルムズ郊外に新たな立ち入り禁止区域を計画。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.066,
+      "speechEnd": 26.218,
+      "end": 26.498,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国とイランが先週末に再び互いの船舶を攻撃したことを受け、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.498,
+      "speechEnd": 32.979,
+      "end": 33.319,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "イラン政府は湾岸に新たな立ち入り禁止水域を"
+    },
+    {
+      "parentKey": "dek",
+      "start": 33.319,
+      "speechEnd": 36.873,
+      "end": 37.153,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "発表すると発表しており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 37.153,
+      "speechEnd": 42.03,
+      "end": 42.891,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "エネルギーと海運のリスクは高まり続けている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.891,
+      "speechEnd": 46.862,
+      "end": 47.142,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イラン外務省と軍は月曜日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.142,
+      "speechEnd": 53.344,
+      "end": 53.624,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "特に湾岸地域の米国のエネルギーインフラに言及し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.624,
+      "speechEnd": 59.129,
+      "end": 59.469,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "米国がイラン資産をさらに攻撃する場合には"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.469,
+      "speechEnd": 62.744,
+      "end": 63.364,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "報復に直面すると述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.364,
+      "speechEnd": 66.151,
+      "end": 66.431,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イラン政府はまた、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.431,
+      "speechEnd": 75.351,
+      "end": 75.631,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ホルムズ海峡外に新たな制限水域を数日中に発表する予定で、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.631,
+      "speechEnd": 83.853,
+      "end": 84.633,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "無許可船舶は制裁や妨害の対象となる可能性があると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.633,
+      "speechEnd": 91.532,
+      "end": 91.812,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国とイランが週末に互いの船舶を攻撃したことを受け、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.812,
+      "speechEnd": 98.849,
+      "end": 99.47,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "原油価格は約６週間ぶりの高値まで上昇した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.47,
+      "speechEnd": 108.11,
+      "end": 108.73,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ホルムズは依然として世界で最も重要なエネルギー回廊の一つです。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.73,
+      "speechEnd": 112.563,
+      "end": 112.843,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "航行制限が追加されれば、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.843,
+      "speechEnd": 114.933,
+      "end": 115.213,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "保険料、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.213,
+      "speechEnd": 117.373,
+      "end": 117.653,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "貨物運賃、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.653,
+      "speechEnd": 123.925,
+      "end": 124.205,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "原油のリスクプレミアムが上昇する可能性があり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 124.205,
+      "speechEnd": 129.361,
+      "end": 129.701,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "また近隣諸国が代替輸出ルートの模索を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 129.701,
+      "speechEnd": 132.906,
+      "end": 133.687,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "加速する可能性もある。"
+    },
+    {
+      "parentKey": "why",
+      "start": 133.687,
+      "speechEnd": 137.658,
+      "end": 138.279,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 138.279,
+      "speechEnd": 143.296,
+      "end": 143.576,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "新たな制限区域が導入されれば、"
+    },
+    {
+      "parentKey": "why",
+      "start": 143.576,
+      "speechEnd": 154.167,
+      "end": 155.027,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "地政学的リスクが実質的な輸送コストとエネルギー供給コストに換算されることになる。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 155.027,
+      "speechEnd": 157.118,
+      "end": 157.398,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 157.398,
+      "speechEnd": 165.55,
+      "end": 165.831,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イランによる立ち入り禁止区域の座標や取り締まり方法の発表、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 165.831,
+      "speechEnd": 168.2,
+      "end": 168.48,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国の対応、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 168.48,
+      "speechEnd": 170.919,
+      "end": 171.199,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "タンカーの迂回、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 171.199,
+      "speechEnd": 174.265,
+      "end": 175.125,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "原油価格に注目だ。"
+    }
+  ]
+}
