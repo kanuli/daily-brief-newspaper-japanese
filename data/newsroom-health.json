@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "assessedAt": "2026-09-08T21:57:42.722Z",
+  "assessedAt": "2026-09-08T22:01:12.068Z",
   "state": "RED",
-  "summary": "RECOVERY_REQUIRED:desk",
+  "summary": "RECOVERY_REQUIRED:live,desk",
   "layers": {
     "daily": {
       "current": true,
@@ -10,10 +10,10 @@
       "japanese": "2026-09-08"
     },
     "live": {
-      "current": true,
-      "upstream": "2026-09-09T00:00:00+08:00",
+      "current": false,
+      "upstream": "2026-09-09T06:00:00+08:00",
       "japanese": "2026-09-09T00:00:00+08:00",
-      "lagMinutes": 0
+      "lagMinutes": 360
     },
     "desk": {
       "current": false,
@@ -34,13 +34,13 @@
     }
   },
   "recovery": {
-    "coreRequired": false,
+    "coreRequired": true,
     "rollingRequired": true,
     "structuralRequired": false
   },
   "robot": {
     "current": true,
-    "runId": 34283391451,
+    "runId": 34283697578,
     "event": "workflow_dispatch",
     "selfHealingLoop": true
   },
