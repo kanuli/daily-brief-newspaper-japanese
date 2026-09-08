@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 38.87,
+  "duration": 29.466,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 340.0,
-  "characters": 130,
-  "charactersPerMinute": 200.7,
+  "characters": 96,
+  "charactersPerMinute": 195.5,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.18,
@@ -21,13 +21,13 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 19.614,
-      "text": "今週のAppleの特別イベントの前夜、ファーウェイは中国のハイエンド市場での競争を激化させるために新しい30％オフの携帯電話を発売する"
+      "end": 10.202,
+      "text": "AAPL：Apple / Reutersで最新の製品・イベント情報を確認"
     },
     {
       "key": "body-0",
-      "start": 19.614,
-      "end": 38.87,
+      "start": 10.202,
+      "end": 29.466,
       "text": "Apple / Reutersを出典として、製品・イベントに関する新しい検証済み情報を確認しました。詳細は出典資料の確認後に順次更新します。"
     }
   ],
@@ -35,38 +35,28 @@
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 5.021,
-      "end": 5.302,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "今週のAppleの特別イベントの前夜、"
-    },
-    {
-      "parentKey": "title",
-      "start": 5.302,
-      "speechEnd": 12.764,
-      "end": 13.104,
-      "pause": 0.34,
+      "speechEnd": 2.023,
+      "end": 2.364,
+      "pause": 0.341,
       "intendedPause": 0.34,
-      "reason": "semantic-boundary",
-      "text": "ファーウェイは中国のハイエンド市場での競争を激化させるため"
+      "reason": "punctuation-semantic",
+      "text": "AAPL："
     },
     {
       "parentKey": "title",
-      "start": 13.104,
-      "speechEnd": 18.753,
-      "end": 19.614,
+      "start": 2.364,
+      "speechEnd": 9.341,
+      "end": 10.202,
       "pause": 0.861,
       "intendedPause": 0.86,
       "reason": "punctuation-sentence",
-      "text": "に新しい30％オフの携帯電話を発売する。"
+      "text": "Apple / Reutersで最新の製品・イベント情報を確認。"
     },
     {
       "parentKey": "body-0",
-      "start": 19.614,
-      "speechEnd": 23.45,
-      "end": 23.73,
+      "start": 10.202,
+      "speechEnd": 14.039,
+      "end": 14.32,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
@@ -74,9 +64,9 @@
     },
     {
       "parentKey": "body-0",
-      "start": 23.73,
-      "speechEnd": 31.192,
-      "end": 31.813,
+      "start": 14.32,
+      "speechEnd": 21.785,
+      "end": 22.406,
       "pause": 0.621,
       "intendedPause": 0.62,
       "reason": "punctuation-sentence",
@@ -84,9 +74,9 @@
     },
     {
       "parentKey": "body-0",
-      "start": 31.813,
-      "speechEnd": 38.089,
-      "end": 38.87,
+      "start": 22.406,
+      "speechEnd": 28.685,
+      "end": 29.466,
       "pause": 0.781,
       "intendedPause": 0.78,
       "reason": "punctuation-sentence",

@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 35.944,
+  "duration": 29.179,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 340.0,
-  "characters": 122,
-  "charactersPerMinute": 203.6,
+  "characters": 84,
+  "charactersPerMinute": 172.7,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.18,
@@ -21,56 +21,66 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 13.762,
-      "text": "Palantir CEO Alex Karp將成烏克蘭前防長新國防科技公司の首名主要投資家"
+      "end": 9.99,
+      "text": "PLTR：Reutersで最新の企業・市場動向情報を確認"
     },
     {
       "key": "body-0",
-      "start": 13.762,
-      "end": 35.944,
-      "text": "パランティアとウクライナの防衛技術エコシステムとの関係はさらにCEOの個人投資レベルにまで広がっているが、それをパランティアの新たな収入と直接見なすことはできない。"
+      "start": 9.99,
+      "end": 29.179,
+      "text": "Reutersを出典として、企業・市場動向に関する新しい検証済み情報を確認しました。詳細は出典資料の確認後に順次更新します。"
     }
   ],
   "semanticUnits": [
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 12.901,
-      "end": 13.762,
+      "speechEnd": 2.023,
+      "end": 2.363,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "punctuation-semantic",
+      "text": "PLTR："
+    },
+    {
+      "parentKey": "title",
+      "start": 2.363,
+      "speechEnd": 9.129,
+      "end": 9.99,
       "pause": 0.861,
       "intendedPause": 0.86,
       "reason": "punctuation-sentence",
-      "text": "Palantir CEO Alex Karp將成烏克蘭前防長新國防科技公司の首名主要投資家。"
+      "text": "Reutersで最新の企業・市場動向情報を確認。"
     },
     {
       "parentKey": "body-0",
-      "start": 13.762,
-      "speechEnd": 20.038,
-      "end": 20.378,
-      "pause": 0.34,
-      "intendedPause": 0.34,
-      "reason": "semantic-boundary",
-      "text": "パランティアとウクライナの防衛技術エコシステムとの関係は"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 20.378,
-      "speechEnd": 27.143,
-      "end": 27.423,
+      "start": 9.99,
+      "speechEnd": 13.198,
+      "end": 13.479,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "さらにCEOの個人投資レベルにまで広がっているが、"
+      "text": "Reutersを出典として、"
     },
     {
       "parentKey": "body-0",
-      "start": 27.423,
-      "speechEnd": 35.164,
-      "end": 35.944,
+      "start": 13.479,
+      "speechEnd": 21.5,
+      "end": 22.12,
+      "pause": 0.621,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "企業・市場動向に関する新しい検証済み情報を確認しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 22.12,
+      "speechEnd": 28.398,
+      "end": 29.179,
       "pause": 0.781,
       "intendedPause": 0.78,
       "reason": "punctuation-sentence",
-      "text": "それをパランティアの新たな収入と直接見なすことはできない。"
+      "text": "詳細は出典資料の確認後に順次更新します。"
     }
   ]
 }

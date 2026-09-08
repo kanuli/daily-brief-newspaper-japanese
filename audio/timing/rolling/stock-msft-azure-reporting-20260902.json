@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 37.407,
+  "duration": 29.257,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 340.0,
-  "characters": 127,
-  "charactersPerMinute": 203.7,
+  "characters": 84,
+  "charactersPerMinute": 172.3,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.18,
@@ -21,66 +21,66 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 15.083,
-      "text": "MicrosoftはAIクラウド事業の透明性を高めるため、Azureの四半期売上高を個別に開示し始める"
+      "end": 10.063,
+      "text": "MSFT：Reutersで最新の企業・市場動向情報を確認"
     },
     {
       "key": "body-0",
-      "start": 15.083,
-      "end": 37.407,
-      "text": "Azure の収益が初めて直接開示されることで、市場の見積もりの​​不確実性が軽減され、Microsoft の AI とクラウドへの投資収益のテスト可能性が高まります。"
+      "start": 10.063,
+      "end": 29.257,
+      "text": "Reutersを出典として、企業・市場動向に関する新しい検証済み情報を確認しました。詳細は出典資料の確認後に順次更新します。"
     }
   ],
   "semanticUnits": [
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 7.738,
-      "end": 8.018,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "MicrosoftはAIクラウド事業の透明性を高めるため、"
+      "speechEnd": 2.093,
+      "end": 2.434,
+      "pause": 0.341,
+      "intendedPause": 0.34,
+      "reason": "punctuation-semantic",
+      "text": "MSFT："
     },
     {
       "parentKey": "title",
-      "start": 8.018,
-      "speechEnd": 14.223,
-      "end": 15.083,
+      "start": 2.434,
+      "speechEnd": 9.201,
+      "end": 10.063,
       "pause": 0.861,
       "intendedPause": 0.86,
       "reason": "punctuation-sentence",
-      "text": "Azureの四半期売上高を個別に開示し始める。"
+      "text": "Reutersで最新の企業・市場動向情報を確認。"
     },
     {
       "parentKey": "body-0",
-      "start": 15.083,
-      "speechEnd": 21.078,
-      "end": 21.359,
+      "start": 10.063,
+      "speechEnd": 13.272,
+      "end": 13.552,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "Azure の収益が初めて直接開示されることで、"
+      "text": "Reutersを出典として、"
     },
     {
       "parentKey": "body-0",
-      "start": 21.359,
-      "speechEnd": 27.214,
-      "end": 27.495,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "市場の見積もりの​​不確実性が軽減され、"
+      "start": 13.552,
+      "speechEnd": 21.576,
+      "end": 22.197,
+      "pause": 0.621,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "企業・市場動向に関する新しい検証済み情報を確認しました。"
     },
     {
       "parentKey": "body-0",
-      "start": 27.495,
-      "speechEnd": 36.627,
-      "end": 37.407,
+      "start": 22.197,
+      "speechEnd": 28.476,
+      "end": 29.257,
       "pause": 0.781,
       "intendedPause": 0.78,
       "reason": "punctuation-sentence",
-      "text": "Microsoft の AI とクラウドへの投資収益のテスト可能性が高まります。"
+      "text": "詳細は出典資料の確認後に順次更新します。"
     }
   ]
 }
