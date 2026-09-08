@@ -1,0 +1,490 @@
+{
+  "version": 3,
+  "duration": 212.95,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 604,
+  "charactersPerMinute": 170.2,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 8.238,
+      "text": "サーバー物理食協約 形成名のみ!」"
+    },
+    {
+      "key": "dek",
+      "start": 8.238,
+      "end": 36.813,
+      "text": "商工会議所は、香港と本土の都市の間には依然として制度的およびビジネス環境の違いがあると考えており、地域のビジネスハブとしての香港の位置づけをEUの政策サークルに説明します。"
+    },
+    {
+      "key": "body-0",
+      "start": 36.813,
+      "end": 89.483,
+      "text": "香港の欧州商工会議所のヨハネス・ハック会長は、香港に対する理解を深めるためにEUの政策サークルと会うためにブリュッセルを訪れると述べた。彼は、香港は中国本土と密接な経済関係を持っていますが、法的、金融的、商業的な運営には依然として重要な違いがあるため、香港と本土の都市を同じように扱うことは適切ではないと考えています。"
+    },
+    {
+      "key": "body-1",
+      "start": 89.483,
+      "end": 140.96,
+      "text": "この訪問は、貿易、産業政策、市場アクセスなどの問題で中国とEUの間の摩擦が高まっている時期に行われた。香港にとって、欧州企業は重要な投資家であり、プロフェッショナルサービスと金融市場の重要なプレーヤーでもあります。商工会議所は、香港と欧州企業と政策立案者との間の直接的なコミュニケーションチャネルを維持したいと考えています。"
+    },
+    {
+      "key": "why",
+      "start": 140.96,
+      "end": 180.541,
+      "text": "欧州企業の香港への投資や地域本社の決定は、地元の雇用、ビジネスサービス需要、国際資本の流れに影響を与えるだろう。香港がEUの政策陣と独立したコミュニケーションを維持できるかどうかも、長期的な経済的重要性をもつ。"
+    },
+    {
+      "key": "watch",
+      "start": 180.541,
+      "end": 212.95,
+      "text": "ブリュッセルでの会合後に商工会議所が具体的な政策要求を発表するかどうか、またEUが香港企業、市場アクセス、中国とEUの貿易措置に関する新たな政策声明を発表するかどうかが注目される。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.807,
+      "end": 5.427,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "サーバー物理食協約 形成名のみ!"
+    },
+    {
+      "parentKey": "title",
+      "start": 5.427,
+      "speechEnd": 7.378,
+      "end": 8.238,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "」。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 8.238,
+      "speechEnd": 10.816,
+      "end": 11.096,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "商工会議所は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 11.096,
+      "speechEnd": 16.948,
+      "end": 17.288,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "香港と本土の都市の間には依然として"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.288,
+      "speechEnd": 24.534,
+      "end": 24.814,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "制度的およびビジネス環境の違いがあると考えており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.814,
+      "speechEnd": 31.433,
+      "end": 31.773,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "地域のビジネスハブとしての香港の位置づけを"
+    },
+    {
+      "parentKey": "dek",
+      "start": 31.773,
+      "speechEnd": 35.953,
+      "end": 36.813,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "EUの政策サークルに説明します。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.813,
+      "speechEnd": 43.362,
+      "end": 43.642,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "香港の欧州商工会議所のヨハネス・ハック会長は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.642,
+      "speechEnd": 51.794,
+      "end": 52.134,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "香港に対する理解を深めるためにEUの政策サークルと会うため"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.134,
+      "speechEnd": 56.105,
+      "end": 56.725,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "にブリュッセルを訪れると述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.725,
+      "speechEnd": 58.746,
+      "end": 59.026,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "彼は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.026,
+      "speechEnd": 66.341,
+      "end": 66.621,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "香港は中国本土と密接な経済関係を持っていますが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.621,
+      "speechEnd": 68.642,
+      "end": 68.922,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "法的、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.922,
+      "speechEnd": 71.012,
+      "end": 71.292,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "金融的、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.292,
+      "speechEnd": 78.189,
+      "end": 78.469,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "商業的な運営には依然として重要な違いがあるため、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 78.469,
+      "speechEnd": 84.809,
+      "end": 85.149,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "香港と本土の都市を同じように扱うことは"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 85.149,
+      "speechEnd": 88.702,
+      "end": 89.483,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "適切ではないと考えています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 89.483,
+      "speechEnd": 91.712,
+      "end": 91.992,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この訪問は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.992,
+      "speechEnd": 94.012,
+      "end": 94.293,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "貿易、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.293,
+      "speechEnd": 96.801,
+      "end": 97.081,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "産業政策、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.081,
+      "speechEnd": 103.56,
+      "end": 103.9,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "市場アクセスなどの問題で中国とEUの間の摩擦が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.9,
+      "speechEnd": 107.523,
+      "end": 108.143,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "高まっている時期に行われた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.143,
+      "speechEnd": 110.582,
+      "end": 110.862,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "香港にとって、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 110.862,
+      "speechEnd": 115.46,
+      "end": 115.74,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "欧州企業は重要な投資家であり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.74,
+      "speechEnd": 123.404,
+      "end": 124.024,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "プロフェッショナルサービスと金融市場の重要なプレーヤーでもあります。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 124.024,
+      "speechEnd": 126.601,
+      "end": 126.882,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "商工会議所は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 126.882,
+      "speechEnd": 136.566,
+      "end": 136.906,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "香港と欧州企業と政策立案者との間の直接的なコミュニケーションチャネルを"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 136.906,
+      "speechEnd": 140.18,
+      "end": 140.96,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "維持したいと考えています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 140.96,
+      "speechEnd": 144.932,
+      "end": 145.552,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 145.552,
+      "speechEnd": 152.658,
+      "end": 152.938,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "欧州企業の香港への投資や地域本社の決定は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 152.938,
+      "speechEnd": 155.307,
+      "end": 155.587,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "地元の雇用、"
+    },
+    {
+      "parentKey": "why",
+      "start": 155.587,
+      "speechEnd": 158.513,
+      "end": 158.793,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ビジネスサービス需要、"
+    },
+    {
+      "parentKey": "why",
+      "start": 158.793,
+      "speechEnd": 164.018,
+      "end": 164.639,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "国際資本の流れに影響を与えるだろう。"
+    },
+    {
+      "parentKey": "why",
+      "start": 164.639,
+      "speechEnd": 171.397,
+      "end": 171.737,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "香港がEUの政策陣と独立したコミュニケーションを"
+    },
+    {
+      "parentKey": "why",
+      "start": 171.737,
+      "speechEnd": 174.941,
+      "end": 175.221,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "維持できるかどうかも、"
+    },
+    {
+      "parentKey": "why",
+      "start": 175.221,
+      "speechEnd": 179.68,
+      "end": 180.541,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "長期的な経済的重要性をもつ。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 180.541,
+      "speechEnd": 182.631,
+      "end": 182.911,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 182.911,
+      "speechEnd": 187.997,
+      "end": 188.337,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ブリュッセルでの会合後に商工会議所が"
+    },
+    {
+      "parentKey": "watch",
+      "start": 188.337,
+      "speechEnd": 193.98,
+      "end": 194.26,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "具体的な政策要求を発表するかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 194.26,
+      "speechEnd": 197.465,
+      "end": 197.745,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "またEUが香港企業、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 197.745,
+      "speechEnd": 200.044,
+      "end": 200.324,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "市場アクセス、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 200.324,
+      "speechEnd": 207.709,
+      "end": 208.049,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "中国とEUの貿易措置に関する新たな政策声明を"
+    },
+    {
+      "parentKey": "watch",
+      "start": 208.049,
+      "speechEnd": 212.09,
+      "end": 212.95,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "発表するかどうかが注目される。"
+    }
+  ]
+}
