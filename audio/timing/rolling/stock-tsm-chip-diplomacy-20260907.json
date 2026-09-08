@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 29.179,
+  "duration": 39.784,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 340.0,
-  "characters": 83,
-  "charactersPerMinute": 170.7,
+  "characters": 116,
+  "charactersPerMinute": 174.9,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.18,
@@ -21,66 +21,96 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 9.99,
-      "text": "TSM：Reutersで最新の企業・市場動向情報を確認"
+      "end": 16.274,
+      "text": "TSMCの世界展開は台湾のチップ外交の中核となっており、米国の投資計画は2,650億ドルに達している"
     },
     {
       "key": "body-0",
-      "start": 9.99,
-      "end": 29.179,
-      "text": "Reutersを出典として、企業・市場動向に関する新しい検証済み情報を確認しました。詳細は出典資料の確認後に順次更新します。"
+      "start": 16.274,
+      "end": 39.784,
+      "text": "TSMC は、AI チップ需要と地政学という二重の推進の下でグローバル化を続けています。海外での生産能力、補助金、コスト構造が長期的な鍵となっている。"
     }
   ],
   "semanticUnits": [
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 2.023,
-      "end": 2.363,
-      "pause": 0.34,
-      "intendedPause": 0.34,
-      "reason": "punctuation-semantic",
-      "text": "TSM："
-    },
-    {
-      "parentKey": "title",
-      "start": 2.363,
-      "speechEnd": 9.129,
-      "end": 9.99,
-      "pause": 0.861,
-      "intendedPause": 0.86,
-      "reason": "punctuation-sentence",
-      "text": "Reutersで最新の企業・市場動向情報を確認。"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 9.99,
-      "speechEnd": 13.198,
-      "end": 13.479,
+      "speechEnd": 7.252,
+      "end": 7.532,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "Reutersを出典として、"
+      "text": "TSMCの世界展開は台湾のチップ外交の中核となっており、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.532,
+      "speechEnd": 11.089,
+      "end": 11.369,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国の投資計画は2,"
+    },
+    {
+      "parentKey": "title",
+      "start": 11.369,
+      "speechEnd": 15.413,
+      "end": 16.274,
+      "pause": 0.861,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "650億ドルに達している。"
     },
     {
       "parentKey": "body-0",
-      "start": 13.479,
-      "speechEnd": 21.5,
-      "end": 22.12,
+      "start": 16.274,
+      "speechEnd": 18.506,
+      "end": 18.786,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "TSMC は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 18.786,
+      "speechEnd": 28.13,
+      "end": 28.75,
       "pause": 0.621,
       "intendedPause": 0.62,
       "reason": "punctuation-sentence",
-      "text": "企業・市場動向に関する新しい検証済み情報を確認しました。"
+      "text": "AI チップ需要と地政学という二重の推進の下でグローバル化を続けています。"
     },
     {
       "parentKey": "body-0",
-      "start": 22.12,
-      "speechEnd": 28.398,
-      "end": 29.179,
+      "start": 28.75,
+      "speechEnd": 31.819,
+      "end": 32.099,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "海外での生産能力、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 32.099,
+      "speechEnd": 34.191,
+      "end": 34.471,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "補助金、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.471,
+      "speechEnd": 39.004,
+      "end": 39.784,
       "pause": 0.781,
       "intendedPause": 0.78,
       "reason": "punctuation-sentence",
-      "text": "詳細は出典資料の確認後に順次更新します。"
+      "text": "コスト構造が長期的な鍵となっている。"
     }
   ]
 }

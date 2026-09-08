@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 29.179,
+  "duration": 41.796,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 340.0,
-  "characters": 84,
-  "charactersPerMinute": 172.7,
+  "characters": 139,
+  "charactersPerMinute": 199.5,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.18,
@@ -21,66 +21,66 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 9.99,
-      "text": "PLTR：Reutersで最新の企業・市場動向情報を確認"
+      "end": 19.617,
+      "text": "パランティアの最高経営責任者（CEO）アレックス・カープ氏、元ウクライナ国防大臣の新たな防衛技術企業への最初の大口投資家となる"
     },
     {
       "key": "body-0",
-      "start": 9.99,
-      "end": 29.179,
-      "text": "Reutersを出典として、企業・市場動向に関する新しい検証済み情報を確認しました。詳細は出典資料の確認後に順次更新します。"
+      "start": 19.617,
+      "end": 41.796,
+      "text": "パランティアとウクライナの防衛技術エコシステムとの関係はさらにCEOの個人投資レベルにまで広がっているが、それをパランティアの新たな収入と直接見なすことはできない。"
     }
   ],
   "semanticUnits": [
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 2.023,
-      "end": 2.363,
-      "pause": 0.34,
-      "intendedPause": 0.34,
-      "reason": "punctuation-semantic",
-      "text": "PLTR："
-    },
-    {
-      "parentKey": "title",
-      "start": 2.363,
-      "speechEnd": 9.129,
-      "end": 9.99,
-      "pause": 0.861,
-      "intendedPause": 0.86,
-      "reason": "punctuation-sentence",
-      "text": "Reutersで最新の企業・市場動向情報を確認。"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 9.99,
-      "speechEnd": 13.198,
-      "end": 13.479,
+      "speechEnd": 7.251,
+      "end": 7.531,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "Reutersを出典として、"
+      "text": "パランティアの最高経営責任者（CEO）アレックス・カープ氏、"
     },
     {
-      "parentKey": "body-0",
-      "start": 13.479,
-      "speechEnd": 21.5,
-      "end": 22.12,
-      "pause": 0.621,
-      "intendedPause": 0.62,
+      "parentKey": "title",
+      "start": 7.531,
+      "speechEnd": 18.757,
+      "end": 19.617,
+      "pause": 0.861,
+      "intendedPause": 0.86,
       "reason": "punctuation-sentence",
-      "text": "企業・市場動向に関する新しい検証済み情報を確認しました。"
+      "text": "元ウクライナ国防大臣の新たな防衛技術企業への最初の大口投資家となる。"
     },
     {
       "parentKey": "body-0",
-      "start": 22.12,
-      "speechEnd": 28.398,
-      "end": 29.179,
+      "start": 19.617,
+      "speechEnd": 25.892,
+      "end": 26.233,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "パランティアとウクライナの防衛技術エコシステムとの関係は"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 26.233,
+      "speechEnd": 32.996,
+      "end": 33.276,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "さらにCEOの個人投資レベルにまで広がっているが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 33.276,
+      "speechEnd": 41.015,
+      "end": 41.796,
       "pause": 0.781,
       "intendedPause": 0.78,
       "reason": "punctuation-sentence",
-      "text": "詳細は出典資料の確認後に順次更新します。"
+      "text": "それをパランティアの新たな収入と直接見なすことはできない。"
     }
   ]
 }

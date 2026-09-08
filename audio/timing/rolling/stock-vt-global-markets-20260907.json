@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 29.179,
+  "duration": 38.583,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 340.0,
-  "characters": 82,
-  "charactersPerMinute": 168.6,
+  "characters": 118,
+  "charactersPerMinute": 183.5,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.18,
@@ -21,13 +21,13 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 9.99,
-      "text": "VT：Reutersで最新の企業・市場動向情報を確認"
+      "end": 19.396,
+      "text": "ETFのリードスルー：アジアのAIチップ株は急騰するも、97.5ドル近い原油価格と金利上昇リスクが世界のバリュエーションを抑制"
     },
     {
       "key": "body-0",
-      "start": 9.99,
-      "end": 29.179,
+      "start": 19.396,
+      "end": 38.583,
       "text": "Reutersを出典として、企業・市場動向に関する新しい検証済み情報を確認しました。詳細は出典資料の確認後に順次更新します。"
     }
   ],
@@ -35,28 +35,48 @@
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 2.023,
-      "end": 2.363,
+      "speechEnd": 2.929,
+      "end": 3.269,
       "pause": 0.34,
       "intendedPause": 0.34,
       "reason": "punctuation-semantic",
-      "text": "VT："
+      "text": "ETFのリードスルー："
     },
     {
       "parentKey": "title",
-      "start": 2.363,
-      "speechEnd": 9.129,
-      "end": 9.99,
+      "start": 3.269,
+      "speechEnd": 7.384,
+      "end": 7.664,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アジアのAIチップ株は急騰するも、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.664,
+      "speechEnd": 14.429,
+      "end": 14.769,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "97.5ドル近い原油価格と金利上昇リスクが"
+    },
+    {
+      "parentKey": "title",
+      "start": 14.769,
+      "speechEnd": 18.535,
+      "end": 19.396,
       "pause": 0.861,
       "intendedPause": 0.86,
       "reason": "punctuation-sentence",
-      "text": "Reutersで最新の企業・市場動向情報を確認。"
+      "text": "世界のバリュエーションを抑制。"
     },
     {
       "parentKey": "body-0",
-      "start": 9.99,
-      "speechEnd": 13.198,
-      "end": 13.479,
+      "start": 19.396,
+      "speechEnd": 22.604,
+      "end": 22.885,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
@@ -64,9 +84,9 @@
     },
     {
       "parentKey": "body-0",
-      "start": 13.479,
-      "speechEnd": 21.5,
-      "end": 22.12,
+      "start": 22.885,
+      "speechEnd": 30.905,
+      "end": 31.525,
       "pause": 0.621,
       "intendedPause": 0.62,
       "reason": "punctuation-sentence",
@@ -74,9 +94,9 @@
     },
     {
       "parentKey": "body-0",
-      "start": 22.12,
-      "speechEnd": 28.398,
-      "end": 29.179,
+      "start": 31.525,
+      "speechEnd": 37.802,
+      "end": 38.583,
       "pause": 0.781,
       "intendedPause": 0.78,
       "reason": "punctuation-sentence",

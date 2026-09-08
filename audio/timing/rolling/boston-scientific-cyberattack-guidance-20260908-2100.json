@@ -1,0 +1,430 @@
+{
+  "version": 3,
+  "duration": 227.788,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 719,
+  "charactersPerMinute": 189.4,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.091,
+      "text": "ボストンサイエンティフィックは、サイバー攻撃が通年の売上と収益予測を引き下げていると述べています"
+    },
+    {
+      "key": "dek",
+      "start": 14.091,
+      "end": 51.169,
+      "text": "医療機器ベンダーは、8月25日のサイバーセキュリティインシデントが世界的な事業を混乱させたと述べたが、流通とほとんどの生産は徐々に再開されているものの、第3四半期と通年の当初のパフォーマンスガイダンスを達成することは困難であると述べた。"
+    },
+    {
+      "key": "body-0",
+      "start": 51.169,
+      "end": 118.968,
+      "text": "米国の医療機器メーカーであるボストン・サイエンティフィック（ Boston Scientific ）は、8月25日に世界的な事業を混乱させたサイバーセキュリティインシデントの結果、2026年第3四半期と通年の以前に発表された売上高と調整後の収益予測を満たすことはもはやないと火曜日に述べた。このインシデントは、内部インフラストラクチャの一部に影響を与え、ある時点で製品の流通、生産、およびLATITUDEリモートモニタリングシステムの新しいアクティベーションを中断しました。"
+    },
+    {
+      "key": "body-1",
+      "start": 118.968,
+      "end": 164.9,
+      "text": "同社は以前、主流通拠点が通常以上の加工水準に戻り、世界の生産拠点の大半も生産を再開しており、製品機能を損傷する事故は確認されていないと述べていた。市場の次のステップは、バックログがクリアされる速度と、インシデントが収益、収益性、サプライチェーンに与える実際の影響の再定量化に焦点を当てることです。"
+    },
+    {
+      "key": "why",
+      "start": 164.9,
+      "end": 201.075,
+      "text": "大規模な医療機器サプライヤーは、元の通期ガイダンスへの信頼を低下させました。これは、収益期待に直接影響し、サイバーインシデントが物理的なサプライチェーンと財務リスクにすぐに変換される可能性があることを反映しています。"
+    },
+    {
+      "key": "watch",
+      "start": 201.075,
+      "end": 227.788,
+      "text": "会社が新しい第3四半期および通期の定量的ガイダンスを提供するとき、残りの生産能力の回復の進捗状況、および事故関連コストと顧客注文の遅延に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.135,
+      "end": 3.415,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ボストンサイエンティフィックは、"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.415,
+      "speechEnd": 9.268,
+      "end": 9.608,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "サイバー攻撃が通年の売上と収益予測を"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.608,
+      "speechEnd": 13.231,
+      "end": 14.091,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "引き下げていると述べています。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.091,
+      "speechEnd": 17.227,
+      "end": 17.507,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "医療機器ベンダーは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.507,
+      "speechEnd": 23.777,
+      "end": 24.117,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "8月25日のサイバーセキュリティインシデントが"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.117,
+      "speechEnd": 29.97,
+      "end": 30.25,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "世界的な事業を混乱させたと述べたが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 30.25,
+      "speechEnd": 37.287,
+      "end": 37.567,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "流通とほとんどの生産は徐々に再開されているものの、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 37.567,
+      "speechEnd": 45.161,
+      "end": 45.502,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "第3四半期と通年の当初のパフォーマンスガイダンスを"
+    },
+    {
+      "parentKey": "dek",
+      "start": 45.502,
+      "speechEnd": 50.309,
+      "end": 51.169,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "達成することは困難であると述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.169,
+      "speechEnd": 61.551,
+      "end": 61.831,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国の医療機器メーカーであるボストン・サイエンティフィック（ Boston Scientific ）は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.831,
+      "speechEnd": 72.769,
+      "end": 73.049,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "8月25日に世界的な事業を混乱させたサイバーセキュリティインシデントの結果、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.049,
+      "speechEnd": 85.312,
+      "end": 85.652,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "2026年第3四半期と通年の以前に発表された売上高と調整後の収益予測を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 85.652,
+      "speechEnd": 91.156,
+      "end": 91.776,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "満たすことはもはやないと火曜日に述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 91.776,
+      "speechEnd": 94.494,
+      "end": 94.774,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "このインシデントは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 94.774,
+      "speechEnd": 100.487,
+      "end": 100.767,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "内部インフラストラクチャの一部に影響を与え、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 100.767,
+      "speechEnd": 104.32,
+      "end": 104.6,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ある時点で製品の流通、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 104.6,
+      "speechEnd": 106.621,
+      "end": 106.901,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "生産、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 106.901,
+      "speechEnd": 118.188,
+      "end": 118.968,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "およびLATITUDEリモートモニタリングシステムの新しいアクティベーションを中断しました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.968,
+      "speechEnd": 121.337,
+      "end": 121.617,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同社は以前、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.617,
+      "speechEnd": 127.54,
+      "end": 127.82,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "主流通拠点が通常以上の加工水準に戻り、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 127.82,
+      "speechEnd": 134.439,
+      "end": 134.719,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "世界の生産拠点の大半も生産を再開しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 134.719,
+      "speechEnd": 141.895,
+      "end": 142.515,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "製品機能を損傷する事故は確認されていないと述べていた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 142.515,
+      "speechEnd": 145.581,
+      "end": 145.861,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "市場の次のステップは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 145.861,
+      "speechEnd": 149.763,
+      "end": 150.043,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "バックログがクリアされる速度と、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 150.043,
+      "speechEnd": 152.83,
+      "end": 153.11,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インシデントが収益、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 153.11,
+      "speechEnd": 155.27,
+      "end": 155.55,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "収益性、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 155.55,
+      "speechEnd": 164.119,
+      "end": 164.9,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "サプライチェーンに与える実際の影響の再定量化に焦点を当てることです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 164.9,
+      "speechEnd": 168.871,
+      "end": 169.491,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 169.491,
+      "speechEnd": 173.602,
+      "end": 173.882,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "大規模な医療機器サプライヤーは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 173.882,
+      "speechEnd": 180.222,
+      "end": 180.842,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "元の通期ガイダンスへの信頼を低下させました。"
+    },
+    {
+      "parentKey": "why",
+      "start": 180.842,
+      "speechEnd": 182.933,
+      "end": 183.213,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "これは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 183.213,
+      "speechEnd": 186.418,
+      "end": 186.698,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "収益期待に直接影響し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 186.698,
+      "speechEnd": 200.214,
+      "end": 201.075,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "サイバーインシデントが物理的なサプライチェーンと財務リスクにすぐに変換される可能性があることを反映しています。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 201.075,
+      "speechEnd": 203.165,
+      "end": 203.445,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 203.445,
+      "speechEnd": 213.617,
+      "end": 213.897,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "会社が新しい第3四半期および通期の定量的ガイダンスを提供するとき、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 213.897,
+      "speechEnd": 218.774,
+      "end": 219.054,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "残りの生産能力の回復の進捗状況、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 219.054,
+      "speechEnd": 226.928,
+      "end": 227.788,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "および事故関連コストと顧客注文の遅延に注意してください。"
+    }
+  ]
+}

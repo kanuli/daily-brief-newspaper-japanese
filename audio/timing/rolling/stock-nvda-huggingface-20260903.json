@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 29.257,
+  "duration": 44.173,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 340.0,
-  "characters": 84,
-  "charactersPerMinute": 172.3,
+  "characters": 131,
+  "charactersPerMinute": 177.9,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.18,
@@ -21,66 +21,116 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 10.063,
-      "text": "NVDA：Reutersで最新の企業・市場動向情報を確認"
+      "end": 19.963,
+      "text": "NVIDIA、オープン AI モデルのエコロジカル レイアウトを拡大するために Hugging Face を 129 億 3,000 万米ドルで買収"
     },
     {
       "key": "body-0",
-      "start": 10.063,
-      "end": 29.257,
-      "text": "Reutersを出典として、企業・市場動向に関する新しい検証済み情報を確認しました。詳細は出典資料の確認後に順次更新します。"
+      "start": 19.963,
+      "end": 44.173,
+      "text": "大規模な買収により、NVIDIA と AI 開発者のつながりは強化される可能性がありますが、ハードウェアの中立性、統合、規制が大きな実行リスクとなります。"
     }
   ],
   "semanticUnits": [
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 2.093,
-      "end": 2.434,
-      "pause": 0.341,
-      "intendedPause": 0.34,
-      "reason": "punctuation-semantic",
-      "text": "NVDA："
-    },
-    {
-      "parentKey": "title",
-      "start": 2.434,
-      "speechEnd": 9.201,
-      "end": 10.063,
-      "pause": 0.861,
-      "intendedPause": 0.86,
-      "reason": "punctuation-sentence",
-      "text": "Reutersで最新の企業・市場動向情報を確認。"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 10.063,
-      "speechEnd": 13.272,
-      "end": 13.552,
+      "speechEnd": 2.162,
+      "end": 2.442,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "Reutersを出典として、"
+      "text": "NVIDIA、"
     },
     {
-      "parentKey": "body-0",
-      "start": 13.552,
-      "speechEnd": 21.576,
-      "end": 22.197,
-      "pause": 0.621,
-      "intendedPause": 0.62,
+      "parentKey": "title",
+      "start": 2.442,
+      "speechEnd": 9.625,
+      "end": 9.965,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "オープン AI モデルのエコロジカル レイアウトを拡大するため"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.965,
+      "speechEnd": 15.614,
+      "end": 15.894,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "に Hugging Face を 129 億 3,"
+    },
+    {
+      "parentKey": "title",
+      "start": 15.894,
+      "speechEnd": 19.102,
+      "end": 19.963,
+      "pause": 0.861,
+      "intendedPause": 0.86,
       "reason": "punctuation-sentence",
-      "text": "企業・市場動向に関する新しい検証済み情報を確認しました。"
+      "text": "000 万米ドルで買収。"
     },
     {
       "parentKey": "body-0",
-      "start": 22.197,
-      "speechEnd": 28.476,
-      "end": 29.257,
+      "start": 19.963,
+      "speechEnd": 23.032,
+      "end": 23.312,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "大規模な買収により、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 23.312,
+      "speechEnd": 27.845,
+      "end": 28.185,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "NVIDIA と AI 開発者のつなが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 28.185,
+      "speechEnd": 32.788,
+      "end": 33.068,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "りは強化される可能性がありますが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 33.068,
+      "speechEnd": 36.346,
+      "end": 36.626,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ハードウェアの中立性、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.626,
+      "speechEnd": 38.649,
+      "end": 38.929,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "統合、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.929,
+      "speechEnd": 43.392,
+      "end": 44.173,
       "pause": 0.781,
       "intendedPause": 0.78,
       "reason": "punctuation-sentence",
-      "text": "詳細は出典資料の確認後に順次更新します。"
+      "text": "規制が大きな実行リスクとなります。"
     }
   ]
 }

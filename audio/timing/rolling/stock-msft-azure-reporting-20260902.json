@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 29.257,
+  "duration": 34.769,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 340.0,
-  "characters": 84,
-  "charactersPerMinute": 172.3,
+  "characters": 114,
+  "charactersPerMinute": 196.7,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.18,
@@ -21,66 +21,66 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 10.063,
-      "text": "MSFT：Reutersで最新の企業・市場動向情報を確認"
+      "end": 15.088,
+      "text": "MicrosoftはAIクラウド事業の透明性を高めるため、Azureの四半期売上高を個別に開示し始める"
     },
     {
       "key": "body-0",
-      "start": 10.063,
-      "end": 29.257,
-      "text": "Reutersを出典として、企業・市場動向に関する新しい検証済み情報を確認しました。詳細は出典資料の確認後に順次更新します。"
+      "start": 15.088,
+      "end": 34.769,
+      "text": "Azureの収益の最初の直接開示は、市場の見積もりの不確実性を軽減し、Microsoft AIとクラウドのROIの検証可能性を高めます。"
     }
   ],
   "semanticUnits": [
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 2.093,
-      "end": 2.434,
-      "pause": 0.341,
-      "intendedPause": 0.34,
-      "reason": "punctuation-semantic",
-      "text": "MSFT："
-    },
-    {
-      "parentKey": "title",
-      "start": 2.434,
-      "speechEnd": 9.201,
-      "end": 10.063,
-      "pause": 0.861,
-      "intendedPause": 0.86,
-      "reason": "punctuation-sentence",
-      "text": "Reutersで最新の企業・市場動向情報を確認。"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 10.063,
-      "speechEnd": 13.272,
-      "end": 13.552,
+      "speechEnd": 7.74,
+      "end": 8.021,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "Reutersを出典として、"
+      "text": "MicrosoftはAIクラウド事業の透明性を高めるため、"
     },
     {
-      "parentKey": "body-0",
-      "start": 13.552,
-      "speechEnd": 21.576,
-      "end": 22.197,
-      "pause": 0.621,
-      "intendedPause": 0.62,
+      "parentKey": "title",
+      "start": 8.021,
+      "speechEnd": 14.227,
+      "end": 15.088,
+      "pause": 0.861,
+      "intendedPause": 0.86,
       "reason": "punctuation-sentence",
-      "text": "企業・市場動向に関する新しい検証済み情報を確認しました。"
+      "text": "Azureの四半期売上高を個別に開示し始める。"
     },
     {
       "parentKey": "body-0",
-      "start": 22.197,
-      "speechEnd": 28.476,
-      "end": 29.257,
+      "start": 15.088,
+      "speechEnd": 20.109,
+      "end": 20.389,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Azureの収益の最初の直接開示は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 20.389,
+      "speechEnd": 25.619,
+      "end": 25.899,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "市場の見積もりの不確実性を軽減し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 25.899,
+      "speechEnd": 33.988,
+      "end": 34.769,
       "pause": 0.781,
       "intendedPause": 0.78,
       "reason": "punctuation-sentence",
-      "text": "詳細は出典資料の確認後に順次更新します。"
+      "text": "Microsoft AIとクラウドのROIの検証可能性を高めます。"
     }
   ]
 }
