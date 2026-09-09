@@ -1,88 +1,39 @@
 {
-  "mode": "LIVE_INCREMENTAL",
+  "mode": "DAILY_BASELINE",
   "date": "2026-09-09",
   "editorialStandardVersion": 3,
   "contentVersion": 3,
-  "lastUpdated": "2026-09-09T07:00:00+08:00",
-  "lastUpdatedLabel": "2026年9月9日 07:00 HKT",
-  "windowLabel": "07:00 HKT 速報版",
+  "lastUpdated": "2026-09-09T08:00:00+08:00",
+  "lastUpdatedLabel": "2026年9月9日 08:00 HKT",
+  "windowLabel": "08:00 HKT 速報版",
   "nextUpdateLabel": "次回発行予定 09:00 HKT",
-  "newCount": 1,
+  "newCount": 0,
   "updatedCount": 0,
   "developingCount": 0,
-  "topFive": [
-    "meta-muse-ai-agent-20260909-0700"
-  ],
+  "topFive": [],
   "coverage": {
-    "status": "INCOMPLETE",
+    "status": "DAILY_BASELINE",
     "deskLatestStoryCounts": {
-      "world": 0,
-      "asia": 0,
-      "hong-kong": 0,
-      "japan": 0,
-      "market-economy": 0,
-      "ai-tech": 0,
-      "manga-anime": 0,
-      "manchester-united": 0,
-      "football": 0
+      "world": 135,
+      "asia": 142,
+      "hong-kong": 47,
+      "japan": 129,
+      "market-economy": 63,
+      "ai-tech": 71,
+      "manga-anime": 23,
+      "manchester-united": 24,
+      "football": 84
     },
-    "deskLatestDepthMet": false,
+    "deskLatestDepthMet": true,
     "routingGateMet": true,
     "sourceGateMet": true,
     "copyGateMet": true,
     "geographicGateMet": true,
     "footballGateMet": true,
-    "publishingGateMet": false,
-    "japanCountVerified": 0
+    "publishingGateMet": true,
+    "japanCountVerified": 129
   },
-  "items": [
-    {
-      "id": "meta-muse-ai-agent-20260909-0700",
-      "desk": "ai-tech",
-      "deskSlugs": [
-        "ai-tech"
-      ],
-      "section": "AIテクノロジー|人工知能",
-      "sectionLabel": "AI科技｜人工智能",
-      "status": "NEW",
-      "title": "Metaは、アプリ間で電子メール、乗車、支払いを処理するためのMuseパーソナルAIエージェントを開始します",
-      "dek": "新しいシステムは、別のアプリとWhatsAppを介して米国で最初に発売され、Metaは権限制御を追加したと述べた。テスト中のプライバシーとセキュリティのパフォーマンスは依然として懸念されている。",
-      "summary": "Metaは、Museと呼ばれるパーソナルAIエージェントを立ち上げました。これにより、ユーザーは電子メールの送信、乗車の予約、支払いなど、さまざまなアプリ間でタスクを承認および実行できます。このシステムは当初米国で発売されたが、同社は今後、関連機能をスマートグラスにも拡張する予定である。",
-      "body": "Metaは、ユーザーが承認後にメールやカレンダーなどのサービスに接続できるパーソナルAIエージェントMuseを立ち上げ、AIはメールの送信、旅行の手配、支払いなどのタスクを処理します。このシステムは現在、スタンドアロンのMuseアプリとWhatsAppを介して米国で最初に提供されています。各Museインスタンスはスタンドアロンの仮想環境で動作し、ユーザーはサービスへの許可されたアクセスを取り消すことができます。\n\nこのタイプのAIエージェントは、ユーザーに代わって直接アクションを実行でき、セキュリティ要件は通常のチャットボットよりも高くなります。ロイター通信は、内部テストが切断、意図しないアップロード、個人データの暴露につながったと報告しています。Metaは、製品がセキュリティとプライバシーの基準を満たしていると述べていますが、システムがまだうまくいかない可能性があることを認めています。",
-      "context": "大手テック企業は、質問に答えることから、外部サービスを運用するプロキシモデルにジェネレーティブAIを移行させています。Museの発売により、MetaのAI機能が同社の通信プラットフォームと将来のウェアラブルにさらにつながります。",
-      "why": "AIエージェントがユーザーへの支払い、メッセージの送信、または個人データの読み取りが可能になると、誤った操作と権限管理の結果が大幅に拡大されます。Museの実際のセキュリティパフォーマンスは、消費者による自律型AIツールの受け入れに影響を与えます。",
-      "watchNext": "Metaは、より完全な権限とセキュリティ管理、Museが米国外で利用可能になる時期、および実際の使用後に新しいプライバシーまたは誤用の問題が発生するかどうかを開示することに注意してください。",
-      "sourceName": "Reuters",
-      "sourceUrl": "https://www.reuters.com/business/meta-launches-ai-agent-that-can-access-other-apps-send-emails-make-payments-2026-09-08/",
-      "timeLabel": "9月9日07:00 HKT認証",
-      "sources": [
-        {
-          "name": "Reuters",
-          "url": "https://www.reuters.com/business/meta-launches-ai-agent-that-can-access-other-apps-send-emails-make-payments-2026-09-08/"
-        },
-        {
-          "name": "Axios",
-          "url": "https://www.axios.com/2026/09/08/meta-debuts-muse-personal-ai-agent"
-        }
-      ],
-      "sourceItemFingerprint": "24cc18168c06ec5b64842e6368e1d019352baf082f34bc43f8738ee4cd852254",
-      "audio": "audio/live/meta-muse-ai-agent-20260909-0700.mp3",
-      "timing": "audio/timing/live/meta-muse-ai-agent-20260909-0700.json",
-      "furigana": {
-        "section": "AIテクノロジー|<ruby>人工知能<rt>じんこうちのう</rt></ruby>",
-        "title": "Metaは、アプリ<ruby>間<rt>かん</rt></ruby>で<ruby>電子<rt>でんし</rt></ruby>メール、<ruby>乗車<rt>じょうしゃ</rt></ruby>、<ruby>支払<rt>しはら</rt></ruby>いを<ruby>処理<rt>しょり</rt></ruby>するためのMuseパーソナルAIエージェントを<ruby>開始<rt>かいし</rt></ruby>します",
-        "dek": "<ruby>新<rt>あたら</rt></ruby>しいシステムは、<ruby>別<rt>べつ</rt></ruby>のアプリとWhatsAppを<ruby>介<rt>かい</rt></ruby>して<ruby>米国<rt>べいこく</rt></ruby>で<ruby>最初<rt>さいしょ</rt></ruby>に<ruby>発売<rt>はつばい</rt></ruby>され、Metaは<ruby>権限<rt>けんげん</rt></ruby><ruby>制御<rt>せいぎょ</rt></ruby>を<ruby>追加<rt>ついか</rt></ruby>したと<ruby>述<rt>の</rt></ruby>べた。テスト<ruby>中<rt>ちゅう</rt></ruby>のプライバシーとセキュリティのパフォーマンスは<ruby>依然<rt>いぜん</rt></ruby>として<ruby>懸念<rt>けねん</rt></ruby>されている。",
-        "summary": "Metaは、Museと<ruby>呼<rt>よ</rt></ruby>ばれるパーソナルAIエージェントを<ruby>立ち上<rt>たちあ</rt></ruby>げました。これにより、ユーザーは<ruby>電子<rt>でんし</rt></ruby>メールの<ruby>送信<rt>そうしん</rt></ruby>、<ruby>乗車<rt>じょうしゃ</rt></ruby>の<ruby>予約<rt>よやく</rt></ruby>、<ruby>支払<rt>しはら</rt></ruby>いなど、さまざまなアプリ<ruby>間<rt>かん</rt></ruby>でタスクを<ruby>承認<rt>しょうにん</rt></ruby>および<ruby>実行<rt>じっこう</rt></ruby>できます。このシステムは<ruby>当初<rt>とうしょ</rt></ruby><ruby>米国<rt>べいこく</rt></ruby>で<ruby>発売<rt>はつばい</rt></ruby>されたが、<ruby>同社<rt>どうしゃ</rt></ruby>は<ruby>今後<rt>こんご</rt></ruby>、<ruby>関連<rt>かんれん</rt></ruby><ruby>機能<rt>きのう</rt></ruby>をスマートグラスにも<ruby>拡張<rt>かくちょう</rt></ruby>する<ruby>予定<rt>よてい</rt></ruby>である。",
-        "context": "<ruby>大手<rt>おおて</rt></ruby>テック<ruby>企業<rt>きぎょう</rt></ruby>は、<ruby>質問<rt>しつもん</rt></ruby>に<ruby>答<rt>こた</rt></ruby>えることから、<ruby>外部<rt>がいぶ</rt></ruby>サービスを<ruby>運用<rt>うんよう</rt></ruby>するプロキシモデルにジェネレーティブAIを<ruby>移行<rt>いこう</rt></ruby>させています。Museの<ruby>発売<rt>はつばい</rt></ruby>により、MetaのAI<ruby>機能<rt>きのう</rt></ruby>が<ruby>同社<rt>どうしゃ</rt></ruby>の<ruby>通信<rt>つうしん</rt></ruby>プラットフォームと<ruby>将来<rt>しょうらい</rt></ruby>のウェアラブルにさらにつながります。",
-        "why": "AIエージェントがユーザーへの<ruby>支払<rt>しはら</rt></ruby>い、メッセージの<ruby>送信<rt>そうしん</rt></ruby>、または<ruby>個人<rt>こじん</rt></ruby>データの<ruby>読み取<rt>よみと</rt></ruby>りが<ruby>可能<rt>かのう</rt></ruby>になると、<ruby>誤<rt>あやま</rt></ruby>った<ruby>操作<rt>そうさ</rt></ruby>と<ruby>権限<rt>けんげん</rt></ruby><ruby>管理<rt>かんり</rt></ruby>の<ruby>結果<rt>けっか</rt></ruby>が<ruby>大幅<rt>おおはば</rt></ruby>に<ruby>拡大<rt>かくだい</rt></ruby>されます。Museの<ruby>実際<rt>じっさい</rt></ruby>のセキュリティパフォーマンスは、<ruby>消費者<rt>しょうひしゃ</rt></ruby>による<ruby>自律<rt>じりつ</rt></ruby><ruby>型<rt>がた</rt></ruby>AIツールの<ruby>受け入<rt>うけい</rt></ruby>れに<ruby>影響<rt>えいきょう</rt></ruby>を<ruby>与<rt>あた</rt></ruby>えます。",
-        "watchNext": "Metaは、より<ruby>完全<rt>かんぜん</rt></ruby>な<ruby>権限<rt>けんげん</rt></ruby>とセキュリティ<ruby>管理<rt>かんり</rt></ruby>、Museが<ruby>米国外<rt>べいこくがい</rt></ruby>で<ruby>利用可能<rt>りようかのう</rt></ruby>になる<ruby>時期<rt>じき</rt></ruby>、および<ruby>実際<rt>じっさい</rt></ruby>の<ruby>使用後<rt>しようご</rt></ruby>に<ruby>新<rt>あたら</rt></ruby>しいプライバシーまたは<ruby>誤用<rt>ごよう</rt></ruby>の<ruby>問題<rt>もんだい</rt></ruby>が<ruby>発生<rt>はっせい</rt></ruby>するかどうかを<ruby>開示<rt>かいじ</rt></ruby>することに<ruby>注意<rt>ちゅうい</rt></ruby>してください。",
-        "bodyParagraphs": [
-          "Metaは、ユーザーが<ruby>承認後<rt>しょうにんご</rt></ruby>にメールやカレンダーなどのサービスに<ruby>接続<rt>せつぞく</rt></ruby>できるパーソナルAIエージェントMuseを<ruby>立ち上<rt>たちあ</rt></ruby>げ、AIはメールの<ruby>送信<rt>そうしん</rt></ruby>、<ruby>旅行<rt>りょこう</rt></ruby>の<ruby>手配<rt>てはい</rt></ruby>、<ruby>支払<rt>しはら</rt></ruby>いなどのタスクを<ruby>処理<rt>しょり</rt></ruby>します。このシステムは<ruby>現在<rt>げんざい</rt></ruby>、スタンドアロンのMuseアプリとWhatsAppを<ruby>介<rt>かい</rt></ruby>して<ruby>米国<rt>べいこく</rt></ruby>で<ruby>最初<rt>さいしょ</rt></ruby>に<ruby>提供<rt>ていきょう</rt></ruby>されています。<ruby>各<rt>かく</rt></ruby>Museインスタンスはスタンドアロンの<ruby>仮想<rt>かそう</rt></ruby><ruby>環境<rt>かんきょう</rt></ruby>で<ruby>動作<rt>どうさ</rt></ruby>し、ユーザーはサービスへの<ruby>許可<rt>きょか</rt></ruby>されたアクセスを<ruby>取り消<rt>とりけ</rt></ruby>すことができます。",
-          "このタイプのAIエージェントは、ユーザーに<ruby>代<rt>か</rt></ruby>わって<ruby>直接<rt>ちょくせつ</rt></ruby>アクションを<ruby>実行<rt>じっこう</rt></ruby>でき、セキュリティ<ruby>要件<rt>ようけん</rt></ruby>は<ruby>通常<rt>つうじょう</rt></ruby>のチャットボットよりも<ruby>高<rt>たか</rt></ruby>くなります。ロイター<ruby>通信<rt>つうしん</rt></ruby>は、<ruby>内部<rt>ないぶ</rt></ruby>テストが<ruby>切断<rt>せつだん</rt></ruby>、<ruby>意図<rt>いと</rt></ruby>しないアップロード、<ruby>個人<rt>こじん</rt></ruby>データの<ruby>暴露<rt>ばくろ</rt></ruby>につながったと<ruby>報告<rt>ほうこく</rt></ruby>しています。Metaは、<ruby>製品<rt>せいひん</rt></ruby>がセキュリティとプライバシーの<ruby>基準<rt>きじゅん</rt></ruby>を<ruby>満<rt>み</rt></ruby>たしていると<ruby>述<rt>の</rt></ruby>べていますが、システムがまだうまくいかない<ruby>可能性<rt>かのうせい</rt></ruby>があることを<ruby>認<rt>みと</rt></ruby>めています。"
-        ]
-      }
-    }
-  ],
+  "items": [],
   "translationDegraded": false,
   "translationDeferredCount": 0,
   "translationDeferredIds": [],
@@ -90,7 +41,7 @@
   "language": "ja",
   "translationSource": "kanuli/daily-brief-newspaper",
   "sourceFile": "live.json",
-  "sourceFingerprint": "9d45c6ef95b808ee4d23baf6b9a3b17a364a6ed2ea6b592bc5096d058dc7ab82",
+  "sourceFingerprint": "9766bbe4fc2dec006fca6b0563c46c77ec6b675bf1b4d11d3282344ecaad8c2d",
   "translationSchemaVersion": "ja-furigana-v3-context-sensitive",
   "furiganaEngineVersion": "sudachi-core-mode-c+context",
   "newsroomQualityVersion": 1
