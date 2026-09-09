@@ -1,0 +1,520 @@
+{
+  "version": 3,
+  "duration": 203.102,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 655,
+  "charactersPerMinute": 193.5,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.868,
+      "text": "MetaがパーソナルAIエージェントMuseを立ち上げ、アプリ間でメール、スケジュール、支払いを行う"
+    },
+    {
+      "key": "dek",
+      "start": 14.868,
+      "end": 43.308,
+      "text": "最初のフェーズでは、MuseはスタンドアロンアプリとWhatsAppを介して米国で立ち上げられ、ライセンスの下で外部サービスを運営しました。クロスアプリの権限、プライバシー、セキュリティが採用の鍵でした。"
+    },
+    {
+      "key": "body-0",
+      "start": 43.308,
+      "end": 98.639,
+      "text": "Metaは火曜日に個人的なAIエージェントであるMuseを立ち上げた。Museは、ユーザーがブラウザを開いたり、フォームに記入したり、メールを送信したり、旅行をスケジュールしたり、ユーザーに代わって支払いを実行したりするための電子メール、カレンダー、ショッピング、支払い、およびその他のサービスをユーザーの承認を得た上で接続します。最初のフェーズは米国で利用可能です。"
+    },
+    {
+      "key": "body-1",
+      "start": 98.639,
+      "end": 151.372,
+      "text": "ユーザーに代わって直接行動できるAIエージェントは、平均的なチャットボットよりも安全バーを高く押します。ロイター通信は、内部テストがデータ処理とセキュリティ上の懸念を引き起こしたと報じている。Metaによると、システムは別個の安全な仮想環境と権限制御を使用しているが、実際のインシデント率、誤操作、およびサードパーティの統合には依然として市場検証が必要だという。"
+    },
+    {
+      "key": "why",
+      "start": 151.372,
+      "end": 180.498,
+      "text": "高周波通信ポータルがAIエージェントを確実にホストできる場合、Metaは製品の粘着性を向上させますが、プライバシーや支払いエラーは規制リスクを増幅させる可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 180.498,
+      "end": 203.102,
+      "text": "Museの米国での導入率、セキュリティインシデント、サードパーティのアプリ統合、請求モデル、AIメガネへの拡大のタイムラインに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 5.852,
+      "end": 6.132,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "MetaがパーソナルAIエージェントMuseを立ち上げ、"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.132,
+      "speechEnd": 8.919,
+      "end": 9.199,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アプリ間でメール、"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.199,
+      "speechEnd": 11.429,
+      "end": 11.709,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "スケジュール、"
+    },
+    {
+      "parentKey": "title",
+      "start": 11.709,
+      "speechEnd": 14.008,
+      "end": 14.868,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "支払いを行う。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.868,
+      "speechEnd": 17.934,
+      "end": 18.214,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "最初のフェーズでは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.214,
+      "speechEnd": 23.23,
+      "end": 23.57,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "MuseはスタンドアロンアプリとWhatsAppを"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.57,
+      "speechEnd": 27.193,
+      "end": 27.473,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "介して米国で立ち上げられ、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.473,
+      "speechEnd": 32.698,
+      "end": 33.318,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ライセンスの下で外部サービスを運営しました。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 33.318,
+      "speechEnd": 36.036,
+      "end": 36.316,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "クロスアプリの権限、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 36.316,
+      "speechEnd": 38.615,
+      "end": 38.895,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "プライバシー、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 38.895,
+      "speechEnd": 42.448,
+      "end": 43.308,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "セキュリティが採用の鍵でした。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.308,
+      "speechEnd": 51.669,
+      "end": 52.289,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "Metaは火曜日に個人的なAIエージェントであるMuseを立ち上げた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.289,
+      "speechEnd": 54.379,
+      "end": 54.659,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Museは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.659,
+      "speechEnd": 58.352,
+      "end": 58.632,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ユーザーがブラウザを開いたり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.632,
+      "speechEnd": 61.488,
+      "end": 61.768,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "フォームに記入したり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.768,
+      "speechEnd": 64.625,
+      "end": 64.905,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "メールを送信したり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.905,
+      "speechEnd": 68.179,
+      "end": 68.459,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "旅行をスケジュールしたり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.459,
+      "speechEnd": 76.123,
+      "end": 76.403,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ユーザーに代わって支払いを実行したりするための電子メール、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.403,
+      "speechEnd": 78.633,
+      "end": 78.913,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "カレンダー、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 78.913,
+      "speechEnd": 81.142,
+      "end": 81.422,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ショッピング、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 81.422,
+      "speechEnd": 83.443,
+      "end": 83.723,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "支払い、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 83.723,
+      "speechEnd": 92.292,
+      "end": 92.913,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "およびその他のサービスをユーザーの承認を得た上で接続します。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 92.913,
+      "speechEnd": 97.859,
+      "end": 98.639,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "最初のフェーズは米国で利用可能です。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 98.639,
+      "speechEnd": 105.188,
+      "end": 105.468,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ユーザーに代わって直接行動できるAIエージェントは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 105.468,
+      "speechEnd": 111.669,
+      "end": 112.289,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "平均的なチャットボットよりも安全バーを高く押します。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.289,
+      "speechEnd": 114.797,
+      "end": 115.078,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.078,
+      "speechEnd": 120.721,
+      "end": 121.061,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "内部テストがデータ処理とセキュリティ上の懸念を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.061,
+      "speechEnd": 124.475,
+      "end": 125.095,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "引き起こしたと報じている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 125.095,
+      "speechEnd": 127.603,
+      "end": 127.883,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Metaによると、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 127.883,
+      "speechEnd": 135.477,
+      "end": 135.757,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "システムは別個の安全な仮想環境と権限制御を使用しているが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 135.757,
+      "speechEnd": 138.684,
+      "end": 138.964,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "実際のインシデント率、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 138.964,
+      "speechEnd": 141.054,
+      "end": 141.334,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "誤操作、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 141.334,
+      "speechEnd": 145.653,
+      "end": 145.993,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "およびサードパーティの統合には"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 145.993,
+      "speechEnd": 150.592,
+      "end": 151.372,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "依然として市場検証が必要だという。"
+    },
+    {
+      "parentKey": "why",
+      "start": 151.372,
+      "speechEnd": 155.343,
+      "end": 155.963,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 155.963,
+      "speechEnd": 160.91,
+      "end": 161.25,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "高周波通信ポータルがAIエージェントを"
+    },
+    {
+      "parentKey": "why",
+      "start": 161.25,
+      "speechEnd": 164.524,
+      "end": 164.805,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "確実にホストできる場合、"
+    },
+    {
+      "parentKey": "why",
+      "start": 164.805,
+      "speechEnd": 170.448,
+      "end": 170.728,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Metaは製品の粘着性を向上させますが、"
+    },
+    {
+      "parentKey": "why",
+      "start": 170.728,
+      "speechEnd": 174.072,
+      "end": 174.412,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "プライバシーや支払いエラーは"
+    },
+    {
+      "parentKey": "why",
+      "start": 174.412,
+      "speechEnd": 179.638,
+      "end": 180.498,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "規制リスクを増幅させる可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 180.498,
+      "speechEnd": 182.588,
+      "end": 182.868,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 182.868,
+      "speechEnd": 186.421,
+      "end": 186.701,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Museの米国での導入率、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 186.701,
+      "speechEnd": 189.558,
+      "end": 189.838,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "セキュリティインシデント、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 189.838,
+      "speechEnd": 193.252,
+      "end": 193.532,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "サードパーティのアプリ統合、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 193.532,
+      "speechEnd": 195.9,
+      "end": 196.181,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "請求モデル、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 196.181,
+      "speechEnd": 202.242,
+      "end": 203.102,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "AIメガネへの拡大のタイムラインに注目してください。"
+    }
+  ]
+}

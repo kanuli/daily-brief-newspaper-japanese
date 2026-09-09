@@ -1,0 +1,370 @@
+{
+  "version": 3,
+  "duration": 175.882,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 580,
+  "charactersPerMinute": 197.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.51,
+      "text": "マンチェスター・ユナイテッドがサバ・アルト・フォードと対戦する前に、欧州リーグ前のガイドラインを更新"
+    },
+    {
+      "key": "dek",
+      "start": 14.51,
+      "end": 45.18,
+      "text": "マンチェスター・ユナイテッドの公式ウェブサイトは次の公式戦としてサバ州との試合を掲載し、観戦とフォローアップのガイドを発行した。エバートンとの2対2の試合の後、チームは試合に備えるためにヨーロッパリーグに切り替えた。"
+    },
+    {
+      "key": "body-0",
+      "start": 45.18,
+      "end": 90.126,
+      "text": "マンチェスター・ユナイテッドの公式ウェブサイトには、9月9日の次の公式トーナメントとしてサバ州とのホームマッチが掲載されており、試合前のガイド「ユナイテッド対サバ州」を公開しています。公式ウェブサイトのスケジュールによると、9月6日にチームが2試合とエバートンでプレーした後、次のストップはアルトフォードのヨーロッパリーグの試合です。"
+    },
+    {
+      "key": "body-1",
+      "start": 90.126,
+      "end": 131.462,
+      "text": "このアップデートは、マンチェスター・ユナイテッドの次の公式トーナメント、ファンの視聴手配、試合当日の準備に直接関連しています。コンテンツはクラブ自体のサッカーの試合情報であるため、記事はマンチェスター・ユナイテッドとサッカーにのみ属し、世界、アジア、日本、または金融には属しません。"
+    },
+    {
+      "key": "why",
+      "start": 131.462,
+      "end": 156.007,
+      "text": "クラブ関係者は依然としてサバ州を次の公式戦として挙げているが、これはマンチェスター・ユナイテッドにとって現時点で検証可能なリーグ前の情報である。"
+    },
+    {
+      "key": "watch",
+      "start": 156.007,
+      "end": 175.882,
+      "text": "クーデターは新しい教育を 忘れてはなりません スペースを数えてみて下さい ゼロです 私は今日アメリカを 脅しに使っています"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.345,
+      "end": 3.685,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "マンチェスター・ユナイテッドが"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.685,
+      "speechEnd": 8.492,
+      "end": 8.772,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "サバ・アルト・フォードと対戦する前に、"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.772,
+      "speechEnd": 13.65,
+      "end": 14.51,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "欧州リーグ前のガイドラインを更新。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.51,
+      "speechEnd": 19.597,
+      "end": 19.937,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "マンチェスター・ユナイテッドの公式ウェブサイトは"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.937,
+      "speechEnd": 26.417,
+      "end": 26.697,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "次の公式戦としてサバ州との試合を掲載し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.697,
+      "speechEnd": 31.992,
+      "end": 32.612,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "観戦とフォローアップのガイドを発行した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.612,
+      "speechEnd": 37.281,
+      "end": 37.561,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "エバートンとの2対2の試合の後、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 37.561,
+      "speechEnd": 44.32,
+      "end": 45.18,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "チームは試合に備えるためにヨーロッパリーグに切り替えた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.18,
+      "speechEnd": 50.684,
+      "end": 50.964,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マンチェスター・ユナイテッドの公式ウェブサイトには、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.964,
+      "speechEnd": 56.678,
+      "end": 57.018,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "9月9日の次の公式トーナメントとして"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.018,
+      "speechEnd": 61.965,
+      "end": 62.245,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "サバ州とのホームマッチが掲載されており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.245,
+      "speechEnd": 69.422,
+      "end": 70.042,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "試合前のガイド「ユナイテッド対サバ州」を公開しています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.042,
+      "speechEnd": 74.571,
+      "end": 74.851,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "公式ウェブサイトのスケジュールによると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.851,
+      "speechEnd": 82.446,
+      "end": 82.726,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "9月6日にチームが2試合とエバートンでプレーした後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 82.726,
+      "speechEnd": 89.346,
+      "end": 90.126,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "次のストップはアルトフォードのヨーロッパリーグの試合です。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.126,
+      "speechEnd": 92.913,
+      "end": 93.193,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "このアップデートは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.193,
+      "speechEnd": 98.906,
+      "end": 99.187,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マンチェスター・ユナイテッドの次の公式トーナメント、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.187,
+      "speechEnd": 101.625,
+      "end": 101.905,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ファンの視聴手配、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.905,
+      "speechEnd": 106.574,
+      "end": 107.194,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "試合当日の準備に直接関連しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.194,
+      "speechEnd": 113.604,
+      "end": 113.884,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "コンテンツはクラブ自体のサッカーの試合情報であるため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 113.884,
+      "speechEnd": 119.877,
+      "end": 120.157,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "記事はマンチェスター・ユナイテッドとサッカーにのみ属し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.157,
+      "speechEnd": 122.177,
+      "end": 122.457,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "世界、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 122.457,
+      "speechEnd": 124.548,
+      "end": 124.828,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アジア、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 124.828,
+      "speechEnd": 126.848,
+      "end": 127.128,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 127.128,
+      "speechEnd": 130.682,
+      "end": 131.462,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "または金融には属しません。"
+    },
+    {
+      "parentKey": "why",
+      "start": 131.462,
+      "speechEnd": 135.434,
+      "end": 136.054,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 136.054,
+      "speechEnd": 144.764,
+      "end": 145.044,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "クラブ関係者は依然としてサバ州を次の公式戦として挙げているが、"
+    },
+    {
+      "parentKey": "why",
+      "start": 145.044,
+      "speechEnd": 155.147,
+      "end": 156.007,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "これはマンチェスター・ユナイテッドにとって現時点で検証可能なリーグ前の情報である。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 156.007,
+      "speechEnd": 158.098,
+      "end": 158.378,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 158.378,
+      "speechEnd": 163.046,
+      "end": 163.386,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "クーデターは新しい教育を 忘れては"
+    },
+    {
+      "parentKey": "watch",
+      "start": 163.386,
+      "speechEnd": 175.022,
+      "end": 175.882,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "continuation",
+      "text": "なりません スペースを数えてみて下さい ゼロです 私は今日アメリカを 脅しに使っています"
+    }
+  ]
+}

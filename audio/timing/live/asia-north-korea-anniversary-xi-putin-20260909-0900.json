@@ -1,0 +1,380 @@
+{
+  "version": 3,
+  "duration": 198.034,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 544,
+  "charactersPerMinute": 164.8,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 13.333,
+      "text": "北朝鮮建国78周年に習近平とプーチンがそれぞれ祝意を送り、戦略的関係を強調"
+    },
+    {
+      "key": "dek",
+      "start": 13.333,
+      "end": 40.064,
+      "text": "中国とロシアの首脳は北朝鮮建国記念日の祝賀メッセージの中で、北朝鮮との協力を深めることを改めて表明しており、この地域の外交・安全保障関係は引き続き注目を集めている。"
+    },
+    {
+      "key": "body-0",
+      "start": 40.064,
+      "end": 91.437,
+      "text": "北朝鮮は水曜日に78周年を迎えた。KCNAは、中国の習近平国家主席が中国と朝鮮民主主義人民共和国の関係の戦略的指導を強化し、両国の発展を促進する用意があると祝辞で述べたと報告し、ロシアのウラジミール・プーチン大統領は、包括的な戦略的パートナーシップをさらに強化するために金正恩との最も緊密な協力を維持すると述べた。"
+    },
+    {
+      "key": "body-1",
+      "start": 91.437,
+      "end": 133.66,
+      "text": "同日、北朝鮮労働党の公式新聞であるLabor Newsの一面に2通の祝電が掲載された。北朝鮮も近年、中国やロシアとの政治・安全保障関係を深めており、三国間の交流は北東アジアの安全保障情勢や朝鮮半島の外交の方向性に直接的な影響を及ぼしている。"
+    },
+    {
+      "key": "why",
+      "start": 133.66,
+      "end": 167.135,
+      "text": "同日、中国とロシアの指導者は、北東アジアの戦略的状況における平壌の立場を反映して、北朝鮮との関係を公に再確認し、その後の米日韓間の安全保障調整にも影響を与える可能性がある。"
+    },
+    {
+      "key": "watch",
+      "start": 167.135,
+      "end": 198.034,
+      "text": "北朝鮮のアニバーサリーイベントでの新たな外交、軍事、経済の発表や、その後の中国、ロシア、北朝鮮と米国、日本、韓国とのハイレベルな交流にご注目ください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 9.476,
+      "end": 9.706,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "北朝鮮建国78周年に習近平とプーチンがそれぞれ祝意を送り、"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.706,
+      "speechEnd": 12.633,
+      "end": 13.333,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "戦略的関係を強調。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.333,
+      "speechEnd": 23.227,
+      "end": 23.457,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中国とロシアの首脳は北朝鮮建国記念日の祝賀メッセージの中で、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.457,
+      "speechEnd": 31.121,
+      "end": 31.351,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "北朝鮮との協力を深めることを改めて表明しており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 31.351,
+      "speechEnd": 39.364,
+      "end": 40.064,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "この地域の外交・安全保障関係は引き続き注目を集めている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.064,
+      "speechEnd": 46.196,
+      "end": 46.696,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "北朝鮮は水曜日に78周年を迎えた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.696,
+      "speechEnd": 48.856,
+      "end": 49.086,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "KCNAは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.086,
+      "speechEnd": 63.23,
+      "end": 63.46,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中国の習近平国家主席が中国と朝鮮民主主義人民共和国の関係の戦略的指導を強化し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.46,
+      "speechEnd": 71.613,
+      "end": 71.843,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "両国の発展を促進する用意があると祝辞で述べたと報告し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.843,
+      "speechEnd": 76.79,
+      "end": 77.02,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロシアのウラジミール・プーチン大統領は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 77.02,
+      "speechEnd": 83.709,
+      "end": 83.989,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "包括的な戦略的パートナーシップをさらに強化するため"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 83.989,
+      "speechEnd": 90.817,
+      "end": 91.437,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "に金正恩との最も緊密な協力を維持すると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.437,
+      "speechEnd": 93.528,
+      "end": 93.758,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同日、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.758,
+      "speechEnd": 105.324,
+      "end": 105.824,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "北朝鮮労働党の公式新聞であるLabor Newsの一面に2通の祝電が掲載された。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 105.824,
+      "speechEnd": 108.681,
+      "end": 108.911,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "北朝鮮も近年、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.911,
+      "speechEnd": 117.063,
+      "end": 117.293,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中国やロシアとの政治・安全保障関係を深めており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.293,
+      "speechEnd": 133.04,
+      "end": 133.66,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "三国間の交流は北東アジアの安全保障情勢や朝鮮半島の外交の方向性に直接的な影響を及ぼしている。"
+    },
+    {
+      "parentKey": "why",
+      "start": 133.66,
+      "speechEnd": 137.632,
+      "end": 138.132,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 138.132,
+      "speechEnd": 140.222,
+      "end": 140.452,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同日、"
+    },
+    {
+      "parentKey": "why",
+      "start": 140.452,
+      "speechEnd": 144.215,
+      "end": 144.445,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中国とロシアの指導者は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 144.445,
+      "speechEnd": 151.97,
+      "end": 152.2,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "北東アジアの戦略的状況における平壌の立場を反映して、"
+    },
+    {
+      "parentKey": "why",
+      "start": 152.2,
+      "speechEnd": 156.799,
+      "end": 157.029,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "北朝鮮との関係を公に再確認し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 157.029,
+      "speechEnd": 166.435,
+      "end": 167.135,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "その後の米日韓間の安全保障調整にも影響を与える可能性がある。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 167.135,
+      "speechEnd": 169.226,
+      "end": 169.456,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 169.456,
+      "speechEnd": 175.517,
+      "end": 175.748,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "北朝鮮のアニバーサリーイベントでの新たな外交、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 175.748,
+      "speechEnd": 177.768,
+      "end": 177.998,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "軍事、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 177.998,
+      "speechEnd": 180.646,
+      "end": 180.876,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "経済の発表や、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 180.876,
+      "speechEnd": 183.663,
+      "end": 183.893,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "その後の中国、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 183.893,
+      "speechEnd": 185.914,
+      "end": 186.144,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロシア、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 186.144,
+      "speechEnd": 188.722,
+      "end": 188.952,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "北朝鮮と米国、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 188.952,
+      "speechEnd": 190.973,
+      "end": 191.203,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 191.203,
+      "speechEnd": 197.334,
+      "end": 198.034,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "韓国とのハイレベルな交流にご注目ください。"
+    }
+  ]
+}

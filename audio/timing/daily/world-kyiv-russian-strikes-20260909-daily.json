@@ -1,0 +1,390 @@
+{
+  "version": 3,
+  "duration": 172.852,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 489,
+  "charactersPerMinute": 169.7,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 21.288,
+      "text": "その後、ロシア軍は弾道ミサイルでキエフを攻撃し、米国特使は少なくとも5人の死者と約30人の負傷者を首都に残した。"
+    },
+    {
+      "key": "dek",
+      "start": 21.288,
+      "end": 45.076,
+      "text": "ウクライナ当局者は、米国特使がキエフを去った後、ロシア軍が大規模な攻撃を再開し、冬の前に家屋や民間施設に損傷を与え、防空圧力を高めたと述べた。"
+    },
+    {
+      "key": "body-0",
+      "start": 45.076,
+      "end": 86.049,
+      "text": "ロシアは火曜日、ウクライナの首都キエフを弾道ミサイルやその他の武器で再び攻撃した。ウクライナ側は、少なくとも5人が死亡し、30人近くが負傷し、多くの家屋や民間施設が被害を受けたと述べた。攻撃は、米国特使の訪問が終了した直後に発生した。"
+    },
+    {
+      "key": "body-1",
+      "start": 86.049,
+      "end": 123.197,
+      "text": "この攻撃は、外交的接触が前線と都市の攻撃を冷却していないことを示しています。ウクライナは同盟国に対空ミサイルと迎撃機の補給を求めており、ロシアは冬になる前に電力、暖房、その他の重要なインフラへの攻撃を強化する可能性があると警告している。"
+    },
+    {
+      "key": "why",
+      "start": 123.197,
+      "end": 151.155,
+      "text": "首都への弾道ミサイル攻撃が再開されたことは、停戦の見通しが依然として脆弱であることを反映しており、冬に向けて防空支援を強化するよう欧州に圧力をかけている。"
+    },
+    {
+      "key": "watch",
+      "start": 151.155,
+      "end": 172.852,
+      "text": "ロシアの次の攻撃の規模、ウクライナからの損失、欧州と米国からの新たな防空支援、停戦や交渉の実際の進展に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.09,
+      "end": 2.37,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "その後、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.37,
+      "speechEnd": 7.596,
+      "end": 7.876,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロシア軍は弾道ミサイルでキエフを攻撃し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.876,
+      "speechEnd": 11.081,
+      "end": 11.261,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "米国特使は少なくとも"
+    },
+    {
+      "parentKey": "title",
+      "start": 11.261,
+      "speechEnd": 13.281,
+      "end": 13.461,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "5人"
+    },
+    {
+      "parentKey": "title",
+      "start": 13.461,
+      "speechEnd": 20.428,
+      "end": 21.288,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "の死者と約30人の負傷者を首都に残した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.288,
+      "speechEnd": 24.145,
+      "end": 24.425,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ウクライナ当局者は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.425,
+      "speechEnd": 28.118,
+      "end": 28.398,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国特使がキエフを去った後、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 28.398,
+      "speechEnd": 33.135,
+      "end": 33.415,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロシア軍が大規模な攻撃を再開し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 33.415,
+      "speechEnd": 40.034,
+      "end": 40.314,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "冬の前に家屋や民間施設に損傷を与え、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 40.314,
+      "speechEnd": 44.216,
+      "end": 45.076,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "防空圧力を高めたと述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.076,
+      "speechEnd": 47.723,
+      "end": 48.003,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロシアは火曜日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.003,
+      "speechEnd": 57.757,
+      "end": 58.378,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ウクライナの首都キエフを弾道ミサイルやその他の武器で再び攻撃した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.378,
+      "speechEnd": 60.746,
+      "end": 61.026,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ウクライナ側は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.026,
+      "speechEnd": 64.998,
+      "end": 65.278,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "少なくとも5人が死亡し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.278,
+      "speechEnd": 68.552,
+      "end": 68.832,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "30人近くが負傷し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.832,
+      "speechEnd": 75.939,
+      "end": 76.559,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "多くの家屋や民間施設が被害を受けたと述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.559,
+      "speechEnd": 78.649,
+      "end": 78.929,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "攻撃は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 78.929,
+      "speechEnd": 85.269,
+      "end": 86.049,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "米国特使の訪問が終了した直後に発生した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 86.049,
+      "speechEnd": 88.418,
+      "end": 88.698,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この攻撃は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.698,
+      "speechEnd": 98.243,
+      "end": 98.863,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "外交的接触が前線と都市の攻撃を冷却していないことを示しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 98.863,
+      "speechEnd": 107.085,
+      "end": 107.365,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ウクライナは同盟国に対空ミサイルと迎撃機の補給を求めており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.365,
+      "speechEnd": 110.988,
+      "end": 111.268,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロシアは冬になる前に電力、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.268,
+      "speechEnd": 113.288,
+      "end": 113.568,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "暖房、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 113.568,
+      "speechEnd": 122.417,
+      "end": 123.197,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "その他の重要なインフラへの攻撃を強化する可能性があると警告している。"
+    },
+    {
+      "parentKey": "why",
+      "start": 123.197,
+      "speechEnd": 127.168,
+      "end": 127.788,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 127.788,
+      "speechEnd": 134.477,
+      "end": 134.757,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "首都への弾道ミサイル攻撃が再開されたことは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 134.757,
+      "speechEnd": 142.908,
+      "end": 143.188,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "停戦の見通しが依然として脆弱であることを反映しており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 143.188,
+      "speechEnd": 150.295,
+      "end": 151.155,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "冬に向けて防空支援を強化するよう欧州に圧力をかけている。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 151.155,
+      "speechEnd": 153.245,
+      "end": 153.525,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 153.525,
+      "speechEnd": 157.078,
+      "end": 157.358,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロシアの次の攻撃の規模、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 157.358,
+      "speechEnd": 160.354,
+      "end": 160.634,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ウクライナからの損失、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 160.634,
+      "speechEnd": 165.511,
+      "end": 165.791,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "欧州と米国からの新たな防空支援、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 165.791,
+      "speechEnd": 171.992,
+      "end": 172.852,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "停戦や交渉の実際の進展に注目してください。"
+    }
+  ]
+}

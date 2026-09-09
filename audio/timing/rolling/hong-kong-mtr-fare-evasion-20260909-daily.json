@@ -1,0 +1,380 @@
+{
+  "version": 3,
+  "duration": 173.819,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 549,
+  "charactersPerMinute": 189.5,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 13.963,
+      "text": "MTRは、駅のパトロールを強化するために、集団回避チケットの断片が警察に報告されると疑っている"
+    },
+    {
+      "key": "dek",
+      "start": 13.963,
+      "end": 44.234,
+      "text": "オンライン映像は、多くの人々が尖沙咀駅でチケットを回避したと疑っており、MTRは閉回路テレビをチェックした後に警察に報告し、細則に違反した人は追加料金を請求されるか、起訴される可能性があることを思い出させました。"
+    },
+    {
+      "key": "body-0",
+      "start": 44.234,
+      "end": 78.249,
+      "text": "MTRは、8月23日午後11時頃に尖沙咀駅で集団チケット回避の疑いのあるオンライン事件が発生したと考えており、事件に対処するために警察に報告されていると火曜日に述べた。同社は、ステーションのパトロールと執行を強化すると述べた。"
+    },
+    {
+      "key": "body-1",
+      "start": 78.249,
+      "end": 130.02,
+      "text": "MTRは、正しい運賃を支払わなかった場合、または航空券を回避した場合は、MTRの細則に違反し、違反者に追加料金が課される可能性があり、深刻な場合には起訴が開始される可能性があることを指摘しました。この事件はまた、大規模な公共交通機関システムが歩行者の効率性と混雑している停留所でのゲート執行のバランスをとる必要性を反映しています。"
+    },
+    {
+      "key": "why",
+      "start": 130.02,
+      "end": 153.723,
+      "text": "集団回避パターンが広がると、発券と営業収入の公平性に影響し、MTRにゲートとパトロールの手配を調整するよう促す可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 153.723,
+      "end": 173.819,
+      "text": "警察の調査結果、MTRがキーステーションの検査を調整したかどうか、さらに施行データが公開されたかどうかに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.09,
+      "end": 2.37,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "MTRは、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.37,
+      "speechEnd": 6.691,
+      "end": 6.971,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "駅のパトロールを強化するために、"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.971,
+      "speechEnd": 13.103,
+      "end": 13.963,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "集団回避チケットの断片が警察に報告されると疑っている。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.963,
+      "speechEnd": 16.68,
+      "end": 16.961,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "オンライン映像は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.961,
+      "speechEnd": 23.929,
+      "end": 24.209,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "多くの人々が尖沙咀駅でチケットを回避したと疑っており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.209,
+      "speechEnd": 30.41,
+      "end": 30.69,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "MTRは閉回路テレビをチェックした後に警察に報告し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 30.69,
+      "speechEnd": 36.753,
+      "end": 37.033,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "細則に違反した人は追加料金を請求されるか、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 37.033,
+      "speechEnd": 43.374,
+      "end": 44.234,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "起訴される可能性があることを思い出させました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.234,
+      "speechEnd": 46.324,
+      "end": 46.604,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "MTRは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.604,
+      "speechEnd": 60.819,
+      "end": 61.099,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "8月23日午後11時頃に尖沙咀駅で集団チケット回避の疑いのあるオンライン事件が発生したと考えており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.099,
+      "speechEnd": 68.764,
+      "end": 69.384,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "事件に対処するために警察に報告されていると火曜日に述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.384,
+      "speechEnd": 71.475,
+      "end": 71.755,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同社は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.755,
+      "speechEnd": 77.468,
+      "end": 78.249,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "ステーションのパトロールと執行を強化すると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 78.249,
+      "speechEnd": 80.339,
+      "end": 80.619,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "MTRは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 80.619,
+      "speechEnd": 84.87,
+      "end": 85.15,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "正しい運賃を支払わなかった場合、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 85.15,
+      "speechEnd": 89.191,
+      "end": 89.471,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "または航空券を回避した場合は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 89.471,
+      "speechEnd": 92.607,
+      "end": 92.887,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "MTRの細則に違反し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.887,
+      "speechEnd": 98.74,
+      "end": 99.02,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "違反者に追加料金が課される可能性があり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.02,
+      "speechEnd": 105.361,
+      "end": 105.701,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "深刻な場合には起訴が開始される可能性が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 105.701,
+      "speechEnd": 109.116,
+      "end": 109.736,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "あることを指摘しました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.736,
+      "speechEnd": 112.384,
+      "end": 112.664,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この事件はまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.664,
+      "speechEnd": 117.054,
+      "end": 117.394,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "大規模な公共交通機関システムが"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.394,
+      "speechEnd": 129.239,
+      "end": 130.02,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "歩行者の効率性と混雑している停留所でのゲート執行のバランスをとる必要性を反映しています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 130.02,
+      "speechEnd": 133.991,
+      "end": 134.612,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 134.612,
+      "speechEnd": 138.165,
+      "end": 138.445,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "集団回避パターンが広がると、"
+    },
+    {
+      "parentKey": "why",
+      "start": 138.445,
+      "speechEnd": 143.393,
+      "end": 143.673,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "発券と営業収入の公平性に影響し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 143.673,
+      "speechEnd": 147.854,
+      "end": 148.194,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "MTRにゲートとパトロールの手配を"
+    },
+    {
+      "parentKey": "why",
+      "start": 148.194,
+      "speechEnd": 152.862,
+      "end": 153.723,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "調整するよう促す可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 153.723,
+      "speechEnd": 155.813,
+      "end": 156.093,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 156.093,
+      "speechEnd": 158.811,
+      "end": 159.091,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "警察の調査結果、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 159.091,
+      "speechEnd": 165.223,
+      "end": 165.503,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "MTRがキーステーションの検査を調整したかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 165.503,
+      "speechEnd": 172.959,
+      "end": 173.819,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "さらに施行データが公開されたかどうかに注意してください。"
+    }
+  ]
+}

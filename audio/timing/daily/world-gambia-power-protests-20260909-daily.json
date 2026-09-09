@@ -1,0 +1,400 @@
+{
+  "version": 3,
+  "duration": 160.627,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 468,
+  "charactersPerMinute": 174.8,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 13.465,
+      "text": "ガンビアで停電が発生し、道路封鎖を解消するために警察が催涙ガスを使用したデモが発生"
+    },
+    {
+      "key": "dek",
+      "start": 13.465,
+      "end": 36.26,
+      "text": "長引く停電により、人々はタイヤを燃やして道路を封鎖するために街頭に出るようになり、総選挙前の公共サービスと民生への圧力が政治的焦点になりました。"
+    },
+    {
+      "key": "body-0",
+      "start": 36.26,
+      "end": 74.517,
+      "text": "ガンビアの一部では、長引く停電が原因で抗議行動が勃発し、人々がタイヤを燃やして道路を塞ぎ、続いて警察が催涙ガスを発射して群衆を解散させた。地元の電力供給の問題がしばらく続いており、住民や商人は生活や業務への影響について苦情を申し立てています。"
+    },
+    {
+      "key": "body-1",
+      "start": 74.517,
+      "end": 118.492,
+      "text": "この事件は、政治情勢が高まり、停電がインフラ問題からガバナンスと民生問題に転換した時期に発生しました。継続的な電力不足は、世帯に影響を与えるだけでなく、小売業者がバックアップ発電機を使用するためのコストを引き上げるだけでなく、特に食品保存、医療、中小企業に敏感です。"
+    },
+    {
+      "key": "why",
+      "start": 118.492,
+      "end": 140.46,
+      "text": "デモが拡大すれば、ガンビアの社会的安定に影響を及ぼし、選挙前の国民生活にとって重要な問題となる可能性がある。"
+    },
+    {
+      "key": "watch",
+      "start": 140.46,
+      "end": 160.627,
+      "text": "デモが続いているかどうか、警察の執行、政治家の対応など、政府の電力復旧のスケジュールに注意を払ってください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.623,
+      "end": 3.903,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ガンビアで停電が発生し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.903,
+      "speechEnd": 8.084,
+      "end": 8.424,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "道路封鎖を解消するために警察が"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.424,
+      "speechEnd": 12.605,
+      "end": 13.465,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "催涙ガスを使用したデモが発生。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.465,
+      "speechEnd": 16.322,
+      "end": 16.602,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "長引く停電により、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.602,
+      "speechEnd": 22.037,
+      "end": 22.377,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "人々はタイヤを燃やして道路を封鎖するため"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.377,
+      "speechEnd": 25.582,
+      "end": 25.862,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "に街頭に出るようになり、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.862,
+      "speechEnd": 31.367,
+      "end": 31.707,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "総選挙前の公共サービスと民生への圧力が"
+    },
+    {
+      "parentKey": "dek",
+      "start": 31.707,
+      "speechEnd": 35.4,
+      "end": 36.26,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "政治的焦点になりました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.26,
+      "speechEnd": 39.395,
+      "end": 39.676,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ガンビアの一部では、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.676,
+      "speechEnd": 45.25,
+      "end": 45.53,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "長引く停電が原因で抗議行動が勃発し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.53,
+      "speechEnd": 50.268,
+      "end": 50.548,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "人々がタイヤを燃やして道路を塞ぎ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.548,
+      "speechEnd": 57.167,
+      "end": 57.788,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "続いて警察が催涙ガスを発射して群衆を解散させた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.788,
+      "speechEnd": 63.78,
+      "end": 64.06,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "地元の電力供給の問題がしばらく続いており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.06,
+      "speechEnd": 70.122,
+      "end": 70.462,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "住民や商人は生活や業務への影響について"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.462,
+      "speechEnd": 73.737,
+      "end": 74.517,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "苦情を申し立てています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 74.517,
+      "speechEnd": 76.817,
+      "end": 77.097,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この事件は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 77.097,
+      "speechEnd": 80.162,
+      "end": 80.442,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "政治情勢が高まり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 80.442,
+      "speechEnd": 89.849,
+      "end": 90.469,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "停電がインフラ問題からガバナンスと民生問題に転換した時期に発生しました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.469,
+      "speechEnd": 93.674,
+      "end": 93.954,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "継続的な電力不足は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.954,
+      "speechEnd": 98.065,
+      "end": 98.346,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "世帯に影響を与えるだけでなく、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 98.346,
+      "speechEnd": 104.268,
+      "end": 104.608,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "小売業者がバックアップ発電機を使用するため"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.608,
+      "speechEnd": 108.719,
+      "end": 108.999,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "のコストを引き上げるだけでなく、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.999,
+      "speechEnd": 111.786,
+      "end": 112.067,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "特に食品保存、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.067,
+      "speechEnd": 114.087,
+      "end": 114.367,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "医療、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.367,
+      "speechEnd": 117.712,
+      "end": 118.492,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "中小企業に敏感です。"
+    },
+    {
+      "parentKey": "why",
+      "start": 118.492,
+      "speechEnd": 122.464,
+      "end": 123.084,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 123.084,
+      "speechEnd": 126.15,
+      "end": 126.43,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "デモが拡大すれば、"
+    },
+    {
+      "parentKey": "why",
+      "start": 126.43,
+      "speechEnd": 131.865,
+      "end": 132.145,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ガンビアの社会的安定に影響を及ぼし、"
+    },
+    {
+      "parentKey": "why",
+      "start": 132.145,
+      "speechEnd": 139.6,
+      "end": 140.46,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "選挙前の国民生活にとって重要な問題となる可能性がある。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 140.46,
+      "speechEnd": 142.551,
+      "end": 142.831,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 142.831,
+      "speechEnd": 146.245,
+      "end": 146.525,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "デモが続いているかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 146.525,
+      "speechEnd": 148.755,
+      "end": 149.035,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "警察の執行、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 149.035,
+      "speechEnd": 152.31,
+      "end": 152.59,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "政治家の対応など、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 152.59,
+      "speechEnd": 159.767,
+      "end": 160.627,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "政府の電力復旧のスケジュールに注意を払ってください。"
+    }
+  ]
+}

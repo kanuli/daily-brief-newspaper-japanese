@@ -1,0 +1,350 @@
+{
+  "version": 3,
+  "duration": 176.666,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 499,
+  "charactersPerMinute": 169.5,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 8.943,
+      "text": "東京都台東区規制案住宅宿泊ごみ・騒音苦情サージ"
+    },
+    {
+      "key": "dek",
+      "start": 8.943,
+      "end": 34.533,
+      "text": "浅草・上野の所在地である台東区では、住宅地の一部での民間駐車場の新設を効果的に禁止し、来年から既存の営業日数を厳しくするための新しい規制を提案しています。"
+    },
+    {
+      "key": "body-0",
+      "start": 34.533,
+      "end": 74.391,
+      "text": "東京都台東区は火曜日に区議会に法案案を提出し、営業日数をゼロにすることで、一部の住宅地や伝統的なホテルが制限されている地域での新規短期賃貸を来年から効果的に停止することを計画しています。この地域での民泊申請は、住民の苦情と同時に近年急増している。"
+    },
+    {
+      "key": "body-1",
+      "start": 74.391,
+      "end": 129.234,
+      "text": "地方自治体によると、不適切なゴミ処理や深夜の騒音などの問題が、規則を厳しくする主な理由です。新しい施設の制限に加えて、既存の民泊もより厳しい営業日の手配に直面することになります。この政策は、日本への観光客の到着が記録的に高い時期に、地方自治体が観光収入と日本の住民の生活の質との対立に積極的に対処し始めていることを反映しています。"
+    },
+    {
+      "key": "why",
+      "start": 129.234,
+      "end": 154.34,
+      "text": "台東区は浅草・上野など交通量の多い地域を対象としており、宿泊供給、賃貸市場、観光誘導に影響を及ぼす可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 154.34,
+      "end": 176.666,
+      "text": "地区議会の投票、正式な発効日、既存の事業者移行の取り決め、および他の自治体がフォローアップするかどうかに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 8.083,
+      "end": 8.943,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "東京都台東区規制案住宅宿泊ごみ・騒音苦情サージ。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 8.943,
+      "speechEnd": 14.796,
+      "end": 15.076,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "浅草・上野の所在地である台東区では、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.076,
+      "speechEnd": 23.089,
+      "end": 23.369,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "住宅地の一部での民間駐車場の新設を効果的に禁止し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.369,
+      "speechEnd": 29.013,
+      "end": 29.353,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "来年から既存の営業日数を厳しくするため"
+    },
+    {
+      "parentKey": "dek",
+      "start": 29.353,
+      "speechEnd": 33.673,
+      "end": 34.533,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "の新しい規制を提案しています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.533,
+      "speechEnd": 41.849,
+      "end": 42.129,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "東京都台東区は火曜日に区議会に法案案を提出し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.129,
+      "speechEnd": 46.38,
+      "end": 46.66,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "営業日数をゼロにすることで、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.66,
+      "speechEnd": 51.258,
+      "end": 51.599,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "一部の住宅地や伝統的なホテルが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.599,
+      "speechEnd": 63.235,
+      "end": 63.855,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "制限されている地域での新規短期賃貸を来年から効果的に停止することを計画しています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.855,
+      "speechEnd": 68.036,
+      "end": 68.316,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この地域での民泊申請は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.316,
+      "speechEnd": 73.611,
+      "end": 74.391,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "住民の苦情と同時に近年急増している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 74.391,
+      "speechEnd": 77.527,
+      "end": 77.807,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "地方自治体によると、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 77.807,
+      "speechEnd": 84.705,
+      "end": 84.985,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "不適切なゴミ処理や深夜の騒音などの問題が、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.985,
+      "speechEnd": 89.235,
+      "end": 89.856,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "規則を厳しくする主な理由です。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 89.856,
+      "speechEnd": 93.967,
+      "end": 94.247,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "新しい施設の制限に加えて、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.247,
+      "speechEnd": 102.747,
+      "end": 103.368,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "既存の民泊もより厳しい営業日の手配に直面することになります。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.368,
+      "speechEnd": 105.946,
+      "end": 106.226,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この政策は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 106.226,
+      "speechEnd": 112.427,
+      "end": 112.707,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本への観光客の到着が記録的に高い時期に、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.707,
+      "speechEnd": 128.454,
+      "end": 129.234,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "地方自治体が観光収入と日本の住民の生活の質との対立に積極的に対処し始めていることを反映しています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 129.234,
+      "speechEnd": 133.206,
+      "end": 133.826,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 133.826,
+      "speechEnd": 142.536,
+      "end": 142.816,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "台東区は浅草・上野など交通量の多い地域を対象としており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 142.816,
+      "speechEnd": 145.255,
+      "end": 145.535,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "宿泊供給、"
+    },
+    {
+      "parentKey": "why",
+      "start": 145.535,
+      "speechEnd": 147.625,
+      "end": 147.905,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "賃貸市場、"
+    },
+    {
+      "parentKey": "why",
+      "start": 147.905,
+      "speechEnd": 153.479,
+      "end": 154.34,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "観光誘導に影響を及ぼす可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 154.34,
+      "speechEnd": 156.43,
+      "end": 156.71,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 156.71,
+      "speechEnd": 159.637,
+      "end": 159.917,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "地区議会の投票、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 159.917,
+      "speechEnd": 162.495,
+      "end": 162.775,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "正式な発効日、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 162.775,
+      "speechEnd": 167.025,
+      "end": 167.305,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "既存の事業者移行の取り決め、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 167.305,
+      "speechEnd": 175.806,
+      "end": 176.666,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "および他の自治体がフォローアップするかどうかに注意してください。"
+    }
+  ]
+}
