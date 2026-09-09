@@ -1,0 +1,520 @@
+{
+  "version": 3,
+  "duration": 223.974,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 593,
+  "charactersPerMinute": 158.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 12.426,
+      "text": "中部地方の大雨で土砂崩れが発生、富士山登山口で車両3台が埋没"
+    },
+    {
+      "key": "dek",
+      "start": 12.426,
+      "end": 39.775,
+      "text": "静岡、愛知、岐阜は豪雨の影響を受け、富士山の主な登山道が遮断され、名古屋は1時間あたり104.5ミリの降雨量を受け、多くの場所で交通が遮断されました。"
+    },
+    {
+      "key": "body-0",
+      "start": 39.775,
+      "end": 90.063,
+      "text": "水曜日の日本中部の豪雨は、富士山を登るための主要な出発点の1つで土砂崩れを引き起こしました。地元メディアによると、3台の車両が泥に埋もれ、死傷者は報告されておらず、富士山を結ぶ重要な道路である富士スバルラインは大雨のため閉鎖された。静岡県川本町の別の地滑りは、火曜日の夜に労働者の死亡を確認した。"
+    },
+    {
+      "key": "body-1",
+      "start": 90.063,
+      "end": 157.573,
+      "text": "また、大雨で愛知県や岐阜県も被害を受け、多くの場所で洪水が発生し、少なくとも41人が負傷しました。名古屋は1時間あたり104.5mmの降水量を記録し、鉄道などの輸送サービスを混乱させました。気象庁の最新の観測によると、山梨県のいくつかの観測点では9月9日にかなりの累積降雨が記録されており、当局は西日本の中部および一部の地域に、低地での地滑り、川の急上昇、洪水を防ぐ必要があることを思い出させました。"
+    },
+    {
+      "key": "why",
+      "start": 157.573,
+      "end": 193.259,
+      "text": "事故は、登山の安全性、クロスカウンティの交通機関、都市部の通勤に影響を与えます。また、豪雨が続くと、飽和した斜面がさらに不安定になり、その後の災害のリスクが高まる可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 193.259,
+      "end": 223.974,
+      "text": "富士山道路や登山道の再開、連絡を失った人や閉じ込められた人の捜索と救助、静岡、山梨、愛知、岐阜の大雨や地滑りの最新の気象庁の警告に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 5.434,
+      "end": 5.664,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中部地方の大雨で土砂崩れが発生、"
+    },
+    {
+      "parentKey": "title",
+      "start": 5.664,
+      "speechEnd": 11.726,
+      "end": 12.426,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "富士山登山口で車両3台が埋没。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.426,
+      "speechEnd": 14.446,
+      "end": 14.676,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "静岡、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.676,
+      "speechEnd": 16.697,
+      "end": 16.927,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "愛知、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.927,
+      "speechEnd": 20.132,
+      "end": 20.362,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "岐阜は豪雨の影響を受け、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.362,
+      "speechEnd": 25.866,
+      "end": 26.096,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "富士山の主な登山道が遮断され、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.096,
+      "speechEnd": 33.968,
+      "end": 34.198,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "名古屋は1時間あたり104.5ミリの降雨量を受け、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 34.198,
+      "speechEnd": 39.075,
+      "end": 39.775,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "多くの場所で交通が遮断されました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.775,
+      "speechEnd": 44.304,
+      "end": 44.534,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "水曜日の日本中部の豪雨は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.534,
+      "speechEnd": 54.985,
+      "end": 55.485,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "富士山を登るための主要な出発点の1つで土砂崩れを引き起こしました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.485,
+      "speechEnd": 58.55,
+      "end": 58.78,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "地元メディアによると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.78,
+      "speechEnd": 62.961,
+      "end": 63.191,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "3台の車両が泥に埋もれ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.191,
+      "speechEnd": 66.953,
+      "end": 67.183,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "死傷者は報告されておらず、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.183,
+      "speechEnd": 74.707,
+      "end": 74.987,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "富士山を結ぶ重要な道路である富士スバルラインは"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.987,
+      "speechEnd": 78.331,
+      "end": 78.832,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "大雨のため閉鎖された。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 78.832,
+      "speechEnd": 83.221,
+      "end": 83.451,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "静岡県川本町の別の地滑りは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 83.451,
+      "speechEnd": 89.442,
+      "end": 90.063,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "火曜日の夜に労働者の死亡を確認した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.063,
+      "speechEnd": 92.083,
+      "end": 92.313,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "また、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.313,
+      "speechEnd": 97.887,
+      "end": 98.117,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "大雨で愛知県や岐阜県も被害を受け、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 98.117,
+      "speechEnd": 101.949,
+      "end": 102.179,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "多くの場所で洪水が発生し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.179,
+      "speechEnd": 107.056,
+      "end": 107.556,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "少なくとも41人が負傷しました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.556,
+      "speechEnd": 115.428,
+      "end": 115.658,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "名古屋は1時間あたり104.5mmの降水量を記録し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.658,
+      "speechEnd": 121.232,
+      "end": 121.732,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "鉄道などの輸送サービスを混乱させました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.732,
+      "speechEnd": 125.912,
+      "end": 126.142,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "気象庁の最新の観測によると、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 126.142,
+      "speechEnd": 130.88,
+      "end": 131.16,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "山梨県のいくつかの観測点では"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 131.16,
+      "speechEnd": 137.988,
+      "end": 138.218,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "9月9日にかなりの累積降雨が記録されており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 138.218,
+      "speechEnd": 145.046,
+      "end": 145.276,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "当局は西日本の中部および一部の地域に、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 145.276,
+      "speechEnd": 148.062,
+      "end": 148.292,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "低地での地滑り、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 148.292,
+      "speechEnd": 150.661,
+      "end": 150.891,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "川の急上昇、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 150.891,
+      "speechEnd": 156.953,
+      "end": 157.573,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "洪水を防ぐ必要があることを思い出させました。"
+    },
+    {
+      "parentKey": "why",
+      "start": 157.573,
+      "speechEnd": 161.544,
+      "end": 162.044,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 162.044,
+      "speechEnd": 164.134,
+      "end": 164.364,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "事故は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 164.364,
+      "speechEnd": 167.29,
+      "end": 167.52,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "登山の安全性、"
+    },
+    {
+      "parentKey": "why",
+      "start": 167.52,
+      "speechEnd": 171.143,
+      "end": 171.373,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "クロスカウンティの交通機関、"
+    },
+    {
+      "parentKey": "why",
+      "start": 171.373,
+      "speechEnd": 175.971,
+      "end": 176.472,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "都市部の通勤に影響を与えます。"
+    },
+    {
+      "parentKey": "why",
+      "start": 176.472,
+      "speechEnd": 178.492,
+      "end": 178.722,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "また、"
+    },
+    {
+      "parentKey": "why",
+      "start": 178.722,
+      "speechEnd": 181.091,
+      "end": 181.321,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "豪雨が続くと、"
+    },
+    {
+      "parentKey": "why",
+      "start": 181.321,
+      "speechEnd": 186.267,
+      "end": 186.498,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "飽和した斜面がさらに不安定になり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 186.498,
+      "speechEnd": 192.559,
+      "end": 193.259,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "その後の災害のリスクが高まる可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 193.259,
+      "speechEnd": 195.349,
+      "end": 195.579,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 195.579,
+      "speechEnd": 200.735,
+      "end": 200.965,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "富士山道路や登山道の再開、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 200.965,
+      "speechEnd": 207.583,
+      "end": 207.814,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "連絡を失った人や閉じ込められた人の捜索と救助、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 207.814,
+      "speechEnd": 209.834,
+      "end": 210.064,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "静岡、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 210.064,
+      "speechEnd": 212.154,
+      "end": 212.384,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "山梨、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 212.384,
+      "speechEnd": 214.405,
+      "end": 214.635,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "愛知、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 214.635,
+      "speechEnd": 223.274,
+      "end": 223.974,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "岐阜の大雨や地滑りの最新の気象庁の警告に注意してください。"
+    }
+  ]
+}
