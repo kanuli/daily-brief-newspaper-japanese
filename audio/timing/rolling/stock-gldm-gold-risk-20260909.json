@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 29.179,
+  "duration": 204.173,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 340.0,
-  "characters": 84,
-  "charactersPerMinute": 172.7,
+  "characters": 570,
+  "charactersPerMinute": 167.5,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.18,
@@ -21,66 +21,440 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 9.99,
-      "text": "GLDM：Reutersで最新の企業・市場動向情報を確認"
+      "end": 19.804,
+      "text": "ETF の見通し: 原油価格が 100 ドルを超えて株式市場を下落させ、安全資産の購入により金価格が約 1.1% 上昇しました"
+    },
+    {
+      "key": "dek",
+      "start": 19.804,
+      "end": 48.881,
+      "text": "中東での紛争激化によりブレント原油価格は100ドルを超え、世界的な株式市場は下落した。 9月9日、金価格は約1.1％上昇し、1オンスあたり約4,403ドルとなった。"
     },
     {
       "key": "body-0",
-      "start": 9.99,
-      "end": 29.179,
-      "text": "Reutersを出典として、企業・市場動向に関する新しい検証済み情報を確認しました。詳細は出典資料の確認後に順次更新します。"
+      "start": 48.881,
+      "end": 107.277,
+      "text": "ロイター通信が9月9日に報じたところによると、中東での紛争の激化によりブレント原油価格は1バレルあたり100ドルを上回り、世界の株式は圧力を受け、投資家は安全な資産に目を向け、現金は約1.1 ％上昇して1オンスあたり4,403ドル近くになった。原油価格と海運リスクはインフレの不確実性を高め、ドル、金利、中央銀行の政策期待をより不安定にしています。"
+    },
+    {
+      "key": "body-1",
+      "start": 107.277,
+      "end": 156.953,
+      "text": "GLDMにとっては、地政学的リスクと株式市場の引き下げが金の安全地帯の需要を直接押し上げた。しかし、エネルギー価格がインフレを押し上げ続け、主要中央銀行がより強硬な政策を採用するようになった場合、実質金利の上昇は金の上昇を制限する可能性がある。したがって、短期的な方向性は、ヘッジ需要か金利圧力が優勢かに依存する。"
+    },
+    {
+      "key": "why",
+      "start": 156.953,
+      "end": 184.216,
+      "text": "原油価格が100ドルを超え、世界的な株式市場が下落したことで安全資産への需要が大幅に高まり、金価格は前日よりも直接的なプラスの読みを形成した。"
+    },
+    {
+      "key": "watch",
+      "start": 184.216,
+      "end": 204.173,
+      "text": "米国のPPI/CPI、10年実質金利、米ドル、ブレント原油価格、中東の海運リスクに注意してください。"
     }
   ],
   "semanticUnits": [
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 2.023,
-      "end": 2.363,
+      "speechEnd": 2.787,
+      "end": 3.127,
       "pause": 0.34,
       "intendedPause": 0.34,
       "reason": "punctuation-semantic",
-      "text": "GLDM："
+      "text": "ETF の見通し:"
     },
     {
       "parentKey": "title",
-      "start": 2.363,
-      "speechEnd": 9.129,
-      "end": 9.99,
-      "pause": 0.861,
-      "intendedPause": 0.86,
-      "reason": "punctuation-sentence",
-      "text": "Reutersで最新の企業・市場動向情報を確認。"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 9.99,
-      "speechEnd": 13.198,
-      "end": 13.479,
+      "start": 3.127,
+      "speechEnd": 10.861,
+      "end": 11.141,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "Reutersを出典として、"
+      "text": "原油価格が 100 ドルを超えて株式市場を下落させ、"
     },
     {
-      "parentKey": "body-0",
-      "start": 13.479,
-      "speechEnd": 21.5,
-      "end": 22.12,
-      "pause": 0.621,
+      "parentKey": "title",
+      "start": 11.141,
+      "speechEnd": 18.944,
+      "end": 19.804,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "安全資産の購入により金価格が約 1.1% 上昇しました。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.804,
+      "speechEnd": 28.514,
+      "end": 28.794,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "中東での紛争激化によりブレント原油価格は100ドルを超え、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 28.794,
+      "speechEnd": 33.183,
+      "end": 33.803,
+      "pause": 0.62,
       "intendedPause": 0.62,
       "reason": "punctuation-sentence",
-      "text": "企業・市場動向に関する新しい検証済み情報を確認しました。"
+      "text": "世界的な株式市場は下落した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 33.803,
+      "speechEnd": 36.381,
+      "end": 36.661,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "9月9日、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 36.661,
+      "speechEnd": 40.981,
+      "end": 41.261,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "金価格は約1.1％上昇し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 41.261,
+      "speechEnd": 44.466,
+      "end": 44.746,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "1オンスあたり約4,"
+    },
+    {
+      "parentKey": "dek",
+      "start": 44.746,
+      "speechEnd": 48.021,
+      "end": 48.881,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "403ドルとなった。"
     },
     {
       "parentKey": "body-0",
-      "start": 22.12,
-      "speechEnd": 28.398,
-      "end": 29.179,
-      "pause": 0.781,
+      "start": 48.881,
+      "speechEnd": 55.5,
+      "end": 55.78,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信が9月9日に報じたところによると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.78,
+      "speechEnd": 62.329,
+      "end": 62.669,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "中東での紛争の激化によりブレント原油価格は"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.669,
+      "speechEnd": 67.546,
+      "end": 67.826,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "1バレルあたり100ドルを上回り、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.826,
+      "speechEnd": 71.38,
+      "end": 71.66,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "世界の株式は圧力を受け、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.66,
+      "speechEnd": 76.258,
+      "end": 76.538,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "投資家は安全な資産に目を向け、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.538,
+      "speechEnd": 83.088,
+      "end": 83.368,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "現金は約1.1 ％上昇して1オンスあたり4,"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 83.368,
+      "speechEnd": 87.13,
+      "end": 87.75,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "403ドル近くになった。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 87.75,
+      "speechEnd": 95.205,
+      "end": 95.485,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "原油価格と海運リスクはインフレの不確実性を高め、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 95.485,
+      "speechEnd": 97.506,
+      "end": 97.786,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ドル、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 97.786,
+      "speechEnd": 99.806,
+      "end": 100.086,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "金利、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 100.086,
+      "speechEnd": 106.496,
+      "end": 107.277,
+      "pause": 0.78,
       "intendedPause": 0.78,
       "reason": "punctuation-sentence",
-      "text": "詳細は出典資料の確認後に順次更新します。"
+      "text": "中央銀行の政策期待をより不安定にしています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.277,
+      "speechEnd": 109.924,
+      "end": 110.204,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "GLDMにとっては、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 110.204,
+      "speechEnd": 115.848,
+      "end": 116.188,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "地政学的リスクと株式市場の引き下げが"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 116.188,
+      "speechEnd": 121.483,
+      "end": 122.103,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "金の安全地帯の需要を直接押し上げた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 122.103,
+      "speechEnd": 124.124,
+      "end": 124.404,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "しかし、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 124.404,
+      "speechEnd": 129.002,
+      "end": 129.282,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "エネルギー価格がインフレを押し上げ続け、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 129.282,
+      "speechEnd": 137.364,
+      "end": 137.644,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "主要中央銀行がより強硬な政策を採用するようになった場合、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 137.644,
+      "speechEnd": 144.612,
+      "end": 145.232,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "実質金利の上昇は金の上昇を制限する可能性がある。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 145.232,
+      "speechEnd": 147.461,
+      "end": 147.741,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "したがって、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 147.741,
+      "speechEnd": 150.807,
+      "end": 151.087,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "短期的な方向性は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 151.087,
+      "speechEnd": 156.173,
+      "end": 156.953,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "ヘッジ需要か金利圧力が優勢かに依存する。"
+    },
+    {
+      "parentKey": "why",
+      "start": 156.953,
+      "speechEnd": 160.925,
+      "end": 161.545,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 161.545,
+      "speechEnd": 165.934,
+      "end": 166.214,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "原油価格が100ドルを超え、"
+    },
+    {
+      "parentKey": "why",
+      "start": 166.214,
+      "speechEnd": 176.108,
+      "end": 176.388,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "世界的な株式市場が下落したことで安全資産への需要が大幅に高まり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 176.388,
+      "speechEnd": 183.355,
+      "end": 184.216,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "金価格は前日よりも直接的なプラスの読みを形成した。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 184.216,
+      "speechEnd": 186.306,
+      "end": 186.586,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 186.586,
+      "speechEnd": 189.303,
+      "end": 189.583,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国のPPI/CPI、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 189.583,
+      "speechEnd": 192.44,
+      "end": 192.72,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "10年実質金利、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 192.72,
+      "speechEnd": 194.81,
+      "end": 195.09,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米ドル、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 195.09,
+      "speechEnd": 198.086,
+      "end": 198.366,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ブレント原油価格、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 198.366,
+      "speechEnd": 203.313,
+      "end": 204.173,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "中東の海運リスクに注意してください。"
     }
   ]
 }
