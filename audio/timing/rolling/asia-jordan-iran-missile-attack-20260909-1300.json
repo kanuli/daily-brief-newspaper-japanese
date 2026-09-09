@@ -1,0 +1,380 @@
+{
+  "version": 3,
+  "duration": 188.918,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 585,
+  "charactersPerMinute": 185.8,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 16.809,
+      "text": "イランがヨルダンに20発の弾道ミサイルを発射ヨルダンは18発を迎撃したと主張しているが、死傷者は出ていない"
+    },
+    {
+      "key": "dek",
+      "start": 16.809,
+      "end": 42.547,
+      "text": "ヨルダン軍は、防空システムがイラン国内から発射された20発の弾道ミサイルに対応し、そのうち18発が迎撃され破壊され、他の2発は占領されていない地域に着陸したと述べた。"
+    },
+    {
+      "key": "body-0",
+      "start": 42.547,
+      "end": 86.108,
+      "text": "ヨルダン軍は水曜日、イランが過去数時間にヨルダンに発射した20発の弾道ミサイルのうち18発の迎撃と破壊に成功し、残りの2発は占領されていない地域に着陸したと述べた。軍は、現場での評価で死傷者は記録されておらず、専門チームは落下した瓦礫を処理し、周囲の治安をチェックしていたと述べた。"
+    },
+    {
+      "key": "body-1",
+      "start": 86.108,
+      "end": 135.158,
+      "text": "ロイター通信によると、イラン革命防衛隊は、ヨルダンのアズラク近くで米軍が使用している基地を標的にしたと述べた。事件前、米軍はイランの石油タンカー5隻を破壊したと発表したが、米当局者はヨルダンに駐留する米軍兵士は全員無事だと述べた。一連の軍事作戦は、約半年間続いた地域紛争を急激にエスカレートさせました。"
+    },
+    {
+      "key": "why",
+      "start": 135.158,
+      "end": 164.503,
+      "text": "攻撃にはヨルダンの領土と米軍施設が直接関与しており、地域のより多くの国が紛争に巻き込まれるリスクが高まり、エネルギーと海運のリスクプレミアムがさらに高まる可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 164.503,
+      "end": 188.918,
+      "text": "ヨルダンと米国からのさらなる軍事的反応、さらなるイランの攻撃、ホルムズ海峡と地域のエネルギーインフラストラクチャーの船舶に関する最新情報に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.246,
+      "end": 7.586,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "イランがヨルダンに20発の弾道ミサイルを発射ヨルダンは"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.586,
+      "speechEnd": 12.742,
+      "end": 13.022,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "18発を迎撃したと主張しているが、"
+    },
+    {
+      "parentKey": "title",
+      "start": 13.022,
+      "speechEnd": 15.949,
+      "end": 16.809,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "死傷者は出ていない。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.809,
+      "speechEnd": 19.178,
+      "end": 19.458,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ヨルダン軍は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.458,
+      "speechEnd": 28.655,
+      "end": 28.935,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "防空システムがイラン国内から発射された20発の弾道ミサイルに対応し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 28.935,
+      "speechEnd": 34.091,
+      "end": 34.371,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "そのうち18発が迎撃され破壊され、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 34.371,
+      "speechEnd": 41.687,
+      "end": 42.547,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "他の2発は占領されていない地域に着陸したと述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.547,
+      "speechEnd": 45.683,
+      "end": 45.963,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ヨルダン軍は水曜日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.963,
+      "speechEnd": 59.271,
+      "end": 59.551,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イランが過去数時間にヨルダンに発射した20発の弾道ミサイルのうち18発の迎撃と破壊に成功し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.551,
+      "speechEnd": 67.215,
+      "end": 67.835,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "残りの2発は占領されていない地域に着陸したと述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.835,
+      "speechEnd": 69.856,
+      "end": 70.136,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "軍は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.136,
+      "speechEnd": 75.64,
+      "end": 75.92,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "現場での評価で死傷者は記録されておらず、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.92,
+      "speechEnd": 80.38,
+      "end": 80.66,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "専門チームは落下した瓦礫を処理し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 80.66,
+      "speechEnd": 85.328,
+      "end": 86.108,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "周囲の治安をチェックしていたと述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 86.108,
+      "speechEnd": 89.104,
+      "end": 89.384,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信によると、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 89.384,
+      "speechEnd": 92.798,
+      "end": 93.078,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イラン革命防衛隊は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.078,
+      "speechEnd": 97.259,
+      "end": 97.599,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ヨルダンのアズラク近くで米軍が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.599,
+      "speechEnd": 102.755,
+      "end": 103.375,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "使用している基地を標的にしたと述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.375,
+      "speechEnd": 105.465,
+      "end": 105.745,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "事件前、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 105.745,
+      "speechEnd": 113.688,
+      "end": 113.969,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米軍はイランの石油タンカー5隻を破壊したと発表したが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 113.969,
+      "speechEnd": 122.539,
+      "end": 123.159,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "米当局者はヨルダンに駐留する米軍兵士は全員無事だと述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 123.159,
+      "speechEnd": 126.433,
+      "end": 126.714,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "一連の軍事作戦は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 126.714,
+      "speechEnd": 134.378,
+      "end": 135.158,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "約半年間続いた地域紛争を急激にエスカレートさせました。"
+    },
+    {
+      "parentKey": "why",
+      "start": 135.158,
+      "speechEnd": 139.13,
+      "end": 139.75,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 139.75,
+      "speechEnd": 147.414,
+      "end": 147.694,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "攻撃にはヨルダンの領土と米軍施設が直接関与しており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 147.694,
+      "speechEnd": 154.662,
+      "end": 154.942,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "地域のより多くの国が紛争に巻き込まれるリスクが高まり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 154.942,
+      "speechEnd": 159.331,
+      "end": 159.671,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "エネルギーと海運のリスクプレミアムが"
+    },
+    {
+      "parentKey": "why",
+      "start": 159.671,
+      "speechEnd": 163.643,
+      "end": 164.503,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "さらに高まる可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 164.503,
+      "speechEnd": 166.593,
+      "end": 166.873,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 166.873,
+      "speechEnd": 172.796,
+      "end": 173.076,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ヨルダンと米国からのさらなる軍事的反応、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 173.076,
+      "speechEnd": 176.072,
+      "end": 176.352,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "さらなるイランの攻撃、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 176.352,
+      "speechEnd": 188.057,
+      "end": 188.918,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ホルムズ海峡と地域のエネルギーインフラストラクチャーの船舶に関する最新情報に注目してください。"
+    }
+  ]
+}
