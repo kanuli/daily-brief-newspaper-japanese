@@ -1,0 +1,550 @@
+{
+  "version": 3,
+  "duration": 233.953,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 716,
+  "charactersPerMinute": 183.6,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 17.932,
+      "text": "Googleは2年間でフィンランドに130億ユーロを投資し、AIインフラを拡張し、22年間の原子力発電契約に署名"
+    },
+    {
+      "key": "dek",
+      "start": 17.932,
+      "end": 52.601,
+      "text": "Googleは9月9日、フィンランドのデータセンター、電力網、クリーンエネルギー、コミュニティプロジェクトに今後2年間で130億ユーロを投資すると発表し、Fortumと22年間のLoviisa原子力供給契約を締結した。"
+    },
+    {
+      "key": "body-0",
+      "start": 52.601,
+      "end": 115.886,
+      "text": "Googleは9月9日、ハミナ、カヤーニ、ムホス、ヴァーラのデータセンターとデジタルインフラを拡張するため、今後2年間でフィンランドに130億ユーロを投資するほか、送電網、風力発電、94MWの蓄電池システムにも投資すると発表した。同社によれば、これは同社の欧州への単一投資としては史上最大であり、目的は検索、マップ、Gemini、クラウドサービスのニーズをサポートすることだという。"
+    },
+    {
+      "key": "body-1",
+      "start": 115.886,
+      "end": 169.609,
+      "text": "同時に、Google はロヴィーサ原子力発電所の寿命延長と改良を支援するために Fortum と 22 年間の契約を締結し、米国外での Google にとって初の長期原子力協定となった。アルファベットにとって、この事件は欧州のAIコンピューティング能力と低炭素エネルギー供給を強化したが、資本支出、建設の進捗状況、電力コストが収益評価の焦点になることも意味する。"
+    },
+    {
+      "key": "why",
+      "start": 169.609,
+      "end": 206.054,
+      "text": "AIに対する需要が急速に高まっているため、コンピューティングパワーと電力が中心的なボトルネックとなっています。フィンランドへの投資は、ヨーロッパにおけるGoogleの容量、エネルギーの可視性、クラウドの競争力を高める可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 206.054,
+      "end": 233.953,
+      "text": "2027 年から 2028 年までの建設の進捗状況、Fortum プロトコルの実装、ヨーロッパのデータセンター規制、Google の設備投資、Cloud/Gemini のニーズに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.733,
+      "end": 8.013,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Googleは2年間でフィンランドに130億ユーロを投資し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.013,
+      "speechEnd": 10.87,
+      "end": 11.15,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "AIインフラを拡張し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 11.15,
+      "speechEnd": 17.072,
+      "end": 17.932,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "22年間の原子力発電契約に署名。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.932,
+      "speechEnd": 21.764,
+      "end": 22.044,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Googleは9月9日、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.044,
+      "speechEnd": 25.179,
+      "end": 25.459,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "フィンランドのデータセンター、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.459,
+      "speechEnd": 27.549,
+      "end": 27.829,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "電力網、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.829,
+      "speechEnd": 30.268,
+      "end": 30.548,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "クリーンエネルギー、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 30.548,
+      "speechEnd": 34.171,
+      "end": 34.351,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "コミュニティプロジェクトに今後"
+    },
+    {
+      "parentKey": "dek",
+      "start": 34.351,
+      "speechEnd": 36.371,
+      "end": 36.551,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "2年"
+    },
+    {
+      "parentKey": "dek",
+      "start": 36.551,
+      "speechEnd": 42.125,
+      "end": 42.405,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "間で130億ユーロを投資すると発表し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 42.405,
+      "speechEnd": 51.741,
+      "end": 52.601,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "Fortumと22年間のLoviisa原子力供給契約を締結した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.601,
+      "speechEnd": 56.433,
+      "end": 56.713,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Googleは9月9日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.713,
+      "speechEnd": 58.733,
+      "end": 59.013,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ハミナ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.013,
+      "speechEnd": 61.103,
+      "end": 61.383,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "カヤーニ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.383,
+      "speechEnd": 63.404,
+      "end": 63.684,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ムホス、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.684,
+      "speechEnd": 69.954,
+      "end": 70.234,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ヴァーラのデータセンターとデジタルインフラを拡張するため、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.234,
+      "speechEnd": 77.828,
+      "end": 78.108,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後2年間でフィンランドに130億ユーロを投資するほか、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 78.108,
+      "speechEnd": 80.199,
+      "end": 80.479,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "送電網、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 80.479,
+      "speechEnd": 82.708,
+      "end": 82.988,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "風力発電、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 82.988,
+      "speechEnd": 89.955,
+      "end": 90.575,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "94MWの蓄電池システムにも投資すると発表した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 90.575,
+      "speechEnd": 93.153,
+      "end": 93.433,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同社によれば、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 93.433,
+      "speechEnd": 101.793,
+      "end": 102.074,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "これは同社の欧州への単一投資としては史上最大であり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 102.074,
+      "speechEnd": 104.373,
+      "end": 104.653,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "目的は検索、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 104.653,
+      "speechEnd": 106.673,
+      "end": 106.953,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マップ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 106.953,
+      "speechEnd": 109.113,
+      "end": 109.393,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Gemini、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 109.393,
+      "speechEnd": 115.106,
+      "end": 115.886,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "クラウドサービスのニーズをサポートすることだという。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.886,
+      "speechEnd": 118.046,
+      "end": 118.326,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同時に、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.326,
+      "speechEnd": 127.801,
+      "end": 128.141,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "Google はロヴィーサ原子力発電所の寿命延長と改良を支援するため"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 128.141,
+      "speechEnd": 134.62,
+      "end": 134.901,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "に Fortum と 22 年間の契約を締結し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 134.901,
+      "speechEnd": 143.122,
+      "end": 143.742,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "米国外での Google にとって初の長期原子力協定となった。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 143.742,
+      "speechEnd": 146.668,
+      "end": 146.948,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アルファベットにとって、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 146.948,
+      "speechEnd": 156.702,
+      "end": 156.982,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この事件は欧州のAIコンピューティング能力と低炭素エネルギー供給を強化したが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 156.982,
+      "speechEnd": 159.142,
+      "end": 159.422,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "資本支出、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 159.422,
+      "speechEnd": 162.139,
+      "end": 162.419,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "建設の進捗状況、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 162.419,
+      "speechEnd": 168.829,
+      "end": 169.609,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "電力コストが収益評価の焦点になることも意味する。"
+    },
+    {
+      "parentKey": "why",
+      "start": 169.609,
+      "speechEnd": 173.58,
+      "end": 174.2,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 174.2,
+      "speechEnd": 179.495,
+      "end": 179.775,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "AIに対する需要が急速に高まっているため、"
+    },
+    {
+      "parentKey": "why",
+      "start": 179.775,
+      "speechEnd": 183.467,
+      "end": 183.808,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "コンピューティングパワーと電力が"
+    },
+    {
+      "parentKey": "why",
+      "start": 183.808,
+      "speechEnd": 188.197,
+      "end": 188.817,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "中心的なボトルネックとなっています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 188.817,
+      "speechEnd": 191.952,
+      "end": 192.232,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "フィンランドへの投資は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 192.232,
+      "speechEnd": 196.273,
+      "end": 196.553,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ヨーロッパにおけるGoogleの容量、"
+    },
+    {
+      "parentKey": "why",
+      "start": 196.553,
+      "speechEnd": 199.27,
+      "end": 199.55,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "エネルギーの可視性、"
+    },
+    {
+      "parentKey": "why",
+      "start": 199.55,
+      "speechEnd": 205.193,
+      "end": 206.054,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "クラウドの競争力を高める可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 206.054,
+      "speechEnd": 208.144,
+      "end": 208.424,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 208.424,
+      "speechEnd": 216.645,
+      "end": 216.925,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "2027 年から 2028 年までの建設の進捗状況、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 216.925,
+      "speechEnd": 220.478,
+      "end": 220.758,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Fortum プロトコルの実装、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 220.758,
+      "speechEnd": 224.381,
+      "end": 224.661,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ヨーロッパのデータセンター規制、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 224.661,
+      "speechEnd": 227.657,
+      "end": 227.937,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Google の設備投資、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 227.937,
+      "speechEnd": 233.093,
+      "end": 233.953,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "Cloud/Gemini のニーズに注意してください。"
+    }
+  ]
+}

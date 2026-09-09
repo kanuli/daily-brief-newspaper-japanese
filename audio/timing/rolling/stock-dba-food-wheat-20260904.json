@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 176.953,
+  "duration": 30.851,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 340.0,
-  "characters": 497,
-  "charactersPerMinute": 168.5,
+  "characters": 91,
+  "charactersPerMinute": 177.0,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.18,
@@ -21,400 +21,66 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 17.227,
-      "text": "ETF リードスルー：世界の食料価格は 2022 年以来最高値に上昇、黒海の混乱で穀物供給リスクが高まる"
-    },
-    {
-      "key": "dek",
-      "start": 17.227,
-      "end": 46.654,
-      "text": "FAOは、世界の食料価格指数が8月に133.3に上昇したと指摘した。異常気象、戦争、黒海の物流混乱により、穀物やその他の農産物は供給圧力にさらされている。"
+      "end": 10.896,
+      "text": "DBA：Reuters / FAOで最新の企業・市場動向情報を確認"
     },
     {
       "key": "body-0",
-      "start": 46.654,
-      "end": 90.904,
-      "text": "国連食糧農業機関が発表した食料価格指数は8月に133.3に上昇し、2022年末以来の最高水準となった。異常気象、紛争、黒海貿易の混乱が重なり、複数の食料カテゴリーの価格が上昇しており、黒海輸送の遅れによりアジアのバイヤーもオーストラリア産とアルゼンチン産の小麦に目を向けている。"
-    },
-    {
-      "key": "body-1",
-      "start": 90.904,
-      "end": 135.725,
-      "text": "DBA にとって、単一企業のニュースよりも、品種間の供給制約の方が重要です。原油価格の高騰により、肥料、輸送、生産コストが上昇する可能性もありますが、商品価格の急上昇は需要破壊や政策介入、新規供給を引き起こす可能性もあり、需要と供給のバランスを引き続き監視する必要があります。"
-    },
-    {
-      "key": "why",
-      "start": 135.725,
-      "end": 155.462,
-      "text": "食料価格は穀物物流のリスクと並行して上昇しており、供給圧力が多様な影響を及ぼしていることを示唆している。"
-    },
-    {
-      "key": "watch",
-      "start": 155.462,
-      "end": 176.953,
-      "text": "FAOとUSDAの供給と需要の最新情報、黒海の輸出、北半球の収穫、ブラジルの天候、エネルギー価格に注意してください。"
+      "start": 10.896,
+      "end": 30.851,
+      "text": "Reuters / FAOを出典として、企業・市場動向に関する新しい検証済み情報を確認しました。詳細は出典資料の確認後に順次更新します。"
     }
   ],
   "semanticUnits": [
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 2.857,
-      "end": 3.197,
+      "speechEnd": 2.023,
+      "end": 2.363,
       "pause": 0.34,
       "intendedPause": 0.34,
       "reason": "punctuation-semantic",
-      "text": "ETF リードスルー："
+      "text": "DBA："
     },
     {
       "parentKey": "title",
-      "start": 3.197,
-      "speechEnd": 10.931,
-      "end": 11.211,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "世界の食料価格は 2022 年以来最高値に上昇、"
-    },
-    {
-      "parentKey": "title",
-      "start": 11.211,
-      "speechEnd": 16.367,
-      "end": 17.227,
-      "pause": 0.86,
+      "start": 2.363,
+      "speechEnd": 10.035,
+      "end": 10.896,
+      "pause": 0.861,
       "intendedPause": 0.86,
       "reason": "punctuation-sentence",
-      "text": "黒海の混乱で穀物供給リスクが高まる。"
+      "text": "Reuters / FAOで最新の企業・市場動向情報を確認。"
     },
     {
-      "parentKey": "dek",
-      "start": 17.227,
-      "speechEnd": 19.387,
-      "end": 19.668,
+      "parentKey": "body-0",
+      "start": 10.896,
+      "speechEnd": 14.871,
+      "end": 15.152,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "FAOは、"
+      "text": "Reuters / FAOを出典として、"
     },
     {
-      "parentKey": "dek",
-      "start": 19.668,
-      "speechEnd": 29.074,
-      "end": 29.694,
-      "pause": 0.62,
+      "parentKey": "body-0",
+      "start": 15.152,
+      "speechEnd": 23.172,
+      "end": 23.793,
+      "pause": 0.621,
       "intendedPause": 0.62,
       "reason": "punctuation-sentence",
-      "text": "世界の食料価格指数が8月に133.3に上昇したと指摘した。"
-    },
-    {
-      "parentKey": "dek",
-      "start": 29.694,
-      "speechEnd": 31.854,
-      "end": 32.134,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "異常気象、"
-    },
-    {
-      "parentKey": "dek",
-      "start": 32.134,
-      "speechEnd": 34.155,
-      "end": 34.435,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "戦争、"
-    },
-    {
-      "parentKey": "dek",
-      "start": 34.435,
-      "speechEnd": 37.988,
-      "end": 38.269,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "黒海の物流混乱により、"
-    },
-    {
-      "parentKey": "dek",
-      "start": 38.269,
-      "speechEnd": 45.794,
-      "end": 46.654,
-      "pause": 0.86,
-      "intendedPause": 0.86,
-      "reason": "punctuation-sentence",
-      "text": "穀物やその他の農産物は供給圧力にさらされている。"
+      "text": "企業・市場動向に関する新しい検証済み情報を確認しました。"
     },
     {
       "parentKey": "body-0",
-      "start": 46.654,
-      "speechEnd": 53.343,
-      "end": 53.683,
-      "pause": 0.34,
-      "intendedPause": 0.34,
-      "reason": "semantic-boundary",
-      "text": "国連食糧農業機関が発表した食料価格指数は"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 53.683,
-      "speechEnd": 58.282,
-      "end": 58.562,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "8月に133.3に上昇し、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 58.562,
-      "speechEnd": 63.997,
-      "end": 64.617,
-      "pause": 0.62,
-      "intendedPause": 0.62,
-      "reason": "punctuation-sentence",
-      "text": "2022年末以来の最高水準となった。"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 64.617,
-      "speechEnd": 66.777,
-      "end": 67.057,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "異常気象、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 67.057,
-      "speechEnd": 69.078,
-      "end": 69.358,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "紛争、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 69.358,
-      "speechEnd": 72.981,
-      "end": 73.261,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "黒海貿易の混乱が重なり、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 73.261,
-      "speechEnd": 79.114,
-      "end": 79.394,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "複数の食料カテゴリーの価格が上昇しており、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 79.394,
-      "speechEnd": 90.124,
-      "end": 90.904,
-      "pause": 0.78,
+      "start": 23.793,
+      "speechEnd": 30.07,
+      "end": 30.851,
+      "pause": 0.781,
       "intendedPause": 0.78,
       "reason": "punctuation-sentence",
-      "text": "黒海輸送の遅れによりアジアのバイヤーもオーストラリア産とアルゼンチン産の小麦に目を向けている。"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 90.904,
-      "speechEnd": 93.273,
-      "end": 93.554,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "DBA にとって、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 93.554,
-      "speechEnd": 96.898,
-      "end": 97.178,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "単一企業のニュースよりも、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 97.178,
-      "speechEnd": 102.334,
-      "end": 102.954,
-      "pause": 0.62,
-      "intendedPause": 0.62,
-      "reason": "punctuation-sentence",
-      "text": "品種間の供給制約の方が重要です。"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 102.954,
-      "speechEnd": 106.508,
-      "end": 106.788,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "原油価格の高騰により、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 106.788,
-      "speechEnd": 108.809,
-      "end": 109.089,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "肥料、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 109.089,
-      "speechEnd": 111.109,
-      "end": 111.389,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "輸送、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 111.389,
-      "speechEnd": 116.685,
-      "end": 116.965,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "生産コストが上昇する可能性もありますが、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 116.965,
-      "speechEnd": 122.748,
-      "end": 123.028,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "商品価格の急上昇は需要破壊や政策介入、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 123.028,
-      "speechEnd": 128.115,
-      "end": 128.395,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "新規供給を引き起こす可能性もあり、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 128.395,
-      "speechEnd": 134.945,
-      "end": 135.725,
-      "pause": 0.78,
-      "intendedPause": 0.78,
-      "reason": "punctuation-sentence",
-      "text": "需要と供給のバランスを引き続き監視する必要があります。"
-    },
-    {
-      "parentKey": "why",
-      "start": 135.725,
-      "speechEnd": 139.696,
-      "end": 140.316,
-      "pause": 0.62,
-      "intendedPause": 0.62,
-      "reason": "punctuation-sentence",
-      "text": "このニュースの重要なポイントです。"
-    },
-    {
-      "parentKey": "why",
-      "start": 140.316,
-      "speechEnd": 147.424,
-      "end": 147.704,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "食料価格は穀物物流のリスクと並行して上昇しており、"
-    },
-    {
-      "parentKey": "why",
-      "start": 147.704,
-      "speechEnd": 154.602,
-      "end": 155.462,
-      "pause": 0.86,
-      "intendedPause": 0.86,
-      "reason": "punctuation-sentence",
-      "text": "供給圧力が多様な影響を及ぼしていることを示唆している。"
-    },
-    {
-      "parentKey": "watch",
-      "start": 155.462,
-      "speechEnd": 157.552,
-      "end": 157.832,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "今後は、"
-    },
-    {
-      "parentKey": "watch",
-      "start": 157.832,
-      "speechEnd": 163.476,
-      "end": 163.756,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "FAOとUSDAの供給と需要の最新情報、"
-    },
-    {
-      "parentKey": "watch",
-      "start": 163.756,
-      "speechEnd": 166.056,
-      "end": 166.336,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "黒海の輸出、"
-    },
-    {
-      "parentKey": "watch",
-      "start": 166.336,
-      "speechEnd": 168.844,
-      "end": 169.124,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "北半球の収穫、"
-    },
-    {
-      "parentKey": "watch",
-      "start": 169.124,
-      "speechEnd": 171.772,
-      "end": 172.052,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "ブラジルの天候、"
-    },
-    {
-      "parentKey": "watch",
-      "start": 172.052,
-      "speechEnd": 176.093,
-      "end": 176.953,
-      "pause": 0.86,
-      "intendedPause": 0.86,
-      "reason": "punctuation-sentence",
-      "text": "エネルギー価格に注意してください。"
+      "text": "詳細は出典資料の確認後に順次更新します。"
     }
   ]
 }
