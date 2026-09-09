@@ -1,0 +1,400 @@
+{
+  "version": 3,
+  "duration": 193.567,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 601,
+  "charactersPerMinute": 186.3,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 10.594,
+      "text": "米国とイラクの間の海上衝突のエスカレートホルムズ付近で攻撃された船舶"
+    },
+    {
+      "key": "dek",
+      "start": 10.594,
+      "end": 30.985,
+      "text": "米国がイランのタンカー5隻を沈め、イランがホルムズ海峡近くの船10隻を攻撃した後、湾岸諸国の船舶とエネルギー供給に対するリスクが再び上昇した。"
+    },
+    {
+      "key": "body-0",
+      "start": 30.985,
+      "end": 99.338,
+      "text": "湾岸における米国とイランの軍事衝突は9日、さらに激化した。ロイター通信によると、イランのタンカー5隻が沈没した後、イランはホルムズ海峡付近の10隻の船舶に攻撃を開始した。これは、戦争勃発以来最大の海軍による相互攻撃の1つである。1隻のタンカーが少なくとも1人の乗組員を失い、もう1隻が行方不明になった。イランはまた、ヨルダンの米軍基地に弾道ミサイルを発射し、米側は、ほとんどのミサイルが米国の死傷者なしで迎撃されたと述べた。"
+    },
+    {
+      "key": "body-1",
+      "start": 99.338,
+      "end": 144.648,
+      "text": "ホルムズ海峡は世界の重要なエネルギーチャネルであり、最近の船舶への攻撃により、この地域の原油輸送は再び縮小しています。一方、イエメンのフーシ派勢力はサウジアラビア南部の都市やインフラを2日連続で攻撃しており、湾岸地域の安全保障上のリスクを単一のチャンネルからより広範なエネルギー施設や商船航路に広げている。"
+    },
+    {
+      "key": "why",
+      "start": 144.648,
+      "end": 172.041,
+      "text": "海上攻撃が続くと、海運会社は高リスクの海域をさらに回避し、保険や輸送コストも上昇し、世界的なエネルギー供給とインフレ圧力を悪化させる可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 172.041,
+      "end": 193.567,
+      "text": "タンカーや商船へのさらなる攻撃、ホルムズ海峡での実際の交通、そしてサウジアラビア・フーシ派の武力紛争のさらなる拡大に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 9.894,
+      "end": 10.594,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "米国とイラクの間の海上衝突のエスカレートホルムズ付近で攻撃された船舶。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 10.594,
+      "speechEnd": 15.471,
+      "end": 15.701,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国がイランのタンカー5隻を沈め、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.701,
+      "speechEnd": 22.46,
+      "end": 22.69,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "イランがホルムズ海峡近くの船10隻を攻撃した後、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.69,
+      "speechEnd": 30.285,
+      "end": 30.985,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "湾岸諸国の船舶とエネルギー供給に対するリスクが再び上昇した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 30.985,
+      "speechEnd": 37.116,
+      "end": 37.346,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "湾岸における米国とイランの軍事衝突は9日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.346,
+      "speechEnd": 39.924,
+      "end": 40.424,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "さらに激化した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.424,
+      "speechEnd": 43.42,
+      "end": 43.65,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.65,
+      "speechEnd": 48.249,
+      "end": 48.479,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "イランのタンカー5隻が沈没した後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.479,
+      "speechEnd": 56.561,
+      "end": 57.061,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "イランはホルムズ海峡付近の10隻の船舶に攻撃を開始した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.061,
+      "speechEnd": 59.152,
+      "end": 59.382,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "これは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.382,
+      "speechEnd": 67.603,
+      "end": 68.103,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "戦争勃発以来最大の海軍による相互攻撃の1つである。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.103,
+      "speechEnd": 74.583,
+      "end": 74.813,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "1隻のタンカーが少なくとも1人の乗組員を失い、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.813,
+      "speechEnd": 78.645,
+      "end": 79.146,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "もう1隻が行方不明になった。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 79.146,
+      "speechEnd": 81.375,
+      "end": 81.605,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "イランはまた、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 81.605,
+      "speechEnd": 87.597,
+      "end": 87.827,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ヨルダンの米軍基地に弾道ミサイルを発射し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 87.827,
+      "speechEnd": 89.918,
+      "end": 90.148,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米側は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 90.148,
+      "speechEnd": 98.718,
+      "end": 99.338,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ほとんどのミサイルが米国の死傷者なしで迎撃されたと述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.338,
+      "speechEnd": 105.818,
+      "end": 106.048,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ホルムズ海峡は世界の重要なエネルギーチャネルであり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 106.048,
+      "speechEnd": 109.95,
+      "end": 110.18,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "最近の船舶への攻撃により、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 110.18,
+      "speechEnd": 116.52,
+      "end": 117.02,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "この地域の原油輸送は再び縮小しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.02,
+      "speechEnd": 119.041,
+      "end": 119.271,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "一方、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 119.271,
+      "speechEnd": 126.935,
+      "end": 127.215,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "イエメンのフーシ派勢力はサウジアラビア南部の都市やインフラを"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 127.215,
+      "speechEnd": 130.838,
+      "end": 131.068,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "2日連続で攻撃しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 131.068,
+      "speechEnd": 144.028,
+      "end": 144.648,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "湾岸地域の安全保障上のリスクを単一のチャンネルからより広範なエネルギー施設や商船航路に広げている。"
+    },
+    {
+      "parentKey": "why",
+      "start": 144.648,
+      "speechEnd": 148.619,
+      "end": 149.12,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 149.12,
+      "speechEnd": 152.116,
+      "end": 152.346,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "海上攻撃が続くと、"
+    },
+    {
+      "parentKey": "why",
+      "start": 152.346,
+      "speechEnd": 158.129,
+      "end": 158.359,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "海運会社は高リスクの海域をさらに回避し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 158.359,
+      "speechEnd": 161.982,
+      "end": 162.212,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "保険や輸送コストも上昇し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 162.212,
+      "speechEnd": 167.229,
+      "end": 167.509,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "世界的なエネルギー供給とインフレ圧力を"
+    },
+    {
+      "parentKey": "why",
+      "start": 167.509,
+      "speechEnd": 171.341,
+      "end": 172.041,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "悪化させる可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 172.041,
+      "speechEnd": 174.131,
+      "end": 174.361,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 174.361,
+      "speechEnd": 178.681,
+      "end": 178.911,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "タンカーや商船へのさらなる攻撃、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 178.911,
+      "speechEnd": 183.231,
+      "end": 183.461,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ホルムズ海峡での実際の交通、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 183.461,
+      "speechEnd": 192.867,
+      "end": 193.567,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "そしてサウジアラビア・フーシ派の武力紛争のさらなる拡大に注目してください。"
+    }
+  ]
+}
