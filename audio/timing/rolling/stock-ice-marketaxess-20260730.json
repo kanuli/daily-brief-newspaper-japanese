@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 29.179,
+  "duration": 177.868,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 340.0,
-  "characters": 83,
-  "charactersPerMinute": 170.7,
+  "characters": 529,
+  "charactersPerMinute": 178.4,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.18,
@@ -21,66 +21,450 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 9.99,
-      "text": "ICE：Reutersで最新の企業・市場動向情報を確認"
+      "end": 12.639,
+      "text": "ICE、MarketAxessを57億ドルで買収、債券電子取引の規模を拡大"
+    },
+    {
+      "key": "dek",
+      "start": 12.639,
+      "end": 43.24,
+      "text": "インターコンチネンタル取引所はマーケットアクセスを約57億米ドルで買収することに合意した。この取引は2027年上半期に完了する予定で、債券取引、データ、ワークフローがさらに統合されることになる。"
     },
     {
       "key": "body-0",
-      "start": 9.99,
-      "end": 29.179,
-      "text": "Reutersを出典として、企業・市場動向に関する新しい検証済み情報を確認しました。詳細は出典資料の確認後に順次更新します。"
+      "start": 43.24,
+      "end": 86.458,
+      "text": "ICEは7月30日、MarketAxessを1株当たり167ドルで買収すると発表、買収金額は約57億ドル相当となる。 MarketAxess は社債の電子取引のための重要なプラットフォームであり、ICE はその取引機能を独自の債券データ、清算、ワークフローと統合する予定です。"
+    },
+    {
+      "key": "body-1",
+      "start": 86.458,
+      "end": 137.822,
+      "text": "ICEにとって、この取引は構造的に重要であり、債券市場における収益とデータの相乗効果を高めることができます。ただし、この取引には依然として規制当局の承認が必要であり、資金調達は債券、タームローン、コマーシャルペーパーを通じて行われるため、統合コスト、レバレッジ、完了までの時間については引き続きフォローアップする必要がある。"
+    },
+    {
+      "key": "why",
+      "start": 137.822,
+      "end": 160.419,
+      "text": "統合が成功すれば、ICE はトレーディング、データ、バックオフィス サービスを巨大な債券市場にさらに拡張することができます。"
+    },
+    {
+      "key": "watch",
+      "start": 160.419,
+      "end": 177.868,
+      "text": "規制当局の承認、資金調達の取り決め、MarketAxess の取引量、統合スケジュールに注意してください。"
     }
   ],
   "semanticUnits": [
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 2.023,
-      "end": 2.363,
-      "pause": 0.34,
-      "intendedPause": 0.34,
-      "reason": "punctuation-semantic",
-      "text": "ICE："
-    },
-    {
-      "parentKey": "title",
-      "start": 2.363,
-      "speechEnd": 9.129,
-      "end": 9.99,
-      "pause": 0.861,
-      "intendedPause": 0.86,
-      "reason": "punctuation-sentence",
-      "text": "Reutersで最新の企業・市場動向情報を確認。"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 9.99,
-      "speechEnd": 13.198,
-      "end": 13.479,
+      "speechEnd": 2.021,
+      "end": 2.301,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "Reutersを出典として、"
+      "text": "ICE、"
     },
     {
-      "parentKey": "body-0",
-      "start": 13.479,
-      "speechEnd": 21.5,
-      "end": 22.12,
-      "pause": 0.621,
+      "parentKey": "title",
+      "start": 2.301,
+      "speechEnd": 8.014,
+      "end": 8.294,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "MarketAxessを57億ドルで買収、"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.294,
+      "speechEnd": 11.778,
+      "end": 12.639,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "債券電子取引の規模を拡大。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.639,
+      "speechEnd": 15.844,
+      "end": 16.184,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "インターコンチネンタル取引所は"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.184,
+      "speechEnd": 24.615,
+      "end": 25.235,
+      "pause": 0.62,
       "intendedPause": 0.62,
       "reason": "punctuation-sentence",
-      "text": "企業・市場動向に関する新しい検証済み情報を確認しました。"
+      "text": "マーケットアクセスを約57億米ドルで買収することに合意した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.235,
+      "speechEnd": 32.482,
+      "end": 32.762,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この取引は2027年上半期に完了する予定で、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.762,
+      "speechEnd": 34.852,
+      "end": 35.132,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "債券取引、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 35.132,
+      "speechEnd": 37.153,
+      "end": 37.433,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "データ、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 37.433,
+      "speechEnd": 42.38,
+      "end": 43.24,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ワークフローがさらに統合されることになる。"
     },
     {
       "parentKey": "body-0",
-      "start": 22.12,
-      "speechEnd": 28.398,
-      "end": 29.179,
-      "pause": 0.781,
+      "start": 43.24,
+      "speechEnd": 46.864,
+      "end": 47.144,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ICEは7月30日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.144,
+      "speechEnd": 51.046,
+      "end": 51.226,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "MarketAxessを1株当たり"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.226,
+      "speechEnd": 54.083,
+      "end": 54.263,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "167ドル"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.263,
+      "speechEnd": 57.328,
+      "end": 57.608,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "で買収すると発表、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.608,
+      "speechEnd": 63.601,
+      "end": 64.221,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "買収金額は約57億ドル相当となる。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.221,
+      "speechEnd": 67.078,
+      "end": 67.418,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "MarketAxess は"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.418,
+      "speechEnd": 73.619,
+      "end": 73.899,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "社債の電子取引のための重要なプラットフォームであり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.899,
+      "speechEnd": 79.056,
+      "end": 79.336,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ICE はその取引機能を独自の債券データ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 79.336,
+      "speechEnd": 81.356,
+      "end": 81.636,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "清算、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 81.636,
+      "speechEnd": 85.678,
+      "end": 86.458,
+      "pause": 0.78,
       "intendedPause": 0.78,
       "reason": "punctuation-sentence",
-      "text": "詳細は出典資料の確認後に順次更新します。"
+      "text": "ワークフローと統合する予定です。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 86.458,
+      "speechEnd": 88.827,
+      "end": 89.107,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ICEにとって、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 89.107,
+      "speechEnd": 93.357,
+      "end": 93.638,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この取引は構造的に重要であり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.638,
+      "speechEnd": 98.585,
+      "end": 98.925,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "債券市場における収益とデータの相乗効果を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 98.925,
+      "speechEnd": 102.06,
+      "end": 102.68,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "高めることができます。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.68,
+      "speechEnd": 104.771,
+      "end": 105.051,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ただし、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 105.051,
+      "speechEnd": 112.367,
+      "end": 112.647,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この取引には依然として規制当局の承認が必要であり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.647,
+      "speechEnd": 115.086,
+      "end": 115.366,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "資金調達は債券、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.366,
+      "speechEnd": 117.526,
+      "end": 117.806,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "タームローン、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.806,
+      "speechEnd": 123.52,
+      "end": 123.8,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "コマーシャルペーパーを通じて行われるため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 123.8,
+      "speechEnd": 126.099,
+      "end": 126.379,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "統合コスト、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 126.379,
+      "speechEnd": 128.679,
+      "end": 128.959,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "レバレッジ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 128.959,
+      "speechEnd": 137.041,
+      "end": 137.822,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "完了までの時間については引き続きフォローアップする必要がある。"
+    },
+    {
+      "parentKey": "why",
+      "start": 137.822,
+      "speechEnd": 141.793,
+      "end": 142.413,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 142.413,
+      "speechEnd": 145.479,
+      "end": 145.759,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "統合が成功すれば、"
+    },
+    {
+      "parentKey": "why",
+      "start": 145.759,
+      "speechEnd": 148.895,
+      "end": 149.175,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ICE はトレーディング、"
+    },
+    {
+      "parentKey": "why",
+      "start": 149.175,
+      "speechEnd": 151.196,
+      "end": 151.476,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "データ、"
+    },
+    {
+      "parentKey": "why",
+      "start": 151.476,
+      "speechEnd": 159.558,
+      "end": 160.419,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "バックオフィス サービスを巨大な債券市場にさらに拡張することができます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 160.419,
+      "speechEnd": 162.509,
+      "end": 162.789,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 162.789,
+      "speechEnd": 165.646,
+      "end": 165.926,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "規制当局の承認、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 165.926,
+      "speechEnd": 168.852,
+      "end": 169.133,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "資金調達の取り決め、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 169.133,
+      "speechEnd": 172.338,
+      "end": 172.618,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "MarketAxess の取引量、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 172.618,
+      "speechEnd": 177.008,
+      "end": 177.868,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "統合スケジュールに注意してください。"
     }
   ]
 }

@@ -1,0 +1,440 @@
+{
+  "version": 3,
+  "duration": 213.211,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 539,
+  "charactersPerMinute": 151.7,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 10.008,
+      "text": "香港初代行政長官、董哲華氏死去、89歳"
+    },
+    {
+      "key": "dek",
+      "start": 10.008,
+      "end": 34.681,
+      "text": "董哲華氏は9月8日夜、香港で89歳で死去した。同氏は1997年の香港返還後、初代行政長官を務め、2005年に辞任した。"
+    },
+    {
+      "key": "body-0",
+      "start": 34.681,
+      "end": 106.005,
+      "text": "香港特別行政区の初代行政長官、董哲華氏が9月8日夜、香港で89歳で死去した。特別行政区政府は9日、李家超行政長官の追悼文を発表した。新華社通信は、トン・チーファさんが同日夜9時57分、病気のため亡くなったと報じた。董哲華氏は1997年の香港の祖国復帰後、初代行政長官を務めた。2005年に辞任し、その後中国人民政治協商会議第10期から第13期全国委員会の副委員長を務めた。"
+    },
+    {
+      "key": "body-1",
+      "start": 106.005,
+      "end": 156.69,
+      "text": "トン・チーファ氏の在任期間は、アジア金融危機やSARSなどの大きな出来事にまたがった。 2003年に政府が基本法第23条の立法化を推進したことも大規模なデモを引き起こし、その後法案は棚上げされた。李家超氏は、董哲華氏は在任中に香港と本土の経済・貿易関係を促進し、退任後も香港と国際社会の交流に参加し続けたと述べた。"
+    },
+    {
+      "key": "why",
+      "start": 156.69,
+      "end": 192.731,
+      "text": "董哲華は香港特別行政区の政治史において重要な人物でした。彼の死は政府、政界、社会のあらゆる分野から哀悼の意を表し、また香港の祖国復帰初期の統治プロセスに再び焦点が当てられた。"
+    },
+    {
+      "key": "watch",
+      "start": 192.731,
+      "end": 213.211,
+      "text": "香港政府および中央政府が発表する公式の葬儀、追悼式、およびさらなる記念の取り決めに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.041,
+      "end": 4.271,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "香港初代行政長官、"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.271,
+      "speechEnd": 6.849,
+      "end": 7.079,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "董哲華氏死去、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.079,
+      "speechEnd": 9.308,
+      "end": 10.008,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "89歳。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 10.008,
+      "speechEnd": 14.398,
+      "end": 14.628,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "董哲華氏は9月8日夜、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.628,
+      "speechEnd": 19.087,
+      "end": 19.587,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "香港で89歳で死去した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.587,
+      "speechEnd": 25.718,
+      "end": 25.948,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同氏は1997年の香港返還後、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.948,
+      "speechEnd": 30.267,
+      "end": 30.498,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "初代行政長官を務め、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 30.498,
+      "speechEnd": 33.981,
+      "end": 34.681,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "2005年に辞任した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.681,
+      "speechEnd": 40.952,
+      "end": 41.182,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "香港特別行政区の初代行政長官、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.182,
+      "speechEnd": 45.362,
+      "end": 45.592,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "董哲華氏が9月8日夜、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.592,
+      "speechEnd": 50.051,
+      "end": 50.551,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "香港で89歳で死去した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.551,
+      "speechEnd": 54.871,
+      "end": 55.101,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "特別行政区政府は9日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.101,
+      "speechEnd": 61.301,
+      "end": 61.801,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "李家超行政長官の追悼文を発表した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.801,
+      "speechEnd": 64.379,
+      "end": 64.609,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "新華社通信は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.609,
+      "speechEnd": 70.74,
+      "end": 70.97,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "トン・チーファさんが同日夜9時57分、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.97,
+      "speechEnd": 74.872,
+      "end": 75.372,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "病気のため亡くなったと報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.372,
+      "speechEnd": 83.036,
+      "end": 83.266,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "董哲華氏は1997年の香港の祖国復帰後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 83.266,
+      "speechEnd": 87.725,
+      "end": 88.225,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "初代行政長官を務めた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 88.225,
+      "speechEnd": 91.639,
+      "end": 91.869,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "2005年に辞任し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 91.869,
+      "speechEnd": 105.385,
+      "end": 106.005,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "その後中国人民政治協商会議第10期から第13期全国委員会の副委員長を務めた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 106.005,
+      "speechEnd": 110.046,
+      "end": 110.276,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "トン・チーファ氏の在任期間は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 110.276,
+      "speechEnd": 118.079,
+      "end": 118.579,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "アジア金融危機やSARSなどの大きな出来事にまたがった。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.579,
+      "speechEnd": 125.965,
+      "end": 126.245,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "2003年に政府が基本法第23条の立法化を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 126.245,
+      "speechEnd": 131.818,
+      "end": 132.048,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "推進したことも大規模なデモを引き起こし、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 132.048,
+      "speechEnd": 135.671,
+      "end": 136.171,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "その後法案は棚上げされた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 136.171,
+      "speechEnd": 138.61,
+      "end": 138.84,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "李家超氏は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 138.84,
+      "speechEnd": 148.106,
+      "end": 148.336,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "董哲華氏は在任中に香港と本土の経済・貿易関係を促進し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 148.336,
+      "speechEnd": 156.07,
+      "end": 156.69,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "退任後も香港と国際社会の交流に参加し続けたと述べた。"
+    },
+    {
+      "parentKey": "why",
+      "start": 156.69,
+      "speechEnd": 160.661,
+      "end": 161.161,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 161.161,
+      "speechEnd": 170.915,
+      "end": 171.415,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "董哲華は香港特別行政区の政治史において重要な人物でした。"
+    },
+    {
+      "parentKey": "why",
+      "start": 171.415,
+      "speechEnd": 174.272,
+      "end": 174.502,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "彼の死は政府、"
+    },
+    {
+      "parentKey": "why",
+      "start": 174.502,
+      "speechEnd": 176.592,
+      "end": 176.822,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "政界、"
+    },
+    {
+      "parentKey": "why",
+      "start": 176.822,
+      "speechEnd": 182.187,
+      "end": 182.417,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "社会のあらゆる分野から哀悼の意を表し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 182.417,
+      "speechEnd": 192.031,
+      "end": 192.731,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "また香港の祖国復帰初期の統治プロセスに再び焦点が当てられた。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 192.731,
+      "speechEnd": 194.821,
+      "end": 195.051,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 195.051,
+      "speechEnd": 203.412,
+      "end": 203.642,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "香港政府および中央政府が発表する公式の葬儀、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 203.642,
+      "speechEnd": 205.732,
+      "end": 205.962,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "追悼式、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 205.962,
+      "speechEnd": 212.511,
+      "end": 213.211,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "およびさらなる記念の取り決めに注意してください。"
+    }
+  ]
+}
