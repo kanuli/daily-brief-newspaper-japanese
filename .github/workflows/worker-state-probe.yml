@@ -1,0 +1,25 @@
+name: Temporary Worker State Probe
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show final Japanese sync, Pages and maintenance workers
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: kanuli/daily-brief-newspaper-japanese
+        run: |
+          echo '=== final sync-japanese-news ==='
+          gh run list --repo "$REPO" --workflow sync-japanese-news.yml --branch main --limit 10 --json databaseId,status,conclusion,createdAt,updatedAt,headSha
+          echo '=== final pages ==='
+          gh run list --repo "$REPO" --workflow pages.yml --branch main --limit 10 --json databaseId,status,conclusion,createdAt,updatedAt,headSha
+          echo '=== final auto-maintenance ==='
+          gh run list --repo "$REPO" --workflow auto-maintenance.yml --branch main --limit 10 --json databaseId,status,conclusion,createdAt,updatedAt,headSha
