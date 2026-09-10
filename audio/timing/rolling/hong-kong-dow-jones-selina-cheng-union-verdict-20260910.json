@@ -1,0 +1,430 @@
+{
+  "version": 3,
+  "duration": 234.24,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 722,
+  "charactersPerMinute": 184.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 21.338,
+      "text": "ダウ・ジョーンズは、ジャーナリスト協会の会長選への鄭佳琳氏の立候補を妨害した罪で有罪判決を受けたが、解雇関連の罪では有罪判決を受けなかった。"
+    },
+    {
+      "key": "dek",
+      "start": 21.338,
+      "end": 55.496,
+      "text": "東部地方治安判事裁判所は、ウォール・ストリート・ジャーナル発行者のダウ・ジョーンズに対し、元記者の鄭佳爾さんの労働組合に加入する権利の行使を意図的に妨げたとして有罪判決を下したが、その後彼女を解雇した別の罪については無罪を言い渡した。"
+    },
+    {
+      "key": "body-0",
+      "start": 55.496,
+      "end": 125.384,
+      "text": "東部地方治安判事裁判所は木曜日、ウォール・ストリート・ジャーナルの発行元であるダウ・ジョーンズ・パブリッシング・カンパニー（アジア）社に対し、労働組合の権利に関連した罪で有罪判決を下した。治安判事は、同社がジャーナリストのチェン・ジアル氏に対し、2024年6月の香港ジャーナリスト協会会長に立候補する許可を得るように求めたが、許可は認められず、同氏が会長になった場合は雇用を継続できないと通告したことは、登録労働組合の組合員になる権利の行使を意図的に妨害したに当たると判断した。"
+    },
+    {
+      "key": "body-1",
+      "start": 125.384,
+      "end": 179.028,
+      "text": "裁判所はまた、2024年7月のZheng Jiaru氏の解雇に関連する別の容疑は確立されておらず、認められた証拠は配置転換などの他の解雇理由を排除するのに十分ではないとの判決を下した。この事件は鄭佳爾氏が非公開で起訴しており、量刑については今後検討される予定だ。この判決により、労働組合活動に参加する香港の従業員の法的保護に焦点が戻った。"
+    },
+    {
+      "key": "why",
+      "start": 179.028,
+      "end": 210.184,
+      "text": "この判決は、香港の従業員が労働組合に参加する法的権利と、雇用主が制限を課すことができる制限について直接触れている。報道機関や他業界の雇用管理の参考となる意義があります。"
+    },
+    {
+      "key": "watch",
+      "start": 210.184,
+      "end": 234.24,
+      "text": "裁判所の判決、控訴の取り決め、そしてこの訴訟が従業員の組合選挙への参加や役職に関する社内方針に影響を与えるかどうかに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.787,
+      "end": 3.067,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ダウ・ジョーンズは、"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.067,
+      "speechEnd": 9.616,
+      "end": 9.956,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ジャーナリスト協会の会長選への鄭佳琳氏の立候補を"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.956,
+      "speechEnd": 14.763,
+      "end": 15.043,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "妨害した罪で有罪判決を受けたが、"
+    },
+    {
+      "parentKey": "title",
+      "start": 15.043,
+      "speechEnd": 20.478,
+      "end": 21.338,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "解雇関連の罪では有罪判決を受けなかった。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.338,
+      "speechEnd": 25.657,
+      "end": 25.937,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "東部地方治安判事裁判所は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.937,
+      "speechEnd": 33.253,
+      "end": 33.533,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ウォール・ストリート・ジャーナル発行者のダウ・ジョーンズに対し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 33.533,
+      "speechEnd": 40.709,
+      "end": 41.049,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "元記者の鄭佳爾さんの労働組合に加入する権利の行使を"
+    },
+    {
+      "parentKey": "dek",
+      "start": 41.049,
+      "speechEnd": 46.832,
+      "end": 47.112,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "意図的に妨げたとして有罪判決を下したが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 47.112,
+      "speechEnd": 54.636,
+      "end": 55.496,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "その後彼女を解雇した別の罪については無罪を言い渡した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.496,
+      "speechEnd": 61.0,
+      "end": 61.28,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "東部地方治安判事裁判所は木曜日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.28,
+      "speechEnd": 73.612,
+      "end": 73.892,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ウォール・ストリート・ジャーナルの発行元であるダウ・ジョーンズ・パブリッシング・カンパニー（アジア）社に対し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.892,
+      "speechEnd": 80.441,
+      "end": 81.061,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "労働組合の権利に関連した罪で有罪判決を下した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 81.061,
+      "speechEnd": 83.57,
+      "end": 83.85,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "治安判事は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 83.85,
+      "speechEnd": 89.284,
+      "end": 89.564,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同社がジャーナリストのチェン・ジアル氏に対し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 89.564,
+      "speechEnd": 101.896,
+      "end": 102.176,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "2024年6月の香港ジャーナリスト協会会長に立候補する許可を得るように求めたが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 102.176,
+      "speechEnd": 105.032,
+      "end": 105.312,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "許可は認められず、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 105.312,
+      "speechEnd": 113.812,
+      "end": 114.092,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同氏が会長になった場合は雇用を継続できないと通告したことは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 114.092,
+      "speechEnd": 119.248,
+      "end": 119.588,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "登録労働組合の組合員になる権利の行使を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 119.588,
+      "speechEnd": 124.604,
+      "end": 125.384,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "意図的に妨害したに当たると判断した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 125.384,
+      "speechEnd": 127.823,
+      "end": 128.103,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "裁判所はまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 128.103,
+      "speechEnd": 139.599,
+      "end": 139.879,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "2024年7月のZheng Jiaru氏の解雇に関連する別の容疑は確立されておらず、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 139.879,
+      "speechEnd": 149.214,
+      "end": 149.555,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "認められた証拠は配置転換などの他の解雇理由を排除するのに十分では"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 149.555,
+      "speechEnd": 152.759,
+      "end": 153.379,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ないとの判決を下した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 153.379,
+      "speechEnd": 159.998,
+      "end": 160.278,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この事件は鄭佳爾氏が非公開で起訴しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 160.278,
+      "speechEnd": 165.434,
+      "end": 166.054,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "量刑については今後検討される予定だ。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 166.054,
+      "speechEnd": 168.701,
+      "end": 168.982,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この判決により、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 168.982,
+      "speechEnd": 178.248,
+      "end": 179.028,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "労働組合活動に参加する香港の従業員の法的保護に焦点が戻った。"
+    },
+    {
+      "parentKey": "why",
+      "start": 179.028,
+      "speechEnd": 182.999,
+      "end": 183.619,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 183.619,
+      "speechEnd": 185.988,
+      "end": 186.268,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この判決は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 186.268,
+      "speechEnd": 192.887,
+      "end": 193.167,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "香港の従業員が労働組合に参加する法的権利と、"
+    },
+    {
+      "parentKey": "why",
+      "start": 193.167,
+      "speechEnd": 201.04,
+      "end": 201.66,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "雇用主が制限を課すことができる制限について直接触れている。"
+    },
+    {
+      "parentKey": "why",
+      "start": 201.66,
+      "speechEnd": 209.324,
+      "end": 210.184,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "報道機関や他業界の雇用管理の参考となる意義があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 210.184,
+      "speechEnd": 212.274,
+      "end": 212.554,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 212.554,
+      "speechEnd": 215.201,
+      "end": 215.481,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "裁判所の判決、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 215.481,
+      "speechEnd": 218.059,
+      "end": 218.339,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "控訴の取り決め、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 218.339,
+      "speechEnd": 228.511,
+      "end": 228.851,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "そしてこの訴訟が従業員の組合選挙への参加や役職に関する社内方針に影響を"
+    },
+    {
+      "parentKey": "watch",
+      "start": 228.851,
+      "speechEnd": 233.38,
+      "end": 234.24,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "与えるかどうかに注意してください。"
+    }
+  ]
+}
