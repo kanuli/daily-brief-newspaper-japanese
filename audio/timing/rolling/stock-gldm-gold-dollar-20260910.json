@@ -1,0 +1,504 @@
+{
+  "version": 3,
+  "duration": 211.592,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 588,
+  "charactersPerMinute": 166.7,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 20.086,
+      "text": "ETFのリードスルー：米ドル安と地政学リスクの継続を受けて、金価格は約0.5％上昇し、約4,424ドルとなった。"
+    },
+    {
+      "key": "dek",
+      "start": 20.086,
+      "end": 49.024,
+      "text": "9月10日、スポット金は約0.5％上昇し、オンス当たり4,423.81米ドルとなった。米ドル安とペルシャ湾のリスクが支援材料となったが、市場は米国のインフレ統計も待ち望んでいた。"
+    },
+    {
+      "key": "body-0",
+      "start": 49.024,
+      "end": 171.688,
+      "text": "ロイター通信は9月10日、現物金価格が約0.5％上昇し、1オンスあたり4,423.81ドルとなったと報じた。米国の金先物価格も上昇した。ドル安により、ドル以外の通貨を保有する投資家にとって金保有コストが低下したほか、ペルシャ湾紛争やエネルギー供給リスクが引き続き安全資産としての需要を生み出した。また、市場の注目は米国の生産者物価指数と消費者物価指数にも移った。&#10;&#10; GLDMにとって、ドル安と地政学的不確実性は直接的なプラス要因となる。しかし、ブレント原油価格が依然として1バレル100ドルを超えているため、エネルギーコストの高騰はインフレと債券利回りを押し上げ、実質金利の上昇を通じて無利子資産である金の価格を抑制する可能性がある。したがって、今後の方向性は、安全資産需要とドルおよび金利との間の綱引きに左右される。"
+    },
+    {
+      "key": "why",
+      "start": 171.688,
+      "end": 191.495,
+      "text": "米ドル安は地政学リスクの出現と一致しており、高金利環境においても金が買い支えを得ることができた。"
+    },
+    {
+      "key": "watch",
+      "start": 191.495,
+      "end": 211.592,
+      "text": "米国のPPI/CPI、10年実質金利、米ドル、ブレント原油価格、ペルシャ湾の海運リスクに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.926,
+      "end": 3.266,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "punctuation-semantic",
+      "text": "ETFのリードスルー："
+    },
+    {
+      "parentKey": "title",
+      "start": 3.266,
+      "speechEnd": 8.701,
+      "end": 8.981,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米ドル安と地政学リスクの継続を受けて、"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.981,
+      "speechEnd": 13.162,
+      "end": 13.442,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "金価格は約0.5％上昇し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 13.442,
+      "speechEnd": 15.462,
+      "end": 15.742,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "約4,"
+    },
+    {
+      "parentKey": "title",
+      "start": 15.742,
+      "speechEnd": 19.226,
+      "end": 20.086,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "424ドルとなった。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.086,
+      "speechEnd": 22.664,
+      "end": 22.944,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "9月10日、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.944,
+      "speechEnd": 27.334,
+      "end": 27.614,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "スポット金は約0.5％上昇し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.614,
+      "speechEnd": 30.262,
+      "end": 30.542,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "オンス当たり4,"
+    },
+    {
+      "parentKey": "dek",
+      "start": 30.542,
+      "speechEnd": 35.14,
+      "end": 35.76,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "423.81米ドルとなった。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 35.76,
+      "speechEnd": 41.822,
+      "end": 42.102,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米ドル安とペルシャ湾のリスクが支援材料となったが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 42.102,
+      "speechEnd": 48.164,
+      "end": 49.024,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "市場は米国のインフレ統計も待ち望んでいた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.024,
+      "speechEnd": 53.274,
+      "end": 53.554,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信は9月10日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.554,
+      "speechEnd": 58.501,
+      "end": 58.781,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "現物金価格が約0.5％上昇し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.781,
+      "speechEnd": 61.638,
+      "end": 61.918,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "1オンスあたり4,"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.918,
+      "speechEnd": 67.492,
+      "end": 68.112,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "423.81ドルとなったと報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.112,
+      "speechEnd": 72.641,
+      "end": 73.261,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "米国の金先物価格も上昇した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.261,
+      "speechEnd": 75.7,
+      "end": 75.98,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ドル安により、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.98,
+      "speechEnd": 85.316,
+      "end": 85.596,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ドル以外の通貨を保有する投資家にとって金保有コストが低下したほか、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 85.596,
+      "speechEnd": 89.777,
+      "end": 90.117,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ペルシャ湾紛争やエネルギー供給リスクが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 90.117,
+      "speechEnd": 95.969,
+      "end": 96.59,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "引き続き安全資産としての需要を生み出した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 96.59,
+      "speechEnd": 98.61,
+      "end": 98.89,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "また、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 98.89,
+      "speechEnd": 108.087,
+      "end": 108.707,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "市場の注目は米国の生産者物価指数と消費者物価指数にも移った。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 108.707,
+      "speechEnd": 110.728,
+      "end": 111.068,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "punctuation-semantic",
+      "text": "&#10;"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 111.068,
+      "speechEnd": 113.089,
+      "end": 113.429,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "punctuation-semantic",
+      "text": "&#10;"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 113.429,
+      "speechEnd": 115.867,
+      "end": 116.147,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "GLDMにとって、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 116.147,
+      "speechEnd": 123.881,
+      "end": 124.501,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ドル安と地政学的不確実性は直接的なプラス要因となる。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 124.501,
+      "speechEnd": 126.522,
+      "end": 126.802,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "しかし、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 126.802,
+      "speechEnd": 132.306,
+      "end": 132.486,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "ブレント原油価格が依然として1バレル"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 132.486,
+      "speechEnd": 134.716,
+      "end": 134.896,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "100ドル"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 134.896,
+      "speechEnd": 137.683,
+      "end": 137.963,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "を超えているため、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 137.963,
+      "speechEnd": 144.652,
+      "end": 144.932,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "エネルギーコストの高騰はインフレと債券利回りを押し上げ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 144.932,
+      "speechEnd": 152.387,
+      "end": 152.727,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "実質金利の上昇を通じて無利子資産である金の価格を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 152.727,
+      "speechEnd": 156.002,
+      "end": 156.622,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "抑制する可能性がある。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 156.622,
+      "speechEnd": 158.852,
+      "end": 159.132,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "したがって、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 159.132,
+      "speechEnd": 162.058,
+      "end": 162.338,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後の方向性は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 162.338,
+      "speechEnd": 170.908,
+      "end": 171.688,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "安全資産需要とドルおよび金利との間の綱引きに左右される。"
+    },
+    {
+      "parentKey": "why",
+      "start": 171.688,
+      "speechEnd": 175.66,
+      "end": 176.28,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 176.28,
+      "speechEnd": 183.178,
+      "end": 183.458,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米ドル安は地政学リスクの出現と一致しており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 183.458,
+      "speechEnd": 190.634,
+      "end": 191.495,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "高金利環境においても金が買い支えを得ることができた。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 191.495,
+      "speechEnd": 193.585,
+      "end": 193.865,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 193.865,
+      "speechEnd": 196.582,
+      "end": 196.862,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国のPPI/CPI、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 196.862,
+      "speechEnd": 199.719,
+      "end": 199.999,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "10年実質金利、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 199.999,
+      "speechEnd": 202.089,
+      "end": 202.369,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米ドル、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 202.369,
+      "speechEnd": 205.365,
+      "end": 205.645,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ブレント原油価格、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 205.645,
+      "speechEnd": 210.732,
+      "end": 211.592,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ペルシャ湾の海運リスクに注意してください。"
+    }
+  ]
+}
