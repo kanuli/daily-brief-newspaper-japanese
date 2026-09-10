@@ -1,0 +1,380 @@
+{
+  "version": 3,
+  "duration": 159.556,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 443,
+  "charactersPerMinute": 166.6,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 16.611,
+      "text": "EIAが原油価格を引き上げ、中東での供給停止が予測され、今年世界の在庫が約4億バレル削減される"
+    },
+    {
+      "key": "dek",
+      "start": 16.611,
+      "end": 35.522,
+      "text": "米国エネルギー情報局は、中東の供給中断が在庫を減らし続けると考えて、2026年のブレントとWTIの予測を上方修正した。"
+    },
+    {
+      "key": "body-0",
+      "start": 35.522,
+      "end": 76.506,
+      "text": "中東での紛争は、いくつかの石油生産国のホルムズの輸出と施設に影響を与えており、EIAは、この地域の生産は8月に1日あたり670万バレルで停止し、第4四半期には1日あたり平均570万バレルが依然として制限される可能性があると推定しています。"
+    },
+    {
+      "key": "body-1",
+      "start": 76.506,
+      "end": 119.715,
+      "text": "一部の湾岸諸国の輸出は、代替ルートや船舶から船舶への輸送を介して再開されると予想されているが、信頼性は依然として軍事リスクによって制限されている。原油価格の高騰が続くと、輸送、製造、消費者物価の圧力が高まり、主要な中央銀行の金利の道筋が変わる可能性があります。"
+    },
+    {
+      "key": "why",
+      "start": 119.715,
+      "end": 141.618,
+      "text": "継続的な原油価格の高騰は、世界的なインフレ、事業コスト、貿易収支、金利期待に影響を与えます。"
+    },
+    {
+      "key": "watch",
+      "start": 141.618,
+      "end": 159.556,
+      "text": "実際の操業停止、ストレイトフロー、OPEC +の供給政策、米国と欧州のインフレデータを見てみましょう。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.972,
+      "end": 4.252,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "EIAが原油価格を引き上げ、"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.252,
+      "speechEnd": 9.06,
+      "end": 9.34,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "中東での供給停止が予測され、"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.34,
+      "speechEnd": 15.751,
+      "end": 16.611,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "今年世界の在庫が約4億バレル削減される。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.611,
+      "speechEnd": 19.747,
+      "end": 20.027,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国エネルギー情報局は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.027,
+      "speechEnd": 26.507,
+      "end": 26.787,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "中東の供給中断が在庫を減らし続けると考えて、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.787,
+      "speechEnd": 34.662,
+      "end": 35.522,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "2026年のブレントとWTIの予測を上方修正した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 35.522,
+      "speechEnd": 38.448,
+      "end": 38.729,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "中東での紛争は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.729,
+      "speechEnd": 47.996,
+      "end": 48.276,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "いくつかの石油生産国のホルムズの輸出と施設に影響を与えており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.276,
+      "speechEnd": 50.367,
+      "end": 50.647,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "EIAは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.647,
+      "speechEnd": 60.542,
+      "end": 60.822,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この地域の生産は8月に1日あたり670万バレルで停止し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.822,
+      "speechEnd": 68.626,
+      "end": 68.966,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "第4四半期には1日あたり平均570万バレルが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.966,
+      "speechEnd": 75.726,
+      "end": 76.506,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "依然として制限される可能性があると推定しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 76.506,
+      "speechEnd": 80.199,
+      "end": 80.479,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "一部の湾岸諸国の輸出は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 80.479,
+      "speechEnd": 85.148,
+      "end": 85.488,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "代替ルートや船舶から船舶への輸送を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 85.488,
+      "speechEnd": 90.575,
+      "end": 90.855,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "介して再開されると予想されているが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.855,
+      "speechEnd": 97.823,
+      "end": 98.443,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "信頼性は依然として軍事リスクによって制限されている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 98.443,
+      "speechEnd": 102.276,
+      "end": 102.556,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "原油価格の高騰が続くと、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.556,
+      "speechEnd": 104.576,
+      "end": 104.857,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "輸送、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.857,
+      "speechEnd": 106.877,
+      "end": 107.157,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "製造、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.157,
+      "speechEnd": 111.06,
+      "end": 111.34,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "消費者物価の圧力が高まり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.34,
+      "speechEnd": 118.935,
+      "end": 119.715,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "主要な中央銀行の金利の道筋が変わる可能性があります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 119.715,
+      "speechEnd": 123.687,
+      "end": 124.307,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 124.307,
+      "speechEnd": 128.628,
+      "end": 128.908,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "継続的な原油価格の高騰は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 128.908,
+      "speechEnd": 131.625,
+      "end": 131.905,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "世界的なインフレ、"
+    },
+    {
+      "parentKey": "why",
+      "start": 131.905,
+      "speechEnd": 134.205,
+      "end": 134.485,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "事業コスト、"
+    },
+    {
+      "parentKey": "why",
+      "start": 134.485,
+      "speechEnd": 136.715,
+      "end": 136.995,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "貿易収支、"
+    },
+    {
+      "parentKey": "why",
+      "start": 136.995,
+      "speechEnd": 140.758,
+      "end": 141.618,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "金利期待に影響を与えます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 141.618,
+      "speechEnd": 143.709,
+      "end": 143.989,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 143.989,
+      "speechEnd": 147.055,
+      "end": 147.335,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "実際の操業停止、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 147.335,
+      "speechEnd": 149.774,
+      "end": 150.054,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ストレイトフロー、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 150.054,
+      "speechEnd": 153.468,
+      "end": 153.748,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "OPEC +の供給政策、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 153.748,
+      "speechEnd": 158.696,
+      "end": 159.556,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "米国と欧州のインフレデータを見てみましょう。"
+    }
+  ]
+}

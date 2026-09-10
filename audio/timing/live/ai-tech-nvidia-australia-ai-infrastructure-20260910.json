@@ -1,0 +1,620 @@
+{
+  "version": 3,
+  "duration": 269.14,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 875,
+  "charactersPerMinute": 195.1,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 15.303,
+      "text": "NVIDIA、オーストラリアのデータセンターと提携し、2027年までにAIインフラを最大2 GWまで拡張"
+    },
+    {
+      "key": "dek",
+      "start": 15.303,
+      "end": 54.797,
+      "text": "Nvidiaは、Firmus、CDC、NEXTDC、AirTrunkなどのオーストラリアのクラウドおよびデータセンター事業者と提携し、生成型AIおよび高性能コンピューティングのニーズに対応して、2027年までに最大2 GWのAIコンピューティングインフラストラクチャを構築しています。"
+    },
+    {
+      "key": "body-0",
+      "start": 54.797,
+      "end": 127.486,
+      "text": "Nvidiaは、Firmus、Sharon AI、Iren、Megaport、ResetData、CDC、NEXTDC、AirTrunkなどのオーストラリアのクラウドおよびデータセンター企業とのパートナーシップを拡大し、2027年までに最大2 GWのAI関連インフラストラクチャを構築することを目標としています。参加企業はデータセンターとコンピューティング施設の運用を担当し、NvidiaはDSXプラットフォーム、GPUアクセラレーテッドコンピューティング、ネットワーク、ソフトウェア、および技術的なエコロジーサポートを提供しています。"
+    },
+    {
+      "key": "body-1",
+      "start": 127.486,
+      "end": 194.28,
+      "text": "ロイターは、オーストラリアの既存のデータセンターの負荷は約1.6GWであり、新しいAI建設ラウンドは電力需要が大幅に増加することを意味すると指摘した。Nvidiaは、ローカルコンピューティング機能の拡大により、オーストラリアの企業、大学、研究機関、新興企業が国内でAIモデルをトレーニングおよび展開できるようになると述べたが、大規模データセンターのエネルギー、伝送、冷却、環境コストも、その後の開発にとって重要な制約となるだろう。"
+    },
+    {
+      "key": "why",
+      "start": 194.28,
+      "end": 236.704,
+      "text": "最大2 GWの建設規模は、AI競争がエネルギー集約型インフラストラクチャの段階に入ったことを示しています。このプロジェクトは、GPUの需要に影響を与えるだけでなく、オーストラリアの電力投資、データセンターの設備投資、および現地のAI業界の能力にも影響を与えます。"
+    },
+    {
+      "key": "watch",
+      "start": 236.704,
+      "end": 269.14,
+      "text": "各パートナーの実際の生産時間、GPUの導入数、電力および送電プロジェクトの承認、再生可能エネルギーの供給、およびオーストラリアの電力価格とグリッド容量に対する大規模なAIデータセンターの影響に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.16,
+      "end": 2.39,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "NVIDIA、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.39,
+      "speechEnd": 6.5,
+      "end": 6.73,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "オーストラリアのデータセンターと提携し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.73,
+      "speechEnd": 14.603,
+      "end": 15.303,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "2027年までにAIインフラを最大2 GWまで拡張。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.303,
+      "speechEnd": 17.602,
+      "end": 17.833,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Nvidiaは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.833,
+      "speechEnd": 19.992,
+      "end": 20.222,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Firmus、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.222,
+      "speechEnd": 22.173,
+      "end": 22.403,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "CDC、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.403,
+      "speechEnd": 24.563,
+      "end": 24.793,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "NEXTDC、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.793,
+      "speechEnd": 34.129,
+      "end": 34.359,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "AirTrunkなどのオーストラリアのクラウドおよびデータセンター事業者と提携し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 34.359,
+      "speechEnd": 42.719,
+      "end": 42.949,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "生成型AIおよび高性能コンピューティングのニーズに対応して、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 42.949,
+      "speechEnd": 54.097,
+      "end": 54.797,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "2027年までに最大2 GWのAIコンピューティングインフラストラクチャを構築しています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.797,
+      "speechEnd": 57.096,
+      "end": 57.326,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Nvidiaは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.326,
+      "speechEnd": 59.486,
+      "end": 59.716,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Firmus、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.716,
+      "speechEnd": 62.015,
+      "end": 62.245,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Sharon AI、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.245,
+      "speechEnd": 64.265,
+      "end": 64.495,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Iren、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.495,
+      "speechEnd": 66.725,
+      "end": 66.955,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Megaport、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.955,
+      "speechEnd": 69.324,
+      "end": 69.554,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ResetData、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.554,
+      "speechEnd": 71.505,
+      "end": 71.735,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "CDC、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.735,
+      "speechEnd": 73.894,
+      "end": 74.124,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "NEXTDC、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.124,
+      "speechEnd": 85.202,
+      "end": 85.432,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "AirTrunkなどのオーストラリアのクラウドおよびデータセンター企業とのパートナーシップを拡大し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 85.432,
+      "speechEnd": 93.862,
+      "end": 94.142,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "2027年までに最大2 GWのAI関連インフラストラクチャを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 94.142,
+      "speechEnd": 98.114,
+      "end": 98.614,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "構築することを目標としています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 98.614,
+      "speechEnd": 106.626,
+      "end": 106.856,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "参加企業はデータセンターとコンピューティング施設の運用を担当し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 106.856,
+      "speechEnd": 110.688,
+      "end": 110.918,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "NvidiaはDSXプラットフォーム、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 110.918,
+      "speechEnd": 115.098,
+      "end": 115.328,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "GPUアクセラレーテッドコンピューティング、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 115.328,
+      "speechEnd": 117.418,
+      "end": 117.648,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ネットワーク、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 117.648,
+      "speechEnd": 119.808,
+      "end": 120.038,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ソフトウェア、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 120.038,
+      "speechEnd": 126.866,
+      "end": 127.486,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "および技術的なエコロジーサポートを提供しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 127.486,
+      "speechEnd": 129.646,
+      "end": 129.876,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイターは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 129.876,
+      "speechEnd": 138.166,
+      "end": 138.397,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "オーストラリアの既存のデータセンターの負荷は約1.6GWであり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 138.397,
+      "speechEnd": 143.204,
+      "end": 143.484,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "新しいAI建設ラウンドは電力需要が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 143.484,
+      "speechEnd": 149.057,
+      "end": 149.558,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "大幅に増加することを意味すると指摘した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 149.558,
+      "speechEnd": 151.857,
+      "end": 152.087,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Nvidiaは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 152.087,
+      "speechEnd": 157.173,
+      "end": 157.403,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ローカルコンピューティング機能の拡大により、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 157.403,
+      "speechEnd": 160.329,
+      "end": 160.559,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "オーストラリアの企業、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 160.559,
+      "speechEnd": 162.579,
+      "end": 162.809,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "大学、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 162.809,
+      "speechEnd": 165.039,
+      "end": 165.269,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "研究機関、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 165.269,
+      "speechEnd": 176.347,
+      "end": 176.577,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "新興企業が国内でAIモデルをトレーニングおよび展開できるようになると述べたが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 176.577,
+      "speechEnd": 180.339,
+      "end": 180.569,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "大規模データセンターのエネルギー、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 180.569,
+      "speechEnd": 182.589,
+      "end": 182.819,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "伝送、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 182.819,
+      "speechEnd": 184.84,
+      "end": 185.07,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "冷却、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 185.07,
+      "speechEnd": 187.439,
+      "end": 187.669,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "環境コストも、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 187.669,
+      "speechEnd": 193.66,
+      "end": 194.28,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "その後の開発にとって重要な制約となるだろう。"
+    },
+    {
+      "parentKey": "why",
+      "start": 194.28,
+      "speechEnd": 198.252,
+      "end": 198.752,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 198.752,
+      "speechEnd": 203.071,
+      "end": 203.301,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "最大2 GWの建設規模は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 203.301,
+      "speechEnd": 212.637,
+      "end": 213.137,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "AI競争がエネルギー集約型インフラストラクチャの段階に入ったことを示しています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 213.137,
+      "speechEnd": 216.064,
+      "end": 216.294,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "このプロジェクトは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 216.294,
+      "speechEnd": 221.17,
+      "end": 221.401,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "GPUの需要に影響を与えるだけでなく、"
+    },
+    {
+      "parentKey": "why",
+      "start": 221.401,
+      "speechEnd": 224.745,
+      "end": 224.975,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "オーストラリアの電力投資、"
+    },
+    {
+      "parentKey": "why",
+      "start": 224.975,
+      "speechEnd": 228.18,
+      "end": 228.41,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "データセンターの設備投資、"
+    },
+    {
+      "parentKey": "why",
+      "start": 228.41,
+      "speechEnd": 236.004,
+      "end": 236.704,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "および現地のAI業界の能力にも影響を与えます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 236.704,
+      "speechEnd": 238.794,
+      "end": 239.024,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 239.024,
+      "speechEnd": 243.553,
+      "end": 243.783,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "各パートナーの実際の生産時間、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 243.783,
+      "speechEnd": 246.36,
+      "end": 246.591,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "GPUの導入数、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 246.591,
+      "speechEnd": 251.537,
+      "end": 251.767,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "電力および送電プロジェクトの承認、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 251.767,
+      "speechEnd": 255.39,
+      "end": 255.62,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "再生可能エネルギーの供給、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 255.62,
+      "speechEnd": 268.439,
+      "end": 269.14,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "およびオーストラリアの電力価格とグリッド容量に対する大規模なAIデータセンターの影響に注意してください。"
+    }
+  ]
+}

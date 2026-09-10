@@ -1,0 +1,380 @@
+{
+  "version": 3,
+  "duration": 154.305,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 436,
+  "charactersPerMinute": 169.5,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 19.537,
+      "text": "日本の15歳の学生の中核科目は、読解、数学、科学の分野で初めてOECD諸国の中で第1位にランクされた。"
+    },
+    {
+      "key": "dek",
+      "start": 19.537,
+      "end": 44.856,
+      "text": "最新の国際評価では、日本の学生は3つのコアコンピタンスすべてでOECD加盟国の中で第1位にランクされていますが、教育界は依然として学習ギャップとデジタル環境を懸念しています。"
+    },
+    {
+      "key": "body-0",
+      "start": 44.856,
+      "end": 83.593,
+      "text": "この結果は、日本の基礎教育が特に数学や科学などの基礎分野で高いレベルを維持していることを反映しています。しかし、ランキング自体は、家族の背景、地域のリソース、および学生のメンタルヘルスの違いを完全に反映しているわけではありません。"
+    },
+    {
+      "key": "body-1",
+      "start": 83.593,
+      "end": 115.587,
+      "text": "我が国の教育政策は、近年、デジタル学習、教員の働き方改革、学習支援を推進しており、この結果は、次の段階における改革の有効性と教育資源の配分を見直すための重要な参考となるであろう。"
+    },
+    {
+      "key": "why",
+      "start": 115.587,
+      "end": 138.809,
+      "text": "コアコンピテンシーのパフォーマンスは、長期的な人的資本と業界の競争力に影響を与え、教育改革のベンチマークとしても使用できます。"
+    },
+    {
+      "key": "watch",
+      "start": 138.809,
+      "end": 154.305,
+      "text": "文部科学省の成績内訳、地域・社会経済格差、次期カリキュラム改革の分析に注目する。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 5.504,
+      "end": 5.784,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本の15歳の学生の中核科目は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 5.784,
+      "speechEnd": 7.805,
+      "end": 8.085,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "読解、"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.085,
+      "speechEnd": 10.106,
+      "end": 10.386,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "数学、"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.386,
+      "speechEnd": 18.677,
+      "end": 19.537,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "科学の分野で初めてOECD諸国の中で第1位にランクされた。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.537,
+      "speechEnd": 22.812,
+      "end": 23.092,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "最新の国際評価では、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.092,
+      "speechEnd": 35.843,
+      "end": 36.123,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本の学生は3つのコアコンピタンスすべてでOECD加盟国の中で第1位にランクされていますが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 36.123,
+      "speechEnd": 43.996,
+      "end": 44.856,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "教育界は依然として学習ギャップとデジタル環境を懸念しています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.856,
+      "speechEnd": 47.156,
+      "end": 47.436,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この結果は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.436,
+      "speechEnd": 56.284,
+      "end": 56.624,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "日本の基礎教育が特に数学や科学などの基礎分野で高いレベルを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.624,
+      "speechEnd": 61.014,
+      "end": 61.634,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "維持していることを反映しています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.634,
+      "speechEnd": 63.655,
+      "end": 63.935,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "しかし、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.935,
+      "speechEnd": 66.513,
+      "end": 66.793,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ランキング自体は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.793,
+      "speechEnd": 69.441,
+      "end": 69.721,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "家族の背景、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.721,
+      "speechEnd": 72.159,
+      "end": 72.439,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "地域のリソース、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.439,
+      "speechEnd": 77.108,
+      "end": 77.448,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "および学生のメンタルヘルスの違いを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 77.448,
+      "speechEnd": 82.813,
+      "end": 83.593,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "完全に反映しているわけではありません。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 83.593,
+      "speechEnd": 87.146,
+      "end": 87.426,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "我が国の教育政策は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 87.426,
+      "speechEnd": 89.517,
+      "end": 89.797,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "近年、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 89.797,
+      "speechEnd": 92.235,
+      "end": 92.515,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "デジタル学習、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.515,
+      "speechEnd": 95.581,
+      "end": 95.861,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "教員の働き方改革、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 95.861,
+      "speechEnd": 99.275,
+      "end": 99.555,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "学習支援を推進しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.555,
+      "speechEnd": 101.855,
+      "end": 102.135,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この結果は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.135,
+      "speechEnd": 110.635,
+      "end": 110.975,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "次の段階における改革の有効性と教育資源の配分を見直すため"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 110.975,
+      "speechEnd": 114.807,
+      "end": 115.587,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "の重要な参考となるであろう。"
+    },
+    {
+      "parentKey": "why",
+      "start": 115.587,
+      "speechEnd": 119.559,
+      "end": 120.179,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 120.179,
+      "speechEnd": 124.429,
+      "end": 124.709,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "コアコンピテンシーのパフォーマンスは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 124.709,
+      "speechEnd": 132.095,
+      "end": 132.375,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "長期的な人的資本と業界の競争力に影響を与え、"
+    },
+    {
+      "parentKey": "why",
+      "start": 132.375,
+      "speechEnd": 137.949,
+      "end": 138.809,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "教育改革のベンチマークとしても使用できます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 138.809,
+      "speechEnd": 140.899,
+      "end": 141.18,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 141.18,
+      "speechEnd": 145.012,
+      "end": 145.292,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "文部科学省の成績内訳、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 145.292,
+      "speechEnd": 148.497,
+      "end": 148.777,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "地域・社会経済格差、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 148.777,
+      "speechEnd": 153.445,
+      "end": 154.305,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "次期カリキュラム改革の分析に注目する。"
+    }
+  ]
+}

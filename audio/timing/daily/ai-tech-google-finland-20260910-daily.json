@@ -1,0 +1,370 @@
+{
+  "version": 3,
+  "duration": 158.824,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 510,
+  "charactersPerMinute": 192.7,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 19.396,
+      "text": "Googleは2年間でフィンランドに130億ユーロを投資し、AIデータセンターを拡張し、22年間の原子力発電契約に署名しました"
+    },
+    {
+      "key": "dek",
+      "start": 19.396,
+      "end": 42.679,
+      "text": "Alphabetは、欧州のAIコンピューティングパワーを長期的な低炭素電力に結びつけている。これは、Googleが欧州でこれまでに行った最大の投資である。"
+    },
+    {
+      "key": "body-0",
+      "start": 42.679,
+      "end": 80.101,
+      "text": "Googleは、Gemini、Search、Maps、YouTubeなどのサービスをサポートするために、フィンランド北部にデータセンターを建設および拡張する予定です。低温気候とより安定した送電網は、冷却およびエネルギーコストを削減することができます。"
+    },
+    {
+      "key": "body-1",
+      "start": 80.101,
+      "end": 120.733,
+      "text": "同社はまた、米国外でのGoogle初の原子力契約であるLoviisa原子力発電所の一部を購入する長期契約をFortumと締結した。大規模なAIプラットフォームは、エネルギーがAI競争の中核的なボトルネックとなっていることを反映して、コンピューティングパワーの拡大を電源に結びつけています。"
+    },
+    {
+      "key": "why",
+      "start": 120.733,
+      "end": 140.192,
+      "text": "長期的なエネルギー供給は、資本支出と規制リスクを高めながら、AIサービスの拡大の可視性を高めます。"
+    },
+    {
+      "key": "watch",
+      "start": 140.192,
+      "end": 158.824,
+      "text": "プロジェクトの進捗状況、フィンランドの電力網の承認、Googleの設備投資、ヨーロッパのAIニーズに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.734,
+      "end": 8.014,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Googleは2年間でフィンランドに130億ユーロを投資し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.014,
+      "speechEnd": 11.289,
+      "end": 11.569,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "AIデータセンターを拡張し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 11.569,
+      "speechEnd": 18.536,
+      "end": 19.396,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "22年間の原子力発電契約に署名しました。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.396,
+      "speechEnd": 21.765,
+      "end": 22.045,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Alphabetは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.045,
+      "speechEnd": 26.156,
+      "end": 26.496,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "欧州のAIコンピューティングパワーを"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.496,
+      "speechEnd": 31.583,
+      "end": 32.203,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "長期的な低炭素電力に結びつけている。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.203,
+      "speechEnd": 34.293,
+      "end": 34.573,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "これは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 34.573,
+      "speechEnd": 41.819,
+      "end": 42.679,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "Googleが欧州でこれまでに行った最大の投資である。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.679,
+      "speechEnd": 44.909,
+      "end": 45.189,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Googleは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.189,
+      "speechEnd": 47.349,
+      "end": 47.629,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Gemini、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.629,
+      "speechEnd": 49.719,
+      "end": 49.999,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Search、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.999,
+      "speechEnd": 52.09,
+      "end": 52.37,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Maps、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.37,
+      "speechEnd": 57.735,
+      "end": 58.015,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "YouTubeなどのサービスをサポートするために、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.015,
+      "speechEnd": 61.847,
+      "end": 62.187,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "フィンランド北部にデータセンターを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.187,
+      "speechEnd": 66.437,
+      "end": 67.057,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "建設および拡張する予定です。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.057,
+      "speechEnd": 71.656,
+      "end": 71.936,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "低温気候とより安定した送電網は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.936,
+      "speechEnd": 79.321,
+      "end": 80.101,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "冷却およびエネルギーコストを削減することができます。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 80.101,
+      "speechEnd": 82.401,
+      "end": 82.681,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同社はまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.681,
+      "speechEnd": 100.448,
+      "end": 101.068,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "米国外でのGoogle初の原子力契約であるLoviisa原子力発電所の一部を購入する長期契約をFortumと締結した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.068,
+      "speechEnd": 104.691,
+      "end": 104.971,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "大規模なAIプラットフォームは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.971,
+      "speechEnd": 113.262,
+      "end": 113.542,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "エネルギーがAI競争の中核的なボトルネックとなっていることを反映して、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 113.542,
+      "speechEnd": 119.952,
+      "end": 120.733,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "コンピューティングパワーの拡大を電源に結びつけています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 120.733,
+      "speechEnd": 124.704,
+      "end": 125.324,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 125.324,
+      "speechEnd": 129.017,
+      "end": 129.297,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "長期的なエネルギー供給は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 129.297,
+      "speechEnd": 134.035,
+      "end": 134.315,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "資本支出と規制リスクを高めながら、"
+    },
+    {
+      "parentKey": "why",
+      "start": 134.315,
+      "speechEnd": 139.332,
+      "end": 140.192,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "AIサービスの拡大の可視性を高めます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 140.192,
+      "speechEnd": 142.282,
+      "end": 142.562,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 142.562,
+      "speechEnd": 145.906,
+      "end": 146.187,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "プロジェクトの進捗状況、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 146.187,
+      "speechEnd": 149.531,
+      "end": 149.811,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "フィンランドの電力網の承認、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 149.811,
+      "speechEnd": 152.737,
+      "end": 153.017,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Googleの設備投資、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 153.017,
+      "speechEnd": 157.964,
+      "end": 158.824,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ヨーロッパのAIニーズに注意してください。"
+    }
+  ]
+}

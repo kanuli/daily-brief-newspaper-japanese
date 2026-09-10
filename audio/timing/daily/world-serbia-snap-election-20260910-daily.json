@@ -1,0 +1,300 @@
+{
+  "version": 3,
+  "duration": 137.744,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 393,
+  "charactersPerMinute": 171.2,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 9.572,
+      "text": "ヴチッチ、セルビア議会の10月25日の選挙を解散"
+    },
+    {
+      "key": "dek",
+      "start": 9.572,
+      "end": 25.206,
+      "text": "2年近くにわたる反政府抗議と汚職紛争の後、セルビアのヴチッチ大統領は早期の議会選挙を発表した。"
+    },
+    {
+      "key": "body-0",
+      "start": 25.206,
+      "end": 58.453,
+      "text": "ヴチッチは議会の解散と総選挙の早期実施を発表し、長い街頭抗議を正式な選挙テストに変えた。与党のセルビア進歩党は依然として強力な組織的優位性を持っているが、学生主導の抗議勢力が候補者を支持するか立ち上げるかは不明だ。"
+    },
+    {
+      "key": "body-1",
+      "start": 58.453,
+      "end": 91.565,
+      "text": "ヴチッチ氏は2014年以来、長い間セルビアの政治を支配してきた。この投票は、国内のガバナンスに影響を与えるだけでなく、EU、ロシア、中国の間のセルビアの外交バランスにも影響を与えます。"
+    },
+    {
+      "key": "why",
+      "start": 91.565,
+      "end": 115.348,
+      "text": "セルビアはバルカン半島の重要な国であり、その政治的方向性はEUの拡大、コソボ交渉、地域の安定にも影響を与えます。"
+    },
+    {
+      "key": "watch",
+      "start": 115.348,
+      "end": 137.744,
+      "text": "野党と学生運動が共通のリストを形成しているかどうか、選挙監視の取り決め、Vucicが個人的な立場を調整しているかどうかに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.09,
+      "end": 2.371,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ヴチッチ、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.371,
+      "speechEnd": 8.712,
+      "end": 9.572,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "セルビア議会の10月25日の選挙を解散。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 9.572,
+      "speechEnd": 16.61,
+      "end": 16.89,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "2年近くにわたる反政府抗議と汚職紛争の後、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.89,
+      "speechEnd": 24.346,
+      "end": 25.206,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "セルビアのヴチッチ大統領は早期の議会選挙を発表した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 25.206,
+      "speechEnd": 32.104,
+      "end": 32.384,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ヴチッチは議会の解散と総選挙の早期実施を発表し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 32.384,
+      "speechEnd": 37.959,
+      "end": 38.579,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "長い街頭抗議を正式な選挙テストに変えた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.579,
+      "speechEnd": 48.334,
+      "end": 48.614,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "与党のセルビア進歩党は依然として強力な組織的優位性を持っているが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.614,
+      "speechEnd": 57.673,
+      "end": 58.453,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "学生主導の抗議勢力が候補者を支持するか立ち上げるかは不明だ。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 58.453,
+      "speechEnd": 63.052,
+      "end": 63.332,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ヴチッチ氏は2014年以来、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 63.332,
+      "speechEnd": 69.116,
+      "end": 69.736,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "長い間セルビアの政治を支配してきた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 69.736,
+      "speechEnd": 72.105,
+      "end": 72.385,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この投票は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 72.385,
+      "speechEnd": 78.378,
+      "end": 78.658,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "国内のガバナンスに影響を与えるだけでなく、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 78.658,
+      "speechEnd": 80.679,
+      "end": 80.959,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "EU、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 80.959,
+      "speechEnd": 82.979,
+      "end": 83.26,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロシア、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 83.26,
+      "speechEnd": 90.785,
+      "end": 91.565,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "中国の間のセルビアの外交バランスにも影響を与えます。"
+    },
+    {
+      "parentKey": "why",
+      "start": 91.565,
+      "speechEnd": 95.537,
+      "end": 96.157,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 96.157,
+      "speechEnd": 101.732,
+      "end": 102.012,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "セルビアはバルカン半島の重要な国であり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 102.012,
+      "speechEnd": 107.238,
+      "end": 107.518,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "その政治的方向性はEUの拡大、"
+    },
+    {
+      "parentKey": "why",
+      "start": 107.518,
+      "speechEnd": 109.748,
+      "end": 110.028,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "コソボ交渉、"
+    },
+    {
+      "parentKey": "why",
+      "start": 110.028,
+      "speechEnd": 114.488,
+      "end": 115.348,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "地域の安定にも影響を与えます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 115.348,
+      "speechEnd": 117.438,
+      "end": 117.718,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 117.718,
+      "speechEnd": 125.174,
+      "end": 125.454,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "野党と学生運動が共通のリストを形成しているかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 125.454,
+      "speechEnd": 128.242,
+      "end": 128.522,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "選挙監視の取り決め、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 128.522,
+      "speechEnd": 136.883,
+      "end": 137.744,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "Vucicが個人的な立場を調整しているかどうかに注意してください。"
+    }
+  ]
+}

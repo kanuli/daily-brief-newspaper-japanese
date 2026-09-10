@@ -1,0 +1,320 @@
+{
+  "version": 3,
+  "duration": 141.845,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 411,
+  "charactersPerMinute": 173.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 8.804,
+      "text": "泰國春武里幼稚園教師遭槍殺 44名学童安全疏散"
+    },
+    {
+      "key": "dek",
+      "start": 8.804,
+      "end": 25.965,
+      "text": "容疑者は死者と結婚したとして告発された。この事件は、タイのキャンパスの安全と銃器規制に関する議論を再燃させた。"
+    },
+    {
+      "key": "body-0",
+      "start": 25.965,
+      "end": 58.171,
+      "text": "事件後、地元当局は学校に授業を休止し、心理的支援を手配するよう命じた。警察は容疑者が死亡者と結婚していると考えており、タイのメディアは容疑者が警察官であり、事件はまだ捜査中であると伝えている。"
+    },
+    {
+      "key": "body-1",
+      "start": 58.171,
+      "end": 97.0,
+      "text": "タイではここ数カ月間、学校を巻き込んだ銃乱射事件が相次いでおり、政府は銃規制を見直しており、新しい銃器の許可の付与を一時停止している。この事件は、キャンパスのセキュリティ、銃のライセンス管理、家庭内暴力のリスクを公共政策の焦点に戻しました。"
+    },
+    {
+      "key": "why",
+      "start": 97.0,
+      "end": 118.204,
+      "text": "タイでは、銃の普及と過去の学校暴力事件が懸念されており、政策対応はさらに強化される可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 118.204,
+      "end": 141.845,
+      "text": "容疑者の身元と動機に関する正式な警察の調査、および中央政府がより厳格な銃器とキャンパスのセキュリティ対策を導入するかどうかに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.944,
+      "end": 8.804,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "泰國春武里幼稚園教師遭槍殺 44名学童安全疏散。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 8.804,
+      "speechEnd": 14.658,
+      "end": 15.278,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "容疑者は死者と結婚したとして告発された。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.278,
+      "speechEnd": 17.577,
+      "end": 17.858,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この事件は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.858,
+      "speechEnd": 25.105,
+      "end": 25.965,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "タイのキャンパスの安全と銃器規制に関する議論を再燃させた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 25.965,
+      "speechEnd": 28.055,
+      "end": 28.336,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "事件後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 28.336,
+      "speechEnd": 33.562,
+      "end": 33.842,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "地元当局は学校に授業を休止し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 33.842,
+      "speechEnd": 38.859,
+      "end": 39.479,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "心理的支援を手配するよう命じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.479,
+      "speechEnd": 46.169,
+      "end": 46.449,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "警察は容疑者が死亡者と結婚していると考えており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.449,
+      "speechEnd": 51.745,
+      "end": 52.025,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "タイのメディアは容疑者が警察官であり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.025,
+      "speechEnd": 57.391,
+      "end": 58.171,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "事件はまだ捜査中であると伝えている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 58.171,
+      "speechEnd": 61.795,
+      "end": 62.075,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "タイではここ数カ月間、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 62.075,
+      "speechEnd": 68.207,
+      "end": 68.487,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "学校を巻き込んだ銃乱射事件が相次いでおり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 68.487,
+      "speechEnd": 72.738,
+      "end": 73.018,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "政府は銃規制を見直しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 73.018,
+      "speechEnd": 79.289,
+      "end": 79.91,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "新しい銃器の許可の付与を一時停止している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 79.91,
+      "speechEnd": 82.209,
+      "end": 82.489,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この事件は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.489,
+      "speechEnd": 85.416,
+      "end": 85.696,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "キャンパスのセキュリティ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 85.696,
+      "speechEnd": 88.483,
+      "end": 88.763,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "銃のライセンス管理、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.763,
+      "speechEnd": 96.22,
+      "end": 97.0,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "家庭内暴力のリスクを公共政策の焦点に戻しました。"
+    },
+    {
+      "parentKey": "why",
+      "start": 97.0,
+      "speechEnd": 100.972,
+      "end": 101.592,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 101.592,
+      "speechEnd": 103.683,
+      "end": 103.963,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "タイでは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 103.963,
+      "speechEnd": 110.861,
+      "end": 111.141,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "銃の普及と過去の学校暴力事件が懸念されており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 111.141,
+      "speechEnd": 117.343,
+      "end": 118.204,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "政策対応はさらに強化される可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 118.204,
+      "speechEnd": 120.294,
+      "end": 120.574,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 120.574,
+      "speechEnd": 127.334,
+      "end": 127.614,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "容疑者の身元と動機に関する正式な警察の調査、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 127.614,
+      "speechEnd": 135.976,
+      "end": 136.316,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "および中央政府がより厳格な銃器とキャンパスのセキュリティ対策を"
+    },
+    {
+      "parentKey": "watch",
+      "start": 136.316,
+      "speechEnd": 140.985,
+      "end": 141.845,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "導入するかどうかに注意してください。"
+    }
+  ]
+}
