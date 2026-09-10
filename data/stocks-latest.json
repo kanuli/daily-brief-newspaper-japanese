@@ -1,7 +1,7 @@
 {
   "mode": "TRACKED_STOCK_NEWS",
-  "generatedAt": "2026-09-10T00:40:22.124531+00:00",
-  "lastUpdatedLabel": "2026年9月10日 08:40 HKT",
+  "generatedAt": "2026-09-10T04:20:45.285608+00:00",
+  "lastUpdatedLabel": "2026年9月10日 12:20 HKT",
   "tracked": [
     "GOOG",
     "GLDM",
@@ -652,25 +652,155 @@
       ]
     }
   },
-  "lastCheckedAt": "2026-09-10T00:12:23.739878+00:00",
-  "lastCheckedLabel": "2026年9月10日 08:12 HKT",
-  "collectionStatus": "COMPLETE",
-  "collectionSource": "rolling-news-search+strict-ticker-filter",
+  "lastCheckedAt": "2026-09-10T04:20:28.278735+00:00",
+  "lastCheckedLabel": "2026年9月10日 12:20 HKT",
+  "collectionStatus": "INCOMPLETE",
+  "collectionSource": "rolling-news-search+authoritative-15-symbol-plan",
   "verifiedContentUpdatedAt": "2026-09-09T22:05:33+00:00",
   "freshnessContract": {
-    "generatedAt": "actual completion time of the current verified Stock News publication",
+    "generatedAt": "actual completion time of the current Stock News publication check",
     "verifiedContentUpdatedAt": "time the verified story set last changed",
-    "lastCheckedAt": "source-search time after strict tracked-ticker identity filtering"
+    "lastCheckedAt": "source-search time after authoritative 15-symbol Stock collection",
+    "coverageFreshness": "per-symbol fresh review attempt plus at least one substantive published story",
+    "maxCoverageCheckAgeHours": 3.0,
+    "olderStillCurrentRule": "older verified stories may be retained after a fresh symbol-specific review even when that review returns no newer headline",
+    "schemaRule": "freshness metadata does not add or fabricate non-schema event timestamps on public stories"
   },
-  "discoveryCandidateCount": 104,
-  "discoveredThisCheck": 31,
-  "discoveryFloorMet": true,
+  "discoveryCandidateCount": 84,
+  "discoveredThisCheck": 1,
+  "discoveryFloorMet": false,
   "discoveryUnderfilled": false,
   "rawDiscoveryCandidateCount": 120,
-  "rejectedDiscoveryNoiseCount": 16,
+  "rejectedDiscoveryNoiseCount": 36,
   "verifiedDraftId": "stock-aapl-iphone-duo-20260910-0605-hkt",
   "verificationMode": "EDITOR_PRIMARY_PLUS_INDEPENDENT",
   "publicationSource": "verified-prepublish-draft",
+  "coverageFreshness": {
+    "GOOG": {
+      "lastReviewedAt": "2026-09-10T04:20:28.278735+00:00",
+      "searchHoursAgo": 0.0,
+      "reviewEvidenceFound": true,
+      "hoursAgo": 0.0,
+      "stale": false,
+      "storyCount": 1
+    },
+    "GLDM": {
+      "lastReviewedAt": "2026-09-10T04:20:28.278735+00:00",
+      "searchHoursAgo": 0.0,
+      "reviewEvidenceFound": true,
+      "hoursAgo": 0.0,
+      "stale": false,
+      "storyCount": 1
+    },
+    "ICE": {
+      "lastReviewedAt": "2026-09-10T04:20:28.278735+00:00",
+      "searchHoursAgo": 0.0,
+      "reviewEvidenceFound": true,
+      "hoursAgo": 0.0,
+      "stale": false,
+      "storyCount": 1
+    },
+    "MCD": {
+      "lastReviewedAt": "2026-09-10T04:20:28.278735+00:00",
+      "searchHoursAgo": 0.0,
+      "reviewEvidenceFound": true,
+      "hoursAgo": 0.0,
+      "stale": false,
+      "storyCount": 1
+    },
+    "EMXC": {
+      "lastReviewedAt": "2026-09-10T04:20:28.278735+00:00",
+      "searchHoursAgo": 0.0,
+      "reviewEvidenceFound": true,
+      "hoursAgo": 0.0,
+      "stale": false,
+      "storyCount": 1
+    },
+    "GBTC": {
+      "lastReviewedAt": "2026-09-10T04:20:28.278735+00:00",
+      "searchHoursAgo": 0.0,
+      "reviewEvidenceFound": true,
+      "hoursAgo": 0.0,
+      "stale": false,
+      "storyCount": 1
+    },
+    "DBA": {
+      "lastReviewedAt": "2026-09-10T04:20:28.278735+00:00",
+      "searchHoursAgo": 0.0,
+      "reviewEvidenceFound": true,
+      "hoursAgo": 0.0,
+      "stale": false,
+      "storyCount": 1
+    },
+    "AAPL": {
+      "lastReviewedAt": "2026-09-10T04:20:28.278735+00:00",
+      "searchHoursAgo": 0.0,
+      "reviewEvidenceFound": true,
+      "hoursAgo": 0.0,
+      "stale": false,
+      "storyCount": 1
+    },
+    "EWY": {
+      "lastReviewedAt": "2026-09-10T04:20:28.278735+00:00",
+      "searchHoursAgo": 0.0,
+      "reviewEvidenceFound": true,
+      "hoursAgo": 0.0,
+      "stale": false,
+      "storyCount": 1
+    },
+    "META": {
+      "lastReviewedAt": "2026-09-10T04:20:28.278735+00:00",
+      "searchHoursAgo": 0.0,
+      "reviewEvidenceFound": true,
+      "hoursAgo": 0.0,
+      "stale": false,
+      "storyCount": 1
+    },
+    "MSFT": {
+      "lastReviewedAt": "2026-09-10T04:20:28.278735+00:00",
+      "searchHoursAgo": 0.0,
+      "reviewEvidenceFound": true,
+      "hoursAgo": 0.0,
+      "stale": false,
+      "storyCount": 1
+    },
+    "NVDA": {
+      "lastReviewedAt": "2026-09-10T04:20:28.278735+00:00",
+      "searchHoursAgo": 0.0,
+      "reviewEvidenceFound": true,
+      "hoursAgo": 0.0,
+      "stale": false,
+      "storyCount": 1
+    },
+    "TSM": {
+      "lastReviewedAt": "2026-09-10T04:20:28.278735+00:00",
+      "searchHoursAgo": 0.0,
+      "reviewEvidenceFound": true,
+      "hoursAgo": 0.0,
+      "stale": false,
+      "storyCount": 1
+    },
+    "PLTR": {
+      "lastReviewedAt": "2026-09-10T04:20:28.278735+00:00",
+      "searchHoursAgo": 0.0,
+      "reviewEvidenceFound": true,
+      "hoursAgo": 0.0,
+      "stale": false,
+      "storyCount": 1
+    },
+    "VT": {
+      "lastReviewedAt": "2026-09-10T04:20:28.278735+00:00",
+      "searchHoursAgo": 0.0,
+      "reviewEvidenceFound": true,
+      "hoursAgo": 0.0,
+      "stale": false,
+      "storyCount": 1
+    }
+  },
+  "staleSymbols": [],
+  "qualityGates": {
+    "freshnessGateMet": true
+  },
   "editorSelectionMode": "minimum-guaranteed-edition-per-ticker",
   "sourceTickerStoryCounts": {
     "GOOG": 1,
@@ -710,7 +840,7 @@
   "language": "ja",
   "translationSource": "kanuli/daily-brief-newspaper",
   "sourceFile": "stocks-latest.json",
-  "sourceFingerprint": "1d471623f7eb93569c151b6a71d2904eed4cf936528eb8bf1bcfd735a41d12d8",
+  "sourceFingerprint": "4aa252e40cd486d6fdb05465e10bca2666f451e6efa2ce137ec6047c658c6289",
   "translationSchemaVersion": "ja-cantonese-extra-v2-full-parity",
   "sourceParityMode": "owner-quarantine-v1",
   "translationDegraded": true,
@@ -728,6 +858,6 @@
   "translationDeferredMetadata": [],
   "translationRecoveryMode": "owner-quarantine-v1",
   "translationBudgetSeconds": 90,
-  "translationElapsedSeconds": 263,
+  "translationElapsedSeconds": 217,
   "translationBudgetExhausted": true
 }
