@@ -1,0 +1,340 @@
+{
+  "version": 3,
+  "duration": 171.624,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 521,
+  "charactersPerMinute": 182.1,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 11.035,
+      "text": "アイスランド政府は、来年2月に恒久的な捕鯨禁止を導入する予定です"
+    },
+    {
+      "key": "dek",
+      "start": 11.035,
+      "end": 23.394,
+      "text": "もし議会で可決されれば、世界で商業捕鯨を続ける国はノルウェーと日本だけになる。"
+    },
+    {
+      "key": "body-0",
+      "start": 23.394,
+      "end": 64.708,
+      "text": "アイスランド政府は捕鯨を​​永久に禁止する法案を2027年2月に議会に提出すると発表した。連立与党は議会の過半数の議席を保持している。この法案が可決されれば、アイスランドは現在も商業捕鯨を行っている国のリストから外れ、関連活動を継続できるのはノルウェーと日本だけになる。"
+    },
+    {
+      "key": "body-1",
+      "start": 64.708,
+      "end": 120.657,
+      "text": "アイスランドの捕鯨シーズンは今年6月から9月末頃まで続き、9月9日現在で80頭のナガスクジラが捕獲されている。アイスランド海洋淡水研究所は当初、今年のナガスクジラの頭数を150頭までとすることを推奨していたが、これは前回の推奨より28％減少した。政府の新たな法的方向性は、紛争の焦点が年間割当量から産業を永久に廃止するかどうかに移ることを意味する。"
+    },
+    {
+      "key": "why",
+      "start": 120.657,
+      "end": 147.286,
+      "text": "アイスランドが禁止令を施行すれば、世界の商業捕鯨の状況が変わり、関連政策における国際的な立場でノルウェーと日本がより目立つことになるだろう。"
+    },
+    {
+      "key": "watch",
+      "start": 147.286,
+      "end": 171.624,
+      "text": "アイスランド政府が法案の全文、議会審査のスケジュール、新法の発効前に既存の捕鯨許可がどのように処理されるかについて発表することに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.996,
+      "end": 3.276,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アイスランド政府は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.276,
+      "speechEnd": 10.175,
+      "end": 11.035,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "来年2月に恒久的な捕鯨禁止を導入する予定です。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 11.035,
+      "speechEnd": 14.588,
+      "end": 14.869,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "もし議会で可決されれば、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.869,
+      "speechEnd": 22.533,
+      "end": 23.394,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "世界で商業捕鯨を続ける国はノルウェーと日本だけになる。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 23.394,
+      "speechEnd": 30.152,
+      "end": 30.493,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "アイスランド政府は捕鯨を​​永久に禁止する法案を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 30.493,
+      "speechEnd": 37.042,
+      "end": 37.663,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "2027年2月に議会に提出すると発表した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.663,
+      "speechEnd": 44.212,
+      "end": 44.833,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "連立与党は議会の過半数の議席を保持している。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.833,
+      "speechEnd": 48.595,
+      "end": 48.875,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この法案が可決されれば、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.875,
+      "speechEnd": 56.47,
+      "end": 56.751,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アイスランドは現在も商業捕鯨を行っている国のリストから外れ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.751,
+      "speechEnd": 63.928,
+      "end": 64.708,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "関連活動を継続できるのはノルウェーと日本だけになる。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 64.708,
+      "speechEnd": 68.122,
+      "end": 68.462,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "アイスランドの捕鯨シーズンは"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 68.462,
+      "speechEnd": 73.688,
+      "end": 73.968,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今年6月から9月末頃まで続き、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 73.968,
+      "speechEnd": 81.981,
+      "end": 82.601,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "9月9日現在で80頭のナガスクジラが捕獲されている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.601,
+      "speechEnd": 87.758,
+      "end": 88.038,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アイスランド海洋淡水研究所は当初、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.038,
+      "speechEnd": 96.957,
+      "end": 97.237,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今年のナガスクジラの頭数を150頭までとすることを推奨していたが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.237,
+      "speechEnd": 103.09,
+      "end": 103.71,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "これは前回の推奨より28％減少した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.71,
+      "speechEnd": 108.518,
+      "end": 108.798,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "政府の新たな法的方向性は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.798,
+      "speechEnd": 119.877,
+      "end": 120.657,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "紛争の焦点が年間割当量から産業を永久に廃止するかどうかに移ることを意味する。"
+    },
+    {
+      "parentKey": "why",
+      "start": 120.657,
+      "speechEnd": 124.629,
+      "end": 125.249,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 125.249,
+      "speechEnd": 130.057,
+      "end": 130.337,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アイスランドが禁止令を施行すれば、"
+    },
+    {
+      "parentKey": "why",
+      "start": 130.337,
+      "speechEnd": 135.145,
+      "end": 135.425,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "世界の商業捕鯨の状況が変わり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 135.425,
+      "speechEnd": 142.323,
+      "end": 142.664,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "関連政策における国際的な立場でノルウェーと日本が"
+    },
+    {
+      "parentKey": "why",
+      "start": 142.664,
+      "speechEnd": 146.426,
+      "end": 147.286,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "より目立つことになるだろう。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 147.286,
+      "speechEnd": 149.377,
+      "end": 149.657,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 149.657,
+      "speechEnd": 154.186,
+      "end": 154.466,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アイスランド政府が法案の全文、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 154.466,
+      "speechEnd": 157.532,
+      "end": 157.812,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "議会審査のスケジュール、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 157.812,
+      "speechEnd": 162.62,
+      "end": 162.96,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "新法の発効前に既存の捕鯨許可が"
+    },
+    {
+      "parentKey": "watch",
+      "start": 162.96,
+      "speechEnd": 170.764,
+      "end": 171.624,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "どのように処理されるかについて発表することに注目してください。"
+    }
+  ]
+}

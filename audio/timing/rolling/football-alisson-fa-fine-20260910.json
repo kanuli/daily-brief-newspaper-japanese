@@ -1,0 +1,390 @@
+{
+  "version": 3,
+  "duration": 189.388,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 615,
+  "charactersPerMinute": 194.8,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 11.035,
+      "text": "アリソン・アングリーキックスの代役FAが8,000ポンドの罰金を科されました"
+    },
+    {
+      "key": "dek",
+      "start": 11.035,
+      "end": 32.384,
+      "text": "リバプールゲートマンのアリソン選手は、試合後にノッティンガムフォレスト選手との間で悪い電子スワップを行い、不正行為を認め、標準的なペナルティを受け入れた。"
+    },
+    {
+      "key": "body-0",
+      "start": 32.384,
+      "end": 79.903,
+      "text": "リバプールのゴールキーパーであるアリソンは、先月のプレミアリーグ2の試合とノッティンガム・フォレストで、選手のチャンネル近くの地面に置かれた電子スワップカードをキックして損傷したとして、FAから8,000ポンドの罰金を科されました。FAはフィナーレ後に彼を不適切な行動で告発した。アリソンはその後有罪を認め、標準的な罰則を受け入れた。"
+    },
+    {
+      "key": "body-1",
+      "start": 79.903,
+      "end": 134.73,
+      "text": "この論争は、リバプールが試合が約70分でスコアが1: 1であったときに3回の交代を行う準備ができていたが、4枚目のボールカードの電子カードが準備されていなかったという事実に由来する。森はすぐに境界線を超え、ニコ・ウィリアムスはボックスに侵入した後、アリソンに侵略され、ホームチームは12ヤードで2 -1でリードしました。リバプールは最終的に2 -2に追いつきました。"
+    },
+    {
+      "key": "why",
+      "start": 134.73,
+      "end": 168.876,
+      "text": "インシデント自体は一時停止を伴うものではありませんが、代替プロセスと副業管理が依然として懲戒処分を直接引き起こす可能性があることを反映しています。リバプールは土曜日に自宅でフルハムと対決する予定です。"
+    },
+    {
+      "key": "watch",
+      "start": 168.876,
+      "end": 189.388,
+      "text": "フルハムへの適切な選挙のためのリバプールの取り決めと、クラブまたはアリソンがこの事件に再び公的に対応するかどうかに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 5.574,
+      "end": 5.854,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アリソン・アングリーキックスの代役FAが8,"
+    },
+    {
+      "parentKey": "title",
+      "start": 5.854,
+      "speechEnd": 10.174,
+      "end": 11.035,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "000ポンドの罰金を科されました。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 11.035,
+      "speechEnd": 15.215,
+      "end": 15.495,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "リバプールゲートマンのアリソン選手は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.495,
+      "speechEnd": 24.135,
+      "end": 24.416,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "試合後にノッティンガムフォレスト選手との間で悪い電子スワップを行い、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.416,
+      "speechEnd": 27.133,
+      "end": 27.413,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "不正行為を認め、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.413,
+      "speechEnd": 31.524,
+      "end": 32.384,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "標準的なペナルティを受け入れた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 32.384,
+      "speechEnd": 37.401,
+      "end": 37.681,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "リバプールのゴールキーパーであるアリソンは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.681,
+      "speechEnd": 45.346,
+      "end": 45.626,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "先月のプレミアリーグ2の試合とノッティンガム・フォレストで、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.626,
+      "speechEnd": 52.733,
+      "end": 53.073,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "選手のチャンネル近くの地面に置かれた電子スワップカードを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.073,
+      "speechEnd": 56.348,
+      "end": 56.628,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "キックして損傷したとして、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.628,
+      "speechEnd": 58.927,
+      "end": 59.208,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "FAから8,"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.208,
+      "speechEnd": 63.528,
+      "end": 64.148,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "000ポンドの罰金を科されました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.148,
+      "speechEnd": 70.907,
+      "end": 71.527,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "FAはフィナーレ後に彼を不適切な行動で告発した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.527,
+      "speechEnd": 75.429,
+      "end": 75.709,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アリソンはその後有罪を認め、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.709,
+      "speechEnd": 79.123,
+      "end": 79.903,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "標準的な罰則を受け入れた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 79.903,
+      "speechEnd": 82.203,
+      "end": 82.483,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この論争は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.483,
+      "speechEnd": 88.405,
+      "end": 88.745,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "punctuation-semantic",
+      "text": "リバプールが試合が約70分でスコアが1:"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.745,
+      "speechEnd": 96.131,
+      "end": 96.411,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "1であったときに3回の交代を行う準備ができていたが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 96.411,
+      "speechEnd": 101.707,
+      "end": 102.047,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "4枚目のボールカードの電子カードが"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.047,
+      "speechEnd": 107.133,
+      "end": 107.754,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "準備されていなかったという事実に由来する。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.754,
+      "speechEnd": 111.656,
+      "end": 111.936,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "森はすぐに境界線を超え、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.936,
+      "speechEnd": 116.743,
+      "end": 117.024,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ニコ・ウィリアムスはボックスに侵入した後、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.024,
+      "speechEnd": 119.88,
+      "end": 120.16,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アリソンに侵略され、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.16,
+      "speechEnd": 126.78,
+      "end": 127.4,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ホームチームは12ヤードで2 -1でリードしました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 127.4,
+      "speechEnd": 133.95,
+      "end": 134.73,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "リバプールは最終的に2 -2に追いつきました。"
+    },
+    {
+      "parentKey": "why",
+      "start": 134.73,
+      "speechEnd": 138.702,
+      "end": 139.322,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 139.322,
+      "speechEnd": 146.708,
+      "end": 146.988,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インシデント自体は一時停止を伴うものではありませんが、"
+    },
+    {
+      "parentKey": "why",
+      "start": 146.988,
+      "speechEnd": 152.214,
+      "end": 152.554,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "代替プロセスと副業管理が依然として"
+    },
+    {
+      "parentKey": "why",
+      "start": 152.554,
+      "speechEnd": 160.427,
+      "end": 161.048,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "懲戒処分を直接引き起こす可能性があることを反映しています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 161.048,
+      "speechEnd": 168.015,
+      "end": 168.876,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "リバプールは土曜日に自宅でフルハムと対決する予定です。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 168.876,
+      "speechEnd": 170.966,
+      "end": 171.246,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 171.246,
+      "speechEnd": 177.865,
+      "end": 178.145,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "フルハムへの適切な選挙のためのリバプールの取り決めと、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 178.145,
+      "speechEnd": 188.528,
+      "end": 189.388,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "クラブまたはアリソンがこの事件に再び公的に対応するかどうかに注目してください。"
+    }
+  ]
+}
