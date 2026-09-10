@@ -1,0 +1,420 @@
+{
+  "version": 3,
+  "duration": 204.904,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 705,
+  "charactersPerMinute": 206.4,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 12.567,
+      "text": "マンチェスター・ユナイテッドは今夜ヨーロッパリーグに復帰し、リーグ第1フェーズでサバと対戦する"
+    },
+    {
+      "key": "dek",
+      "start": 12.567,
+      "end": 45.114,
+      "text": "マンチェスター・ユナイテッドは2026年から2027年にかけて、オットーフォでアゼルバイジャンのクラブサバと対戦した。ミハイル・カヴィクは、日曜日のマンシティでの試合が理想的ではなかった前に、短い回復期間があったことを認めている。"
+    },
+    {
+      "key": "body-0",
+      "start": 45.114,
+      "end": 93.826,
+      "text": "マンチェスター・ユナイテッドは今夜、アルトフーで2026/27ヨーロッパリーグのステージでアゼルバイジャンチャンピオンのサバと対戦します。UEFAは9月10日の第1ラウンドにトーナメントが予定されていることを確認し、サバ州もUEFAリーグのステージに初めて登場した。マンチェスター・ユナイテッドの公式トーナメントセンターは、この試合を次の公式トーナメントに挙げています。"
+    },
+    {
+      "key": "body-1",
+      "start": 93.826,
+      "end": 150.095,
+      "text": "監督のマイケル・カヴィックは試合前に、ヨーロッパリーグに復帰することはクラブにとって非常に重要であると述べたが、木曜日のマンチェスター・シティとの試合後の回復時間は理想的ではなかった。マンチェスター・ユナイテッドは今シーズンのリーグ開幕戦3試合で4得点を記録し、エバートンはゲストとして2 -2でプレーしたが、欧州連合初試合の結果に加えて、ローテーションやフィットネスアロケーションも週末の試合展開に直接影響する。"
+    },
+    {
+      "key": "why",
+      "start": 150.095,
+      "end": 182.243,
+      "text": "これはユナイテッドがヨーロッパで最高レベルのクラブ大会に復帰した最初の試合であり、マンチェスター・シティからわずか3日の距離にあり、その後のスタート、ローテーション、試合負荷に影響を与えます。"
+    },
+    {
+      "key": "watch",
+      "start": 182.243,
+      "end": 204.904,
+      "text": "ポジティブな選手名簿、負傷した兵士の最終ステータス、Kaaviqのローテーション、日曜日の試合前にチームが負荷を制御できるかどうかに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.275,
+      "end": 3.555,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "マンチェスター・ユナイテッドは"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.555,
+      "speechEnd": 7.247,
+      "end": 7.477,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今夜ヨーロッパリーグに復帰し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.477,
+      "speechEnd": 11.867,
+      "end": 12.567,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "リーグ第1フェーズでサバと対戦する。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.567,
+      "speechEnd": 15.841,
+      "end": 16.121,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "マンチェスター・ユナイテッドは"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.121,
+      "speechEnd": 21.904,
+      "end": 22.134,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "2026年から2027年にかけて、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.134,
+      "speechEnd": 28.126,
+      "end": 28.626,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "オットーフォでアゼルバイジャンのクラブサバと対戦した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 28.626,
+      "speechEnd": 31.552,
+      "end": 31.782,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ミハイル・カヴィクは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 31.782,
+      "speechEnd": 39.446,
+      "end": 39.676,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日曜日のマンシティでの試合が理想的ではなかった前に、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 39.676,
+      "speechEnd": 44.414,
+      "end": 45.114,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "短い回復期間があったことを認めている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.114,
+      "speechEnd": 49.294,
+      "end": 49.524,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "マンチェスター・ユナイテッドは今夜、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.524,
+      "speechEnd": 62.343,
+      "end": 62.844,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "アルトフーで2026/27ヨーロッパリーグのステージでアゼルバイジャンチャンピオンのサバと対戦します。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.844,
+      "speechEnd": 69.741,
+      "end": 70.021,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "UEFAは9月10日の第1ラウンドにトーナメントが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.021,
+      "speechEnd": 73.992,
+      "end": 74.222,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "予定されていることを確認し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.222,
+      "speechEnd": 80.493,
+      "end": 80.993,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "サバ州もUEFAリーグのステージに初めて登場した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 80.993,
+      "speechEnd": 87.054,
+      "end": 87.284,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "マンチェスター・ユナイテッドの公式トーナメントセンターは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 87.284,
+      "speechEnd": 93.206,
+      "end": 93.826,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "この試合を次の公式トーナメントに挙げています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.826,
+      "speechEnd": 98.912,
+      "end": 99.143,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "監督のマイケル・カヴィックは試合前に、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.143,
+      "speechEnd": 103.044,
+      "end": 103.324,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ヨーロッパリーグに復帰することは"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.324,
+      "speechEnd": 108.828,
+      "end": 109.058,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "クラブにとって非常に重要であると述べたが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.058,
+      "speechEnd": 119.021,
+      "end": 119.521,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "木曜日のマンチェスター・シティとの試合後の回復時間は理想的ではなかった。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 119.521,
+      "speechEnd": 122.796,
+      "end": 123.076,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "マンチェスター・ユナイテッドは"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 123.076,
+      "speechEnd": 130.391,
+      "end": 130.621,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今シーズンのリーグ開幕戦3試合で4得点を記録し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 130.621,
+      "speechEnd": 136.822,
+      "end": 137.052,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "エバートンはゲストとして2 -2でプレーしたが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 137.052,
+      "speechEnd": 141.651,
+      "end": 141.881,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "欧州連合初試合の結果に加えて、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 141.881,
+      "speechEnd": 149.475,
+      "end": 150.095,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ローテーションやフィットネスアロケーションも週末の試合展開に直接影響する。"
+    },
+    {
+      "parentKey": "why",
+      "start": 150.095,
+      "speechEnd": 154.066,
+      "end": 154.566,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 154.566,
+      "speechEnd": 165.574,
+      "end": 165.804,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "これはユナイテッドがヨーロッパで最高レベルのクラブ大会に復帰した最初の試合であり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 165.804,
+      "speechEnd": 172.214,
+      "end": 172.444,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "マンチェスター・シティからわずか3日の距離にあり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 172.444,
+      "speechEnd": 175.092,
+      "end": 175.322,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "その後のスタート、"
+    },
+    {
+      "parentKey": "why",
+      "start": 175.322,
+      "speechEnd": 177.551,
+      "end": 177.781,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ローテーション、"
+    },
+    {
+      "parentKey": "why",
+      "start": 177.781,
+      "speechEnd": 181.543,
+      "end": 182.243,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "試合負荷に影響を与えます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 182.243,
+      "speechEnd": 184.334,
+      "end": 184.564,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 184.564,
+      "speechEnd": 187.49,
+      "end": 187.72,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ポジティブな選手名簿、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 187.72,
+      "speechEnd": 191.552,
+      "end": 191.782,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "負傷した兵士の最終ステータス、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 191.782,
+      "speechEnd": 194.778,
+      "end": 195.008,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Kaaviqのローテーション、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 195.008,
+      "speechEnd": 204.204,
+      "end": 204.904,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "日曜日の試合前にチームが負荷を制御できるかどうかに注意してください。"
+    }
+  ]
+}

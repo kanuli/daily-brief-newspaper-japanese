@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 31.765,
+  "duration": 32.522,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 340.0,
-  "characters": 98,
-  "charactersPerMinute": 185.1,
+  "characters": 110,
+  "charactersPerMinute": 202.9,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.18,
@@ -21,21 +21,21 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 11.456,
-      "text": "NVDA：NVIDIA / Reutersで最新の企業・市場動向情報を確認"
+      "end": 11.662,
+      "text": "NVDA：Reuters / New York Timesで最新の規制・公式開示情報を確認"
     },
     {
       "key": "body-0",
-      "start": 11.456,
-      "end": 31.765,
-      "text": "NVIDIA / Reutersを出典として、企業・市場動向に関する新しい検証済み情報を確認しました。詳細は出典資料の確認後に順次更新します。"
+      "start": 11.662,
+      "end": 32.522,
+      "text": "Reuters / New York Timesを出典として、規制・公式開示に関する新しい検証済み情報を確認しました。詳細は出典資料の確認後に順次更新します。"
     }
   ],
   "semanticUnits": [
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 2.093,
+      "speechEnd": 2.092,
       "end": 2.433,
       "pause": 0.34,
       "intendedPause": 0.34,
@@ -45,38 +45,38 @@
     {
       "parentKey": "title",
       "start": 2.433,
-      "speechEnd": 10.595,
-      "end": 11.456,
+      "speechEnd": 10.801,
+      "end": 11.662,
       "pause": 0.861,
       "intendedPause": 0.86,
       "reason": "punctuation-sentence",
-      "text": "NVIDIA / Reutersで最新の企業・市場動向情報を確認。"
+      "text": "Reuters / New York Timesで最新の規制・公式開示情報を確認。"
     },
     {
       "parentKey": "body-0",
-      "start": 11.456,
-      "speechEnd": 15.782,
-      "end": 16.062,
+      "start": 11.662,
+      "speechEnd": 16.335,
+      "end": 16.615,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "NVIDIA / Reutersを出典として、"
+      "text": "Reuters / New York Timesを出典として、"
     },
     {
       "parentKey": "body-0",
-      "start": 16.062,
-      "speechEnd": 24.084,
-      "end": 24.705,
+      "start": 16.615,
+      "speechEnd": 24.844,
+      "end": 25.465,
       "pause": 0.621,
       "intendedPause": 0.62,
       "reason": "punctuation-sentence",
-      "text": "企業・市場動向に関する新しい検証済み情報を確認しました。"
+      "text": "規制・公式開示に関する新しい検証済み情報を確認しました。"
     },
     {
       "parentKey": "body-0",
-      "start": 24.705,
-      "speechEnd": 30.984,
-      "end": 31.765,
+      "start": 25.465,
+      "speechEnd": 31.742,
+      "end": 32.522,
       "pause": 0.781,
       "intendedPause": 0.78,
       "reason": "punctuation-sentence",
