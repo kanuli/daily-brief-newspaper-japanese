@@ -1,0 +1,490 @@
+{
+  "version": 3,
+  "duration": 225.672,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 657,
+  "charactersPerMinute": 174.7,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.866,
+      "text": "米国で9/11 25周年を記念して犠牲者の家族が約3,000人の犠牲者の名前を読んだ"
+    },
+    {
+      "key": "dek",
+      "start": 14.866,
+      "end": 44.221,
+      "text": "追悼式はニューヨーク、ペンタゴン、ペンシルベニアで開催された。ニューヨーク消防署によると、その日に死亡した343人の消防士に加えて、600人以上の消防士が関連する病気で死亡したという。"
+    },
+    {
+      "key": "body-0",
+      "start": 44.221,
+      "end": 105.141,
+      "text": "米国は金曜日、9/11テロ攻撃から25周年を記念しました。ロイターは、ニューヨークのワールドトレードセンターの敷地であるペンタゴンとペンシルベニア州シャンクスビルが別々のイベントを開催し、犠牲者の家族が1993年のニューヨークのワールドトレードセンター爆破事件で2,977人の9/11犠牲者と6人の死者の名前を読み上げ、2機の旅客機が塔に衝突し、その年に塔が崩壊したときの沈黙を観察したと報じた。"
+    },
+    {
+      "key": "body-1",
+      "start": 105.141,
+      "end": 170.718,
+      "text": "この記念式典では、救急隊員の長期的な医療費にも焦点が当てられました。ニューヨーク消防署は攻撃の日に343人のメンバーを失い、救助に関与した600人以上の消防士が9/11関連の病気で死亡しました。この事件はまた、米国の国土安全保障、テロ対策政策、海外軍事作戦、イスラム社会に対する社会の態度を大きく変え、25年経った今でも、米国の公共生活における重要な歴史的分水嶺となっています。"
+    },
+    {
+      "key": "why",
+      "start": 170.718,
+      "end": 198.818,
+      "text": "25周年は記念日であるだけでなく、救援活動従事者の健康、国家安全保障システム、外交政策、社会関係に対する攻撃の長期的な影響を思い出させます。"
+    },
+    {
+      "key": "watch",
+      "start": 198.818,
+      "end": 225.672,
+      "text": "ニューヨーク、ワシントン、シャンクスビルでのフォローアップイベントや、9/11関連の医療と補償プログラムに関する最新の連邦政府と地方自治体の取り決めにご注目ください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 9.476,
+      "end": 9.756,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国で9/11 25周年を記念して犠牲者の家族が約3,"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.756,
+      "speechEnd": 14.006,
+      "end": 14.866,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "000人の犠牲者の名前を読んだ。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.866,
+      "speechEnd": 17.653,
+      "end": 17.933,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "追悼式はニューヨーク、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.933,
+      "speechEnd": 20.162,
+      "end": 20.442,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ペンタゴン、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.442,
+      "speechEnd": 23.996,
+      "end": 24.616,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ペンシルベニアで開催された。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.616,
+      "speechEnd": 27.89,
+      "end": 28.17,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ニューヨーク消防署によると、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 28.17,
+      "speechEnd": 35.486,
+      "end": 35.766,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "その日に死亡した343人の消防士に加えて、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 35.766,
+      "speechEnd": 43.36,
+      "end": 44.221,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "600人以上の消防士が関連する病気で死亡したという。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.221,
+      "speechEnd": 46.798,
+      "end": 47.079,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国は金曜日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.079,
+      "speechEnd": 53.976,
+      "end": 54.596,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "9/11テロ攻撃から25周年を記念しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.596,
+      "speechEnd": 56.756,
+      "end": 57.036,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイターは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.036,
+      "speechEnd": 69.856,
+      "end": 70.136,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ニューヨークのワールドトレードセンターの敷地であるペンタゴンとペンシルベニア州シャンクスビルが別々のイベントを開催し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.136,
+      "speechEnd": 81.423,
+      "end": 81.703,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "犠牲者の家族が1993年のニューヨークのワールドトレードセンター爆破事件で2,"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 81.703,
+      "speechEnd": 86.789,
+      "end": 86.969,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "977人の9/11犠牲者と"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 86.969,
+      "speechEnd": 89.059,
+      "end": 89.239,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "6人"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 89.239,
+      "speechEnd": 92.793,
+      "end": 93.073,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "の死者の名前を読み上げ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 93.073,
+      "speechEnd": 97.253,
+      "end": 97.533,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "2機の旅客機が塔に衝突し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 97.533,
+      "speechEnd": 104.361,
+      "end": 105.141,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "その年に塔が崩壊したときの沈黙を観察したと報じた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 105.141,
+      "speechEnd": 108.207,
+      "end": 108.487,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この記念式典では、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.487,
+      "speechEnd": 115.942,
+      "end": 116.562,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "救急隊員の長期的な医療費にも焦点が当てられました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 116.562,
+      "speechEnd": 120.464,
+      "end": 120.644,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "ニューヨーク消防署は攻撃の日に"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.644,
+      "speechEnd": 123.222,
+      "end": 123.402,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "343人"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 123.402,
+      "speechEnd": 126.258,
+      "end": 126.538,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "のメンバーを失い、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 126.538,
+      "speechEnd": 132.461,
+      "end": 132.801,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "救助に関与した600人以上の消防士が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 132.801,
+      "speechEnd": 138.026,
+      "end": 138.646,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "9/11関連の病気で死亡しました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 138.646,
+      "speechEnd": 141.294,
+      "end": 141.574,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この事件はまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 141.574,
+      "speechEnd": 145.475,
+      "end": 145.756,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国の国土安全保障、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 145.756,
+      "speechEnd": 148.473,
+      "end": 148.753,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "テロ対策政策、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 148.753,
+      "speechEnd": 151.47,
+      "end": 151.75,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "海外軍事作戦、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 151.75,
+      "speechEnd": 157.533,
+      "end": 157.813,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イスラム社会に対する社会の態度を大きく変え、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 157.813,
+      "speechEnd": 161.366,
+      "end": 161.646,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "25年経った今でも、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 161.646,
+      "speechEnd": 169.937,
+      "end": 170.718,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "米国の公共生活における重要な歴史的分水嶺となっています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 170.718,
+      "speechEnd": 174.689,
+      "end": 175.309,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 175.309,
+      "speechEnd": 180.674,
+      "end": 180.954,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "25周年は記念日であるだけでなく、"
+    },
+    {
+      "parentKey": "why",
+      "start": 180.954,
+      "speechEnd": 184.368,
+      "end": 184.648,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "救援活動従事者の健康、"
+    },
+    {
+      "parentKey": "why",
+      "start": 184.648,
+      "speechEnd": 188.132,
+      "end": 188.412,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "国家安全保障システム、"
+    },
+    {
+      "parentKey": "why",
+      "start": 188.412,
+      "speechEnd": 190.85,
+      "end": 191.13,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "外交政策、"
+    },
+    {
+      "parentKey": "why",
+      "start": 191.13,
+      "speechEnd": 197.958,
+      "end": 198.818,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "社会関係に対する攻撃の長期的な影響を思い出させます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 198.818,
+      "speechEnd": 200.908,
+      "end": 201.189,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 201.189,
+      "speechEnd": 203.279,
+      "end": 203.559,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ニューヨーク、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 203.559,
+      "speechEnd": 205.649,
+      "end": 205.929,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ワシントン、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 205.929,
+      "speechEnd": 210.249,
+      "end": 210.529,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "シャンクスビルでのフォローアップイベントや、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 210.529,
+      "speechEnd": 224.812,
+      "end": 225.672,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "9/11関連の医療と補償プログラムに関する最新の連邦政府と地方自治体の取り決めにご注目ください。"
+    }
+  ]
+}
