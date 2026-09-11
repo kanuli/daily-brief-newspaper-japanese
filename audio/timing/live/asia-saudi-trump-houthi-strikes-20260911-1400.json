@@ -1,0 +1,560 @@
+{
+  "version": 3,
+  "duration": 282.201,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 874,
+  "charactersPerMinute": 185.8,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 15.273,
+      "text": "サウジ皇太子が米軍にフーシ派を攻撃するよう要請したと伝えられている。トランプ大統領は直接介入を拒否"
+    },
+    {
+      "key": "dek",
+      "start": 15.273,
+      "end": 60.262,
+      "text": "アクシオスの報道によると、サウジアラビアのムハンマド皇太子は木曜日にトランプ米大統領に２回電話し、イエメンのフーシ派武装勢力に対する軍事攻撃を米政府に要請した。その後、米国当局者らは、米国政府は現時点では戦争に直接参加するつもりはなく、サウジアラビアへの支援を強化するつもりだと述べた。"
+    },
+    {
+      "key": "body-0",
+      "start": 60.262,
+      "end": 130.746,
+      "text": "サウジアラビアのムハンマド皇太子は、木曜日にドナルド・トランプ大統領に2回電話をかけ、イエメンのフーシ派軍に対する軍事攻撃を要求した。これは、紅海沿岸沿いの最近の進展と、サウジアラビアの都市やエネルギー施設に対するより直接的な脅威を理由にしていると、Axiosは金曜日に報告し、この問題に精通している人々を引用した。ロイターは、トランプ大統領は要請を受け入れておらず、ワシントンにはフーシ派に対して直接軍事作戦を開始する計画はないと述べた米国当局者を引用してフォローアップした。"
+    },
+    {
+      "key": "body-1",
+      "start": 130.746,
+      "end": 194.133,
+      "text": "この事件は、紅海の水路と国内の安全保障に対するサウジアラビアの懸念が著しく高まっていることを反映している。前日、サウジアラビアの公式通信社はまた、サウジアラビアの民間施設やエネルギー施設に対するフーシ派の攻撃を非難している英国政府を引用し、この作戦が紅海とマンダレー海峡の船舶を脅かしていると指摘した。米側はサウジアラビアへの支援と調整を増やす傾向があるが、新たな直接軍事戦線の開設を一時的に避けている。"
+    },
+    {
+      "key": "why",
+      "start": 194.133,
+      "end": 242.986,
+      "text": "マンダレー海峡は世界の重要な海運の咽喉であり、フーシ派の支配や攻撃能力がさらに拡大されると、紅海海運、サウジアラビアのエネルギー輸出、保険コスト、世界の石油価格に影響を及ぼす可能性があります。米国が直接介入しないという立場を変えるかどうかは、地域の軍事エスカレーションのリスクに直接影響します。"
+    },
+    {
+      "key": "watch",
+      "start": 242.986,
+      "end": 282.201,
+      "text": "米国が防空、諜報、海上護衛の支援を強化するかどうか、サウジアラビアが単独で、または地域の同盟国と共にフーシ派に対する軍事作戦を拡大するかどうか、そしてフーシ派が次に紅海の船舶とサウジアラビアの本土を攻撃するかどうかに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 9.614,
+      "end": 10.114,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "サウジ皇太子が米軍にフーシ派を攻撃するよう要請したと伝えられている。"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.114,
+      "speechEnd": 14.573,
+      "end": 15.273,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "トランプ大統領は直接介入を拒否。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.273,
+      "speechEnd": 18.478,
+      "end": 18.708,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "アクシオスの報道によると、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.708,
+      "speechEnd": 24.351,
+      "end": 24.631,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "サウジアラビアのムハンマド皇太子は"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.631,
+      "speechEnd": 30.066,
+      "end": 30.296,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "木曜日にトランプ米大統領に２回電話し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 30.296,
+      "speechEnd": 38.865,
+      "end": 39.365,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "イエメンのフーシ派武装勢力に対する軍事攻撃を米政府に要請した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 39.365,
+      "speechEnd": 41.455,
+      "end": 41.685,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "その後、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 41.685,
+      "speechEnd": 44.611,
+      "end": 44.841,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国当局者らは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 44.841,
+      "speechEnd": 52.783,
+      "end": 53.013,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国政府は現時点では戦争に直接参加するつもりはなく、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 53.013,
+      "speechEnd": 59.562,
+      "end": 60.262,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "サウジアラビアへの支援を強化するつもりだと述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.262,
+      "speechEnd": 66.045,
+      "end": 66.275,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "サウジアラビアのムハンマド皇太子は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.275,
+      "speechEnd": 72.894,
+      "end": 73.124,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "木曜日にドナルド・トランプ大統領に2回電話をかけ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.124,
+      "speechEnd": 79.533,
+      "end": 80.033,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "イエメンのフーシ派軍に対する軍事攻撃を要求した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 80.033,
+      "speechEnd": 82.123,
+      "end": 82.353,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "これは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 82.353,
+      "speechEnd": 86.882,
+      "end": 87.112,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "紅海沿岸沿いの最近の進展と、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 87.112,
+      "speechEnd": 97.632,
+      "end": 97.862,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "サウジアラビアの都市やエネルギー施設に対するより直接的な脅威を理由にしていると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 97.862,
+      "speechEnd": 101.485,
+      "end": 101.715,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Axiosは金曜日に報告し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 101.715,
+      "speechEnd": 107.01,
+      "end": 107.51,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "この問題に精通している人々を引用した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 107.51,
+      "speechEnd": 109.669,
+      "end": 109.899,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイターは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 109.899,
+      "speechEnd": 115.194,
+      "end": 115.424,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "トランプ大統領は要請を受け入れておらず、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 115.424,
+      "speechEnd": 123.227,
+      "end": 123.507,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ワシントンにはフーシ派に対して直接軍事作戦を開始する計画は"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 123.507,
+      "speechEnd": 130.126,
+      "end": 130.746,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ないと述べた米国当局者を引用してフォローアップした。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 130.746,
+      "speechEnd": 133.045,
+      "end": 133.275,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この事件は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 133.275,
+      "speechEnd": 141.635,
+      "end": 141.915,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "紅海の水路と国内の安全保障に対するサウジアラビアの懸念が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 141.915,
+      "speechEnd": 146.723,
+      "end": 147.223,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "著しく高まっていることを反映している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 147.223,
+      "speechEnd": 149.243,
+      "end": 149.473,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "前日、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 149.473,
+      "speechEnd": 154.141,
+      "end": 154.371,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "サウジアラビアの公式通信社はまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 154.371,
+      "speechEnd": 163.01,
+      "end": 163.29,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "サウジアラビアの民間施設やエネルギー施設に対するフーシ派の攻撃を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 163.29,
+      "speechEnd": 168.097,
+      "end": 168.327,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "非難している英国政府を引用し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 168.327,
+      "speechEnd": 174.458,
+      "end": 174.738,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "この作戦が紅海とマンダレー海峡の船舶を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 174.738,
+      "speechEnd": 177.943,
+      "end": 178.443,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "脅かしていると指摘した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 178.443,
+      "speechEnd": 186.385,
+      "end": 186.615,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米側はサウジアラビアへの支援と調整を増やす傾向があるが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 186.615,
+      "speechEnd": 193.512,
+      "end": 194.133,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "新たな直接軍事戦線の開設を一時的に避けている。"
+    },
+    {
+      "parentKey": "why",
+      "start": 194.133,
+      "speechEnd": 198.104,
+      "end": 198.604,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 198.604,
+      "speechEnd": 205.71,
+      "end": 205.94,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "マンダレー海峡は世界の重要な海運の咽喉であり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 205.94,
+      "speechEnd": 212.21,
+      "end": 212.44,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "フーシ派の支配や攻撃能力がさらに拡大されると、"
+    },
+    {
+      "parentKey": "why",
+      "start": 212.44,
+      "speechEnd": 214.67,
+      "end": 214.9,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "紅海海運、"
+    },
+    {
+      "parentKey": "why",
+      "start": 214.9,
+      "speechEnd": 218.592,
+      "end": 218.822,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "サウジアラビアのエネルギー輸出、"
+    },
+    {
+      "parentKey": "why",
+      "start": 218.822,
+      "speechEnd": 221.052,
+      "end": 221.282,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "保険コスト、"
+    },
+    {
+      "parentKey": "why",
+      "start": 221.282,
+      "speechEnd": 228.388,
+      "end": 228.888,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "世界の石油価格に影響を及ぼす可能性があります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 228.888,
+      "speechEnd": 235.576,
+      "end": 235.806,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国が直接介入しないという立場を変えるかどうかは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 235.806,
+      "speechEnd": 242.285,
+      "end": 242.986,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "地域の軍事エスカレーションのリスクに直接影響します。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 242.986,
+      "speechEnd": 245.076,
+      "end": 245.306,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 245.306,
+      "speechEnd": 247.744,
+      "end": 247.974,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国が防空、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 247.974,
+      "speechEnd": 249.995,
+      "end": 250.225,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "諜報、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 250.225,
+      "speechEnd": 255.171,
+      "end": 255.401,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "海上護衛の支援を強化するかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 255.401,
+      "speechEnd": 258.745,
+      "end": 258.975,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "サウジアラビアが単独で、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 258.975,
+      "speechEnd": 268.799,
+      "end": 269.029,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "または地域の同盟国と共にフーシ派に対する軍事作戦を拡大するかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 269.029,
+      "speechEnd": 276.553,
+      "end": 276.833,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "そしてフーシ派が次に紅海の船舶とサウジアラビアの本土を"
+    },
+    {
+      "parentKey": "watch",
+      "start": 276.833,
+      "speechEnd": 281.501,
+      "end": 282.201,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "攻撃するかどうかに注意してください。"
+    }
+  ]
+}
