@@ -1,0 +1,480 @@
+{
+  "version": 3,
+  "duration": 216.895,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 642,
+  "charactersPerMinute": 177.6,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 13.074,
+      "text": "フィリピンのフェリー火災が捜索救助を続け、少なくとも5人が死亡、84人が行方不明"
+    },
+    {
+      "key": "dek",
+      "start": 13.074,
+      "end": 37.446,
+      "text": "MVジューン・アスターはパラワン近郊で燃えた後も喫煙しており、救助隊は金曜日に行方不明者の捜索を続けた。当局は43人を救助し、事故の原因はまだ調査されていない。"
+    },
+    {
+      "key": "body-0",
+      "start": 37.446,
+      "end": 90.88,
+      "text": "フィリピン沿岸警備隊と他の救助隊は、金曜日にMV June Asterの火災の捜索と救助を再開しました。マニラからパラワンケルンに向かっていたこの船は、乗客117人と乗組員17人を乗せていた。当局は、元の乗客のうち2人が実際には乗船していないことを確認した後、行方不明者の数を84人に調整した。少なくとも5人が死亡し、43人が救助されました。"
+    },
+    {
+      "key": "body-1",
+      "start": 90.88,
+      "end": 146.306,
+      "text": "焼却されたフェリーは依然として濃い煙を出しており、高温と船体の傾斜により乗船が困難です。沿岸警備隊は多数の船舶とダイバーを派遣しており、軍、地元の漁師、民間のボートが捜索に参加しています。生存者の多くは、火災が短期間で急速に広がり、一部の人々は海に飛び込むことを余儀なくされたと述べた。事故の原因はまだ不明であり、海事規制当局は調査を行っている。"
+    },
+    {
+      "key": "why",
+      "start": 146.306,
+      "end": 181.951,
+      "text": "それでも多くの乗客が行方不明の場合、捜索救助の結果が犠牲者の最終的な規模を直接決定します。事故調査は、オペレーター、船舶検査、国内フェリー安全規制のさらなる見直しを引き起こす可能性もあります。"
+    },
+    {
+      "key": "watch",
+      "start": 181.951,
+      "end": 216.895,
+      "text": "捜索救助隊が本船に安全に乗船して水中捜索を拡大できるかどうか、行方不明者や死亡者の数が再び調整されるかどうか、火災の原因、船舶の耐航性、運航責任に関するフィリピン海事局の予備調査結果に注意を払ってください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.598,
+      "end": 4.828,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "フィリピンのフェリー火災が捜索救助を続け、"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.828,
+      "speechEnd": 8.521,
+      "end": 8.751,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "少なくとも5人が死亡、"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.751,
+      "speechEnd": 12.374,
+      "end": 13.074,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "84人が行方不明。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.074,
+      "speechEnd": 20.25,
+      "end": 20.48,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "MVジューン・アスターはパラワン近郊で燃えた後も喫煙しており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.48,
+      "speechEnd": 26.75,
+      "end": 27.25,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "救助隊は金曜日に行方不明者の捜索を続けた。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.25,
+      "speechEnd": 31.5,
+      "end": 31.73,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "当局は43人を救助し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 31.73,
+      "speechEnd": 36.746,
+      "end": 37.446,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "事故の原因はまだ調査されていない。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.446,
+      "speechEnd": 42.463,
+      "end": 42.693,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "フィリピン沿岸警備隊と他の救助隊は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.693,
+      "speechEnd": 51.332,
+      "end": 51.832,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "金曜日にMV June Asterの火災の捜索と救助を再開しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.832,
+      "speechEnd": 57.405,
+      "end": 57.635,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "マニラからパラワンケルンに向かっていたこの船は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.635,
+      "speechEnd": 63.697,
+      "end": 64.197,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "乗客117人と乗組員17人を乗せていた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.197,
+      "speechEnd": 66.287,
+      "end": 66.517,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "当局は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.517,
+      "speechEnd": 70.767,
+      "end": 71.047,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "元の乗客のうち2人が実際には"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.047,
+      "speechEnd": 75.297,
+      "end": 75.527,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "乗船していないことを確認した後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.527,
+      "speechEnd": 81.658,
+      "end": 82.158,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "行方不明者の数を84人に調整した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 82.158,
+      "speechEnd": 86.129,
+      "end": 86.359,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "少なくとも5人が死亡し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 86.359,
+      "speechEnd": 90.26,
+      "end": 90.88,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "43人が救助されました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.88,
+      "speechEnd": 97.36,
+      "end": 97.59,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "焼却されたフェリーは依然として濃い煙を出しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.59,
+      "speechEnd": 103.233,
+      "end": 103.733,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "高温と船体の傾斜により乗船が困難です。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.733,
+      "speechEnd": 110.282,
+      "end": 110.512,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "沿岸警備隊は多数の船舶とダイバーを派遣しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 110.512,
+      "speechEnd": 112.463,
+      "end": 112.693,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "軍、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.693,
+      "speechEnd": 115.062,
+      "end": 115.292,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "地元の漁師、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.292,
+      "speechEnd": 119.89,
+      "end": 120.39,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "民間のボートが捜索に参加しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.39,
+      "speechEnd": 123.107,
+      "end": 123.337,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "生存者の多くは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 123.337,
+      "speechEnd": 127.587,
+      "end": 127.817,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "火災が短期間で急速に広がり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 127.817,
+      "speechEnd": 135.62,
+      "end": 136.12,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "一部の人々は海に飛び込むことを余儀なくされたと述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 136.12,
+      "speechEnd": 140.649,
+      "end": 140.879,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "事故の原因はまだ不明であり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 140.879,
+      "speechEnd": 145.686,
+      "end": 146.306,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "海事規制当局は調査を行っている。"
+    },
+    {
+      "parentKey": "why",
+      "start": 146.306,
+      "speechEnd": 150.277,
+      "end": 150.777,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 150.777,
+      "speechEnd": 156.072,
+      "end": 156.302,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "それでも多くの乗客が行方不明の場合、"
+    },
+    {
+      "parentKey": "why",
+      "start": 156.302,
+      "speechEnd": 163.757,
+      "end": 164.257,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "捜索救助の結果が犠牲者の最終的な規模を直接決定します。"
+    },
+    {
+      "parentKey": "why",
+      "start": 164.257,
+      "speechEnd": 166.695,
+      "end": 166.925,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "事故調査は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 166.925,
+      "speechEnd": 169.155,
+      "end": 169.385,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "オペレーター、"
+    },
+    {
+      "parentKey": "why",
+      "start": 169.385,
+      "speechEnd": 171.475,
+      "end": 171.705,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "船舶検査、"
+    },
+    {
+      "parentKey": "why",
+      "start": 171.705,
+      "speechEnd": 177.209,
+      "end": 177.489,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "国内フェリー安全規制のさらなる見直しを"
+    },
+    {
+      "parentKey": "why",
+      "start": 177.489,
+      "speechEnd": 181.251,
+      "end": 181.951,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "引き起こす可能性もあります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 181.951,
+      "speechEnd": 184.041,
+      "end": 184.271,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 184.271,
+      "speechEnd": 193.468,
+      "end": 193.698,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "捜索救助隊が本船に安全に乗船して水中捜索を拡大できるかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 193.698,
+      "speechEnd": 201.431,
+      "end": 201.661,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "行方不明者や死亡者の数が再び調整されるかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 201.661,
+      "speechEnd": 204.1,
+      "end": 204.33,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "火災の原因、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 204.33,
+      "speechEnd": 206.838,
+      "end": 207.068,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "船舶の耐航性、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 207.068,
+      "speechEnd": 216.195,
+      "end": 216.895,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "運航責任に関するフィリピン海事局の予備調査結果に注意を払ってください。"
+    }
+  ]
+}

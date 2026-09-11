@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 224.235,
+  "duration": 29.257,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 340.0,
-  "characters": 709,
-  "charactersPerMinute": 189.7,
+  "characters": 94,
+  "charactersPerMinute": 192.8,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.18,
@@ -21,510 +21,66 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 18.701,
-      "text": "Meta が、メールの送信、旅行の予約、アプリ間での支払いを実行できるパーソナル AI エージェントである Muse を発表"
-    },
-    {
-      "key": "dek",
-      "start": 18.701,
-      "end": 57.604,
-      "text": "Meta は 9 月 8 日に Muse パーソナル AI エージェントを正式に開始しました。第 1 フェーズは、電子メール、カレンダー、ショッピング、支払い、スマート ホームなどのサービスに接続できる独立した Muse アプリと WhatsApp を通じて米国で利用可能です。"
+      "end": 10.132,
+      "text": "META：Meta / Reutersで最新の製品・イベント情報を確認"
     },
     {
       "key": "body-0",
-      "start": 57.604,
-      "end": 116.683,
-      "text": "Meta は、パーソナル AI エージェント Muse のリリースを 9 月 8 日に発表しました。同社は、Muse はユーザーの承認があればブラウザを開いたり、フォームに記入したり、電子メールを送信したり、旅行を予約したり、買い物をしたり、支払いを処理したり、その他のタスクを行うことができ、独立した Muse アプリまたは WhatsApp を通じて使用できると述べました。最初のフェーズは米国で開始されます。"
-    },
-    {
-      "key": "body-1",
-      "start": 116.683,
-      "end": 173.879,
-      "text": "このリリースでは、Meta の消費者 AI が質問に答えることからアクションを実行できるエージェントベースの製品に移行し、WhatsApp とその AI エコシステムに新しい使用シナリオが追加されます。その一方で、アプリ間のデータ アクセスが広範になると、プライバシー、セキュリティ、エラー制御の要件が高まります。これらの要因は、Muse が製品の発売を継続的な使用と収益に変えることができるかどうかに影響します。"
-    },
-    {
-      "key": "why",
-      "start": 173.879,
-      "end": 201.908,
-      "text": "WhatsApp などの高頻度ポータルでエージェントベースの AI が安定して使用できれば、Meta は AI 製品の粘着性を高め、新たな有料サービスの領域を生み出すことができます。"
-    },
-    {
-      "key": "watch",
-      "start": 201.908,
-      "end": 224.235,
-      "text": "米国での初期導入率、セキュリティ インシデント、サードパーティ アプリの統合、サブスクリプション プラン、Muse の拡張スケジュールに注意してください。"
+      "start": 10.132,
+      "end": 29.257,
+      "text": "Meta / Reutersを出典として、製品・イベントに関する新しい検証済み情報を確認しました。詳細は出典資料の確認後に順次更新します。"
     }
   ],
   "semanticUnits": [
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 2.16,
-      "end": 2.44,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "Meta が、"
+      "speechEnd": 2.093,
+      "end": 2.434,
+      "pause": 0.341,
+      "intendedPause": 0.34,
+      "reason": "punctuation-semantic",
+      "text": "META："
     },
     {
       "parentKey": "title",
-      "start": 2.44,
-      "speechEnd": 4.809,
-      "end": 5.089,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "メールの送信、"
-    },
-    {
-      "parentKey": "title",
-      "start": 5.089,
-      "speechEnd": 7.528,
-      "end": 7.808,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "旅行の予約、"
-    },
-    {
-      "parentKey": "title",
-      "start": 7.808,
-      "speechEnd": 17.841,
-      "end": 18.701,
-      "pause": 0.86,
+      "start": 2.434,
+      "speechEnd": 9.271,
+      "end": 10.132,
+      "pause": 0.861,
       "intendedPause": 0.86,
       "reason": "punctuation-sentence",
-      "text": "アプリ間での支払いを実行できるパーソナル AI エージェントである Muse を発表。"
+      "text": "Meta / Reutersで最新の製品・イベント情報を確認。"
     },
     {
-      "parentKey": "dek",
-      "start": 18.701,
-      "speechEnd": 29.57,
-      "end": 30.19,
-      "pause": 0.62,
+      "parentKey": "body-0",
+      "start": 10.132,
+      "speechEnd": 13.83,
+      "end": 14.11,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Meta / Reutersを出典として、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 14.11,
+      "speechEnd": 21.576,
+      "end": 22.197,
+      "pause": 0.621,
       "intendedPause": 0.62,
       "reason": "punctuation-sentence",
-      "text": "Meta は 9 月 8 日に Muse パーソナル AI エージェントを正式に開始しました。"
-    },
-    {
-      "parentKey": "dek",
-      "start": 30.19,
-      "speechEnd": 32.977,
-      "end": 33.257,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "第 1 フェーズは、"
-    },
-    {
-      "parentKey": "dek",
-      "start": 33.257,
-      "speechEnd": 35.487,
-      "end": 35.767,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "電子メール、"
-    },
-    {
-      "parentKey": "dek",
-      "start": 35.767,
-      "speechEnd": 37.997,
-      "end": 38.277,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "カレンダー、"
-    },
-    {
-      "parentKey": "dek",
-      "start": 38.277,
-      "speechEnd": 40.506,
-      "end": 40.786,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "ショッピング、"
-    },
-    {
-      "parentKey": "dek",
-      "start": 40.786,
-      "speechEnd": 42.807,
-      "end": 43.087,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "支払い、"
-    },
-    {
-      "parentKey": "dek",
-      "start": 43.087,
-      "speechEnd": 56.743,
-      "end": 57.604,
-      "pause": 0.86,
-      "intendedPause": 0.86,
-      "reason": "punctuation-sentence",
-      "text": "スマート ホームなどのサービスに接続できる独立した Muse アプリと WhatsApp を通じて米国で利用可能です。"
+      "text": "製品・イベントに関する新しい検証済み情報を確認しました。"
     },
     {
       "parentKey": "body-0",
-      "start": 57.604,
-      "speechEnd": 59.763,
-      "end": 60.044,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "Meta は、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 60.044,
-      "speechEnd": 65.06,
-      "end": 65.4,
-      "pause": 0.34,
-      "intendedPause": 0.34,
-      "reason": "semantic-boundary",
-      "text": "パーソナル AI エージェント Muse のリリースを"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 65.4,
-      "speechEnd": 70.208,
-      "end": 70.828,
-      "pause": 0.62,
-      "intendedPause": 0.62,
-      "reason": "punctuation-sentence",
-      "text": "9 月 8 日に発表しました。"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 70.828,
-      "speechEnd": 72.918,
-      "end": 73.198,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "同社は、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 73.198,
-      "speechEnd": 79.19,
-      "end": 79.47,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "Muse はユーザーの承認があればブラウザを開いたり、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 79.47,
-      "speechEnd": 82.327,
-      "end": 82.607,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "フォームに記入したり、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 82.607,
-      "speechEnd": 85.951,
-      "end": 86.231,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "電子メールを送信したり、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 86.231,
-      "speechEnd": 89.158,
-      "end": 89.438,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "旅行を予約したり、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 89.438,
-      "speechEnd": 92.016,
-      "end": 92.296,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "買い物をしたり、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 92.296,
-      "speechEnd": 95.222,
-      "end": 95.502,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "支払いを処理したり、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 95.502,
-      "speechEnd": 99.892,
-      "end": 100.172,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "その他のタスクを行うことができ、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 100.172,
-      "speechEnd": 104.004,
-      "end": 104.344,
-      "pause": 0.34,
-      "intendedPause": 0.34,
-      "reason": "semantic-boundary",
-      "text": "独立した Muse アプリまたは"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 104.344,
-      "speechEnd": 110.197,
-      "end": 110.817,
-      "pause": 0.62,
-      "intendedPause": 0.62,
-      "reason": "punctuation-sentence",
-      "text": "WhatsApp を通じて使用できると述べました。"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 110.817,
-      "speechEnd": 115.903,
-      "end": 116.683,
-      "pause": 0.78,
+      "start": 22.197,
+      "speechEnd": 28.476,
+      "end": 29.257,
+      "pause": 0.781,
       "intendedPause": 0.78,
       "reason": "punctuation-sentence",
-      "text": "最初のフェーズは米国で開始されます。"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 116.683,
-      "speechEnd": 119.331,
-      "end": 119.611,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "このリリースでは、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 119.611,
-      "speechEnd": 122.955,
-      "end": 123.295,
-      "pause": 0.34,
-      "intendedPause": 0.34,
-      "reason": "semantic-boundary",
-      "text": "Meta の消費者 AI が"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 123.295,
-      "speechEnd": 132.214,
-      "end": 132.494,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "質問に答えることからアクションを実行できるエージェントベースの製品に移行し、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 132.494,
-      "speechEnd": 141.273,
-      "end": 141.893,
-      "pause": 0.62,
-      "intendedPause": 0.62,
-      "reason": "punctuation-sentence",
-      "text": "WhatsApp とその AI エコシステムに新しい使用シナリオが追加されます。"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 141.893,
-      "speechEnd": 144.262,
-      "end": 144.542,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "その一方で、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 144.542,
-      "speechEnd": 149.28,
-      "end": 149.56,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "アプリ間のデータ アクセスが広範になると、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 149.56,
-      "speechEnd": 151.859,
-      "end": 152.139,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "プライバシー、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 152.139,
-      "speechEnd": 154.299,
-      "end": 154.579,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "セキュリティ、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 154.579,
-      "speechEnd": 158.411,
-      "end": 159.032,
-      "pause": 0.62,
-      "intendedPause": 0.62,
-      "reason": "punctuation-sentence",
-      "text": "エラー制御の要件が高まります。"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 159.032,
-      "speechEnd": 161.61,
-      "end": 161.89,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "これらの要因は、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 161.89,
-      "speechEnd": 169.205,
-      "end": 169.546,
-      "pause": 0.34,
-      "intendedPause": 0.34,
-      "reason": "semantic-boundary",
-      "text": "Muse が製品の発売を継続的な使用と収益に変えることが"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 169.546,
-      "speechEnd": 173.099,
-      "end": 173.879,
-      "pause": 0.78,
-      "intendedPause": 0.78,
-      "reason": "punctuation-sentence",
-      "text": "できるかどうかに影響します。"
-    },
-    {
-      "parentKey": "why",
-      "start": 173.879,
-      "speechEnd": 177.851,
-      "end": 178.471,
-      "pause": 0.62,
-      "intendedPause": 0.62,
-      "reason": "punctuation-sentence",
-      "text": "このニュースの重要なポイントです。"
-    },
-    {
-      "parentKey": "why",
-      "start": 178.471,
-      "speechEnd": 188.783,
-      "end": 189.063,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "WhatsApp などの高頻度ポータルでエージェントベースの AI が安定して使用できれば、"
-    },
-    {
-      "parentKey": "why",
-      "start": 189.063,
-      "speechEnd": 193.94,
-      "end": 194.22,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "Meta は AI 製品の粘着性を高め、"
-    },
-    {
-      "parentKey": "why",
-      "start": 194.22,
-      "speechEnd": 201.048,
-      "end": 201.908,
-      "pause": 0.86,
-      "intendedPause": 0.86,
-      "reason": "punctuation-sentence",
-      "text": "新たな有料サービスの領域を生み出すことができます。"
-    },
-    {
-      "parentKey": "watch",
-      "start": 201.908,
-      "speechEnd": 203.999,
-      "end": 204.279,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "今後は、"
-    },
-    {
-      "parentKey": "watch",
-      "start": 204.279,
-      "speechEnd": 207.693,
-      "end": 207.973,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "米国での初期導入率、"
-    },
-    {
-      "parentKey": "watch",
-      "start": 207.973,
-      "speechEnd": 210.899,
-      "end": 211.179,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "セキュリティ インシデント、"
-    },
-    {
-      "parentKey": "watch",
-      "start": 211.179,
-      "speechEnd": 214.733,
-      "end": 215.013,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "サードパーティ アプリの統合、"
-    },
-    {
-      "parentKey": "watch",
-      "start": 215.013,
-      "speechEnd": 218.009,
-      "end": 218.289,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "サブスクリプション プラン、"
-    },
-    {
-      "parentKey": "watch",
-      "start": 218.289,
-      "speechEnd": 223.375,
-      "end": 224.235,
-      "pause": 0.86,
-      "intendedPause": 0.86,
-      "reason": "punctuation-sentence",
-      "text": "Muse の拡張スケジュールに注意してください。"
+      "text": "詳細は出典資料の確認後に順次更新します。"
     }
   ]
 }

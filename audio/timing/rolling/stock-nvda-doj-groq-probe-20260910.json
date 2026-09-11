@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 227.736,
+  "duration": 32.522,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 340.0,
-  "characters": 727,
-  "charactersPerMinute": 191.5,
+  "characters": 110,
+  "charactersPerMinute": 202.9,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.18,
@@ -21,460 +21,66 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 16.122,
-      "text": "米国司法省、独占禁止法の審査を回避するかどうかに焦点を当て、NVIDIA と Groq のライセンス契約を調査"
-    },
-    {
-      "key": "dek",
-      "start": 16.122,
-      "end": 50.293,
-      "text": "ロイター通信は、ニューヨーク・タイムズの報道として、米国司法省がNVIDIAとAIチップ新興企業Groqとの約170億ドルのライセンス契約を調査し、その取引構造が正式な合併審査を回避することを意図しているかどうかを評価していると報じた。"
+      "end": 11.662,
+      "text": "NVDA：Reuters / New York Timesで最新の規制・公式開示情報を確認"
     },
     {
       "key": "body-0",
-      "start": 50.293,
-      "end": 109.246,
-      "text": "ロイターは、9 月 10 日、ニューヨーク タイムズ紙の報道として、NVIDIA が昨年 12 月に AI チップの新興企業 Groq と締結した約 170 億ドルの技術ライセンス契約と、NVIDIA による複数の Groq 幹部の雇用について、米国司法省が調査を行っていると報じました。捜査の焦点は、この取引が独占的ライセンスの形で行われ、そうでなければ発動された可能性のある独占禁止法の監視を回避したかどうかである。"
-    },
-    {
-      "key": "body-1",
-      "start": 109.246,
-      "end": 178.297,
-      "text": "NVIDIAは、この取り決めは米国のイノベーションシステムの運用を反映しているが、司法省の正式な情報要請は規制上のリスクが実質的な検討段階に入ったことを意味すると述べた。この事件は、取引が覆されることや、会社が違法と判断されることを意味するものではありません。もっと直接的な意味合いは、NVIDIA が将来、ライセンス供与、人材の吸収、または戦略的投資を通じて AI エコシステムを拡大する際に、より大きな規制上の摩擦に直面する可能性があるということです。"
-    },
-    {
-      "key": "why",
-      "start": 178.297,
-      "end": 206.177,
-      "text": "NVIDIA は世界的な AI コンピューティングの中核サプライヤーとなっており、競合他社のテクノロジーや人材が関与する主要な取引は厳しい監視の対象となる可能性が高くなります。"
-    },
-    {
-      "key": "watch",
-      "start": 206.177,
-      "end": 227.736,
-      "text": "司法省からの情報のフォローアップ要求、正式な執行措置、Groq テクノロジーの統合方法、NVIDIA からのさらなる開示に注目してください。"
+      "start": 11.662,
+      "end": 32.522,
+      "text": "Reuters / New York Timesを出典として、規制・公式開示に関する新しい検証済み情報を確認しました。詳細は出典資料の確認後に順次更新します。"
     }
   ],
   "semanticUnits": [
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 2.439,
-      "end": 2.719,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "米国司法省、"
+      "speechEnd": 2.092,
+      "end": 2.433,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "punctuation-semantic",
+      "text": "NVDA："
     },
     {
       "parentKey": "title",
-      "start": 2.719,
-      "speechEnd": 9.407,
-      "end": 9.687,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "独占禁止法の審査を回避するかどうかに焦点を当て、"
-    },
-    {
-      "parentKey": "title",
-      "start": 9.687,
-      "speechEnd": 15.261,
-      "end": 16.122,
-      "pause": 0.86,
+      "start": 2.433,
+      "speechEnd": 10.801,
+      "end": 11.662,
+      "pause": 0.861,
       "intendedPause": 0.86,
       "reason": "punctuation-sentence",
-      "text": "NVIDIA と Groq のライセンス契約を調査。"
-    },
-    {
-      "parentKey": "dek",
-      "start": 16.122,
-      "speechEnd": 18.63,
-      "end": 18.91,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "ロイター通信は、"
-    },
-    {
-      "parentKey": "dek",
-      "start": 18.91,
-      "speechEnd": 22.742,
-      "end": 23.022,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "ニューヨーク・タイムズの報道として、"
-    },
-    {
-      "parentKey": "dek",
-      "start": 23.022,
-      "speechEnd": 30.686,
-      "end": 30.866,
-      "pause": 0.18,
-      "intendedPause": 0.18,
-      "reason": "before-key-number",
-      "text": "米国司法省がNVIDIAとAIチップ新興企業Groqとの約"
-    },
-    {
-      "parentKey": "dek",
-      "start": 30.866,
-      "speechEnd": 33.444,
-      "end": 33.624,
-      "pause": 0.18,
-      "intendedPause": 0.18,
-      "reason": "key-number",
-      "text": "170億ドル"
-    },
-    {
-      "parentKey": "dek",
-      "start": 33.624,
-      "speechEnd": 37.387,
-      "end": 37.667,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "のライセンス契約を調査し、"
-    },
-    {
-      "parentKey": "dek",
-      "start": 37.667,
-      "speechEnd": 43.798,
-      "end": 44.138,
-      "pause": 0.34,
-      "intendedPause": 0.34,
-      "reason": "semantic-boundary",
-      "text": "その取引構造が正式な合併審査を回避することを"
-    },
-    {
-      "parentKey": "dek",
-      "start": 44.138,
-      "speechEnd": 49.433,
-      "end": 50.293,
-      "pause": 0.86,
-      "intendedPause": 0.86,
-      "reason": "punctuation-sentence",
-      "text": "意図しているかどうかを評価していると報じた。"
+      "text": "Reuters / New York Timesで最新の規制・公式開示情報を確認。"
     },
     {
       "parentKey": "body-0",
-      "start": 50.293,
-      "speechEnd": 52.453,
-      "end": 52.733,
+      "start": 11.662,
+      "speechEnd": 16.335,
+      "end": 16.615,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "ロイターは、"
+      "text": "Reuters / New York Timesを出典として、"
     },
     {
       "parentKey": "body-0",
-      "start": 52.733,
-      "speechEnd": 55.66,
-      "end": 55.94,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "9 月 10 日、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 55.94,
-      "speechEnd": 59.911,
-      "end": 60.191,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "ニューヨーク タイムズ紙の報道として、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 60.191,
-      "speechEnd": 74.753,
-      "end": 75.033,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "NVIDIA が昨年 12 月に AI チップの新興企業 Groq と締結した約 170 億ドルの技術ライセンス契約と、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 75.033,
-      "speechEnd": 81.443,
-      "end": 81.723,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "NVIDIA による複数の Groq 幹部の雇用について、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 81.723,
-      "speechEnd": 87.715,
-      "end": 88.335,
-      "pause": 0.62,
+      "start": 16.615,
+      "speechEnd": 24.844,
+      "end": 25.465,
+      "pause": 0.621,
       "intendedPause": 0.62,
       "reason": "punctuation-sentence",
-      "text": "米国司法省が調査を行っていると報じました。"
+      "text": "規制・公式開示に関する新しい検証済み情報を確認しました。"
     },
     {
       "parentKey": "body-0",
-      "start": 88.335,
-      "speechEnd": 90.913,
-      "end": 91.193,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "捜査の焦点は、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 91.193,
-      "speechEnd": 96.767,
-      "end": 97.047,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "この取引が独占的ライセンスの形で行われ、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 97.047,
-      "speechEnd": 104.781,
-      "end": 105.121,
-      "pause": 0.34,
-      "intendedPause": 0.34,
-      "reason": "semantic-boundary",
-      "text": "そうでなければ発動された可能性のある独占禁止法の監視を"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 105.121,
-      "speechEnd": 108.466,
-      "end": 109.246,
-      "pause": 0.78,
+      "start": 25.465,
+      "speechEnd": 31.742,
+      "end": 32.522,
+      "pause": 0.781,
       "intendedPause": 0.78,
       "reason": "punctuation-sentence",
-      "text": "回避したかどうかである。"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 109.246,
-      "speechEnd": 111.545,
-      "end": 111.825,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "NVIDIAは、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 111.825,
-      "speechEnd": 120.465,
-      "end": 120.745,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "この取り決めは米国のイノベーションシステムの運用を反映しているが、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 120.745,
-      "speechEnd": 126.667,
-      "end": 127.007,
-      "pause": 0.34,
-      "intendedPause": 0.34,
-      "reason": "semantic-boundary",
-      "text": "司法省の正式な情報要請は規制上のリスクが"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 127.007,
-      "speechEnd": 133.626,
-      "end": 134.246,
-      "pause": 0.62,
-      "intendedPause": 0.62,
-      "reason": "punctuation-sentence",
-      "text": "実質的な検討段階に入ったことを意味すると述べた。"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 134.246,
-      "speechEnd": 136.546,
-      "end": 136.826,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "この事件は、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 136.826,
-      "speechEnd": 139.891,
-      "end": 140.171,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "取引が覆されることや、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 140.171,
-      "speechEnd": 147.766,
-      "end": 148.386,
-      "pause": 0.62,
-      "intendedPause": 0.62,
-      "reason": "punctuation-sentence",
-      "text": "会社が違法と判断されることを意味するものではありません。"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 148.386,
-      "speechEnd": 152.148,
-      "end": 152.428,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "もっと直接的な意味合いは、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 152.428,
-      "speechEnd": 155.424,
-      "end": 155.705,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "NVIDIA が将来、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 155.705,
-      "speechEnd": 158.213,
-      "end": 158.493,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "ライセンス供与、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 158.493,
-      "speechEnd": 161.001,
-      "end": 161.281,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "人材の吸収、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 161.281,
-      "speechEnd": 169.015,
-      "end": 169.295,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "または戦略的投資を通じて AI エコシステムを拡大する際に、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 169.295,
-      "speechEnd": 177.517,
-      "end": 178.297,
-      "pause": 0.78,
-      "intendedPause": 0.78,
-      "reason": "punctuation-sentence",
-      "text": "より大きな規制上の摩擦に直面する可能性があるということです。"
-    },
-    {
-      "parentKey": "why",
-      "start": 178.297,
-      "speechEnd": 182.268,
-      "end": 182.888,
-      "pause": 0.62,
-      "intendedPause": 0.62,
-      "reason": "punctuation-sentence",
-      "text": "このニュースの重要なポイントです。"
-    },
-    {
-      "parentKey": "why",
-      "start": 182.888,
-      "speechEnd": 192.016,
-      "end": 192.296,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "NVIDIA は世界的な AI コンピューティングの中核サプライヤーとなっており、"
-    },
-    {
-      "parentKey": "why",
-      "start": 192.296,
-      "speechEnd": 196.546,
-      "end": 196.886,
-      "pause": 0.34,
-      "intendedPause": 0.34,
-      "reason": "semantic-boundary",
-      "text": "競合他社のテクノロジーや人材が"
-    },
-    {
-      "parentKey": "why",
-      "start": 196.886,
-      "speechEnd": 205.316,
-      "end": 206.177,
-      "pause": 0.86,
-      "intendedPause": 0.86,
-      "reason": "punctuation-sentence",
-      "text": "関与する主要な取引は厳しい監視の対象となる可能性が高くなります。"
-    },
-    {
-      "parentKey": "watch",
-      "start": 206.177,
-      "speechEnd": 208.267,
-      "end": 208.547,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "今後は、"
-    },
-    {
-      "parentKey": "watch",
-      "start": 208.547,
-      "speechEnd": 213.354,
-      "end": 213.635,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "司法省からの情報のフォローアップ要求、"
-    },
-    {
-      "parentKey": "watch",
-      "start": 213.635,
-      "speechEnd": 216.352,
-      "end": 216.632,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "正式な執行措置、"
-    },
-    {
-      "parentKey": "watch",
-      "start": 216.632,
-      "speechEnd": 220.464,
-      "end": 220.744,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "Groq テクノロジーの統合方法、"
-    },
-    {
-      "parentKey": "watch",
-      "start": 220.744,
-      "speechEnd": 226.875,
-      "end": 227.736,
-      "pause": 0.86,
-      "intendedPause": 0.86,
-      "reason": "punctuation-sentence",
-      "text": "NVIDIA からのさらなる開示に注目してください。"
+      "text": "詳細は出典資料の確認後に順次更新します。"
     }
   ]
 }

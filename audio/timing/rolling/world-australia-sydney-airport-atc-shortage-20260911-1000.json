@@ -1,0 +1,520 @@
+{
+  "version": 3,
+  "duration": 242.233,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 719,
+  "charactersPerMinute": 178.1,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 10.056,
+      "text": "シドニー空港航空交通管制官人手不足朝のフライトの遅延とキャンセル"
+    },
+    {
+      "key": "dek",
+      "start": 10.056,
+      "end": 39.677,
+      "text": "オーストラリア航空サービスはかつて航空交通流管理を実施していたが、後にその措置は解除された。最近の滑走路やタクシーエリアの危険の数々により、航空管制の疲労と人員の問題が再び注目を集めています。"
+    },
+    {
+      "key": "body-0",
+      "start": 39.677,
+      "end": 98.141,
+      "text": "オーストラリアのシドニー空港は金曜朝、航空管制官不足のため航空交通流管理措置を実施し、安全を維持するために飛行の流れを制限した。ロイター通信は、この事件により複数の飛行機に遅延が発生し、少なくとも6便が欠航になったと報じた。影響を受けるサービスにはカンタス航空も含まれます。関連する交通規制は現地時間午前8時15分に解除されたが、その後も若干の遅れが続いた。"
+    },
+    {
+      "key": "body-1",
+      "start": 98.141,
+      "end": 159.784,
+      "text": "この混乱は、シドニー空港の航空管制の人員レベルへの圧力を改めて浮き彫りにしている。オーストラリア航空は以前、人手不足の場合は安全を確保するために交通量を減らすと認めており、予備の航空管制官を追加し、スケジュールを改善し、訓練を拡大している。最近、空港では航空機の衝突寸前や運航上の危険が多数発生しています。オーストラリア運輸安全局は、共通の安全要素があるかどうかを調査している。"
+    },
+    {
+      "key": "why",
+      "start": 159.784,
+      "end": 200.129,
+      "text": "このインシデントは単なる 1 便の遅延ではなく、人員、疲労管理、運航の回復力の面でオーストラリアの主要な航空拠点に対する構造的圧力を再び反映しています。欠品が続けば、繁忙期のキャンセルや遅延のリスクが再発する可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 200.129,
+      "end": 242.233,
+      "text": "本日、オーストラリア上院委員会に出席する際に、エアサービスオーストラリアの経営陣が新しいシドニーの航空交通管制担当者、変更または予備の人員措置を提案するかどうかに注意を払い、また、オーストラリア運輸安全局の最近の多くの危険な状況の調査結果にも注意を払います。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 9.196,
+      "end": 10.056,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "シドニー空港航空交通管制官人手不足朝のフライトの遅延とキャンセル。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 10.056,
+      "speechEnd": 13.331,
+      "end": 13.671,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "オーストラリア航空サービスは"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.671,
+      "speechEnd": 19.593,
+      "end": 19.873,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "かつて航空交通流管理を実施していたが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.873,
+      "speechEnd": 23.426,
+      "end": 24.046,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "後にその措置は解除された。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.046,
+      "speechEnd": 30.804,
+      "end": 31.084,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "最近の滑走路やタクシーエリアの危険の数々により、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 31.084,
+      "speechEnd": 38.817,
+      "end": 39.677,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "航空管制の疲労と人員の問題が再び注目を集めています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.677,
+      "speechEnd": 44.206,
+      "end": 44.486,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "オーストラリアのシドニー空港は金曜朝、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.486,
+      "speechEnd": 53.125,
+      "end": 53.405,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "航空管制官不足のため航空交通流管理措置を実施し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.405,
+      "speechEnd": 59.884,
+      "end": 60.504,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "安全を維持するために飛行の流れを制限した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.504,
+      "speechEnd": 63.012,
+      "end": 63.292,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.292,
+      "speechEnd": 69.562,
+      "end": 69.842,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この事件により複数の飛行機に遅延が発生し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.842,
+      "speechEnd": 75.277,
+      "end": 75.897,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "少なくとも6便が欠航になったと報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.897,
+      "speechEnd": 81.819,
+      "end": 82.439,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "影響を受けるサービスにはカンタス航空も含まれます。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 82.439,
+      "speechEnd": 87.315,
+      "end": 87.495,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "関連する交通規制は現地時間午前"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 87.495,
+      "speechEnd": 89.516,
+      "end": 89.696,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "8時"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 89.696,
+      "speechEnd": 93.04,
+      "end": 93.32,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "15分に解除されたが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 93.32,
+      "speechEnd": 97.361,
+      "end": 98.141,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "その後も若干の遅れが続いた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 98.141,
+      "speechEnd": 100.51,
+      "end": 100.79,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この混乱は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 100.79,
+      "speechEnd": 107.269,
+      "end": 107.609,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "シドニー空港の航空管制の人員レベルへの圧力を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.609,
+      "speechEnd": 110.814,
+      "end": 111.434,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "改めて浮き彫りにしている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.434,
+      "speechEnd": 114.848,
+      "end": 115.128,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "オーストラリア航空は以前、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.128,
+      "speechEnd": 120.771,
+      "end": 121.111,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "人手不足の場合は安全を確保するため"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.111,
+      "speechEnd": 125.43,
+      "end": 125.71,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "に交通量を減らすと認めており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 125.71,
+      "speechEnd": 130.239,
+      "end": 130.519,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "予備の航空管制官を追加し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 130.519,
+      "speechEnd": 133.584,
+      "end": 133.864,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "スケジュールを改善し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 133.864,
+      "speechEnd": 136.79,
+      "end": 137.411,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "訓練を拡大している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 137.411,
+      "speechEnd": 139.431,
+      "end": 139.711,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "最近、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 139.711,
+      "speechEnd": 148.489,
+      "end": 149.109,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "空港では航空機の衝突寸前や運航上の危険が多数発生しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 149.109,
+      "speechEnd": 152.662,
+      "end": 152.943,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "オーストラリア運輸安全局は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 152.943,
+      "speechEnd": 159.004,
+      "end": 159.784,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "共通の安全要素があるかどうかを調査している。"
+    },
+    {
+      "parentKey": "why",
+      "start": 159.784,
+      "speechEnd": 163.755,
+      "end": 164.375,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 164.375,
+      "speechEnd": 170.506,
+      "end": 170.786,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "このインシデントは単なる 1 便の遅延ではなく、"
+    },
+    {
+      "parentKey": "why",
+      "start": 170.786,
+      "speechEnd": 172.806,
+      "end": 173.086,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "人員、"
+    },
+    {
+      "parentKey": "why",
+      "start": 173.086,
+      "speechEnd": 175.246,
+      "end": 175.526,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "疲労管理、"
+    },
+    {
+      "parentKey": "why",
+      "start": 175.526,
+      "speechEnd": 187.649,
+      "end": 188.269,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "運航の回復力の面でオーストラリアの主要な航空拠点に対する構造的圧力を再び反映しています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 188.269,
+      "speechEnd": 190.707,
+      "end": 190.987,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "欠品が続けば、"
+    },
+    {
+      "parentKey": "why",
+      "start": 190.987,
+      "speechEnd": 195.307,
+      "end": 195.647,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "繁忙期のキャンセルや遅延のリスクが"
+    },
+    {
+      "parentKey": "why",
+      "start": 195.647,
+      "speechEnd": 199.269,
+      "end": 200.129,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "再発する可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 200.129,
+      "speechEnd": 202.22,
+      "end": 202.5,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 202.5,
+      "speechEnd": 204.52,
+      "end": 204.8,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "本日、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 204.8,
+      "speechEnd": 209.956,
+      "end": 210.236,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "オーストラリア上院委員会に出席する際に、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 210.236,
+      "speechEnd": 214.346,
+      "end": 214.686,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "エアサービスオーストラリアの経営陣が"
+    },
+    {
+      "parentKey": "watch",
+      "start": 214.686,
+      "speechEnd": 220.329,
+      "end": 220.609,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "新しいシドニーの航空交通管制担当者、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 220.609,
+      "speechEnd": 228.273,
+      "end": 228.553,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "変更または予備の人員措置を提案するかどうかに注意を払い、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 228.553,
+      "speechEnd": 230.573,
+      "end": 230.853,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "また、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 230.853,
+      "speechEnd": 241.373,
+      "end": 242.233,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "オーストラリア運輸安全局の最近の多くの危険な状況の調査結果にも注意を払います。"
+    }
+  ]
+}

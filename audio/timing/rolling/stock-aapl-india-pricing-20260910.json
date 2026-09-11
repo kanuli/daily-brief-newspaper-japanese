@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 218.619,
+  "duration": 32.235,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 340.0,
-  "characters": 666,
-  "charactersPerMinute": 182.8,
+  "characters": 106,
+  "charactersPerMinute": 197.3,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.18,
@@ -21,480 +21,66 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 19.189,
-      "text": "Appleの新しいiPhoneの価格がインドで大幅に上昇し、一部のモデルでは最大約41％の値上がりが見られている"
-    },
-    {
-      "key": "dek",
-      "start": 19.189,
-      "end": 52.854,
-      "text": "ロイター通信は9月10日、インドにおけるアップルの新世代iPhoneの価格上昇が米国よりも大幅に高かったと報じた。インドの Apple の公式ウェブサイトによると、iPhone Duo 256GB の価格は 299,900 ルピーです。"
+      "end": 11.659,
+      "text": "AAPL：Apple India / Reutersで最新の企業・市場動向情報を確認"
     },
     {
       "key": "body-0",
-      "start": 52.854,
-      "end": 107.555,
-      "text": "ロイター通信は9月10日、アップルがインドで新世代iPhoneを発売した後、一部モデルの価格を大幅に値上げしたと報じた。一部の構成では、前世代と比較して最大約 41% 増加しました。 Apple のインド公式 Web サイトによると、iPhone Duo 256GB の価格は 299,900 ルピーからであり、iPhone 18 Pro シリーズもかなり高いハイエンド価格帯となっています。"
-    },
-    {
-      "key": "body-1",
-      "start": 107.555,
-      "end": 170.067,
-      "text": "インドはアップルにとって重要な需要成長市場であり、iPhoneの生産拠点でもある。販売価格の上昇により、製品構成と平均販売価格が向上する可能性がありますが、現地の輸入税、18% の GST、および消費者価格の敏感度により、需要リスクが増幅される可能性があります。したがって、フォローアップは、定価のみに基づいて収益改善を推測するのではなく、ハイエンドモデルの予約、納期、および実際の販売に依存します。"
-    },
-    {
-      "key": "why",
-      "start": 170.067,
-      "end": 191.753,
-      "text": "インドはアップルの成長市場であり製造拠点でもあり、インドの価格戦略はブランドプレミアムと需要の弾力性を直接試すことになる。"
-    },
-    {
-      "key": "watch",
-      "start": 191.753,
-      "end": 218.619,
-      "text": "9月12日からのiPhone 18 Proの予約注文と10月16日からのiPhone Duoの予約注文、納期、インドの販売量、製品構成に注目してください。"
+      "start": 11.659,
+      "end": 32.235,
+      "text": "Apple India / Reutersを出典として、企業・市場動向に関する新しい検証済み情報を確認しました。詳細は出典資料の確認後に順次更新します。"
     }
   ],
   "semanticUnits": [
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 4.25,
-      "end": 4.59,
+      "speechEnd": 2.022,
+      "end": 2.362,
       "pause": 0.34,
       "intendedPause": 0.34,
-      "reason": "semantic-boundary",
-      "text": "Appleの新しいiPhoneの価格が"
+      "reason": "punctuation-semantic",
+      "text": "AAPL："
     },
     {
       "parentKey": "title",
-      "start": 4.59,
-      "speechEnd": 8.004,
-      "end": 8.284,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "インドで大幅に上昇し、"
-    },
-    {
-      "parentKey": "title",
-      "start": 8.284,
-      "speechEnd": 12.325,
-      "end": 12.505,
-      "pause": 0.18,
-      "intendedPause": 0.18,
-      "reason": "before-key-number",
-      "text": "一部のモデルでは最大約"
-    },
-    {
-      "parentKey": "title",
-      "start": 12.505,
-      "speechEnd": 14.735,
-      "end": 14.915,
-      "pause": 0.18,
-      "intendedPause": 0.18,
-      "reason": "key-number",
-      "text": "41％"
-    },
-    {
-      "parentKey": "title",
-      "start": 14.915,
-      "speechEnd": 18.329,
-      "end": 19.189,
-      "pause": 0.86,
+      "start": 2.362,
+      "speechEnd": 10.798,
+      "end": 11.659,
+      "pause": 0.861,
       "intendedPause": 0.86,
       "reason": "punctuation-sentence",
-      "text": "の値上がりが見られている。"
+      "text": "Apple India / Reutersで最新の企業・市場動向情報を確認。"
     },
     {
-      "parentKey": "dek",
-      "start": 19.189,
-      "speechEnd": 23.439,
-      "end": 23.719,
+      "parentKey": "body-0",
+      "start": 11.659,
+      "speechEnd": 16.261,
+      "end": 16.541,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "ロイター通信は9月10日、"
+      "text": "Apple India / Reutersを出典として、"
     },
     {
-      "parentKey": "dek",
-      "start": 23.719,
-      "speechEnd": 30.199,
-      "end": 30.539,
-      "pause": 0.34,
-      "intendedPause": 0.34,
-      "reason": "semantic-boundary",
-      "text": "インドにおけるアップルの新世代iPhoneの価格上昇が"
-    },
-    {
-      "parentKey": "dek",
-      "start": 30.539,
-      "speechEnd": 35.207,
-      "end": 35.827,
-      "pause": 0.62,
+      "parentKey": "body-0",
+      "start": 16.541,
+      "speechEnd": 24.559,
+      "end": 25.18,
+      "pause": 0.621,
       "intendedPause": 0.62,
       "reason": "punctuation-sentence",
-      "text": "米国よりも大幅に高かったと報じた。"
-    },
-    {
-      "parentKey": "dek",
-      "start": 35.827,
-      "speechEnd": 41.122,
-      "end": 41.402,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "インドの Apple の公式ウェブサイトによると、"
-    },
-    {
-      "parentKey": "dek",
-      "start": 41.402,
-      "speechEnd": 48.787,
-      "end": 49.067,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "iPhone Duo 256GB の価格は 299,"
-    },
-    {
-      "parentKey": "dek",
-      "start": 49.067,
-      "speechEnd": 51.994,
-      "end": 52.854,
-      "pause": 0.86,
-      "intendedPause": 0.86,
-      "reason": "punctuation-sentence",
-      "text": "900 ルピーです。"
+      "text": "企業・市場動向に関する新しい検証済み情報を確認しました。"
     },
     {
       "parentKey": "body-0",
-      "start": 52.854,
-      "speechEnd": 57.104,
-      "end": 57.384,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "ロイター通信は9月10日、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 57.384,
-      "speechEnd": 63.585,
-      "end": 63.865,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "アップルがインドで新世代iPhoneを発売した後、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 63.865,
-      "speechEnd": 70.554,
-      "end": 71.174,
-      "pause": 0.62,
-      "intendedPause": 0.62,
-      "reason": "punctuation-sentence",
-      "text": "一部モデルの価格を大幅に値上げしたと報じた。"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 71.174,
-      "speechEnd": 74.03,
-      "end": 74.31,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "一部の構成では、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 74.31,
-      "speechEnd": 81.696,
-      "end": 82.316,
-      "pause": 0.62,
-      "intendedPause": 0.62,
-      "reason": "punctuation-sentence",
-      "text": "前世代と比較して最大約 41% 増加しました。"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 82.316,
-      "speechEnd": 87.193,
-      "end": 87.473,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "Apple のインド公式 Web サイトによると、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 87.473,
-      "speechEnd": 94.858,
-      "end": 95.138,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "iPhone Duo 256GB の価格は 299,"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 95.138,
-      "speechEnd": 98.692,
-      "end": 98.972,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "900 ルピーからであり、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 98.972,
-      "speechEnd": 106.775,
-      "end": 107.555,
-      "pause": 0.78,
+      "start": 25.18,
+      "speechEnd": 31.454,
+      "end": 32.235,
+      "pause": 0.781,
       "intendedPause": 0.78,
       "reason": "punctuation-sentence",
-      "text": "iPhone 18 Pro シリーズもかなり高いハイエンド価格帯となっています。"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 107.555,
-      "speechEnd": 113.756,
-      "end": 114.036,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "インドはアップルにとって重要な需要成長市場であり、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 114.036,
-      "speechEnd": 117.729,
-      "end": 118.349,
-      "pause": 0.62,
-      "intendedPause": 0.62,
-      "reason": "punctuation-sentence",
-      "text": "iPhoneの生産拠点でもある。"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 118.349,
-      "speechEnd": 121.484,
-      "end": 121.764,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "販売価格の上昇により、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 121.764,
-      "speechEnd": 129.359,
-      "end": 129.639,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "製品構成と平均販売価格が向上する可能性がありますが、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 129.639,
-      "speechEnd": 132.217,
-      "end": 132.497,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "現地の輸入税、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 132.497,
-      "speechEnd": 135.841,
-      "end": 136.121,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "18% の GST、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 136.121,
-      "speechEnd": 140.998,
-      "end": 141.278,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "および消費者価格の敏感度により、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 141.278,
-      "speechEnd": 146.225,
-      "end": 146.845,
-      "pause": 0.62,
-      "intendedPause": 0.62,
-      "reason": "punctuation-sentence",
-      "text": "需要リスクが増幅される可能性があります。"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 146.845,
-      "speechEnd": 149.075,
-      "end": 149.355,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "したがって、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 149.355,
-      "speechEnd": 151.793,
-      "end": 152.073,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "フォローアップは、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 152.073,
-      "speechEnd": 158.831,
-      "end": 159.112,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "定価のみに基づいて収益改善を推測するのではなく、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 159.112,
-      "speechEnd": 162.316,
-      "end": 162.597,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "ハイエンドモデルの予約、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 162.597,
-      "speechEnd": 164.617,
-      "end": 164.897,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "納期、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 164.897,
-      "speechEnd": 169.287,
-      "end": 170.067,
-      "pause": 0.78,
-      "intendedPause": 0.78,
-      "reason": "punctuation-sentence",
-      "text": "および実際の販売に依存します。"
-    },
-    {
-      "parentKey": "why",
-      "start": 170.067,
-      "speechEnd": 174.038,
-      "end": 174.658,
-      "pause": 0.62,
-      "intendedPause": 0.62,
-      "reason": "punctuation-sentence",
-      "text": "このニュースの重要なポイントです。"
-    },
-    {
-      "parentKey": "why",
-      "start": 174.658,
-      "speechEnd": 180.998,
-      "end": 181.278,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "インドはアップルの成長市場であり製造拠点でもあり、"
-    },
-    {
-      "parentKey": "why",
-      "start": 181.278,
-      "speechEnd": 190.893,
-      "end": 191.753,
-      "pause": 0.86,
-      "intendedPause": 0.86,
-      "reason": "punctuation-sentence",
-      "text": "インドの価格戦略はブランドプレミアムと需要の弾力性を直接試すことになる。"
-    },
-    {
-      "parentKey": "watch",
-      "start": 191.753,
-      "speechEnd": 193.844,
-      "end": 194.124,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "今後は、"
-    },
-    {
-      "parentKey": "watch",
-      "start": 194.124,
-      "speechEnd": 201.579,
-      "end": 201.759,
-      "pause": 0.18,
-      "intendedPause": 0.18,
-      "reason": "before-key-number",
-      "text": "9月12日からのiPhone 18 Proの予約注文と"
-    },
-    {
-      "parentKey": "watch",
-      "start": 201.759,
-      "speechEnd": 204.546,
-      "end": 204.726,
-      "pause": 0.18,
-      "intendedPause": 0.18,
-      "reason": "key-number",
-      "text": "10月16日"
-    },
-    {
-      "parentKey": "watch",
-      "start": 204.726,
-      "speechEnd": 208.697,
-      "end": 208.977,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "からのiPhone Duoの予約注文、"
-    },
-    {
-      "parentKey": "watch",
-      "start": 208.977,
-      "speechEnd": 210.998,
-      "end": 211.278,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "納期、"
-    },
-    {
-      "parentKey": "watch",
-      "start": 211.278,
-      "speechEnd": 213.786,
-      "end": 214.066,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "インドの販売量、"
-    },
-    {
-      "parentKey": "watch",
-      "start": 214.066,
-      "speechEnd": 217.759,
-      "end": 218.619,
-      "pause": 0.86,
-      "intendedPause": 0.86,
-      "reason": "punctuation-sentence",
-      "text": "製品構成に注目してください。"
+      "text": "詳細は出典資料の確認後に順次更新します。"
     }
   ]
 }
