@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 60.317,
+  "duration": 55.249,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 340.0,
-  "characters": 169,
-  "charactersPerMinute": 168.1,
+  "characters": 158,
+  "charactersPerMinute": 171.6,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.18,
@@ -21,132 +21,112 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 18.429,
-      "text": "TSMCの8月の売上高は53.3%増の5,148億1,000万台湾ドルとなり、月間最高額を記録した"
+      "end": 16.48,
+      "text": "8月のTSMC売上高は53.3 ％増の5,148.1億新台湾ドルとなり、月間新高を記録"
     },
     {
       "key": "body-0",
-      "start": 18.429,
-      "end": 60.317,
-      "text": "収益は 8 月に新最高値を記録し、引き続き力強い年間成長を続けました。これは、AI とハイパフォーマンス コンピューティングの需要が依然として高度な製造プロセスを支えていることを示しています。その後の焦点は、設備稼働率、高度なパッケージング、海外生産拡大コストに移ります。"
+      "start": 16.48,
+      "end": 55.249,
+      "text": "8月の売上高は過去最高を記録し、引き続き堅調な年間成長を続けており、AIと高性能コンピューティングの需要が依然として高度なプロセスをサポートしていることを示しています。その後、キャパシティ稼働率、高度なパッケージング、海外展開コストに焦点が移っています。"
     }
   ],
   "semanticUnits": [
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 7.388,
-      "end": 7.668,
+      "speechEnd": 7.251,
+      "end": 7.531,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "TSMCの8月の売上高は53.3%増の5,"
+      "text": "8月のTSMC売上高は53.3 ％増の5,"
     },
     {
       "parentKey": "title",
-      "start": 7.668,
-      "speechEnd": 10.456,
-      "end": 10.736,
+      "start": 7.531,
+      "speechEnd": 12.551,
+      "end": 12.831,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "148億1,"
+      "text": "148.1億新台湾ドルとなり、"
     },
     {
       "parentKey": "title",
-      "start": 10.736,
-      "speechEnd": 13.873,
-      "end": 14.153,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-comma",
-      "text": "000万台湾ドルとなり、"
-    },
-    {
-      "parentKey": "title",
-      "start": 14.153,
-      "speechEnd": 17.568,
-      "end": 18.429,
-      "pause": 0.86,
+      "start": 12.831,
+      "speechEnd": 15.62,
+      "end": 16.48,
+      "pause": 0.861,
       "intendedPause": 0.86,
       "reason": "punctuation-sentence",
-      "text": "月間最高額を記録した。"
+      "text": "月間新高を記録。"
     },
     {
       "parentKey": "body-0",
-      "start": 18.429,
-      "speechEnd": 23.865,
-      "end": 24.146,
+      "start": 16.48,
+      "speechEnd": 21.918,
+      "end": 22.199,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "収益は 8 月に新最高値を記録し、"
+      "text": "8月の売上高は過去最高を記録し、"
     },
     {
       "parentKey": "body-0",
-      "start": 24.146,
-      "speechEnd": 29.512,
-      "end": 30.133,
-      "pause": 0.62,
-      "intendedPause": 0.62,
-      "reason": "punctuation-sentence",
-      "text": "引き続き力強い年間成長を続けました。"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 30.133,
-      "speechEnd": 32.224,
-      "end": 32.504,
+      "start": 22.199,
+      "speechEnd": 27.706,
+      "end": 27.987,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "これは、"
+      "text": "引き続き堅調な年間成長を続けており、"
     },
     {
       "parentKey": "body-0",
-      "start": 32.504,
-      "speechEnd": 38.08,
-      "end": 38.42,
+      "start": 27.987,
+      "speechEnd": 32.658,
+      "end": 32.998,
       "pause": 0.34,
       "intendedPause": 0.34,
       "reason": "semantic-boundary",
-      "text": "AI とハイパフォーマンス コンピューティングの需要が"
+      "text": "AIと高性能コンピューティングの需要が"
     },
     {
       "parentKey": "body-0",
-      "start": 38.42,
-      "speechEnd": 46.157,
-      "end": 46.777,
-      "pause": 0.62,
+      "start": 32.998,
+      "speechEnd": 40.597,
+      "end": 41.218,
+      "pause": 0.621,
       "intendedPause": 0.62,
       "reason": "punctuation-sentence",
-      "text": "依然として高度な製造プロセスを支えていることを示しています。"
+      "text": "依然として高度なプロセスをサポートしていることを示しています。"
     },
     {
       "parentKey": "body-0",
-      "start": 46.777,
-      "speechEnd": 49.495,
-      "end": 49.776,
+      "start": 41.218,
+      "speechEnd": 43.309,
+      "end": 43.59,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "その後の焦点は、"
+      "text": "その後、"
     },
     {
       "parentKey": "body-0",
-      "start": 49.776,
-      "speechEnd": 52.006,
-      "end": 52.286,
+      "start": 43.59,
+      "speechEnd": 46.239,
+      "end": 46.519,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "設備稼働率、"
+      "text": "キャパシティ稼働率、"
     },
     {
       "parentKey": "body-0",
-      "start": 52.286,
-      "speechEnd": 55.283,
-      "end": 55.563,
+      "start": 46.519,
+      "speechEnd": 49.517,
+      "end": 49.797,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
@@ -154,13 +134,13 @@
     },
     {
       "parentKey": "body-0",
-      "start": 55.563,
-      "speechEnd": 59.536,
-      "end": 60.317,
-      "pause": 0.78,
+      "start": 49.797,
+      "speechEnd": 54.468,
+      "end": 55.249,
+      "pause": 0.781,
       "intendedPause": 0.78,
       "reason": "punctuation-sentence",
-      "text": "海外生産拡大コストに移ります。"
+      "text": "海外展開コストに焦点が移っています。"
     }
   ]
 }
