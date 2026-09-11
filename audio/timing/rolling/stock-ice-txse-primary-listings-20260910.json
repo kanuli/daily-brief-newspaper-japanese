@@ -1,0 +1,540 @@
+{
+  "version": 3,
+  "duration": 241.058,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 756,
+  "charactersPerMinute": 188.2,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 18.141,
+      "text": "TXSEがNYSEから主要上場企業の第一陣を吸収、1,000億ドル近い時価移転でICEの上場ビジネスの競争が激化"
+    },
+    {
+      "key": "dek",
+      "start": 18.141,
+      "end": 51.04,
+      "text": "テキサス証券取引所は、NYSEから移管される主要上場企業の第一陣を獲得した。 Energy Transfer、USA Compression、Sunoco の関連事業体は 10 月初旬に譲渡を計画しており、市場総額は約 1,000 億ドルに達します。"
+    },
+    {
+      "key": "body-0",
+      "start": 51.04,
+      "end": 116.113,
+      "text": "ロイター通信は9月10日、テキサス証券取引所がNYSEから移管された主要株式上場の第一弾を取得したと報じた。エナジー・トランスファー、USAコンプレッション・パートナーズのほか、Sunoco LPとSunocoCorp LLCは、10月初旬に主要上場場所をダラスのTXSEに移管する予定である。関連企業の市場価値総額は1,000億米ドル近くに達します。これにより、TXSEは技術的な準備とETF上場の段階から、正式に大手企業の上場を巡ってNYSEと競合する段階に入った。"
+    },
+    {
+      "key": "body-1",
+      "start": 116.113,
+      "end": 182.842,
+      "text": "TXSEはまた、S&P DJI、MSCI、FTSE RussellがTXSE上場証券が引き続き主要指数に組み込まれるように手法を更新し、企業が移行する際の指数適格性の障壁を軽減したことも以前に発表した。 ICEにとって、これはNYSE上場ビジネスに対する新たな競争のシグナルとなる。しかし、これは事件の最初のバッチにすぎず、ICE の全体的な取引、データ、または上場収益に重大な即時影響を与えることを示すデータはありません。"
+    },
+    {
+      "key": "why",
+      "start": 182.842,
+      "end": 214.843,
+      "text": "より多くの大企業が追随すれば、ICEは上場サービス、発行体との関係、テキサス市場のレイアウトにさらなるリソースを投資する必要があり、新たな上場手数料やブランド競争に直面する可能性がある。"
+    },
+    {
+      "key": "watch",
+      "start": 214.843,
+      "end": 241.058,
+      "text": "9月16日のTXSE本上場の正式開始、最初の譲渡が予定通り完了できるか、その後他の大手NYSE発行体が譲渡を発表するかどうかに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 6.688,
+      "end": 6.968,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "TXSEがNYSEから主要上場企業の第一陣を吸収、"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.968,
+      "speechEnd": 8.919,
+      "end": 9.199,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "1,"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.199,
+      "speechEnd": 17.281,
+      "end": 18.141,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "000億ドル近い時価移転でICEの上場ビジネスの競争が激化。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.141,
+      "speechEnd": 20.927,
+      "end": 21.207,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "テキサス証券取引所は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.207,
+      "speechEnd": 28.314,
+      "end": 28.934,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "NYSEから移管される主要上場企業の第一陣を獲得した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 28.934,
+      "speechEnd": 31.79,
+      "end": 32.07,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Energy Transfer、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.07,
+      "speechEnd": 35.066,
+      "end": 35.346,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "USA Compression、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 35.346,
+      "speechEnd": 38.829,
+      "end": 39.169,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "Sunoco の関連事業体は"
+    },
+    {
+      "parentKey": "dek",
+      "start": 39.169,
+      "speechEnd": 43.558,
+      "end": 43.839,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "10 月初旬に譲渡を計画しており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 43.839,
+      "speechEnd": 46.695,
+      "end": 46.975,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "市場総額は約 1,"
+    },
+    {
+      "parentKey": "dek",
+      "start": 46.975,
+      "speechEnd": 50.18,
+      "end": 51.04,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "000 億ドルに達します。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.04,
+      "speechEnd": 55.29,
+      "end": 55.57,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信は9月10日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.57,
+      "speechEnd": 66.438,
+      "end": 67.058,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "テキサス証券取引所がNYSEから移管された主要株式上場の第一弾を取得したと報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.058,
+      "speechEnd": 70.054,
+      "end": 70.334,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "エナジー・トランスファー、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.334,
+      "speechEnd": 75.28,
+      "end": 75.56,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "USAコンプレッション・パートナーズのほか、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.56,
+      "speechEnd": 79.74,
+      "end": 80.02,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Sunoco LPとSunocoCorp LLCは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 80.02,
+      "speechEnd": 88.868,
+      "end": 89.488,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "10月初旬に主要上場場所をダラスのTXSEに移管する予定である。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 89.488,
+      "speechEnd": 93.738,
+      "end": 94.018,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "関連企業の市場価値総額は1,"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 94.018,
+      "speechEnd": 97.711,
+      "end": 98.331,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "000億米ドル近くに達します。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 98.331,
+      "speechEnd": 100.56,
+      "end": 100.84,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "これにより、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 100.84,
+      "speechEnd": 107.11,
+      "end": 107.39,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "TXSEは技術的な準備とETF上場の段階から、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 107.39,
+      "speechEnd": 115.333,
+      "end": 116.113,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "正式に大手企業の上場を巡ってNYSEと競合する段階に入った。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 116.113,
+      "speechEnd": 118.551,
+      "end": 118.831,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "TXSEはまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.831,
+      "speechEnd": 120.991,
+      "end": 121.271,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "S&P DJI、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.271,
+      "speechEnd": 123.291,
+      "end": 123.571,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "MSCI、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 123.571,
+      "speechEnd": 126.706,
+      "end": 127.046,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "FTSE Russellが"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 127.046,
+      "speechEnd": 136.103,
+      "end": 136.383,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "TXSE上場証券が引き続き主要指数に組み込まれるように手法を更新し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 136.383,
+      "speechEnd": 141.748,
+      "end": 142.088,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "企業が移行する際の指数適格性の障壁を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 142.088,
+      "speechEnd": 146.268,
+      "end": 146.888,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "軽減したことも以前に発表した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 146.888,
+      "speechEnd": 149.257,
+      "end": 149.537,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ICEにとって、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 149.537,
+      "speechEnd": 157.479,
+      "end": 158.099,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "これはNYSE上場ビジネスに対する新たな競争のシグナルとなる。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 158.099,
+      "speechEnd": 160.119,
+      "end": 160.4,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "しかし、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 160.4,
+      "speechEnd": 165.346,
+      "end": 165.626,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "これは事件の最初のバッチにすぎず、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 165.626,
+      "speechEnd": 169.109,
+      "end": 169.389,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ICE の全体的な取引、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 169.389,
+      "speechEnd": 171.41,
+      "end": 171.69,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "データ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 171.69,
+      "speechEnd": 178.587,
+      "end": 178.927,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "または上場収益に重大な即時影響を与えることを"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 178.927,
+      "speechEnd": 182.062,
+      "end": 182.842,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "示すデータはありません。"
+    },
+    {
+      "parentKey": "why",
+      "start": 182.842,
+      "speechEnd": 186.813,
+      "end": 187.433,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 187.433,
+      "speechEnd": 192.032,
+      "end": 192.312,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "より多くの大企業が追随すれば、"
+    },
+    {
+      "parentKey": "why",
+      "start": 192.312,
+      "speechEnd": 195.307,
+      "end": 195.587,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ICEは上場サービス、"
+    },
+    {
+      "parentKey": "why",
+      "start": 195.587,
+      "speechEnd": 198.235,
+      "end": 198.515,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "発行体との関係、"
+    },
+    {
+      "parentKey": "why",
+      "start": 198.515,
+      "speechEnd": 206.109,
+      "end": 206.389,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "テキサス市場のレイアウトにさらなるリソースを投資する必要があり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 206.389,
+      "speechEnd": 213.983,
+      "end": 214.843,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "新たな上場手数料やブランド競争に直面する可能性がある。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 214.843,
+      "speechEnd": 216.933,
+      "end": 217.213,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 217.213,
+      "speechEnd": 224.04,
+      "end": 224.32,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "9月16日のTXSE本上場の正式開始、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 224.32,
+      "speechEnd": 229.476,
+      "end": 229.756,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "最初の譲渡が予定通り完了できるか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 229.756,
+      "speechEnd": 234.284,
+      "end": 234.624,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "その後他の大手NYSE発行体が"
+    },
+    {
+      "parentKey": "watch",
+      "start": 234.624,
+      "speechEnd": 240.198,
+      "end": 241.058,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "譲渡を発表するかどうかに注目してください。"
+    }
+  ]
+}

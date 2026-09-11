@@ -1,0 +1,520 @@
+{
+  "version": 3,
+  "duration": 230.139,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 756,
+  "charactersPerMinute": 197.1,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 16.314,
+      "text": "シスコは2試合連続得点となった。カウィックは、彼の勇気がマンチェスター・シティを引き分けに後押ししたと語った。"
+    },
+    {
+      "key": "dek",
+      "start": 16.314,
+      "end": 52.919,
+      "text": "マンチェスター・ユナイテッドのフォワード、ベンジャミン・セスコが負傷から復帰後、2試合連続ゴールを決めた。チームマネージャーのマイケル・キャリックは、日曜のマンチェスター・シティ戦を前に、彼のスピード、体格、ディフェンスを攻撃する能力が重要な進歩であると指摘した。"
+    },
+    {
+      "key": "body-0",
+      "start": 52.919,
+      "end": 99.05,
+      "text": "マンチェスター・ユナイテッドのストライカー、ベンジャミン・セスコ（ Benjamin Sesko ）は、脛骨外傷休戦から約3か月後、ほぼ2試合連続で得点を記録した。ロイター通信は、彼がプレミアリーグ2とエバートンのバックアップでプレーし、最終的にドアを破った後、木曜日にヨーロッパリーグでホームでサバを4 -0で破ったことで成功を築いたと報じた。"
+    },
+    {
+      "key": "body-1",
+      "start": 99.05,
+      "end": 153.121,
+      "text": "リーダーのマイケル・キャリックは、セスコの体格、スピード、最後のラインで相手の防御を攻撃する能力は、現在のラインナップにとって重要な選択肢だと述べた。マンチェスター・ユナイテッドの次の試合は、日曜日にホームでマンチェスター・シティと対戦することになります。セスコはまた、自信を高めるために2つの目標を掲げています。現在の焦点は、体力を回復し、試合に備えることです。"
+    },
+    {
+      "key": "why",
+      "start": 153.121,
+      "end": 192.642,
+      "text": "主力フォワードは怪我から回復後連続ゴールを決め、これがマンチェスター・ユナイテッドの主力起用、バックアップ、そしてマンチェスター・シティ戦での攻撃展開に直接影響を与えた。キャリックは自身の回復を公に認めており、これは試合前のニュース価値がある。"
+    },
+    {
+      "key": "watch",
+      "start": 192.642,
+      "end": 230.139,
+      "text": "キャリックの怪我とマンチェスター・シティ戦前のファーストチョイスの最新情報、セスコが怪我から復帰後初めてより多くの時間をプレーできるかどうか、そしてマンチェスター・ユナイテッドがヨーロッパリーグ後にフロントコートのローテーションをどのように調整するかに注目してほしい。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.39,
+      "end": 5.01,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "シスコは2試合連続得点となった。"
+    },
+    {
+      "parentKey": "title",
+      "start": 5.01,
+      "speechEnd": 7.239,
+      "end": 7.519,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "カウィックは、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.519,
+      "speechEnd": 11.63,
+      "end": 11.97,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "彼の勇気がマンチェスター・シティを"
+    },
+    {
+      "parentKey": "title",
+      "start": 11.97,
+      "speechEnd": 15.454,
+      "end": 16.314,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "引き分けに後押ししたと語った。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.314,
+      "speechEnd": 20.564,
+      "end": 20.844,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マンチェスター・ユナイテッドのフォワード、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.844,
+      "speechEnd": 25.373,
+      "end": 25.653,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ベンジャミン・セスコが負傷から復帰後、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.653,
+      "speechEnd": 29.625,
+      "end": 30.245,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "2試合連続ゴールを決めた。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 30.245,
+      "speechEnd": 34.634,
+      "end": 34.914,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "チームマネージャーのマイケル・キャリックは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 34.914,
+      "speechEnd": 39.652,
+      "end": 39.932,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日曜のマンチェスター・シティ戦を前に、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 39.932,
+      "speechEnd": 42.371,
+      "end": 42.651,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "彼のスピード、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 42.651,
+      "speechEnd": 44.671,
+      "end": 44.952,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "体格、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 44.952,
+      "speechEnd": 52.058,
+      "end": 52.919,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ディフェンスを攻撃する能力が重要な進歩であると指摘した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.919,
+      "speechEnd": 57.378,
+      "end": 57.658,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マンチェスター・ユナイテッドのストライカー、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.658,
+      "speechEnd": 62.883,
+      "end": 63.163,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ベンジャミン・セスコ（ Benjamin Sesko ）は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.163,
+      "speechEnd": 67.692,
+      "end": 67.972,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "脛骨外傷休戦から約3か月後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.972,
+      "speechEnd": 72.85,
+      "end": 73.47,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ほぼ2試合連続で得点を記録した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.47,
+      "speechEnd": 75.978,
+      "end": 76.258,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.258,
+      "speechEnd": 83.016,
+      "end": 83.297,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "彼がプレミアリーグ2とエバートンのバックアップでプレーし、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 83.297,
+      "speechEnd": 86.85,
+      "end": 87.13,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "最終的にドアを破った後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 87.13,
+      "speechEnd": 91.938,
+      "end": 92.278,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "木曜日にヨーロッパリーグでホームでサバを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 92.278,
+      "speechEnd": 98.27,
+      "end": 99.05,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "4 -0で破ったことで成功を築いたと報じた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.05,
+      "speechEnd": 102.673,
+      "end": 102.953,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "リーダーのマイケル・キャリックは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.953,
+      "speechEnd": 105.461,
+      "end": 105.741,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "セスコの体格、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 105.741,
+      "speechEnd": 107.832,
+      "end": 108.112,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "スピード、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.112,
+      "speechEnd": 114.173,
+      "end": 114.453,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "最後のラインで相手の防御を攻撃する能力は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.453,
+      "speechEnd": 120.445,
+      "end": 121.065,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "現在のラインナップにとって重要な選択肢だと述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.065,
+      "speechEnd": 125.803,
+      "end": 126.083,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マンチェスター・ユナイテッドの次の試合は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 126.083,
+      "speechEnd": 133.399,
+      "end": 134.019,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "日曜日にホームでマンチェスター・シティと対戦することになります。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 134.019,
+      "speechEnd": 136.319,
+      "end": 136.599,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "セスコはまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 136.599,
+      "speechEnd": 142.939,
+      "end": 143.559,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "自信を高めるために2つの目標を掲げています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 143.559,
+      "speechEnd": 146.137,
+      "end": 146.417,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "現在の焦点は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 146.417,
+      "speechEnd": 148.995,
+      "end": 149.275,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "体力を回復し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 149.275,
+      "speechEnd": 152.341,
+      "end": 153.121,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "試合に備えることです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 153.121,
+      "speechEnd": 157.093,
+      "end": 157.713,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 157.713,
+      "speechEnd": 164.401,
+      "end": 164.682,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "主力フォワードは怪我から回復後連続ゴールを決め、"
+    },
+    {
+      "parentKey": "why",
+      "start": 164.682,
+      "speechEnd": 170.395,
+      "end": 170.675,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "これがマンチェスター・ユナイテッドの主力起用、"
+    },
+    {
+      "parentKey": "why",
+      "start": 170.675,
+      "speechEnd": 172.904,
+      "end": 173.185,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "バックアップ、"
+    },
+    {
+      "parentKey": "why",
+      "start": 173.185,
+      "speechEnd": 181.615,
+      "end": 182.235,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "そしてマンチェスター・シティ戦での攻撃展開に直接影響を与えた。"
+    },
+    {
+      "parentKey": "why",
+      "start": 182.235,
+      "speechEnd": 187.182,
+      "end": 187.462,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "キャリックは自身の回復を公に認めており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 187.462,
+      "speechEnd": 191.782,
+      "end": 192.642,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "これは試合前のニュース価値がある。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 192.642,
+      "speechEnd": 194.733,
+      "end": 195.013,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 195.013,
+      "speechEnd": 203.861,
+      "end": 204.141,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "キャリックの怪我とマンチェスター・シティ戦前のファーストチョイスの最新情報、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 204.141,
+      "speechEnd": 210.551,
+      "end": 210.891,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "セスコが怪我から復帰後初めてより多くの時間を"
+    },
+    {
+      "parentKey": "watch",
+      "start": 210.891,
+      "speechEnd": 214.027,
+      "end": 214.307,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "プレーできるかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 214.307,
+      "speechEnd": 218.209,
+      "end": 218.549,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "そしてマンチェスター・ユナイテッドが"
+    },
+    {
+      "parentKey": "watch",
+      "start": 218.549,
+      "speechEnd": 229.279,
+      "end": 230.139,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ヨーロッパリーグ後にフロントコートのローテーションをどのように調整するかに注目してほしい。"
+    }
+  ]
+}

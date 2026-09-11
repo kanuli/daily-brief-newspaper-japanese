@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 31.347,
+  "duration": 202.893,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 340.0,
-  "characters": 100,
-  "charactersPerMinute": 191.4,
+  "characters": 554,
+  "charactersPerMinute": 163.8,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.18,
@@ -21,66 +21,440 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 11.247,
-      "text": "EMXC：Reuters / iSharesで最新の企業・市場動向情報を確認"
+      "end": 21.965,
+      "text": "ETFのリードスルー：アジア株式市場は9か月にわたる外国人売り越しに終止符を打ったが、107ドルの原油価格は輸入国への圧力を再開した"
+    },
+    {
+      "key": "dek",
+      "start": 21.965,
+      "end": 58.157,
+      "text": "7つのアジア市場は、8月に合計47.2億米ドルの純外国資本流入を記録し、台湾は1か月で111.5億米ドルを吸収しましたが、ブレントは9月10日に107.63米ドルで取引を終了し、エネルギー輸入コストが再び上昇しました。"
     },
     {
       "key": "body-0",
-      "start": 11.247,
-      "end": 31.347,
-      "text": "Reuters / iSharesを出典として、企業・市場動向に関する新しい検証済み情報を確認しました。詳細は出典資料の確認後に順次更新します。"
+      "start": 58.157,
+      "end": 112.177,
+      "text": "ロイターは、LSEGのデータを引用して、9か月連続の純売上高の後、8月に外国資本が台湾、韓国、インド、インドネシア、タイ、ベトナム、フィリピンを再購入し、7つの市場に合計47.2億米ドルの流入があり、そのうち台湾は111.5億米ドルの純流入を記録したと述べた。AI関連技術からの収益は重要な魅力です。"
+    },
+    {
+      "key": "body-1",
+      "start": 112.177,
+      "end": 157.483,
+      "text": "一方、ブレントは9月10日に6 ％以上急騰し、107.63ドルとなった。EMXCにとって、台湾と韓国の半導体需要は利益を支えることができますが、インドや韓国などのエネルギー輸入国は同時にインフレ、通貨、金利の圧力にさらされ、資本フローの改善とマクロコストの上昇が共存します。"
+    },
+    {
+      "key": "why",
+      "start": 157.483,
+      "end": 182.238,
+      "text": "外国からの流入はリスク選好度を向上させるが、3桁の原油価格は企業の利益を侵食し、金融政策を引き続き厳しくする可能性がある。"
+    },
+    {
+      "key": "watch",
+      "start": 182.238,
+      "end": 202.893,
+      "text": "台湾-韓国の外国資本フロー、TSMCとメモリ需要、インドルピー、ブレント原油価格、米国金利パスに注意してください。"
     }
   ],
   "semanticUnits": [
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 2.023,
-      "end": 2.364,
+      "speechEnd": 2.926,
+      "end": 3.266,
       "pause": 0.34,
       "intendedPause": 0.34,
       "reason": "punctuation-semantic",
-      "text": "EMXC："
+      "text": "ETFのリードスルー："
     },
     {
       "parentKey": "title",
-      "start": 2.364,
-      "speechEnd": 10.386,
-      "end": 11.247,
-      "pause": 0.861,
-      "intendedPause": 0.86,
-      "reason": "punctuation-sentence",
-      "text": "Reuters / iSharesで最新の企業・市場動向情報を確認。"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 11.247,
-      "speechEnd": 15.363,
-      "end": 15.644,
+      "start": 3.266,
+      "speechEnd": 12.673,
+      "end": 12.953,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "Reuters / iSharesを出典として、"
+      "text": "アジア株式市場は9か月にわたる外国人売り越しに終止符を打ったが、"
+    },
+    {
+      "parentKey": "title",
+      "start": 12.953,
+      "speechEnd": 21.105,
+      "end": 21.965,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "107ドルの原油価格は輸入国への圧力を再開した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.965,
+      "speechEnd": 25.24,
+      "end": 25.52,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "7つのアジア市場は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.52,
+      "speechEnd": 34.229,
+      "end": 34.51,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "8月に合計47.2億米ドルの純外国資本流入を記録し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 34.51,
+      "speechEnd": 42.174,
+      "end": 42.454,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "台湾は1か月で111.5億米ドルを吸収しましたが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 42.454,
+      "speechEnd": 51.721,
+      "end": 52.001,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ブレントは9月10日に107.63米ドルで取引を終了し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 52.001,
+      "speechEnd": 57.296,
+      "end": 58.157,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "エネルギー輸入コストが再び上昇しました。"
     },
     {
       "parentKey": "body-0",
-      "start": 15.644,
-      "speechEnd": 23.666,
-      "end": 24.287,
-      "pause": 0.621,
+      "start": 58.157,
+      "speechEnd": 60.317,
+      "end": 60.597,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイターは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.597,
+      "speechEnd": 64.289,
+      "end": 64.569,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "LSEGのデータを引用して、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.569,
+      "speechEnd": 68.959,
+      "end": 69.239,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "9か月連続の純売上高の後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.239,
+      "speechEnd": 73.002,
+      "end": 73.282,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "8月に外国資本が台湾、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.282,
+      "speechEnd": 75.302,
+      "end": 75.582,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "韓国、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.582,
+      "speechEnd": 77.673,
+      "end": 77.953,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インド、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 77.953,
+      "speechEnd": 80.182,
+      "end": 80.462,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インドネシア、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 80.462,
+      "speechEnd": 82.483,
+      "end": 82.763,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "タイ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 82.763,
+      "speechEnd": 84.853,
+      "end": 85.133,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ベトナム、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 85.133,
+      "speechEnd": 88.06,
+      "end": 88.34,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "フィリピンを再購入し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 88.34,
+      "speechEnd": 96.004,
+      "end": 96.284,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "7つの市場に合計47.2億米ドルの流入があり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 96.284,
+      "speechEnd": 105.203,
+      "end": 105.823,
+      "pause": 0.62,
       "intendedPause": 0.62,
       "reason": "punctuation-sentence",
-      "text": "企業・市場動向に関する新しい検証済み情報を確認しました。"
+      "text": "そのうち台湾は111.5億米ドルの純流入を記録したと述べた。"
     },
     {
       "parentKey": "body-0",
-      "start": 24.287,
-      "speechEnd": 30.566,
-      "end": 31.347,
-      "pause": 0.781,
+      "start": 105.823,
+      "speechEnd": 111.397,
+      "end": 112.177,
+      "pause": 0.78,
       "intendedPause": 0.78,
       "reason": "punctuation-sentence",
-      "text": "詳細は出典資料の確認後に順次更新します。"
+      "text": "AI関連技術からの収益は重要な魅力です。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.177,
+      "speechEnd": 114.198,
+      "end": 114.478,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "一方、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.478,
+      "speechEnd": 121.306,
+      "end": 121.586,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ブレントは9月10日に6 ％以上急騰し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.586,
+      "speechEnd": 125.976,
+      "end": 126.596,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "107.63ドルとなった。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 126.596,
+      "speechEnd": 129.174,
+      "end": 129.454,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "EMXCにとって、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 129.454,
+      "speechEnd": 136.909,
+      "end": 137.19,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "台湾と韓国の半導体需要は利益を支えることができますが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 137.19,
+      "speechEnd": 143.878,
+      "end": 144.159,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インドや韓国などのエネルギー輸入国は同時にインフレ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 144.159,
+      "speechEnd": 146.179,
+      "end": 146.459,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "通貨、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 146.459,
+      "speechEnd": 149.734,
+      "end": 150.014,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "金利の圧力にさらされ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 150.014,
+      "speechEnd": 156.703,
+      "end": 157.483,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "資本フローの改善とマクロコストの上昇が共存します。"
+    },
+    {
+      "parentKey": "why",
+      "start": 157.483,
+      "speechEnd": 161.455,
+      "end": 162.075,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 162.075,
+      "speechEnd": 168.764,
+      "end": 169.044,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "外国からの流入はリスク選好度を向上させるが、"
+    },
+    {
+      "parentKey": "why",
+      "start": 169.044,
+      "speechEnd": 175.106,
+      "end": 175.386,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "3桁の原油価格は企業の利益を侵食し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 175.386,
+      "speechEnd": 181.378,
+      "end": 182.238,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "金融政策を引き続き厳しくする可能性がある。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 182.238,
+      "speechEnd": 184.328,
+      "end": 184.608,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 184.608,
+      "speechEnd": 188.58,
+      "end": 188.86,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "台湾-韓国の外国資本フロー、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 188.86,
+      "speechEnd": 191.647,
+      "end": 191.927,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "TSMCとメモリ需要、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 191.927,
+      "speechEnd": 194.226,
+      "end": 194.506,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インドルピー、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 194.506,
+      "speechEnd": 197.503,
+      "end": 197.783,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ブレント原油価格、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 197.783,
+      "speechEnd": 202.033,
+      "end": 202.893,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "米国金利パスに注意してください。"
     }
   ]
 }
