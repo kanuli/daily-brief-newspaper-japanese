@@ -1,0 +1,390 @@
+{
+  "version": 3,
+  "duration": 164.336,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 486,
+  "charactersPerMinute": 177.4,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.381,
+      "text": "カナダ、ウクライナの防空、天然ガス資金調達、大型ドローンへの軍事援助を拡大"
+    },
+    {
+      "key": "dek",
+      "start": 14.381,
+      "end": 36.625,
+      "text": "ゼレンスキー氏のカナダ訪問は、オタワが新たな防空とエネルギー支援を発表し、ウクライナに新しいドローン生産の一部を供給する計画を発表したときに行われた。"
+    },
+    {
+      "key": "body-0",
+      "start": 36.625,
+      "end": 73.853,
+      "text": "ゼレンスキー氏の訪問中、カナダは約3億5000万ドルの防空支援と約4億3000万ドルの天然ガス購入ローン保証を発表した。カーニー氏はまた、カナダは国内のドローン生産能力を拡大し、生産のかなりの部分をウクライナに供給すると述べた。"
+    },
+    {
+      "key": "body-1",
+      "start": 73.853,
+      "end": 121.509,
+      "text": "ロシアは最近、ウクライナの都市、エネルギー、物流施設に対するドローン攻撃を強化しており、ウクライナは長距離ドローンでロシアの標的を攻撃している。カナダの支援は、軍の防空と冬のエネルギー供給を同じパッケージに入れている。これは、同盟国が寒い季節に新たなインフラ攻撃と防衛を準備していることを反映している。"
+    },
+    {
+      "key": "why",
+      "start": 121.509,
+      "end": 143.685,
+      "text": "対空弾薬と冬の天然ガスは、ウクライナの都市が基本的な作戦を維持する能力、戦場と交渉のチップに直接影響を与えます。"
+    },
+    {
+      "key": "watch",
+      "start": 143.685,
+      "end": 164.336,
+      "text": "カナダのドローンの配送時間、より多くの同盟国からの追加の防空、そしてロシアの冬のエネルギー攻撃の規模に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.09,
+      "end": 2.37,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "カナダ、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.37,
+      "speechEnd": 5.018,
+      "end": 5.298,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ウクライナの防空、"
+    },
+    {
+      "parentKey": "title",
+      "start": 5.298,
+      "speechEnd": 8.363,
+      "end": 8.644,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "天然ガス資金調達、"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.644,
+      "speechEnd": 13.521,
+      "end": 14.381,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "大型ドローンへの軍事援助を拡大。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.381,
+      "speechEnd": 18.422,
+      "end": 18.702,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ゼレンスキー氏のカナダ訪問は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.702,
+      "speechEnd": 24.485,
+      "end": 24.765,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "オタワが新たな防空とエネルギー支援を発表し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.765,
+      "speechEnd": 29.921,
+      "end": 30.261,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ウクライナに新しいドローン生産の一部を"
+    },
+    {
+      "parentKey": "dek",
+      "start": 30.261,
+      "speechEnd": 35.765,
+      "end": 36.625,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "供給する計画を発表したときに行われた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.625,
+      "speechEnd": 40.178,
+      "end": 40.458,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ゼレンスキー氏の訪問中、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.458,
+      "speechEnd": 47.983,
+      "end": 48.163,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "カナダは約3億5000万ドルの防空支援と約4億"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.163,
+      "speechEnd": 50.741,
+      "end": 50.921,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "3000万ドル"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.921,
+      "speechEnd": 56.565,
+      "end": 57.185,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "の天然ガス購入ローン保証を発表した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.185,
+      "speechEnd": 59.763,
+      "end": 60.043,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "カーニー氏はまた、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.043,
+      "speechEnd": 66.174,
+      "end": 66.454,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "カナダは国内のドローン生産能力を拡大し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.454,
+      "speechEnd": 73.073,
+      "end": 73.853,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "生産のかなりの部分をウクライナに供給すると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 73.853,
+      "speechEnd": 76.431,
+      "end": 76.711,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロシアは最近、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 76.711,
+      "speechEnd": 79.359,
+      "end": 79.639,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ウクライナの都市、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 79.639,
+      "speechEnd": 81.729,
+      "end": 82.009,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "エネルギー、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.009,
+      "speechEnd": 88.349,
+      "end": 88.629,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "物流施設に対するドローン攻撃を強化しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.629,
+      "speechEnd": 95.945,
+      "end": 96.565,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ウクライナは長距離ドローンでロシアの標的を攻撃している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 96.565,
+      "speechEnd": 99.143,
+      "end": 99.423,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "カナダの支援は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.423,
+      "speechEnd": 107.017,
+      "end": 107.637,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "軍の防空と冬のエネルギー供給を同じパッケージに入れている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.637,
+      "speechEnd": 109.728,
+      "end": 110.008,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "これは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 110.008,
+      "speechEnd": 116.417,
+      "end": 116.758,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "同盟国が寒い季節に新たなインフラ攻撃と防衛を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 116.758,
+      "speechEnd": 120.729,
+      "end": 121.509,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "準備していることを反映している。"
+    },
+    {
+      "parentKey": "why",
+      "start": 121.509,
+      "speechEnd": 125.48,
+      "end": 126.101,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 126.101,
+      "speechEnd": 130.42,
+      "end": 130.7,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "対空弾薬と冬の天然ガスは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 130.7,
+      "speechEnd": 137.18,
+      "end": 137.46,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ウクライナの都市が基本的な作戦を維持する能力、"
+    },
+    {
+      "parentKey": "why",
+      "start": 137.46,
+      "speechEnd": 142.825,
+      "end": 143.685,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "戦場と交渉のチップに直接影響を与えます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 143.685,
+      "speechEnd": 145.775,
+      "end": 146.055,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 146.055,
+      "speechEnd": 150.305,
+      "end": 150.585,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "カナダのドローンの配送時間、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 150.585,
+      "speechEnd": 155.741,
+      "end": 156.021,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "より多くの同盟国からの追加の防空、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 156.021,
+      "speechEnd": 163.476,
+      "end": 164.336,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "そしてロシアの冬のエネルギー攻撃の規模に注目してください。"
+    }
+  ]
+}

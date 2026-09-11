@@ -1,0 +1,400 @@
+{
+  "version": 3,
+  "duration": 170.606,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 460,
+  "charactersPerMinute": 161.8,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 12.636,
+      "text": "青島の造船所のメンテナンス中に火災で25人が死亡し、5人が負傷しました"
+    },
+    {
+      "key": "dek",
+      "start": 12.636,
+      "end": 30.499,
+      "text": "リベリア船籍のばら積み貨物船が、青島北海造船所での修理と検査中に火災を起こし、多大な死傷者を出した。"
+    },
+    {
+      "key": "body-0",
+      "start": 30.499,
+      "end": 72.727,
+      "text": "事故は木曜日の午前11時15分頃に発生し、船は中国造船集団の青島北海造船所にドッキングして修理と検査を行った。火災はその後消火された。公式の報告によると、合計42人が搭乗し、12人が無事避難し、5人が入院し、残りの25人が死亡したという。"
+    },
+    {
+      "key": "body-1",
+      "start": 72.727,
+      "end": 117.197,
+      "text": "習近平国家主席は、原因を突き止め、責任を問うために、できるだけ早く全面的な救出を求めた。船舶のメンテナンスには、密閉空間、燃料残渣、溶接、電気工学などのリスクの高いプロセスが含まれ、調査の焦点は火災点、建設手順、および現場の安全管理にあります。"
+    },
+    {
+      "key": "why",
+      "start": 117.197,
+      "end": 147.865,
+      "text": "大規模な造船所の安全事故は、全国的なメンテナンスエンジニアリングの安全検査を引き起こし、中国の船舶修理港の国際的な船主の運航体制にも影響を与える可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 147.865,
+      "end": 170.606,
+      "text": "国務院または地元の事故調査チームの結果、関係する造船所が閉鎖および是正されているかどうか、および負傷者の状況に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 8.291,
+      "end": 8.571,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "青島の造船所のメンテナンス中に火災で25人が死亡し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.571,
+      "speechEnd": 11.776,
+      "end": 12.636,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "5人が負傷しました。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.636,
+      "speechEnd": 17.095,
+      "end": 17.375,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "リベリア船籍のばら積み貨物船が、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.375,
+      "speechEnd": 25.805,
+      "end": 26.085,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "青島北海造船所での修理と検査中に火災を起こし、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.085,
+      "speechEnd": 29.639,
+      "end": 30.499,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "多大な死傷者を出した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 30.499,
+      "speechEnd": 37.466,
+      "end": 37.746,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "事故は木曜日の午前11時15分頃に発生し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.746,
+      "speechEnd": 48.406,
+      "end": 49.026,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "船は中国造船集団の青島北海造船所にドッキングして修理と検査を行った。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.026,
+      "speechEnd": 52.579,
+      "end": 53.199,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "火災はその後消火された。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.199,
+      "speechEnd": 56.265,
+      "end": 56.545,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "公式の報告によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.545,
+      "speechEnd": 60.098,
+      "end": 60.378,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "合計42人が搭乗し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.378,
+      "speechEnd": 63.931,
+      "end": 64.211,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "12人が無事避難し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.211,
+      "speechEnd": 66.998,
+      "end": 67.278,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "5人が入院し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.278,
+      "speechEnd": 71.946,
+      "end": 72.727,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "残りの25人が死亡したという。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 72.727,
+      "speechEnd": 76.001,
+      "end": 76.281,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "習近平国家主席は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 76.281,
+      "speechEnd": 79.207,
+      "end": 79.487,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "原因を突き止め、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 79.487,
+      "speechEnd": 82.414,
+      "end": 82.694,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "責任を問うために、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.694,
+      "speechEnd": 88.058,
+      "end": 88.678,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "できるだけ早く全面的な救出を求めた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.678,
+      "speechEnd": 91.674,
+      "end": 91.954,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "船舶のメンテナンスには、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.954,
+      "speechEnd": 94.114,
+      "end": 94.394,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "密閉空間、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.394,
+      "speechEnd": 96.554,
+      "end": 96.834,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "燃料残渣、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 96.834,
+      "speechEnd": 98.855,
+      "end": 99.135,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "溶接、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.135,
+      "speechEnd": 104.987,
+      "end": 105.267,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "電気工学などのリスクの高いプロセスが含まれ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 105.267,
+      "speechEnd": 108.611,
+      "end": 108.891,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "調査の焦点は火災点、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.891,
+      "speechEnd": 111.121,
+      "end": 111.401,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "建設手順、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.401,
+      "speechEnd": 116.417,
+      "end": 117.197,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "および現場の安全管理にあります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 117.197,
+      "speechEnd": 121.169,
+      "end": 121.789,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 121.789,
+      "speechEnd": 126.248,
+      "end": 126.528,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "大規模な造船所の安全事故は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 126.528,
+      "speechEnd": 134.54,
+      "end": 134.82,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "全国的なメンテナンスエンジニアリングの安全検査を引き起こし、"
+    },
+    {
+      "parentKey": "why",
+      "start": 134.82,
+      "speechEnd": 143.25,
+      "end": 143.591,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "中国の船舶修理港の国際的な船主の運航体制にも影響を"
+    },
+    {
+      "parentKey": "why",
+      "start": 143.591,
+      "speechEnd": 147.004,
+      "end": 147.865,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "与える可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 147.865,
+      "speechEnd": 149.955,
+      "end": 150.235,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 150.235,
+      "speechEnd": 156.296,
+      "end": 156.576,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "国務院または地元の事故調査チームの結果、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 156.576,
+      "speechEnd": 163.752,
+      "end": 164.032,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "関係する造船所が閉鎖および是正されているかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 164.032,
+      "speechEnd": 169.746,
+      "end": 170.606,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "および負傷者の状況に注意してください。"
+    }
+  ]
+}

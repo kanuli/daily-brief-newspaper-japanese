@@ -1,0 +1,410 @@
+{
+  "version": 3,
+  "duration": 184.033,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 531,
+  "charactersPerMinute": 173.1,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 23.151,
+      "text": "日本では、自傷行為や自殺未遂で病院に入院した人の数は7年間継続的に増加しており、2025年には43,631人に達しました。"
+    },
+    {
+      "key": "dek",
+      "start": 23.151,
+      "end": 38.574,
+      "text": "自殺対策推進センターは消防データを分析し、自傷行為や自殺未遂のために毎日平均約120人が入院した。"
+    },
+    {
+      "key": "body-0",
+      "start": 38.574,
+      "end": 90.554,
+      "text": "世界自殺予防デーに発表されたこの報告書は、消防署の救急車避難データを分析しています。2025年には、自傷行為や自殺未遂のために毎日平均約120人が入院しており、2024年の約116人から増加しており、死亡数だけが指標ではないにもかかわらず、医療・社会福祉制度は依然として危機的介入の必要性が高まっていることを示しています。"
+    },
+    {
+      "key": "body-1",
+      "start": 90.554,
+      "end": 134.873,
+      "text": "研究機関は、自殺未遂や自傷行為の場合は、医療、メンタルヘルス、地域社会の支援を受けた部門横断的なフォローアップが必要であることを強調しています。長年にわたる数の増加はまた、地元の救急治療室、精神科サービス、青少年支援リソースの割り当てを政策のスポットライトに戻しました。"
+    },
+    {
+      "key": "why",
+      "start": 134.873,
+      "end": 161.43,
+      "text": "入院に関するデータは、死亡統計よりも幅広いメンタルヘルスのストレスを反映しており、緊急時やコミュニティのサポートニーズに直接影響を与える可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 161.43,
+      "end": 184.033,
+      "text": "政府が年齢、性別、地域別により多くの分類されたデータを公開するかどうか、そして来年の自殺対策の予算に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.299,
+      "end": 2.579,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本では、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.579,
+      "speechEnd": 8.85,
+      "end": 9.19,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "自傷行為や自殺未遂で病院に入院した人の数は"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.19,
+      "speechEnd": 13.858,
+      "end": 14.138,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "7年間継続的に増加しており、"
+    },
+    {
+      "parentKey": "title",
+      "start": 14.138,
+      "speechEnd": 18.248,
+      "end": 18.528,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "2025年には43,"
+    },
+    {
+      "parentKey": "title",
+      "start": 18.528,
+      "speechEnd": 22.291,
+      "end": 23.151,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "631人に達しました。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.151,
+      "speechEnd": 28.794,
+      "end": 29.074,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "自殺対策推進センターは消防データを分析し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 29.074,
+      "speechEnd": 37.714,
+      "end": 38.574,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "自傷行為や自殺未遂のために毎日平均約120人が入院した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.574,
+      "speechEnd": 45.123,
+      "end": 45.403,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "世界自殺予防デーに発表されたこの報告書は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.403,
+      "speechEnd": 51.116,
+      "end": 51.736,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "消防署の救急車避難データを分析しています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.736,
+      "speechEnd": 54.941,
+      "end": 55.221,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "2025年には、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.221,
+      "speechEnd": 64.348,
+      "end": 64.628,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "自傷行為や自殺未遂のために毎日平均約120人が入院しており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.628,
+      "speechEnd": 71.525,
+      "end": 71.806,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "2024年の約116人から増加しており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.806,
+      "speechEnd": 77.449,
+      "end": 77.729,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "死亡数だけが指標ではないにもかかわらず、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 77.729,
+      "speechEnd": 85.672,
+      "end": 86.012,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "医療・社会福祉制度は依然として危機的介入の必要性が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 86.012,
+      "speechEnd": 89.774,
+      "end": 90.554,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "高まっていることを示しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.554,
+      "speechEnd": 92.923,
+      "end": 93.203,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "研究機関は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.203,
+      "speechEnd": 97.104,
+      "end": 97.385,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "自殺未遂や自傷行為の場合は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.385,
+      "speechEnd": 99.405,
+      "end": 99.685,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "医療、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.685,
+      "speechEnd": 101.984,
+      "end": 102.264,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "メンタルヘルス、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.264,
+      "speechEnd": 109.162,
+      "end": 109.502,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "地域社会の支援を受けた部門横断的なフォローアップが"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.502,
+      "speechEnd": 113.821,
+      "end": 114.442,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "必要であることを強調しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.442,
+      "speechEnd": 118.622,
+      "end": 118.902,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "長年にわたる数の増加はまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.902,
+      "speechEnd": 122.107,
+      "end": 122.387,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "地元の救急治療室、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 122.387,
+      "speechEnd": 125.034,
+      "end": 125.314,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "精神科サービス、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 125.314,
+      "speechEnd": 134.093,
+      "end": 134.873,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "青少年支援リソースの割り当てを政策のスポットライトに戻しました。"
+    },
+    {
+      "parentKey": "why",
+      "start": 134.873,
+      "speechEnd": 138.844,
+      "end": 139.464,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 139.464,
+      "speechEnd": 142.6,
+      "end": 142.88,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "入院に関するデータは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 142.88,
+      "speechEnd": 150.962,
+      "end": 151.242,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "死亡統計よりも幅広いメンタルヘルスのストレスを反映しており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 151.242,
+      "speechEnd": 156.815,
+      "end": 157.155,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "緊急時やコミュニティのサポートニーズに直接影響を"
+    },
+    {
+      "parentKey": "why",
+      "start": 157.155,
+      "speechEnd": 160.569,
+      "end": 161.43,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "与える可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 161.43,
+      "speechEnd": 163.52,
+      "end": 163.8,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 163.8,
+      "speechEnd": 166.447,
+      "end": 166.727,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "政府が年齢、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 166.727,
+      "speechEnd": 168.748,
+      "end": 169.028,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "性別、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 169.028,
+      "speechEnd": 176.204,
+      "end": 176.484,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "地域別により多くの分類されたデータを公開するかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 176.484,
+      "speechEnd": 183.173,
+      "end": 184.033,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "そして来年の自殺対策の予算に注目してください。"
+    }
+  ]
+}

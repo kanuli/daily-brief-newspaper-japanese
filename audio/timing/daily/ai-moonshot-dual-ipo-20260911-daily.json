@@ -1,0 +1,420 @@
+{
+  "version": 3,
+  "duration": 176.927,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 558,
+  "charactersPerMinute": 189.2,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.59,
+      "text": "Moonshotは、香港と上海のKimi開発者の二重上場を調査し、香港を評価してから"
+    },
+    {
+      "key": "dek",
+      "start": 14.59,
+      "end": 35.521,
+      "text": "中国のAIスタートアップは、大規模なモデルと資金調達ニーズの競争の下、より広範な資本市場チャネルを模索しており、香港の技術IPO競争も加熱しています。"
+    },
+    {
+      "key": "body-0",
+      "start": 35.521,
+      "end": 84.006,
+      "text": "Moonshotは、上海のスタートアップ取締役会への上場を求める前に香港での上場を検討していたと伝えられている。ロイターは以前、同社が秘密裏に香港での上場を申請し、大規模な資金調達を求めていたと報じた。同社の最新のKimiモデルの発売後、サービスをグローバルクラウドプラットフォームに接続するための交渉も行われています。"
+    },
+    {
+      "key": "body-1",
+      "start": 84.006,
+      "end": 132.71,
+      "text": "中国のジェネレーティブAI市場は競争が激しく、モデル企業はコンピューティングパワー、人材、推論インフラストラクチャへの投資を継続する必要があります。二重上場は、資金調達チャネルと現地投資家のカバレッジを改善する可能性がありますが、香港のAI株評価のボラティリティと混雑した上場スケジュールは、依然として取引窓口に影響を与えます。"
+    },
+    {
+      "key": "why",
+      "start": 132.71,
+      "end": 159.13,
+      "text": "大規模なAIスタートアップの上場は、より直接的なモデル経済データを市場に提供し、香港のテクノロジーセクターの評価ベンチマークを変える可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 159.13,
+      "end": 176.927,
+      "text": "HKEXのヒアリング、資金調達規模、STB申請手配、Moonshot事業所得の開示に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.369,
+      "end": 2.649,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Moonshotは、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.649,
+      "speechEnd": 10.314,
+      "end": 10.594,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "香港と上海のKimi開発者の二重上場を調査し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.594,
+      "speechEnd": 13.729,
+      "end": 14.59,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "香港を評価してから。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.59,
+      "speechEnd": 18.283,
+      "end": 18.563,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "中国のAIスタートアップは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.563,
+      "speechEnd": 24.276,
+      "end": 24.556,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "大規模なモデルと資金調達ニーズの競争の下、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.556,
+      "speechEnd": 29.364,
+      "end": 29.644,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "より広範な資本市場チャネルを模索しており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 29.644,
+      "speechEnd": 34.661,
+      "end": 35.521,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "香港の技術IPO競争も加熱しています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 35.521,
+      "speechEnd": 37.89,
+      "end": 38.171,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Moonshotは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.171,
+      "speechEnd": 43.396,
+      "end": 43.736,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "上海のスタートアップ取締役会への上場を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.736,
+      "speechEnd": 51.471,
+      "end": 52.091,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "求める前に香港での上場を検討していたと伝えられている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.091,
+      "speechEnd": 54.53,
+      "end": 54.81,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイターは以前、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.81,
+      "speechEnd": 60.802,
+      "end": 61.082,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同社が秘密裏に香港での上場を申請し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.082,
+      "speechEnd": 66.587,
+      "end": 67.207,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "大規模な資金調達を求めていたと報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.207,
+      "speechEnd": 72.712,
+      "end": 72.992,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同社の最新のKimiモデルの発売後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.992,
+      "speechEnd": 79.541,
+      "end": 79.882,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "サービスをグローバルクラウドプラットフォームに接続するため"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 79.882,
+      "speechEnd": 83.226,
+      "end": 84.006,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "の交渉も行われています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.006,
+      "speechEnd": 90.068,
+      "end": 90.348,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "中国のジェネレーティブAI市場は競争が激しく、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.348,
+      "speechEnd": 94.599,
+      "end": 94.879,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "モデル企業はコンピューティングパワー、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.879,
+      "speechEnd": 96.969,
+      "end": 97.249,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "人材、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.249,
+      "speechEnd": 101.221,
+      "end": 101.561,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "推論インフラストラクチャへの投資を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.561,
+      "speechEnd": 104.766,
+      "end": 105.387,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "継続する必要があります。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 105.387,
+      "speechEnd": 107.825,
+      "end": 108.105,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "二重上場は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.105,
+      "speechEnd": 113.958,
+      "end": 114.298,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "資金調達チャネルと現地投資家のカバレッジを"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.298,
+      "speechEnd": 118.34,
+      "end": 118.62,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "改善する可能性がありますが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.62,
+      "speechEnd": 126.354,
+      "end": 126.634,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "香港のAI株評価のボラティリティと混雑した上場スケジュールは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 126.634,
+      "speechEnd": 131.93,
+      "end": 132.71,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "依然として取引窓口に影響を与えます。"
+    },
+    {
+      "parentKey": "why",
+      "start": 132.71,
+      "speechEnd": 136.682,
+      "end": 137.302,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 137.302,
+      "speechEnd": 141.692,
+      "end": 141.972,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "大規模なAIスタートアップの上場は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 141.972,
+      "speechEnd": 148.243,
+      "end": 148.523,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "より直接的なモデル経済データを市場に提供し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 148.523,
+      "speechEnd": 154.655,
+      "end": 154.995,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "香港のテクノロジーセクターの評価ベンチマークを"
+    },
+    {
+      "parentKey": "why",
+      "start": 154.995,
+      "speechEnd": 158.27,
+      "end": 159.13,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "変える可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 159.13,
+      "speechEnd": 161.22,
+      "end": 161.5,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 161.5,
+      "speechEnd": 164.357,
+      "end": 164.637,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "HKEXのヒアリング、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 164.637,
+      "speechEnd": 167.006,
+      "end": 167.286,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "資金調達規模、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 167.286,
+      "speechEnd": 169.725,
+      "end": 170.005,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "STB申請手配、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 170.005,
+      "speechEnd": 176.067,
+      "end": 176.927,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "Moonshot事業所得の開示に注意してください。"
+    }
+  ]
+}

@@ -1,0 +1,370 @@
+{
+  "version": 3,
+  "duration": 177.241,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 579,
+  "charactersPerMinute": 196.0,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 17.936,
+      "text": "IBMとNASAは、氷、クレーター、火山の風景を識別するのに役立つ月の基本モデルを立ち上げました"
+    },
+    {
+      "key": "dek",
+      "start": 17.936,
+      "end": 40.262,
+      "text": "オープンソースモデルは、月の地質分析を加速し、将来の着陸地点と資源計画をサポートすることを目的として、複数のNASAミッションからのデータを統合します。"
+    },
+    {
+      "key": "body-0",
+      "start": 40.262,
+      "end": 87.79,
+      "text": "このモデルは、4つのNASAミッション、9つの機器、30層以上の観測データを統合し、IBMとNASAのコラボレーションであるPrithvi Foundation Model Seriesの一部です。両当事者は、一部のベンチマークにおけるモデルの認識精度が既存の方法よりも高く、研究コミュニティでの使用のためにオープンソース化されていると述べた。"
+    },
+    {
+      "key": "body-1",
+      "start": 87.79,
+      "end": 134.897,
+      "text": "長期的な月探査の鍵の1つは、大量のリモートセンシングデータで安全な着陸地帯と利用可能な資源を迅速に特定することです。モデルが氷と風景認識の効率を着実に向上させることができれば、Artemisはフォローアップタスクの手動ラベリングと初期スクリーニング時間を短縮するのに役立ちますが、実際のタスクはまだマルチソースの観察と地上検証に依存します。"
+    },
+    {
+      "key": "why",
+      "start": 134.897,
+      "end": 159.165,
+      "text": "これは、テキストや商用画像から惑星科学に進出する基本モデルの一例であり、AI研究ツールが専門分野に拡大していることを示しています。"
+    },
+    {
+      "key": "watch",
+      "start": 159.165,
+      "end": 177.241,
+      "text": "モデルのパブリックウェイトとデータセット、独立した研究検証、およびArtemisタスク計画の採用に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.718,
+      "end": 2.998,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "IBMとNASAは、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.998,
+      "speechEnd": 4.949,
+      "end": 5.229,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "氷、"
+    },
+    {
+      "parentKey": "title",
+      "start": 5.229,
+      "speechEnd": 7.319,
+      "end": 7.599,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "クレーター、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.599,
+      "speechEnd": 17.076,
+      "end": 17.936,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "火山の風景を識別するのに役立つ月の基本モデルを立ち上げました。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.936,
+      "speechEnd": 20.932,
+      "end": 21.212,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "オープンソースモデルは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.212,
+      "speechEnd": 24.627,
+      "end": 24.907,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "月の地質分析を加速し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.907,
+      "speechEnd": 32.92,
+      "end": 33.2,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "将来の着陸地点と資源計画をサポートすることを目的として、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 33.2,
+      "speechEnd": 39.402,
+      "end": 40.262,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "複数のNASAミッションからのデータを統合します。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.262,
+      "speechEnd": 42.701,
+      "end": 42.981,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "このモデルは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.981,
+      "speechEnd": 46.534,
+      "end": 46.815,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "4つのNASAミッション、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.815,
+      "speechEnd": 49.323,
+      "end": 49.603,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "9つの機器、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.603,
+      "speechEnd": 54.411,
+      "end": 54.691,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "30層以上の観測データを統合し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.691,
+      "speechEnd": 65.492,
+      "end": 66.112,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "IBMとNASAのコラボレーションであるPrithvi Foundation Model Seriesの一部です。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.112,
+      "speechEnd": 68.69,
+      "end": 68.97,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "両当事者は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.97,
+      "speechEnd": 75.032,
+      "end": 75.372,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "一部のベンチマークにおけるモデルの認識精度が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.372,
+      "speechEnd": 78.647,
+      "end": 78.927,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "既存の方法よりも高く、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 78.927,
+      "speechEnd": 87.01,
+      "end": 87.79,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "研究コミュニティでの使用のためにオープンソース化されていると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 87.79,
+      "speechEnd": 92.459,
+      "end": 92.739,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "長期的な月探査の鍵の1つは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.739,
+      "speechEnd": 101.031,
+      "end": 101.371,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "大量のリモートセンシングデータで安全な着陸地帯と利用可能な資源を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.371,
+      "speechEnd": 104.646,
+      "end": 105.266,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "迅速に特定することです。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 105.266,
+      "speechEnd": 113.907,
+      "end": 114.187,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "モデルが氷と風景認識の効率を着実に向上させることができれば、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.187,
+      "speechEnd": 125.754,
+      "end": 126.034,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Artemisはフォローアップタスクの手動ラベリングと初期スクリーニング時間を短縮するのに役立ちますが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 126.034,
+      "speechEnd": 134.117,
+      "end": 134.897,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "実際のタスクはまだマルチソースの観察と地上検証に依存します。"
+    },
+    {
+      "parentKey": "why",
+      "start": 134.897,
+      "speechEnd": 138.869,
+      "end": 139.489,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 139.489,
+      "speechEnd": 141.579,
+      "end": 141.859,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "これは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 141.859,
+      "speechEnd": 150.848,
+      "end": 151.128,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "テキストや商用画像から惑星科学に進出する基本モデルの一例であり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 151.128,
+      "speechEnd": 158.305,
+      "end": 159.165,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "AI研究ツールが専門分野に拡大していることを示しています。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 159.165,
+      "speechEnd": 161.256,
+      "end": 161.536,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 161.536,
+      "speechEnd": 165.647,
+      "end": 165.927,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "モデルのパブリックウェイトとデータセット、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 165.927,
+      "speechEnd": 168.923,
+      "end": 169.203,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "独立した研究検証、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 169.203,
+      "speechEnd": 176.381,
+      "end": 177.241,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "およびArtemisタスク計画の採用に注意してください。"
+    }
+  ]
+}

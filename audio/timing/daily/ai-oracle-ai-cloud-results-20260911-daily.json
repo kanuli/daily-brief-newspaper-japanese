@@ -1,0 +1,400 @@
+{
+  "version": 3,
+  "duration": 184.372,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 590,
+  "charactersPerMinute": 192.0,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.857,
+      "text": "Oracleの四半期収益が30 ％増の193億ドルのAIクラウド需要が受注と設備投資を促進"
+    },
+    {
+      "key": "dek",
+      "start": 14.857,
+      "end": 39.619,
+      "text": "同社の売上高と受注残高はいずれも市場の予想を上回っていましたが、データセンターの容量は大幅に拡大しており、高い設備投資は依然として投資家にとって大きなリスクとなっています。"
+    },
+    {
+      "key": "body-0",
+      "start": 39.619,
+      "end": 86.986,
+      "text": "オラクルは、エンタープライズAIワークロードがクラウドコンピューティングの需要を引き続き牽引し、四半期中にデータセンターの容量が約850メガワット増加したと述べています。同社は依然として、次の四半期に30 ％から34 ％の収益成長を見込んでおり、会計年度調整後1株当たり利益の見通しを8.10ドルに引き上げました。"
+    },
+    {
+      "key": "body-1",
+      "start": 86.986,
+      "end": 137.788,
+      "text": "成長のコストは、資本支出の急激な増加であり、四半期には市場の予想をはるかに上回る285億ドルに達しました。AIインフラストラクチャの競争は、大規模なクラウドプロバイダーを電力、チップ、土地、資金調達の圧力に同時にさらしており、投資家は新しいコンピューティングパワーを継続的なキャッシュフローに迅速に変換できるかどうかをより懸念するでしょう。"
+    },
+    {
+      "key": "why",
+      "start": 137.788,
+      "end": 162.116,
+      "text": "強力な受注は、エンタープライズAIの需要が依然として存在することを証明していますが、過剰な設備投資も実行とリターンのリスクを高めます。"
+    },
+    {
+      "key": "watch",
+      "start": 162.116,
+      "end": 184.372,
+      "text": "Stargate関連のプロジェクト、フリーキャッシュフロー、次の四半期のクラウドの成長、新しいデータセンターがオンラインになる速度に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.623,
+      "end": 3.963,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "Oracleの四半期収益が"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.963,
+      "speechEnd": 13.997,
+      "end": 14.857,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "30 ％増の193億ドルのAIクラウド需要が受注と設備投資を促進。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.857,
+      "speechEnd": 24.472,
+      "end": 24.752,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同社の売上高と受注残高はいずれも市場の予想を上回っていましたが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.752,
+      "speechEnd": 30.396,
+      "end": 30.676,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "データセンターの容量は大幅に拡大しており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 30.676,
+      "speechEnd": 38.758,
+      "end": 39.619,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "高い設備投資は依然として投資家にとって大きなリスクとなっています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.619,
+      "speechEnd": 41.779,
+      "end": 42.059,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "オラクルは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.059,
+      "speechEnd": 45.821,
+      "end": 46.161,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "エンタープライズAIワークロードが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.161,
+      "speechEnd": 51.526,
+      "end": 51.806,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "クラウドコンピューティングの需要を引き続き牽引し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.806,
+      "speechEnd": 56.196,
+      "end": 56.536,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "四半期中にデータセンターの容量が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.536,
+      "speechEnd": 62.11,
+      "end": 62.73,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "約850メガワット増加したと述べています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.73,
+      "speechEnd": 65.726,
+      "end": 66.006,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同社は依然として、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.006,
+      "speechEnd": 75.343,
+      "end": 75.623,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "次の四半期に30 ％から34 ％の収益成長を見込んでおり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.623,
+      "speechEnd": 81.685,
+      "end": 82.025,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "会計年度調整後1株当たり利益の見通しを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 82.025,
+      "speechEnd": 86.205,
+      "end": 86.986,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "8.10ドルに引き上げました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 86.986,
+      "speechEnd": 89.773,
+      "end": 90.053,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "成長のコストは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.053,
+      "speechEnd": 94.094,
+      "end": 94.374,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "資本支出の急激な増加であり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.374,
+      "speechEnd": 104.129,
+      "end": 104.749,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "四半期には市場の予想をはるかに上回る285億ドルに達しました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.749,
+      "speechEnd": 108.233,
+      "end": 108.513,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "AIインフラストラクチャの競争は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.513,
+      "speechEnd": 113.042,
+      "end": 113.322,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "大規模なクラウドプロバイダーを電力、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 113.322,
+      "speechEnd": 115.342,
+      "end": 115.622,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "チップ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.622,
+      "speechEnd": 117.643,
+      "end": 117.923,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "土地、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.923,
+      "speechEnd": 122.87,
+      "end": 123.15,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "資金調達の圧力に同時にさらしており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 123.15,
+      "speechEnd": 128.446,
+      "end": 128.786,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "投資家は新しいコンピューティングパワーを"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 128.786,
+      "speechEnd": 137.007,
+      "end": 137.788,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "継続的なキャッシュフローに迅速に変換できるかどうかをより懸念するでしょう。"
+    },
+    {
+      "parentKey": "why",
+      "start": 137.788,
+      "speechEnd": 141.759,
+      "end": 142.379,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 142.379,
+      "speechEnd": 144.818,
+      "end": 145.098,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "強力な受注は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 145.098,
+      "speechEnd": 148.582,
+      "end": 148.922,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "エンタープライズAIの需要が"
+    },
+    {
+      "parentKey": "why",
+      "start": 148.922,
+      "speechEnd": 154.844,
+      "end": 155.124,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "依然として存在することを証明していますが、"
+    },
+    {
+      "parentKey": "why",
+      "start": 155.124,
+      "speechEnd": 161.256,
+      "end": 162.116,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "過剰な設備投資も実行とリターンのリスクを高めます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 162.116,
+      "speechEnd": 164.206,
+      "end": 164.486,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 164.486,
+      "speechEnd": 168.249,
+      "end": 168.529,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Stargate関連のプロジェクト、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 168.529,
+      "speechEnd": 171.107,
+      "end": 171.387,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "フリーキャッシュフロー、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 171.387,
+      "speechEnd": 175.986,
+      "end": 176.266,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "次の四半期のクラウドの成長、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 176.266,
+      "speechEnd": 183.512,
+      "end": 184.372,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "新しいデータセンターがオンラインになる速度に注目してください。"
+    }
+  ]
+}

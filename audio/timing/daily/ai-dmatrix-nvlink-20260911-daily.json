@@ -1,0 +1,410 @@
+{
+  "version": 3,
+  "duration": 184.581,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 669,
+  "charactersPerMinute": 217.5,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 13.125,
+      "text": "d - MatrixはNVIDIA NVLink Fusion推論チップを採用し、GPUサーバーアーキテクチャに直接接続"
+    },
+    {
+      "key": "dek",
+      "start": 13.125,
+      "end": 34.474,
+      "text": "次世代のRaptor推論チップは、NVLink Fusionを介してNVIDIAデータセンターシステムに接続される予定であり、製品は2027年に発売される予定です。"
+    },
+    {
+      "key": "body-0",
+      "start": 34.474,
+      "end": 93.276,
+      "text": "d - Matrixは、大規模なモデルトレーニングではなくAI推論に焦点を当てており、Raptorチップの設計は2026年末までに完了する予定であり、統合システムは2027年に発売される予定です。NVLink Fusionにより、サードパーティのカスタムチップは、NVIDIAの高速相互接続、メモリ、およびシャーシアーキテクチャを通じて、異機種混在コンピューティングプラットフォームの統合しきい値を下げることができます。"
+    },
+    {
+      "key": "body-1",
+      "start": 93.276,
+      "end": 135.278,
+      "text": "このモデルは、NVIDIAがGPU自体を超えて相互接続とシステム標準に競争力を拡大していることを示しています。AIチップのスタートアップにとって、NVIDIAアーキテクチャとの互換性は大規模なデータセンターへのアクセスを改善しますが、エコシステムをNVIDIAのネットワークとソフトウェアレイヤーにより依存させる可能性もあります。"
+    },
+    {
+      "key": "why",
+      "start": 135.278,
+      "end": 161.209,
+      "text": "NVLink FusionがサードパーティのAIチップのデファクトスタンダードになった場合、NVIDIAはカスタムチップの競争に直面してもキーインターコネクトレイヤーを制御できます。"
+    },
+    {
+      "key": "watch",
+      "start": 161.209,
+      "end": 184.581,
+      "text": "Raptorのストリーミングの進捗状況、最初の顧客、パフォーマンスデータ、およびNVLink Fusionに参加している他のチップメーカーに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.943,
+      "end": 8.224,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "d - MatrixはNVIDIA NVLink Fusion推論チップを採用し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.224,
+      "speechEnd": 12.265,
+      "end": 13.125,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "GPUサーバーアーキテクチャに直接接続。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.125,
+      "speechEnd": 17.306,
+      "end": 17.586,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "次世代のRaptor推論チップは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.586,
+      "speechEnd": 27.271,
+      "end": 27.551,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "NVLink Fusionを介してNVIDIAデータセンターシステムに接続される予定であり、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.551,
+      "speechEnd": 33.614,
+      "end": 34.474,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "製品は2027年に発売される予定です。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.474,
+      "speechEnd": 37.122,
+      "end": 37.402,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "d - Matrixは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.402,
+      "speechEnd": 41.373,
+      "end": 41.713,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "大規模なモデルトレーニングでは"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.713,
+      "speechEnd": 45.964,
+      "end": 46.244,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "なくAI推論に焦点を当てており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.244,
+      "speechEnd": 49.31,
+      "end": 49.65,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "Raptorチップの設計は"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.65,
+      "speechEnd": 55.991,
+      "end": 56.271,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "2026年末までに完了する予定であり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.271,
+      "speechEnd": 63.099,
+      "end": 63.72,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "統合システムは2027年に発売される予定です。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.72,
+      "speechEnd": 66.925,
+      "end": 67.205,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "NVLink Fusionにより、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.205,
+      "speechEnd": 70.968,
+      "end": 71.248,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "サードパーティのカスタムチップは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.248,
+      "speechEnd": 75.01,
+      "end": 75.29,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "NVIDIAの高速相互接続、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.29,
+      "speechEnd": 77.311,
+      "end": 77.591,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "メモリ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 77.591,
+      "speechEnd": 82.19,
+      "end": 82.47,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "およびシャーシアーキテクチャを通じて、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 82.47,
+      "speechEnd": 89.09,
+      "end": 89.43,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "異機種混在コンピューティングプラットフォームの統合しきい値を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 89.43,
+      "speechEnd": 92.496,
+      "end": 93.276,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "下げることができます。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.276,
+      "speechEnd": 95.715,
+      "end": 95.995,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "このモデルは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 95.995,
+      "speechEnd": 104.077,
+      "end": 104.418,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "NVIDIAがGPU自体を超えて相互接続とシステム標準に競争力を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.418,
+      "speechEnd": 108.389,
+      "end": 109.009,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "拡大していることを示しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.009,
+      "speechEnd": 112.772,
+      "end": 113.052,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "AIチップのスタートアップにとって、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 113.052,
+      "speechEnd": 117.163,
+      "end": 117.503,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "NVIDIAアーキテクチャとの互換性は"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.503,
+      "speechEnd": 123.635,
+      "end": 123.915,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "大規模なデータセンターへのアクセスを改善しますが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 123.915,
+      "speechEnd": 130.395,
+      "end": 130.735,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "エコシステムをNVIDIAのネットワークとソフトウェアレイヤーにより"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 130.735,
+      "speechEnd": 134.498,
+      "end": 135.278,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "依存させる可能性もあります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 135.278,
+      "speechEnd": 139.25,
+      "end": 139.87,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 139.87,
+      "speechEnd": 142.797,
+      "end": 143.137,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "NVLink Fusionが"
+    },
+    {
+      "parentKey": "why",
+      "start": 143.137,
+      "speechEnd": 149.965,
+      "end": 150.245,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "サードパーティのAIチップのデファクトスタンダードになった場合、"
+    },
+    {
+      "parentKey": "why",
+      "start": 150.245,
+      "speechEnd": 160.349,
+      "end": 161.209,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "NVIDIAはカスタムチップの競争に直面してもキーインターコネクトレイヤーを制御できます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 161.209,
+      "speechEnd": 163.3,
+      "end": 163.58,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 163.58,
+      "speechEnd": 168.109,
+      "end": 168.389,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Raptorのストリーミングの進捗状況、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 168.389,
+      "speechEnd": 170.758,
+      "end": 171.038,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "最初の顧客、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 171.038,
+      "speechEnd": 173.825,
+      "end": 174.105,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "パフォーマンスデータ、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 174.105,
+      "speechEnd": 183.721,
+      "end": 184.581,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "およびNVLink Fusionに参加している他のチップメーカーに注目してください。"
+    }
+  ]
+}
