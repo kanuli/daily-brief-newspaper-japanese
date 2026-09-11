@@ -1,0 +1,590 @@
+{
+  "version": 3,
+  "duration": 272.64,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 854,
+  "charactersPerMinute": 187.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 13.193,
+      "text": "ブンデスリーガ：リスクの高い試合のための追加の警察手数料は、ホームチームに引き継がれます"
+    },
+    {
+      "key": "dek",
+      "start": 13.193,
+      "end": 45.797,
+      "text": "ブンデスリーガは、将来的にハイリスクのサッカーの試合のための追加の警察費用の請求書を受け取った場合、その費用はホームクラブに転嫁されることを示しているが、スタジアムの安全のための料金の使用には反対を繰り返し表明している。"
+    },
+    {
+      "key": "body-0",
+      "start": 45.797,
+      "end": 111.601,
+      "text": "ロイター通信は金曜日、ドイツサッカー協会（ DFB ）が、リスクの高い試合のためにFAに請求される追加の警察手数料を関連するホームクラブに引き継ぐことを決定したと報じた。DFBのノイエンドルフ議長は、サッカーの試合に警察の手数料を課すことは正しいアプローチではなく、政策立案者、警察、協会、クラブが協力してフィールド内外のセキュリティを改善し、展開する必要がある警察官の数を減らすことが真の目標であるべきだとFAは依然として信じていると述べた。"
+    },
+    {
+      "key": "body-1",
+      "start": 111.601,
+      "end": 193.142,
+      "text": "この事件は、リスクの高いサッカーの試合の警察費用をめぐるドイツでの長年の論争に起因している。連邦憲法裁判所は2025年に、予見可能な暴力のリスクのために、ブレーメンは商業的なメガイベントの主催者に警察費用の増加を請求することができると判決を下しました。この法的文脈は、他の州が同様のシステムを採用した場合、クラブが将来的に試合の運営コストに対してより直接的な圧力に直面する可能性があることを意味し、また、ハイリスクなイベントの安全上の取り決めと財政的責任の割り当てを再びドイツサッカー界で重要な問題にする可能性があることを意味します。"
+    },
+    {
+      "key": "why",
+      "start": 193.142,
+      "end": 242.573,
+      "text": "この決定は、主に州政府、リーグ、裁判所の間で行われた費用紛争をホームクラブに直接伝達するものです。より多くの州がそれに続くと、リスクの高いトーナメントのコストが増加するだけでなく、トーナメントの分類、セキュリティの展開、およびクラブと警察の間の責任の分担にも影響を与える可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 242.573,
+      "end": 272.64,
+      "text": "ドイツのどの州が正式に警察手形を発行しているか、最初に影響を受けたクラブとその金額、そしてDFB、DFL、クラブが再び配分メカニズムまたは法的手段に対応するかどうかに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.508,
+      "end": 2.788,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-semantic",
+      "text": "ブンデスリーガ："
+    },
+    {
+      "parentKey": "title",
+      "start": 2.788,
+      "speechEnd": 8.988,
+      "end": 9.218,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "リスクの高い試合のための追加の警察手数料は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.218,
+      "speechEnd": 12.493,
+      "end": 13.193,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "ホームチームに引き継がれます。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.193,
+      "speechEnd": 15.84,
+      "end": 16.07,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ブンデスリーガは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.07,
+      "speechEnd": 21.644,
+      "end": 21.924,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "将来的にハイリスクのサッカーの試合のため"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.924,
+      "speechEnd": 27.776,
+      "end": 28.006,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "の追加の警察費用の請求書を受け取った場合、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 28.006,
+      "speechEnd": 34.764,
+      "end": 34.994,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "その費用はホームクラブに転嫁されることを示しているが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 34.994,
+      "speechEnd": 40.706,
+      "end": 40.986,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "スタジアムの安全のための料金の使用には"
+    },
+    {
+      "parentKey": "dek",
+      "start": 40.986,
+      "speechEnd": 45.097,
+      "end": 45.797,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "反対を繰り返し表明している。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.797,
+      "speechEnd": 48.932,
+      "end": 49.162,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信は金曜日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.162,
+      "speechEnd": 52.994,
+      "end": 53.224,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ドイツサッカー協会（ DFB ）が、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.224,
+      "speechEnd": 61.235,
+      "end": 61.515,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "リスクの高い試合のためにFAに請求される追加の警察手数料を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.515,
+      "speechEnd": 67.925,
+      "end": 68.425,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "関連するホームクラブに引き継ぐことを決定したと報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.425,
+      "speechEnd": 72.117,
+      "end": 72.347,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "DFBのノイエンドルフ議長は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.347,
+      "speechEnd": 78.06,
+      "end": 78.34,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "サッカーの試合に警察の手数料を課すことは"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 78.34,
+      "speechEnd": 81.614,
+      "end": 81.844,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "正しいアプローチではなく、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 81.844,
+      "speechEnd": 84.492,
+      "end": 84.722,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "政策立案者、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 84.722,
+      "speechEnd": 86.742,
+      "end": 86.972,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "警察、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 86.972,
+      "speechEnd": 88.992,
+      "end": 89.222,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "協会、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 89.222,
+      "speechEnd": 95.771,
+      "end": 96.001,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "クラブが協力してフィールド内外のセキュリティを改善し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 96.001,
+      "speechEnd": 102.341,
+      "end": 102.621,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "展開する必要がある警察官の数を減らすことが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 102.621,
+      "speechEnd": 110.981,
+      "end": 111.601,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "真の目標であるべきだとFAは依然として信じていると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.601,
+      "speechEnd": 113.9,
+      "end": 114.13,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この事件は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.13,
+      "speechEnd": 119.146,
+      "end": 119.426,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "リスクの高いサッカーの試合の警察費用を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 119.426,
+      "speechEnd": 125.139,
+      "end": 125.639,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "めぐるドイツでの長年の論争に起因している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 125.639,
+      "speechEnd": 130.794,
+      "end": 131.024,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "連邦憲法裁判所は2025年に、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 131.024,
+      "speechEnd": 135.274,
+      "end": 135.504,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "予見可能な暴力のリスクのために、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 135.504,
+      "speechEnd": 143.655,
+      "end": 143.935,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ブレーメンは商業的なメガイベントの主催者に警察費用の増加を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 143.935,
+      "speechEnd": 149.23,
+      "end": 149.73,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "請求することができると判決を下しました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 149.73,
+      "speechEnd": 152.586,
+      "end": 152.816,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この法的文脈は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 152.816,
+      "speechEnd": 158.181,
+      "end": 158.411,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "他の州が同様のシステムを採用した場合、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 158.411,
+      "speechEnd": 172.066,
+      "end": 172.296,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "クラブが将来的に試合の運営コストに対してより直接的な圧力に直面する可能性があることを意味し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 172.296,
+      "speechEnd": 174.316,
+      "end": 174.546,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "また、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 174.546,
+      "speechEnd": 183.185,
+      "end": 183.465,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ハイリスクなイベントの安全上の取り決めと財政的責任の割り当てを"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 183.465,
+      "speechEnd": 192.522,
+      "end": 193.142,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "再びドイツサッカー界で重要な問題にする可能性があることを意味します。"
+    },
+    {
+      "parentKey": "why",
+      "start": 193.142,
+      "speechEnd": 197.113,
+      "end": 197.613,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 197.613,
+      "speechEnd": 199.981,
+      "end": 200.211,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この決定は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 200.211,
+      "speechEnd": 202.789,
+      "end": 203.019,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "主に州政府、"
+    },
+    {
+      "parentKey": "why",
+      "start": 203.019,
+      "speechEnd": 205.04,
+      "end": 205.27,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "リーグ、"
+    },
+    {
+      "parentKey": "why",
+      "start": 205.27,
+      "speechEnd": 214.396,
+      "end": 214.896,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "裁判所の間で行われた費用紛争をホームクラブに直接伝達するものです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 214.896,
+      "speechEnd": 218.797,
+      "end": 219.027,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "より多くの州がそれに続くと、"
+    },
+    {
+      "parentKey": "why",
+      "start": 219.027,
+      "speechEnd": 225.297,
+      "end": 225.528,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "リスクの高いトーナメントのコストが増加するだけでなく、"
+    },
+    {
+      "parentKey": "why",
+      "start": 225.528,
+      "speechEnd": 228.175,
+      "end": 228.405,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "トーナメントの分類、"
+    },
+    {
+      "parentKey": "why",
+      "start": 228.405,
+      "speechEnd": 231.192,
+      "end": 231.422,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "セキュリティの展開、"
+    },
+    {
+      "parentKey": "why",
+      "start": 231.422,
+      "speechEnd": 238.179,
+      "end": 238.459,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "およびクラブと警察の間の責任の分担にも影響を"
+    },
+    {
+      "parentKey": "why",
+      "start": 238.459,
+      "speechEnd": 241.873,
+      "end": 242.573,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "与える可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 242.573,
+      "speechEnd": 244.663,
+      "end": 244.893,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 244.893,
+      "speechEnd": 251.512,
+      "end": 251.742,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ドイツのどの州が正式に警察手形を発行しているか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 251.742,
+      "speechEnd": 256.34,
+      "end": 256.57,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "最初に影響を受けたクラブとその金額、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 256.57,
+      "speechEnd": 258.799,
+      "end": 259.029,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "そしてDFB、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 259.029,
+      "speechEnd": 261.049,
+      "end": 261.279,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "DFL、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 261.279,
+      "speechEnd": 265.599,
+      "end": 265.879,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "クラブが再び配分メカニズムまたは"
+    },
+    {
+      "parentKey": "watch",
+      "start": 265.879,
+      "speechEnd": 271.94,
+      "end": 272.64,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "法的手段に対応するかどうかに注目してください。"
+    }
+  ]
+}
