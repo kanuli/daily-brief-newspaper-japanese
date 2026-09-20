@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "assessedAt": "2026-09-20T11:01:15.950Z",
+  "assessedAt": "2026-09-20T12:14:42.165Z",
   "state": "RED",
-  "summary": "RECOVERY_REQUIRED:daily,live,desk",
+  "summary": "RECOVERY_REQUIRED:daily,live,desk,stocks",
   "layers": {
     "daily": {
       "current": false,
@@ -11,21 +11,21 @@
     },
     "live": {
       "current": false,
-      "upstream": "2026-09-20T19:00:00+08:00",
+      "upstream": "2026-09-20T20:00:00+08:00",
       "japanese": "2026-09-18T14:00:00+08:00",
-      "lagMinutes": 3180
+      "lagMinutes": 3240
     },
     "desk": {
       "current": false,
       "upstream": null,
-      "japanese": "2026-09-20T18:00:00+08:00",
+      "japanese": "2026-09-20T19:00:00+08:00",
       "lagMinutes": null
     },
     "stocks": {
-      "current": true,
-      "upstream": "2026-09-19T15:59:36.575936+00:00",
+      "current": false,
+      "upstream": "2026-09-20T12:03:03.618019+00:00",
       "japanese": "2026-09-19T15:59:36.575936+00:00",
-      "lagMinutes": 0
+      "lagMinutes": 1203
     },
     "structural": {
       "current": true,
@@ -40,8 +40,8 @@
   },
   "robot": {
     "current": true,
-    "runId": 35506657849,
-    "event": "workflow_dispatch",
+    "runId": 35510056021,
+    "event": "schedule",
     "selfHealingLoop": true
   },
   "policy": {
