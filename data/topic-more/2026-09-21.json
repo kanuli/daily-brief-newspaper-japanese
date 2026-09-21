@@ -536,7 +536,7 @@
       "slug": "world",
       "title": "世界",
       "label": "世界",
-      "subtitle": "非アジアの国際政治、社会、外交、安全保障、気候、公共問題",
+      "subtitle": "非アジアの国際政治、社会、外交、安全保障、気候と公共問題",
       "articleIds": [
         "world-australia-unsc-bid-20260921-1600",
         "world-germany-state-elections-merz-setback-20260921-0600"
@@ -556,7 +556,7 @@
       "slug": "hong-kong",
       "title": "香港",
       "label": "香港",
-      "subtitle": "香港の政務、社会、人々の暮らし、都市開発",
+      "subtitle": "香港の広報、社会、民生、都市開発",
       "articleIds": [
         "hong-kong-five-year-plan-business-certainty-20260920-1800"
       ]
@@ -565,7 +565,7 @@
       "slug": "japan",
       "title": "日本",
       "label": "日本",
-      "subtitle": "日本の政治、社会、経済、治安、国民生活",
+      "subtitle": "日本の政治、社会、経済、公安、民生",
       "articleIds": [
         "japan-typhoon-dujuan-kanto-20260921-1200"
       ]
@@ -574,7 +574,7 @@
       "slug": "market-economy",
       "title": "財經",
       "label": "財經",
-      "subtitle": "世界市場、マクロ経済、企業と産業",
+      "subtitle": "グローバル市場、マクロ経済、ビジネス＆産業",
       "articleIds": [
         "market-yuan-multiyear-high-trump-xi-20260921-1500",
         "market-firmus-australia-ai-datacentre-ipo-20260921-1400"
@@ -584,7 +584,7 @@
       "slug": "ai-tech",
       "title": "AI / 科技",
       "label": "AI / 科技",
-      "subtitle": "人工知能、半導体、プラットフォーム、科学研究およびテクノロジー産業",
+      "subtitle": "人工知能、半導体、プラットフォーム、研究および技術",
       "articleIds": [
         "ai-tech-us-china-ai-alert-20260921-1100",
         "ai-tech-cxmt-fifth-gen-dram-mass-production-20260920-1900"
@@ -606,13 +606,15 @@
   "translationSchemaVersion": "ja-cantonese-extra-v2-full-parity",
   "sourceParityMode": "owner-quarantine-v1",
   "translationDegraded": true,
-  "translationDeferredCount": 1,
+  "translationDeferredCount": 3,
   "translationDeferredIds": [],
   "translationDeferredMetadata": [
+    "$.sections[6].title",
+    "$.sections[6].label",
     "$.sections[6].subtitle"
   ],
   "translationRecoveryMode": "owner-quarantine-v1",
   "translationBudgetSeconds": 120,
-  "translationElapsedSeconds": 31,
-  "translationBudgetExhausted": false
+  "translationElapsedSeconds": 135,
+  "translationBudgetExhausted": true
 }
