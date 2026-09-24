@@ -59,7 +59,7 @@ def post(content: str) -> None:
         data=body,
         headers={
             "Content-Type": "application/json",
-            "User-Agent": "JapaneseDailyBriefGitHubActions/2.2",
+            "User-Agent": "JapaneseDailyBriefGitHubActions/2.3",
         },
         method="POST",
     )
@@ -172,26 +172,15 @@ def send_live() -> None:
 
 
 def send_hourly() -> None:
-    """Send the scheduled website update even when this cycle has no data delta."""
-    current = load("data/live.json")
-    items = safe_live_items(current)
-    update_label = current.get("lastUpdatedLabel") or current.get("lastUpdated") or "最新更新"
-    if corrupt(update_label):
-        update_label = current.get("lastUpdated") or "最新更新"
+    """Compatibility mode for the xx:15 schedule: publish only real Live deltas.
 
-    lines = [f"🕒 **日本語ニュース毎時更新｜{update_label}**", ""]
-    if items:
-        for item in items[:3]:
-            lines.append(f"• **{str(item.get('title') or '更新').strip()}**")
-    else:
-        lines.append("この時間帯は新しい安全な速報項目がありません。最新掲載内容はサイトで確認できます。")
-    lines += [
-        "",
-        f"🔴 最新ニュース速報：{LIVE_PAGE}",
-        f"📰 Daily Edition：{SITE}",
-    ]
-    post("\n".join(lines))
-    print("Hourly Japanese Discord website update sent with website-only links.")
+    The old hourly mode reposted the current top headlines even when data had not
+    changed, causing the same Live news to appear repeatedly in Discord.  Keep
+    the workflow flag for compatibility, but route it through the material-delta
+    guard used by normal Live notifications.
+    """
+    print("Hourly compatibility mode is delta-only; checking material Live changes.")
+    send_live()
 
 
 def main() -> None:
