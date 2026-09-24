@@ -29,6 +29,21 @@
     return Number.isFinite(ms) ? ms : 0;
   }
 
+  function hktLabel(payload) {
+    const raw = payload?.generatedAt || payload?.lastUpdated || payload?.sourceGeneratedAt || payload?.checkedAt || "";
+    const ms = Date.parse(String(raw));
+    if (Number.isFinite(ms)) {
+      const values = Object.fromEntries(new Intl.DateTimeFormat("ja-JP", {
+        timeZone: "Asia/Hong_Kong",
+        year: "numeric", month: "numeric", day: "numeric",
+        hour: "2-digit", minute: "2-digit", hour12: false
+      }).formatToParts(new Date(ms)).map((part) => [part.type, part.value]));
+      return `${values.year}年${values.month}月${values.day}日 ${values.hour}:${values.minute} HKT`;
+    }
+    const match = String(payload?.date || "").match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    return match ? `${match[1]}年${Number(match[2])}月${Number(match[3])}日` : "";
+  }
+
   async function getJson(path) {
     const response = await fetch(`${path}?home_current=${Date.now()}`, { cache: "no-store" });
     if (!response.ok) throw new Error(`${path}: HTTP ${response.status}`);
@@ -59,13 +74,16 @@
     return Array.isArray(payload?.articles) ? payload.articles : [];
   }
 
-  function setCurrentMeta(daily, live, freshestStamp) {
+  function setCurrentMeta(daily, live, desk, freshestStamp) {
     const dateNodes = document.querySelectorAll("[data-edition-date]");
-    const liveLabel = live?.lastUpdatedLabel || live?.lastUpdated || "";
     const dailyLabel = daily?.dateLabel || daily?.date || "";
-    const label = liveLabel && stamp(live) === freshestStamp
-      ? `最新更新 ${liveLabel}｜Daily ${dailyLabel}`
-      : dailyLabel;
+    let currentLabel = "";
+    if (desk && stamp(desk) === freshestStamp) currentLabel = hktLabel(desk);
+    else if (live && stamp(live) === freshestStamp) currentLabel = live?.lastUpdatedLabel || hktLabel(live);
+    else if (daily && stamp(daily) === freshestStamp) currentLabel = dailyLabel;
+    const label = currentLabel && currentLabel !== dailyLabel
+      ? `最新更新 ${currentLabel}｜Daily ${dailyLabel}`
+      : (currentLabel || dailyLabel);
     dateNodes.forEach((node) => { node.textContent = label; });
   }
 
@@ -137,7 +155,7 @@
 
       const freshestStamp = Math.max(stamp(daily), stamp(live), stamp(desk));
       const lead = currentLead(daily, live, desk, freshestStamp);
-      setCurrentMeta(daily, live, freshestStamp);
+      setCurrentMeta(daily, live, desk, freshestStamp);
       renderLead(lead, live, freshestStamp);
       renderTopFive(daily, live, desk, freshestStamp);
       renderSections(daily, live, desk, freshestStamp);
