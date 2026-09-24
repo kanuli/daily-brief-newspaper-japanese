@@ -1,14 +1,9 @@
 #!/usr/bin/env python3
-"""Prewarm selected Cantonese news layers using one frozen snapshot + local MT.
+"""Prewarm current Cantonese news layers using one frozen snapshot + local MT.
 
-PREWARM_FILES may contain a comma-separated allow-list. Keeping the hourly
-Daily/Live publication on a small file group prevents a large rolling backlog
-from blocking current-news publication.
-
-If the currently published Japanese field is already known-bad under the
-production quality gate, repair that exact source field with the validated free
-remote fallback chain before bulk local prewarm. This keeps a poisoned OPUS-MT
-decode from consuming the whole hourly recovery window again.
+Hourly recovery is deliberately limited to Daily/Live. Historical archive
+backfill must never compete with current-news publication during an outage,
+even if an older workflow still passes archive.json in PREWARM_FILES.
 """
 import json
 import os
@@ -22,12 +17,16 @@ import newsroom_quality
 import safe_sync as safe
 import sync_and_translate as base
 
+CURRENT_ONLY = {"latest.json", "live.json"}
+
 
 def selected_files(files):
     raw = str(os.environ.get("PREWARM_FILES") or "").strip()
-    if not raw:
-        return files
-    wanted = {item.strip() for item in raw.split(",") if item.strip()}
+    wanted = {item.strip() for item in raw.split(",") if item.strip()} if raw else set(CURRENT_ONLY)
+    ignored = sorted(wanted - CURRENT_ONLY)
+    if ignored:
+        print("LOCAL_MT_PREWARM_IGNORED_HISTORICAL", ",".join(ignored))
+    wanted &= CURRENT_ONLY
     chosen = [(name, payload) for name, payload in files if name in wanted]
     missing = sorted(wanted - {name for name, _payload in chosen})
     if missing:
@@ -84,8 +83,6 @@ def repair_bad_existing_to_cache(files):
                     base.CACHE[runtime.cache_key(source_text)] = value
                     repaired += 1
                 except Exception as exc:
-                    # Do not abort the whole edition here. Normal local prewarm
-                    # still gets one chance and retains its own validated fallback.
                     base.CACHE.pop(runtime.cache_key(source_text), None)
                     deferred += 1
                     print(
@@ -116,8 +113,6 @@ def main():
     all_files = source_helpers.source_files()
     files = selected_files(all_files)
 
-    # First recover fields we already know are bad. Then reuse all remaining
-    # good rendered Japanese before translating genuinely missing text.
     repair_bad_existing_to_cache(files)
     source_helpers.seed_cache_from_existing(files)
 
