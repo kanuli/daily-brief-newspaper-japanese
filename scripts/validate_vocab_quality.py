@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 """Validate the Japanese edition's learner-facing daily vocabulary."""
+# Maintenance trigger: changes to publication gates must immediately exercise the
+# current-news workflow instead of waiting for the next hourly schedule.
 from __future__ import annotations
 
 import json
