@@ -19,6 +19,8 @@ on:
       - 'stocks.html'
       - 'archive.html'
       - 'assets/js/home-current-ja.js'
+      - 'assets/js/topic-ja-rolling.js'
+      - 'assets/js/stocks-ja.js'
       - 'assets/js/system-ja.js'
       - '.github/workflows/editor-in-chief-newsroom-robot.yml'
   schedule:
@@ -30,8 +32,6 @@ permissions:
 
 concurrency:
   group: editor-in-chief-newsroom-robot
-  # Never kill an active patrol. A newer trigger may wait, but the running
-  # Editor-in-Chief must finish publishing one authoritative decision.
   cancel-in-progress: false
 
 jobs:
@@ -54,22 +54,63 @@ jobs:
             const RECOVERY_COOLDOWN_MS = 25 * MINUTE;
             const MAX_RECOVERY_ATTEMPTS = 2;
 
-            async function entry(repoName, path) {
-              try {
-                const r = await github.rest.repos.getContent({ owner, repo: repoName, path, ref: 'main' });
-                if (Array.isArray(r.data) || !r.data.content) return null;
-                return {
-                  sha: r.data.sha,
-                  text: Buffer.from(r.data.content, r.data.encoding || 'base64').toString('utf8'),
-                };
-              } catch (error) {
-                if (error.status === 404) return null;
-                throw error;
+            const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+            async function localEntry(path) {
+              let lastError = null;
+              for (let attempt = 1; attempt <= 3; attempt += 1) {
+                try {
+                  const r = await github.rest.repos.getContent({ owner, repo, path, ref: 'main' });
+                  if (Array.isArray(r.data) || !r.data.content) return null;
+                  return {
+                    sha: r.data.sha,
+                    text: Buffer.from(r.data.content, r.data.encoding || 'base64').toString('utf8'),
+                  };
+                } catch (error) {
+                  lastError = error;
+                  if ([404, 409, 429, 500, 502, 503, 504].includes(error.status) && attempt < 3) {
+                    core.warning(`LOCAL_READ_RETRY path=${path} status=${error.status} attempt=${attempt}`);
+                    await sleep(attempt * 800);
+                    continue;
+                  }
+                  if (error.status === 404) return null;
+                  throw error;
+                }
               }
+              if (lastError?.status === 404) return null;
+              throw lastError;
+            }
+
+            // GITHUB_TOKEN is repository-scoped. Using repos.getContent() against
+            // the Cantonese source repository can therefore return a false 404.
+            // Source truth is public, so read it directly from raw.githubusercontent
+            // with retry and no-cache semantics instead of consuming a repair attempt.
+            async function sourceRaw(path) {
+              let last = 'unknown';
+              for (let attempt = 1; attempt <= 4; attempt += 1) {
+                const url = `https://raw.githubusercontent.com/${owner}/${sourceRepo}/main/${path}?editor_patrol=${context.runId}-${Date.now()}-${attempt}`;
+                try {
+                  const response = await fetch(url, {
+                    headers: {
+                      'User-Agent': 'daily-brief-japanese-editor-in-chief',
+                      'Cache-Control': 'no-cache',
+                    },
+                  });
+                  if (response.ok) return await response.text();
+                  last = `HTTP ${response.status}`;
+                  if (![404, 408, 409, 429, 500, 502, 503, 504].includes(response.status)) break;
+                } catch (error) {
+                  last = error.message;
+                }
+                if (attempt < 4) await sleep(attempt * 1000);
+              }
+              core.warning(`UPSTREAM_READ_UNAVAILABLE ${path}: ${last}`);
+              return null;
             }
 
             async function raw(repoName, path) {
-              return (await entry(repoName, path))?.text || null;
+              if (repoName === sourceRepo) return sourceRaw(path);
+              return (await localEntry(path))?.text || null;
             }
 
             async function json(repoName, path) {
@@ -104,8 +145,8 @@ jobs:
               return Math.max(0, Math.round((sourceMs - localMs) / MINUTE));
             }
 
-            function iso(msValue) {
-              return Number.isFinite(msValue) ? new Date(msValue).toISOString() : null;
+            function iso(value) {
+              return Number.isFinite(value) ? new Date(value).toISOString() : null;
             }
 
             async function active(workflow) {
@@ -132,7 +173,7 @@ jobs:
 
             async function publishHealth(health) {
               for (let attempt = 1; attempt <= 3; attempt += 1) {
-                const current = await entry(repo, HEALTH_PATH);
+                const current = await localEntry(HEALTH_PATH);
                 let oldHealth = null;
                 try { oldHealth = current?.text ? JSON.parse(current.text) : null; } catch (_) {}
                 const semantic = (value) => JSON.stringify({
@@ -141,8 +182,8 @@ jobs:
                   layers: value?.layers,
                   recovery: value?.recovery,
                   maintenance: value?.maintenance,
+                  sourceRead: value?.sourceRead,
                   policy: value?.policy,
-                  robot: value?.robot,
                 });
                 const oldAssessed = Date.parse(String(oldHealth?.assessedAt || ''));
                 const heartbeatDue = !Number.isFinite(oldAssessed) || Date.now() - oldAssessed >= HEALTH_HEARTBEAT_MS;
@@ -166,7 +207,7 @@ jobs:
                 } catch (error) {
                   if ((error.status === 409 || error.status === 422) && attempt < 3) {
                     core.warning(`health write race attempt ${attempt}; retrying`);
-                    await new Promise((resolve) => setTimeout(resolve, attempt * 1000));
+                    await sleep(attempt * 1000);
                     continue;
                   }
                   throw error;
@@ -210,6 +251,13 @@ jobs:
               json(repo, HEALTH_PATH),
             ]);
 
+            const sourceReadFailures = [];
+            if (!sourceDaily) sourceReadFailures.push('daily');
+            if (!sourceLive) sourceReadFailures.push('live');
+            if (!sourceDesk) sourceReadFailures.push('desk');
+            if (!sourceStocks) sourceReadFailures.push('stocks');
+            const sourceReadable = sourceReadFailures.length === 0;
+
             const sourceDailyDay = day(sourceDaily?.date);
             const localDailyDay = day(localDaily?.date);
             const dailyCurrent = Boolean(sourceDailyDay && localDailyDay && localDailyDay >= sourceDailyDay);
@@ -245,30 +293,26 @@ jobs:
             };
 
             const recovery = {
-              coreRequired: !dailyCurrent || !liveCurrent,
-              rollingRequired: !deskCurrent || !stocksCurrent,
+              coreRequired: sourceReadable && (!dailyCurrent || !liveCurrent),
+              rollingRequired: sourceReadable && (!deskCurrent || !stocksCurrent),
               structuralRequired: !structuralCurrent,
             };
-            const failures = Object.entries(layers).filter(([, value]) => value.current !== true).map(([name]) => name);
-            const state = failures.length ? 'RED' : 'GREEN';
 
+            const staleFailures = [];
+            if (sourceReadable && !dailyCurrent) staleFailures.push('daily');
+            if (sourceReadable && !liveCurrent) staleFailures.push('live');
+            if (sourceReadable && !deskCurrent) staleFailures.push('desk');
+            if (sourceReadable && !stocksCurrent) staleFailures.push('stocks');
+            if (!structuralCurrent) staleFailures.push('structural');
+
+            const state = sourceReadable && staleFailures.length === 0 ? 'GREEN' : 'RED';
             const incidentParts = [];
-            if (recovery.coreRequired) {
-              const failed = [];
-              if (!dailyCurrent) failed.push('daily');
-              if (!liveCurrent) failed.push('live');
-              incidentParts.push(`core:${failed.join('+')}`);
-            }
-            if (recovery.rollingRequired) {
-              const failed = [];
-              if (!deskCurrent) failed.push('desk');
-              if (!stocksCurrent) failed.push('stocks');
-              incidentParts.push(`rolling:${failed.join('+')}`);
-            }
-            if (recovery.structuralRequired) {
-              incidentParts.push(`structural:${[...structural].sort().join(',')}`);
-            }
+            if (!sourceReadable) incidentParts.push(`source-read:${sourceReadFailures.join('+')}`);
+            if (recovery.coreRequired) incidentParts.push(`core:${[!dailyCurrent ? 'daily' : '', !liveCurrent ? 'live' : ''].filter(Boolean).join('+')}`);
+            if (recovery.rollingRequired) incidentParts.push(`rolling:${[!deskCurrent ? 'desk' : '', !stocksCurrent ? 'stocks' : ''].filter(Boolean).join('+')}`);
+            if (recovery.structuralRequired) incidentParts.push(`structural:${[...structural].sort().join(',')}`);
             const incidentKey = incidentParts.join('|') || 'healthy';
+
             const previousMaintenance = previousHealth?.maintenance || {};
             const sameIncident = state === 'RED' && previousMaintenance.incidentKey === incidentKey && previousMaintenance.status !== 'resolved';
             let attempts = sameIncident ? Math.max(0, Number(previousMaintenance.attempts) || 0) : 0;
@@ -279,7 +323,15 @@ jobs:
             let recoveryResults = [];
             let nextEligibleAt = null;
 
-            if (state === 'RED') {
+            if (state === 'RED' && !sourceReadable) {
+              // A source-read failure is an observation problem, not evidence that
+              // Japanese content is stale. Do not spend a repair attempt or start
+              // a 25-minute cooldown on an unreadable upstream snapshot.
+              maintenanceStatus = 'source-read-degraded';
+              decision = 'NO_MUTATION_RECHECK_NEXT_PATROL';
+              attempts = 0;
+              lastAttemptAt = null;
+            } else if (state === 'RED') {
               const cooldownActive = Number.isFinite(lastAttemptMs) && Date.now() - lastAttemptMs < RECOVERY_COOLDOWN_MS;
               if (attempts >= MAX_RECOVERY_ATTEMPTS) {
                 maintenanceStatus = 'escalated';
@@ -314,7 +366,7 @@ jobs:
                   maintenanceStatus = 'repairing';
                   decision = 'RECOVERY_ALREADY_ACTIVE';
                 } else {
-                  maintenanceStatus = 'cooldown';
+                  maintenanceStatus = 'observed';
                   decision = 'NO_DISPATCH_AVAILABLE';
                 }
               }
@@ -342,17 +394,26 @@ jobs:
             };
 
             const health = {
-              version: 3,
+              version: 4,
               assessedAt: new Date().toISOString(),
               state,
               summary: state === 'GREEN'
                 ? 'ALL_REQUIRED_NEWS_LAYERS_CURRENT'
-                : maintenanceStatus === 'escalated'
-                  ? `ESCALATED:${failures.join(',')}`
-                  : `RECOVERY_REQUIRED:${failures.join(',')}`,
+                : !sourceReadable
+                  ? `SOURCE_READ_DEGRADED:${sourceReadFailures.join(',')}`
+                  : maintenanceStatus === 'escalated'
+                    ? `ESCALATED:${staleFailures.join(',')}`
+                    : `RECOVERY_REQUIRED:${staleFailures.join(',')}`,
               layers,
               recovery,
               maintenance,
+              sourceRead: {
+                mode: 'public-raw-retry',
+                readable: sourceReadable,
+                failures: sourceReadFailures,
+                attemptsPerFile: 4,
+                false404ConsumesRepairBudget: false,
+              },
               robot: {
                 current: true,
                 runId: context.runId,
@@ -372,10 +433,12 @@ jobs:
                 currentOnlyCoreRepair: true,
                 archiveBackfillAllowed: false,
                 successfulRecoveryRecheckOnly: true,
+                upstreamReadFailureDoesNotAuthorizeMutation: true,
               },
             };
 
             core.info(`EDITOR state=${state} summary=${health.summary}`);
+            core.info(`EDITOR Source readable=${sourceReadable} failures=${sourceReadFailures.join(',') || 'none'}`);
             core.info(`EDITOR Daily source=${sourceDailyDay || 'missing'} japanese=${localDailyDay || 'missing'} current=${dailyCurrent}`);
             core.info(`EDITOR Live source=${layers.live.upstream || 'missing'} japanese=${layers.live.japanese || 'missing'} current=${liveCurrent} lag=${layers.live.lagMinutes}`);
             core.info(`EDITOR Desk source=${layers.desk.upstream || 'missing'} japanese=${layers.desk.japanese || 'missing'} current=${deskCurrent} lag=${layers.desk.lagMinutes}`);
@@ -400,6 +463,7 @@ jobs:
               .addHeading('Editor-in-Chief automatic maintenance')
               .addTable([
                 [{data: 'State', header: true}, state],
+                [{data: 'Source read', header: true}, sourceReadable ? 'OK' : `DEGRADED (${sourceReadFailures.join(', ')})`],
                 [{data: 'Incident', header: true}, incidentKey],
                 [{data: 'Decision', header: true}, decision],
                 [{data: 'Robot status', header: true}, maintenanceStatus],
@@ -410,7 +474,8 @@ jobs:
               .write();
 
             if (state === 'RED') {
-              if (maintenanceStatus === 'escalated') core.setFailed(`EDITOR_IN_CHIEF_ESCALATED ${health.summary}; incident=${incidentKey}`);
+              if (!sourceReadable) core.setFailed(`EDITOR_SOURCE_READ_DEGRADED ${sourceReadFailures.join(',')}; no repair attempt consumed`);
+              else if (maintenanceStatus === 'escalated') core.setFailed(`EDITOR_IN_CHIEF_ESCALATED ${health.summary}; incident=${incidentKey}`);
               else core.setFailed(`EDITOR_IN_CHIEF_RED ${health.summary}; maintenance=${maintenanceStatus}`);
             } else {
               core.info('EDITOR_IN_CHIEF_GREEN all required reader layers current');
@@ -450,15 +515,12 @@ jobs:
               }
 
               const fallback = {
-                version: 3,
+                version: 4,
                 assessedAt: new Date().toISOString(),
                 state: 'RED',
                 summary: 'EDITOR_IN_CHIEF_EXECUTION_FAILED_BEFORE_FRESH_HEALTH_PUBLISH',
                 layers: previous?.layers || {},
-                recovery: {
-                  ...(previous?.recovery || {}),
-                  robotRequired: true,
-                },
+                recovery: { ...(previous?.recovery || {}), robotRequired: true },
                 maintenance: {
                   ...(previous?.maintenance || {}),
                   owner: 'Editor-in-Chief',
@@ -468,6 +530,7 @@ jobs:
                   currentOnlyCoreRepair: true,
                   archiveBackfillAllowed: false,
                 },
+                sourceRead: previous?.sourceRead || { mode: 'public-raw-retry', readable: false, failures: ['unknown'] },
                 robot: {
                   current: false,
                   runId: context.runId,
@@ -487,6 +550,7 @@ jobs:
                   currentOnlyCoreRepair: true,
                   archiveBackfillAllowed: false,
                   successfulRecoveryRecheckOnly: true,
+                  upstreamReadFailureDoesNotAuthorizeMutation: true,
                 },
               };
 
