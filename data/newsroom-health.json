@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "assessedAt": "2026-09-24T17:18:14.965Z",
+  "assessedAt": "2026-09-24T17:19:00.752Z",
   "state": "RED",
   "summary": "RECOVERY_REQUIRED:desk",
   "layers": {
@@ -42,8 +42,8 @@
     "owner": "Editor-in-Chief",
     "executor": "Maintenance Robot",
     "incidentKey": "rolling:desk",
-    "status": "repairing",
-    "decision": "RECOVERY_ALREADY_ACTIVE",
+    "status": "cooldown",
+    "decision": "WAIT_FOR_COOLDOWN",
     "attempts": 1,
     "maxAttempts": 2,
     "lastAttemptAt": "2026-09-24T17:18:14.965Z",
@@ -51,19 +51,12 @@
     "cooldownMinutes": 25,
     "currentOnlyCoreRepair": true,
     "archiveBackfillAllowed": false,
-    "results": [
-      {
-        "workflow": "repair-extra-translation-quality.yml",
-        "dispatched": false,
-        "active": true,
-        "runId": 36033323393
-      }
-    ]
+    "results": []
   },
   "robot": {
     "current": true,
-    "runId": 36033331836,
-    "event": "workflow_dispatch",
+    "runId": 36033423104,
+    "event": "push",
     "role": "editor-in-chief-orchestrator",
     "executor": "bounded-maintenance-workers",
     "selfHealingLoop": false
