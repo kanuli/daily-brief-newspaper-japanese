@@ -7,8 +7,9 @@ failures when Cantonese publishes another update while Japanese translation is
 already running.
 
 PARITY_SCOPE=current checks only latency-sensitive current news (Daily/Live).
-PARITY_SCOPE=base additionally checks Archive. Rolling/topic/stock parity is
-checked by its own repair path and must never block current-news publication.
+PARITY_SCOPE=base is retained as a backwards-compatible alias for the same
+current-news gate, so Archive drift can never freeze today's publication.
+Rolling/topic/stock/archive parity belongs to its own maintenance path.
 """
 import hashlib
 import json
@@ -99,8 +100,8 @@ def main():
     scope = str(os.environ.get("PARITY_SCOPE") or "all").strip().lower()
 
     # Current-news recovery is deliberately independent from archive history.
-    # A stale/incomplete archive must never freeze today's Daily or Live output.
-    primary_files = CURRENT_FILES if scope == "current" else BASE_FILES
+    # "base" remains an alias because the existing hourly workflow already uses it.
+    primary_files = CURRENT_FILES if scope in {"current", "base"} else BASE_FILES
 
     for name in primary_files:
         try:
