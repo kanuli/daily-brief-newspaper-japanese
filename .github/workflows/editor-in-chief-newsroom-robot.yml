@@ -21,11 +21,6 @@ on:
       - 'assets/js/home-current-ja.js'
       - 'assets/js/system-ja.js'
       - '.github/workflows/editor-in-chief-newsroom-robot.yml'
-  workflow_run:
-    workflows:
-      - '日本語ニュース同期・品質ゲート・Discord配信'
-      - '日本語ローリング翻訳品質修復'
-    types: [completed]
   schedule:
     - cron: '5,20,35,50 * * * *'
 
@@ -35,8 +30,8 @@ permissions:
 
 concurrency:
   group: editor-in-chief-newsroom-robot
-  # Never kill an active patrol. A newer trigger may replace a queued patrol,
-  # but the running patrol is always allowed to publish its health snapshot.
+  # Never kill an active patrol. A newer trigger may wait, but the running
+  # Editor-in-Chief must finish publishing one authoritative decision.
   cancel-in-progress: false
 
 jobs:
@@ -44,7 +39,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
-      - name: Patrol, publish health truth, and recover stale pages
+      - name: Patrol, publish health truth, and authorize bounded recovery
         id: patrol
         uses: actions/github-script@v7
         with:
@@ -56,6 +51,8 @@ jobs:
             const HEALTH_PATH = 'data/newsroom-health.json';
             const HEALTH_HEARTBEAT_MS = 30 * MINUTE;
             const STUCK_RUN_MS = 35 * MINUTE;
+            const RECOVERY_COOLDOWN_MS = 25 * MINUTE;
+            const MAX_RECOVERY_ATTEMPTS = 2;
 
             async function entry(repoName, path) {
               try {
@@ -107,6 +104,10 @@ jobs:
               return Math.max(0, Math.round((sourceMs - localMs) / MINUTE));
             }
 
+            function iso(msValue) {
+              return Number.isFinite(msValue) ? new Date(msValue).toISOString() : null;
+            }
+
             async function active(workflow) {
               const r = await github.rest.actions.listWorkflowRuns({ owner, repo, workflow_id: workflow, per_page: 20 });
               return r.data.workflow_runs.find((run) => run.status !== 'completed') || null;
@@ -118,7 +119,7 @@ jobs:
                 const age = Date.now() - Date.parse(running.created_at || 0);
                 if (Number.isFinite(age) && age < STUCK_RUN_MS) {
                   core.warning(`${workflow} already active as run ${running.id}; reason=${reason}`);
-                  return { dispatched: false, active: true, runId: running.id };
+                  return { workflow, dispatched: false, active: true, runId: running.id };
                 }
                 core.warning(`${workflow} run ${running.id} is older than ${Math.round(STUCK_RUN_MS / MINUTE)}m; cancelling stuck recovery`);
                 try { await github.rest.actions.cancelWorkflowRun({ owner, repo, run_id: running.id }); }
@@ -126,7 +127,7 @@ jobs:
               }
               await github.rest.actions.createWorkflowDispatch({ owner, repo, workflow_id: workflow, ref: 'main' });
               core.warning(`ROBOT_DISPATCH ${workflow}; reason=${reason}`);
-              return { dispatched: true, active: false, runId: null };
+              return { workflow, dispatched: true, active: false, runId: null };
             }
 
             async function publishHealth(health) {
@@ -139,6 +140,7 @@ jobs:
                   summary: value?.summary,
                   layers: value?.layers,
                   recovery: value?.recovery,
+                  maintenance: value?.maintenance,
                   policy: value?.policy,
                   robot: value?.robot,
                 });
@@ -159,7 +161,7 @@ jobs:
                     content: Buffer.from(JSON.stringify(health, null, 2) + '\n').toString('base64'),
                     ...(current?.sha ? { sha: current.sha } : {}),
                   });
-                  core.warning(`ROBOT_HEALTH_PUBLISHED state=${health.state} commit=${result.data.commit.sha}`);
+                  core.warning(`ROBOT_HEALTH_PUBLISHED state=${health.state} maintenance=${health.maintenance?.status || 'unknown'} commit=${result.data.commit.sha}`);
                   return result.data.commit.sha;
                 } catch (error) {
                   if ((error.status === 409 || error.status === 422) && attempt < 3) {
@@ -200,11 +202,12 @@ jobs:
               if (desk && !text.includes(`data-desk="${desk}"`)) structural.push(`${path}:wrong-desk`);
             }
 
-            const [sourceDaily, localDaily, sourceLive, localLive, sourceDesk, localDesk, sourceStocks, localStocks] = await Promise.all([
+            const [sourceDaily, localDaily, sourceLive, localLive, sourceDesk, localDesk, sourceStocks, localStocks, previousHealth] = await Promise.all([
               json(sourceRepo, 'data/latest.json'), json(repo, 'data/latest.json'),
               json(sourceRepo, 'data/live.json'), json(repo, 'data/live.json'),
               json(sourceRepo, 'data/desk-latest.json'), json(repo, 'data/desk-latest.json'),
               json(sourceRepo, 'data/stocks-latest.json'), json(repo, 'data/stocks-latest.json'),
+              json(repo, HEALTH_PATH),
             ]);
 
             const sourceDailyDay = day(sourceDaily?.date);
@@ -248,18 +251,115 @@ jobs:
             };
             const failures = Object.entries(layers).filter(([, value]) => value.current !== true).map(([name]) => name);
             const state = failures.length ? 'RED' : 'GREEN';
+
+            const incidentParts = [];
+            if (recovery.coreRequired) {
+              const failed = [];
+              if (!dailyCurrent) failed.push('daily');
+              if (!liveCurrent) failed.push('live');
+              incidentParts.push(`core:${failed.join('+')}`);
+            }
+            if (recovery.rollingRequired) {
+              const failed = [];
+              if (!deskCurrent) failed.push('desk');
+              if (!stocksCurrent) failed.push('stocks');
+              incidentParts.push(`rolling:${failed.join('+')}`);
+            }
+            if (recovery.structuralRequired) {
+              incidentParts.push(`structural:${[...structural].sort().join(',')}`);
+            }
+            const incidentKey = incidentParts.join('|') || 'healthy';
+            const previousMaintenance = previousHealth?.maintenance || {};
+            const sameIncident = state === 'RED' && previousMaintenance.incidentKey === incidentKey && previousMaintenance.status !== 'resolved';
+            let attempts = sameIncident ? Math.max(0, Number(previousMaintenance.attempts) || 0) : 0;
+            let lastAttemptAt = sameIncident ? previousMaintenance.lastAttemptAt || null : null;
+            let lastAttemptMs = Date.parse(String(lastAttemptAt || ''));
+            let maintenanceStatus = state === 'GREEN' ? 'resolved' : 'observed';
+            let decision = state === 'GREEN' ? 'NO_REPAIR_REQUIRED' : 'ASSESS_RECOVERY';
+            let recoveryResults = [];
+            let nextEligibleAt = null;
+
+            if (state === 'RED') {
+              const cooldownActive = Number.isFinite(lastAttemptMs) && Date.now() - lastAttemptMs < RECOVERY_COOLDOWN_MS;
+              if (attempts >= MAX_RECOVERY_ATTEMPTS) {
+                maintenanceStatus = 'escalated';
+                decision = 'AUTO_REPAIR_BUDGET_EXHAUSTED';
+                core.warning(`EDITOR_ESCALATION incident=${incidentKey} attempts=${attempts}/${MAX_RECOVERY_ATTEMPTS}`);
+              } else if (cooldownActive) {
+                maintenanceStatus = 'cooldown';
+                decision = 'WAIT_FOR_COOLDOWN';
+                nextEligibleAt = iso(lastAttemptMs + RECOVERY_COOLDOWN_MS);
+                core.warning(`EDITOR_COOLDOWN incident=${incidentKey} attempts=${attempts}/${MAX_RECOVERY_ATTEMPTS} next=${nextEligibleAt}`);
+              } else {
+                if (recovery.coreRequired) recoveryResults.push(await dispatchRecovery('sync-japanese-news.yml', `incident=${incidentKey}; daily=${!dailyCurrent} live=${!liveCurrent}; current-only=true`));
+                if (recovery.rollingRequired) recoveryResults.push(await dispatchRecovery('repair-extra-translation-quality.yml', `incident=${incidentKey}; desk=${!deskCurrent} stocks=${!stocksCurrent}`));
+                if (recovery.structuralRequired) recoveryResults.push(await dispatchRecovery('auto-maintenance.yml', `incident=${incidentKey}; structural=${structural.join(',')}`));
+
+                const dispatched = recoveryResults.some((result) => result.dispatched);
+                const alreadyActive = recoveryResults.some((result) => result.active);
+                if (dispatched) {
+                  attempts += 1;
+                  lastAttemptAt = new Date().toISOString();
+                  lastAttemptMs = Date.parse(lastAttemptAt);
+                  nextEligibleAt = iso(lastAttemptMs + RECOVERY_COOLDOWN_MS);
+                  maintenanceStatus = 'repairing';
+                  decision = 'AUTHORIZED_BOUNDED_REPAIR';
+                } else if (alreadyActive) {
+                  if (!sameIncident || !Number.isFinite(lastAttemptMs)) {
+                    attempts = Math.max(1, attempts);
+                    lastAttemptAt = new Date().toISOString();
+                    lastAttemptMs = Date.parse(lastAttemptAt);
+                  }
+                  nextEligibleAt = iso(lastAttemptMs + RECOVERY_COOLDOWN_MS);
+                  maintenanceStatus = 'repairing';
+                  decision = 'RECOVERY_ALREADY_ACTIVE';
+                } else {
+                  maintenanceStatus = 'cooldown';
+                  decision = 'NO_DISPATCH_AVAILABLE';
+                }
+              }
+            }
+
+            const maintenance = {
+              owner: 'Editor-in-Chief',
+              executor: 'Maintenance Robot',
+              incidentKey,
+              status: maintenanceStatus,
+              decision,
+              attempts,
+              maxAttempts: MAX_RECOVERY_ATTEMPTS,
+              lastAttemptAt,
+              nextEligibleAt,
+              cooldownMinutes: Math.round(RECOVERY_COOLDOWN_MS / MINUTE),
+              currentOnlyCoreRepair: true,
+              archiveBackfillAllowed: false,
+              results: recoveryResults.map((result) => ({
+                workflow: result.workflow,
+                dispatched: result.dispatched,
+                active: result.active,
+                runId: result.runId,
+              })),
+            };
+
             const health = {
-              version: 2,
+              version: 3,
               assessedAt: new Date().toISOString(),
               state,
-              summary: state === 'GREEN' ? 'ALL_REQUIRED_NEWS_LAYERS_CURRENT' : `RECOVERY_REQUIRED:${failures.join(',')}`,
+              summary: state === 'GREEN'
+                ? 'ALL_REQUIRED_NEWS_LAYERS_CURRENT'
+                : maintenanceStatus === 'escalated'
+                  ? `ESCALATED:${failures.join(',')}`
+                  : `RECOVERY_REQUIRED:${failures.join(',')}`,
               layers,
               recovery,
+              maintenance,
               robot: {
                 current: true,
                 runId: context.runId,
                 event: context.eventName,
-                selfHealingLoop: true,
+                role: 'editor-in-chief-orchestrator',
+                executor: 'bounded-maintenance-workers',
+                selfHealingLoop: false,
               },
               policy: {
                 repairRunningRemainsRed: true,
@@ -267,21 +367,24 @@ jobs:
                 liveToleranceMinutes: 1,
                 rollingToleranceMinutes: 60,
                 healthHeartbeatMinutes: 30,
+                recoveryCooldownMinutes: Math.round(RECOVERY_COOLDOWN_MS / MINUTE),
+                maxRecoveryAttemptsPerIncident: MAX_RECOVERY_ATTEMPTS,
+                currentOnlyCoreRepair: true,
+                archiveBackfillAllowed: false,
+                successfulRecoveryRecheckOnly: true,
               },
             };
 
-            core.info(`ROBOT state=${state} summary=${health.summary}`);
-            core.info(`ROBOT Daily source=${sourceDailyDay || 'missing'} japanese=${localDailyDay || 'missing'} current=${dailyCurrent}`);
-            core.info(`ROBOT Live source=${layers.live.upstream || 'missing'} japanese=${layers.live.japanese || 'missing'} current=${liveCurrent} lag=${layers.live.lagMinutes}`);
-            core.info(`ROBOT Desk source=${layers.desk.upstream || 'missing'} japanese=${layers.desk.japanese || 'missing'} current=${deskCurrent} lag=${layers.desk.lagMinutes}`);
-            core.info(`ROBOT Stocks source=${layers.stocks.upstream || 'missing'} japanese=${layers.stocks.japanese || 'missing'} current=${stocksCurrent} lag=${layers.stocks.lagMinutes}`);
-            core.info(`ROBOT Structural current=${structuralCurrent} defects=${structural.join(',') || 'none'}`);
+            core.info(`EDITOR state=${state} summary=${health.summary}`);
+            core.info(`EDITOR Daily source=${sourceDailyDay || 'missing'} japanese=${localDailyDay || 'missing'} current=${dailyCurrent}`);
+            core.info(`EDITOR Live source=${layers.live.upstream || 'missing'} japanese=${layers.live.japanese || 'missing'} current=${liveCurrent} lag=${layers.live.lagMinutes}`);
+            core.info(`EDITOR Desk source=${layers.desk.upstream || 'missing'} japanese=${layers.desk.japanese || 'missing'} current=${deskCurrent} lag=${layers.desk.lagMinutes}`);
+            core.info(`EDITOR Stocks source=${layers.stocks.upstream || 'missing'} japanese=${layers.stocks.japanese || 'missing'} current=${stocksCurrent} lag=${layers.stocks.lagMinutes}`);
+            core.info(`EDITOR Structural current=${structuralCurrent} defects=${structural.join(',') || 'none'}`);
+            core.info(`EDITOR Maintenance incident=${incidentKey} status=${maintenanceStatus} decision=${decision} attempts=${attempts}/${MAX_RECOVERY_ATTEMPTS}`);
 
             const healthCommitSha = await publishHealth(health);
-
-            if (recovery.coreRequired) await dispatchRecovery('sync-japanese-news.yml', `daily=${!dailyCurrent} live=${!liveCurrent}`);
-            if (recovery.rollingRequired) await dispatchRecovery('repair-extra-translation-quality.yml', `desk=${!deskCurrent} stocks=${!stocksCurrent}`);
-            if (recovery.structuralRequired) await dispatchRecovery('auto-maintenance.yml', `structural=${structural.join(',')}`);
+            core.setOutput('assessment_complete', 'true');
 
             const branch = await github.rest.repos.getBranch({ owner, repo, branch: 'main' });
             const mainSha = branch.data.commit.sha;
@@ -290,14 +393,31 @@ jobs:
             const activeForMain = pageRuns.data.workflow_runs.find((run) => run.status !== 'completed' && run.head_sha === mainSha);
             if (!activeForMain && (!latestSuccessfulPage || latestSuccessfulPage.head_sha !== mainSha)) {
               await github.rest.actions.createWorkflowDispatch({ owner, repo, workflow_id: 'pages.yml', ref: 'main' });
-              core.warning(`ROBOT_DISPATCH pages.yml; main=${mainSha}; healthCommit=${healthCommitSha || 'none'}`);
+              core.warning(`EDITOR_DISPATCH pages.yml; main=${mainSha}; healthCommit=${healthCommitSha || 'none'}`);
             }
 
-            if (state === 'RED') core.setFailed(`EDITOR_IN_CHIEF_ROBOT_RED ${health.summary}`);
-            else core.info('EDITOR_IN_CHIEF_ROBOT_GREEN all required reader layers current');
+            await core.summary
+              .addHeading('Editor-in-Chief automatic maintenance')
+              .addTable([
+                [{data: 'State', header: true}, state],
+                [{data: 'Incident', header: true}, incidentKey],
+                [{data: 'Decision', header: true}, decision],
+                [{data: 'Robot status', header: true}, maintenanceStatus],
+                [{data: 'Attempts', header: true}, `${attempts}/${MAX_RECOVERY_ATTEMPTS}`],
+                [{data: 'Next eligible', header: true}, nextEligibleAt || 'n/a'],
+                [{data: 'Archive backfill', header: true}, 'disabled'],
+              ])
+              .write();
+
+            if (state === 'RED') {
+              if (maintenanceStatus === 'escalated') core.setFailed(`EDITOR_IN_CHIEF_ESCALATED ${health.summary}; incident=${incidentKey}`);
+              else core.setFailed(`EDITOR_IN_CHIEF_RED ${health.summary}; maintenance=${maintenanceStatus}`);
+            } else {
+              core.info('EDITOR_IN_CHIEF_GREEN all required reader layers current');
+            }
 
       - name: Guarantee a fresh RED heartbeat if patrol crashes
-        if: ${{ always() && steps.patrol.outcome != 'success' }}
+        if: ${{ always() && steps.patrol.outputs.assessment_complete != 'true' }}
         uses: actions/github-script@v7
         with:
           script: |
@@ -330,20 +450,31 @@ jobs:
               }
 
               const fallback = {
-                version: 2,
+                version: 3,
                 assessedAt: new Date().toISOString(),
                 state: 'RED',
-                summary: 'ROBOT_EXECUTION_FAILED_BEFORE_FRESH_HEALTH_PUBLISH',
+                summary: 'EDITOR_IN_CHIEF_EXECUTION_FAILED_BEFORE_FRESH_HEALTH_PUBLISH',
                 layers: previous?.layers || {},
                 recovery: {
                   ...(previous?.recovery || {}),
                   robotRequired: true,
                 },
+                maintenance: {
+                  ...(previous?.maintenance || {}),
+                  owner: 'Editor-in-Chief',
+                  executor: 'Maintenance Robot',
+                  status: 'orchestrator-failed',
+                  decision: 'WAIT_FOR_NEXT_PATROL',
+                  currentOnlyCoreRepair: true,
+                  archiveBackfillAllowed: false,
+                },
                 robot: {
                   current: false,
                   runId: context.runId,
                   event: context.eventName,
-                  selfHealingLoop: true,
+                  role: 'editor-in-chief-orchestrator',
+                  executor: 'bounded-maintenance-workers',
+                  selfHealingLoop: false,
                   reason: 'patrol step failed before a fresh health snapshot could be published',
                 },
                 policy: {
@@ -351,6 +482,11 @@ jobs:
                   repairRunningRemainsRed: true,
                   missingHealthFailsClosed: true,
                   healthHeartbeatMinutes: 30,
+                  recoveryCooldownMinutes: 25,
+                  maxRecoveryAttemptsPerIncident: 2,
+                  currentOnlyCoreRepair: true,
+                  archiveBackfillAllowed: false,
+                  successfulRecoveryRecheckOnly: true,
                 },
               };
 
@@ -360,11 +496,11 @@ jobs:
                   repo,
                   path,
                   branch: 'main',
-                  message: 'newsroom health: robot execution failure',
+                  message: 'newsroom health: editor-in-chief execution failure',
                   content: Buffer.from(JSON.stringify(fallback, null, 2) + '\n').toString('base64'),
                   ...(entry?.sha ? { sha: entry.sha } : {}),
                 });
-                core.warning(`ROBOT_FAILURE_HEARTBEAT_PUBLISHED commit=${result.data.commit.sha}`);
+                core.warning(`EDITOR_FAILURE_HEARTBEAT_PUBLISHED commit=${result.data.commit.sha}`);
                 return;
               } catch (error) {
                 if ((error.status === 409 || error.status === 422) && attempt < 3) {
