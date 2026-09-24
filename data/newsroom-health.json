@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "assessedAt": "2026-09-24T13:04:27.340Z",
+  "assessedAt": "2026-09-24T17:03:02.173Z",
   "state": "RED",
-  "summary": "RECOVERY_REQUIRED:daily,live,desk",
+  "summary": "RECOVERY_REQUIRED:daily,live,desk,stocks",
   "layers": {
     "daily": {
       "current": false,
@@ -11,21 +11,21 @@
     },
     "live": {
       "current": false,
-      "upstream": "2026-09-24T21:00:00+08:00",
+      "upstream": "2026-09-25T00:00:00+08:00",
       "japanese": "2026-09-18T14:00:00+08:00",
-      "lagMinutes": 9060
+      "lagMinutes": 9240
     },
     "desk": {
       "current": false,
       "upstream": null,
-      "japanese": "2026-09-24T20:00:00+08:00",
+      "japanese": "2026-09-24T21:00:00+08:00",
       "lagMinutes": null
     },
     "stocks": {
-      "current": true,
-      "upstream": "2026-09-24T11:40:41.486425+00:00",
+      "current": false,
+      "upstream": "2026-09-24T14:01:17.163672+00:00",
       "japanese": "2026-09-24T11:40:41.486425+00:00",
-      "lagMinutes": 0
+      "lagMinutes": 141
     },
     "structural": {
       "current": true,
@@ -41,13 +41,13 @@
   "maintenance": {
     "owner": "Editor-in-Chief",
     "executor": "Maintenance Robot",
-    "incidentKey": "core:daily+live|rolling:desk",
+    "incidentKey": "core:daily+live|rolling:desk+stocks",
     "status": "repairing",
     "decision": "AUTHORIZED_BOUNDED_REPAIR",
-    "attempts": 2,
+    "attempts": 1,
     "maxAttempts": 2,
-    "lastAttemptAt": "2026-09-24T13:04:27.340Z",
-    "nextEligibleAt": "2026-09-24T13:29:27.340Z",
+    "lastAttemptAt": "2026-09-24T17:03:02.172Z",
+    "nextEligibleAt": "2026-09-24T17:28:02.172Z",
     "cooldownMinutes": 25,
     "currentOnlyCoreRepair": true,
     "archiveBackfillAllowed": false,
@@ -68,8 +68,8 @@
   },
   "robot": {
     "current": true,
-    "runId": 36003164726,
-    "event": "workflow_dispatch",
+    "runId": 36031564839,
+    "event": "push",
     "role": "editor-in-chief-orchestrator",
     "executor": "bounded-maintenance-workers",
     "selfHealingLoop": false
