@@ -29,9 +29,10 @@ permissions:
 
 concurrency:
   group: japanese-extra-quality-repair
-  # Never kill a repair that is already translating/publishing. A newer trigger
-  # queues behind the active guaranteed-edition publication instead of starving it.
-  cancel-in-progress: false
+  # Routine schedule/dispatch repairs must finish and never starve each other.
+  # A code-change push is different: it supersedes an already-running worker
+  # that is executing obsolete repair logic, so the corrected worker may start.
+  cancel-in-progress: ${{ github.event_name == 'push' }}
 
 jobs:
   repair:
