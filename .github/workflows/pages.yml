@@ -111,6 +111,81 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
+      - name: 公開サイトの鮮度を実地検証
+        shell: bash
+        env:
+          PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          import pathlib
+          import time
+          import urllib.parse
+          import urllib.request
+          from datetime import datetime
+
+          base = ("${{ steps.deployment.outputs.page_url }}" or "https://kanuli.github.io/daily-brief-newspaper-japanese/").rstrip("/") + "/"
+          root = pathlib.Path(".")
+
+          def stamp(payload):
+              for key in ("generatedAt", "lastUpdated", "sourceGeneratedAt", "checkedAt"):
+                  value = payload.get(key) if isinstance(payload, dict) else None
+                  if value:
+                      try:
+                          return datetime.fromisoformat(str(value).replace("Z", "+00:00")).timestamp()
+                      except ValueError:
+                          pass
+              return 0.0
+
+          def get(path, attempt):
+              sep = "&" if "?" in path else "?"
+              url = urllib.parse.urljoin(base, path) + f"{sep}post_deploy=${{ github.run_id }}-{attempt}-{int(time.time())}"
+              req = urllib.request.Request(url, headers={"Cache-Control": "no-cache", "Pragma": "no-cache", "User-Agent": "daily-brief-japanese-pages-verifier"})
+              with urllib.request.urlopen(req, timeout=20) as response:
+                  return response.read().decode("utf-8")
+
+          expected_index = (root / "index.html").read_text(encoding="utf-8")
+          marker = "home-current-ja.js?v=20260925-freshness2"
+          expected = {
+              "daily": json.loads((root / "data/latest.json").read_text(encoding="utf-8")),
+              "live": json.loads((root / "data/live.json").read_text(encoding="utf-8")),
+              "desk": json.loads((root / "data/desk-latest.json").read_text(encoding="utf-8")),
+              "stocks": json.loads((root / "data/stocks-latest.json").read_text(encoding="utf-8")),
+          }
+
+          last = None
+          for attempt in range(1, 13):
+              try:
+                  published_index = get("index.html", attempt)
+                  published = {
+                      "daily": json.loads(get("data/latest.json", attempt)),
+                      "live": json.loads(get("data/live.json", attempt)),
+                      "desk": json.loads(get("data/desk-latest.json", attempt)),
+                      "stocks": json.loads(get("data/stocks-latest.json", attempt)),
+                  }
+                  failures = []
+                  if marker in expected_index and marker not in published_index:
+                      failures.append("index:stale-home-runtime")
+                  if str(published["daily"].get("date", ""))[:10] < str(expected["daily"].get("date", ""))[:10]:
+                      failures.append("daily:stale")
+                  for key, tolerance in (("live", 60), ("desk", 3600), ("stocks", 3600)):
+                      if stamp(published[key]) + tolerance < stamp(expected[key]):
+                          failures.append(f"{key}:stale")
+                  if not failures:
+                      print(f"PRODUCTION_FRESHNESS_OK base={base}")
+                      break
+                  last = ",".join(failures)
+                  print(f"PRODUCTION_FRESHNESS_WAIT attempt={attempt} failures={last}")
+              except Exception as exc:
+                  last = f"fetch:{exc}"
+                  print(f"PRODUCTION_FRESHNESS_WAIT attempt={attempt} error={exc}")
+              if attempt < 12:
+                  time.sleep(10)
+          else:
+              raise SystemExit(f"PRODUCTION_FRESHNESS_FAILED after deploy: {last}")
+          PY
+
       - name: 公開結果
         if: always()
         shell: bash
