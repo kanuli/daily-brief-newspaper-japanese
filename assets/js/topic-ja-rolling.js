@@ -111,8 +111,8 @@
     return current - candidate;
   }
 
-  function publicationDate(daily = {}, live = {}) {
-    const dates = [isoDate(daily?.date), isoDate(live?.date)].filter(Boolean).sort();
+  function publicationDate(...payloads) {
+    const dates = payloads.map(payloadDate).filter(Boolean).sort();
     return dates.at(-1) || '';
   }
 
@@ -205,14 +205,16 @@
   async function buildTopicStories(daily, wanted) {
     const list = [];
     (daily.articles || []).filter(article => matchesDesk(article, wanted)).forEach(article => mergeStory(list, article, 'daily', false));
-    const [topicMore, deskLatest, stocksLatest, live] = await Promise.all([
-      optionalJson(`data/topic-more/${daily.date}.json`),
+
+    const [deskLatest, stocksLatest, live] = await Promise.all([
       optionalJson('data/desk-latest.json'),
       wanted === 'stocks' ? optionalJson('data/stocks-latest.json') : Promise.resolve(null),
       optionalJson('data/live.json'),
     ]);
-    const currentDate = publicationDate(daily, live);
+    const currentDate = publicationDate(daily, live, deskLatest, stocksLatest);
     const publication = { ...daily, date: currentDate || daily.date };
+    const topicMore = await optionalJson(`data/topic-more/${publication.date}.json`);
+
     collectStories(topicMore).filter(article => eligibleForDesk(article, wanted, publication)).forEach(article => mergeStory(list, article, 'more', false));
     if (payloadFresh(deskLatest, publication.date)) {
       collectStories(deskLatest).filter(article => eligibleForDesk(article, wanted, publication)).reverse().forEach(article => mergeStory(list, article, 'rolling', true));
@@ -224,7 +226,11 @@
     } else if (stocksLatest) {
       console.warn('STALE_ROLLING_LAYER_SUPPRESSED', 'data/stocks-latest.json', `payloadDate=${payloadDate(stocksLatest) || 'unknown'}`, `publicationDate=${publication.date || 'unknown'}`);
     }
-    (live?.items || []).filter(article => eligibleForDesk(article, wanted, publication)).slice().reverse().forEach(article => mergeStory(list, article, 'live', true));
+    if (payloadFresh(live, publication.date)) {
+      (live?.items || []).filter(article => eligibleForDesk(article, wanted, publication)).slice().reverse().forEach(article => mergeStory(list, article, 'live', true));
+    } else if (live) {
+      console.warn('STALE_LIVE_LAYER_SUPPRESSED', 'data/live.json', `payloadDate=${payloadDate(live) || 'unknown'}`, `publicationDate=${publication.date || 'unknown'}`);
+    }
     list._publicationDate = publication.date;
     return list;
   }
