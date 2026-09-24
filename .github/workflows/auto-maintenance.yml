@@ -19,15 +19,8 @@ on:
       - 'requirements.txt'
       - 'requirements-translation.txt'
       - '.github/workflows/**'
-  workflow_run:
-    workflows:
-      - '日本語ニュース同期・品質ゲート・Discord配信'
-      - '日本語ローリング翻訳品質修復'
-      - '日本語版 Pages 公開・広東語版レイアウト同期'
-      - 'F3ニュース読み再生成'
-    types: [completed]
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '12,42 * * * *'
   workflow_dispatch:
 
 permissions:
@@ -206,7 +199,7 @@ jobs:
           echo "Authoritative newsroom state: ${{ steps.newsroom.outputs.state || 'MISSING' }}"
           echo "Authoritative newsroom summary: ${{ steps.newsroom.outputs.summary || 'MISSING' }}"
           echo "Authoritative rolling current: ${{ steps.newsroom.outputs.rolling_current || 'false' }}"
-          echo 'Core/Rolling recovery dispatch is intentionally owned only by the Editor-in-Chief Newsroom Robot.'
+          echo 'Core/Rolling recovery is owned only by the Editor-in-Chief; this robot never dispatches those workflows.'
 
       - name: Check F3 voice independently
         id: audio_qa
@@ -271,30 +264,35 @@ jobs:
       - name: Maintenance summary
         if: always()
         run: |
-          echo "Static healthy: ${{ steps.static_qa.outputs.healthy || 'false' }}"
-          echo "Newsroom fresh: ${{ steps.newsroom.outputs.fresh || 'false' }}"
-          echo "Newsroom GREEN: ${{ steps.newsroom.outputs.green || 'false' }}"
-          echo "Newsroom core current: ${{ steps.newsroom.outputs.core_current || 'false' }}"
-          echo "Newsroom rolling current: ${{ steps.newsroom.outputs.rolling_current || 'false' }}"
-          echo "F3 voice healthy: ${{ steps.audio_qa.outputs.healthy || 'false' }}"
-          echo "F3 recovery pending: ${{ steps.f3_recovery.outputs.pending || 'false' }}"
-          echo 'No Core/Rolling workflow is dispatched from Auto Maintenance.'
+          {
+            echo '## Maintenance Robot'
+            echo ''
+            echo "- Static healthy: ${{ steps.static_qa.outputs.healthy || 'false' }}"
+            echo "- Newsroom fresh: ${{ steps.newsroom.outputs.fresh || 'false' }}"
+            echo "- Newsroom GREEN: ${{ steps.newsroom.outputs.green || 'false' }}"
+            echo "- Newsroom core current: ${{ steps.newsroom.outputs.core_current || 'false' }}"
+            echo "- Newsroom rolling current: ${{ steps.newsroom.outputs.rolling_current || 'false' }}"
+            echo "- F3 voice healthy: ${{ steps.audio_qa.outputs.healthy || 'false' }}"
+            echo "- F3 recovery pending: ${{ steps.f3_recovery.outputs.pending || 'false' }}"
+            echo ''
+            echo 'Editor-in-Chief owns current-news recovery authorization. Maintenance Robot owns deterministic static repair and bounded F3 recovery.'
+            echo 'Archive/backfill regeneration is outside this robot.'
+          } >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Enforce truthful reader-facing health
+      - name: Enforce maintenance-owned health only
         if: always() && github.event_name != 'pull_request'
         shell: bash
         run: |
           set -euo pipefail
           if [ "${{ steps.static_qa.outputs.healthy }}" != 'true' ]; then
-            echo '::error::Static Japanese site QA is not healthy.'
+            echo '::error::Maintenance-owned static Japanese site QA is not healthy.'
             exit 1
           fi
           if [ "${{ steps.newsroom.outputs.green }}" != 'true' ]; then
-            echo "::error::Reader-facing newsroom health is not GREEN: ${{ steps.newsroom.outputs.summary || 'MISSING' }}"
-            echo 'The Editor-in-Chief Recovery Recheck Bridge will re-run the authoritative robot after this maintenance cycle completes.'
-            exit 1
+            echo "::warning::Reader-facing newsroom is not GREEN: ${{ steps.newsroom.outputs.summary || 'MISSING' }}"
+            echo '::warning::No Core/Rolling recovery is dispatched here; the Editor-in-Chief owns that incident and its retry budget.'
           fi
           if [ "${{ steps.audio_qa.outputs.healthy }}" != 'true' ]; then
-            echo '::warning::News is GREEN; F3 audio remains an independent recovery domain.'
+            echo '::warning::F3 audio is unhealthy or deferred; bounded F3 recovery remains independent.'
           fi
-          echo 'AUTO_MAINTENANCE_READER_HEALTH_GREEN'
+          echo 'AUTO_MAINTENANCE_OWNED_SCOPE_HEALTHY'
