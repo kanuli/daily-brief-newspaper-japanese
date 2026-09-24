@@ -1,19 +1,19 @@
 {
   "version": 3,
-  "assessedAt": "2026-09-24T17:03:02.173Z",
+  "assessedAt": "2026-09-24T17:10:00.985Z",
   "state": "RED",
-  "summary": "RECOVERY_REQUIRED:daily,live,desk,stocks",
+  "summary": "RECOVERY_REQUIRED:desk,stocks",
   "layers": {
     "daily": {
-      "current": false,
+      "current": true,
       "upstream": "2026-09-24",
-      "japanese": "2026-09-14"
+      "japanese": "2026-09-24"
     },
     "live": {
-      "current": false,
+      "current": true,
       "upstream": "2026-09-25T00:00:00+08:00",
-      "japanese": "2026-09-18T14:00:00+08:00",
-      "lagMinutes": 9240
+      "japanese": "2026-09-25T00:00:00+08:00",
+      "lagMinutes": 0
     },
     "desk": {
       "current": false,
@@ -34,41 +34,35 @@
     }
   },
   "recovery": {
-    "coreRequired": true,
+    "coreRequired": false,
     "rollingRequired": true,
     "structuralRequired": false
   },
   "maintenance": {
     "owner": "Editor-in-Chief",
     "executor": "Maintenance Robot",
-    "incidentKey": "core:daily+live|rolling:desk+stocks",
+    "incidentKey": "rolling:desk+stocks",
     "status": "repairing",
-    "decision": "AUTHORIZED_BOUNDED_REPAIR",
+    "decision": "RECOVERY_ALREADY_ACTIVE",
     "attempts": 1,
     "maxAttempts": 2,
-    "lastAttemptAt": "2026-09-24T17:03:02.172Z",
-    "nextEligibleAt": "2026-09-24T17:28:02.172Z",
+    "lastAttemptAt": "2026-09-24T17:10:00.984Z",
+    "nextEligibleAt": "2026-09-24T17:35:00.984Z",
     "cooldownMinutes": 25,
     "currentOnlyCoreRepair": true,
     "archiveBackfillAllowed": false,
     "results": [
       {
-        "workflow": "sync-japanese-news.yml",
-        "dispatched": true,
-        "active": false,
-        "runId": null
-      },
-      {
         "workflow": "repair-extra-translation-quality.yml",
-        "dispatched": true,
-        "active": false,
-        "runId": null
+        "dispatched": false,
+        "active": true,
+        "runId": 36031585151
       }
     ]
   },
   "robot": {
     "current": true,
-    "runId": 36031564839,
+    "runId": 36032375008,
     "event": "push",
     "role": "editor-in-chief-orchestrator",
     "executor": "bounded-maintenance-workers",
