@@ -11,6 +11,7 @@ editions during an outage.
 """
 import batch_prewarm as detector
 import cantonese_snapshot as snapshot
+import current_sync_overrides
 import fast_safe_sync as fast
 import furigana_safe_runtime as furigana_safe
 import newsroom_quality
@@ -26,6 +27,7 @@ def main():
     base.FILES = CURRENT_FILES
     base.likely_chinese_source = detector.needs_cantonese_translation
     base.fetch = lambda name: snapshot.load_json(name, optional=True)
+    current_sync_overrides.install(base)
     newsroom_quality.install(safe)
     self_healing.install()
     furigana_safe.install()
