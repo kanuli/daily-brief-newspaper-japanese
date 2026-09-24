@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "assessedAt": "2026-09-24T12:34:02.712Z",
+  "assessedAt": "2026-09-24T13:04:27.340Z",
   "state": "RED",
   "summary": "RECOVERY_REQUIRED:daily,live,desk",
   "layers": {
@@ -11,9 +11,9 @@
     },
     "live": {
       "current": false,
-      "upstream": "2026-09-24T20:00:00+08:00",
+      "upstream": "2026-09-24T21:00:00+08:00",
       "japanese": "2026-09-18T14:00:00+08:00",
-      "lagMinutes": 9000
+      "lagMinutes": 9060
     },
     "desk": {
       "current": false,
@@ -44,10 +44,10 @@
     "incidentKey": "core:daily+live|rolling:desk",
     "status": "repairing",
     "decision": "AUTHORIZED_BOUNDED_REPAIR",
-    "attempts": 1,
+    "attempts": 2,
     "maxAttempts": 2,
-    "lastAttemptAt": "2026-09-24T12:34:02.712Z",
-    "nextEligibleAt": "2026-09-24T12:59:02.712Z",
+    "lastAttemptAt": "2026-09-24T13:04:27.340Z",
+    "nextEligibleAt": "2026-09-24T13:29:27.340Z",
     "cooldownMinutes": 25,
     "currentOnlyCoreRepair": true,
     "archiveBackfillAllowed": false,
@@ -68,8 +68,8 @@
   },
   "robot": {
     "current": true,
-    "runId": 35999845177,
-    "event": "push",
+    "runId": 36003164726,
+    "event": "workflow_dispatch",
     "role": "editor-in-chief-orchestrator",
     "executor": "bounded-maintenance-workers",
     "selfHealingLoop": false
