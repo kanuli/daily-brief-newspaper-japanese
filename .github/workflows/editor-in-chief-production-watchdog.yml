@@ -1,0 +1,199 @@
+name: Editor-in-Chief Production Maintenance Robot
+run-name: Production freshness patrol @ ${{ github.sha }}
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '7,22,37,52 * * * *'
+  workflow_run:
+    workflows: ["日本語版 Pages 公開・広東語版レイアウト同期"]
+    types: [completed]
+  push:
+    branches: ["main"]
+    paths:
+      - '.github/workflows/editor-in-chief-production-watchdog.yml'
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: editor-in-chief-production-maintenance
+  cancel-in-progress: true
+
+jobs:
+  patrol-production:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Compare production with main and repair stale deployment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const SITE = `https://${owner}.github.io/${repo}`;
+            const MINUTE = 60 * 1000;
+            const COOLDOWN = 25 * MINUTE;
+            const MAX_REPAIRS = 2;
+            const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+            async function localText(path) {
+              const result = await github.rest.repos.getContent({ owner, repo, path, ref: 'main' });
+              if (Array.isArray(result.data) || !result.data.content) throw new Error(`LOCAL_MISSING ${path}`);
+              return Buffer.from(result.data.content, result.data.encoding || 'base64').toString('utf8');
+            }
+
+            async function localJson(path) {
+              return JSON.parse(await localText(path));
+            }
+
+            async function publicText(path, attempt = 1) {
+              const joiner = path.includes('?') ? '&' : '?';
+              const url = `${SITE}/${path}${joiner}editor_production_probe=${context.runId}-${attempt}-${Date.now()}`;
+              const response = await fetch(url, {
+                headers: {
+                  'User-Agent': 'daily-brief-japanese-editor-production-robot',
+                  'Cache-Control': 'no-cache, no-store, max-age=0',
+                  'Pragma': 'no-cache',
+                },
+              });
+              if (!response.ok) throw new Error(`${path}:HTTP_${response.status}`);
+              return await response.text();
+            }
+
+            async function publicJson(path, attempt = 1) {
+              return JSON.parse(await publicText(path, attempt));
+            }
+
+            function stamp(payload) {
+              for (const value of [payload?.generatedAt, payload?.lastUpdated, payload?.sourceGeneratedAt, payload?.checkedAt]) {
+                const valueMs = Date.parse(String(value || ''));
+                if (Number.isFinite(valueMs)) return valueMs;
+              }
+              return NaN;
+            }
+
+            function day(payload) {
+              const value = String(payload?.date || '').slice(0, 10);
+              return /^\d{4}-\d{2}-\d{2}$/.test(value) ? value : '';
+            }
+
+            function scriptToken(html, fileName) {
+              const escaped = fileName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+              const match = String(html || '').match(new RegExp(`(?:src|href)=["']([^"']*${escaped}[^"']*)["']`));
+              return match ? match[1] : '';
+            }
+
+            async function inspectProduction() {
+              const [localIndex, localDaily, localLive, localDesk, localStocks] = await Promise.all([
+                localText('index.html'),
+                localJson('data/latest.json'),
+                localJson('data/live.json'),
+                localJson('data/desk-latest.json'),
+                localJson('data/stocks-latest.json'),
+              ]);
+
+              let lastFailures = ['probe:not-run'];
+              for (let attempt = 1; attempt <= 4; attempt += 1) {
+                try {
+                  const [prodIndex, prodDaily, prodLive, prodDesk, prodStocks] = await Promise.all([
+                    publicText('index.html', attempt),
+                    publicJson('data/latest.json', attempt),
+                    publicJson('data/live.json', attempt),
+                    publicJson('data/desk-latest.json', attempt),
+                    publicJson('data/stocks-latest.json', attempt),
+                  ]);
+                  const failures = [];
+                  const localHomeRuntime = scriptToken(localIndex, 'home-current-ja.js');
+                  const prodHomeRuntime = scriptToken(prodIndex, 'home-current-ja.js');
+                  if (!prodHomeRuntime) failures.push('index:missing-home-current-runtime');
+                  else if (localHomeRuntime && prodHomeRuntime !== localHomeRuntime) failures.push(`index:stale-runtime:${prodHomeRuntime}`);
+
+                  if (!day(prodDaily) || day(prodDaily) < day(localDaily)) failures.push(`daily:${day(prodDaily) || 'missing'}<${day(localDaily) || 'missing'}`);
+
+                  for (const [name, localPayload, prodPayload, tolerance] of [
+                    ['live', localLive, prodLive, 60 * 1000],
+                    ['desk', localDesk, prodDesk, 60 * 60 * 1000],
+                    ['stocks', localStocks, prodStocks, 60 * 60 * 1000],
+                  ]) {
+                    const expected = stamp(localPayload);
+                    const actual = stamp(prodPayload);
+                    if (!Number.isFinite(expected) || !Number.isFinite(actual) || actual < expected - tolerance) {
+                      failures.push(`${name}:${Number.isFinite(actual) ? new Date(actual).toISOString() : 'missing'}<${Number.isFinite(expected) ? new Date(expected).toISOString() : 'missing'}`);
+                    }
+                  }
+
+                  const routeChecks = [
+                    ['live.html', 'live-guard.js'],
+                    ['world.html', 'topic-ja-rolling.js'],
+                    ['asia.html', 'topic-ja-rolling.js'],
+                    ['hong-kong.html', 'topic-ja-rolling.js'],
+                    ['japan.html', 'topic-ja-rolling.js'],
+                    ['finance.html', 'topic-ja-rolling.js'],
+                    ['technology.html', 'topic-ja-rolling.js'],
+                    ['manga-anime.html', 'topic-ja-rolling.js'],
+                    ['manchester-united.html', 'topic-ja-rolling.js'],
+                    ['football.html', 'topic-ja-rolling.js'],
+                    ['stocks.html', 'stocks-ja.js'],
+                  ];
+                  for (const [path, marker] of routeChecks) {
+                    const html = await publicText(path, attempt);
+                    if (!html.includes(marker)) failures.push(`${path}:missing-${marker}`);
+                  }
+
+                  if (failures.length === 0) {
+                    return { current: true, failures: [], localHomeRuntime, prodHomeRuntime };
+                  }
+                  lastFailures = failures;
+                } catch (error) {
+                  lastFailures = [`production-probe:${error.message}`];
+                }
+                if (attempt < 4) await sleep(attempt * 1500);
+              }
+              return { current: false, failures: lastFailures };
+            }
+
+            const production = await inspectProduction();
+            if (production.current) {
+              core.info(`PRODUCTION_GREEN ${SITE} matches current Japanese newsroom data/runtime`);
+              return;
+            }
+
+            core.error(`PRODUCTION_RED ${production.failures.join(' | ')}`);
+
+            const branch = await github.rest.repos.getBranch({ owner, repo, branch: 'main' });
+            const headSha = branch.data.commit.sha;
+            const runs = await github.rest.actions.listWorkflowRuns({
+              owner,
+              repo,
+              workflow_id: 'pages.yml',
+              branch: 'main',
+              per_page: 50,
+            });
+
+            const active = runs.data.workflow_runs.find((run) => run.status !== 'completed');
+            if (active) {
+              core.warning(`PAGES_REPAIR_WAIT active pages run=${active.id} status=${active.status}; next patrol will verify production`);
+              core.setFailed(`PRODUCTION_RED_WAITING_FOR_ACTIVE_PAGES_RUN ${active.id}`);
+              return;
+            }
+
+            const repairs = runs.data.workflow_runs.filter((run) => run.event === 'workflow_dispatch' && run.head_sha === headSha);
+            if (repairs.length >= MAX_REPAIRS) {
+              core.setFailed(`PRODUCTION_ESCALATED repair budget exhausted (${repairs.length}/${MAX_REPAIRS}) for ${headSha}; failures=${production.failures.join(',')}`);
+              return;
+            }
+
+            const lastRepair = repairs
+              .map((run) => Date.parse(run.created_at || ''))
+              .filter(Number.isFinite)
+              .sort((a, b) => b - a)[0];
+            if (Number.isFinite(lastRepair) && Date.now() - lastRepair < COOLDOWN) {
+              const next = new Date(lastRepair + COOLDOWN).toISOString();
+              core.setFailed(`PRODUCTION_RED_COOLDOWN until ${next}; failures=${production.failures.join(',')}`);
+              return;
+            }
+
+            await github.rest.actions.createWorkflowDispatch({ owner, repo, workflow_id: 'pages.yml', ref: 'main' });
+            core.warning(`MAINTENANCE_ROBOT_DISPATCH pages.yml attempt=${repairs.length + 1}/${MAX_REPAIRS} head=${headSha} failures=${production.failures.join('|')}`);
+            core.setFailed(`PRODUCTION_RED_REPAIR_DISPATCHED attempt=${repairs.length + 1}/${MAX_REPAIRS}; production remains RED until live verification passes`);
