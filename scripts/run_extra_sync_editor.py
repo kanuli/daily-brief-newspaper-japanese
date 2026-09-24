@@ -5,6 +5,11 @@ Publication availability is a hard requirement. The source newsroom may keep
 large rolling corpora, but the Japanese site must first secure a small current
 reader-facing edition for every desk/ticker before spending translation budget
 on depth. One layer or one oversized queue must never starve another page.
+
+EXTRA_EDITOR_LAYER_SCOPE controls phased publication:
+- desk: only desk-latest.json, for the first reader-availability checkpoint.
+- remaining: stocks plus the current topic-more layer.
+- all (default): all rolling layers, Desk first.
 """
 from __future__ import annotations
 
@@ -213,12 +218,20 @@ def _write_desk_minimum_fallback(source: dict, reason: str) -> bool:
     return True
 
 
+def _selected_names(topic_name: str) -> tuple[str, list[str]]:
+    scope = str(os.getenv("EXTRA_EDITOR_LAYER_SCOPE") or "all").strip().lower()
+    if scope == "desk":
+        return scope, ["desk-latest.json"]
+    if scope in {"remaining", "enrichment"}:
+        return scope, ["stocks-latest.json", topic_name]
+    if scope != "all":
+        raise RuntimeError(f"Unsupported EXTRA_EDITOR_LAYER_SCOPE={scope!r}")
+    return scope, ["desk-latest.json", "stocks-latest.json", topic_name]
+
+
 def main():
     base.likely_chinese_source = extra.needs_cantonese_translation
     base.TRANSLATE_KEYS.update({"impactLabel"})
-    # Install the shared editorial quality rules before the local MT runtime.
-    # This makes known semantic MT failures retry/fallback at translation time
-    # instead of surviving until the downstream publication validator.
     newsroom_quality.install(safe)
     furigana_safe_runtime.install()
     metadata_overrides.install(runtime)
@@ -231,11 +244,7 @@ def main():
         raise RuntimeError(f"Invalid current snapshot date: {date!r}")
 
     topic_name = f"topic-more/{date}.json"
-    # Reader availability first: guarantee one current item for every source-backed
-    # desk before spending any budget on stocks or deeper topic expansion. This
-    # prevents Manga/Anime, Manchester United or Football from being starved by
-    # slower ticker/topic translation work.
-    names = ["desk-latest.json", "stocks-latest.json", topic_name]
+    scope, names = _selected_names(topic_name)
     changed: list[str] = []
     failures: list[str] = []
     attempted = 0
@@ -270,19 +279,21 @@ def main():
             )
             runtime.checkpoint_cache(f"editor-isolated-failure-{name.replace('/', '-')}")
 
-    # Never erase historical topic-more files unless today's replacement exists.
-    current_topic_path = OUT / topic_name
-    folder = OUT / "topic-more"
-    if current_topic_path.is_file() and folder.is_dir():
-        for old in folder.glob("*.json"):
-            if old.name != f"{date}.json":
-                old.unlink()
-    elif folder.is_dir():
-        print("EXTRA_EDITOR_TOPIC_CLEANUP_SKIPPED", f"missing_current={topic_name}")
+    # Topic cleanup belongs only to a phase that actually owns topic-more.
+    if topic_name in names:
+        current_topic_path = OUT / topic_name
+        folder = OUT / "topic-more"
+        if current_topic_path.is_file() and folder.is_dir():
+            for old in folder.glob("*.json"):
+                if old.name != f"{date}.json":
+                    old.unlink()
+        elif folder.is_dir():
+            print("EXTRA_EDITOR_TOPIC_CLEANUP_SKIPPED", f"missing_current={topic_name}")
 
-    runtime.checkpoint_cache("editor-resilient-extra-sync")
+    runtime.checkpoint_cache(f"editor-resilient-extra-sync-{scope}")
     print(
         "EXTRA_EDITOR_SYNC_RESULT",
+        f"scope={scope}",
         f"snapshot={snapshot.snapshot_commit()}",
         f"date={date}",
         f"attempted={attempted}",
@@ -293,10 +304,8 @@ def main():
         "desk_priority=true",
     )
 
-    # A partial failure must not block healthy sections. Fail only when every
-    # attempted layer failed and therefore no useful repair candidate exists.
     if attempted and len(failures) == attempted:
-        raise RuntimeError("Every rolling layer failed; refusing false-success publication")
+        raise RuntimeError(f"Every rolling layer in scope={scope} failed; refusing false-success publication")
     return 0
 
 
