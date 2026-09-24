@@ -4,10 +4,13 @@
 A stale rolling payload is quarantined by the topic renderer and therefore must
 not block deployment merely because old copy still exists in the repository.
 Fresh/renderable rolling content remains fail-closed.
+
+EXTRA_VALIDATE_SCOPE may be all (default), desk, stocks, or remaining.
 """
 from __future__ import annotations
 
 import json
+import os
 import re
 import sys
 from datetime import date
@@ -24,6 +27,13 @@ METADATA_KEYS = {
     "title", "subtitle", "tagline", "section", "label", "statusLabel",
     "impactLabel", "description", "note", "lastUpdatedLabel",
 }
+
+
+def validation_scope() -> str:
+    scope = str(os.getenv("EXTRA_VALIDATE_SCOPE") or "all").strip().lower()
+    if scope not in {"all", "desk", "stocks", "remaining"}:
+        raise RuntimeError(f"Unsupported EXTRA_VALIDATE_SCOPE={scope!r}")
+    return scope
 
 
 def story_like(value):
@@ -49,7 +59,6 @@ def iter_stories(value):
 
 
 def iter_metadata(value, path="$"):
-    """Yield visible non-furigana metadata strings throughout a rolling file."""
     if isinstance(value, dict):
         is_story = story_like(value)
         for key, child in value.items():
@@ -79,11 +88,6 @@ def parse_day(value) -> date | None:
 
 
 def current_publication_day() -> date | None:
-    """Use the newest reader-facing edition boundary, not Daily alone.
-
-    Live can roll into the next HKT calendar day before the next Daily edition is
-    cut.  A same-day rolling desk must remain publishable in that interval.
-    """
     days: list[date] = []
     for name in ("latest.json", "live.json"):
         path = DATA / name
@@ -99,7 +103,6 @@ def current_publication_day() -> date | None:
 
 
 def current_daily_day() -> date | None:
-    """Daily date still owns the topic-more filename."""
     path = DATA / "latest.json"
     if not path.is_file():
         return None
@@ -118,9 +121,7 @@ def payload_day(path: Path) -> date | None:
 
 
 def static_layer_publishable(path: Path, current: date | None) -> bool:
-    if not path.is_file():
-        return False
-    if current is None:
+    if not path.is_file() or current is None:
         return False
     candidate = payload_day(path)
     if candidate is None:
@@ -130,12 +131,22 @@ def static_layer_publishable(path: Path, current: date | None) -> bool:
 
 
 def paths():
-    """Return only layers the current frontend is allowed to render."""
+    """Return only renderable layers owned by the requested validation phase."""
+    scope = validation_scope()
     current = current_publication_day()
     daily = current_daily_day()
     out: list[Path] = []
 
+    allowed_static = {
+        "all": {"desk-latest.json", "stocks-latest.json"},
+        "desk": {"desk-latest.json"},
+        "stocks": {"stocks-latest.json"},
+        "remaining": {"stocks-latest.json"},
+    }[scope]
+
     for path in STATIC:
+        if path.name not in allowed_static:
+            continue
         if static_layer_publishable(path, current):
             out.append(path)
         elif path.is_file():
@@ -149,11 +160,8 @@ def paths():
                 "renderable=false",
             )
 
-    # Topic pages request topic-more/<Daily date>.json. Historical topic-more
-    # files remain archive material even when Live has crossed midnight.
-    if daily:
-        current_name = daily.isoformat()
-        topic = DATA / "topic-more" / f"{current_name}.json"
+    if scope in {"all", "remaining"} and daily:
+        topic = DATA / "topic-more" / f"{daily.isoformat()}.json"
         if topic.is_file():
             out.append(topic)
 
@@ -198,13 +206,9 @@ def validate(path):
 
 
 def review_publishable(found: list[Path]) -> int:
-    """Run Editor-in-Chief only on layers that can actually reach a reader."""
     issues: list[str] = []
     warnings: list[str] = []
     reviewed = 0
-
-    # The display-level freshness guard is mandatory even when every rolling
-    # payload is currently stale, because it is what makes quarantine truthful.
     editor_in_chief.check_topic_freshness_delivery(issues, warnings)
 
     for path in found:
@@ -228,7 +232,7 @@ def review_publishable(found: list[Path]) -> int:
     if issues:
         print(
             "EDITOR_IN_CHIEF_REJECT",
-            "scope=publishable-rolling",
+            f"scope={validation_scope()}",
             f"reviewed_stories={reviewed}",
             f"issues={len(issues)}",
             f"warnings={len(warnings)}",
@@ -239,7 +243,7 @@ def review_publishable(found: list[Path]) -> int:
 
     print(
         "EDITOR_IN_CHIEF_APPROVED",
-        "scope=publishable-rolling",
+        f"scope={validation_scope()}",
         f"reviewed_stories={reviewed}",
         f"warnings={len(warnings)}",
         "stale_layers_quarantined=true",
@@ -264,11 +268,8 @@ def main():
         print("EXTRA_LAYER_INTEGRITY_FAIL - Editor-in-Chief rejected publishable rolling content")
         return 1
 
-    if found:
-        labels = ", ".join(str(p.relative_to(ROOT)) for p in found)
-    else:
-        labels = "no current publishable rolling layers (stale layers quarantined)"
-    print("EXTRA_LAYER_INTEGRITY_OK", labels, "editor_in_chief=approved")
+    labels = ", ".join(str(p.relative_to(ROOT)) for p in found) if found else "no current publishable rolling layers (stale layers quarantined)"
+    print("EXTRA_LAYER_INTEGRITY_OK", labels, f"scope={validation_scope()}", "editor_in_chief=approved")
     return 0
 
 
