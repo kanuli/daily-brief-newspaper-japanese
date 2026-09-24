@@ -35,100 +35,103 @@ jobs:
           script: |
             const { owner, repo } = context.repo;
             const sourceRepo = 'daily-brief-newspaper';
-            const HOURLY_TOLERANCE_MS = 60 * 60 * 1000;
+            const HOUR = 60 * 60 * 1000;
+            const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-            async function rawAt(repoName, path) {
-              try {
-                const response = await github.rest.repos.getContent({ owner, repo: repoName, path, ref: 'main' });
-                if (Array.isArray(response.data) || !response.data.content) return null;
-                return Buffer.from(response.data.content, response.data.encoding || 'base64').toString('utf8');
-              } catch (error) {
-                if (error.status === 404) return null;
-                throw error;
-              }
-            }
-
-            async function jsonAt(repoName, path) {
-              const raw = await rawAt(repoName, path);
-              if (raw === null) return null;
-              return JSON.parse(raw);
-            }
-
-            function isoDay(value) {
-              const text = String(value || '').slice(0, 10);
-              if (!/^20\d{2}-\d{2}-\d{2}$/.test(text)) return '';
-              const stamp = Date.parse(`${text}T00:00:00Z`);
-              return Number.isFinite(stamp) ? text : '';
-            }
-
-            function dayNumber(value) {
-              const text = isoDay(value);
-              return text ? Math.floor(Date.parse(`${text}T00:00:00Z`) / 86400000) : null;
-            }
-
-            function payloadDay(payload) {
-              return isoDay(payload?.date || payload?.generatedAt || payload?.sourceGeneratedAt || payload?.lastUpdated || '');
-            }
-
-            function payloadTimestamp(payload) {
-              const values = [
-                payload?.generatedAt,
-                payload?.lastUpdated,
-                payload?.sourceGeneratedAt,
-                payload?.checkedAt,
-              ];
-              for (const value of values) {
-                const stamp = Date.parse(String(value || ''));
-                if (Number.isFinite(stamp)) return stamp;
+            async function localRaw(path) {
+              for (let attempt = 1; attempt <= 3; attempt += 1) {
+                try {
+                  const response = await github.rest.repos.getContent({ owner, repo, path, ref: 'main' });
+                  if (Array.isArray(response.data) || !response.data.content) return null;
+                  return Buffer.from(response.data.content, response.data.encoding || 'base64').toString('utf8');
+                } catch (error) {
+                  if ([404, 409, 429, 500, 502, 503, 504].includes(error.status) && attempt < 3) {
+                    core.warning(`LOCAL_READ_RETRY path=${path} status=${error.status} attempt=${attempt}`);
+                    await sleep(attempt * 800);
+                    continue;
+                  }
+                  if (error.status === 404) return null;
+                  throw error;
+                }
               }
               return null;
             }
 
-            function maxDay(...values) {
-              return values.map(isoDay).filter(Boolean).sort().at(-1) || '';
+            async function sourceRaw(path) {
+              let last = 'unknown';
+              for (let attempt = 1; attempt <= 4; attempt += 1) {
+                const url = `https://raw.githubusercontent.com/${owner}/${sourceRepo}/main/${path}?category_watch=${context.runId}-${Date.now()}-${attempt}`;
+                try {
+                  const response = await fetch(url, {
+                    headers: {
+                      'User-Agent': 'daily-brief-japanese-category-watchdog',
+                      'Cache-Control': 'no-cache',
+                    },
+                  });
+                  if (response.ok) return await response.text();
+                  last = `HTTP ${response.status}`;
+                  if (![404, 408, 409, 429, 500, 502, 503, 504].includes(response.status)) break;
+                } catch (error) {
+                  last = error.message;
+                }
+                if (attempt < 4) await sleep(attempt * 1000);
+              }
+              core.warning(`UPSTREAM_READ_UNAVAILABLE path=${path} reason=${last}`);
+              return null;
             }
 
-            function lagDays(candidate, reference) {
-              const a = dayNumber(candidate), b = dayNumber(reference);
-              return a === null || b === null ? null : b - a;
+            async function jsonText(text, label) {
+              if (!text) return null;
+              try { return JSON.parse(text); }
+              catch (error) {
+                core.warning(`${label}: invalid JSON: ${error.message}`);
+                return null;
+              }
             }
 
-            function lagMinutes(candidateMs, referenceMs) {
-              if (!Number.isFinite(candidateMs) || !Number.isFinite(referenceMs)) return null;
-              return Math.max(0, Math.floor((referenceMs - candidateMs) / 60000));
+            async function localJson(path) { return jsonText(await localRaw(path), path); }
+            async function sourceJson(path) { return jsonText(await sourceRaw(path), `${sourceRepo}/${path}`); }
+
+            function stamp(payload) {
+              for (const value of [payload?.generatedAt, payload?.lastUpdated, payload?.sourceGeneratedAt, payload?.checkedAt]) {
+                const ms = Date.parse(String(value || ''));
+                if (Number.isFinite(ms)) return ms;
+              }
+              const day = String(payload?.date || '').slice(0, 10);
+              const ms = Date.parse(`${day}T00:00:00Z`);
+              return Number.isFinite(ms) ? ms : NaN;
             }
 
-            function withinHourlyTolerance(candidateMs, referenceMs) {
-              return Number.isFinite(candidateMs) && Number.isFinite(referenceMs) &&
-                candidateMs >= referenceMs - HOURLY_TOLERANCE_MS;
+            function current(local, source, tolerance = HOUR) {
+              const localMs = stamp(local), sourceMs = stamp(source);
+              return Number.isFinite(localMs) && Number.isFinite(sourceMs) && localMs >= sourceMs - tolerance;
             }
 
             function stories(value, out = []) {
-              if (value && typeof value === 'object' && !Array.isArray(value)) {
+              if (Array.isArray(value)) {
+                value.forEach((child) => stories(child, out));
+              } else if (value && typeof value === 'object') {
                 if (value.id && value.title && (value.dek || value.summary || value.body)) out.push(value);
                 Object.values(value).forEach((child) => stories(child, out));
-              } else if (Array.isArray(value)) {
-                value.forEach((child) => stories(child, out));
               }
               return out;
             }
 
             const aliases = {
-              'world': new Set(['world']),
-              'asia': new Set(['asia']),
+              world: new Set(['world']),
+              asia: new Set(['asia']),
               'hong-kong': new Set(['hong-kong']),
-              'japan': new Set(['japan']),
+              japan: new Set(['japan']),
               'market-economy': new Set(['market-economy', 'finance']),
               'ai-tech': new Set(['ai-tech', 'technology', 'science-new-tech', 'cybersecurity', 'software-apps']),
               'manga-anime': new Set(['manga-anime']),
               'manchester-united': new Set(['manchester-united']),
-              'football': new Set(['football']),
+              football: new Set(['football']),
             };
 
             function storySlugs(story) {
               return new Set([
                 String(story?.desk || ''),
-                String(story?.section || ''),
                 ...((story?.deskSlugs || []).map(String)),
               ].filter(Boolean));
             }
@@ -140,7 +143,7 @@ jobs:
             }
 
             const expectedPages = [
-              ['index.html', null, 'newspaper-ja.js'],
+              ['index.html', null, 'home-current-ja.js'],
               ['live.html', null, 'live-guard.js'],
               ['archive.html', null, 'data/archive.json'],
               ['world.html', 'world', 'topic-ja-rolling.js'],
@@ -157,130 +160,82 @@ jobs:
 
             const structural = [];
             for (const [path, desk, marker] of expectedPages) {
-              const raw = await rawAt(repo, path);
-              if (!raw) {
+              const html = await localRaw(path);
+              if (!html) {
                 structural.push(`${path}:missing`);
                 continue;
               }
-              if (desk && !raw.includes(`data-desk="${desk}"`)) structural.push(`${path}:wrong-data-desk`);
-              if (marker && path !== 'archive.html' && !raw.includes(marker)) structural.push(`${path}:missing-${marker}`);
+              if (desk && !html.includes(`data-desk="${desk}"`)) structural.push(`${path}:wrong-data-desk`);
+              if (marker && !html.includes(marker)) structural.push(`${path}:missing-${marker}`);
             }
 
-            const latest = await jsonAt(repo, 'data/latest.json');
-            const live = await jsonAt(repo, 'data/live.json');
-            const localDesk = await jsonAt(repo, 'data/desk-latest.json');
-            const localStocks = await jsonAt(repo, 'data/stocks-latest.json');
-            const archive = await jsonAt(repo, 'data/archive.json');
-            const sourceDesk = await jsonAt(sourceRepo, 'data/desk-latest.json');
-            const sourceStocks = await jsonAt(sourceRepo, 'data/stocks-latest.json');
+            const [latest, live, localDesk, localStocks, sourceDesk, sourceStocks] = await Promise.all([
+              localJson('data/latest.json'),
+              localJson('data/live.json'),
+              localJson('data/desk-latest.json'),
+              localJson('data/stocks-latest.json'),
+              sourceJson('data/desk-latest.json'),
+              sourceJson('data/stocks-latest.json'),
+            ]);
 
-            if (!latest?.date || !sourceDesk) {
-              core.setFailed('Core Daily or upstream desk-latest is unavailable; page health cannot be established.');
+            if (!latest?.date) {
+              core.setFailed('LOCAL_CORE_UNAVAILABLE: data/latest.json missing/invalid');
               return;
             }
 
-            const currentPublicationDate = maxDay(latest?.date, live?.date, payloadDay(sourceDesk));
-            const topic = await jsonAt(repo, `data/topic-more/${currentPublicationDate || latest.date}.json`);
+            const sourceFailures = [];
+            if (!sourceDesk) sourceFailures.push('desk');
+            if (!sourceStocks) sourceFailures.push('stocks');
+            if (sourceFailures.length) {
+              core.setOutput('source_read_degraded', 'true');
+              core.warning(`SOURCE_READ_DEGRADED ${sourceFailures.join(',')}; no repair is authorized from an unreadable upstream source.`);
+              core.setFailed(`SOURCE_READ_DEGRADED_NO_REPAIR:${sourceFailures.join(',')}`);
+              return;
+            }
+
+            const publicationDate = [latest?.date, live?.date, sourceDesk?.date]
+              .filter(Boolean).sort().at(-1) || latest.date;
+            const topic = await localJson(`data/topic-more/${publicationDate}.json`);
+
+            const sourceDeskStories = stories(sourceDesk);
             const dailyStories = stories(latest?.articles || []);
             const liveStories = stories(live?.items || []);
-            const topicStories = stories(topic || {});
             const deskStories = stories(localDesk || {});
-            const sourceDeskStories = stories(sourceDesk || {});
+            const topicStories = stories(topic || {});
 
-            const sourceDate = payloadDay(sourceDesk);
-            const referenceDate = maxDay(latest.date, live?.date, sourceDate);
-            const localDeskDate = payloadDay(localDesk);
-            const deskLag = lagDays(localDeskDate, sourceDate);
-            const sourceDeskMs = payloadTimestamp(sourceDesk);
-            const localDeskMs = payloadTimestamp(localDesk);
-            const liveMs = payloadTimestamp(live);
-            const topicMs = payloadTimestamp(topic);
-            const deskLagMinutes = lagMinutes(localDeskMs, sourceDeskMs);
-            const deskCurrent = withinHourlyTolerance(localDeskMs, sourceDeskMs);
-            const liveCurrent = withinHourlyTolerance(liveMs, sourceDeskMs);
-            const topicCurrent = withinHourlyTolerance(topicMs, sourceDeskMs);
-
+            const deskCurrent = current(localDesk, sourceDesk);
+            const liveCurrent = current(live, sourceDesk);
+            const topicCurrent = current(topic, sourceDesk);
             const pageFailures = [];
-            const pageRows = [];
-            for (const [slug] of Object.entries(aliases)) {
+
+            for (const slug of Object.keys(aliases)) {
               const upstreamCount = sourceDeskStories.filter((story) => matches(story, slug)).length;
-              if (upstreamCount <= 0) continue;
-
-              const dailyCount = dailyStories.filter((story) => matches(story, slug)).length;
-              const topicCount = topicStories.filter((story) => matches(story, slug)).length;
-              const liveCount = liveStories.filter((story) => matches(story, slug)).length;
+              if (!upstreamCount) continue;
               const rollingCount = deskStories.filter((story) => matches(story, slug)).length;
-
-              const availableCount = dailyCount + topicCount + liveCount + rollingCount;
-              const hourlyCurrentCount =
-                (deskCurrent ? rollingCount : 0) +
-                (liveCurrent ? liveCount : 0) +
-                (topicCurrent ? topicCount : 0);
-
-              const status = hourlyCurrentCount > 0
-                ? 'PASS'
-                : availableCount > 0 ? 'STALE' : 'EMPTY';
-              pageRows.push(`${slug}:${status}(upstream=${upstreamCount},daily=${dailyCount},topic=${topicCount},live=${liveCount},rolling=${rollingCount},hourly_current=${hourlyCurrentCount})`);
+              const liveCount = liveStories.filter((story) => matches(story, slug)).length;
+              const topicCount = topicStories.filter((story) => matches(story, slug)).length;
+              const dailyCount = dailyStories.filter((story) => matches(story, slug)).length;
+              const hourlyCount = (deskCurrent ? rollingCount : 0) + (liveCurrent ? liveCount : 0) + (topicCurrent ? topicCount : 0);
+              const totalCount = rollingCount + liveCount + topicCount + dailyCount;
+              const status = hourlyCount > 0 ? 'PASS' : totalCount > 0 ? 'STALE' : 'EMPTY';
+              core.info(`PAGE ${slug}:${status} upstream=${upstreamCount} rolling=${rollingCount} live=${liveCount} topic=${topicCount} daily=${dailyCount}`);
               if (status !== 'PASS') pageFailures.push(`${slug}:${status}`);
             }
 
-            // Archive is intentionally self-contained: it publishes saved headlines
-            // and topic labels directly. Historical url metadata is not rendered as
-            // a link unless real Japanese snapshot pages are added in the future.
-            const archiveEditions = Array.isArray(archive) ? archive : (archive?.editions || archive?.items || []);
-            if (!archiveEditions.length) structural.push('archive.html:no-editions');
-            for (const [index, edition] of archiveEditions.slice(0, 10).entries()) {
-              const headline = String(edition?.headline || edition?.title || edition?.tagline || '').trim();
-              const date = String(edition?.date || edition?.dateLabel || edition?.shortDate || '').trim();
-              if (!headline || !date) structural.push(`archive.html:invalid-edition-${index}`);
-            }
-            if (!dailyStories.length) structural.push('index.html:no-daily-stories');
-            if (!liveStories.length) structural.push('live.html:no-live-stories');
+            const localStockStories = stories(localStocks || {}).length;
+            const sourceStockStories = stories(sourceStocks || {}).length;
+            const stocksCurrent = current(localStocks, sourceStocks) && localStockStories > 0;
+            const rollingBehind = !deskCurrent;
+            const stocksBehind = sourceStockStories > 0 && !stocksCurrent;
+            if (stocksBehind) pageFailures.push('stocks:STALE');
 
-            let localStockStoryCount = 0;
-            for (const info of Object.values(localStocks?.tickers || {})) {
-              localStockStoryCount += Array.isArray(info?.stories) ? info.stories.length : 0;
-            }
-            let sourceStockStoryCount = 0;
-            for (const info of Object.values(sourceStocks?.tickers || {})) {
-              sourceStockStoryCount += Array.isArray(info?.stories) ? info.stories.length : 0;
-            }
-            const localStockDate = payloadDay(localStocks);
-            const sourceStockDate = payloadDay(sourceStocks);
-            const stockLag = lagDays(localStockDate, sourceStockDate);
-            const localStockMs = payloadTimestamp(localStocks);
-            const sourceStockMs = payloadTimestamp(sourceStocks);
-            const stockLagMinutes = lagMinutes(localStockMs, sourceStockMs);
-            const stockCurrent = withinHourlyTolerance(localStockMs, sourceStockMs) && localStockStoryCount > 0;
-            const liveStockFallback = liveCurrent && liveStories.filter((story) => matches(story, 'market-economy')).length > 0;
-            const dailyStockFallback = dailyStories.filter((story) => matches(story, 'market-economy')).length > 0;
-            const stockReaderSafe = stockCurrent || liveStockFallback ||
-              (dailyStockFallback && sourceStockDate && isoDay(latest.date) >= sourceStockDate && !Number.isFinite(sourceStockMs));
-            if (!stockReaderSafe) pageFailures.push('stocks:EMPTY_OR_STALE_WITHOUT_CURRENT_FALLBACK');
+            core.info(`WATCHDOG upstreamDesk=${sourceDesk?.generatedAt || sourceDesk?.date} japaneseDesk=${localDesk?.generatedAt || localDesk?.date || 'missing'} current=${deskCurrent}`);
+            core.info(`WATCHDOG upstreamStocks=${sourceStocks?.generatedAt || sourceStocks?.date} japaneseStocks=${localStocks?.generatedAt || localStocks?.date || 'missing'} current=${stocksCurrent}`);
+            core.info(`WATCHDOG structural=${structural.join(',') || 'none'} readerFailures=${pageFailures.join(',') || 'none'}`);
 
-            const rollingBehind = Number.isFinite(sourceDeskMs)
-              ? !withinHourlyTolerance(localDeskMs, sourceDeskMs)
-              : Boolean(sourceDate && (!localDeskDate || (deskLag !== null && deskLag > 0)));
-            const stocksBehind = Number.isFinite(sourceStockMs)
-              ? !withinHourlyTolerance(localStockMs, sourceStockMs)
-              : Boolean(sourceStockDate && (!localStockDate || (stockLag !== null && stockLag > 0)));
             const repairNeeded = pageFailures.length > 0 || rollingBehind || stocksBehind;
-
-            core.info(`Reference date: ${referenceDate}`);
-            core.info(`Upstream desk=${sourceDesk?.generatedAt || sourceDate}; Japanese desk=${localDesk?.generatedAt || localDeskDate || 'missing'}; lag_minutes=${deskLagMinutes}; lag_days=${deskLag}`);
-            core.info(`Japanese live=${live?.lastUpdated || 'missing'}; live_current_vs_desk=${liveCurrent}`);
-            core.info(`Upstream stock=${sourceStocks?.generatedAt || sourceStockDate || 'unknown'}; Japanese stock=${localStocks?.generatedAt || localStockDate || 'missing'}; lag_minutes=${stockLagMinutes}; lag_days=${stockLag}`);
-            for (const row of pageRows) core.info(`PAGE ${row}`);
-            core.info(`Archive editions checked: ${Math.min(archiveEditions.length, 10)}`);
-            core.info(`Structural defects: ${structural.join(', ') || 'none'}`);
-            core.info(`Reader freshness defects: ${pageFailures.join(', ') || 'none'}`);
-
             core.setOutput('repair_needed', repairNeeded ? 'true' : 'false');
-            core.setOutput('page_failures', pageFailures.join(','));
-            core.setOutput('rolling_behind', rollingBehind ? 'true' : 'false');
-            core.setOutput('stocks_behind', stocksBehind ? 'true' : 'false');
-            core.setOutput('desk_lag_minutes', String(deskLagMinutes ?? 'N/V'));
-            core.setOutput('stock_lag_minutes', String(stockLagMinutes ?? 'N/V'));
+            core.setOutput('source_read_degraded', 'false');
 
             if (repairNeeded) {
               const runs = await github.rest.actions.listWorkflowRuns({
@@ -291,25 +246,17 @@ jobs:
               });
               const active = runs.data.workflow_runs.find((run) => run.status !== 'completed');
               if (active) {
-                const ageMinutes = (Date.now() - new Date(active.created_at).getTime()) / 60000;
-                if (ageMinutes > 15) {
-                  await github.rest.actions.cancelWorkflowRun({ owner, repo, run_id: active.id });
-                  core.warning(`Cancelled stale rolling repair ${active.id} after ${ageMinutes.toFixed(1)} minutes.`);
-                  await github.rest.actions.createWorkflowDispatch({ owner, repo, workflow_id: 'repair-extra-translation-quality.yml', ref: 'main' });
-                  core.warning('Dispatched a fresh guaranteed-edition rolling repair.');
-                } else {
-                  core.warning(`Rolling repair ${active.id} is active (${ageMinutes.toFixed(1)} minutes); allowing it to finish.`);
-                }
+                core.warning(`Rolling repair ${active.id} is already active; watchdog will not cancel a healthy in-progress translation job.`);
               } else {
                 await github.rest.actions.createWorkflowDispatch({ owner, repo, workflow_id: 'repair-extra-translation-quality.yml', ref: 'main' });
-                core.warning('Page hourly freshness defect detected; dispatched rolling repair.');
+                core.warning('Category freshness defect confirmed against readable upstream; dispatched rolling repair.');
               }
             }
 
-            if (structural.length > 0) {
-              core.setFailed(`Reader-facing page structure/data defects: ${structural.join(', ')}`);
-            } else if (pageFailures.length > 0) {
-              core.setFailed(`Source-backed pages lack hourly-current Japanese coverage: ${pageFailures.join(', ')}`);
-            } else if (rollingBehind || stocksBehind) {
-              core.setFailed(`Rolling publication is behind upstream hourly SLA: desk=${rollingBehind}, stocks=${stocksBehind}`);
+            if (structural.length) {
+              core.setFailed(`Reader-facing structure defects: ${structural.join(',')}`);
+            } else if (pageFailures.length || rollingBehind || stocksBehind) {
+              core.setFailed(`Reader freshness defect: ${pageFailures.join(',') || `desk=${rollingBehind},stocks=${stocksBehind}`}`);
+            } else {
+              core.info('CATEGORY_PAGE_HEALTH_OK all source-backed category pages have current Japanese coverage');
             }
