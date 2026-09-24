@@ -6,9 +6,9 @@ snapshot rather than re-fetching moving Cantonese main. This prevents false
 failures when Cantonese publishes another update while Japanese translation is
 already running.
 
-Set PARITY_SCOPE=base for the latency-sensitive Daily/Live/Archive publication.
-Rolling/topic/stock parity is checked by its own repair path and must never block
-current-news publication.
+PARITY_SCOPE=current checks only latency-sensitive current news (Daily/Live).
+PARITY_SCOPE=base additionally checks Archive. Rolling/topic/stock parity is
+checked by its own repair path and must never block current-news publication.
 """
 import hashlib
 import json
@@ -22,7 +22,8 @@ import validate_content_integrity as integrity
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_BASE = "https://raw.githubusercontent.com/kanuli/daily-brief-newspaper/main/data"
-BASE_FILES = ("latest.json", "live.json", "archive.json")
+CURRENT_FILES = ("latest.json", "live.json")
+BASE_FILES = CURRENT_FILES + ("archive.json",)
 EXTRA_FILES = ("desk-latest.json", "stocks-latest.json")
 
 
@@ -97,7 +98,11 @@ def main():
     integrity_bad = []
     scope = str(os.environ.get("PARITY_SCOPE") or "all").strip().lower()
 
-    for name in BASE_FILES:
+    # Current-news recovery is deliberately independent from archive history.
+    # A stale/incomplete archive must never freeze today's Daily or Live output.
+    primary_files = CURRENT_FILES if scope == "current" else BASE_FILES
+
+    for name in primary_files:
         try:
             expected, actual = verify_fingerprint(name)
         except Exception as exc:
@@ -113,7 +118,7 @@ def main():
             if issues:
                 integrity_bad.append(name)
 
-    if scope != "base":
+    if scope not in {"current", "base"}:
         extra_names = list(EXTRA_FILES)
         date = current_date()
         if date:
