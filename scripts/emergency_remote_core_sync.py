@@ -57,7 +57,7 @@ def snapshot_fetch(name: str):
 def main():
     base.FILES = CURRENT_FILES
     base.fetch = snapshot_fetch
-    current_sync_overrides.install(base)
+    current_sync_overrides.install(base, safe)
     newsroom_quality.install(safe)
     self_healing_runtime.install()
     furigana_safe_runtime.install()
