@@ -231,9 +231,11 @@ def main():
         raise RuntimeError(f"Invalid current snapshot date: {date!r}")
 
     topic_name = f"topic-more/{date}.json"
-    # Critical small layers first. The now-compacted all-desk guarantee comes
-    # last so stocks and Daily-gap topic coverage can never be starved.
-    names = ["stocks-latest.json", topic_name, "desk-latest.json"]
+    # Reader availability first: guarantee one current item for every source-backed
+    # desk before spending any budget on stocks or deeper topic expansion. This
+    # prevents Manga/Anime, Manchester United or Football from being starved by
+    # slower ticker/topic translation work.
+    names = ["desk-latest.json", "stocks-latest.json", topic_name]
     changed: list[str] = []
     failures: list[str] = []
     attempted = 0
@@ -288,6 +290,7 @@ def main():
         f"failures={','.join(failures) if failures else 'none'}",
         "minimum_desk_edition=true",
         "minimum_stock_edition=true",
+        "desk_priority=true",
     )
 
     # A partial failure must not block healthy sections. Fail only when every
