@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
-"""Remote-only self-healing rebuild for Daily/Live/Archive Japanese publication.
+"""Remote-only self-healing rebuild for current Daily/Live Japanese publication.
 
 This path stays independent of torch/transformers/OPUS-MT. It ensures the small
 lexical furigana dependencies are present even when the emergency GitHub job was
 started with the legacy minimal dependency set, then applies the same newsroom
-and furigana standards as the normal publication path.
+and furigana standards as the normal publication path. Historical archive
+backfill is intentionally excluded from outage recovery so current news cannot
+be blocked by old editions.
 """
 from __future__ import annotations
 
@@ -35,6 +37,7 @@ def ensure_lexical_furigana_dependencies() -> None:
 ensure_lexical_furigana_dependencies()
 
 import cantonese_snapshot as snapshot
+import current_sync_overrides
 import fast_safe_sync as fast
 import furigana_safe_runtime
 import newsroom_postedit_core
@@ -44,12 +47,17 @@ import self_healing_runtime
 import sync_and_translate as base
 
 
+CURRENT_FILES = ("latest.json", "live.json")
+
+
 def snapshot_fetch(name: str):
     return snapshot.load_json(name)
 
 
 def main():
+    base.FILES = CURRENT_FILES
     base.fetch = snapshot_fetch
+    current_sync_overrides.install(base)
     newsroom_quality.install(safe)
     self_healing_runtime.install()
     furigana_safe_runtime.install()
@@ -59,6 +67,7 @@ def main():
         "EMERGENCY_REMOTE_CORE_SYNC_OK",
         f"snapshot={snapshot.snapshot_commit()}",
         "owner_quarantine=true",
+        "current_only=true",
         f"furigana_engine={furigana_safe_runtime.engine_name()}",
         "newsroom_quality=true",
     )
