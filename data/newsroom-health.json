@@ -1,8 +1,8 @@
 {
-  "version": 2,
-  "assessedAt": "2026-09-24T12:19:15.561Z",
+  "version": 3,
+  "assessedAt": "2026-09-24T12:34:02.712Z",
   "state": "RED",
-  "summary": "RECOVERY_REQUIRED:daily,live,desk,stocks",
+  "summary": "RECOVERY_REQUIRED:daily,live,desk",
   "layers": {
     "daily": {
       "current": false,
@@ -18,14 +18,14 @@
     "desk": {
       "current": false,
       "upstream": null,
-      "japanese": "2026-09-24T18:00:00+08:00",
+      "japanese": "2026-09-24T20:00:00+08:00",
       "lagMinutes": null
     },
     "stocks": {
-      "current": false,
+      "current": true,
       "upstream": "2026-09-24T11:40:41.486425+00:00",
-      "japanese": "2026-09-24T10:03:18.726446+00:00",
-      "lagMinutes": 97
+      "japanese": "2026-09-24T11:40:41.486425+00:00",
+      "lagMinutes": 0
     },
     "structural": {
       "current": true,
@@ -38,17 +38,52 @@
     "rollingRequired": true,
     "structuralRequired": false
   },
+  "maintenance": {
+    "owner": "Editor-in-Chief",
+    "executor": "Maintenance Robot",
+    "incidentKey": "core:daily+live|rolling:desk",
+    "status": "repairing",
+    "decision": "AUTHORIZED_BOUNDED_REPAIR",
+    "attempts": 1,
+    "maxAttempts": 2,
+    "lastAttemptAt": "2026-09-24T12:34:02.712Z",
+    "nextEligibleAt": "2026-09-24T12:59:02.712Z",
+    "cooldownMinutes": 25,
+    "currentOnlyCoreRepair": true,
+    "archiveBackfillAllowed": false,
+    "results": [
+      {
+        "workflow": "sync-japanese-news.yml",
+        "dispatched": true,
+        "active": false,
+        "runId": null
+      },
+      {
+        "workflow": "repair-extra-translation-quality.yml",
+        "dispatched": true,
+        "active": false,
+        "runId": null
+      }
+    ]
+  },
   "robot": {
     "current": true,
-    "runId": 35998296241,
-    "event": "schedule",
-    "selfHealingLoop": true
+    "runId": 35999845177,
+    "event": "push",
+    "role": "editor-in-chief-orchestrator",
+    "executor": "bounded-maintenance-workers",
+    "selfHealingLoop": false
   },
   "policy": {
     "repairRunningRemainsRed": true,
     "missingHealthFailsClosed": true,
     "liveToleranceMinutes": 1,
     "rollingToleranceMinutes": 60,
-    "healthHeartbeatMinutes": 30
+    "healthHeartbeatMinutes": 30,
+    "recoveryCooldownMinutes": 25,
+    "maxRecoveryAttemptsPerIncident": 2,
+    "currentOnlyCoreRepair": true,
+    "archiveBackfillAllowed": false,
+    "successfulRecoveryRecheckOnly": true
   }
 }
