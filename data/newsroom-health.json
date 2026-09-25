@@ -1,6 +1,6 @@
 {
   "version": 5,
-  "assessedAt": "2026-09-25T21:29:23.026Z",
+  "assessedAt": "2026-09-25T22:22:10.786Z",
   "state": "RED",
   "summary": "RECOVERY_REQUIRED:desk,stocks",
   "layers": {
@@ -23,9 +23,9 @@
     },
     "stocks": {
       "current": false,
-      "upstream": "2026-09-25T17:55:54.187892+00:00",
+      "upstream": "2026-09-25T22:20:49.227577+00:00",
       "japanese": "2026-09-25T12:00:46.003800+00:00",
-      "lagMinutes": 355
+      "lagMinutes": 620
     },
     "structural": {
       "current": true,
@@ -41,13 +41,13 @@
   "maintenance": {
     "owner": "Editor-in-Chief",
     "executor": "Maintenance Robot",
-    "incidentKey": "desk@2026-09-25T16:00:00.000Z|stocks@2026-09-25T17:55:54.187Z",
+    "incidentKey": "desk@2026-09-25T16:00:00.000Z|stocks@2026-09-25T22:20:49.227Z",
     "sourceVersionBound": true,
-    "status": "escalated-retrying",
-    "decision": "ESCALATED_RETRY_AUTHORIZED",
-    "attempts": 2,
-    "lastAttemptAt": "2026-09-25T21:29:23.026Z",
-    "nextEligibleAt": "2026-09-25T21:54:23.026Z",
+    "status": "repairing",
+    "decision": "AUTHORIZED_BOUNDED_REPAIR",
+    "attempts": 1,
+    "lastAttemptAt": "2026-09-25T22:22:10.786Z",
+    "nextEligibleAt": "2026-09-25T22:47:10.786Z",
     "cooldownMinutes": 25,
     "terminalRepairBudget": false,
     "currentOnlyCoreRepair": true,
@@ -70,8 +70,8 @@
   },
   "robot": {
     "current": true,
-    "runId": 36191803547,
-    "event": "schedule",
+    "runId": 36196347539,
+    "event": "workflow_dispatch",
     "role": "editor-in-chief-orchestrator",
     "executor": "continuous-maintenance-workers",
     "selfHealingLoop": false
