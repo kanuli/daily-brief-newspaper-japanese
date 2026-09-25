@@ -1,6 +1,6 @@
 {
   "version": 5,
-  "assessedAt": "2026-09-25T22:22:10.786Z",
+  "assessedAt": "2026-09-25T22:25:21.038Z",
   "state": "RED",
   "summary": "RECOVERY_REQUIRED:desk,stocks",
   "layers": {
@@ -43,8 +43,8 @@
     "executor": "Maintenance Robot",
     "incidentKey": "desk@2026-09-25T16:00:00.000Z|stocks@2026-09-25T22:20:49.227Z",
     "sourceVersionBound": true,
-    "status": "repairing",
-    "decision": "AUTHORIZED_BOUNDED_REPAIR",
+    "status": "cooldown",
+    "decision": "WAIT_FOR_COOLDOWN",
     "attempts": 1,
     "lastAttemptAt": "2026-09-25T22:22:10.786Z",
     "nextEligibleAt": "2026-09-25T22:47:10.786Z",
@@ -52,14 +52,7 @@
     "terminalRepairBudget": false,
     "currentOnlyCoreRepair": true,
     "archiveBackfillAllowed": false,
-    "results": [
-      {
-        "workflow": "repair-extra-translation-quality.yml",
-        "dispatched": true,
-        "active": false,
-        "runId": null
-      }
-    ]
+    "results": []
   },
   "sourceRead": {
     "mode": "public-raw-retry",
@@ -70,7 +63,7 @@
   },
   "robot": {
     "current": true,
-    "runId": 36196347539,
+    "runId": 36196613665,
     "event": "workflow_dispatch",
     "role": "editor-in-chief-orchestrator",
     "executor": "continuous-maintenance-workers",
