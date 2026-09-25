@@ -1,8 +1,8 @@
 {
-  "version": 4,
-  "assessedAt": "2026-09-25T13:01:44.260Z",
+  "version": 5,
+  "assessedAt": "2026-09-25T16:06:41.988Z",
   "state": "RED",
-  "summary": "ESCALATED:live",
+  "summary": "RECOVERY_REQUIRED:live,desk,stocks",
   "layers": {
     "daily": {
       "current": true,
@@ -11,21 +11,21 @@
     },
     "live": {
       "current": false,
-      "upstream": "2026-09-25T21:00:00+08:00",
-      "japanese": "2026-09-25T09:00:00+08:00",
-      "lagMinutes": 720
+      "upstream": "2026-09-26T00:00:00+08:00",
+      "japanese": "2026-09-25T21:00:00+08:00",
+      "lagMinutes": 180
     },
     "desk": {
-      "current": true,
-      "upstream": "2026-09-25T21:00:00+08:00",
+      "current": false,
+      "upstream": "2026-09-26T00:00:00+08:00",
       "japanese": "2026-09-25T20:00:00+08:00",
-      "lagMinutes": 60
+      "lagMinutes": 240
     },
     "stocks": {
-      "current": true,
-      "upstream": "2026-09-25T12:44:52.204637+00:00",
+      "current": false,
+      "upstream": "2026-09-25T15:37:45.320305+00:00",
       "japanese": "2026-09-25T12:00:46.003800+00:00",
-      "lagMinutes": 44
+      "lagMinutes": 217
     },
     "structural": {
       "current": true,
@@ -35,23 +35,37 @@
   },
   "recovery": {
     "coreRequired": true,
-    "rollingRequired": false,
+    "rollingRequired": true,
     "structuralRequired": false
   },
   "maintenance": {
     "owner": "Editor-in-Chief",
     "executor": "Maintenance Robot",
-    "incidentKey": "core:live",
-    "status": "escalated",
-    "decision": "AUTO_REPAIR_BUDGET_EXHAUSTED",
-    "attempts": 2,
-    "maxAttempts": 2,
-    "lastAttemptAt": "2026-09-25T07:40:08.217Z",
-    "nextEligibleAt": null,
+    "incidentKey": "live@2026-09-25T16:00:00.000Z|desk@2026-09-25T16:00:00.000Z|stocks@2026-09-25T15:37:45.320Z",
+    "sourceVersionBound": true,
+    "status": "repairing",
+    "decision": "AUTHORIZED_BOUNDED_REPAIR",
+    "attempts": 1,
+    "lastAttemptAt": "2026-09-25T16:06:41.988Z",
+    "nextEligibleAt": "2026-09-25T16:31:41.988Z",
     "cooldownMinutes": 25,
+    "terminalRepairBudget": false,
     "currentOnlyCoreRepair": true,
     "archiveBackfillAllowed": false,
-    "results": []
+    "results": [
+      {
+        "workflow": "sync-japanese-news.yml",
+        "dispatched": true,
+        "active": false,
+        "runId": null
+      },
+      {
+        "workflow": "repair-extra-translation-quality.yml",
+        "dispatched": true,
+        "active": false,
+        "runId": null
+      }
+    ]
   },
   "sourceRead": {
     "mode": "public-raw-retry",
@@ -62,10 +76,10 @@
   },
   "robot": {
     "current": true,
-    "runId": 36138383874,
-    "event": "schedule",
+    "runId": 36158623852,
+    "event": "push",
     "role": "editor-in-chief-orchestrator",
-    "executor": "bounded-maintenance-workers",
+    "executor": "continuous-maintenance-workers",
     "selfHealingLoop": false
   },
   "policy": {
@@ -75,10 +89,12 @@
     "rollingToleranceMinutes": 60,
     "healthHeartbeatMinutes": 30,
     "recoveryCooldownMinutes": 25,
-    "maxRecoveryAttemptsPerIncident": 2,
+    "sourceVersionBoundIncidents": true,
+    "terminalRepairBudget": false,
+    "escalationDoesNotDisableRecovery": true,
     "currentOnlyCoreRepair": true,
     "archiveBackfillAllowed": false,
-    "successfulRecoveryRecheckOnly": true,
+    "recoveryCompletionAlwaysRechecked": true,
     "upstreamReadFailureDoesNotAuthorizeMutation": true
   }
 }
