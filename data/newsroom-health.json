@@ -1,8 +1,8 @@
 {
   "version": 4,
-  "assessedAt": "2026-09-25T07:40:08.217Z",
+  "assessedAt": "2026-09-25T07:56:00.765Z",
   "state": "RED",
-  "summary": "RECOVERY_REQUIRED:live",
+  "summary": "ESCALATED:live",
   "layers": {
     "daily": {
       "current": true,
@@ -18,8 +18,8 @@
     "desk": {
       "current": true,
       "upstream": "2026-09-25T15:00:00+08:00",
-      "japanese": "2026-09-25T14:00:00+08:00",
-      "lagMinutes": 60
+      "japanese": "2026-09-25T15:00:00+08:00",
+      "lagMinutes": 0
     },
     "stocks": {
       "current": true,
@@ -42,23 +42,16 @@
     "owner": "Editor-in-Chief",
     "executor": "Maintenance Robot",
     "incidentKey": "core:live",
-    "status": "repairing",
-    "decision": "AUTHORIZED_BOUNDED_REPAIR",
+    "status": "escalated",
+    "decision": "AUTO_REPAIR_BUDGET_EXHAUSTED",
     "attempts": 2,
     "maxAttempts": 2,
     "lastAttemptAt": "2026-09-25T07:40:08.217Z",
-    "nextEligibleAt": "2026-09-25T08:05:08.217Z",
+    "nextEligibleAt": null,
     "cooldownMinutes": 25,
     "currentOnlyCoreRepair": true,
     "archiveBackfillAllowed": false,
-    "results": [
-      {
-        "workflow": "sync-japanese-news.yml",
-        "dispatched": true,
-        "active": false,
-        "runId": null
-      }
-    ]
+    "results": []
   },
   "sourceRead": {
     "mode": "public-raw-retry",
@@ -69,8 +62,8 @@
   },
   "robot": {
     "current": true,
-    "runId": 36108798376,
-    "event": "schedule",
+    "runId": 36110187007,
+    "event": "workflow_dispatch",
     "role": "editor-in-chief-orchestrator",
     "executor": "bounded-maintenance-workers",
     "selfHealingLoop": false
