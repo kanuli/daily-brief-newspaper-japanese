@@ -1,6 +1,6 @@
 {
   "version": 4,
-  "assessedAt": "2026-09-25T07:56:00.765Z",
+  "assessedAt": "2026-09-25T12:27:25.045Z",
   "state": "RED",
   "summary": "ESCALATED:live",
   "layers": {
@@ -11,20 +11,20 @@
     },
     "live": {
       "current": false,
-      "upstream": "2026-09-25T15:00:00+08:00",
+      "upstream": "2026-09-25T20:00:00+08:00",
       "japanese": "2026-09-25T09:00:00+08:00",
-      "lagMinutes": 360
+      "lagMinutes": 660
     },
     "desk": {
       "current": true,
-      "upstream": "2026-09-25T15:00:00+08:00",
-      "japanese": "2026-09-25T15:00:00+08:00",
+      "upstream": "2026-09-25T20:00:00+08:00",
+      "japanese": "2026-09-25T20:00:00+08:00",
       "lagMinutes": 0
     },
     "stocks": {
       "current": true,
-      "upstream": "2026-09-25T06:06:56.669246+00:00",
-      "japanese": "2026-09-25T06:06:56.669246+00:00",
+      "upstream": "2026-09-25T12:00:46.003800+00:00",
+      "japanese": "2026-09-25T12:00:46.003800+00:00",
       "lagMinutes": 0
     },
     "structural": {
@@ -62,7 +62,7 @@
   },
   "robot": {
     "current": true,
-    "runId": 36110187007,
+    "runId": 36135008597,
     "event": "workflow_dispatch",
     "role": "editor-in-chief-orchestrator",
     "executor": "bounded-maintenance-workers",
