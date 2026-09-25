@@ -1,8 +1,8 @@
 {
   "version": 5,
-  "assessedAt": "2026-09-25T16:06:41.988Z",
+  "assessedAt": "2026-09-25T17:44:32.755Z",
   "state": "RED",
-  "summary": "RECOVERY_REQUIRED:live,desk,stocks",
+  "summary": "RECOVERY_REQUIRED:desk,stocks",
   "layers": {
     "daily": {
       "current": true,
@@ -10,10 +10,10 @@
       "japanese": "2026-09-25"
     },
     "live": {
-      "current": false,
+      "current": true,
       "upstream": "2026-09-26T00:00:00+08:00",
-      "japanese": "2026-09-25T21:00:00+08:00",
-      "lagMinutes": 180
+      "japanese": "2026-09-26T00:00:00+08:00",
+      "lagMinutes": 0
     },
     "desk": {
       "current": false,
@@ -34,31 +34,25 @@
     }
   },
   "recovery": {
-    "coreRequired": true,
+    "coreRequired": false,
     "rollingRequired": true,
     "structuralRequired": false
   },
   "maintenance": {
     "owner": "Editor-in-Chief",
     "executor": "Maintenance Robot",
-    "incidentKey": "live@2026-09-25T16:00:00.000Z|desk@2026-09-25T16:00:00.000Z|stocks@2026-09-25T15:37:45.320Z",
+    "incidentKey": "desk@2026-09-25T16:00:00.000Z|stocks@2026-09-25T15:37:45.320Z",
     "sourceVersionBound": true,
     "status": "repairing",
     "decision": "AUTHORIZED_BOUNDED_REPAIR",
     "attempts": 1,
-    "lastAttemptAt": "2026-09-25T16:06:41.988Z",
-    "nextEligibleAt": "2026-09-25T16:31:41.988Z",
+    "lastAttemptAt": "2026-09-25T17:44:32.755Z",
+    "nextEligibleAt": "2026-09-25T18:09:32.755Z",
     "cooldownMinutes": 25,
     "terminalRepairBudget": false,
     "currentOnlyCoreRepair": true,
     "archiveBackfillAllowed": false,
     "results": [
-      {
-        "workflow": "sync-japanese-news.yml",
-        "dispatched": true,
-        "active": false,
-        "runId": null
-      },
       {
         "workflow": "repair-extra-translation-quality.yml",
         "dispatched": true,
@@ -76,8 +70,8 @@
   },
   "robot": {
     "current": true,
-    "runId": 36158623852,
-    "event": "push",
+    "runId": 36169001510,
+    "event": "workflow_dispatch",
     "role": "editor-in-chief-orchestrator",
     "executor": "continuous-maintenance-workers",
     "selfHealingLoop": false
