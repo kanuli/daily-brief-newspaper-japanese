@@ -1,8 +1,8 @@
 {
   "version": 4,
-  "assessedAt": "2026-09-25T01:39:43.497Z",
-  "state": "GREEN",
-  "summary": "ALL_REQUIRED_NEWS_LAYERS_CURRENT",
+  "assessedAt": "2026-09-25T06:49:37.614Z",
+  "state": "RED",
+  "summary": "RECOVERY_REQUIRED:live",
   "layers": {
     "daily": {
       "current": true,
@@ -10,21 +10,21 @@
       "japanese": "2026-09-25"
     },
     "live": {
-      "current": true,
-      "upstream": "2026-09-25T09:00:00+08:00",
+      "current": false,
+      "upstream": "2026-09-25T14:00:00+08:00",
       "japanese": "2026-09-25T09:00:00+08:00",
-      "lagMinutes": 0
+      "lagMinutes": 300
     },
     "desk": {
       "current": true,
-      "upstream": "2026-09-25T09:00:00+08:00",
-      "japanese": "2026-09-25T09:00:00+08:00",
+      "upstream": "2026-09-25T14:00:00+08:00",
+      "japanese": "2026-09-25T14:00:00+08:00",
       "lagMinutes": 0
     },
     "stocks": {
       "current": true,
-      "upstream": "2026-09-25T00:18:58.910302+00:00",
-      "japanese": "2026-09-25T00:18:58.910302+00:00",
+      "upstream": "2026-09-25T06:06:56.669246+00:00",
+      "japanese": "2026-09-25T06:06:56.669246+00:00",
       "lagMinutes": 0
     },
     "structural": {
@@ -34,24 +34,31 @@
     }
   },
   "recovery": {
-    "coreRequired": false,
+    "coreRequired": true,
     "rollingRequired": false,
     "structuralRequired": false
   },
   "maintenance": {
     "owner": "Editor-in-Chief",
     "executor": "Maintenance Robot",
-    "incidentKey": "healthy",
-    "status": "resolved",
-    "decision": "NO_REPAIR_REQUIRED",
-    "attempts": 0,
+    "incidentKey": "core:live",
+    "status": "repairing",
+    "decision": "AUTHORIZED_BOUNDED_REPAIR",
+    "attempts": 1,
     "maxAttempts": 2,
-    "lastAttemptAt": null,
-    "nextEligibleAt": null,
+    "lastAttemptAt": "2026-09-25T06:49:37.614Z",
+    "nextEligibleAt": "2026-09-25T07:14:37.614Z",
     "cooldownMinutes": 25,
     "currentOnlyCoreRepair": true,
     "archiveBackfillAllowed": false,
-    "results": []
+    "results": [
+      {
+        "workflow": "sync-japanese-news.yml",
+        "dispatched": true,
+        "active": false,
+        "runId": null
+      }
+    ]
   },
   "sourceRead": {
     "mode": "public-raw-retry",
@@ -62,7 +69,7 @@
   },
   "robot": {
     "current": true,
-    "runId": 36082982536,
+    "runId": 36104626438,
     "event": "workflow_dispatch",
     "role": "editor-in-chief-orchestrator",
     "executor": "bounded-maintenance-workers",
