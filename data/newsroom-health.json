@@ -1,6 +1,6 @@
 {
   "version": 5,
-  "assessedAt": "2026-09-26T03:14:00.801Z",
+  "assessedAt": "2026-09-26T04:10:05.703Z",
   "state": "RED",
   "summary": "RECOVERY_REQUIRED:daily,live,desk,stocks",
   "layers": {
@@ -11,15 +11,15 @@
     },
     "live": {
       "current": false,
-      "upstream": "2026-09-26T11:00:00+08:00",
+      "upstream": "2026-09-26T12:00:00+08:00",
       "japanese": "2026-09-26T07:00:00+08:00",
-      "lagMinutes": 240
+      "lagMinutes": 300
     },
     "desk": {
       "current": false,
-      "upstream": "2026-09-26T11:00:00+08:00",
+      "upstream": "2026-09-26T12:00:00+08:00",
       "japanese": "2026-09-25T20:00:00+08:00",
-      "lagMinutes": 900
+      "lagMinutes": 960
     },
     "stocks": {
       "current": false,
@@ -41,13 +41,13 @@
   "maintenance": {
     "owner": "Editor-in-Chief",
     "executor": "Maintenance Robot",
-    "incidentKey": "daily@2026-09-26|live@2026-09-26T03:00:00.000Z|desk@2026-09-26T03:00:00.000Z|stocks@2026-09-26T03:05:04.434Z",
+    "incidentKey": "daily@2026-09-26|live@2026-09-26T04:00:00.000Z|desk@2026-09-26T04:00:00.000Z|stocks@2026-09-26T03:05:04.434Z",
     "sourceVersionBound": true,
     "status": "repairing",
     "decision": "AUTHORIZED_BOUNDED_REPAIR",
     "attempts": 1,
-    "lastAttemptAt": "2026-09-26T03:14:00.801Z",
-    "nextEligibleAt": "2026-09-26T03:39:00.801Z",
+    "lastAttemptAt": "2026-09-26T04:10:05.703Z",
+    "nextEligibleAt": "2026-09-26T04:35:05.703Z",
     "cooldownMinutes": 25,
     "terminalRepairBudget": false,
     "currentOnlyCoreRepair": true,
@@ -76,7 +76,7 @@
   },
   "robot": {
     "current": true,
-    "runId": 36214154744,
+    "runId": 36217006867,
     "event": "workflow_dispatch",
     "role": "editor-in-chief-orchestrator",
     "executor": "continuous-maintenance-workers",
