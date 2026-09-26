@@ -1,6 +1,6 @@
 {
   "version": 5,
-  "assessedAt": "2026-09-26T04:10:05.703Z",
+  "assessedAt": "2026-09-26T05:04:55.967Z",
   "state": "RED",
   "summary": "RECOVERY_REQUIRED:daily,live,desk,stocks",
   "layers": {
@@ -11,21 +11,21 @@
     },
     "live": {
       "current": false,
-      "upstream": "2026-09-26T12:00:00+08:00",
+      "upstream": "2026-09-26T13:00:00+08:00",
       "japanese": "2026-09-26T07:00:00+08:00",
-      "lagMinutes": 300
+      "lagMinutes": 360
     },
     "desk": {
       "current": false,
-      "upstream": "2026-09-26T12:00:00+08:00",
+      "upstream": "2026-09-26T13:00:00+08:00",
       "japanese": "2026-09-25T20:00:00+08:00",
-      "lagMinutes": 960
+      "lagMinutes": 1020
     },
     "stocks": {
       "current": false,
-      "upstream": "2026-09-26T03:05:04.434237+00:00",
+      "upstream": "2026-09-26T04:59:29.795765+00:00",
       "japanese": "2026-09-25T12:00:46.003800+00:00",
-      "lagMinutes": 904
+      "lagMinutes": 1019
     },
     "structural": {
       "current": true,
@@ -41,13 +41,13 @@
   "maintenance": {
     "owner": "Editor-in-Chief",
     "executor": "Maintenance Robot",
-    "incidentKey": "daily@2026-09-26|live@2026-09-26T04:00:00.000Z|desk@2026-09-26T04:00:00.000Z|stocks@2026-09-26T03:05:04.434Z",
+    "incidentKey": "daily@2026-09-26|live@2026-09-26T05:00:00.000Z|desk@2026-09-26T05:00:00.000Z|stocks@2026-09-26T04:59:29.795Z",
     "sourceVersionBound": true,
     "status": "repairing",
     "decision": "AUTHORIZED_BOUNDED_REPAIR",
     "attempts": 1,
-    "lastAttemptAt": "2026-09-26T04:10:05.703Z",
-    "nextEligibleAt": "2026-09-26T04:35:05.703Z",
+    "lastAttemptAt": "2026-09-26T05:04:55.967Z",
+    "nextEligibleAt": "2026-09-26T05:29:55.967Z",
     "cooldownMinutes": 25,
     "terminalRepairBudget": false,
     "currentOnlyCoreRepair": true,
@@ -76,7 +76,7 @@
   },
   "robot": {
     "current": true,
-    "runId": 36217006867,
+    "runId": 36219721229,
     "event": "workflow_dispatch",
     "role": "editor-in-chief-orchestrator",
     "executor": "continuous-maintenance-workers",
