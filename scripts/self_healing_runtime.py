@@ -6,6 +6,12 @@ aborting the whole newspaper. Clean items continue to publish against the
 current frozen Cantonese source. Degraded files are never accepted by the
 fingerprint fast-path, so later sync/maintenance cycles automatically retry the
 quarantined owners until they translate successfully.
+
+For current Daily/Live news, availability is also fail-open in a tightly
+controlled way: if every translator is unavailable/rate-limited, publish a
+source-backed Japanese minimum card for that exact current source item instead
+of refusing the whole current edition. The owner stays deferred and is retried
+on every later maintenance cycle.
 """
 from __future__ import annotations
 
@@ -38,6 +44,58 @@ def _remember_deferred(name, owner, exc):
         f"owner={owner}",
         f"error={type(exc).__name__}:{str(exc)[:220]}",
     )
+
+
+def _minimum_current_story(name, source_item, reason):
+    """Return a truthful Japanese availability card for one exact current source item."""
+    if not isinstance(source_item, dict) or not source_item.get("id"):
+        return None
+
+    value = {}
+    for key in (
+        "id", "desk", "section", "status", "sourceName", "sourceUrl", "sources",
+        "deskSlugs", "verificationMode", "verifiedAt", "primaryPublishedAt",
+        "publishedAt", "updatedAt", "generatedAt", "image", "storyType", "impact",
+    ):
+        if key in source_item:
+            value[key] = source_item[key]
+
+    source_name = str(source_item.get("sourceName") or "").strip()
+    if not source_name:
+        sources = source_item.get("sources") or []
+        if isinstance(sources, list):
+            for entry in sources:
+                if isinstance(entry, dict) and str(entry.get("name") or "").strip():
+                    source_name = str(entry.get("name") or "").strip()
+                    break
+    if not source_name:
+        source_name = "確認済み出典"
+
+    if name == "live.json":
+        value["title"] = "速報：最新の確認済みニュース"
+        value["summary"] = (
+            f"{source_name}を出典として最新情報を確認しました。"
+            "翻訳サービスの一時的な制限中のため、確認済み項目を先行掲載しています。"
+            "詳細な日本語本文は自動復旧処理で更新します。"
+        )
+    else:
+        value["title"] = "最新ニュース：確認済み情報"
+        value["summary"] = (
+            f"{source_name}を出典としてこのニュースを確認しました。"
+            "翻訳サービスの一時的な制限中のため、確認済み項目を先行掲載しています。"
+            "詳細な日本語本文は自動復旧処理で更新します。"
+        )
+
+    value["translationStatus"] = "EDITORIAL_MINIMUM_FALLBACK"
+    value["translationFallbackReason"] = str(reason or "translation-unavailable")[:160]
+    value["sourceItemFingerprint"] = base.source_fingerprint(source_item)
+    print(
+        "SELF_HEAL_CURRENT_MINIMUM_FALLBACK",
+        f"file={name}",
+        f"id={source_item.get('id')}",
+        f"reason={str(reason or 'translation-unavailable')[:160]}",
+    )
+    return value
 
 
 def resilient_prewarm(source, label):
@@ -98,7 +156,7 @@ def _mark_degraded(translated, name, deferred):
     translated["translationDegraded"] = bool(ids)
     translated["translationDeferredCount"] = len(ids)
     translated["translationDeferredIds"] = ids
-    translated["translationRecoveryMode"] = "owner-quarantine-v1"
+    translated["translationRecoveryMode"] = "owner-quarantine-v2-minimum-current"
     if ids:
         print(
             "SELF_HEAL_DEGRADED_PUBLICATION",
@@ -128,9 +186,6 @@ def _normalize_daily_references(translated, output):
     if str(translated.get("leadId") or "") not in valid_set:
         translated["leadId"] = top[0] if top else (valid_ids[0] if valid_ids else None)
 
-    # Sections are navigation/index metadata. Leaving a quarantined article ID
-    # here creates a broken card/link even though the bad story itself is safely
-    # withheld, so all section references must be pruned in the same transaction.
     for section in translated.get("sections") or []:
         if not isinstance(section, dict) or not isinstance(section.get("articleIds"), list):
             continue
@@ -158,6 +213,7 @@ def _convert_story_list(name, source, existing, list_key):
     output = []
     reused = 0
     changed = 0
+    fallback_count = 0
     deferred = set(_DEFERRED.get(name, set()))
 
     for index, source_item in enumerate(source_items):
@@ -189,11 +245,17 @@ def _convert_story_list(name, source, existing, list_key):
         if fingerprint_matches and not quality_ok:
             print(f"REUSE_REJECTED_LANGUAGE_QUALITY {name}:{item_id}")
 
+        item = None
         if fingerprint_matches and quality_ok:
             item = dict(old)
             reused += 1
         elif owner in deferred:
-            continue
+            if name in {"latest.json", "live.json"}:
+                item = _minimum_current_story(name, source_item, "prewarm-deferred")
+                if item:
+                    fallback_count += 1
+            if item is None:
+                continue
         else:
             try:
                 item = base.convert(source_item)
@@ -201,7 +263,12 @@ def _convert_story_list(name, source, existing, list_key):
             except Exception as exc:
                 deferred.add(owner)
                 _remember_deferred(name, owner, exc)
-                continue
+                if name in {"latest.json", "live.json"}:
+                    item = _minimum_current_story(name, source_item, type(exc).__name__)
+                    if item:
+                        fallback_count += 1
+                if item is None:
+                    continue
 
         if isinstance(item, dict):
             item["sourceItemFingerprint"] = item_fingerprint
@@ -216,7 +283,7 @@ def _convert_story_list(name, source, existing, list_key):
     _mark_degraded(translated, name, deferred)
     print(
         f"SELF_HEAL_INCREMENTAL {name}: reused={reused} changed={changed} "
-        f"deferred={len(deferred)} total={len(output)}/{len(source_items)}"
+        f"fallback={fallback_count} deferred={len(deferred)} total={len(output)}/{len(source_items)}"
     )
     return translated
 
@@ -353,5 +420,5 @@ def install():
     fast.incremental_main = resilient_incremental_main
     print(
         "SELF_HEAL_RUNTIME_INSTALLED owner_quarantine=true "
-        "degraded_fast_path=false retry_on_every_cycle=true"
+        "degraded_fast_path=false retry_on_every_cycle=true minimum_current_fallback=true"
     )
