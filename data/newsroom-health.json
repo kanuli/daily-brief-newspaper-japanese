@@ -1,6 +1,6 @@
 {
   "version": 5,
-  "assessedAt": "2026-09-26T10:30:42.472Z",
+  "assessedAt": "2026-09-26T11:18:16.857Z",
   "state": "RED",
   "summary": "RECOVERY_REQUIRED:live,desk,stocks",
   "layers": {
@@ -11,15 +11,15 @@
     },
     "live": {
       "current": false,
-      "upstream": "2026-09-26T18:00:00+08:00",
+      "upstream": "2026-09-26T19:02:00+08:00",
       "japanese": "2026-09-26T17:00:00+08:00",
-      "lagMinutes": 60
+      "lagMinutes": 122
     },
     "desk": {
       "current": false,
-      "upstream": "2026-09-26T18:00:00+08:00",
+      "upstream": "2026-09-26T19:02:00+08:00",
       "japanese": "2026-09-25T20:00:00+08:00",
-      "lagMinutes": 1320
+      "lagMinutes": 1382
     },
     "stocks": {
       "current": false,
@@ -41,13 +41,13 @@
   "maintenance": {
     "owner": "Editor-in-Chief",
     "executor": "Maintenance Robot",
-    "incidentKey": "live@2026-09-26T10:00:00.000Z|desk@2026-09-26T10:00:00.000Z|stocks@2026-09-26T10:00:18.899Z",
+    "incidentKey": "live@2026-09-26T11:02:00.000Z|desk@2026-09-26T11:02:00.000Z|stocks@2026-09-26T10:00:18.899Z",
     "sourceVersionBound": true,
     "status": "repairing",
     "decision": "AUTHORIZED_BOUNDED_REPAIR",
     "attempts": 1,
-    "lastAttemptAt": "2026-09-26T10:30:42.472Z",
-    "nextEligibleAt": "2026-09-26T10:55:42.472Z",
+    "lastAttemptAt": "2026-09-26T11:18:16.857Z",
+    "nextEligibleAt": "2026-09-26T11:43:16.857Z",
     "cooldownMinutes": 25,
     "terminalRepairBudget": false,
     "currentOnlyCoreRepair": true,
@@ -61,9 +61,9 @@
       },
       {
         "workflow": "repair-extra-translation-quality.yml",
-        "dispatched": true,
-        "active": false,
-        "runId": null
+        "dispatched": false,
+        "active": true,
+        "runId": 36238368524
       }
     ]
   },
@@ -76,7 +76,7 @@
   },
   "robot": {
     "current": true,
-    "runId": 36236001269,
+    "runId": 36238392623,
     "event": "workflow_dispatch",
     "role": "editor-in-chief-orchestrator",
     "executor": "continuous-maintenance-workers",
