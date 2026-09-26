@@ -1,19 +1,19 @@
 {
   "version": 5,
-  "assessedAt": "2026-09-26T05:08:50.675Z",
+  "assessedAt": "2026-09-26T05:45:38.965Z",
   "state": "RED",
-  "summary": "RECOVERY_REQUIRED:daily,live,desk,stocks",
+  "summary": "RECOVERY_REQUIRED:desk,stocks",
   "layers": {
     "daily": {
-      "current": false,
+      "current": true,
       "upstream": "2026-09-26",
-      "japanese": "2026-09-25"
+      "japanese": "2026-09-26"
     },
     "live": {
-      "current": false,
+      "current": true,
       "upstream": "2026-09-26T13:00:00+08:00",
-      "japanese": "2026-09-26T07:00:00+08:00",
-      "lagMinutes": 360
+      "japanese": "2026-09-26T13:00:00+08:00",
+      "lagMinutes": 0
     },
     "desk": {
       "current": false,
@@ -34,25 +34,32 @@
     }
   },
   "recovery": {
-    "coreRequired": true,
+    "coreRequired": false,
     "rollingRequired": true,
     "structuralRequired": false
   },
   "maintenance": {
     "owner": "Editor-in-Chief",
     "executor": "Maintenance Robot",
-    "incidentKey": "daily@2026-09-26|live@2026-09-26T05:00:00.000Z|desk@2026-09-26T05:00:00.000Z|stocks@2026-09-26T04:59:29.795Z",
+    "incidentKey": "desk@2026-09-26T05:00:00.000Z|stocks@2026-09-26T04:59:29.795Z",
     "sourceVersionBound": true,
-    "status": "cooldown",
-    "decision": "WAIT_FOR_COOLDOWN",
+    "status": "repairing",
+    "decision": "AUTHORIZED_BOUNDED_REPAIR",
     "attempts": 1,
-    "lastAttemptAt": "2026-09-26T05:04:55.967Z",
-    "nextEligibleAt": "2026-09-26T05:29:55.967Z",
+    "lastAttemptAt": "2026-09-26T05:45:38.965Z",
+    "nextEligibleAt": "2026-09-26T06:10:38.965Z",
     "cooldownMinutes": 25,
     "terminalRepairBudget": false,
     "currentOnlyCoreRepair": true,
     "archiveBackfillAllowed": false,
-    "results": []
+    "results": [
+      {
+        "workflow": "repair-extra-translation-quality.yml",
+        "dispatched": true,
+        "active": false,
+        "runId": null
+      }
+    ]
   },
   "sourceRead": {
     "mode": "public-raw-retry",
@@ -63,8 +70,8 @@
   },
   "robot": {
     "current": true,
-    "runId": 36219917898,
-    "event": "schedule",
+    "runId": 36221744245,
+    "event": "workflow_dispatch",
     "role": "editor-in-chief-orchestrator",
     "executor": "continuous-maintenance-workers",
     "selfHealingLoop": false
