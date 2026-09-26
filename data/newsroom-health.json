@@ -1,8 +1,8 @@
 {
   "version": 5,
-  "assessedAt": "2026-09-26T05:45:38.965Z",
+  "assessedAt": "2026-09-26T06:38:11.078Z",
   "state": "RED",
-  "summary": "RECOVERY_REQUIRED:desk,stocks",
+  "summary": "RECOVERY_REQUIRED:live,desk,stocks",
   "layers": {
     "daily": {
       "current": true,
@@ -10,22 +10,22 @@
       "japanese": "2026-09-26"
     },
     "live": {
-      "current": true,
-      "upstream": "2026-09-26T13:00:00+08:00",
+      "current": false,
+      "upstream": "2026-09-26T14:00:00+08:00",
       "japanese": "2026-09-26T13:00:00+08:00",
-      "lagMinutes": 0
+      "lagMinutes": 60
     },
     "desk": {
       "current": false,
-      "upstream": "2026-09-26T13:00:00+08:00",
+      "upstream": "2026-09-26T14:00:00+08:00",
       "japanese": "2026-09-25T20:00:00+08:00",
-      "lagMinutes": 1020
+      "lagMinutes": 1080
     },
     "stocks": {
       "current": false,
-      "upstream": "2026-09-26T04:59:29.795765+00:00",
+      "upstream": "2026-09-26T06:06:18.703378+00:00",
       "japanese": "2026-09-25T12:00:46.003800+00:00",
-      "lagMinutes": 1019
+      "lagMinutes": 1086
     },
     "structural": {
       "current": true,
@@ -34,25 +34,31 @@
     }
   },
   "recovery": {
-    "coreRequired": false,
+    "coreRequired": true,
     "rollingRequired": true,
     "structuralRequired": false
   },
   "maintenance": {
     "owner": "Editor-in-Chief",
     "executor": "Maintenance Robot",
-    "incidentKey": "desk@2026-09-26T05:00:00.000Z|stocks@2026-09-26T04:59:29.795Z",
+    "incidentKey": "live@2026-09-26T06:00:00.000Z|desk@2026-09-26T06:00:00.000Z|stocks@2026-09-26T06:06:18.703Z",
     "sourceVersionBound": true,
     "status": "repairing",
     "decision": "AUTHORIZED_BOUNDED_REPAIR",
     "attempts": 1,
-    "lastAttemptAt": "2026-09-26T05:45:38.965Z",
-    "nextEligibleAt": "2026-09-26T06:10:38.965Z",
+    "lastAttemptAt": "2026-09-26T06:38:11.078Z",
+    "nextEligibleAt": "2026-09-26T07:03:11.078Z",
     "cooldownMinutes": 25,
     "terminalRepairBudget": false,
     "currentOnlyCoreRepair": true,
     "archiveBackfillAllowed": false,
     "results": [
+      {
+        "workflow": "sync-japanese-news.yml",
+        "dispatched": true,
+        "active": false,
+        "runId": null
+      },
       {
         "workflow": "repair-extra-translation-quality.yml",
         "dispatched": true,
@@ -70,7 +76,7 @@
   },
   "robot": {
     "current": true,
-    "runId": 36221744245,
+    "runId": 36224339652,
     "event": "workflow_dispatch",
     "role": "editor-in-chief-orchestrator",
     "executor": "continuous-maintenance-workers",
