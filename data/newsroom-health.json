@@ -1,31 +1,31 @@
 {
   "version": 5,
-  "assessedAt": "2026-09-26T00:25:40.884Z",
+  "assessedAt": "2026-09-26T01:17:11.512Z",
   "state": "RED",
-  "summary": "RECOVERY_REQUIRED:desk,stocks",
+  "summary": "RECOVERY_REQUIRED:daily,live,desk,stocks",
   "layers": {
     "daily": {
-      "current": true,
-      "upstream": "2026-09-25",
+      "current": false,
+      "upstream": "2026-09-26",
       "japanese": "2026-09-25"
     },
     "live": {
-      "current": true,
-      "upstream": "2026-09-26T07:00:00+08:00",
+      "current": false,
+      "upstream": "2026-09-26T09:00:00+08:00",
       "japanese": "2026-09-26T07:00:00+08:00",
-      "lagMinutes": 0
+      "lagMinutes": 120
     },
     "desk": {
       "current": false,
-      "upstream": "2026-09-26T07:00:00+08:00",
+      "upstream": "2026-09-26T09:00:00+08:00",
       "japanese": "2026-09-25T20:00:00+08:00",
-      "lagMinutes": 660
+      "lagMinutes": 780
     },
     "stocks": {
       "current": false,
-      "upstream": "2026-09-26T00:24:18.234611+00:00",
+      "upstream": "2026-09-26T01:03:58.096271+00:00",
       "japanese": "2026-09-25T12:00:46.003800+00:00",
-      "lagMinutes": 744
+      "lagMinutes": 783
     },
     "structural": {
       "current": true,
@@ -34,25 +34,31 @@
     }
   },
   "recovery": {
-    "coreRequired": false,
+    "coreRequired": true,
     "rollingRequired": true,
     "structuralRequired": false
   },
   "maintenance": {
     "owner": "Editor-in-Chief",
     "executor": "Maintenance Robot",
-    "incidentKey": "desk@2026-09-25T23:00:00.000Z|stocks@2026-09-26T00:24:18.234Z",
+    "incidentKey": "daily@2026-09-26|live@2026-09-26T01:00:00.000Z|desk@2026-09-26T01:00:00.000Z|stocks@2026-09-26T01:03:58.096Z",
     "sourceVersionBound": true,
     "status": "repairing",
     "decision": "AUTHORIZED_BOUNDED_REPAIR",
     "attempts": 1,
-    "lastAttemptAt": "2026-09-26T00:25:40.884Z",
-    "nextEligibleAt": "2026-09-26T00:50:40.884Z",
+    "lastAttemptAt": "2026-09-26T01:17:11.512Z",
+    "nextEligibleAt": "2026-09-26T01:42:11.512Z",
     "cooldownMinutes": 25,
     "terminalRepairBudget": false,
     "currentOnlyCoreRepair": true,
     "archiveBackfillAllowed": false,
     "results": [
+      {
+        "workflow": "sync-japanese-news.yml",
+        "dispatched": true,
+        "active": false,
+        "runId": null
+      },
       {
         "workflow": "repair-extra-translation-quality.yml",
         "dispatched": true,
@@ -70,7 +76,7 @@
   },
   "robot": {
     "current": true,
-    "runId": 36204799936,
+    "runId": 36207898800,
     "event": "workflow_dispatch",
     "role": "editor-in-chief-orchestrator",
     "executor": "continuous-maintenance-workers",
