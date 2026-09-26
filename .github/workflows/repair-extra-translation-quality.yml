@@ -17,10 +17,6 @@ on:
       - 'scripts/local_translation_runtime.py'
       - '.github/workflows/repair-extra-translation-quality.yml'
   schedule:
-    # Core Daily/Live starts at :15. Guaranteed rolling page coverage follows at :45.
-    # Event-driven recovery is owned by the Editor-in-Chief Robot. The robot
-    # checks Desk/Stocks freshness first and dispatches this workflow only when
-    # rolling publication is actually stale.
     - cron: '45 * * * *'
 
 permissions:
@@ -29,15 +25,12 @@ permissions:
 
 concurrency:
   group: japanese-extra-quality-repair
-  # Routine schedule/dispatch repairs must finish and never starve each other.
-  # A code-change push is different: it supersedes an already-running worker
-  # that is executing obsolete repair logic, so the corrected worker may start.
   cancel-in-progress: ${{ github.event_name == 'push' }}
 
 jobs:
   repair:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 20
     env:
       CANTONESE_SNAPSHOT_DIR: .cantonese-snapshot/data
     steps:
@@ -70,7 +63,7 @@ jobs:
           pip install --index-url https://download.pytorch.org/whl/cpu torch==2.8.0
           pip install -r requirements-translation.txt
 
-      - name: Syntax check self-healing rolling sync
+      - name: Syntax check rolling recovery
         run: |
           python -m py_compile \
             scripts/cantonese_snapshot.py \
@@ -78,7 +71,6 @@ jobs:
             scripts/self_healing_extra_sync.py \
             scripts/sync_cantonese_layers.py \
             scripts/local_translation_runtime.py \
-            scripts/remote_repair_all_published_quality.py \
             scripts/newsroom_quality.py \
             scripts/furigana_safe_runtime.py \
             scripts/validate_extra_layers.py
@@ -86,156 +78,110 @@ jobs:
       - name: Freeze one Cantonese source commit
         run: python scripts/cantonese_snapshot.py
 
-      - name: Build minimum guaranteed reader edition first
-        timeout-minutes: 12
+      - name: Build desk minimum edition first
+        id: desk_build
+        timeout-minutes: 5
         env:
           TOKENIZERS_PARALLELISM: 'false'
-          # Availability before depth: one newest story per source-backed desk
-          # and one per ticker. Later cycles can reuse translations and deepen.
+          EXTRA_EDITOR_LAYER_SCOPE: desk
           EXTRA_DESK_STORIES_PER_DESK: '1'
-          EXTRA_STOCK_STORIES_PER_TICKER: '1'
-          EXTRA_STOCKS_BUDGET_SECONDS: '90'
-          EXTRA_TOPIC_BUDGET_SECONDS: '120'
-          EXTRA_DESK_BUDGET_SECONDS: '180'
+          EXTRA_DESK_BUDGET_SECONDS: '150'
         run: python scripts/run_extra_sync_editor.py
 
-      - name: Validate minimum current rolling edition
+      - name: Validate desk minimum edition
+        env:
+          EXTRA_VALIDATE_SCOPE: desk
         run: python scripts/validate_extra_layers.py
 
-      - name: Publish minimum current rolling edition immediately
+      - name: Publish desk minimum edition
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'daily-brief-japanese-bot'
           git config user.email 'actions@users.noreply.github.com'
-          git add data/desk-latest.json data/stocks-latest.json
-          git add -A data/topic-more
+          git add data/desk-latest.json data/translation-cache.json
           if git diff --cached --quiet; then
-            echo 'Minimum rolling edition already matches production.'
+            echo 'Desk minimum already current.'
             exit 0
           fi
-          git commit -m '最新ローリングニュース最低掲載版を先行公開'
-
-          # Translation/cache checkpoints can leave tracked working-tree changes
-          # after the publication files are committed. They are useful for later
-          # enhancement but must never prevent a validated minimum edition from
-          # rebasing onto a concurrently advanced main branch.
-          residual_stashed=false
-          if ! git diff --quiet || [ -n "$(git ls-files --others --exclude-standard)" ]; then
-            git stash push -u -m "rolling-minimum-residual-${GITHUB_RUN_ID}" >/tmp/rolling-stash.txt
-            cat /tmp/rolling-stash.txt
-            if ! grep -q 'No local changes to save' /tmp/rolling-stash.txt; then
-              residual_stashed=true
-              echo 'ROLLING_MINIMUM_RESIDUAL_STASHED'
-            fi
-          fi
-
-          restore_residual() {
-            if [ "$residual_stashed" != 'true' ]; then return 0; fi
-            if git stash pop; then
-              echo 'ROLLING_MINIMUM_RESIDUAL_RESTORED'
-              residual_stashed=false
-              return 0
-            fi
-            echo 'Residual cache restore conflicted after publication; discarding only non-publication residual changes.' >&2
-            git reset --hard HEAD
-            git clean -fd
-            git stash drop >/dev/null 2>&1 || true
-            residual_stashed=false
-          }
-
+          git commit -m '最新デスクニュース最低掲載版を先行公開'
+          git stash push -u -m "desk-residual-${GITHUB_RUN_ID}" >/dev/null 2>&1 || true
           for attempt in 1 2 3 4 5; do
             git fetch origin main
             if ! git rebase origin/main; then
               git rebase --abort || true
-              echo 'Minimum rolling publication rebase conflict; retrying.' >&2
               sleep $((attempt * 2))
               continue
             fi
             if git push origin HEAD:main; then
-              echo 'JAPANESE_EXTRA_MINIMUM_CURRENT_PUSH_OK'
-              restore_residual
+              echo 'JAPANESE_DESK_MINIMUM_PUSH_OK'
               exit 0
             fi
             sleep $((attempt * 2))
           done
-          echo 'Minimum rolling publication could not be pushed after five clean-tree retries.' >&2
           exit 1
 
-      - name: Apply optional v4 newsroom and lexical-furigana enhancement
-        id: optional_enhancement
-        timeout-minutes: 5
+      - name: Refresh checkout after desk publication
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git reset --hard origin/main
+          git clean -fd
+          python scripts/cantonese_snapshot.py
+
+      - name: Build stocks and topic minimum edition
+        id: remaining_build
+        timeout-minutes: 7
         continue-on-error: true
         env:
-          REMOTE_REPAIR_SCOPE: rolling
-        run: python scripts/remote_repair_all_published_quality.py
+          TOKENIZERS_PARALLELISM: 'false'
+          EXTRA_EDITOR_LAYER_SCOPE: remaining
+          EXTRA_STOCK_STORIES_PER_TICKER: '1'
+          EXTRA_STOCKS_BUDGET_SECONDS: '75'
+          EXTRA_TOPIC_BUDGET_SECONDS: '90'
+        run: python scripts/run_extra_sync_editor.py
 
-      - name: Validate optional enhanced rolling Japanese layer
-        id: enhanced_validation
-        if: steps.optional_enhancement.outcome == 'success'
+      - name: Validate stocks and topic minimum edition
+        id: remaining_validate
+        if: steps.remaining_build.outcome == 'success'
         continue-on-error: true
+        env:
+          EXTRA_VALIDATE_SCOPE: remaining
         run: python scripts/validate_extra_layers.py
 
-      - name: Publish optional enhanced rolling layer when valid
-        if: steps.optional_enhancement.outcome == 'success' && steps.enhanced_validation.outcome == 'success'
+      - name: Publish stocks and topic minimum edition
+        if: steps.remaining_build.outcome == 'success' && steps.remaining_validate.outcome == 'success'
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'daily-brief-japanese-bot'
           git config user.email 'actions@users.noreply.github.com'
-          git add data/desk-latest.json data/stocks-latest.json
+          git add data/stocks-latest.json data/translation-cache.json
           git add -A data/topic-more
           if git diff --cached --quiet; then
-            echo 'No post-publication enhancement changes.'
+            echo 'Remaining rolling minimum already current.'
             exit 0
           fi
-          git commit -m 'ローリングニュース編集品質を追加修復'
-
-          residual_stashed=false
-          if ! git diff --quiet || [ -n "$(git ls-files --others --exclude-standard)" ]; then
-            git stash push -u -m "rolling-enhancement-residual-${GITHUB_RUN_ID}" >/tmp/rolling-enhancement-stash.txt
-            cat /tmp/rolling-enhancement-stash.txt
-            if ! grep -q 'No local changes to save' /tmp/rolling-enhancement-stash.txt; then
-              residual_stashed=true
-              echo 'ROLLING_ENHANCEMENT_RESIDUAL_STASHED'
-            fi
-          fi
-
-          restore_residual() {
-            if [ "$residual_stashed" != 'true' ]; then return 0; fi
-            if git stash pop; then
-              echo 'ROLLING_ENHANCEMENT_RESIDUAL_RESTORED'
-              residual_stashed=false
-              return 0
-            fi
-            echo 'Optional residual cache restore conflicted; minimum/current published edition remains authoritative.' >&2
-            git reset --hard HEAD
-            git clean -fd
-            git stash drop >/dev/null 2>&1 || true
-            residual_stashed=false
-          }
-
+          git commit -m '最新ローリングニュース最低掲載版を更新'
+          git stash push -u -m "remaining-residual-${GITHUB_RUN_ID}" >/dev/null 2>&1 || true
           for attempt in 1 2 3 4 5; do
             git fetch origin main
             if ! git rebase origin/main; then
               git rebase --abort || true
-              echo 'Optional rolling enhancement rebase conflict; minimum edition remains live.' >&2
-              restore_residual
-              exit 0
+              sleep $((attempt * 2))
+              continue
             fi
             if git push origin HEAD:main; then
-              echo 'JAPANESE_EXTRA_ENHANCEMENT_PUSH_OK'
-              restore_residual
+              echo 'JAPANESE_REMAINING_MINIMUM_PUSH_OK'
               exit 0
             fi
             sleep $((attempt * 2))
           done
-          echo 'Optional enhancement push did not complete; minimum edition remains live.' >&2
-          restore_residual
-          exit 0
+          exit 1
 
-      - name: Return successful repair to Editor-in-Chief
-        if: ${{ success() }}
+      - name: Return control to Editor-in-Chief for live verification
+        if: always()
         env:
           GH_TOKEN: ${{ github.token }}
         shell: bash
