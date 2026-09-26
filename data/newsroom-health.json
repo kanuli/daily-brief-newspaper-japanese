@@ -1,6 +1,6 @@
 {
   "version": 5,
-  "assessedAt": "2026-09-26T14:22:29.349Z",
+  "assessedAt": "2026-09-26T14:26:23.726Z",
   "state": "RED",
   "summary": "RECOVERY_REQUIRED:stocks",
   "layers": {
@@ -44,10 +44,10 @@
     "incidentKey": "stocks@2026-09-26T10:00:18.899Z",
     "sourceVersionBound": true,
     "status": "repairing",
-    "decision": "RECOVERY_ALREADY_ACTIVE",
-    "attempts": 0,
-    "lastAttemptAt": null,
-    "nextEligibleAt": null,
+    "decision": "AUTHORIZED_BOUNDED_REPAIR",
+    "attempts": 1,
+    "lastAttemptAt": "2026-09-26T14:26:23.726Z",
+    "nextEligibleAt": "2026-09-26T14:51:23.726Z",
     "cooldownMinutes": 25,
     "terminalRepairBudget": false,
     "currentOnlyCoreRepair": true,
@@ -55,9 +55,9 @@
     "results": [
       {
         "workflow": "repair-extra-translation-quality.yml",
-        "dispatched": false,
-        "active": true,
-        "runId": 36247945442
+        "dispatched": true,
+        "active": false,
+        "runId": null
       }
     ]
   },
@@ -70,8 +70,8 @@
   },
   "robot": {
     "current": true,
-    "runId": 36248278905,
-    "event": "schedule",
+    "runId": 36248495672,
+    "event": "workflow_dispatch",
     "role": "editor-in-chief-orchestrator",
     "executor": "continuous-maintenance-workers",
     "selfHealingLoop": false
