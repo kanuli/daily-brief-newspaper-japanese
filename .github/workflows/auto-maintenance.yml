@@ -189,7 +189,37 @@ jobs:
           print(f'summary={health.get("summary") or "MISSING"}')
           PY
 
-      - name: Report publication diagnostics without dispatching news recovery
+      - name: Escalate unhealthy newsroom to closed-loop recovery
+        id: newsroom_recovery
+        if: github.event_name != 'pull_request' && steps.newsroom.outputs.green != 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const workflow = 'maintenance-recovery-controller.yml';
+            const runs = await github.rest.actions.listWorkflowRuns({
+              owner,
+              repo,
+              workflow_id: workflow,
+              branch: 'main',
+              per_page: 20,
+            });
+            const active = runs.data.workflow_runs.find((run) => run.status !== 'completed');
+            if (active) {
+              core.info(`NEWSROOM_RECOVERY_ALREADY_ACTIVE run=${active.id} status=${active.status}`);
+              core.setOutput('pending', 'true');
+              return;
+            }
+            await github.rest.actions.createWorkflowDispatch({
+              owner,
+              repo,
+              workflow_id: workflow,
+              ref: 'main',
+            });
+            core.warning(`NEWSROOM_RECOVERY_DISPATCHED state=${{ toJSON(steps.newsroom.outputs.state) }} summary=${{ toJSON(steps.newsroom.outputs.summary) }}`);
+            core.setOutput('pending', 'true');
+
+      - name: Report publication diagnostics
         if: github.event_name != 'pull_request'
         shell: bash
         run: |
@@ -199,7 +229,7 @@ jobs:
           echo "Authoritative newsroom state: ${{ steps.newsroom.outputs.state || 'MISSING' }}"
           echo "Authoritative newsroom summary: ${{ steps.newsroom.outputs.summary || 'MISSING' }}"
           echo "Authoritative rolling current: ${{ steps.newsroom.outputs.rolling_current || 'false' }}"
-          echo 'Core/Rolling recovery is owned only by the Editor-in-Chief; this robot never dispatches those workflows.'
+          echo "Closed-loop recovery pending: ${{ steps.newsroom_recovery.outputs.pending || 'false' }}"
 
       - name: Check F3 voice independently
         id: audio_qa
@@ -272,11 +302,9 @@ jobs:
             echo "- Newsroom GREEN: ${{ steps.newsroom.outputs.green || 'false' }}"
             echo "- Newsroom core current: ${{ steps.newsroom.outputs.core_current || 'false' }}"
             echo "- Newsroom rolling current: ${{ steps.newsroom.outputs.rolling_current || 'false' }}"
+            echo "- Newsroom recovery pending: ${{ steps.newsroom_recovery.outputs.pending || 'false' }}"
             echo "- F3 voice healthy: ${{ steps.audio_qa.outputs.healthy || 'false' }}"
             echo "- F3 recovery pending: ${{ steps.f3_recovery.outputs.pending || 'false' }}"
-            echo ''
-            echo 'Editor-in-Chief owns current-news recovery authorization. Maintenance Robot owns deterministic static repair and bounded F3 recovery.'
-            echo 'Archive/backfill regeneration is outside this robot.'
           } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Enforce maintenance-owned health only
@@ -290,7 +318,7 @@ jobs:
           fi
           if [ "${{ steps.newsroom.outputs.green }}" != 'true' ]; then
             echo "::warning::Reader-facing newsroom is not GREEN: ${{ steps.newsroom.outputs.summary || 'MISSING' }}"
-            echo '::warning::No Core/Rolling recovery is dispatched here; the Editor-in-Chief owns that incident and its retry budget.'
+            echo '::warning::Closed-loop current-news recovery has been dispatched or is already active.'
           fi
           if [ "${{ steps.audio_qa.outputs.healthy }}" != 'true' ]; then
             echo '::warning::F3 audio is unhealthy or deferred; bounded F3 recovery remains independent.'
