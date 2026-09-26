@@ -30,7 +30,7 @@ concurrency:
 jobs:
   repair:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     env:
       CANTONESE_SNAPSHOT_DIR: .cantonese-snapshot/data
     steps:
@@ -132,8 +132,7 @@ jobs:
 
       - name: Build stocks and topic minimum edition
         id: remaining_build
-        timeout-minutes: 7
-        continue-on-error: true
+        timeout-minutes: 15
         env:
           TOKENIZERS_PARALLELISM: 'false'
           EXTRA_EDITOR_LAYER_SCOPE: remaining
@@ -144,14 +143,11 @@ jobs:
 
       - name: Validate stocks and topic minimum edition
         id: remaining_validate
-        if: steps.remaining_build.outcome == 'success'
-        continue-on-error: true
         env:
           EXTRA_VALIDATE_SCOPE: remaining
         run: python scripts/validate_extra_layers.py
 
       - name: Publish stocks and topic minimum edition
-        if: steps.remaining_build.outcome == 'success' && steps.remaining_validate.outcome == 'success'
         shell: bash
         run: |
           set -euo pipefail
