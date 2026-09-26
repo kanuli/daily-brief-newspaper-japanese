@@ -1,0 +1,92 @@
+name: Closed-loop News Recovery Controller
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ["main"]
+    paths:
+      - '.github/workflows/maintenance-recovery-controller.yml'
+      - 'scripts/self_healing_runtime.py'
+      - '.github/workflows/repair-extra-translation-quality.yml'
+  schedule:
+    - cron: '3,13,23,33,43,53 * * * *'
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: closed-loop-news-recovery-controller
+  cancel-in-progress: true
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - name: Detect stale layers and dispatch the correct repair
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const upstream = 'daily-brief-newspaper';
+            const MINUTE = 60 * 1000;
+            const HOUR = 60 * MINUTE;
+
+            async function raw(repoName, path) {
+              const url = `https://raw.githubusercontent.com/${owner}/${repoName}/main/${path}?closed_loop=${context.runId}-${Date.now()}`;
+              const response = await fetch(url, { headers: { 'Cache-Control': 'no-cache, no-store' } });
+              if (!response.ok) throw new Error(`${repoName}/${path}:HTTP_${response.status}`);
+              return JSON.parse(await response.text());
+            }
+
+            function stamp(payload) {
+              for (const key of ['generatedAt', 'lastUpdated', 'sourceGeneratedAt', 'checkedAt']) {
+                const ms = Date.parse(String(payload?.[key] || ''));
+                if (Number.isFinite(ms)) return ms;
+              }
+              return NaN;
+            }
+
+            function day(payload) {
+              const value = String(payload?.date || '').slice(0, 10);
+              return /^\d{4}-\d{2}-\d{2}$/.test(value) ? value : '';
+            }
+
+            async function active(workflow) {
+              const response = await github.rest.actions.listWorkflowRuns({ owner, repo, workflow_id: workflow, branch: 'main', per_page: 20 });
+              return response.data.workflow_runs.find(run => run.status !== 'completed') || null;
+            }
+
+            async function dispatch(workflow, reason) {
+              const running = await active(workflow);
+              if (running) {
+                core.info(`RECOVERY_ALREADY_ACTIVE workflow=${workflow} run=${running.id} reason=${reason}`);
+                return;
+              }
+              await github.rest.actions.createWorkflowDispatch({ owner, repo, workflow_id: workflow, ref: 'main' });
+              core.warning(`CLOSED_LOOP_DISPATCH workflow=${workflow} reason=${reason}`);
+            }
+
+            const [sDaily, jDaily, sLive, jLive, sDesk, jDesk, sStocks, jStocks] = await Promise.all([
+              raw(upstream, 'data/latest.json'), raw(repo, 'data/latest.json'),
+              raw(upstream, 'data/live.json'), raw(repo, 'data/live.json'),
+              raw(upstream, 'data/desk-latest.json'), raw(repo, 'data/desk-latest.json'),
+              raw(upstream, 'data/stocks-latest.json'), raw(repo, 'data/stocks-latest.json'),
+            ]);
+
+            const coreStale = !day(jDaily) || day(jDaily) < day(sDaily) ||
+              !Number.isFinite(stamp(jLive)) || stamp(jLive) < stamp(sLive) - MINUTE;
+            const rollingStale = !Number.isFinite(stamp(jDesk)) || stamp(jDesk) < stamp(sDesk) - HOUR ||
+              !Number.isFinite(stamp(jStocks)) || stamp(jStocks) < stamp(sStocks) - HOUR;
+
+            if (coreStale) await dispatch('sync-japanese-news.yml', 'core-stale-vs-cantonese-source');
+            if (rollingStale) await dispatch('repair-extra-translation-quality.yml', 'rolling-stale-vs-cantonese-source');
+
+            if (!coreStale && !rollingStale) {
+              core.info('CLOSED_LOOP_GREEN all required Japanese layers current');
+            } else {
+              core.warning(`CLOSED_LOOP_RED core=${coreStale} rolling=${rollingStale}`);
+            }
+
+            await dispatch('editor-in-chief-newsroom-robot.yml', 'closed-loop-post-recovery-verification');
