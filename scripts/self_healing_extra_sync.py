@@ -115,6 +115,11 @@ def _stock_minimum_fallback(source_story: dict, path: str, reason: str):
     source_name = str(source_story.get("sourceName") or "").strip()
     if not source_name or base.likely_chinese_source(source_name):
         source_name = ticker
+    source_name = re.sub(
+        r"(?i)(?<![A-Za-z])via(?![A-Za-z])",
+        "経由",
+        source_name,
+    )
     event = _stock_event_label(source_story)
     value = {}
     for key in (
