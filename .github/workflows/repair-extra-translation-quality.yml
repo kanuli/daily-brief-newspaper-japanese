@@ -1,7 +1,9 @@
-name: 日本語ローリング翻訳品質修復
+name: Maintenance Robot — 日本語ローリング翻訳品質修復
 
 on:
   workflow_dispatch:
+  # Code-change validation only. Normal newsroom operation is assigned by the
+  # Editor-in-Chief; this worker no longer owns an independent hourly schedule.
   push:
     branches: ["main"]
     paths:
@@ -16,8 +18,6 @@ on:
       - 'scripts/safe_sync.py'
       - 'scripts/local_translation_runtime.py'
       - '.github/workflows/repair-extra-translation-quality.yml'
-  schedule:
-    - cron: '45 * * * *'
 
 permissions:
   contents: write
@@ -92,6 +92,35 @@ jobs:
         env:
           EXTRA_VALIDATE_SCOPE: desk
         run: python scripts/validate_extra_layers.py
+
+      - name: Enforce one current story for every source-backed desk
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          snapshot_dir = Path(os.environ['CANTONESE_SNAPSHOT_DIR'])
+          source = json.loads((snapshot_dir / 'desk-latest.json').read_text(encoding='utf-8'))
+          local = json.loads(Path('data/desk-latest.json').read_text(encoding='utf-8'))
+          source_desks = source.get('desks') or {}
+          local_desks = local.get('desks') or {}
+          missing = []
+          covered = []
+          for desk, rows in source_desks.items():
+              if not isinstance(rows, list) or not rows:
+                  continue
+              local_rows = local_desks.get(desk)
+              if isinstance(local_rows, list) and local_rows:
+                  covered.append(desk)
+              else:
+                  missing.append(desk)
+          if missing:
+              raise SystemExit('DESK_MINIMUM_COVERAGE_FAILED missing=' + ','.join(missing))
+          print('DESK_MINIMUM_COVERAGE_OK desks=' + ','.join(covered))
+          PY
 
       - name: Publish desk minimum edition
         shell: bash
