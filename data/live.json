@@ -14,17 +14,27 @@
     "asia-korea-dmz-blast-investigation-20260928-0000"
   ],
   "coverage": {
-    "status": "INCOMPLETE",
-    "deskLatestDepthMet": false,
+    "status": "COMPLETE",
+    "deskLatestDepthMet": true,
     "sourceGateMet": true,
     "copyGateMet": true,
     "routingGateMet": true,
     "geographicGateMet": true,
     "footballGateMet": true,
-    "publishingGateMet": false,
-    "deskLatestStoryCounts": {},
+    "publishingGateMet": true,
+    "deskLatestStoryCounts": {
+      "world": 210,
+      "asia": 255,
+      "hong-kong": 84,
+      "japan": 173,
+      "market-economy": 132,
+      "ai-tech": 128,
+      "manga-anime": 30,
+      "manchester-united": 40,
+      "football": 142
+    },
     "hongKongCountVerified": null,
-    "japanCountVerified": null
+    "japanCountVerified": 173
   },
   "items": [
     {
@@ -82,7 +92,7 @@
   "language": "ja",
   "translationSource": "kanuli/daily-brief-newspaper",
   "sourceFile": "live.json",
-  "sourceFingerprint": "7ac2a7fb3a1346bda565c1f4e85f0280f49bdd1cd8def05f6d6a4dcbda0136df",
+  "sourceFingerprint": "d074ccdf75b8153f7f92939f5495de2cc84820a512792f6b9065fdb192d50422",
   "translationSchemaVersion": "ja-furigana-v3-context-sensitive",
   "furiganaEngineVersion": "sudachi-core-mode-c+context",
   "newsroomQualityVersion": 1
