@@ -218,6 +218,77 @@ def _write_desk_minimum_fallback(source: dict, reason: str) -> bool:
     return True
 
 
+def _ensure_desk_minimum_coverage(source: dict) -> bool:
+    """Fill every source-backed desk that translation budget could not finish.
+
+    A current timestamp is not enough for reader availability. If the translator
+    publishes only a subset of desks, the missing desks receive provenance-safe
+    editorial minimum cards so every category page has at least one current item.
+    """
+    if not isinstance(source, dict) or not isinstance(source.get("desks"), dict):
+        return False
+
+    path = OUT / "desk-latest.json"
+    try:
+        translated = json.loads(path.read_text(encoding="utf-8")) if path.is_file() else {}
+    except Exception:
+        translated = {}
+    if not isinstance(translated, dict):
+        translated = {}
+
+    desks = translated.get("desks")
+    if not isinstance(desks, dict):
+        desks = {}
+
+    filled_ids: list[str] = []
+    filled_desks: list[str] = []
+    for desk, rows in source["desks"].items():
+        desk = str(desk)
+        selected = list(rows) if isinstance(rows, list) else []
+        if not selected:
+            desks.setdefault(desk, [])
+            continue
+        current_rows = desks.get(desk)
+        if isinstance(current_rows, list) and current_rows:
+            continue
+        story = selected[0]
+        if not isinstance(story, dict) or not story.get("id"):
+            desks.setdefault(desk, [])
+            continue
+        desks[desk] = [_desk_minimum_story(story, desk)]
+        filled_desks.append(desk)
+        filled_ids.append(str(story.get("id")))
+
+    if not filled_desks:
+        return False
+
+    translated["desks"] = desks
+    translated["language"] = "ja"
+    translated["translationSource"] = "kanuli/daily-brief-newspaper"
+    translated["sourceFile"] = "desk-latest.json"
+    translated["sourceFingerprint"] = extra.fingerprint(source)
+    translated["translationSchemaVersion"] = extra.SCHEMA
+    translated["editorSelectionMode"] = "minimum-guaranteed-edition-per-desk"
+    translated["translationDegraded"] = True
+
+    deferred_ids = [str(item) for item in (translated.get("translationDeferredIds") or []) if item]
+    merged_deferred = list(dict.fromkeys(deferred_ids + filled_ids))
+    translated["translationDeferredIds"] = merged_deferred
+    translated["translationDeferredCount"] = len(merged_deferred)
+    translated.setdefault("translationDeferredMetadata", [])
+    translated["translationRecoveryMode"] = "editorial-fill-missing-desks-v1"
+    translated["sourceParityMode"] = "minimum-guaranteed-edition-per-desk"
+
+    path.write_text(json.dumps(translated, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(
+        "EXTRA_DESK_MINIMUM_COVERAGE_FILLED",
+        f"desks={','.join(filled_desks)}",
+        f"stories={len(filled_ids)}",
+        "reader_availability=guaranteed",
+    )
+    return True
+
+
 def _selected_names(topic_name: str) -> tuple[str, list[str]]:
     scope = str(os.getenv("EXTRA_EDITOR_LAYER_SCOPE") or "all").strip().lower()
     if scope == "desk":
@@ -257,7 +328,10 @@ def main():
         attempted += 1
         source = _prepare_source(name, source)
         try:
-            if healing.sync_file(name, source):
+            layer_changed = healing.sync_file(name, source)
+            if name == "desk-latest.json" and _ensure_desk_minimum_coverage(source):
+                layer_changed = True
+            if layer_changed:
                 changed.append(name)
         except Exception as exc:
             if name == "desk-latest.json":
