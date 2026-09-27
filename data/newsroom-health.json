@@ -1,8 +1,8 @@
 {
   "version": 5,
-  "assessedAt": "2026-09-27T17:21:39.735Z",
-  "state": "RED",
-  "summary": "RECOVERY_REQUIRED:live",
+  "assessedAt": "2026-09-27T17:48:54.544Z",
+  "state": "GREEN",
+  "summary": "ALL_REQUIRED_NEWS_LAYERS_CURRENT",
   "layers": {
     "daily": {
       "current": true,
@@ -10,10 +10,10 @@
       "japanese": "2026-09-26"
     },
     "live": {
-      "current": false,
+      "current": true,
       "upstream": "2026-09-28T00:00:39+08:00",
-      "japanese": "2026-09-27T23:02:31+08:00",
-      "lagMinutes": 58
+      "japanese": "2026-09-28T00:00:39+08:00",
+      "lagMinutes": 0
     },
     "desk": {
       "current": true,
@@ -34,20 +34,20 @@
     }
   },
   "recovery": {
-    "coreRequired": true,
+    "coreRequired": false,
     "rollingRequired": false,
     "structuralRequired": false
   },
   "maintenance": {
     "owner": "Editor-in-Chief",
     "executor": "Maintenance Robot",
-    "incidentKey": "live@2026-09-27T16:00:39.000Z",
+    "incidentKey": "healthy",
     "sourceVersionBound": true,
-    "status": "cooldown",
-    "decision": "WAIT_FOR_COOLDOWN",
-    "attempts": 1,
-    "lastAttemptAt": "2026-09-27T17:21:25.141Z",
-    "nextEligibleAt": "2026-09-27T17:46:25.141Z",
+    "status": "resolved",
+    "decision": "NO_REPAIR_REQUIRED",
+    "attempts": 0,
+    "lastAttemptAt": null,
+    "nextEligibleAt": null,
     "cooldownMinutes": 25,
     "terminalRepairBudget": false,
     "currentOnlyCoreRepair": true,
@@ -63,8 +63,8 @@
   },
   "robot": {
     "current": true,
-    "runId": 36336633794,
-    "event": "workflow_dispatch",
+    "runId": 36338325013,
+    "event": "schedule",
     "role": "editor-in-chief-orchestrator",
     "executor": "continuous-maintenance-workers",
     "selfHealingLoop": false
