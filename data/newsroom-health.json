@@ -1,8 +1,8 @@
 {
   "version": 5,
-  "assessedAt": "2026-09-27T20:21:50.464Z",
-  "state": "RED",
-  "summary": "RECOVERY_REQUIRED:stocks",
+  "assessedAt": "2026-09-27T20:25:49.483Z",
+  "state": "GREEN",
+  "summary": "ALL_REQUIRED_NEWS_LAYERS_CURRENT",
   "layers": {
     "daily": {
       "current": true,
@@ -22,10 +22,10 @@
       "lagMinutes": 0
     },
     "stocks": {
-      "current": false,
+      "current": true,
       "upstream": "2026-09-27T18:51:40.299600+00:00",
-      "japanese": "2026-09-26T10:00:18.899171+00:00",
-      "lagMinutes": 1971
+      "japanese": "2026-09-27T18:51:40.299600+00:00",
+      "lagMinutes": 0
     },
     "structural": {
       "current": true,
@@ -35,31 +35,24 @@
   },
   "recovery": {
     "coreRequired": false,
-    "rollingRequired": true,
+    "rollingRequired": false,
     "structuralRequired": false
   },
   "maintenance": {
     "owner": "Editor-in-Chief",
     "executor": "Maintenance Robot",
-    "incidentKey": "stocks@2026-09-27T18:51:40.299Z",
+    "incidentKey": "healthy",
     "sourceVersionBound": true,
-    "status": "repairing",
-    "decision": "AUTHORIZED_BOUNDED_REPAIR",
-    "attempts": 1,
-    "lastAttemptAt": "2026-09-27T20:21:50.464Z",
-    "nextEligibleAt": "2026-09-27T20:46:50.464Z",
+    "status": "resolved",
+    "decision": "NO_REPAIR_REQUIRED",
+    "attempts": 0,
+    "lastAttemptAt": null,
+    "nextEligibleAt": null,
     "cooldownMinutes": 25,
     "terminalRepairBudget": false,
     "currentOnlyCoreRepair": true,
     "archiveBackfillAllowed": false,
-    "results": [
-      {
-        "workflow": "repair-extra-translation-quality.yml",
-        "dispatched": true,
-        "active": false,
-        "runId": null
-      }
-    ]
+    "results": []
   },
   "sourceRead": {
     "mode": "public-raw-retry",
@@ -70,7 +63,7 @@
   },
   "robot": {
     "current": true,
-    "runId": 36347736386,
+    "runId": 36347987050,
     "event": "workflow_dispatch",
     "role": "editor-in-chief-orchestrator",
     "executor": "continuous-maintenance-workers",
