@@ -1,6 +1,6 @@
 {
   "version": 5,
-  "assessedAt": "2026-09-27T01:31:48.354Z",
+  "assessedAt": "2026-09-27T01:32:32.859Z",
   "state": "RED",
   "summary": "RECOVERY_REQUIRED:live",
   "layers": {
@@ -44,10 +44,10 @@
     "incidentKey": "live@2026-09-27T01:00:00.000Z",
     "sourceVersionBound": true,
     "status": "repairing",
-    "decision": "RECOVERY_ALREADY_ACTIVE",
-    "attempts": 0,
-    "lastAttemptAt": null,
-    "nextEligibleAt": null,
+    "decision": "AUTHORIZED_BOUNDED_REPAIR",
+    "attempts": 1,
+    "lastAttemptAt": "2026-09-27T01:32:32.859Z",
+    "nextEligibleAt": "2026-09-27T01:57:32.859Z",
     "cooldownMinutes": 25,
     "terminalRepairBudget": false,
     "currentOnlyCoreRepair": true,
@@ -55,9 +55,9 @@
     "results": [
       {
         "workflow": "sync-japanese-news.yml",
-        "dispatched": false,
-        "active": true,
-        "runId": 36285620797
+        "dispatched": true,
+        "active": false,
+        "runId": null
       }
     ]
   },
@@ -70,7 +70,7 @@
   },
   "robot": {
     "current": true,
-    "runId": 36285800322,
+    "runId": 36285837846,
     "event": "workflow_dispatch",
     "role": "editor-in-chief-orchestrator",
     "executor": "continuous-maintenance-workers",
