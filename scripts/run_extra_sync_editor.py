@@ -310,7 +310,8 @@ def main():
     safe.prune_cache()
 
     latest = snapshot.load_json("latest.json")
-    date = str((latest or {}).get("date") or "")
+    desk_current = snapshot.load_json("desk-latest.json", optional=True)
+    date = str((desk_current or {}).get("date") or (latest or {}).get("date") or "")
     if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", date):
         raise RuntimeError(f"Invalid current snapshot date: {date!r}")
 
