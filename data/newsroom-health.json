@@ -1,8 +1,8 @@
 {
   "version": 6,
-  "assessedAt": "2026-09-28T15:19:11.748Z",
-  "state": "GREEN",
-  "summary": "ALL_REQUIRED_NEWS_LAYERS_AND_DELIVERY_VERIFIED_BY_NAS",
+  "assessedAt": "2026-09-28T15:42:04.829Z",
+  "state": "RED",
+  "summary": "NOT_GREEN:desk",
   "layers": {
     "daily": {
       "current": true,
@@ -16,7 +16,7 @@
       "lagMinutes": 0
     },
     "desk": {
-      "current": true,
+      "current": false,
       "upstream": "2026-09-28T23:00:00+08:00",
       "japanese": "2026-09-28T22:00:00+08:00",
       "lagMinutes": 60
@@ -42,21 +42,21 @@
       ],
       "publicationFingerprint": "2026-09-28|2026-09-28T15:00:00.000Z|2026-09-28T14:00:00.000Z|2026-09-28T09:58:01.264Z",
       "attestedFingerprint": "2026-09-28|2026-09-28T15:00:00.000Z|2026-09-28T14:00:00.000Z|2026-09-28T09:58:01.264Z",
-      "attestedAt": "2026-09-28T15:18:58Z"
+      "attestedAt": "2026-09-28T15:41:53Z"
     }
   },
   "recovery": {
     "coreRequired": false,
-    "rollingRequired": false,
+    "rollingRequired": true,
     "structuralRequired": false
   },
   "maintenance": {
     "owner": "Editor-in-Chief",
     "executor": "Maintenance Robot",
-    "incidentKey": "healthy",
+    "incidentKey": "desk@2026-09-28T15:00:00.000Z",
     "sourceVersionBound": true,
-    "status": "resolved",
-    "decision": "NO_REPAIR_REQUIRED",
+    "status": "awaiting-nas-repair-dispatch",
+    "decision": "NAS_CONTROLLER_MUST_DISPATCH_REPAIR",
     "attempts": 0,
     "lastAttemptAt": null,
     "nextEligibleAt": null,
@@ -75,7 +75,7 @@
   },
   "robot": {
     "current": true,
-    "runId": 36442647980,
+    "runId": 36445553135,
     "event": "workflow_dispatch",
     "role": "nas-attestation-recorder",
     "executor": "github-subordinate-workers",
@@ -85,7 +85,7 @@
     "repairRunningRemainsRed": true,
     "missingHealthFailsClosed": true,
     "liveToleranceMinutes": 1,
-    "rollingToleranceMinutes": 60,
+    "rollingToleranceMinutes": 1,
     "healthHeartbeatMinutes": 30,
     "recoveryCooldownMinutes": 25,
     "sourceVersionBoundIncidents": true,
