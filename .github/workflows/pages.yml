@@ -2,9 +2,10 @@ name: 日本語版 Pages 公開・広東語版レイアウト同期
 run-name: 編集品質ゲート・Pages公開 @ ${{ github.sha }}
 
 on:
-  push:
-    branches: ["main"]
   workflow_dispatch:
+  workflow_run:
+    workflows: ["F3ニュース読み再生成"]
+    types: [completed]
 
 permissions:
   contents: read
@@ -17,6 +18,7 @@ concurrency:
 
 jobs:
   deploy:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -90,14 +92,14 @@ jobs:
         run: |
           echo 'EXTRA_LAYER_QUARANTINED: invalid rolling stories are suppressed by topic-ja-rolling.js / stocks-ja.js; core Pages deployment continues.'
 
-      - name: 非同期音声対応の公開準備ハードゲート
+      - name: F3音声完了ハードゲート
         id: data_health
         shell: bash
         run: |
           set -euo pipefail
-          python scripts/validate_publication_readiness.py
+          python scripts/validate_site.py --data-only
           echo 'clean=true' >> "$GITHUB_OUTPUT"
-          echo 'PUBLICATION_READINESS_GATE_OK'
+          echo 'F3_AUDIO_AND_PUBLICATION_GATE_OK'
 
       - name: Pagesを設定
         uses: actions/configure-pages@v5

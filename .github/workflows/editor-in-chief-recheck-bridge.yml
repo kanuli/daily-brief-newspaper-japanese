@@ -2,12 +2,6 @@ name: Editor-in-Chief Recovery Recheck Bridge
 
 on:
   workflow_dispatch:
-  workflow_run:
-    workflows:
-      - '日本語ニュース同期・品質ゲート・Discord配信'
-      - '日本語ローリング翻訳品質修復'
-      - 'Japanese Site Auto Maintenance'
-    types: [completed]
 
 permissions:
   actions: write

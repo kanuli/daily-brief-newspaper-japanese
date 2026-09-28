@@ -2,14 +2,6 @@ name: Closed-loop News Recovery Controller
 
 on:
   workflow_dispatch:
-  push:
-    branches: ["main"]
-    paths:
-      - '.github/workflows/maintenance-recovery-controller.yml'
-      - 'scripts/self_healing_runtime.py'
-      - '.github/workflows/repair-extra-translation-quality.yml'
-  schedule:
-    - cron: '3,13,23,33,43,53 * * * *'
 
 permissions:
   actions: write

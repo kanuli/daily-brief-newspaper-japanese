@@ -2,18 +2,6 @@ name: 日本語カテゴリーページ鮮度ウォッチドッグ
 
 on:
   workflow_dispatch:
-  push:
-    branches: ["main"]
-    paths:
-      - '.github/workflows/category-page-health-watchdog.yml'
-      - 'archive.html'
-      - 'assets/js/topic-ja-rolling.js'
-      - 'assets/js/stocks-ja.js'
-      - 'scripts/run_extra_sync_editor.py'
-      - 'scripts/remote_repair_all_published_quality.py'
-  schedule:
-    # Rolling guaranteed edition starts at :45; verify it before the next core cycle.
-    - cron: '10 * * * *'
 
 permissions:
   actions: write

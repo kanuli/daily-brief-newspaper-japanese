@@ -2,37 +2,18 @@ name: Editor-in-Chief Newsroom Robot
 
 on:
   workflow_dispatch:
-  push:
-    branches: ["main"]
-    paths:
-      - 'data/latest.json'
-      - 'data/live.json'
-      - 'data/desk-latest.json'
-      - 'data/stocks-latest.json'
-      - 'index.html'
-      - 'live.html'
-      - 'world.html'
-      - 'asia.html'
-      - 'hong-kong.html'
-      - 'japan.html'
-      - 'finance.html'
-      - 'technology.html'
-      - 'manga-anime.html'
-      - 'manchester-united.html'
-      - 'football.html'
-      - 'stocks.html'
-      - 'archive.html'
-      - 'assets/js/home-current-ja.js'
-      - 'assets/js/topic-ja-rolling.js'
-      - 'assets/js/stocks-ja.js'
-      - 'assets/js/system-ja.js'
-      - '.github/workflows/editor-in-chief-newsroom-robot.yml'
-      - '.github/workflows/editor-in-chief-recheck-bridge.yml'
-  schedule:
-    - cron: '5,20,35,50 * * * *'
+    inputs:
+      nas_verified_fingerprint:
+        description: 'Publication fingerprint verified by NAS after F3 and Pages checks'
+        required: false
+        type: string
+      nas_verified_at:
+        description: 'UTC ISO timestamp of the NAS verification'
+        required: false
+        type: string
 
 permissions:
-  actions: write
+  actions: read
   contents: write
 
 concurrency:
@@ -56,6 +37,9 @@ jobs:
             const HEALTH_PATH = 'data/newsroom-health.json';
             const COOLDOWN_MS = 25 * MINUTE;
             const HEARTBEAT_MS = 30 * MINUTE;
+            const NAS_ATTESTATION_MAX_AGE_MS = 30 * MINUTE;
+            const nasVerifiedFingerprint = String(context.payload.inputs?.nas_verified_fingerprint || '');
+            const nasVerifiedAt = String(context.payload.inputs?.nas_verified_at || '');
             const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
             async function localEntry(path) {
@@ -264,6 +248,30 @@ jobs:
               },
             };
 
+            const publicationFingerprint = [
+              localDailyDay || 'missing',
+              sourceVersion('live', localLive),
+              sourceVersion('desk', localDesk),
+              sourceVersion('stocks', localStocks),
+            ].join('|');
+            const nasVerifiedAtMs = Date.parse(nasVerifiedAt);
+            const nasDeliveryCurrent = Boolean(
+              nasVerifiedFingerprint &&
+              nasVerifiedFingerprint === publicationFingerprint &&
+              Number.isFinite(nasVerifiedAtMs) &&
+              Date.now() - nasVerifiedAtMs >= 0 &&
+              Date.now() - nasVerifiedAtMs <= NAS_ATTESTATION_MAX_AGE_MS
+            );
+            layers.delivery = {
+              current: nasDeliveryCurrent,
+              required: true,
+              owner: 'NAS Editor-in-Chief',
+              verifies: ['github-f3', 'github-pages'],
+              publicationFingerprint,
+              attestedFingerprint: nasVerifiedFingerprint || null,
+              attestedAt: nasVerifiedAt || null,
+            };
+
             const recovery = {
               coreRequired: sourceReadable && (!dailyCurrent || !liveCurrent),
               rollingRequired: sourceReadable && (!deskCurrent || !stocksCurrent),
@@ -276,6 +284,7 @@ jobs:
             if (sourceReadable && !deskCurrent) stale.push('desk');
             if (sourceReadable && !stocksCurrent) stale.push('stocks');
             if (!structuralCurrent) stale.push('structural');
+            if (!nasDeliveryCurrent) stale.push('nas-delivery-verification');
 
             const incidentParts = [];
             if (!sourceReadable) incidentParts.push(`source-read:${sourceReadFailures.join('+')}`);
@@ -284,6 +293,7 @@ jobs:
             if (sourceReadable && !deskCurrent) incidentParts.push(`desk@${sourceVersion('desk', sourceDesk)}`);
             if (sourceReadable && !stocksCurrent) incidentParts.push(`stocks@${sourceVersion('stocks', sourceStocks)}`);
             if (!structuralCurrent) incidentParts.push(`structural@${[...structuralDefects].sort().join(',')}`);
+            if (!nasDeliveryCurrent) incidentParts.push(`nas-delivery@${publicationFingerprint}`);
             const incidentKey = incidentParts.join('|') || 'healthy';
 
             const state = sourceReadable && stale.length === 0 ? 'GREEN' : 'RED';
@@ -305,48 +315,12 @@ jobs:
               attempts = 0;
               lastAttemptAt = null;
             } else if (state === 'RED') {
-              const cooldown = Number.isFinite(lastAttemptMs) && Date.now() - lastAttemptMs < COOLDOWN_MS;
-              if (cooldown) {
-                status = attempts >= 2 ? 'escalated-cooldown' : 'cooldown';
-                decision = attempts >= 2 ? 'ESCALATED_RETRY_WAIT' : 'WAIT_FOR_COOLDOWN';
-                nextEligibleAt = new Date(lastAttemptMs + COOLDOWN_MS).toISOString();
-              } else {
-                if (recovery.coreRequired) {
-                  results.push(await dispatch(
-                    'sync-japanese-news.yml',
-                    `incident=${incidentKey}; current-only=true; archive-backfill=false`
-                  ));
-                }
-                if (recovery.rollingRequired) {
-                  results.push(await dispatch(
-                    'repair-extra-translation-quality.yml',
-                    `incident=${incidentKey}`
-                  ));
-                }
-                if (recovery.structuralRequired) {
-                  results.push(await dispatch(
-                    'auto-maintenance.yml',
-                    `incident=${incidentKey}; structural-only=true`
-                  ));
-                }
-
-                const dispatched = results.some((result) => result.dispatched);
-                const alreadyActive = results.some((result) => result.active);
-                if (dispatched) {
-                  attempts += 1;
-                  lastAttemptAt = new Date().toISOString();
-                  lastAttemptMs = Date.parse(lastAttemptAt);
-                  nextEligibleAt = new Date(lastAttemptMs + COOLDOWN_MS).toISOString();
-                  status = attempts >= 2 ? 'escalated-retrying' : 'repairing';
-                  decision = attempts >= 2 ? 'ESCALATED_RETRY_AUTHORIZED' : 'AUTHORIZED_BOUNDED_REPAIR';
-                } else if (alreadyActive) {
-                  status = attempts >= 2 ? 'escalated-retrying' : 'repairing';
-                  decision = 'RECOVERY_ALREADY_ACTIVE';
-                } else {
-                  status = 'observed';
-                  decision = 'NO_DISPATCH_AVAILABLE';
-                }
-              }
+              status = recovery.coreRequired || recovery.rollingRequired || recovery.structuralRequired
+                ? 'awaiting-nas-repair-dispatch'
+                : 'awaiting-nas-delivery-verification';
+              decision = recovery.coreRequired || recovery.rollingRequired || recovery.structuralRequired
+                ? 'NAS_CONTROLLER_MUST_DISPATCH_REPAIR'
+                : 'NAS_CONTROLLER_MUST_VERIFY_F3_AND_PAGES';
             }
 
             const maintenance = {
@@ -367,14 +341,14 @@ jobs:
             };
 
             const health = {
-              version: 5,
+              version: 6,
               assessedAt: new Date().toISOString(),
               state,
               summary: state === 'GREEN'
-                ? 'ALL_REQUIRED_NEWS_LAYERS_CURRENT'
+                ? 'ALL_REQUIRED_NEWS_LAYERS_AND_DELIVERY_VERIFIED_BY_NAS'
                 : !sourceReadable
                   ? `SOURCE_READ_DEGRADED:${sourceReadFailures.join(',')}`
-                  : `RECOVERY_REQUIRED:${stale.join(',')}`,
+                  : `NOT_GREEN:${stale.join(',')}`,
               layers,
               recovery,
               maintenance,
@@ -389,8 +363,8 @@ jobs:
                 current: true,
                 runId: context.runId,
                 event: context.eventName,
-                role: 'editor-in-chief-orchestrator',
-                executor: 'continuous-maintenance-workers',
+                role: 'nas-attestation-recorder',
+                executor: 'github-subordinate-workers',
                 selfHealingLoop: false,
               },
               policy: {
@@ -407,6 +381,7 @@ jobs:
                 archiveBackfillAllowed: false,
                 recoveryCompletionAlwaysRechecked: true,
                 upstreamReadFailureDoesNotAuthorizeMutation: true,
+                greenRequiresFreshNasDeliveryAttestation: true,
               },
             };
 
@@ -461,28 +436,7 @@ jobs:
             const healthCommit = await publishHealth(health);
             core.setOutput('assessment_complete', 'true');
 
-            if (state === 'GREEN') {
-              const branch = await github.rest.repos.getBranch({ owner, repo, branch: 'main' });
-              const mainSha = branch.data.commit.sha;
-              const pageRuns = await github.rest.actions.listWorkflowRuns({
-                owner,
-                repo,
-                workflow_id: 'pages.yml',
-                branch: 'main',
-                per_page: 20,
-              });
-              const activePages = pageRuns.data.workflow_runs.find((run) => run.status !== 'completed');
-              const latestSuccess = pageRuns.data.workflow_runs.find((run) => run.conclusion === 'success');
-              if (!activePages && (!latestSuccess || latestSuccess.head_sha !== mainSha)) {
-                await github.rest.actions.createWorkflowDispatch({
-                  owner,
-                  repo,
-                  workflow_id: 'pages.yml',
-                  ref: 'main',
-                });
-                core.warning(`EDITOR_PAGES_DISPATCH main=${mainSha} healthCommit=${healthCommit || 'none'}`);
-              }
-            }
+            if (state === 'GREEN') core.info('NAS_DELIVERY_ATTESTATION_ACCEPTED');
 
             await core.summary
               .addHeading('Editor-in-Chief automatic maintenance')
@@ -504,7 +458,7 @@ jobs:
                 core.setFailed(`EDITOR_IN_CHIEF_RED ${health.summary}; maintenance=${status}; incident=${incidentKey}`);
               }
             } else {
-              core.info('EDITOR_IN_CHIEF_GREEN all required newsroom layers current');
+              core.info('EDITOR_IN_CHIEF_GREEN content, GitHub F3 and GitHub Pages verified by NAS');
             }
 
       - name: Publish fail-closed health if patrol crashes before assessment
@@ -525,7 +479,7 @@ jobs:
             } catch (_) {}
 
             const fallback = {
-              version: 5,
+              version: 6,
               assessedAt: new Date().toISOString(),
               state: 'RED',
               summary: 'EDITOR_ORCHESTRATOR_FAILED_BEFORE_ASSESSMENT',

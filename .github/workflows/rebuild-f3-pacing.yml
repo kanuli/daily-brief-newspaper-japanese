@@ -7,20 +7,6 @@ on:
       - '日本語ニュース同期・品質ゲート・Discord配信'
       - 'Maintenance Robot — 日本語ローリング翻訳品質修復'
     types: [completed]
-  schedule:
-    # Safety net: if an upstream workflow_run event is ever missed, make sure
-    # stale F3 audio is revisited every hour after the Japanese xx:15 cycle.
-    - cron: '35 * * * *'
-  push:
-    branches: [main]
-    paths:
-      - 'scripts/generate_supertonic_f3.py'
-      - 'scripts/generate_supertonic_f3_chunked.py'
-      - 'scripts/generate_supertonic_f3_rolling.py'
-      - 'scripts/generate_supertonic_f3_rolling_chunked.py'
-      - 'scripts/validate_site.py'
-      - 'scripts/validate_content_integrity.py'
-      - '.github/workflows/rebuild-f3-pacing.yml'
 
 permissions:
   contents: write
@@ -36,7 +22,7 @@ concurrency:
 jobs:
   rebuild:
     # A failed upstream sync must not synthesize a rejected/partial publication.
-    # Manual, schedule and direct F3-code pushes remain eligible immediately.
+    # Manual NAS recovery dispatches remain eligible immediately.
     if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 45
