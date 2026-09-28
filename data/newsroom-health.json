@@ -1,6 +1,6 @@
 {
   "version": 5,
-  "assessedAt": "2026-09-28T06:54:23.590Z",
+  "assessedAt": "2026-09-28T07:11:39.018Z",
   "state": "RED",
   "summary": "RECOVERY_REQUIRED:desk",
   "layers": {
@@ -11,15 +11,15 @@
     },
     "live": {
       "current": true,
-      "upstream": "2026-09-28T14:00:00+08:00",
-      "japanese": "2026-09-28T14:00:00+08:00",
+      "upstream": "2026-09-28T15:00:00+08:00",
+      "japanese": "2026-09-28T15:00:00+08:00",
       "lagMinutes": 0
     },
     "desk": {
       "current": false,
-      "upstream": "2026-09-28T14:00:00+08:00",
+      "upstream": "2026-09-28T15:00:00+08:00",
       "japanese": "2026-09-28T12:00:00+08:00",
-      "lagMinutes": 120
+      "lagMinutes": 180
     },
     "stocks": {
       "current": true,
@@ -41,18 +41,25 @@
   "maintenance": {
     "owner": "Editor-in-Chief",
     "executor": "Maintenance Robot",
-    "incidentKey": "desk@2026-09-28T06:00:00.000Z",
+    "incidentKey": "desk@2026-09-28T07:00:00.000Z",
     "sourceVersionBound": true,
-    "status": "cooldown",
-    "decision": "WAIT_FOR_COOLDOWN",
+    "status": "repairing",
+    "decision": "AUTHORIZED_BOUNDED_REPAIR",
     "attempts": 1,
-    "lastAttemptAt": "2026-09-28T06:53:33.003Z",
-    "nextEligibleAt": "2026-09-28T07:18:33.003Z",
+    "lastAttemptAt": "2026-09-28T07:11:39.018Z",
+    "nextEligibleAt": "2026-09-28T07:36:39.018Z",
     "cooldownMinutes": 25,
     "terminalRepairBudget": false,
     "currentOnlyCoreRepair": true,
     "archiveBackfillAllowed": false,
-    "results": []
+    "results": [
+      {
+        "workflow": "repair-extra-translation-quality.yml",
+        "dispatched": true,
+        "active": false,
+        "runId": null
+      }
+    ]
   },
   "sourceRead": {
     "mode": "public-raw-retry",
@@ -63,7 +70,7 @@
   },
   "robot": {
     "current": true,
-    "runId": 36388786427,
+    "runId": 36390301253,
     "event": "workflow_dispatch",
     "role": "editor-in-chief-orchestrator",
     "executor": "continuous-maintenance-workers",
