@@ -1,0 +1,400 @@
+{
+  "version": 3,
+  "duration": 206.707,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 624,
+  "charactersPerMinute": 181.1,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.168,
+      "text": "大埔火災の被害を受けた人々への信用救済がさらに6か月延長、28の小売銀行が参加"
+    },
+    {
+      "key": "dek",
+      "start": 14.168,
+      "end": 41.825,
+      "text": "香港金融管理局と銀行協会は、大埔火災の被害を受けた人々に対する住宅ローン、個人ローン、クレジットカードローンの返済猶予期間を2027年5月末まで6か月延長すると発表した。"
+    },
+    {
+      "key": "body-0",
+      "start": 41.825,
+      "end": 89.63,
+      "text": "香港金融管理局と香港銀行協会は9月28日、大埔火災の影響を受けた一部の人々が住宅や金融の手配にまだ時間を必要としているため、28の小売銀行が既存の住宅ローン、個人ローン、クレジットカードローンの元本と利息を対象とした返済猶予期間を2027年5月末までさらに6か月間延長すると発表した。"
+    },
+    {
+      "key": "body-1",
+      "start": 89.63,
+      "end": 144.921,
+      "text": "王福裁判所の関連抵当銀行もまた、個々の状況に基づいて元のローンを柔軟に処理したり、新しく購入したユニットが入居できるようになるまで猶予期間を延長したりするなど、抵当権設定者と借り手が特別行政区政府に不動産権を売却する際の支援を継続する。この措置の焦点は、領土全体の一般的なローン免除ではなく、移転期間中の影響を受ける家族に対する短期的な資金繰りの圧力を軽減することにある。"
+    },
+    {
+      "key": "why",
+      "start": 144.921,
+      "end": 179.119,
+      "text": "猶予期間の延長は、被災した借り手の短期返済負担や住宅移行の取り決めに直接影響を与えるほか、災害後のリセット期間が当初の予想より長くなる可能性があるという事実に対する銀行業界の対応も反映している。"
+    },
+    {
+      "key": "watch",
+      "start": 179.119,
+      "end": 206.707,
+      "text": "影響を受けた住民の所有権の売却と新しい住宅の購入の進捗状況、銀行事件の処理手配、そして政府がさらなる長期移住や財政支援策を発表するかどうかに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 9.406,
+      "end": 9.636,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "大埔火災の被害を受けた人々への信用救済がさらに6か月延長、"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.636,
+      "speechEnd": 13.467,
+      "end": 14.168,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "28の小売銀行が参加。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.168,
+      "speechEnd": 18.766,
+      "end": 18.996,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "香港金融管理局と銀行協会は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.996,
+      "speechEnd": 25.684,
+      "end": 25.914,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "大埔火災の被害を受けた人々に対する住宅ローン、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.914,
+      "speechEnd": 28.074,
+      "end": 28.304,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "個人ローン、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 28.304,
+      "speechEnd": 33.181,
+      "end": 33.461,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "クレジットカードローンの返済猶予期間を"
+    },
+    {
+      "parentKey": "dek",
+      "start": 33.461,
+      "speechEnd": 41.125,
+      "end": 41.825,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "2027年5月末まで6か月延長すると発表した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.825,
+      "speechEnd": 49.976,
+      "end": 50.206,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "香港金融管理局と香港銀行協会は9月28日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.206,
+      "speechEnd": 55.292,
+      "end": 55.572,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "大埔火災の影響を受けた一部の人々が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.572,
+      "speechEnd": 62.4,
+      "end": 62.63,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "住宅や金融の手配にまだ時間を必要としているため、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.63,
+      "speechEnd": 68.134,
+      "end": 68.364,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "28の小売銀行が既存の住宅ローン、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.364,
+      "speechEnd": 70.524,
+      "end": 70.754,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "個人ローン、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.754,
+      "speechEnd": 75.492,
+      "end": 75.772,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "クレジットカードローンの元本と利息を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.772,
+      "speechEnd": 79.325,
+      "end": 79.465,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "対象とした返済猶予期間を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 79.465,
+      "speechEnd": 82.809,
+      "end": 82.949,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "2027年5月"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 82.949,
+      "speechEnd": 89.01,
+      "end": 89.63,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "末までさらに6か月間延長すると発表した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 89.63,
+      "speechEnd": 94.577,
+      "end": 94.807,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "王福裁判所の関連抵当銀行もまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.807,
+      "speechEnd": 101.844,
+      "end": 102.074,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "個々の状況に基づいて元のローンを柔軟に処理したり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.074,
+      "speechEnd": 112.176,
+      "end": 112.406,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "新しく購入したユニットが入居できるようになるまで猶予期間を延長したりするなど、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.406,
+      "speechEnd": 119.652,
+      "end": 119.932,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "抵当権設定者と借り手が特別行政区政府に不動産権を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 119.932,
+      "speechEnd": 123.624,
+      "end": 124.125,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "売却する際の支援を継続する。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 124.125,
+      "speechEnd": 127.19,
+      "end": 127.42,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この措置の焦点は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 127.42,
+      "speechEnd": 133.063,
+      "end": 133.293,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "領土全体の一般的なローン免除ではなく、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 133.293,
+      "speechEnd": 144.301,
+      "end": 144.921,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "移転期間中の影響を受ける家族に対する短期的な資金繰りの圧力を軽減することにある。"
+    },
+    {
+      "parentKey": "why",
+      "start": 144.921,
+      "speechEnd": 148.893,
+      "end": 149.393,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 149.393,
+      "speechEnd": 152.598,
+      "end": 152.828,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "猶予期間の延長は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 152.828,
+      "speechEnd": 163.139,
+      "end": 163.369,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "被災した借り手の短期返済負担や住宅移行の取り決めに直接影響を与えるほか、"
+    },
+    {
+      "parentKey": "why",
+      "start": 163.369,
+      "speechEnd": 171.033,
+      "end": 171.313,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "災害後のリセット期間が当初の予想より長くなる可能性が"
+    },
+    {
+      "parentKey": "why",
+      "start": 171.313,
+      "speechEnd": 178.419,
+      "end": 179.119,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "あるという事実に対する銀行業界の対応も反映している。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 179.119,
+      "speechEnd": 181.209,
+      "end": 181.439,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 181.439,
+      "speechEnd": 190.427,
+      "end": 190.657,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "影響を受けた住民の所有権の売却と新しい住宅の購入の進捗状況、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 190.657,
+      "speechEnd": 193.931,
+      "end": 194.161,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "銀行事件の処理手配、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 194.161,
+      "speechEnd": 200.989,
+      "end": 201.269,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "そして政府がさらなる長期移住や財政支援策を"
+    },
+    {
+      "parentKey": "watch",
+      "start": 201.269,
+      "speechEnd": 206.007,
+      "end": 206.707,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "発表するかどうかに注目してください。"
+    }
+  ]
+}
