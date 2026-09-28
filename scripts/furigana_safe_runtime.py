@@ -22,6 +22,7 @@ except Exception:
     sudachi_tokenizer = None
 
 _RT_RE = re.compile(r"<rt>.*?</rt>")
+_HAN_RE = re.compile(r"[\u3400-\u9fff]")
 _PAST_AFTER_RE = re.compile(r"(?<=た)<ruby>後<rt>[^<]+</rt></ruby>")
 _ONE_DAY_LESS_RE = re.compile(
     r"(?:1<ruby>日<rt>[^<]+</rt></ruby>|<ruby>1日<rt>[^<]+</rt></ruby>)"
@@ -127,8 +128,11 @@ def _contextualize(source: str, rendered: str) -> str:
 
 def _validated(source: str, rendered: str, label: str) -> str | None:
     value = _contextualize(source, rendered)
-    if visible_text(value) == source:
+    if visible_text(value) == source and not (_HAN_RE.search(source) and "<ruby>" not in value):
         return value
+    if _HAN_RE.search(source) and "<ruby>" not in value:
+        print(f"FURIGANA_{label}_MISSING_RUBY", source[:100])
+        return None
     print(f"FURIGANA_{label}_VISIBLE_TEXT_MISMATCH", source[:100])
     return None
 

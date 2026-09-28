@@ -195,8 +195,13 @@ def repair_file(name: str, source) -> int:
             local_story.pop("furigana", None)
 
     rebuild = repaired > 0 or decorations_need_rebuild(name, local)
+    metadata_changed = (
+        local.get("furiganaEngineVersion") != furigana_safe_runtime.engine_name()
+        or int(local.get("newsroomQualityVersion") or 0) < 1
+    )
     if rebuild:
         local = rebuild_decorations(name, local)
+    if rebuild or metadata_changed:
         local["furiganaEngineVersion"] = furigana_safe_runtime.engine_name()
         local["newsroomQualityVersion"] = 1
         path.write_text(
