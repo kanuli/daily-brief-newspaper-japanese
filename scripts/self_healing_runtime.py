@@ -19,6 +19,7 @@ import json
 from collections import defaultdict
 
 import fast_safe_sync as fast
+import furigana_safe_runtime
 import sync_and_translate as base
 
 _DEFERRED = defaultdict(set)
@@ -74,14 +75,14 @@ def _minimum_current_story(name, source_item, reason):
     if name == "live.json":
         value["title"] = "速報：最新の確認済みニュース"
         value["summary"] = (
-            f"{source_name}を出典として最新情報を確認しました。"
+            "記事に記載した出典で最新情報を確認しました。"
             "翻訳サービスの一時的な制限中のため、確認済み項目を先行掲載しています。"
             "詳細な日本語本文は自動復旧処理で更新します。"
         )
     else:
         value["title"] = "最新ニュース：確認済み情報"
         value["summary"] = (
-            f"{source_name}を出典としてこのニュースを確認しました。"
+            "記事に記載した出典でこのニュースを確認しました。"
             "翻訳サービスの一時的な制限中のため、確認済み項目を先行掲載しています。"
             "詳細な日本語本文は自動復旧処理で更新します。"
         )
@@ -398,6 +399,8 @@ def resilient_incremental_main():
             translated["sourceFile"] = name
             translated["sourceFingerprint"] = fingerprint
             translated["translationSchemaVersion"] = base.TRANSLATION_SCHEMA
+            translated["furiganaEngineVersion"] = furigana_safe_runtime.engine_name()
+            translated["newsroomQualityVersion"] = 1
         (base.OUT / name).write_text(
             json.dumps(translated, ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8",
