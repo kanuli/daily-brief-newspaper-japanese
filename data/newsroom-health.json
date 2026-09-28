@@ -1,8 +1,8 @@
 {
   "version": 6,
-  "assessedAt": "2026-09-28T15:53:38.818Z",
-  "state": "RED",
-  "summary": "NOT_GREEN:desk",
+  "assessedAt": "2026-09-28T16:32:49.680Z",
+  "state": "GREEN",
+  "summary": "ALL_REQUIRED_NEWS_LAYERS_AND_DELIVERY_VERIFIED_BY_NAS",
   "layers": {
     "daily": {
       "current": true,
@@ -11,15 +11,15 @@
     },
     "live": {
       "current": true,
-      "upstream": "2026-09-28T23:00:00+08:00",
-      "japanese": "2026-09-28T23:00:00+08:00",
+      "upstream": "2026-09-29T00:03:58+08:00",
+      "japanese": "2026-09-29T00:03:58+08:00",
       "lagMinutes": 0
     },
     "desk": {
-      "current": false,
-      "upstream": "2026-09-28T23:00:00+08:00",
-      "japanese": "2026-09-28T22:00:00+08:00",
-      "lagMinutes": 60
+      "current": true,
+      "upstream": "2026-09-29T00:03:58+08:00",
+      "japanese": "2026-09-29T00:03:58+08:00",
+      "lagMinutes": 0
     },
     "stocks": {
       "current": true,
@@ -40,23 +40,23 @@
         "github-f3",
         "github-pages"
       ],
-      "publicationFingerprint": "2026-09-28|2026-09-28T15:00:00.000Z|2026-09-28T14:00:00.000Z|2026-09-28T09:58:01.264Z",
-      "attestedFingerprint": "2026-09-28|2026-09-28T15:00:00.000Z|2026-09-28T14:00:00.000Z|2026-09-28T09:58:01.264Z",
-      "attestedAt": "2026-09-28T15:53:24Z"
+      "publicationFingerprint": "2026-09-28|2026-09-28T16:03:58.000Z|2026-09-28T16:03:58.000Z|2026-09-28T09:58:01.264Z",
+      "attestedFingerprint": "2026-09-28|2026-09-28T16:03:58.000Z|2026-09-28T16:03:58.000Z|2026-09-28T09:58:01.264Z",
+      "attestedAt": "2026-09-28T16:32:35Z"
     }
   },
   "recovery": {
     "coreRequired": false,
-    "rollingRequired": true,
+    "rollingRequired": false,
     "structuralRequired": false
   },
   "maintenance": {
     "owner": "Editor-in-Chief",
     "executor": "Maintenance Robot",
-    "incidentKey": "desk@2026-09-28T15:00:00.000Z",
+    "incidentKey": "healthy",
     "sourceVersionBound": true,
-    "status": "awaiting-nas-repair-dispatch",
-    "decision": "NAS_CONTROLLER_MUST_DISPATCH_REPAIR",
+    "status": "resolved",
+    "decision": "NO_REPAIR_REQUIRED",
     "attempts": 0,
     "lastAttemptAt": null,
     "nextEligibleAt": null,
@@ -75,7 +75,7 @@
   },
   "robot": {
     "current": true,
-    "runId": 36447003958,
+    "runId": 36451798437,
     "event": "workflow_dispatch",
     "role": "nas-attestation-recorder",
     "executor": "github-subordinate-workers",
