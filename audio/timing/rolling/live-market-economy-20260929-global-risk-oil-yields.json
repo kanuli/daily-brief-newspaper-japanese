@@ -1,0 +1,450 @@
+{
+  "version": 3,
+  "duration": 197.251,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 581,
+  "charactersPerMinute": 176.7,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.722,
+      "text": "原油価格が再び上昇し、世界的なリスク選好度が低下。米債券金利上昇、ハイテク株が圧迫"
+    },
+    {
+      "key": "dek",
+      "start": 14.722,
+      "end": 42.184,
+      "text": "ブレント期間中に原油価格が1バレル当たり107ドルを超えたため、米国とイランの交渉に突破口はありませんでした。高い原油価格と金利はインフレと金利リスクを再活性化させました。"
+    },
+    {
+      "key": "body-0",
+      "start": 42.184,
+      "end": 93.573,
+      "text": "ロイター通信は9月28日、米国とイランの交渉は行き詰まりのままであり、ブレント原油は一時107.16ドル/バレルに上昇し、9月には累計で20 ％近く増加したと報じた。原油価格の上昇は、インフレの粘着性と中央銀行の引き締めに対する懸念を再び高め、米国30年国債利回りは2004年の高値付近まで上昇した。"
+    },
+    {
+      "key": "body-1",
+      "start": 93.573,
+      "end": 140.412,
+      "text": "リスク資産はプレッシャーにさらされており、中国のブルーチップは1年ぶりの低水準まで下落し、米国の株式先物も下落し、テクノロジー株は高金利に特に敏感だった。市場の次のステップは、金利圧力がさらに長引くかどうかを判断するために、今週の米国とイランの交渉、エネルギー供給、米国の雇用とインフレに関するデータに焦点を当てます。"
+    },
+    {
+      "key": "why",
+      "start": 140.412,
+      "end": 171.648,
+      "text": "原油価格が長期にわたって高止まりすれば、燃料費や輸送費を通じてインフレが再び押し上げられ、中央銀行のさらなる引き締め政策のリスクが高まり、価値の高い資産が下落する可能性がある。"
+    },
+    {
+      "key": "watch",
+      "start": 171.648,
+      "end": 197.251,
+      "text": "今週は、米国とイランの交渉の進展、ホルムズ海峡の輸送、ブレント原油価格と米国債利回り、さらに米雇用統計が金利期待に与える影響に注目してほしい。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.693,
+      "end": 3.973,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "原油価格が再び上昇し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.973,
+      "speechEnd": 8.084,
+      "end": 8.704,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "世界的なリスク選好度が低下。"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.704,
+      "speechEnd": 11.212,
+      "end": 11.492,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米債券金利上昇、"
+    },
+    {
+      "parentKey": "title",
+      "start": 11.492,
+      "speechEnd": 13.861,
+      "end": 14.722,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ハイテク株が圧迫。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.722,
+      "speechEnd": 18.902,
+      "end": 19.242,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ブレント期間中に原油価格が"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.242,
+      "speechEnd": 25.234,
+      "end": 25.515,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "1バレル当たり107ドルを超えたため、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.515,
+      "speechEnd": 32.343,
+      "end": 32.963,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "米国とイランの交渉に突破口はありませんでした。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.963,
+      "speechEnd": 41.324,
+      "end": 42.184,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "高い原油価格と金利はインフレと金利リスクを再活性化させました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.184,
+      "speechEnd": 46.922,
+      "end": 47.202,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信は9月28日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.202,
+      "speechEnd": 52.916,
+      "end": 53.196,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国とイランの交渉は行き詰まりのままであり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.196,
+      "speechEnd": 56.401,
+      "end": 56.581,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "ブレント原油は一時"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.581,
+      "speechEnd": 59.995,
+      "end": 60.175,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "107.16ドル"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.175,
+      "speechEnd": 62.823,
+      "end": 63.103,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "/バレルに上昇し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.103,
+      "speechEnd": 69.862,
+      "end": 70.482,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "9月には累計で20 ％近く増加したと報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.482,
+      "speechEnd": 73.617,
+      "end": 73.897,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "原油価格の上昇は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.897,
+      "speechEnd": 82.398,
+      "end": 82.678,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インフレの粘着性と中央銀行の引き締めに対する懸念を再び高め、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 82.678,
+      "speechEnd": 86.441,
+      "end": 86.621,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "米国30年国債利回りは"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 86.621,
+      "speechEnd": 89.129,
+      "end": 89.309,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "2004年"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 89.309,
+      "speechEnd": 92.793,
+      "end": 93.573,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "の高値付近まで上昇した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.573,
+      "speechEnd": 98.241,
+      "end": 98.521,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "リスク資産はプレッシャーにさらされており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 98.521,
+      "speechEnd": 105.559,
+      "end": 105.839,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "中国のブルーチップは1年ぶりの低水準まで下落し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 105.839,
+      "speechEnd": 110.298,
+      "end": 110.578,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国の株式先物も下落し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 110.578,
+      "speechEnd": 115.665,
+      "end": 116.285,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "テクノロジー株は高金利に特に敏感だった。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 116.285,
+      "speechEnd": 119.351,
+      "end": 119.631,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "市場の次のステップは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 119.631,
+      "speechEnd": 126.25,
+      "end": 126.53,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "金利圧力がさらに長引くかどうかを判断するために、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 126.53,
+      "speechEnd": 130.083,
+      "end": 130.364,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今週の米国とイランの交渉、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 130.364,
+      "speechEnd": 132.802,
+      "end": 133.082,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "エネルギー供給、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 133.082,
+      "speechEnd": 139.632,
+      "end": 140.412,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "米国の雇用とインフレに関するデータに焦点を当てます。"
+    },
+    {
+      "parentKey": "why",
+      "start": 140.412,
+      "speechEnd": 144.384,
+      "end": 145.004,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 145.004,
+      "speechEnd": 150.996,
+      "end": 151.276,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "原油価格が長期にわたって高止まりすれば、"
+    },
+    {
+      "parentKey": "why",
+      "start": 151.276,
+      "speechEnd": 158.313,
+      "end": 158.593,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "燃料費や輸送費を通じてインフレが再び押し上げられ、"
+    },
+    {
+      "parentKey": "why",
+      "start": 158.593,
+      "speechEnd": 165.213,
+      "end": 165.493,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "中央銀行のさらなる引き締め政策のリスクが高まり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 165.493,
+      "speechEnd": 170.788,
+      "end": 171.648,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "価値の高い資産が下落する可能性がある。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 171.648,
+      "speechEnd": 173.739,
+      "end": 174.019,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 174.019,
+      "speechEnd": 176.109,
+      "end": 176.389,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今週は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 176.389,
+      "speechEnd": 180.221,
+      "end": 180.501,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国とイランの交渉の進展、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 180.501,
+      "speechEnd": 183.567,
+      "end": 183.847,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ホルムズ海峡の輸送、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 183.847,
+      "speechEnd": 188.376,
+      "end": 188.656,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ブレント原油価格と米国債利回り、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 188.656,
+      "speechEnd": 196.39,
+      "end": 197.251,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "さらに米雇用統計が金利期待に与える影響に注目してほしい。"
+    }
+  ]
+}
