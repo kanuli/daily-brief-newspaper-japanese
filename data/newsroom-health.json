@@ -1,8 +1,8 @@
 {
   "version": 5,
-  "assessedAt": "2026-09-28T07:38:21.013Z",
+  "assessedAt": "2026-09-28T08:09:31.809Z",
   "state": "RED",
-  "summary": "RECOVERY_REQUIRED:desk",
+  "summary": "RECOVERY_REQUIRED:live,desk",
   "layers": {
     "daily": {
       "current": true,
@@ -10,16 +10,16 @@
       "japanese": "2026-09-28"
     },
     "live": {
-      "current": true,
-      "upstream": "2026-09-28T15:00:00+08:00",
+      "current": false,
+      "upstream": "2026-09-28T16:00:00+08:00",
       "japanese": "2026-09-28T15:00:00+08:00",
-      "lagMinutes": 0
+      "lagMinutes": 60
     },
     "desk": {
       "current": false,
-      "upstream": "2026-09-28T15:00:00+08:00",
+      "upstream": "2026-09-28T16:00:00+08:00",
       "japanese": "2026-09-28T12:00:00+08:00",
-      "lagMinutes": 180
+      "lagMinutes": 240
     },
     "stocks": {
       "current": true,
@@ -34,25 +34,38 @@
     }
   },
   "recovery": {
-    "coreRequired": false,
+    "coreRequired": true,
     "rollingRequired": true,
     "structuralRequired": false
   },
   "maintenance": {
     "owner": "Editor-in-Chief",
     "executor": "Maintenance Robot",
-    "incidentKey": "desk@2026-09-28T07:00:00.000Z",
+    "incidentKey": "live@2026-09-28T08:00:00.000Z|desk@2026-09-28T08:00:00.000Z",
     "sourceVersionBound": true,
-    "status": "escalated-cooldown",
-    "decision": "ESCALATED_RETRY_WAIT",
-    "attempts": 2,
-    "lastAttemptAt": "2026-09-28T07:36:46.614Z",
-    "nextEligibleAt": "2026-09-28T08:01:46.614Z",
+    "status": "repairing",
+    "decision": "AUTHORIZED_BOUNDED_REPAIR",
+    "attempts": 1,
+    "lastAttemptAt": "2026-09-28T08:09:31.809Z",
+    "nextEligibleAt": "2026-09-28T08:34:31.809Z",
     "cooldownMinutes": 25,
     "terminalRepairBudget": false,
     "currentOnlyCoreRepair": true,
     "archiveBackfillAllowed": false,
-    "results": []
+    "results": [
+      {
+        "workflow": "sync-japanese-news.yml",
+        "dispatched": true,
+        "active": false,
+        "runId": null
+      },
+      {
+        "workflow": "repair-extra-translation-quality.yml",
+        "dispatched": true,
+        "active": false,
+        "runId": null
+      }
+    ]
   },
   "sourceRead": {
     "mode": "public-raw-retry",
@@ -63,7 +76,7 @@
   },
   "robot": {
     "current": true,
-    "runId": 36392721506,
+    "runId": 36395666945,
     "event": "workflow_dispatch",
     "role": "editor-in-chief-orchestrator",
     "executor": "continuous-maintenance-workers",
