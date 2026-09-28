@@ -1,6 +1,6 @@
 {
   "version": 5,
-  "assessedAt": "2026-09-28T08:37:05.433Z",
+  "assessedAt": "2026-09-28T08:38:51.430Z",
   "state": "RED",
   "summary": "RECOVERY_REQUIRED:desk",
   "layers": {
@@ -43,8 +43,8 @@
     "executor": "Maintenance Robot",
     "incidentKey": "desk@2026-09-28T08:00:00.000Z",
     "sourceVersionBound": true,
-    "status": "escalated-retrying",
-    "decision": "ESCALATED_RETRY_AUTHORIZED",
+    "status": "escalated-cooldown",
+    "decision": "ESCALATED_RETRY_WAIT",
     "attempts": 2,
     "lastAttemptAt": "2026-09-28T08:37:05.433Z",
     "nextEligibleAt": "2026-09-28T09:02:05.433Z",
@@ -52,14 +52,7 @@
     "terminalRepairBudget": false,
     "currentOnlyCoreRepair": true,
     "archiveBackfillAllowed": false,
-    "results": [
-      {
-        "workflow": "repair-extra-translation-quality.yml",
-        "dispatched": true,
-        "active": false,
-        "runId": null
-      }
-    ]
+    "results": []
   },
   "sourceRead": {
     "mode": "public-raw-retry",
@@ -70,8 +63,8 @@
   },
   "robot": {
     "current": true,
-    "runId": 36398409218,
-    "event": "schedule",
+    "runId": 36398589895,
+    "event": "workflow_dispatch",
     "role": "editor-in-chief-orchestrator",
     "executor": "continuous-maintenance-workers",
     "selfHealingLoop": false
