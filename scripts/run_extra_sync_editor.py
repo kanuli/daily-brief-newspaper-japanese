@@ -146,7 +146,6 @@ def _safe_source_name(story: dict, desk: str) -> str:
 def _desk_minimum_story(source_story: dict, desk: str) -> dict:
     """Create a source-backed Japanese availability card without inventing facts."""
     label = DESK_LABELS.get(desk, "ニュース")
-    source_name = _safe_source_name(source_story, desk)
     value = {}
     for key in (
         "id", "desk", "status", "sourceName", "sourceUrl", "sources", "deskSlugs",
@@ -159,10 +158,14 @@ def _desk_minimum_story(source_story: dict, desk: str) -> dict:
     value["deskSlugs"] = list(source_story.get("deskSlugs") or [desk])
     value["section"] = label
     value["sectionLabel"] = label
-    value["title"] = f"{label}：{source_name}の最新確認済みニュース"
+    # Keep the original source identity in sourceName/sources, but do not splice
+    # an arbitrary English brand or URL into strict Japanese prose.  That made
+    # the availability fallback itself fail the publication quality gate (for
+    # example, a lowercase "kai" fragment from a source label).
+    value["title"] = f"{label}：最新確認済みニュース"
     value["dek"] = "出典で確認済みの最新情報を先行掲載しています。"
     value["summary"] = (
-        f"{source_name}を出典として、この分類の最新ニュースを確認しました。"
+        "記事に記載した出典で、この分類の最新ニュースを確認しました。"
         "完全な日本語本文は自動復旧処理で順次更新します。"
     )
     time_label = str(source_story.get("timeLabel") or "").strip()
