@@ -153,16 +153,17 @@ def apply_contextual_readings(original, rendered):
         return exact
 
     def date_repl(m):
-        month, day = int(m.group(1)), int(m.group(2))
+        month_text, day_text = m.group(1), m.group(2)
+        month, day = int(month_text), int(day_text)
         mr=MONTH_READINGS.get(month); dr=CALENDAR_DAY_READINGS.get(day)
         if not mr or not dr:
             return m.group(0)
-        return ruby(f"{month}月",mr)+ruby(f"{day}日",dr)
+        return ruby(f"{month_text}月",mr)+ruby(f"{day_text}日",dr)
     rendered=CALENDAR_DATE_RE.sub(date_repl,rendered)
 
     def duration_repl(m):
-        day=int(m.group(1)); dr=DURATION_DAY_READINGS.get(day)
-        return ruby(f"{day}日間",dr+"かん") if dr else m.group(0)
+        day_text=m.group(1); day=int(day_text); dr=DURATION_DAY_READINGS.get(day)
+        return ruby(f"{day_text}日間",dr+"かん") if dr else m.group(0)
     rendered=DURATION_DAY_RE.sub(duration_repl,rendered)
 
     def month_duration_repl(m):
@@ -173,23 +174,23 @@ def apply_contextual_readings(original, rendered):
     rendered=rendered.replace("<ruby>数<rt>かず</rt></ruby>か<ruby>月<rt>がつ</rt></ruby>",ruby("数か月","すうかげつ"))
 
     def month_repl(m):
-        month=int(m.group(1)); reading=MONTH_READINGS.get(month)
-        return ruby(f"{month}月",reading) if reading else m.group(0)
+        month_text=m.group(1); month=int(month_text); reading=MONTH_READINGS.get(month)
+        return ruby(f"{month_text}月",reading) if reading else m.group(0)
     rendered=RUBY_UNIT_RE["月"].sub(month_repl,rendered)
 
     def hour_repl(m):
-        n=int(m.group(1)); reading=hour_reading(n)
-        return ruby(f"{n}時",reading) if reading else m.group(0)
+        number_text=m.group(1); n=int(number_text); reading=hour_reading(n)
+        return ruby(f"{number_text}時",reading) if reading else m.group(0)
     rendered=RUBY_UNIT_RE["時"].sub(hour_repl,rendered)
 
     def minute_repl(m):
-        n=int(m.group(1)); reading=minute_reading(n)
-        return ruby(f"{n}分",reading) if reading else m.group(0)
+        number_text=m.group(1); n=int(number_text); reading=minute_reading(n)
+        return ruby(f"{number_text}分",reading) if reading else m.group(0)
     rendered=RUBY_UNIT_RE["分"].sub(minute_repl,rendered)
 
     def person_repl(m):
-        n=int(m.group(1)); reading=person_reading(n)
-        return ruby(f"{n}人",reading) if reading else m.group(0)
+        number_text=m.group(1); n=int(number_text); reading=person_reading(n)
+        return ruby(f"{number_text}人",reading) if reading else m.group(0)
     rendered=RUBY_UNIT_RE["人"].sub(person_repl,rendered)
     # pykakasi can tokenize 3+ digit counters as a suffix compound such as
     # 359<ruby>人以上<rt>ひといじょう</rt></ruby>.  In numeric context 人 is
@@ -200,8 +201,8 @@ def apply_contextual_readings(original, rendered):
 
     for unit in COUNTER_SPECS:
         def counter_repl(m, unit=unit):
-            n=int(m.group(1)); reading=counter_reading(n,unit)
-            return ruby(f"{n}{unit}",reading) if reading else m.group(0)
+            number_text=m.group(1); n=int(number_text); reading=counter_reading(n,unit)
+            return ruby(f"{number_text}{unit}",reading) if reading else m.group(0)
         rendered=RUBY_UNIT_RE[unit].sub(counter_repl,rendered)
 
     # 対 is たい for numeric scores/ratios and as a news prefix (対イラン, 対米, etc.).
