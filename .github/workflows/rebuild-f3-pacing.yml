@@ -25,7 +25,10 @@ jobs:
     # Manual NAS recovery dispatches remain eligible immediately.
     if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    # A full current-edition rebuild currently takes roughly 20 minutes for
+    # Daily/Live plus a comparable rolling pass on a hosted CPU runner.  The
+    # former 45-minute ceiling killed valid work before QA and publication.
+    timeout-minutes: 90
     env:
       F3_RECORD_BATCH_SIZE: '3'
     steps:
