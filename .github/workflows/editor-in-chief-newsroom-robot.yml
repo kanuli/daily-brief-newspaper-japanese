@@ -33,7 +33,6 @@ jobs:
             const { owner, repo } = context.repo;
             const sourceRepo = 'daily-brief-newspaper';
             const MINUTE = 60 * 1000;
-            const HOUR = 60 * MINUTE;
             const HEALTH_PATH = 'data/newsroom-health.json';
             const COOLDOWN_MS = 25 * MINUTE;
             const HEARTBEAT_MS = 30 * MINUTE;
@@ -217,8 +216,8 @@ jobs:
             const sourceStocksMs = stamp(sourceStocks);
             const localStocksMs = stamp(localStocks);
             const liveCurrent = currentTimestamp(sourceLiveMs, localLiveMs, MINUTE);
-            const deskCurrent = currentTimestamp(sourceDeskMs, localDeskMs, HOUR);
-            const stocksCurrent = currentTimestamp(sourceStocksMs, localStocksMs, HOUR);
+            const deskCurrent = currentTimestamp(sourceDeskMs, localDeskMs, MINUTE);
+            const stocksCurrent = currentTimestamp(sourceStocksMs, localStocksMs, MINUTE);
             const structuralCurrent = structuralDefects.length === 0;
 
             const layers = {
@@ -371,7 +370,7 @@ jobs:
                 repairRunningRemainsRed: true,
                 missingHealthFailsClosed: true,
                 liveToleranceMinutes: 1,
-                rollingToleranceMinutes: 60,
+                rollingToleranceMinutes: 1,
                 healthHeartbeatMinutes: 30,
                 recoveryCooldownMinutes: Math.round(COOLDOWN_MS / MINUTE),
                 sourceVersionBoundIncidents: true,
