@@ -41,6 +41,7 @@ STANDARD_CASES = {
     "3杯":"<ruby>3杯<rt>さんばい</rt></ruby>",
     "3階":"<ruby>3階<rt>さんがい</rt></ruby>",
     "6回":"<ruby>6回<rt>ろっかい</rt></ruby>",
+    "２回":"<ruby>２回<rt>にかい</rt></ruby>",
     "8冊":"<ruby>8冊<rt>はっさつ</rt></ruby>",
     "3軒":"<ruby>3軒<rt>さんげん</rt></ruby>",
     "1件":"<ruby>1件<rt>いっけん</rt></ruby>",
