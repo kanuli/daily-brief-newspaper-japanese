@@ -16,6 +16,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
+from typing import Dict, Optional, Set, Tuple
 
 
 REPOSITORY = os.getenv("JAPANESE_GITHUB_REPOSITORY", "kanuli/daily-brief-newspaper-japanese")
@@ -40,7 +41,7 @@ PAGES_WORKFLOW = "pages.yml"
 ATTEST_WORKFLOW = "editor-in-chief-newsroom-robot.yml"
 
 
-def request(url: str, *, method: str = "GET", payload: dict | None = None) -> bytes:
+def request(url: str, *, method: str = "GET", payload: Optional[dict] = None) -> bytes:
     headers = {
         "Accept": "application/vnd.github+json",
         "Cache-Control": "no-cache, no-store, max-age=0",
@@ -65,7 +66,7 @@ def load_json(base: str, name: str) -> dict:
     return json.loads(raw.decode("utf-8"))
 
 
-def parse_stamp(payload: dict) -> datetime | None:
+def parse_stamp(payload: dict) -> Optional[datetime]:
     for key in ("generatedAt", "lastUpdated", "sourceGeneratedAt", "checkedAt"):
         value = payload.get(key)
         if not value:
@@ -80,13 +81,13 @@ def parse_stamp(payload: dict) -> datetime | None:
     return None
 
 
-def iso_millis(value: datetime | None) -> str:
+def iso_millis(value: Optional[datetime]) -> str:
     if value is None:
         return "missing"
     return value.astimezone(timezone.utc).isoformat(timespec="milliseconds").replace("+00:00", "Z")
 
 
-def publication_fingerprint(layers: dict[str, dict]) -> str:
+def publication_fingerprint(layers: Dict[str, dict]) -> str:
     daily = str(layers["latest.json"].get("date") or "")[:10] or "missing"
     return "|".join(
         (
@@ -104,12 +105,12 @@ def current(source: dict, japanese: dict, tolerance_seconds: int) -> bool:
     return bool(source_stamp and japanese_stamp and japanese_stamp.timestamp() + tolerance_seconds >= source_stamp.timestamp())
 
 
-def workflow_runs(workflow: str) -> list[dict]:
+def workflow_runs(workflow: str) -> list:
     data = json.loads(request(f"{API}/actions/workflows/{workflow}/runs?branch=main&per_page=20"))
     return list(data.get("workflow_runs") or [])
 
 
-def dispatch(workflow: str, inputs: dict | None = None) -> bool:
+def dispatch(workflow: str, inputs: Optional[dict] = None) -> bool:
     active = next((run for run in workflow_runs(workflow) if run.get("status") != "completed"), None)
     if active:
         print(f"NAS_DISPATCH_SKIPPED_ACTIVE workflow={workflow} run={active.get('id')}")
@@ -133,8 +134,8 @@ def iter_stories(payload: object):
             yield from iter_stories(value)
 
 
-def verify_pages_assets(layers: dict[str, dict]) -> list[str]:
-    failures: list[str] = []
+def verify_pages_assets(layers: Dict[str, dict]) -> list:
+    failures = []
     for name, expected in layers.items():
         published = load_json(PAGES + "data/", name)
         if name == "latest.json":
@@ -143,7 +144,7 @@ def verify_pages_assets(layers: dict[str, dict]) -> list[str]:
         elif not current(expected, published, 0):
             failures.append(f"pages:{name}:stale")
 
-    seen: set[tuple[str, str]] = set()
+    seen = set()  # type: Set[Tuple[str, str]]
     for payload in layers.values():
         for story in iter_stories(payload):
             audio = str(story.get("audio") or "")
@@ -202,11 +203,37 @@ def main() -> int:
         return 1
 
     fingerprint = publication_fingerprint(japanese)
+    try:
+        health = load_json(JAPANESE, "newsroom-health.json")
+    except (urllib.error.URLError, json.JSONDecodeError):
+        health = {}
+    delivery = health.get("layers", {}).get("delivery", {})
+    attested_at = parse_stamp({"checkedAt": delivery.get("attestedAt")})
+    attestation_age = (
+        (datetime.now(timezone.utc) - attested_at).total_seconds()
+        if attested_at
+        else None
+    )
+    if (
+        health.get("state") == "GREEN"
+        and delivery.get("attestedFingerprint") == fingerprint
+        and attestation_age is not None
+        and 0 <= attestation_age < 20 * 60
+    ):
+        print(
+            "NAS_CONTROLLER_GREEN_ALREADY_ATTESTED "
+            f"fingerprint={fingerprint} age_seconds={int(attestation_age)}"
+        )
+        return 0
+
     verified_at = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
-    dispatch(
+    dispatched = dispatch(
         ATTEST_WORKFLOW,
         {"nas_verified_fingerprint": fingerprint, "nas_verified_at": verified_at},
     )
+    if not dispatched:
+        print(f"NAS_CONTROLLER_VERIFY_PENDING fingerprint={fingerprint}")
+        return 1
     print(f"NAS_CONTROLLER_GREEN fingerprint={fingerprint} verified_at={verified_at}")
     return 0
 
