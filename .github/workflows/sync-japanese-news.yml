@@ -2,23 +2,6 @@ name: 日本語ニュース同期・品質ゲート・Discord配信
 
 on:
   workflow_dispatch:
-  push:
-    branches: ["main"]
-    paths:
-      - 'scripts/validate_content_integrity.py'
-      - 'scripts/validate_editorial_quality.py'
-      - 'scripts/validate_vocab_quality.py'
-      - 'scripts/safe_sync.py'
-      - 'scripts/local_translation_runtime.py'
-      - 'scripts/local_batch_prewarm.py'
-      - 'scripts/repair_garbled_core.py'
-      - 'scripts/emergency_remote_core_sync.py'
-      - 'scripts/furigana_safe_runtime.py'
-      - 'scripts/notify_discord.py'
-      - '.github/workflows/sync-japanese-news.yml'
-  schedule:
-    # 広東語版の毎時公開後、翻訳時間を確保して毎時15分に日本語版を処理する。
-    - cron: '15 * * * *'
 
 permissions:
   contents: write
@@ -194,59 +177,12 @@ jobs:
             echo 'NORMAL_CORE_SYNC_FAILED_HANDOFF_TO_REMOTE_RECOVERY'
           fi
 
-      - name: GitHub Pagesに同一ニュースが反映されたことを確認
-        id: site_ready
-        if: steps.core_status.outputs.ok == 'true' && steps.publish_news.outputs.published == 'true' && (steps.publish_news.outputs.latest_changed == 'true' || steps.publish_news.outputs.live_changed == 'true')
-        env:
-          LATEST_CHANGED: ${{ steps.publish_news.outputs.latest_changed }}
-          LIVE_CHANGED: ${{ steps.publish_news.outputs.live_changed }}
+      - name: F3 workerへ引き渡し
+        if: steps.core_status.outputs.ok == 'true'
         shell: bash
         run: |
-          set -euo pipefail
-          site='https://kanuli.github.io/daily-brief-newspaper-japanese/'
-          check_file() {
-            file="$1"
-            expected="$(sha256sum "$file" | awk '{print $1}')"
-            for attempt in $(seq 1 36); do
-              remote="/tmp/$(basename "$file").remote"
-              if curl -fsSL --retry 2 --retry-delay 1 "${site}${file}?deploy=${GITHUB_RUN_ID}-${attempt}" -o "$remote"; then
-                actual="$(sha256sum "$remote" | awk '{print $1}')"
-                if [ "$actual" = "$expected" ]; then
-                  echo "PAGES_MATCH_OK ${file} ${actual}"
-                  return 0
-                fi
-              fi
-              sleep 10
-            done
-            echo "PAGES_MATCH_TIMEOUT ${file}" >&2
-            return 1
-          }
-          if [ "$LATEST_CHANGED" = 'true' ]; then check_file data/latest.json; fi
-          if [ "$LIVE_CHANGED" = 'true' ]; then check_file data/live.json; fi
-          echo 'ready=true' >> "$GITHUB_OUTPUT"
-
-      - name: 変更ありの毎時15分版をDiscordへ配信
-        if: steps.site_ready.outputs.ready == 'true'
-        env:
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          LATEST_CHANGED: ${{ steps.publish_news.outputs.latest_changed }}
-          LIVE_CHANGED: ${{ steps.publish_news.outputs.live_changed }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          args=()
-          if [ "$LATEST_CHANGED" = "true" ]; then args+=(--daily); fi
-          if [ "$LIVE_CHANGED" = "true" ]; then args+=(--live); fi
-          python scripts/notify_discord.py "${args[@]}"
-
-      - name: 変更なしでも定時xx:15のDiscordサイト更新を配信
-        if: github.event_name == 'schedule' && steps.core_status.outputs.ok == 'true' && steps.publish_news.outputs.latest_changed != 'true' && steps.publish_news.outputs.live_changed != 'true'
-        env:
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          python scripts/notify_discord.py --hourly
+          echo 'TRANSLATION_READY_FOR_F3'
+          echo 'Pages and external notification are intentionally deferred until the F3 workflow succeeds.'
 
   emergency_remote_core:
     name: 通常同期失敗時の遠隔コア復旧
@@ -342,56 +278,9 @@ jobs:
           done
           exit 1
 
-      - name: 緊急復旧版がGitHub Pagesへ反映されたことを確認
-        id: emergency_site_ready
-        if: steps.emergency_publish.outputs.published == 'true' && (steps.emergency_publish.outputs.latest_changed == 'true' || steps.emergency_publish.outputs.live_changed == 'true')
-        env:
-          LATEST_CHANGED: ${{ steps.emergency_publish.outputs.latest_changed }}
-          LIVE_CHANGED: ${{ steps.emergency_publish.outputs.live_changed }}
+      - name: 緊急復旧版をF3 workerへ引き渡し
+        if: steps.emergency_publish.outcome == 'success'
         shell: bash
         run: |
-          set -euo pipefail
-          site='https://kanuli.github.io/daily-brief-newspaper-japanese/'
-          check_file() {
-            file="$1"
-            expected="$(sha256sum "$file" | awk '{print $1}')"
-            for attempt in $(seq 1 36); do
-              remote="/tmp/emergency-$(basename "$file").remote"
-              if curl -fsSL --retry 2 --retry-delay 1 "${site}${file}?recovery=${GITHUB_RUN_ID}-${attempt}" -o "$remote"; then
-                actual="$(sha256sum "$remote" | awk '{print $1}')"
-                if [ "$actual" = "$expected" ]; then
-                  echo "EMERGENCY_PAGES_MATCH_OK ${file} ${actual}"
-                  return 0
-                fi
-              fi
-              sleep 10
-            done
-            echo "EMERGENCY_PAGES_MATCH_TIMEOUT ${file}" >&2
-            return 1
-          }
-          if [ "$LATEST_CHANGED" = 'true' ]; then check_file data/latest.json; fi
-          if [ "$LIVE_CHANGED" = 'true' ]; then check_file data/live.json; fi
-          echo 'ready=true' >> "$GITHUB_OUTPUT"
-
-      - name: 緊急復旧版をDiscordへ配信
-        if: steps.emergency_site_ready.outputs.ready == 'true'
-        env:
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          LATEST_CHANGED: ${{ steps.emergency_publish.outputs.latest_changed }}
-          LIVE_CHANGED: ${{ steps.emergency_publish.outputs.live_changed }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          args=()
-          if [ "$LATEST_CHANGED" = 'true' ]; then args+=(--daily); fi
-          if [ "$LIVE_CHANGED" = 'true' ]; then args+=(--live); fi
-          python scripts/notify_discord.py "${args[@]}"
-
-      - name: 緊急復旧でも変更なしなら定時xx:15サイト更新を配信
-        if: github.event_name == 'schedule' && steps.emergency_publish.outputs.latest_changed != 'true' && steps.emergency_publish.outputs.live_changed != 'true'
-        env:
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          python scripts/notify_discord.py --hourly
+          echo 'EMERGENCY_TRANSLATION_READY_FOR_F3'
+          echo 'Pages remains blocked until the F3 workflow succeeds.'

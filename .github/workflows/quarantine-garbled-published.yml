@@ -2,14 +2,6 @@ name: 日本語文字化け即時隔離
 
 on:
   workflow_dispatch:
-  push:
-    branches: ["main"]
-    paths:
-      - 'scripts/quarantine_garbled_published.py'
-      - 'scripts/validate_content_integrity.py'
-      - '.github/workflows/quarantine-garbled-published.yml'
-  schedule:
-    - cron: '*/10 * * * *'
 
 permissions:
   contents: write

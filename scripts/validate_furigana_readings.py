@@ -17,6 +17,7 @@ import sync_and_translate as base
 
 ROOT = Path(__file__).resolve().parents[1]
 SCHEMA = base.TRANSLATION_SCHEMA
+HAN_RE = re.compile(r"[\u3400-\u9fff]")
 safety.install()
 
 STANDARD_CASES = {
@@ -107,6 +108,8 @@ def check_item(name, item, issues):
             issues.append(f"{name}:{aid}:{field}: furigana missing")
         elif safety.visible_text(actual) != source:
             issues.append(f"{name}:{aid}:{field}: ruby base text differs from source Japanese")
+        elif HAN_RE.search(source) and "<ruby>" not in actual:
+            issues.append(f"{name}:{aid}:{field}: kanji has no ruby annotation")
 
     paragraphs = base.body_paragraphs(item)
     actual_paragraphs = furigana.get("bodyParagraphs") or []
@@ -134,6 +137,8 @@ def check_corpus(issues):
         actual = str(edition.get("furiganaHeadline") or "")
         if headline and safety.visible_text(actual) != headline:
             issues.append(f"archive.json:editions[{index}]:headline ruby base differs from source")
+        elif HAN_RE.search(headline) and "<ruby>" not in actual:
+            issues.append(f"archive.json:editions[{index}]:headline kanji has no ruby annotation")
         topics = edition.get("topics") or []
         ruby_topics = edition.get("furiganaTopics") or []
         if len(ruby_topics) != len(topics):

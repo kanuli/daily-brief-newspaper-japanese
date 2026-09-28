@@ -2,22 +2,6 @@ name: Maintenance Robot — 日本語ローリング翻訳品質修復
 
 on:
   workflow_dispatch:
-  # Code-change validation only. Normal newsroom operation is assigned by the
-  # Editor-in-Chief; this worker no longer owns an independent hourly schedule.
-  push:
-    branches: ["main"]
-    paths:
-      - 'scripts/run_extra_sync_editor.py'
-      - 'scripts/self_healing_extra_sync.py'
-      - 'scripts/sync_cantonese_layers.py'
-      - 'scripts/repair_garbled_extra_layers.py'
-      - 'scripts/remote_repair_all_published_quality.py'
-      - 'scripts/newsroom_quality.py'
-      - 'scripts/furigana_safe_runtime.py'
-      - 'scripts/validate_extra_layers.py'
-      - 'scripts/safe_sync.py'
-      - 'scripts/local_translation_runtime.py'
-      - '.github/workflows/repair-extra-translation-quality.yml'
 
 permissions:
   contents: write
@@ -25,7 +9,7 @@ permissions:
 
 concurrency:
   group: japanese-extra-quality-repair
-  cancel-in-progress: ${{ github.event_name == 'push' }}
+  cancel-in-progress: false
 
 jobs:
   repair:
@@ -205,18 +189,9 @@ jobs:
           done
           exit 1
 
-      - name: Return control to Editor-in-Chief for live verification
+      - name: Return control to the NAS Editor-in-Chief
         if: always()
-        env:
-          GH_TOKEN: ${{ github.token }}
         shell: bash
         run: |
-          set -euo pipefail
-          curl --fail-with-body --silent --show-error \
-            -X POST \
-            -H "Authorization: Bearer ${GH_TOKEN}" \
-            -H 'Accept: application/vnd.github+json' \
-            -H 'X-GitHub-Api-Version: 2022-11-28' \
-            "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/workflows/editor-in-chief-newsroom-robot.yml/dispatches" \
-            -d '{"ref":"main"}'
-          echo 'EDITOR_IN_CHIEF_RECHECK_DISPATCHED'
+          echo 'ROLLING_WORKER_COMPLETE'
+          echo 'The GitHub worker does not self-dispatch another controller. The NAS Editor-in-Chief owns verification and recovery.'

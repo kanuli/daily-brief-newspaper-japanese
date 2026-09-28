@@ -2,23 +2,6 @@ name: 日本語全公開コンテンツ品質修復
 
 on:
   workflow_dispatch:
-  push:
-    branches: ["main"]
-    paths:
-      - 'scripts/remote_repair_all_published_quality.py'
-      - 'scripts/repair_all_published_quality.py'
-      - 'scripts/newsroom_quality.py'
-      - 'scripts/furigana_safe_runtime.py'
-      - 'scripts/safe_sync.py'
-      - 'scripts/validate_content_integrity.py'
-      - 'scripts/validate_extra_layers.py'
-      - '.github/workflows/repair-all-published-quality.yml'
-  workflow_run:
-    workflows:
-      - '日本語ニュース同期・品質ゲート・Discord配信'
-    types: [completed]
-  schedule:
-    - cron: '50 * * * *'
 
 permissions:
   contents: write

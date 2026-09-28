@@ -1,15 +1,6 @@
 name: Japanese Site Auto Maintenance
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - '*.html'
-      - 'assets/**'
-      - 'scripts/**'
-      - 'requirements.txt'
-      - 'requirements-translation.txt'
-      - '.github/workflows/**'
   pull_request:
     branches: [main]
     paths:
@@ -19,8 +10,6 @@ on:
       - 'requirements.txt'
       - 'requirements-translation.txt'
       - '.github/workflows/**'
-  schedule:
-    - cron: '12,42 * * * *'
   workflow_dispatch:
 
 permissions:

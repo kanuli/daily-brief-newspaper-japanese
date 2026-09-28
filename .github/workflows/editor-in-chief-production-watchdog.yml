@@ -3,15 +3,6 @@ run-name: Production freshness patrol @ ${{ github.sha }}
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '7,22,37,52 * * * *'
-  workflow_run:
-    workflows: ["日本語版 Pages 公開・広東語版レイアウト同期"]
-    types: [completed]
-  push:
-    branches: ["main"]
-    paths:
-      - '.github/workflows/editor-in-chief-production-watchdog.yml'
 
 permissions:
   actions: write

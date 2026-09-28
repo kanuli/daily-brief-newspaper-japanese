@@ -29,7 +29,17 @@
 
 ## 自動更新と公開保護
 
-`.github/workflows/sync-japanese-news.yml` が原版の `latest.json` / `live.json` / `archive.json` を取得し、安全な日本語版データと F3 音声を更新します。
+ニュース更新の唯一のスケジュール所有者は NAS 上の Editor-in-Chief です。GitHub Actions のニュースワーカーは定時起動せず、NAS からの指示と成功した上流ワークフローの引き渡しだけで動作します。
+
+1. NAS Editor-in-Chief が広東語版の鮮度を確認し、GitHub 翻訳 worker を dispatch
+2. 翻訳の成功時だけ GitHub F3 worker を起動
+3. F3 生成と音声 QA の成功時だけ GitHub Pages を公開
+4. NAS Editor-in-Chief が公開 JSON、F3 MP3/timing、Pages の鮮度を実地確認
+5. NAS 検証フィンガープリントが現在版と一致する場合だけ `newsroom-health.json` を GREEN に更新
+
+NAS 側コントローラーは `scripts/nas_editor_in_chief_controller.py` です。`GITHUB_TOKEN` は Actions の read/write と Contents の read/write が可能な既存の NAS シークレットを使い、F3 生成本体は NAS で実行しません。
+
+`.github/workflows/sync-japanese-news.yml` が原版の `latest.json` / `live.json` / `archive.json` を取得し、安全な日本語版データを更新します。F3 音声は後続の `rebuild-f3-pacing.yml` だけが GitHub 上で生成します。
 
 公開フローは次の順序です。
 
