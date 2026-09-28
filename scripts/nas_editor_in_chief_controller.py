@@ -181,8 +181,8 @@ def main() -> int:
         or not current(upstream["live.json"], japanese["live.json"], 60)
     )
     rolling_stale = (
-        not current(upstream["desk-latest.json"], japanese["desk-latest.json"], 3600)
-        or not current(upstream["stocks-latest.json"], japanese["stocks-latest.json"], 3600)
+        not current(upstream["desk-latest.json"], japanese["desk-latest.json"], 60)
+        or not current(upstream["stocks-latest.json"], japanese["stocks-latest.json"], 60)
     )
     if core_stale:
         dispatch("sync-japanese-news.yml")

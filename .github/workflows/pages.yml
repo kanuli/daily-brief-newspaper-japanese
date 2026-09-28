@@ -4,7 +4,7 @@ run-name: 編集品質ゲート・Pages公開 @ ${{ github.sha }}
 on:
   workflow_dispatch:
   workflow_run:
-    workflows: ["F3ニュース読み再生成"]
+    workflows: ["F3ニュース読み再生成", "Editor-in-Chief Newsroom Robot"]
     types: [completed]
 
 permissions:
