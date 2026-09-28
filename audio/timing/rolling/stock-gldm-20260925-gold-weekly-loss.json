@@ -1,0 +1,330 @@
+{
+  "version": 3,
+  "duration": 128.392,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 379,
+  "charactersPerMinute": 177.1,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 15.634,
+      "text": "金は反発するが、依然として週ごとの下落、米国の金利と金利引き上げが保留になると予想されている"
+    },
+    {
+      "key": "dek",
+      "start": 15.634,
+      "end": 32.453,
+      "text": "金価格は9月25日に反発したが、米ドルと国債利回りの上昇により、さらなるFRBの利上げへの期待が高まった。"
+    },
+    {
+      "key": "body-0",
+      "start": 32.453,
+      "end": 66.468,
+      "text": "ロイターは9月25日、金価格は金曜日に反発したが、依然として週ごとの下落を記録する準備ができていると報じた。一方、米国財務省の利回りは上昇し、さらなるFRBの利上げへの期待は強まり、米ドルは引き続き支えとなった。"
+    },
+    {
+      "key": "body-1",
+      "start": 66.468,
+      "end": 99.926,
+      "text": "GLDMの純資産価値は、金価格に直接影響されます。ヘッジ需要は買い注文をもたらしますが、実質金利の上昇は無利息金を保有する機会費用を増加させるため、その後の米ドル、米国債利回り、政策期待は依然として主な伝達要因です。"
+    },
+    {
+      "key": "why",
+      "start": 99.926,
+      "end": 114.158,
+      "text": "金利と米ドルは、金とGLDM NAVの機会費用に直接影響します。"
+    },
+    {
+      "key": "watch",
+      "start": 114.158,
+      "end": 128.392,
+      "text": "クーデター。以下のクイズベッドラ貧困チャンネルのみ、申し訳ありませんがカバマン、"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.926,
+      "end": 3.206,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "金は反発するが、"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.206,
+      "speechEnd": 6.969,
+      "end": 7.249,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "依然として週ごとの下落、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.249,
+      "speechEnd": 14.774,
+      "end": 15.634,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "米国の金利と金利引き上げが保留になると予想されている。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.634,
+      "speechEnd": 21.487,
+      "end": 21.767,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "金価格は9月25日に反発したが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.767,
+      "speechEnd": 25.878,
+      "end": 26.158,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米ドルと国債利回りの上昇により、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.158,
+      "speechEnd": 31.593,
+      "end": 32.453,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "さらなるFRBの利上げへの期待が高まった。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 32.453,
+      "speechEnd": 36.424,
+      "end": 36.704,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイターは9月25日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.704,
+      "speechEnd": 41.164,
+      "end": 41.444,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "金価格は金曜日に反発したが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.444,
+      "speechEnd": 48.69,
+      "end": 49.31,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "依然として週ごとの下落を記録する準備ができていると報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.31,
+      "speechEnd": 51.331,
+      "end": 51.611,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "一方、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.611,
+      "speechEnd": 55.931,
+      "end": 56.211,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国財務省の利回りは上昇し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.211,
+      "speechEnd": 61.506,
+      "end": 61.786,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "さらなるFRBの利上げへの期待は強まり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.786,
+      "speechEnd": 65.688,
+      "end": 66.468,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "米ドルは引き続き支えとなった。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 66.468,
+      "speechEnd": 69.464,
+      "end": 69.744,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "GLDMの純資産価値は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 69.744,
+      "speechEnd": 73.158,
+      "end": 73.778,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "金価格に直接影響されます。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 73.778,
+      "speechEnd": 78.656,
+      "end": 78.936,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ヘッジ需要は買い注文をもたらしますが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 78.936,
+      "speechEnd": 87.366,
+      "end": 87.646,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "実質金利の上昇は無利息金を保有する機会費用を増加させるため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 87.646,
+      "speechEnd": 90.364,
+      "end": 90.644,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "その後の米ドル、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.644,
+      "speechEnd": 93.013,
+      "end": 93.293,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国債利回り、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.293,
+      "speechEnd": 99.146,
+      "end": 99.926,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "政策期待は依然として主な伝達要因です。"
+    },
+    {
+      "parentKey": "why",
+      "start": 99.926,
+      "speechEnd": 103.897,
+      "end": 104.517,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 104.517,
+      "speechEnd": 107.165,
+      "end": 107.445,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "金利と米ドルは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 107.445,
+      "speechEnd": 113.298,
+      "end": 114.158,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "金とGLDM NAVの機会費用に直接影響します。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 114.158,
+      "speechEnd": 116.248,
+      "end": 116.528,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 116.528,
+      "speechEnd": 118.619,
+      "end": 119.239,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "クーデター。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 119.239,
+      "speechEnd": 123.489,
+      "end": 123.769,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "以下のクイズベッドラ貧困チャンネルのみ、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 123.769,
+      "speechEnd": 127.532,
+      "end": 128.392,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-comma",
+      "text": "申し訳ありませんがカバマン、"
+    }
+  ]
+}

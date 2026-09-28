@@ -1,0 +1,102 @@
+{
+  "version": 3,
+  "duration": 32.679,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 85,
+  "charactersPerMinute": 156.1,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 6.43,
+      "text": "日本：最新確認済みニュース"
+    },
+    {
+      "key": "dek",
+      "start": 6.43,
+      "end": 14.124,
+      "text": "出典で確認済みの最新情報を先行掲載しています。"
+    },
+    {
+      "key": "body-0",
+      "start": 14.124,
+      "end": 32.679,
+      "text": "記事に記載した出典で、この分類の最新ニュースを確認しました。完全な日本語本文は自動復旧処理で順次更新します。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.022,
+      "end": 2.362,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "punctuation-semantic",
+      "text": "日本："
+    },
+    {
+      "parentKey": "title",
+      "start": 2.362,
+      "speechEnd": 5.57,
+      "end": 6.43,
+      "pause": 0.861,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "最新確認済みニュース。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 6.43,
+      "speechEnd": 13.263,
+      "end": 14.124,
+      "pause": 0.861,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "出典で確認済みの最新情報を先行掲載しています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 14.124,
+      "speechEnd": 17.401,
+      "end": 17.682,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "記事に記載した出典で、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 17.682,
+      "speechEnd": 23.26,
+      "end": 23.88,
+      "pause": 0.621,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "この分類の最新ニュースを確認しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 23.88,
+      "speechEnd": 31.898,
+      "end": 32.679,
+      "pause": 0.781,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "完全な日本語本文は自動復旧処理で順次更新します。"
+    }
+  ]
+}

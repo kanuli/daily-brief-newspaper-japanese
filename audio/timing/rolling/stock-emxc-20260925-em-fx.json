@@ -1,0 +1,320 @@
+{
+  "version": 3,
+  "duration": 143.569,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 434,
+  "charactersPerMinute": 181.4,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 16.61,
+      "text": "EMXCは、米国の高金利と強い米ドルが新興アジア通貨を圧迫するため、外国投資と評価の逆風に直面している"
+    },
+    {
+      "key": "dek",
+      "start": 16.61,
+      "end": 36.007,
+      "text": "インドネシア・ルピアは、9月25日に5月以来最大の週次下落に向かって動き、ドルの資金調達状況が引き締まっていることを示している。"
+    },
+    {
+      "key": "body-0",
+      "start": 36.007,
+      "end": 67.301,
+      "text": "ロイター通信は9月25日、米国債利回りの上昇と米ドルの上昇に打撃を受けたインドネシア・ルピアは、アジアの新興市場国の外部金融環境の逼迫を反映して、5月以来最大の週次下落を記録する見通しだと報じた。"
+    },
+    {
+      "key": "body-1",
+      "start": 67.301,
+      "end": 108.961,
+      "text": "EMXCは中国を除き、複数のアジア市場に集中しており、米ドルと米ドルの利子を共同融資コスト変数としています。AIサプライチェーンは依然として台湾と韓国のテクノロジー株をサポートする可能性がありますが、為替レートと外国資本の流れの圧力が全体的な評価の拡大を制限する可能性があります。"
+    },
+    {
+      "key": "why",
+      "start": 108.961,
+      "end": 126.26,
+      "text": "米ドルの融資条件は、EMXCの主要市場の評価と資本フローに同時に影響を及ぼします。"
+    },
+    {
+      "key": "watch",
+      "start": 126.26,
+      "end": 143.569,
+      "text": "米ドル、台湾と韓国の外国資本の流れ、インドのリスク選好、アジア通貨に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.16,
+      "end": 2.44,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "EMXCは、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.44,
+      "speechEnd": 10.592,
+      "end": 10.872,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国の高金利と強い米ドルが新興アジア通貨を圧迫するため、"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.872,
+      "speechEnd": 15.75,
+      "end": 16.61,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "外国投資と評価の逆風に直面している。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.61,
+      "speechEnd": 19.536,
+      "end": 19.816,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インドネシア・ルピアは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.816,
+      "speechEnd": 28.595,
+      "end": 28.876,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "9月25日に5月以来最大の週次下落に向かって動き、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 28.876,
+      "speechEnd": 35.146,
+      "end": 36.007,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ドルの資金調達状況が引き締まっていることを示している。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.007,
+      "speechEnd": 40.675,
+      "end": 40.955,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信は9月25日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.955,
+      "speechEnd": 46.877,
+      "end": 47.218,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "米国債利回りの上昇と米ドルの上昇に打撃を受け"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.218,
+      "speechEnd": 50.214,
+      "end": 50.494,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "たインドネシア・ルピアは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.494,
+      "speechEnd": 58.297,
+      "end": 58.577,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アジアの新興市場国の外部金融環境の逼迫を反映して、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.577,
+      "speechEnd": 66.521,
+      "end": 67.301,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "5月以来最大の週次下落を記録する見通しだと報じた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 67.301,
+      "speechEnd": 70.715,
+      "end": 70.995,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "EMXCは中国を除き、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 70.995,
+      "speechEnd": 75.385,
+      "end": 75.665,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "複数のアジア市場に集中しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 75.665,
+      "speechEnd": 83.329,
+      "end": 83.949,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "米ドルと米ドルの利子を共同融資コスト変数としています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 83.949,
+      "speechEnd": 91.335,
+      "end": 91.675,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "AIサプライチェーンは依然として台湾と韓国のテクノロジー株を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.675,
+      "speechEnd": 95.856,
+      "end": 96.136,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "サポートする可能性がありますが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 96.136,
+      "speechEnd": 101.292,
+      "end": 101.632,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "為替レートと外国資本の流れの圧力が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.632,
+      "speechEnd": 108.181,
+      "end": 108.961,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "全体的な評価の拡大を制限する可能性があります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 108.961,
+      "speechEnd": 112.933,
+      "end": 113.553,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 113.553,
+      "speechEnd": 116.758,
+      "end": 117.038,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米ドルの融資条件は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 117.038,
+      "speechEnd": 125.4,
+      "end": 126.26,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "EMXCの主要市場の評価と資本フローに同時に影響を及ぼします。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 126.26,
+      "speechEnd": 128.35,
+      "end": 128.63,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 128.63,
+      "speechEnd": 130.72,
+      "end": 131.0,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米ドル、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 131.0,
+      "speechEnd": 135.32,
+      "end": 135.6,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "台湾と韓国の外国資本の流れ、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 135.6,
+      "speechEnd": 138.457,
+      "end": 138.737,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インドのリスク選好、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 138.737,
+      "speechEnd": 142.709,
+      "end": 143.569,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "アジア通貨に注目してください。"
+    }
+  ]
+}

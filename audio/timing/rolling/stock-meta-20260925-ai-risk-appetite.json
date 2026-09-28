@@ -1,0 +1,350 @@
+{
+  "version": 3,
+  "duration": 151.197,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 474,
+  "charactersPerMinute": 188.1,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 17.368,
+      "text": "AI に対する楽観的な見方が世界の株式ファンドのリターンを促し、メタの大規模 AI 投資がリスク選好の支持を取り戻す"
+    },
+    {
+      "key": "dek",
+      "start": 17.368,
+      "end": 33.699,
+      "text": "米国株式ファンドは５週間ぶりに資金流入を記録し、世界株式ファンドは２週連続の資金流出に終止符を打った。"
+    },
+    {
+      "key": "body-0",
+      "start": 33.699,
+      "end": 66.687,
+      "text": "9月25日のロイターのキャピタルフローデータによると、米国のエクイティファンドは5週間ぶりの純流入を記録し、グローバルエクイティファンドも7月初旬以来最も多くの資金を集めており、AIの楽観主義が重要な推進力となっています。"
+    },
+    {
+      "key": "body-1",
+      "start": 66.687,
+      "end": 110.812,
+      "text": "Metaにとって、これは評価と資本市場の読み取りであり、新しい会社の収益ではありません。同社はAIインフラへの投資を継続しており、資本支出のリターンを証明するためには広告効率、ユーザーエンゲージメント、新製品の実現が依然として必要ですが、AIのリスク選好は改善され、短期的な評価の逆風が軽減されます。"
+    },
+    {
+      "key": "why",
+      "start": 110.812,
+      "end": 134.792,
+      "text": "AIをテーマにした資金の流れは大手テクノロジー企業の評価に影響を与えるだろうが、長期的には依然として実際の投資収益に依存する。"
+    },
+    {
+      "key": "watch",
+      "start": 134.792,
+      "end": 151.197,
+      "text": "AI の設備投資、広告効率、ユーザー エンゲージメント、フリー キャッシュ フローに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.763,
+      "end": 4.103,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "AI に対する楽観的な見方が"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.103,
+      "speechEnd": 9.329,
+      "end": 9.609,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "世界の株式ファンドのリターンを促し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.609,
+      "speechEnd": 16.507,
+      "end": 17.368,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "メタの大規模 AI 投資がリスク選好の支持を取り戻す。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.368,
+      "speechEnd": 24.963,
+      "end": 25.243,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国株式ファンドは５週間ぶりに資金流入を記録し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.243,
+      "speechEnd": 32.838,
+      "end": 33.699,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "世界株式ファンドは２週連続の資金流出に終止符を打った。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 33.699,
+      "speechEnd": 41.085,
+      "end": 41.365,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "9月25日のロイターのキャピタルフローデータによると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.365,
+      "speechEnd": 44.57,
+      "end": 44.75,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "米国のエクイティファンドは"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.75,
+      "speechEnd": 46.841,
+      "end": 47.021,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "5週間"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.021,
+      "speechEnd": 50.365,
+      "end": 50.645,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ぶりの純流入を記録し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.645,
+      "speechEnd": 59.913,
+      "end": 60.193,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "グローバルエクイティファンドも7月初旬以来最も多くの資金を集めており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.193,
+      "speechEnd": 65.907,
+      "end": 66.687,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "AIの楽観主義が重要な推進力となっています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 66.687,
+      "speechEnd": 69.126,
+      "end": 69.406,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Metaにとって、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 69.406,
+      "speechEnd": 74.144,
+      "end": 74.425,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "これは評価と資本市場の読み取りであり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 74.425,
+      "speechEnd": 79.093,
+      "end": 79.713,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "新しい会社の収益ではありません。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 79.713,
+      "speechEnd": 85.288,
+      "end": 85.568,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同社はAIインフラへの投資を継続しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 85.568,
+      "speechEnd": 91.839,
+      "end": 92.119,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "資本支出のリターンを証明するためには広告効率、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.119,
+      "speechEnd": 95.046,
+      "end": 95.326,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ユーザーエンゲージメント、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 95.326,
+      "speechEnd": 100.9,
+      "end": 101.181,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "新製品の実現が依然として必要ですが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.181,
+      "speechEnd": 105.222,
+      "end": 105.502,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "AIのリスク選好は改善され、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 105.502,
+      "speechEnd": 110.031,
+      "end": 110.812,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "短期的な評価の逆風が軽減されます。"
+    },
+    {
+      "parentKey": "why",
+      "start": 110.812,
+      "speechEnd": 114.783,
+      "end": 115.404,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 115.404,
+      "speechEnd": 119.654,
+      "end": 119.994,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "AIをテーマにした資金の流れは"
+    },
+    {
+      "parentKey": "why",
+      "start": 119.994,
+      "speechEnd": 126.823,
+      "end": 127.103,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "大手テクノロジー企業の評価に影響を与えるだろうが、"
+    },
+    {
+      "parentKey": "why",
+      "start": 127.103,
+      "speechEnd": 133.932,
+      "end": 134.792,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "長期的には依然として実際の投資収益に依存する。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 134.792,
+      "speechEnd": 136.883,
+      "end": 137.163,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 137.163,
+      "speechEnd": 139.741,
+      "end": 140.021,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "AI の設備投資、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 140.021,
+      "speechEnd": 142.111,
+      "end": 142.391,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "広告効率、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 142.391,
+      "speechEnd": 145.457,
+      "end": 145.738,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ユーザー エンゲージメント、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 145.738,
+      "speechEnd": 150.336,
+      "end": 151.197,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "フリー キャッシュ フローに注目してください。"
+    }
+  ]
+}

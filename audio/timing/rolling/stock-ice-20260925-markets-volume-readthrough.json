@@ -1,0 +1,370 @@
+{
+  "version": 3,
+  "duration": 145.633,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 425,
+  "charactersPerMinute": 175.1,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 17.31,
+      "text": "グローバル株式は、債券売却、金利、石油価格の変動に耐え、取引とリスク管理のニーズを維持します"
+    },
+    {
+      "key": "dek",
+      "start": 17.31,
+      "end": 36.498,
+      "text": "世界の株式市場は9月25日に8月上旬以来最高の週を迎えましたが、債券市場は依然として高い利回りの圧力にさらされています。"
+    },
+    {
+      "key": "body-0",
+      "start": 36.498,
+      "end": 71.078,
+      "text": "ロイター通信が9月25日に報じたところによると、世界の株式市場はAIの楽観的な見方に支えられ、8月上旬以来最高の週に向かっている一方で、債券市場は依然として高金利環境を消化しており、原油価格は依然として不安定なままだった。"
+    },
+    {
+      "key": "body-1",
+      "start": 71.078,
+      "end": 112.276,
+      "text": "インターコンチネンタルエクスチェンジでは、金利、エネルギー、株式市場の変動により、先物、清算、価格設定、リスクデータに対する顧客の需要が増加します。これはICEの新しい収益発表ではありませんが、取引およびデータインフラストラクチャのリアルタイムの市場リードスルーです。"
+    },
+    {
+      "key": "why",
+      "start": 112.276,
+      "end": 131.459,
+      "text": "クロスアセットボラティリティは、ICE取引、清算、およびデータ製品の使用に直接影響します。"
+    },
+    {
+      "key": "watch",
+      "start": 131.459,
+      "end": 145.633,
+      "text": "金利とエネルギー先物取引量、オープン契約、ICE月次統計に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.857,
+      "end": 3.137,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "グローバル株式は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.137,
+      "speechEnd": 5.297,
+      "end": 5.577,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "債券売却、"
+    },
+    {
+      "parentKey": "title",
+      "start": 5.577,
+      "speechEnd": 7.598,
+      "end": 7.878,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "金利、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.878,
+      "speechEnd": 11.501,
+      "end": 11.781,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "石油価格の変動に耐え、"
+    },
+    {
+      "parentKey": "title",
+      "start": 11.781,
+      "speechEnd": 16.45,
+      "end": 17.31,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "取引とリスク管理のニーズを維持します。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.31,
+      "speechEnd": 28.32,
+      "end": 28.6,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "世界の株式市場は9月25日に8月上旬以来最高の週を迎えましたが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 28.6,
+      "speechEnd": 35.637,
+      "end": 36.498,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "債券市場は依然として高い利回りの圧力にさらされています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.498,
+      "speechEnd": 43.605,
+      "end": 43.885,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信が9月25日に報じたところによると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.885,
+      "speechEnd": 50.853,
+      "end": 51.133,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "世界の株式市場はAIの楽観的な見方に支えられ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.133,
+      "speechEnd": 57.544,
+      "end": 57.824,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "8月上旬以来最高の週に向かっている一方で、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.824,
+      "speechEnd": 64.025,
+      "end": 64.305,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "債券市場は依然として高金利環境を消化しており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.305,
+      "speechEnd": 70.298,
+      "end": 71.078,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "原油価格は依然として不安定なままだった。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 71.078,
+      "speechEnd": 74.98,
+      "end": 75.26,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インターコンチネンタルエクスチェンジでは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 75.26,
+      "speechEnd": 77.281,
+      "end": 77.561,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "金利、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 77.561,
+      "speechEnd": 79.651,
+      "end": 79.931,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "エネルギー、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 79.931,
+      "speechEnd": 83.137,
+      "end": 83.417,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "株式市場の変動により、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 83.417,
+      "speechEnd": 85.437,
+      "end": 85.717,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "先物、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 85.717,
+      "speechEnd": 87.738,
+      "end": 88.018,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "清算、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.018,
+      "speechEnd": 90.178,
+      "end": 90.458,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "価格設定、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.458,
+      "speechEnd": 95.615,
+      "end": 96.235,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "リスクデータに対する顧客の需要が増加します。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 96.235,
+      "speechEnd": 103.273,
+      "end": 103.553,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "これはICEの新しい収益発表ではありませんが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.553,
+      "speechEnd": 111.496,
+      "end": 112.276,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "取引およびデータインフラストラクチャのリアルタイムの市場リードスルーです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 112.276,
+      "speechEnd": 116.248,
+      "end": 116.868,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 116.868,
+      "speechEnd": 120.143,
+      "end": 120.423,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "クロスアセットボラティリティは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 120.423,
+      "speechEnd": 122.583,
+      "end": 122.863,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ICE取引、"
+    },
+    {
+      "parentKey": "why",
+      "start": 122.863,
+      "speechEnd": 124.884,
+      "end": 125.164,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "清算、"
+    },
+    {
+      "parentKey": "why",
+      "start": 125.164,
+      "speechEnd": 130.599,
+      "end": 131.459,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "およびデータ製品の使用に直接影響します。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 131.459,
+      "speechEnd": 133.55,
+      "end": 133.83,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 133.83,
+      "speechEnd": 137.384,
+      "end": 137.664,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "金利とエネルギー先物取引量、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 137.664,
+      "speechEnd": 139.963,
+      "end": 140.243,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "オープン契約、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 140.243,
+      "speechEnd": 144.772,
+      "end": 145.633,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ICE月次統計に注意してください。"
+    }
+  ]
+}

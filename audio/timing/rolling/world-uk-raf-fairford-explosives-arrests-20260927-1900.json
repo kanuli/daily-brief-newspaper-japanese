@@ -1,0 +1,410 @@
+{
+  "version": 3,
+  "duration": 212.297,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 633,
+  "charactersPerMinute": 178.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 17.783,
+      "text": "英国空軍基地付近で英国軍が爆発物を使用した事件では複数人が逮捕され、軍の爆弾処理チームが車両を検査した。"
+    },
+    {
+      "key": "dek",
+      "start": 17.783,
+      "end": 43.928,
+      "text": "英国警察はフェアフォード空軍基地付近で爆発物法違反の疑いで多数の男を逮捕し、ウェルフォードの住民の一部は避難した。警察は、事件は制御下にあると考えられると述べた。"
+    },
+    {
+      "key": "body-0",
+      "start": 43.928,
+      "end": 91.299,
+      "text": "英国グロスターシャー州警察は日曜日、フェアフォード空軍基地付近で爆発物取締法違反の疑いで複数の男が逮捕され、当局はこの事件を重大事件に分類したと発表した。軍の爆発物処理担当者が複数の車両を検査している。近くのウェルフォードの住民の一部はレジャーセンターに避難しており、現場には立ち入り禁止エリアが設置されている。"
+    },
+    {
+      "key": "body-1",
+      "start": 91.299,
+      "end": 143.91,
+      "text": "フェアフォード空軍基地はイギリス空軍によって管理され、アメリカ空軍によって使用されており、最近では警備が大幅に強化されています。警察は、事件は制御下にあると信じていると述べたが、これまでのところ、逮捕者の行動が基地に直接関係していることは確認しておらず、関与した物品、容疑者の身元、具体的な動機も公表していない。調査はまだ進行中です。"
+    },
+    {
+      "key": "why",
+      "start": 143.91,
+      "end": 181.684,
+      "text": "この事件は爆発物使用に関するもので、米軍が使用する軍事基地の近くで発生した。当局は同時に住民を避難させ、軍用爆弾処理の専門家を派遣したが、これは当面の公共の安全と軍事施設の安全確保に重要である。"
+    },
+    {
+      "key": "watch",
+      "start": 181.684,
+      "end": 212.297,
+      "text": "警察が逮捕者数、爆発物や関係車両の検査結果を発表するかどうか、そして捜査によってこの事件とフェアフォード空軍空軍やその他の軍事施設との直接の関連が確認されるかどうかに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.459,
+      "end": 4.799,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "英国空軍基地付近で英国軍が"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.799,
+      "speechEnd": 11.348,
+      "end": 11.628,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "爆発物を使用した事件では複数人が逮捕され、"
+    },
+    {
+      "parentKey": "title",
+      "start": 11.628,
+      "speechEnd": 16.923,
+      "end": 17.783,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "軍の爆弾処理チームが車両を検査した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.783,
+      "speechEnd": 29.069,
+      "end": 29.349,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "英国警察はフェアフォード空軍基地付近で爆発物法違反の疑いで多数の男を逮捕し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 29.349,
+      "speechEnd": 34.574,
+      "end": 35.194,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ウェルフォードの住民の一部は避難した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 35.194,
+      "speechEnd": 37.215,
+      "end": 37.495,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "警察は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 37.495,
+      "speechEnd": 43.068,
+      "end": 43.928,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "事件は制御下にあると考えられると述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.928,
+      "speechEnd": 48.596,
+      "end": 48.876,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "英国グロスターシャー州警察は日曜日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.876,
+      "speechEnd": 59.048,
+      "end": 59.328,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "フェアフォード空軍基地付近で爆発物取締法違反の疑いで複数の男が逮捕され、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.328,
+      "speechEnd": 66.643,
+      "end": 67.263,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "当局はこの事件を重大事件に分類したと発表した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.263,
+      "speechEnd": 74.996,
+      "end": 75.617,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "軍の爆発物処理担当者が複数の車両を検査している。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.617,
+      "speechEnd": 80.424,
+      "end": 80.764,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "近くのウェルフォードの住民の一部は"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 80.764,
+      "speechEnd": 84.735,
+      "end": 85.015,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "レジャーセンターに避難しており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 85.015,
+      "speechEnd": 90.519,
+      "end": 91.299,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "現場には立ち入り禁止エリアが設置されている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.299,
+      "speechEnd": 97.987,
+      "end": 98.267,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "フェアフォード空軍基地はイギリス空軍によって管理され、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 98.267,
+      "speechEnd": 102.656,
+      "end": 102.936,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アメリカ空軍によって使用されており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.936,
+      "speechEnd": 108.301,
+      "end": 108.921,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "最近では警備が大幅に強化されています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.921,
+      "speechEnd": 110.941,
+      "end": 111.221,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "警察は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.221,
+      "speechEnd": 117.213,
+      "end": 117.493,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "事件は制御下にあると信じていると述べたが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.493,
+      "speechEnd": 120.419,
+      "end": 120.699,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "これまでのところ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.699,
+      "speechEnd": 128.641,
+      "end": 128.921,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "逮捕者の行動が基地に直接関係していることは確認しておらず、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 128.921,
+      "speechEnd": 131.499,
+      "end": 131.779,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "関与した物品、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 131.779,
+      "speechEnd": 134.357,
+      "end": 134.637,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "容疑者の身元、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 134.637,
+      "speechEnd": 138.887,
+      "end": 139.507,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "具体的な動機も公表していない。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 139.507,
+      "speechEnd": 143.129,
+      "end": 143.91,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "調査はまだ進行中です。"
+    },
+    {
+      "parentKey": "why",
+      "start": 143.91,
+      "speechEnd": 147.881,
+      "end": 148.501,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 148.501,
+      "speechEnd": 154.074,
+      "end": 154.354,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この事件は爆発物使用に関するもので、"
+    },
+    {
+      "parentKey": "why",
+      "start": 154.354,
+      "speechEnd": 160.485,
+      "end": 161.105,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "米軍が使用する軍事基地の近くで発生した。"
+    },
+    {
+      "parentKey": "why",
+      "start": 161.105,
+      "speechEnd": 165.773,
+      "end": 166.053,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "当局は同時に住民を避難させ、"
+    },
+    {
+      "parentKey": "why",
+      "start": 166.053,
+      "speechEnd": 171.139,
+      "end": 171.419,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "軍用爆弾処理の専門家を派遣したが、"
+    },
+    {
+      "parentKey": "why",
+      "start": 171.419,
+      "speechEnd": 180.824,
+      "end": 181.684,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "これは当面の公共の安全と軍事施設の安全確保に重要である。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 181.684,
+      "speechEnd": 183.774,
+      "end": 184.054,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 184.054,
+      "speechEnd": 186.772,
+      "end": 187.052,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "警察が逮捕者数、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 187.052,
+      "speechEnd": 194.088,
+      "end": 194.368,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "爆発物や関係車両の検査結果を発表するかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 194.368,
+      "speechEnd": 211.437,
+      "end": 212.297,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "そして捜査によってこの事件とフェアフォード空軍空軍やその他の軍事施設との直接の関連が確認されるかどうかに注目してください。"
+    }
+  ]
+}

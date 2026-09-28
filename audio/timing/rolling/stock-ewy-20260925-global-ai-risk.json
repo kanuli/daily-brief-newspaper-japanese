@@ -1,0 +1,300 @@
+{
+  "version": 3,
+  "duration": 141.61,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 472,
+  "charactersPerMinute": 200.0,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 13.403,
+      "text": "AIの楽観主義に支えられたグローバル株式、韓国のハイテク加重市場がリスク選好の読み取りを獲得"
+    },
+    {
+      "key": "dek",
+      "start": 13.403,
+      "end": 29.105,
+      "text": "グローバル株式は9月25日に8月上旬以来最高の週を迎え、AI取引はリスク資産を再サポートしています。"
+    },
+    {
+      "key": "body-0",
+      "start": 29.105,
+      "end": 64.44,
+      "text": "ロイター通信が9月25日に報じたところによると、世界の株式は8月上旬以来最高の週に向かっており、AIの楽観主義が債券売却による市場の圧力を支えている。テクノロジーサプライチェーンは、依然として世界的なリスクアペタイトの重要な推進力です。"
+    },
+    {
+      "key": "body-1",
+      "start": 64.44,
+      "end": 108.19,
+      "text": "EWYは韓国の大手技術・輸出企業に高度に集中しており、Samsung ElectronicsやSK Hynixなどのコアホールディングスは、AIメモリの需要とリスク選好の改善によって支えられる可能性があります。しかし、グルメ債と韓国ウォンのボラティリティは、依然として外国資本の流入とバリュエーションの拡大を制限する可能性があります。"
+    },
+    {
+      "key": "why",
+      "start": 108.19,
+      "end": 124.93,
+      "text": "EWYテクノロジーは高いパワーを持ち、グローバルなAIサイクルと資本コストに非常に敏感です。"
+    },
+    {
+      "key": "watch",
+      "start": 124.93,
+      "end": 141.61,
+      "text": "サムスンとSKハイニックスの受注、韓国ウォン、外国資本の流れと財務省の利回りに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 5.783,
+      "end": 6.063,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "AIの楽観主義に支えられたグローバル株式、"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.063,
+      "speechEnd": 12.542,
+      "end": 13.403,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "韓国のハイテク加重市場がリスク選好の読み取りを獲得。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.403,
+      "speechEnd": 22.948,
+      "end": 23.228,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "グローバル株式は9月25日に8月上旬以来最高の週を迎え、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.228,
+      "speechEnd": 28.244,
+      "end": 29.105,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "AI取引はリスク資産を再サポートしています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 29.105,
+      "speechEnd": 36.211,
+      "end": 36.491,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信が9月25日に報じたところによると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.491,
+      "speechEnd": 44.295,
+      "end": 44.575,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "世界の株式は8月上旬以来最高の週に向かっており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.575,
+      "speechEnd": 52.03,
+      "end": 52.65,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "AIの楽観主義が債券売却による市場の圧力を支えている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.65,
+      "speechEnd": 56.064,
+      "end": 56.344,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "テクノロジーサプライチェーンは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.344,
+      "speechEnd": 63.659,
+      "end": 64.44,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "依然として世界的なリスクアペタイトの重要な推進力です。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 64.44,
+      "speechEnd": 71.825,
+      "end": 72.105,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "EWYは韓国の大手技術・輸出企業に高度に集中しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 72.105,
+      "speechEnd": 79.421,
+      "end": 79.701,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Samsung ElectronicsやSK Hynixなどのコアホールディングスは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 79.701,
+      "speechEnd": 85.065,
+      "end": 85.406,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "AIメモリの需要とリスク選好の改善によって"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 85.406,
+      "speechEnd": 89.168,
+      "end": 89.788,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "支えられる可能性があります。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 89.788,
+      "speechEnd": 91.808,
+      "end": 92.089,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "しかし、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.089,
+      "speechEnd": 96.199,
+      "end": 96.479,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "グルメ債と韓国ウォンのボラティリティは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 96.479,
+      "speechEnd": 103.447,
+      "end": 103.787,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "依然として外国資本の流入とバリュエーションの拡大を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.787,
+      "speechEnd": 107.41,
+      "end": 108.19,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "制限する可能性があります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 108.19,
+      "speechEnd": 112.161,
+      "end": 112.781,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 112.781,
+      "speechEnd": 117.031,
+      "end": 117.311,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "EWYテクノロジーは高いパワーを持ち、"
+    },
+    {
+      "parentKey": "why",
+      "start": 117.311,
+      "speechEnd": 124.07,
+      "end": 124.93,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "グローバルなAIサイクルと資本コストに非常に敏感です。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 124.93,
+      "speechEnd": 127.02,
+      "end": 127.3,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 127.3,
+      "speechEnd": 130.784,
+      "end": 131.064,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "サムスンとSKハイニックスの受注、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 131.064,
+      "speechEnd": 133.293,
+      "end": 133.573,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "韓国ウォン、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 133.573,
+      "speechEnd": 140.75,
+      "end": 141.61,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "外国資本の流れと財務省の利回りに注意してください。"
+    }
+  ]
+}

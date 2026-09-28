@@ -1,0 +1,350 @@
+{
+  "version": 3,
+  "duration": 149.917,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 470,
+  "charactersPerMinute": 188.1,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.58,
+      "text": "グルメ金利と厳しい財政状況が続き、マクドナルドのパリティ戦略は消費者予算の圧力に直面しています"
+    },
+    {
+      "key": "dek",
+      "start": 14.58,
+      "end": 31.049,
+      "text": "市場は9月25日に引き続き金利上昇とドル高を消化しており、家計の資金調達コストは依然として高いままだった。"
+    },
+    {
+      "key": "body-0",
+      "start": 31.049,
+      "end": 74.463,
+      "text": "ロイター・グローバル・マーケッツ（ Reuters Global Markets ）は9月25日、米国債利回りは依然として高水準であり、投資家は長期的な金融環境の厳しい状況を引き続き評価していると報じた。この環境は、クレジット、住宅、および間接費予算を通じて消費者に影響を与えます。"
+    },
+    {
+      "key": "body-1",
+      "start": 74.463,
+      "end": 117.608,
+      "text": "マクドナルドでは、大規模なフランチャイズ投資とロイヤルティプログラムが最近提案されており、家族の予算がプレッシャーにさらされている場合、パリティポジショニング、乗客の流れ、プロモーションの効率がより重要です。これはコンシューマーリードスルーであり、会社が追加したイベントとしてラップされたマクロメッセージではありません。"
+    },
+    {
+      "key": "why",
+      "start": 117.608,
+      "end": 130.587,
+      "text": "マクドナルドのトラフィックは、可処分所得と価値に敏感です。"
+    },
+    {
+      "key": "watch",
+      "start": 130.587,
+      "end": 149.917,
+      "text": "米国のトラフィック、お得な食事のパフォーマンス、フランチャイズ投資、および既存店の売上に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.529,
+      "end": 4.809,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "グルメ金利と厳しい財政状況が続き、"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.809,
+      "speechEnd": 8.641,
+      "end": 8.981,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "マクドナルドのパリティ戦略は"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.981,
+      "speechEnd": 13.719,
+      "end": 14.58,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "消費者予算の圧力に直面しています。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.58,
+      "speechEnd": 23.289,
+      "end": 23.569,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "市場は9月25日に引き続き金利上昇とドル高を消化しており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.569,
+      "speechEnd": 30.189,
+      "end": 31.049,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "家計の資金調達コストは依然として高いままだった。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 31.049,
+      "speechEnd": 41.71,
+      "end": 41.99,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイター・グローバル・マーケッツ（ Reuters Global Markets ）は9月25日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.99,
+      "speechEnd": 47.424,
+      "end": 47.704,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国債利回りは依然として高水準であり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.704,
+      "speechEnd": 53.836,
+      "end": 54.176,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "投資家は長期的な金融環境の厳しい状況を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.176,
+      "speechEnd": 57.799,
+      "end": 58.42,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "引き続き評価していると報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.42,
+      "speechEnd": 60.789,
+      "end": 61.069,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この環境は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.069,
+      "speechEnd": 63.298,
+      "end": 63.578,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "クレジット、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.578,
+      "speechEnd": 65.599,
+      "end": 65.879,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "住宅、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.879,
+      "speechEnd": 73.683,
+      "end": 74.463,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "および間接費予算を通じて消費者に影響を与えます。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 74.463,
+      "speechEnd": 77.32,
+      "end": 77.6,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マクドナルドでは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 77.6,
+      "speechEnd": 86.031,
+      "end": 86.311,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "大規模なフランチャイズ投資とロイヤルティプログラムが最近提案されており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 86.311,
+      "speechEnd": 92.233,
+      "end": 92.514,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "家族の予算がプレッシャーにさらされている場合、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.514,
+      "speechEnd": 95.44,
+      "end": 95.72,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "パリティポジショニング、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 95.72,
+      "speechEnd": 98.019,
+      "end": 98.299,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "乗客の流れ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 98.299,
+      "speechEnd": 102.828,
+      "end": 103.449,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "プロモーションの効率がより重要です。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.449,
+      "speechEnd": 108.187,
+      "end": 108.467,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "これはコンシューマーリードスルーであり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.467,
+      "speechEnd": 116.828,
+      "end": 117.608,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "会社が追加したイベントとしてラップされたマクロメッセージではありません。"
+    },
+    {
+      "parentKey": "why",
+      "start": 117.608,
+      "speechEnd": 121.58,
+      "end": 122.2,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 122.2,
+      "speechEnd": 125.753,
+      "end": 126.034,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マクドナルドのトラフィックは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 126.034,
+      "speechEnd": 129.726,
+      "end": 130.587,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "可処分所得と価値に敏感です。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 130.587,
+      "speechEnd": 132.677,
+      "end": 132.957,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 132.957,
+      "speechEnd": 135.674,
+      "end": 135.955,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国のトラフィック、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 135.955,
+      "speechEnd": 139.856,
+      "end": 140.136,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "お得な食事のパフォーマンス、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 140.136,
+      "speechEnd": 142.715,
+      "end": 142.995,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "フランチャイズ投資、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 142.995,
+      "speechEnd": 149.057,
+      "end": 149.917,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "および既存店の売上に注目してください。"
+    }
+  ]
+}

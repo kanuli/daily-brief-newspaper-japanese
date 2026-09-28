@@ -1,0 +1,490 @@
+{
+  "version": 3,
+  "duration": 248.581,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 762,
+  "charactersPerMinute": 183.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 15.213,
+      "text": "ビル・ゲイツ氏、業界の自主規制だけでは不十分だと米国議会にAIの安全性を立法化するよう要請"
+    },
+    {
+      "key": "dek",
+      "start": 15.213,
+      "end": 48.326,
+      "text": "マイクロソフトの共同創設者ビル・ゲイツ氏は、AIのセキュリティには政府、法執行機関、議会が共同で義務的な保護・監督規則を制定する必要があり、適切な監督が業界の発展を著しく遅らせることはないと信じていると述べた。"
+    },
+    {
+      "key": "body-0",
+      "start": 48.326,
+      "end": 117.151,
+      "text": "ロイター通信の報道によると、マイクロソフトの共同創設者ビル・ゲイツ氏は日曜日に放送されたNBCの「ミート・ザ・プレス」のインタビューで、人工知能のセキュリティは企業の自主規制だけに頼ることはできないと述べたという。議会、法執行機関、政府は、義務的な監視とセキュリティ要件の策定に参加する必要があります。同氏は議会立法を明確に支持しており、関連規則は業界にとって限られたコンプライアンスコストを増加させるだけで、技術開発を大幅に遅らせることはないと信じている。"
+    },
+    {
+      "key": "body-1",
+      "start": 117.151,
+      "end": 189.311,
+      "text": "米国における AI の規制ルートに関しては、依然として明確な政治的意見の相違が存在します。トランプ大統領と新たな規制に反対する一部の人たちは、追加規制によって米国は中国とのAI競争で優位性を失う可能性があると考えている。ゲイツ氏は安全保障上のリスクは架空のものではないと反論し、AIについてトランプ大統領と直接話し合うことを望んでいる。この議論は、大規模モデル開発者、クラウドプラットフォーム、チップサプライチェーンに対する将来の連邦コンプライアンスの枠組みに影響を与えるだろう。"
+    },
+    {
+      "key": "why",
+      "start": 189.311,
+      "end": 222.079,
+      "text": "米国議会が連邦AI安全規制を推進すれば、モデルのテスト、インシデント報告、導入監視、企業のコンプライアンスコストがすべて変化し、米中のAI競争政策に影響を与える可能性がある。"
+    },
+    {
+      "key": "watch",
+      "start": 222.079,
+      "end": 248.581,
+      "text": "ホワイトハウスと議会が具体的なAI安全法案を提案するかどうか、ゲイツ氏とトランプ氏が会談するかどうか、そして強制監督制度に関する大手AI企業の公式立場に注目したい。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.508,
+      "end": 2.788,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ビル・ゲイツ氏、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.788,
+      "speechEnd": 14.353,
+      "end": 15.213,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "業界の自主規制だけでは不十分だと米国議会にAIの安全性を立法化するよう要請。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.213,
+      "speechEnd": 21.135,
+      "end": 21.415,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マイクロソフトの共同創設者ビル・ゲイツ氏は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.415,
+      "speechEnd": 25.107,
+      "end": 25.387,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "AIのセキュリティには政府、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.387,
+      "speechEnd": 27.686,
+      "end": 27.966,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "法執行機関、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.966,
+      "speechEnd": 36.466,
+      "end": 36.746,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "議会が共同で義務的な保護・監督規則を制定する必要があり、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 36.746,
+      "speechEnd": 43.643,
+      "end": 43.983,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "適切な監督が業界の発展を著しく遅らせることは"
+    },
+    {
+      "parentKey": "dek",
+      "start": 43.983,
+      "speechEnd": 47.466,
+      "end": 48.326,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ないと信じていると述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.326,
+      "speechEnd": 51.949,
+      "end": 52.229,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信の報道によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.229,
+      "speechEnd": 58.012,
+      "end": 58.352,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "マイクロソフトの共同創設者ビル・ゲイツ氏は"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.352,
+      "speechEnd": 67.13,
+      "end": 67.41,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日曜日に放送されたNBCの「ミート・ザ・プレス」のインタビューで、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.41,
+      "speechEnd": 74.655,
+      "end": 74.995,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "人工知能のセキュリティは企業の自主規制だけに頼ることは"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.995,
+      "speechEnd": 78.13,
+      "end": 78.751,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "できないと述べたという。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 78.751,
+      "speechEnd": 80.771,
+      "end": 81.051,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "議会、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 81.051,
+      "speechEnd": 83.35,
+      "end": 83.63,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "法執行機関、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 83.63,
+      "speechEnd": 85.79,
+      "end": 86.07,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "政府は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 86.07,
+      "speechEnd": 93.733,
+      "end": 94.353,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "義務的な監視とセキュリティ要件の策定に参加する必要があります。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 94.353,
+      "speechEnd": 100.136,
+      "end": 100.416,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同氏は議会立法を明確に支持しており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 100.416,
+      "speechEnd": 109.403,
+      "end": 109.683,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "関連規則は業界にとって限られたコンプライアンスコストを増加させるだけで、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 109.683,
+      "speechEnd": 116.371,
+      "end": 117.151,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "技術開発を大幅に遅らせることはないと信じている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.151,
+      "speechEnd": 122.585,
+      "end": 122.865,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国における AI の規制ルートに関しては、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 122.865,
+      "speechEnd": 130.041,
+      "end": 130.661,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "依然として明確な政治的意見の相違が存在します。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 130.661,
+      "speechEnd": 138.255,
+      "end": 138.535,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "トランプ大統領と新たな規制に反対する一部の人たちは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 138.535,
+      "speechEnd": 146.129,
+      "end": 146.469,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "追加規制によって米国は中国とのAI競争で優位性を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 146.469,
+      "speechEnd": 150.44,
+      "end": 151.06,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "失う可能性があると考えている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 151.06,
+      "speechEnd": 155.588,
+      "end": 155.928,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ゲイツ氏は安全保障上のリスクは"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 155.928,
+      "speechEnd": 160.039,
+      "end": 160.319,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "架空のものではないと反論し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 160.319,
+      "speechEnd": 168.122,
+      "end": 168.742,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "AIについてトランプ大統領と直接話し合うことを望んでいる。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 168.742,
+      "speechEnd": 171.041,
+      "end": 171.321,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この議論は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 171.321,
+      "speechEnd": 174.525,
+      "end": 174.805,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "大規模モデル開発者、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 174.805,
+      "speechEnd": 177.731,
+      "end": 178.012,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "クラウドプラットフォーム、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 178.012,
+      "speechEnd": 188.531,
+      "end": 189.311,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "チップサプライチェーンに対する将来の連邦コンプライアンスの枠組みに影響を与えるだろう。"
+    },
+    {
+      "parentKey": "why",
+      "start": 189.311,
+      "speechEnd": 193.283,
+      "end": 193.903,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 193.903,
+      "speechEnd": 200.312,
+      "end": 200.592,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国議会が連邦AI安全規制を推進すれば、"
+    },
+    {
+      "parentKey": "why",
+      "start": 200.592,
+      "speechEnd": 202.961,
+      "end": 203.241,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "モデルのテスト、"
+    },
+    {
+      "parentKey": "why",
+      "start": 203.241,
+      "speechEnd": 205.749,
+      "end": 206.029,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インシデント報告、"
+    },
+    {
+      "parentKey": "why",
+      "start": 206.029,
+      "speechEnd": 208.189,
+      "end": 208.469,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "導入監視、"
+    },
+    {
+      "parentKey": "why",
+      "start": 208.469,
+      "speechEnd": 213.833,
+      "end": 214.113,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "企業のコンプライアンスコストがすべて変化し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 214.113,
+      "speechEnd": 221.219,
+      "end": 222.079,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "米中のAI競争政策に影響を与える可能性がある。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 222.079,
+      "speechEnd": 224.169,
+      "end": 224.449,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 224.449,
+      "speechEnd": 232.67,
+      "end": 232.95,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ホワイトハウスと議会が具体的なAI安全法案を提案するかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 232.95,
+      "speechEnd": 238.036,
+      "end": 238.316,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ゲイツ氏とトランプ氏が会談するかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 238.316,
+      "speechEnd": 247.721,
+      "end": 248.581,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "そして強制監督制度に関する大手AI企業の公式立場に注目したい。"
+    }
+  ]
+}

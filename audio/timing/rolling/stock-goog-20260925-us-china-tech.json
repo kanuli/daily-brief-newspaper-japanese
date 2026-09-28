@@ -1,0 +1,400 @@
+{
+  "version": 3,
+  "duration": 172.251,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 541,
+  "charactersPerMinute": 188.4,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 19.665,
+      "text": "トランプ-習近平国家宴会はGoogleや他のハイテク幹部を集め、中米の科学技術政策は依然としてアルファベットの重要な外部変数です"
+    },
+    {
+      "key": "dek",
+      "start": 19.665,
+      "end": 42.605,
+      "text": "Googleの最高経営責任者（ CEO ） Sundar Pichai氏がホワイトハウスの州晩餐会に出席し、テクノロジー企業と中米政策の相互作用が再び市場の焦点となっています。"
+    },
+    {
+      "key": "body-0",
+      "start": 42.605,
+      "end": 88.097,
+      "text": "ロイター通信が9月25日に報じたところによると、トランプ氏はグーグルCEOのサンダー・ピチャイ氏を含む多くの大手ハイテク企業のリーダーをホワイトハウスで開催される国家晩餐会に招待したという。中米のハイレベルな交流により、テクノロジー、AI、クロスボーダー市場へのアクセスが投資家の注目を集めるようになりました。"
+    },
+    {
+      "key": "body-1",
+      "start": 88.097,
+      "end": 136.39,
+      "text": "Alphabetにとって、これは新しい収益イベントではありませんが、政策環境はさまざまな市場でのAIチップ、クラウドサービス、広告、および製品の可用性に影響を与える可能性があります。市場の次のステップは、サミット後に特定の技術、輸出管理、または市場アクセスの取り決めが出現するかどうかに焦点を当てることです。"
+    },
+    {
+      "key": "why",
+      "start": 136.39,
+      "end": 156.756,
+      "text": "中国と米国のポリシーは、Alphabetの製品展開、サプライチェーン、規制リスクを変える可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 156.756,
+      "end": 172.251,
+      "text": "サミット後の科学技術政策、輸出管理、Googleの管理の意見に注意を払ってください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.041,
+      "end": 4.381,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "トランプ-習近平国家宴会は"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.381,
+      "speechEnd": 8.771,
+      "end": 9.051,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Googleや他のハイテク幹部を集め、"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.051,
+      "speechEnd": 18.805,
+      "end": 19.665,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "中米の科学技術政策は依然としてアルファベットの重要な外部変数です。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.665,
+      "speechEnd": 31.231,
+      "end": 31.511,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Googleの最高経営責任者（ CEO ） Sundar Pichai氏がホワイトハウスの州晩餐会に出席し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 31.511,
+      "speechEnd": 37.572,
+      "end": 37.912,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "テクノロジー企業と中米政策の相互作用が"
+    },
+    {
+      "parentKey": "dek",
+      "start": 37.912,
+      "speechEnd": 41.745,
+      "end": 42.605,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "再び市場の焦点となっています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.605,
+      "speechEnd": 49.711,
+      "end": 49.991,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信が9月25日に報じたところによると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.991,
+      "speechEnd": 55.844,
+      "end": 56.184,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "トランプ氏はグーグルCEOのサンダー・ピチャイ氏を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.184,
+      "speechEnd": 67.889,
+      "end": 68.509,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "含む多くの大手ハイテク企業のリーダーをホワイトハウスで開催される国家晩餐会に招待したという。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.509,
+      "speechEnd": 72.829,
+      "end": 73.109,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "中米のハイレベルな交流により、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.109,
+      "speechEnd": 75.408,
+      "end": 75.688,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "テクノロジー、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.688,
+      "speechEnd": 77.709,
+      "end": 77.989,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "AI、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 77.989,
+      "speechEnd": 81.891,
+      "end": 82.231,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "クロスボーダー市場へのアクセスが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 82.231,
+      "speechEnd": 87.317,
+      "end": 88.097,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "投資家の注目を集めるようになりました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.097,
+      "speechEnd": 90.884,
+      "end": 91.164,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Alphabetにとって、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.164,
+      "speechEnd": 97.226,
+      "end": 97.506,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "これは新しい収益イベントではありませんが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.506,
+      "speechEnd": 103.219,
+      "end": 103.499,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "政策環境はさまざまな市場でのAIチップ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.499,
+      "speechEnd": 106.007,
+      "end": 106.287,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "クラウドサービス、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 106.287,
+      "speechEnd": 108.308,
+      "end": 108.588,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "広告、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.588,
+      "speechEnd": 116.043,
+      "end": 116.663,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "および製品の可用性に影響を与える可能性があります。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 116.663,
+      "speechEnd": 119.729,
+      "end": 120.009,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "市場の次のステップは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.009,
+      "speechEnd": 123.283,
+      "end": 123.563,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "サミット後に特定の技術、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 123.563,
+      "speechEnd": 125.723,
+      "end": 126.003,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "輸出管理、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 126.003,
+      "speechEnd": 129.905,
+      "end": 130.245,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "または市場アクセスの取り決めが"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 130.245,
+      "speechEnd": 135.61,
+      "end": 136.39,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "出現するかどうかに焦点を当てることです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 136.39,
+      "speechEnd": 140.361,
+      "end": 140.981,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 140.981,
+      "speechEnd": 144.604,
+      "end": 144.885,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "中国と米国のポリシーは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 144.885,
+      "speechEnd": 148.299,
+      "end": 148.579,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Alphabetの製品展開、"
+    },
+    {
+      "parentKey": "why",
+      "start": 148.579,
+      "speechEnd": 150.878,
+      "end": 151.158,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "サプライチェーン、"
+    },
+    {
+      "parentKey": "why",
+      "start": 151.158,
+      "speechEnd": 155.896,
+      "end": 156.756,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "規制リスクを変える可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 156.756,
+      "speechEnd": 158.846,
+      "end": 159.126,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 159.126,
+      "speechEnd": 163.028,
+      "end": 163.308,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "サミット後の科学技術政策、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 163.308,
+      "speechEnd": 165.468,
+      "end": 165.748,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "輸出管理、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 165.748,
+      "speechEnd": 171.391,
+      "end": 172.251,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "Googleの管理の意見に注意を払ってください。"
+    }
+  ]
+}

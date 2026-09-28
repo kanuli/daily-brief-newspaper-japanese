@@ -1,0 +1,440 @@
+{
+  "version": 3,
+  "duration": 215.876,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 600,
+  "charactersPerMinute": 166.8,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.309,
+      "text": "高石氏とトランプ氏は週２回会談、日米は中国と経済安全保障で連携を維持することを確認"
+    },
+    {
+      "key": "dek",
+      "start": 14.309,
+      "end": 45.608,
+      "text": "高市早苗氏は、習近平氏の訪米後の米中首脳会談についてトランプ大統領から詳細な説明を受けたと述べた。その後、両者は中国関連の経済、安全保障、経済安全保障問題について意見交換した。"
+    },
+    {
+      "key": "body-0",
+      "start": 45.608,
+      "end": 101.22,
+      "text": "首相官邸は、高市早苗氏が9月26日午後9時から約20分間、トランプ米大統領と電話会談したと発表した。高石氏は、トランプ大統領が訪米後、自ら率先して中国の習近平国家主席に電話し、最近の米中首脳会談についてかなり詳しく説明したと述べた。その後、両氏は経済、経済安全保障、安全保障など中国関連問題について意見交換した。"
+    },
+    {
+      "key": "body-1",
+      "start": 101.22,
+      "end": 154.729,
+      "text": "高石氏は、トランプ氏との首脳レベル会談は9月22日のニューヨークでの会談に続き、1週間以内で2回目であると指摘した。外交会談の具体的な内容は明らかにしなかったが、日米が今後も緊密に連携し、地域と世界の平和と安定に共同で貢献していくことを確認したと述べた。現段階では中国との新たな共同措置や政策スケジュールは発表されていない。"
+    },
+    {
+      "key": "why",
+      "start": 154.729,
+      "end": 185.189,
+      "text": "米中首脳会談直後のトランプ大統領の市場への説明は、米国が対中政策を調整する中、日本が高レベルの情報と政策調整チャンネルを維持することを望んでいることを示した。"
+    },
+    {
+      "key": "watch",
+      "start": 185.189,
+      "end": 215.876,
+      "text": "日本政府が中国に対するより具体的な経済安全保障や政策取り決めを発表するかどうか、またその後の日米閣僚級協議でサプライチェーン、技術、地域の安全保障対策が絡むかどうかに注目だ。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.947,
+      "end": 5.227,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "高石氏とトランプ氏は週２回会談、"
+    },
+    {
+      "parentKey": "title",
+      "start": 5.227,
+      "speechEnd": 13.449,
+      "end": 14.309,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "日米は中国と経済安全保障で連携を維持することを確認。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.309,
+      "speechEnd": 16.887,
+      "end": 17.167,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "高市早苗氏は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.167,
+      "speechEnd": 23.508,
+      "end": 23.848,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "習近平氏の訪米後の米中首脳会談について"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.848,
+      "speechEnd": 29.561,
+      "end": 30.181,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "トランプ大統領から詳細な説明を受けたと述べた。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 30.181,
+      "speechEnd": 32.272,
+      "end": 32.552,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "その後、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.552,
+      "speechEnd": 36.454,
+      "end": 36.734,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "両者は中国関連の経済、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 36.734,
+      "speechEnd": 39.103,
+      "end": 39.383,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "安全保障、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 39.383,
+      "speechEnd": 44.748,
+      "end": 45.608,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "経済安全保障問題について意見交換した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.608,
+      "speechEnd": 48.325,
+      "end": 48.605,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "首相官邸は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.605,
+      "speechEnd": 56.479,
+      "end": 56.759,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "高市早苗氏が9月26日午後9時から約20分間、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.759,
+      "speechEnd": 62.403,
+      "end": 63.023,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "トランプ米大統領と電話会談したと発表した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.023,
+      "speechEnd": 65.322,
+      "end": 65.602,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "高石氏は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.602,
+      "speechEnd": 69.016,
+      "end": 69.296,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "トランプ大統領が訪米後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.296,
+      "speechEnd": 76.264,
+      "end": 76.544,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "自ら率先して中国の習近平国家主席に電話し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.544,
+      "speechEnd": 84.836,
+      "end": 85.456,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "最近の米中首脳会談についてかなり詳しく説明したと述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 85.456,
+      "speechEnd": 87.546,
+      "end": 87.826,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "その後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 87.826,
+      "speechEnd": 90.265,
+      "end": 90.545,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "両氏は経済、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 90.545,
+      "speechEnd": 93.332,
+      "end": 93.612,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "経済安全保障、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 93.612,
+      "speechEnd": 100.44,
+      "end": 101.22,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "安全保障など中国関連問題について意見交換した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.22,
+      "speechEnd": 103.52,
+      "end": 103.8,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "高石氏は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.8,
+      "speechEnd": 108.259,
+      "end": 108.599,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "トランプ氏との首脳レベル会談は"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.599,
+      "speechEnd": 114.522,
+      "end": 114.802,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "9月22日のニューヨークでの会談に続き、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.802,
+      "speechEnd": 120.515,
+      "end": 121.135,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "1週間以内で2回目であると指摘した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.135,
+      "speechEnd": 127.894,
+      "end": 128.174,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "外交会談の具体的な内容は明らかにしなかったが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 128.174,
+      "speechEnd": 131.936,
+      "end": 132.217,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日米が今後も緊密に連携し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 132.217,
+      "speechEnd": 142.32,
+      "end": 142.94,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "地域と世界の平和と安定に共同で貢献していくことを確認したと述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 142.94,
+      "speechEnd": 153.949,
+      "end": 154.729,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "現段階では中国との新たな共同措置や政策スケジュールは発表されていない。"
+    },
+    {
+      "parentKey": "why",
+      "start": 154.729,
+      "speechEnd": 158.7,
+      "end": 159.32,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 159.32,
+      "speechEnd": 167.055,
+      "end": 167.335,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米中首脳会談直後のトランプ大統領の市場への説明は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 167.335,
+      "speechEnd": 172.421,
+      "end": 172.701,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国が対中政策を調整する中、"
+    },
+    {
+      "parentKey": "why",
+      "start": 172.701,
+      "speechEnd": 178.763,
+      "end": 179.103,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "日本が高レベルの情報と政策調整チャンネルを"
+    },
+    {
+      "parentKey": "why",
+      "start": 179.103,
+      "speechEnd": 184.329,
+      "end": 185.189,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "維持することを望んでいることを示した。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 185.189,
+      "speechEnd": 187.279,
+      "end": 187.559,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 187.559,
+      "speechEnd": 200.31,
+      "end": 200.59,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本政府が中国に対するより具体的な経済安全保障や政策取り決めを発表するかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 200.59,
+      "speechEnd": 205.955,
+      "end": 206.235,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "またその後の日米閣僚級協議でサプライチェーン、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 206.235,
+      "speechEnd": 208.256,
+      "end": 208.536,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "技術、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 208.536,
+      "speechEnd": 215.016,
+      "end": 215.876,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "地域の安全保障対策が絡むかどうかに注目だ。"
+    }
+  ]
+}

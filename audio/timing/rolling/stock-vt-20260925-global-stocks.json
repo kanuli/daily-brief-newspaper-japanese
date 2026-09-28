@@ -1,0 +1,320 @@
+{
+  "version": 3,
+  "duration": 143.673,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 400,
+  "charactersPerMinute": 167.0,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 13.614,
+      "text": "AIの楽観論が債券市場の圧力をいくらか相殺し、世界の株価は8月初旬以来の好週に向かう"
+    },
+    {
+      "key": "dek",
+      "start": 13.614,
+      "end": 32.594,
+      "text": "9月25日も世界の株式市場は底堅さを維持し、原油価格は若干下落し、投資家は高水準の米国債利回りを消化した。"
+    },
+    {
+      "key": "body-0",
+      "start": 32.594,
+      "end": 67.239,
+      "text": "ロイター通信は9月25日、世界の株価は8月初旬以来最高の週に向かいつつあり、AIの楽観主義がリスク資産を支え、原油価格も若干下落したと報じた。一方で、債券市場は依然として高水準の米国債利回りを消化し続けていた。"
+    },
+    {
+      "key": "body-1",
+      "start": 67.239,
+      "end": 107.46,
+      "text": "VT は米国、欧州、日本、新興市場をカバーしているため、単一企業のニュースよりも世界の株式資本の流れや市場間の金利がより代表的です。リスク選好の改善は広範な保有を支えているが、資本コストの高さは依然として長期的な株式評価を押し下げるだろう。"
+    },
+    {
+      "key": "why",
+      "start": 107.46,
+      "end": 122.389,
+      "text": "VT は世界の株式リスク選好とクロスマーケット資本コストを直接反映します。"
+    },
+    {
+      "key": "watch",
+      "start": 122.389,
+      "end": 143.673,
+      "text": "世界の資金の流れ、米国の長期債務、米ドル、原油価格、主要中央銀行からのシグナルに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 5.923,
+      "end": 6.203,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "AIの楽観論が債券市場の圧力をいくらか相殺し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.203,
+      "speechEnd": 12.753,
+      "end": 13.614,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "世界の株価は8月初旬以来の好週に向かう。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.614,
+      "speechEnd": 21.348,
+      "end": 21.629,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "9月25日も世界の株式市場は底堅さを維持し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.629,
+      "speechEnd": 25.67,
+      "end": 25.95,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "原油価格は若干下落し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.95,
+      "speechEnd": 31.734,
+      "end": 32.594,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "投資家は高水準の米国債利回りを消化した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 32.594,
+      "speechEnd": 37.263,
+      "end": 37.543,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信は9月25日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.543,
+      "speechEnd": 45.417,
+      "end": 45.697,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "世界の株価は8月初旬以来最高の週に向かいつつあり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.697,
+      "speechEnd": 50.366,
+      "end": 50.646,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "AIの楽観主義がリスク資産を支え、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.646,
+      "speechEnd": 55.803,
+      "end": 56.423,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "原油価格も若干下落したと報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.423,
+      "speechEnd": 58.514,
+      "end": 58.794,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "一方で、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.794,
+      "speechEnd": 66.459,
+      "end": 67.239,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "債券市場は依然として高水準の米国債利回りを消化し続けていた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 67.239,
+      "speechEnd": 69.608,
+      "end": 69.888,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "VT は米国、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 69.888,
+      "speechEnd": 71.909,
+      "end": 72.189,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "欧州、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 72.189,
+      "speechEnd": 74.21,
+      "end": 74.49,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 74.49,
+      "speechEnd": 78.602,
+      "end": 78.882,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "新興市場をカバーしているため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 78.882,
+      "speechEnd": 90.17,
+      "end": 90.79,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "単一企業のニュースよりも世界の株式資本の流れや市場間の金利がより代表的です。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.79,
+      "speechEnd": 97.132,
+      "end": 97.412,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "リスク選好の改善は広範な保有を支えているが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.412,
+      "speechEnd": 106.68,
+      "end": 107.46,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "資本コストの高さは依然として長期的な株式評価を押し下げるだろう。"
+    },
+    {
+      "parentKey": "why",
+      "start": 107.46,
+      "speechEnd": 111.432,
+      "end": 112.052,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 112.052,
+      "speechEnd": 121.529,
+      "end": 122.389,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "VT は世界の株式リスク選好とクロスマーケット資本コストを直接反映します。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 122.389,
+      "speechEnd": 124.48,
+      "end": 124.76,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 124.76,
+      "speechEnd": 127.896,
+      "end": 128.176,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "世界の資金の流れ、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 128.176,
+      "speechEnd": 131.311,
+      "end": 131.591,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国の長期債務、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 131.591,
+      "speechEnd": 133.682,
+      "end": 133.962,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米ドル、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 133.962,
+      "speechEnd": 136.262,
+      "end": 136.542,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "原油価格、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 136.542,
+      "speechEnd": 142.813,
+      "end": 143.673,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "主要中央銀行からのシグナルに注意してください。"
+    }
+  ]
+}

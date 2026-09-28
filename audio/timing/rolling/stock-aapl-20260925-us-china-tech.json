@@ -1,0 +1,390 @@
+{
+  "version": 3,
+  "duration": 156.108,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 480,
+  "charactersPerMinute": 184.5,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 18.69,
+      "text": "中米のハイレベル会談は技術とサプライチェーンに焦点を当て直され、Appleの中国へのエクスポージャーは政策シグナルによって推進された"
+    },
+    {
+      "key": "dek",
+      "start": 18.69,
+      "end": 41.074,
+      "text": "トランプ大統領と習近平国家主席の会談中、多くの米国のテクノロジービジネスリーダーが関連イベントに出席し、市場はフォローアップ政策の取り決めに注意を払った。"
+    },
+    {
+      "key": "body-0",
+      "start": 41.074,
+      "end": 72.778,
+      "text": "ロイターが9月25日に報じたところによると、トランプ大統領と習近平国家主席の会談中、大手テクノロジー企業の多くのリーダーがホワイトハウスのイベントに出席し、中米のテクノロジーとビジネス関係が再び市場の焦点となった。"
+    },
+    {
+      "key": "body-1",
+      "start": 72.778,
+      "end": 123.73,
+      "text": "Appleはこのイベントのために新しい契約を発表しなかったが、中国は依然としてサプライチェーン、製造、主要な消費者市場に関与している。関税、輸出管理、または市場アクセスの変更は、コスト、製品の供給、需要を通じて企業に影響を与える可能性があるため、サミット後の具体的なポリシーは、式典イベント自体よりも重要です。"
+    },
+    {
+      "key": "why",
+      "start": 123.73,
+      "end": 140.192,
+      "text": "Appleは、中国の製造業と消費者の需要にかなりのエクスポージャーを持っています。"
+    },
+    {
+      "key": "watch",
+      "start": 140.192,
+      "end": 156.108,
+      "text": "中国の関税、輸出規制、サプライチェーン政策、iPhoneの需要に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 8.431,
+      "end": 8.711,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "中米のハイレベル会談は技術とサプライチェーンに焦点を当て直され、"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.711,
+      "speechEnd": 13.17,
+      "end": 13.51,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "Appleの中国へのエクスポージャーは"
+    },
+    {
+      "parentKey": "title",
+      "start": 13.51,
+      "speechEnd": 17.83,
+      "end": 18.69,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "政策シグナルによって推進された。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.69,
+      "speechEnd": 25.03,
+      "end": 25.311,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "トランプ大統領と習近平国家主席の会談中、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.311,
+      "speechEnd": 30.467,
+      "end": 30.807,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "多くの米国のテクノロジービジネスリーダーが"
+    },
+    {
+      "parentKey": "dek",
+      "start": 30.807,
+      "speechEnd": 33.872,
+      "end": 34.152,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "関連イベントに出席し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 34.152,
+      "speechEnd": 40.214,
+      "end": 41.074,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "市場はフォローアップ政策の取り決めに注意を払った。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.074,
+      "speechEnd": 47.554,
+      "end": 47.834,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイターが9月25日に報じたところによると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.834,
+      "speechEnd": 54.175,
+      "end": 54.455,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "トランプ大統領と習近平国家主席の会談中、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.455,
+      "speechEnd": 59.541,
+      "end": 59.881,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "大手テクノロジー企業の多くのリーダーが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.881,
+      "speechEnd": 63.713,
+      "end": 63.993,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ホワイトハウスのイベントに出席し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.993,
+      "speechEnd": 68.313,
+      "end": 68.653,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "中米のテクノロジーとビジネス関係が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.653,
+      "speechEnd": 71.997,
+      "end": 72.778,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "再び市場の焦点となった。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 72.778,
+      "speechEnd": 81.139,
+      "end": 81.419,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Appleはこのイベントのために新しい契約を発表しなかったが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 81.419,
+      "speechEnd": 85.808,
+      "end": 86.088,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "中国は依然としてサプライチェーン、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 86.088,
+      "speechEnd": 88.109,
+      "end": 88.389,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "製造、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.389,
+      "speechEnd": 92.778,
+      "end": 93.399,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "主要な消費者市場に関与している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.399,
+      "speechEnd": 95.419,
+      "end": 95.699,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "関税、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 95.699,
+      "speechEnd": 97.859,
+      "end": 98.139,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "輸出管理、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 98.139,
+      "speechEnd": 101.971,
+      "end": 102.251,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "または市場アクセスの変更は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.251,
+      "speechEnd": 104.272,
+      "end": 104.552,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "コスト、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.552,
+      "speechEnd": 106.921,
+      "end": 107.201,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "製品の供給、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.201,
+      "speechEnd": 114.238,
+      "end": 114.518,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "需要を通じて企業に影響を与える可能性があるため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.518,
+      "speechEnd": 118.559,
+      "end": 118.839,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "サミット後の具体的なポリシーは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.839,
+      "speechEnd": 122.95,
+      "end": 123.73,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "式典イベント自体よりも重要です。"
+    },
+    {
+      "parentKey": "why",
+      "start": 123.73,
+      "speechEnd": 127.702,
+      "end": 128.322,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 128.322,
+      "speechEnd": 130.482,
+      "end": 130.762,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Appleは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 130.762,
+      "speechEnd": 139.332,
+      "end": 140.192,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "中国の製造業と消費者の需要にかなりのエクスポージャーを持っています。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 140.192,
+      "speechEnd": 142.283,
+      "end": 142.563,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 142.563,
+      "speechEnd": 145.001,
+      "end": 145.281,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "中国の関税、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 145.281,
+      "speechEnd": 147.441,
+      "end": 147.721,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "輸出規制、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 147.721,
+      "speechEnd": 150.787,
+      "end": 151.067,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "サプライチェーン政策、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 151.067,
+      "speechEnd": 155.248,
+      "end": 156.108,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "iPhoneの需要に注意してください。"
+    }
+  ]
+}

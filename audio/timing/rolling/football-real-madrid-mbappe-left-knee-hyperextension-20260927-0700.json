@@ -1,0 +1,430 @@
+{
+  "version": 3,
+  "duration": 198.766,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 621,
+  "charactersPerMinute": 187.5,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 5.799,
+      "text": "最新ニュース：確認済み情報"
+    },
+    {
+      "key": "dek",
+      "start": 5.799,
+      "end": 30.545,
+      "text": "レアル・マドリードの医療チームは、フランスのストライカー、キリアン・マクバービーが左後膝カプセルを過度に伸ばしたことを確認した。クラブは正式な休戦期間を発表しなかった。"
+    },
+    {
+      "key": "body-0",
+      "start": 30.545,
+      "end": 79.178,
+      "text": "レアル・マドリードは、クラブの医療チームが検査を完了した後、フランス人ストライカーの左後膝カプセルが過度に伸びているという診断に言及して、土曜日にマクバービーからの医療報告書を発表した。ムボビは以前、トルコでフランス代表でプレーしていたときに負傷していた。ロイターはまた、同じ診断を確認したとしてレアル・マドリードを引用した。"
+    },
+    {
+      "key": "body-1",
+      "start": 79.178,
+      "end": 136.381,
+      "text": "レアル・マドリードの役員は、マクバービーに具体的な休戦期間を設定していないが、回復の進捗状況はまだわからないため、現時点では推定復帰時間をクラブの確認と見なすべきではない。この負傷は、レアルマドリードの短期的なフロントラインのフットデプロイメントに影響を与えます。次のキーは、彼がチームトレーニングを再開するタイミング、そしてクラブが次の試合前にさらなる医療アップデートを発表するかどうかです。"
+    },
+    {
+      "key": "why",
+      "start": 136.381,
+      "end": 170.597,
+      "text": "公式の医学的診断では、試合中の不快感から左膝カプセルの問題が確認されました。正式な休戦期間がない場合でも、レアルマドリードの最近のロスターの選択に直接影響を与える可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 170.597,
+      "end": 198.766,
+      "text": "レアルマドリードの次の医療やトレーニングの最新情報、マクバービーが芝生を回復して軌道に戻れるかどうか、そして彼がクラブの次の公式トーナメントを欠場するかどうかに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.369,
+      "end": 2.709,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "punctuation-semantic",
+      "text": "最新ニュース："
+    },
+    {
+      "parentKey": "title",
+      "start": 2.709,
+      "speechEnd": 4.939,
+      "end": 5.799,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "確認済み情報。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 5.799,
+      "speechEnd": 10.049,
+      "end": 10.329,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "レアル・マドリードの医療チームは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 10.329,
+      "speechEnd": 13.256,
+      "end": 13.536,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "フランスのストライカー、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.536,
+      "speechEnd": 18.692,
+      "end": 19.032,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "キリアン・マクバービーが左後膝カプセルを"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.032,
+      "speechEnd": 23.352,
+      "end": 23.972,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "過度に伸ばしたことを確認した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.972,
+      "speechEnd": 29.685,
+      "end": 30.545,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "クラブは正式な休戦期間を発表しなかった。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 30.545,
+      "speechEnd": 33.751,
+      "end": 34.031,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "レアル・マドリードは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.031,
+      "speechEnd": 39.256,
+      "end": 39.536,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "クラブの医療チームが検査を完了した後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.536,
+      "speechEnd": 44.762,
+      "end": 45.102,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "フランス人ストライカーの左後膝カプセルが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.102,
+      "speechEnd": 50.258,
+      "end": 50.538,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "過度に伸びているという診断に言及して、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.538,
+      "speechEnd": 57.366,
+      "end": 57.987,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "土曜日にマクバービーからの医療報告書を発表した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.987,
+      "speechEnd": 60.495,
+      "end": 60.775,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ムボビは以前、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.775,
+      "speechEnd": 67.464,
+      "end": 68.084,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "トルコでフランス代表でプレーしていたときに負傷していた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.084,
+      "speechEnd": 70.453,
+      "end": 70.733,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイターはまた、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.733,
+      "speechEnd": 78.397,
+      "end": 79.178,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "同じ診断を確認したとしてレアル・マドリードを引用した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 79.178,
+      "speechEnd": 83.079,
+      "end": 83.36,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "レアル・マドリードの役員は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 83.36,
+      "speechEnd": 90.745,
+      "end": 91.025,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マクバービーに具体的な休戦期間を設定していないが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.025,
+      "speechEnd": 96.042,
+      "end": 96.322,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "回復の進捗状況はまだわからないため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 96.322,
+      "speechEnd": 104.265,
+      "end": 104.885,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "現時点では推定復帰時間をクラブの確認と見なすべきではない。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.885,
+      "speechEnd": 107.184,
+      "end": 107.465,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この負傷は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.465,
+      "speechEnd": 116.94,
+      "end": 117.561,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "レアルマドリードの短期的なフロントラインのフットデプロイメントに影響を与えます。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.561,
+      "speechEnd": 119.79,
+      "end": 120.07,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "次のキーは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.07,
+      "speechEnd": 125.226,
+      "end": 125.506,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "彼がチームトレーニングを再開するタイミング、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 125.506,
+      "speechEnd": 132.056,
+      "end": 132.396,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "そしてクラブが次の試合前にさらなる医療アップデートを"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 132.396,
+      "speechEnd": 135.601,
+      "end": 136.381,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "発表するかどうかです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 136.381,
+      "speechEnd": 140.353,
+      "end": 140.973,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 140.973,
+      "speechEnd": 144.735,
+      "end": 145.015,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "公式の医学的診断では、"
+    },
+    {
+      "parentKey": "why",
+      "start": 145.015,
+      "speechEnd": 153.098,
+      "end": 153.718,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "試合中の不快感から左膝カプセルの問題が確認されました。"
+    },
+    {
+      "parentKey": "why",
+      "start": 153.718,
+      "speechEnd": 158.595,
+      "end": 158.875,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "正式な休戦期間がない場合でも、"
+    },
+    {
+      "parentKey": "why",
+      "start": 158.875,
+      "speechEnd": 165.982,
+      "end": 166.322,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "レアルマドリードの最近のロスターの選択に直接影響を"
+    },
+    {
+      "parentKey": "why",
+      "start": 166.322,
+      "speechEnd": 169.737,
+      "end": 170.597,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "与える可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 170.597,
+      "speechEnd": 172.687,
+      "end": 172.967,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 172.967,
+      "speechEnd": 180.492,
+      "end": 180.772,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "レアルマドリードの次の医療やトレーニングの最新情報、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 180.772,
+      "speechEnd": 187.531,
+      "end": 187.811,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マクバービーが芝生を回復して軌道に戻れるかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 187.811,
+      "speechEnd": 193.037,
+      "end": 193.377,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "そして彼がクラブの次の公式トーナメントを"
+    },
+    {
+      "parentKey": "watch",
+      "start": 193.377,
+      "speechEnd": 197.906,
+      "end": 198.766,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "欠場するかどうかに注目してください。"
+    }
+  ]
+}

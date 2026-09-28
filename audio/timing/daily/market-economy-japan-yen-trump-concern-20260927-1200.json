@@ -1,0 +1,390 @@
+{
+  "version": 3,
+  "duration": 193.646,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 553,
+  "charactersPerMinute": 171.3,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 16.321,
+      "text": "トランプ大統領は円高相場への円安に懸念を表明した。日本は具体的な為替水準については議論していないと述べた"
+    },
+    {
+      "key": "dek",
+      "start": 16.321,
+      "end": 45.876,
+      "text": "日本政府、日米首脳会談の為替レート内容を公表。市場の焦点は、日本政府が口頭介入を強化するかどうか、そして日米の経済政策協調に向けた新たなシグナルが出るかどうかに移った。"
+    },
+    {
+      "key": "body-0",
+      "start": 45.876,
+      "end": 86.846,
+      "text": "日本政府は、トランプ米大統領が高市早苗首相との会談で円安に言及し懸念を表明したことを明らかにしたが、両国は具体的な為替水準や政策目標については話し合わなかった。この開示により、日曜日と米国間の今週のハイレベル接触に新たな経済政策の詳細が追加される。"
+    },
+    {
+      "key": "body-1",
+      "start": 86.846,
+      "end": 139.249,
+      "text": "為替に関する発言の市場の重要性は、円安に対する米国の姿勢が日米貿易や政策協調に影響を与える可能性があり、東京は投入コストと為替レートの変動による圧力に直面しているということである。これまでのところ、新たな共同為替レート政策は発表されていない。市場は今後、日本政府、財務省、中央銀行がさらなる発言をするかどうかに注目する。"
+    },
+    {
+      "key": "why",
+      "start": 139.249,
+      "end": 171.948,
+      "text": "米国大統領は日本の首相に円安に関する懸念を直接提起したが、これは日本の政策対応、日米通商関係、その後の公式シグナルに対する外国為替市場の判断に影響を与える可能性がある。"
+    },
+    {
+      "key": "watch",
+      "start": 171.948,
+      "end": 193.646,
+      "text": "財務省と日銀が円安問題に対応するかどうか、また次の取引で円、日本国債、日本の輸出株がどのような反応を示すかに注目だ。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.246,
+      "end": 7.866,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "トランプ大統領は円高相場への円安に懸念を表明した。"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.866,
+      "speechEnd": 15.461,
+      "end": 16.321,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "日本は具体的な為替水準については議論していないと述べた。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.321,
+      "speechEnd": 18.759,
+      "end": 19.039,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本政府、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.039,
+      "speechEnd": 24.753,
+      "end": 25.373,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "日米首脳会談の為替レート内容を公表。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.373,
+      "speechEnd": 27.881,
+      "end": 28.161,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "市場の焦点は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 28.161,
+      "speechEnd": 34.153,
+      "end": 34.433,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本政府が口頭介入を強化するかどうか、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 34.433,
+      "speechEnd": 41.749,
+      "end": 42.089,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "そして日米の経済政策協調に向けた新たなシグナルが"
+    },
+    {
+      "parentKey": "dek",
+      "start": 42.089,
+      "speechEnd": 45.015,
+      "end": 45.876,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "出るかどうかに移った。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.876,
+      "speechEnd": 48.523,
+      "end": 48.803,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本政府は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.803,
+      "speechEnd": 57.652,
+      "end": 57.992,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "トランプ米大統領が高市早苗首相との会談で円安に言及し懸念を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.992,
+      "speechEnd": 62.521,
+      "end": 62.801,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "表明したことを明らかにしたが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.801,
+      "speechEnd": 71.649,
+      "end": 72.269,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "両国は具体的な為替水準や政策目標については話し合わなかった。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.269,
+      "speechEnd": 74.847,
+      "end": 75.127,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この開示により、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.127,
+      "speechEnd": 86.066,
+      "end": 86.846,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "日曜日と米国間の今週のハイレベル接触に新たな経済政策の詳細が追加される。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 86.846,
+      "speechEnd": 91.863,
+      "end": 92.143,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "為替に関する発言の市場の重要性は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.143,
+      "speechEnd": 103.291,
+      "end": 103.571,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "円安に対する米国の姿勢が日米貿易や政策協調に影響を与える可能性があり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.571,
+      "speechEnd": 113.256,
+      "end": 113.876,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "東京は投入コストと為替レートの変動による圧力に直面しているということである。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 113.876,
+      "speechEnd": 116.802,
+      "end": 117.082,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "これまでのところ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.082,
+      "speechEnd": 123.701,
+      "end": 124.321,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "新たな共同為替レート政策は発表されていない。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 124.321,
+      "speechEnd": 126.69,
+      "end": 126.97,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "市場は今後、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 126.97,
+      "speechEnd": 129.409,
+      "end": 129.689,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本政府、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 129.689,
+      "speechEnd": 131.779,
+      "end": 132.059,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "財務省、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 132.059,
+      "speechEnd": 138.469,
+      "end": 139.249,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "中央銀行がさらなる発言をするかどうかに注目する。"
+    },
+    {
+      "parentKey": "why",
+      "start": 139.249,
+      "speechEnd": 143.221,
+      "end": 143.841,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 143.841,
+      "speechEnd": 153.107,
+      "end": 153.387,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国大統領は日本の首相に円安に関する懸念を直接提起したが、"
+    },
+    {
+      "parentKey": "why",
+      "start": 153.387,
+      "speechEnd": 157.22,
+      "end": 157.5,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "これは日本の政策対応、"
+    },
+    {
+      "parentKey": "why",
+      "start": 157.5,
+      "speechEnd": 160.147,
+      "end": 160.427,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日米通商関係、"
+    },
+    {
+      "parentKey": "why",
+      "start": 160.427,
+      "speechEnd": 171.087,
+      "end": 171.948,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "その後の公式シグナルに対する外国為替市場の判断に影響を与える可能性がある。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 171.948,
+      "speechEnd": 174.038,
+      "end": 174.318,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 174.318,
+      "speechEnd": 180.24,
+      "end": 180.52,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "財務省と日銀が円安問題に対応するかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 180.52,
+      "speechEnd": 183.307,
+      "end": 183.587,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "また次の取引で円、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 183.587,
+      "speechEnd": 185.817,
+      "end": 186.097,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本国債、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 186.097,
+      "speechEnd": 192.786,
+      "end": 193.646,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "日本の輸出株がどのような反応を示すかに注目だ。"
+    }
+  ]
+}
