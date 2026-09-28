@@ -1,8 +1,8 @@
 {
   "version": 5,
-  "assessedAt": "2026-09-28T00:59:37.231Z",
-  "state": "GREEN",
-  "summary": "ALL_REQUIRED_NEWS_LAYERS_CURRENT",
+  "assessedAt": "2026-09-28T01:35:37.294Z",
+  "state": "RED",
+  "summary": "RECOVERY_REQUIRED:desk",
   "layers": {
     "daily": {
       "current": true,
@@ -11,15 +11,15 @@
     },
     "live": {
       "current": true,
-      "upstream": "2026-09-28T07:00:00+08:00",
-      "japanese": "2026-09-28T07:00:00+08:00",
+      "upstream": "2026-09-28T09:06:00+08:00",
+      "japanese": "2026-09-28T09:06:00+08:00",
       "lagMinutes": 0
     },
     "desk": {
-      "current": true,
-      "upstream": "2026-09-28T07:00:00+08:00",
+      "current": false,
+      "upstream": "2026-09-28T09:06:00+08:00",
       "japanese": "2026-09-28T07:00:00+08:00",
-      "lagMinutes": 0
+      "lagMinutes": 126
     },
     "stocks": {
       "current": true,
@@ -35,16 +35,16 @@
   },
   "recovery": {
     "coreRequired": false,
-    "rollingRequired": false,
+    "rollingRequired": true,
     "structuralRequired": false
   },
   "maintenance": {
     "owner": "Editor-in-Chief",
     "executor": "Maintenance Robot",
-    "incidentKey": "healthy",
+    "incidentKey": "desk@2026-09-28T01:06:00.000Z",
     "sourceVersionBound": true,
-    "status": "resolved",
-    "decision": "NO_REPAIR_REQUIRED",
+    "status": "repairing",
+    "decision": "RECOVERY_ALREADY_ACTIVE",
     "attempts": 0,
     "lastAttemptAt": null,
     "nextEligibleAt": null,
@@ -52,7 +52,14 @@
     "terminalRepairBudget": false,
     "currentOnlyCoreRepair": true,
     "archiveBackfillAllowed": false,
-    "results": []
+    "results": [
+      {
+        "workflow": "repair-extra-translation-quality.yml",
+        "dispatched": false,
+        "active": true,
+        "runId": 36366558004
+      }
+    ]
   },
   "sourceRead": {
     "mode": "public-raw-retry",
@@ -63,7 +70,7 @@
   },
   "robot": {
     "current": true,
-    "runId": 36364239134,
+    "runId": 36366560614,
     "event": "workflow_dispatch",
     "role": "editor-in-chief-orchestrator",
     "executor": "continuous-maintenance-workers",
