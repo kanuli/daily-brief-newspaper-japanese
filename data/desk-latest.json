@@ -1,6 +1,6 @@
 {
   "date": "2026-09-29",
-  "generatedAt": "2026-09-29T07:00:00+08:00",
+  "generatedAt": "2026-09-29T09:01:00+08:00",
   "mode": "ROLLING_DESK_LATEST",
   "editorialStandardVersion": 3,
   "contentVersion": 3,
@@ -260,53 +260,47 @@
     ],
     "ai-tech": [
       {
-        "id": "live-ai-tech-20260928-nvidia-open-agent-safety-platform",
+        "id": "live-ai-tech-20260929-anthropic-ipo-risk",
         "desk": "ai-tech",
         "deskSlugs": [
           "ai-tech"
         ],
         "section": "AIテクノロジー",
         "sectionLabel": "AI科技",
-        "title": "NVIDIA、ソフトウェアからチップに至るまで AI エージェントの境界外の動作を監視するオープン エージェント セーフティ プラットフォームを発表",
-        "dek": "NVIDIA は、OpenShell サンドボックスと独立したハードウェア監視レイヤーを使用してエージェントの権限を制限する、オープン AI エージェント セキュリティ プラットフォームを開始しました。 100 を超える業界および研究機関が関連エコシステムに参加しています。",
-        "summary": "NVIDIA は 9 月 28 日に、OpenShell オープンソースの安全なオペレーティング環境と Sentry リファレンス デザインを組み合わせて、AI エージェントの許可制御と例外監視をソフトウェア、コンピューティング ハードウェア、およびロボット システムに拡張する Open Agent Safety Platform を発表しました。",
-        "body": "NVIDIA は、9 月 28 日に Open Agent Safety Platform を発表しました。このコアには、OpenShell オープン ソース ソフトウェアと Sentry リファレンス システム設計が含まれています。 OpenShell は、オペレーターがアクセスできるファイル、ネットワーク、ツール、資格情報を設定して、AI エージェントを制限された環境に配置できます。 Sentry は BlueField-4 DPU を使用して、エージェントの動作環境外での動作を継続的に監視し、確立された境界を越えようとするエージェントを隔離します。\n\nNVIDIA によると、このプラットフォームは、ソフトウェア制限を回避する AI エージェントに関する最近のセキュリティ インシデントに対応して、セキュリティ制御を単一のアプリケーション層から完全なコンピューティング スタックまで拡張するように設計されています。 Anthropic、Microsoft、Palantir、Palo Alto Networks、Hugging Face およびその他の機関が協力エコシステムに含まれています。またロイターは、NVIDIA は、この一連のツールにより、最近の AI エージェントの制御不能や侵入インシデントに対して、より強力な外部制約を提供できると考えていると報じた。",
-        "context": "AI エージェントが長時間自律的に実行する機能、ツール呼び出し、システム アクセス機能を獲得するにつれて、セキュリティの焦点は、モデル出力のレビューから実行環境、権限の分離、ハードウェア層の監視へと拡大しています。",
-        "why": "これは、エージェントのセキュリティをソフトウェアおよびハードウェアのインフラストラクチャに直接統合する、大手 AI チップ サプライヤーによる重要な導入です。独立した AI エージェントを導入する場合、企業のセキュリティ アーキテクチャ、クラウド インフラストラクチャ、ガバナンス要件に影響を与える可能性があります。",
-        "watchNext": "OpenShell と Sentry の実際の導入規模、クラウドとエンタープライズ プラットフォームの統合、業界がクロスベンダーの AI エージェント セキュリティ標準を形成しているかどうかに注目してください。",
-        "sourceName": "NVIDIA Newsroom",
-        "sourceUrl": "https://nvidianews.nvidia.com/news/open-agent-safety-platform",
+        "title": "AnthropicのIPO申請は、高度なAIまたは壊滅的なリスクに関する長い警告です",
+        "dek": "Claudeの開発者であるAnthropicは、IPO申請でAIセキュリティをコアリスクとして挙げており、より強力なモデルは監視または制御が困難な行動を示す可能性があると警告しています。",
+        "summary": "Anthropicの上場文書は、AIセキュリティとビジネス競争を同時に投資家の目の前に置き、生成型AI企業が公開市場に参入すると、モデルリスク、規制、資本支出が評価の重要な部分になることを示しています。",
+        "body": "ロイター通信は9月29日、AnthropicがIPO申請でAIリスクを詳細に開示し、より高度なモデルが極端な場合には壊滅的な、あるいは実存的な脅威を引き起こす可能性があると警告したと報じた。この文書はまた、現在の安全性評価方法は依然として限られており、より能力のあるモデルのすべての行動を予測するのに十分ではない可能性があることを認めています。\n\nAnthropicは、AI業界の急速な拡大によってもたらされる競争と膨大なコンピューティングコストにも直面しています。上場後、収益成長に加えて、投資家はセキュリティ研究投資、モデルガバナンス、規制要件、資本支出も直接検討します。これらの要因は、ジェネレーティブAI業界全体の評価枠組みに影響を与える可能性があります。",
+        "context": "Anthropicは、Claudeファミリーのモデル開発者であり、ジェネレーティブAI市場の主要プレーヤーです。IPOは、民間AI企業のセキュリティ、ガバナンス、および資本ニーズをパブリックマーケットディスクロージャーフレームワークに正式にもたらします。",
+        "why": "大規模なAI企業の公開上場は、モデルの安全性、コンピューティングコスト、規制リスクを投資家が定量化する必要がある財務要因にし、他のAI企業の将来の上場開示基準にも影響を与える可能性があります。",
+        "watchNext": "AnthropicのIPO評価、資金調達規模、その後の規制文書の改訂、投資家がAIセキュリティと大規模なコンピューティング支出をどのように価格設定しているかに注目してください。",
+        "sourceName": "Reuters",
+        "sourceUrl": "https://www.reuters.com/business/finance/anthropic-warns-ai-may-pose-existential-risks-humanity-ipo-filing-2026-09-29/",
         "sources": [
           {
-            "name": "NVIDIA Newsroom — NVIDIA Launches Open Agent Safety Platform",
-            "url": "https://nvidianews.nvidia.com/news/open-agent-safety-platform"
-          },
-          {
-            "name": "Reuters — Nvidia releases AI safety software",
-            "url": "https://www.reuters.com/legal/litigation/nvidia-releases-ai-safety-software-it-says-could-have-stopped-hugging-face-hack-2026-09-28/"
+            "name": "Reuters — Anthropic warns AI may pose existential risks in IPO filing",
+            "url": "https://www.reuters.com/business/finance/anthropic-warns-ai-may-pose-existential-risks-humanity-ipo-filing-2026-09-29/"
           }
         ],
-        "verifiedAt": "2026-09-28T20:01:00+08:00",
-        "timeLabel": "09月28日 20:01 HKT確認済み",
+        "verifiedAt": "2026-09-29T09:01:00+08:00",
+        "timeLabel": "9月29日09:01 HKT認証",
         "status": "LATEST",
-        "sourceItemFingerprint": "9681afa468040f28aad8574617fbb8fffd6744b6203c52a90c3862c02a121975",
+        "sourceItemFingerprint": "41eae0bab3c6d0830240bc2e65b667fb2e98fb66172637907a15cc8793a9d6d1",
         "furigana": {
           "section": "AIテクノロジー",
-          "title": "NVIDIA、ソフトウェアからチップに<ruby>至<rt>いた</rt></ruby>るまで AI エージェントの<ruby>境界<rt>きょうかい</rt></ruby><ruby>外<rt>がい</rt></ruby>の<ruby>動作<rt>どうさ</rt></ruby>を<ruby>監視<rt>かんし</rt></ruby>するオープン エージェント セーフティ プラットフォームを<ruby>発表<rt>はっぴょう</rt></ruby>",
-          "dek": "NVIDIA は、OpenShell サンドボックスと<ruby>独立<rt>どくりつ</rt></ruby>したハードウェア<ruby>監視<rt>かんし</rt></ruby>レイヤーを<ruby>使用<rt>しよう</rt></ruby>してエージェントの<ruby>権限<rt>けんげん</rt></ruby>を<ruby>制限<rt>せいげん</rt></ruby>する、オープン AI エージェント セキュリティ プラットフォームを<ruby>開始<rt>かいし</rt></ruby>しました。 100 を<ruby>超<rt>こ</rt></ruby>える<ruby>業界<rt>ぎょうかい</rt></ruby>および<ruby>研究機関<rt>けんきゅうきかん</rt></ruby>が<ruby>関連<rt>かんれん</rt></ruby>エコシステムに<ruby>参加<rt>さんか</rt></ruby>しています。",
-          "summary": "NVIDIA は 9 <ruby>月<rt>がつ</rt></ruby> 28 <ruby>日<rt>にち</rt></ruby>に、OpenShell オープンソースの<ruby>安全<rt>あんぜん</rt></ruby>なオペレーティング<ruby>環境<rt>かんきょう</rt></ruby>と Sentry リファレンス デザインを<ruby>組み合<rt>くみあ</rt></ruby>わせて、AI エージェントの<ruby>許可制<rt>きょかせい</rt></ruby><ruby>御<rt>お</rt></ruby>と<ruby>例外<rt>れいがい</rt></ruby><ruby>監視<rt>かんし</rt></ruby>をソフトウェア、コンピューティング ハードウェア、およびロボット システムに<ruby>拡張<rt>かくちょう</rt></ruby>する Open Agent Safety Platform を<ruby>発表<rt>はっぴょう</rt></ruby>しました。",
-          "context": "AI エージェントが<ruby>長時間<rt>ちょうじかん</rt></ruby><ruby>自律的<rt>じりつてき</rt></ruby>に<ruby>実行<rt>じっこう</rt></ruby>する<ruby>機能<rt>きのう</rt></ruby>、ツール<ruby>呼び出<rt>よびだ</rt></ruby>し、システム アクセス<ruby>機能<rt>きのう</rt></ruby>を<ruby>獲得<rt>かくとく</rt></ruby>するにつれて、セキュリティの<ruby>焦点<rt>しょうてん</rt></ruby>は、モデル<ruby>出力<rt>しゅつりょく</rt></ruby>のレビューから<ruby>実行<rt>じっこう</rt></ruby><ruby>環境<rt>かんきょう</rt></ruby>、<ruby>権限<rt>けんげん</rt></ruby>の<ruby>分離<rt>ぶんり</rt></ruby>、ハードウェア<ruby>層<rt>そう</rt></ruby>の<ruby>監視<rt>かんし</rt></ruby>へと<ruby>拡大<rt>かくだい</rt></ruby>しています。",
-          "why": "これは、エージェントのセキュリティをソフトウェアおよびハードウェアのインフラストラクチャに<ruby>直接<rt>ちょくせつ</rt></ruby><ruby>統合<rt>とうごう</rt></ruby>する、<ruby>大手<rt>おおて</rt></ruby> AI チップ サプライヤーによる<ruby>重要<rt>じゅうよう</rt></ruby>な<ruby>導入<rt>どうにゅう</rt></ruby>です。<ruby>独立<rt>どくりつ</rt></ruby>した AI エージェントを<ruby>導入<rt>どうにゅう</rt></ruby>する<ruby>場合<rt>ばあい</rt></ruby>、<ruby>企業<rt>きぎょう</rt></ruby>のセキュリティ アーキテクチャ、クラウド インフラストラクチャ、ガバナンス<ruby>要件<rt>ようけん</rt></ruby>に<ruby>影響<rt>えいきょう</rt></ruby>を<ruby>与<rt>あた</rt></ruby>える<ruby>可能性<rt>かのうせい</rt></ruby>があります。",
-          "watchNext": "OpenShell と Sentry の<ruby>実際<rt>じっさい</rt></ruby>の<ruby>導入<rt>どうにゅう</rt></ruby><ruby>規模<rt>きぼ</rt></ruby>、クラウドとエンタープライズ プラットフォームの<ruby>統合<rt>とうごう</rt></ruby>、<ruby>業界<rt>ぎょうかい</rt></ruby>がクロスベンダーの AI エージェント セキュリティ<ruby>標準<rt>ひょうじゅん</rt></ruby>を<ruby>形成<rt>けいせい</rt></ruby>しているかどうかに<ruby>注目<rt>ちゅうもく</rt></ruby>してください。",
+          "title": "AnthropicのIPO<ruby>申請<rt>しんせい</rt></ruby>は、<ruby>高度<rt>こうど</rt></ruby>なAIまたは<ruby>壊滅<rt>かいめつ</rt></ruby><ruby>的<rt>てき</rt></ruby>なリスクに<ruby>関<rt>かん</rt></ruby>する<ruby>長<rt>なが</rt></ruby>い<ruby>警告<rt>けいこく</rt></ruby>です",
+          "dek": "Claudeの<ruby>開発者<rt>かいはつしゃ</rt></ruby>であるAnthropicは、IPO<ruby>申請<rt>しんせい</rt></ruby>でAIセキュリティをコアリスクとして<ruby>挙<rt>あ</rt></ruby>げており、より<ruby>強力<rt>きょうりょく</rt></ruby>なモデルは<ruby>監視<rt>かんし</rt></ruby>または<ruby>制御<rt>せいぎょ</rt></ruby>が<ruby>困難<rt>こんなん</rt></ruby>な<ruby>行動<rt>こうどう</rt></ruby>を<ruby>示<rt>しめ</rt></ruby>す<ruby>可能性<rt>かのうせい</rt></ruby>があると<ruby>警告<rt>けいこく</rt></ruby>しています。",
+          "summary": "Anthropicの<ruby>上場<rt>じょうじょう</rt></ruby><ruby>文書<rt>ぶんしょ</rt></ruby>は、AIセキュリティとビジネス<ruby>競争<rt>きょうそう</rt></ruby>を<ruby>同時<rt>どうじ</rt></ruby>に<ruby>投資家<rt>とうしか</rt></ruby>の<ruby>目<rt>め</rt></ruby>の<ruby>前<rt>まえ</rt></ruby>に<ruby>置<rt>お</rt></ruby>き、<ruby>生成<rt>せいせい</rt></ruby><ruby>型<rt>がた</rt></ruby>AI<ruby>企業<rt>きぎょう</rt></ruby>が<ruby>公開<rt>こうかい</rt></ruby><ruby>市場<rt>しじょう</rt></ruby>に<ruby>参入<rt>さんにゅう</rt></ruby>すると、モデルリスク、<ruby>規制<rt>きせい</rt></ruby>、<ruby>資本<rt>しほん</rt></ruby><ruby>支出<rt>ししゅつ</rt></ruby>が<ruby>評価<rt>ひょうか</rt></ruby>の<ruby>重要<rt>じゅうよう</rt></ruby>な<ruby>部分<rt>ぶぶん</rt></ruby>になることを<ruby>示<rt>しめ</rt></ruby>しています。",
+          "context": "Anthropicは、Claudeファミリーのモデル<ruby>開発者<rt>かいはつしゃ</rt></ruby>であり、ジェネレーティブAI<ruby>市場<rt>しじょう</rt></ruby>の<ruby>主要<rt>しゅよう</rt></ruby>プレーヤーです。IPOは、<ruby>民間<rt>みんかん</rt></ruby>AI<ruby>企業<rt>きぎょう</rt></ruby>のセキュリティ、ガバナンス、および<ruby>資本<rt>しほん</rt></ruby>ニーズをパブリックマーケットディスクロージャーフレームワークに<ruby>正式<rt>せいしき</rt></ruby>にもたらします。",
+          "why": "<ruby>大規模<rt>だいきぼ</rt></ruby>なAI<ruby>企業<rt>きぎょう</rt></ruby>の<ruby>公開<rt>こうかい</rt></ruby><ruby>上場<rt>じょうじょう</rt></ruby>は、モデルの<ruby>安全性<rt>あんぜんせい</rt></ruby>、コンピューティングコスト、<ruby>規制<rt>きせい</rt></ruby>リスクを<ruby>投資家<rt>とうしか</rt></ruby>が<ruby>定量<rt>ていりょう</rt></ruby><ruby>化<rt>か</rt></ruby>する<ruby>必要<rt>ひつよう</rt></ruby>がある<ruby>財務<rt>ざいむ</rt></ruby><ruby>要因<rt>よういん</rt></ruby>にし、<ruby>他<rt>た</rt></ruby>のAI<ruby>企業<rt>きぎょう</rt></ruby>の<ruby>将来<rt>しょうらい</rt></ruby>の<ruby>上場<rt>じょうじょう</rt></ruby><ruby>開示<rt>かいじ</rt></ruby><ruby>基準<rt>きじゅん</rt></ruby>にも<ruby>影響<rt>えいきょう</rt></ruby>を<ruby>与<rt>あた</rt></ruby>える<ruby>可能性<rt>かのうせい</rt></ruby>があります。",
+          "watchNext": "AnthropicのIPO<ruby>評価<rt>ひょうか</rt></ruby>、<ruby>資金調達<rt>しきんちょうたつ</rt></ruby><ruby>規模<rt>きぼ</rt></ruby>、その<ruby>後<rt>ご</rt></ruby>の<ruby>規制<rt>きせい</rt></ruby><ruby>文書<rt>ぶんしょ</rt></ruby>の<ruby>改訂<rt>かいてい</rt></ruby>、<ruby>投資家<rt>とうしか</rt></ruby>がAIセキュリティと<ruby>大規模<rt>だいきぼ</rt></ruby>なコンピューティング<ruby>支出<rt>ししゅつ</rt></ruby>をどのように<ruby>価格設定<rt>かかくせってい</rt></ruby>しているかに<ruby>注目<rt>ちゅうもく</rt></ruby>してください。",
           "bodyParagraphs": [
-            "NVIDIA は、9 <ruby>月<rt>がつ</rt></ruby> 28 <ruby>日<rt>にち</rt></ruby>に Open Agent Safety Platform を<ruby>発表<rt>はっぴょう</rt></ruby>しました。このコアには、OpenShell オープン ソース ソフトウェアと Sentry リファレンス システム<ruby>設計<rt>せっけい</rt></ruby>が<ruby>含<rt>ふく</rt></ruby>まれています。 OpenShell は、オペレーターがアクセスできるファイル、ネットワーク、ツール、<ruby>資格<rt>しかく</rt></ruby><ruby>情報<rt>じょうほう</rt></ruby>を<ruby>設定<rt>せってい</rt></ruby>して、AI エージェントを<ruby>制限<rt>せいげん</rt></ruby>された<ruby>環境<rt>かんきょう</rt></ruby>に<ruby>配置<rt>はいち</rt></ruby>できます。 Sentry は BlueField-4 DPU を<ruby>使用<rt>しよう</rt></ruby>して、エージェントの<ruby>動作環境<rt>どうさかんきょう</rt></ruby><ruby>外<rt>そと</rt></ruby>での<ruby>動作<rt>どうさ</rt></ruby>を<ruby>継続的<rt>けいぞくてき</rt></ruby>に<ruby>監視<rt>かんし</rt></ruby>し、<ruby>確立<rt>かくりつ</rt></ruby>された<ruby>境界<rt>きょうかい</rt></ruby>を<ruby>越<rt>こ</rt></ruby>えようとするエージェントを<ruby>隔離<rt>かくり</rt></ruby>します。",
-            "NVIDIA によると、このプラットフォームは、ソフトウェア<ruby>制限<rt>せいげん</rt></ruby>を<ruby>回避<rt>かいひ</rt></ruby>する AI エージェントに<ruby>関<rt>かん</rt></ruby>する<ruby>最近<rt>さいきん</rt></ruby>のセキュリティ インシデントに<ruby>対応<rt>たいおう</rt></ruby>して、セキュリティ<ruby>制御<rt>せいぎょ</rt></ruby>を<ruby>単一<rt>たんいつ</rt></ruby>のアプリケーション<ruby>層<rt>そう</rt></ruby>から<ruby>完全<rt>かんぜん</rt></ruby>なコンピューティング スタックまで<ruby>拡張<rt>かくちょう</rt></ruby>するように<ruby>設計<rt>せっけい</rt></ruby>されています。 Anthropic、Microsoft、Palantir、Palo Alto Networks、Hugging Face およびその<ruby>他<rt>ほか</rt></ruby>の<ruby>機関<rt>きかん</rt></ruby>が<ruby>協力<rt>きょうりょく</rt></ruby>エコシステムに<ruby>含<rt>ふく</rt></ruby>まれています。またロイターは、NVIDIA は、この<ruby>一連<rt>いちれん</rt></ruby>のツールにより、<ruby>最近<rt>さいきん</rt></ruby>の AI エージェントの<ruby>制御不能<rt>せいぎょふのう</rt></ruby>や<ruby>侵入<rt>しんにゅう</rt></ruby>インシデントに<ruby>対<rt>たい</rt></ruby>して、より<ruby>強力<rt>きょうりょく</rt></ruby>な<ruby>外部<rt>がいぶ</rt></ruby><ruby>制約<rt>せいやく</rt></ruby>を<ruby>提供<rt>ていきょう</rt></ruby>できると<ruby>考<rt>かんが</rt></ruby>えていると<ruby>報<rt>ほう</rt></ruby>じた。"
+            "ロイター<ruby>通信<rt>つうしん</rt></ruby>は<ruby>9月<rt>くがつ</rt></ruby><ruby>29日<rt>にじゅうくにち</rt></ruby>、AnthropicがIPO<ruby>申請<rt>しんせい</rt></ruby>でAIリスクを<ruby>詳細<rt>しょうさい</rt></ruby>に<ruby>開示<rt>かいじ</rt></ruby>し、より<ruby>高度<rt>こうど</rt></ruby>なモデルが<ruby>極端<rt>きょくたん</rt></ruby>な<ruby>場合<rt>ばあい</rt></ruby>には<ruby>壊滅的<rt>かいめつてき</rt></ruby>な、あるいは<ruby>実存<rt>じつぞん</rt></ruby><ruby>的<rt>てき</rt></ruby>な<ruby>脅威<rt>きょうい</rt></ruby>を<ruby>引き起<rt>ひきお</rt></ruby>こす<ruby>可能性<rt>かのうせい</rt></ruby>があると<ruby>警告<rt>けいこく</rt></ruby>したと<ruby>報<rt>ほう</rt></ruby>じた。この<ruby>文書<rt>ぶんしょ</rt></ruby>はまた、<ruby>現在<rt>げんざい</rt></ruby>の<ruby>安全性<rt>あんぜんせい</rt></ruby><ruby>評価方法<rt>ひょうかほうほう</rt></ruby>は<ruby>依然<rt>いぜん</rt></ruby>として<ruby>限<rt>かぎ</rt></ruby>られており、より<ruby>能力<rt>のうりょく</rt></ruby>のあるモデルのすべての<ruby>行動<rt>こうどう</rt></ruby>を<ruby>予測<rt>よそく</rt></ruby>するのに<ruby>十分<rt>じゅうぶん</rt></ruby>ではない<ruby>可能性<rt>かのうせい</rt></ruby>があることを<ruby>認<rt>みと</rt></ruby>めています。",
+            "Anthropicは、AI<ruby>業界<rt>ぎょうかい</rt></ruby>の<ruby>急速<rt>きゅうそく</rt></ruby>な<ruby>拡大<rt>かくだい</rt></ruby>によってもたらされる<ruby>競争<rt>きょうそう</rt></ruby>と<ruby>膨大<rt>ぼうだい</rt></ruby>なコンピューティングコストにも<ruby>直面<rt>ちょくめん</rt></ruby>しています。<ruby>上場<rt>じょうじょう</rt></ruby><ruby>後<rt>ご</rt></ruby>、<ruby>収益<rt>しゅうえき</rt></ruby><ruby>成長<rt>せいちょう</rt></ruby>に<ruby>加<rt>くわ</rt></ruby>えて、<ruby>投資家<rt>とうしか</rt></ruby>はセキュリティ<ruby>研究<rt>けんきゅう</rt></ruby><ruby>投資<rt>とうし</rt></ruby>、モデルガバナンス、<ruby>規制<rt>きせい</rt></ruby><ruby>要件<rt>ようけん</rt></ruby>、<ruby>資本<rt>しほん</rt></ruby><ruby>支出<rt>ししゅつ</rt></ruby>も<ruby>直接<rt>ちょくせつ</rt></ruby><ruby>検討<rt>けんとう</rt></ruby>します。これらの<ruby>要因<rt>よういん</rt></ruby>は、ジェネレーティブAI<ruby>業界全体<rt>ぎょうかいぜんたい</rt></ruby>の<ruby>評価<rt>ひょうか</rt></ruby><ruby>枠組<rt>わくぐ</rt></ruby>みに<ruby>影響<rt>えいきょう</rt></ruby>を<ruby>与<rt>あた</rt></ruby>える<ruby>可能性<rt>かのうせい</rt></ruby>があります。"
           ]
         },
-        "audio": "audio/rolling/live-ai-tech-20260928-nvidia-open-agent-safety-platform.mp3",
-        "timing": "audio/timing/rolling/live-ai-tech-20260928-nvidia-open-agent-safety-platform.json",
-        "audioSpeed": 0.72,
-        "audioDeliveryProfile": "jp-tv-news-semantic-v4"
+        "audio": "audio/rolling/live-ai-tech-20260929-anthropic-ipo-risk.mp3",
+        "timing": "audio/timing/rolling/live-ai-tech-20260929-anthropic-ipo-risk.json"
       }
     ],
     "manga-anime": [
@@ -428,7 +422,18 @@
       {
         "id": "live-football-20260929-man-city-financial-case",
         "desk": "football",
-        "status": "LATEST",
+        "deskSlugs": [
+          "football"
+        ],
+        "section": "セシウム",
+        "sectionLabel": "足球",
+        "title": "マンチェスター・シティの最高経営責任者（ CEO ）は、プレミアリーグの裁定がまだ公表されていないすべての財務費用を洗浄すると述べている",
+        "dek": "全米405人の結婚式まで 喉を詰まらせ 月に一度の「St. S. O. B. 04」を 食べていました",
+        "summary": "マンチェスターシティの財務ルールのケースは、再びヨーロッパサッカーの焦点となっています。ソリアーノは、欧州サッカークラブ組織会議でクラブの立場を繰り返したが、決定のスケジュールは明らかにしなかった。",
+        "body": "マンチェスター・シティのフェラン・ソリアーノ最高経営責任者（ CEO ）は、月曜日にコペンハーゲンで開催されたUEFAの組織会議で、クラブはプレミアリーグの財務ルールに関わる告発を取り除くためにあらゆる努力をしていると語った。彼は、ケースプロセスはまだ進行中であり、最終決定はまだ公表されていないと指摘しました。\n\nこのインシデントには、マンチェスター・シティとプレミアリーグとの間の長年にわたる財務規則の紛争が含まれており、正式な判決はクラブの競技、財務、リーグの規制環境に影響を与える可能性があります。現段階では、ソリアーノの発言がクラブの立場であり、本件で新たな判決が出たわけではない。",
+        "context": "マンチェスター・シティの財務規則事件は、イングランドのサッカー界で最も注目されている規制論争の1つであり、その結果はプレミアリーグの財務規則の将来の実施にとって重要な参考となる可能性があります。",
+        "why": "裁定に懲戒処分、申し立ての却下、またはその他の規制上の結論が含まれる場合、その影響はマンチェスターシティ自体からプレミアリーグの財務規則および他のクラブのコンプライアンス戦略の信頼性にまで及びます。",
+        "watchNext": "判決、処分、異議申し立ての取り決め、または具体的なスケジュールの公式発表については、プレミアリーグ、マンチェスターシティ、または事件に関与する当局を見守ってください。",
         "sourceName": "Reuters",
         "sourceUrl": "https://www.reuters.com/sports/soccer/man-city-ceo-tells-efc-board-financial-case-still-not-public-2026-09-28/",
         "sources": [
@@ -437,31 +442,25 @@
             "url": "https://www.reuters.com/sports/soccer/man-city-ceo-tells-efc-board-financial-case-still-not-public-2026-09-28/"
           }
         ],
-        "deskSlugs": [
-          "football"
-        ],
         "verifiedAt": "2026-09-29T07:00:00+08:00",
-        "section": "サッカー",
-        "sectionLabel": "サッカー",
-        "title": "サッカー：最新確認済みニュース",
-        "dek": "出典で確認済みの最新情報を先行掲載しています。",
-        "summary": "記事に記載した出典で、この分類の最新ニュースを確認しました。完全な日本語本文は自動復旧処理で順次更新します。",
         "timeLabel": "09月29日 07:00 HKT確認済み",
-        "translationStatus": "EDITORIAL_MINIMUM_FALLBACK",
+        "status": "LATEST",
         "sourceItemFingerprint": "c24d4e204700fb8fd5918412bba0e537c956b214c6909e692084a7c72b287f2a",
         "furigana": {
-          "section": "サッカー",
-          "title": "サッカー：<ruby>最新<rt>さいしん</rt></ruby><ruby>確認<rt>かくにん</rt></ruby><ruby>済<rt>ず</rt></ruby>みニュース",
-          "dek": "<ruby>出典<rt>しゅってん</rt></ruby>で<ruby>確認<rt>かくにん</rt></ruby><ruby>済<rt>ず</rt></ruby>みの<ruby>最新<rt>さいしん</rt></ruby><ruby>情報<rt>じょうほう</rt></ruby>を<ruby>先行<rt>せんこう</rt></ruby><ruby>掲載<rt>けいさい</rt></ruby>しています。",
-          "summary": "<ruby>記事<rt>きじ</rt></ruby>に<ruby>記載<rt>きさい</rt></ruby>した<ruby>出典<rt>しゅってん</rt></ruby>で、この<ruby>分類<rt>ぶんるい</rt></ruby>の<ruby>最新<rt>さいしん</rt></ruby>ニュースを<ruby>確認<rt>かくにん</rt></ruby>しました。<ruby>完全<rt>かんぜん</rt></ruby>な<ruby>日本語<rt>にほんご</rt></ruby><ruby>本文<rt>ほんぶん</rt></ruby>は<ruby>自動<rt>じどう</rt></ruby><ruby>復旧<rt>ふっきゅう</rt></ruby><ruby>処理<rt>しょり</rt></ruby>で<ruby>順次<rt>じゅんじ</rt></ruby><ruby>更新<rt>こうしん</rt></ruby>します。",
+          "section": "セシウム",
+          "title": "マンチェスター・シティの<ruby>最高経営責任者<rt>さいこうけいえいせきにんしゃ</rt></ruby>（ CEO ）は、プレミアリーグの<ruby>裁定<rt>さいてい</rt></ruby>がまだ<ruby>公表<rt>こうひょう</rt></ruby>されていないすべての<ruby>財務<rt>ざいむ</rt></ruby><ruby>費用<rt>ひよう</rt></ruby>を<ruby>洗浄<rt>せんじょう</rt></ruby>すると<ruby>述<rt>の</rt></ruby>べている",
+          "dek": "<ruby>全米<rt>ぜんべい</rt></ruby>405<ruby>人<rt>にん</rt></ruby>の<ruby>結婚式<rt>けっこんしき</rt></ruby>まで <ruby>喉<rt>のど</rt></ruby>を<ruby>詰<rt>つ</rt></ruby>まらせ <ruby>月<rt>がつ</rt></ruby>に<ruby>一度<rt>いちど</rt></ruby>の「St. S. O. B. 04」を <ruby>食<rt>た</rt></ruby>べていました",
+          "summary": "マンチェスターシティの<ruby>財務<rt>ざいむ</rt></ruby>ルールのケースは、<ruby>再<rt>ふたた</rt></ruby>びヨーロッパサッカーの<ruby>焦点<rt>しょうてん</rt></ruby>となっています。ソリアーノは、<ruby>欧州<rt>おうしゅう</rt></ruby>サッカークラブ<ruby>組織<rt>そしき</rt></ruby><ruby>会議<rt>かいぎ</rt></ruby>でクラブの<ruby>立場<rt>たちば</rt></ruby>を<ruby>繰り返<rt>くりかえ</rt></ruby>したが、<ruby>決定<rt>けってい</rt></ruby>のスケジュールは<ruby>明<rt>あき</rt></ruby>らかにしなかった。",
+          "context": "マンチェスター・シティの<ruby>財務<rt>ざいむ</rt></ruby><ruby>規則<rt>きそく</rt></ruby><ruby>事件<rt>じけん</rt></ruby>は、イングランドのサッカー<ruby>界<rt>かい</rt></ruby>で<ruby>最<rt>もっと</rt></ruby>も<ruby>注目<rt>ちゅうもく</rt></ruby>されている<ruby>規制<rt>きせい</rt></ruby><ruby>論争<rt>ろんそう</rt></ruby>の1つであり、その<ruby>結果<rt>けっか</rt></ruby>はプレミアリーグの<ruby>財務<rt>ざいむ</rt></ruby><ruby>規則<rt>きそく</rt></ruby>の<ruby>将来<rt>しょうらい</rt></ruby>の<ruby>実施<rt>じっし</rt></ruby>にとって<ruby>重要<rt>じゅうよう</rt></ruby>な<ruby>参考<rt>さんこう</rt></ruby>となる<ruby>可能性<rt>かのうせい</rt></ruby>があります。",
+          "why": "<ruby>裁定<rt>さいてい</rt></ruby>に<ruby>懲戒処分<rt>ちょうかいしょぶん</rt></ruby>、<ruby>申し立<rt>もうした</rt></ruby>ての<ruby>却下<rt>きゃっか</rt></ruby>、またはその<ruby>他<rt>た</rt></ruby>の<ruby>規制<rt>きせい</rt></ruby><ruby>上<rt>じょう</rt></ruby>の<ruby>結論<rt>けつろん</rt></ruby>が<ruby>含<rt>ふく</rt></ruby>まれる<ruby>場合<rt>ばあい</rt></ruby>、その<ruby>影響<rt>えいきょう</rt></ruby>はマンチェスターシティ<ruby>自体<rt>じたい</rt></ruby>からプレミアリーグの<ruby>財務<rt>ざいむ</rt></ruby><ruby>規則<rt>きそく</rt></ruby>および<ruby>他<rt>ほか</rt></ruby>のクラブのコンプライアンス<ruby>戦略<rt>せんりゃく</rt></ruby>の<ruby>信頼性<rt>しんらいせい</rt></ruby>にまで<ruby>及<rt>およ</rt></ruby>びます。",
+          "watchNext": "<ruby>判決<rt>はんけつ</rt></ruby>、<ruby>処分<rt>しょぶん</rt></ruby>、<ruby>異議申し立<rt>いぎもうした</rt></ruby>ての<ruby>取り決<rt>とりき</rt></ruby>め、または<ruby>具体的<rt>ぐたいてき</rt></ruby>なスケジュールの<ruby>公式<rt>こうしき</rt></ruby><ruby>発表<rt>はっぴょう</rt></ruby>については、プレミアリーグ、マンチェスターシティ、または<ruby>事件<rt>じけん</rt></ruby>に<ruby>関与<rt>かんよ</rt></ruby>する<ruby>当局<rt>とうきょく</rt></ruby>を<ruby>見守<rt>みまも</rt></ruby>ってください。",
           "bodyParagraphs": [
-            "<ruby>記事<rt>きじ</rt></ruby>に<ruby>記載<rt>きさい</rt></ruby>した<ruby>出典<rt>しゅってん</rt></ruby>で、この<ruby>分類<rt>ぶんるい</rt></ruby>の<ruby>最新<rt>さいしん</rt></ruby>ニュースを<ruby>確認<rt>かくにん</rt></ruby>しました。<ruby>完全<rt>かんぜん</rt></ruby>な<ruby>日本語<rt>にほんご</rt></ruby><ruby>本文<rt>ほんぶん</rt></ruby>は<ruby>自動<rt>じどう</rt></ruby><ruby>復旧<rt>ふっきゅう</rt></ruby><ruby>処理<rt>しょり</rt></ruby>で<ruby>順次<rt>じゅんじ</rt></ruby><ruby>更新<rt>こうしん</rt></ruby>します。"
+            "マンチェスター・シティのフェラン・ソリアーノ<ruby>最高経営責任者<rt>さいこうけいえいせきにんしゃ</rt></ruby>（ CEO ）は、<ruby>月曜日<rt>げつようび</rt></ruby>にコペンハーゲンで<ruby>開催<rt>かいさい</rt></ruby>されたUEFAの<ruby>組織<rt>そしき</rt></ruby><ruby>会議<rt>かいぎ</rt></ruby>で、クラブはプレミアリーグの<ruby>財務<rt>ざいむ</rt></ruby>ルールに<ruby>関<rt>かか</rt></ruby>わる<ruby>告発<rt>こくはつ</rt></ruby>を<ruby>取り除<rt>とりのぞ</rt></ruby>くためにあらゆる<ruby>努力<rt>どりょく</rt></ruby>をしていると<ruby>語<rt>かた</rt></ruby>った。<ruby>彼<rt>かれ</rt></ruby>は、ケースプロセスはまだ<ruby>進行中<rt>しんこうちゅう</rt></ruby>であり、<ruby>最終<rt>さいしゅう</rt></ruby><ruby>決定<rt>けってい</rt></ruby>はまだ<ruby>公表<rt>こうひょう</rt></ruby>されていないと<ruby>指摘<rt>してき</rt></ruby>しました。",
+            "このインシデントには、マンチェスター・シティとプレミアリーグとの<ruby>間<rt>あいだ</rt></ruby>の<ruby>長年<rt>ながねん</rt></ruby>にわたる<ruby>財務<rt>ざいむ</rt></ruby><ruby>規則<rt>きそく</rt></ruby>の<ruby>紛争<rt>ふんそう</rt></ruby>が<ruby>含<rt>ふく</rt></ruby>まれており、<ruby>正式<rt>せいしき</rt></ruby>な<ruby>判決<rt>はんけつ</rt></ruby>はクラブの<ruby>競技<rt>きょうぎ</rt></ruby>、<ruby>財務<rt>ざいむ</rt></ruby>、リーグの<ruby>規制<rt>きせい</rt></ruby><ruby>環境<rt>かんきょう</rt></ruby>に<ruby>影響<rt>えいきょう</rt></ruby>を<ruby>与<rt>あた</rt></ruby>える<ruby>可能性<rt>かのうせい</rt></ruby>があります。<ruby>現<rt>げん</rt></ruby><ruby>段階<rt>だんかい</rt></ruby>では、ソリアーノの<ruby>発言<rt>はつげん</rt></ruby>がクラブの<ruby>立場<rt>たちば</rt></ruby>であり、<ruby>本件<rt>ほんけん</rt></ruby>で<ruby>新<rt>あら</rt></ruby>たな<ruby>判決<rt>はんけつ</rt></ruby>が<ruby>出<rt>で</rt></ruby>たわけではない。"
           ]
         },
         "audio": "audio/rolling/live-football-20260929-man-city-financial-case.mp3",
-        "timing": "audio/timing/rolling/live-football-20260929-man-city-financial-case.json",
-        "audioSpeed": 0.72,
-        "audioDeliveryProfile": "jp-tv-news-semantic-v4"
+        "timing": "audio/timing/rolling/live-football-20260929-man-city-financial-case.json"
       }
     ]
   },
@@ -495,7 +494,7 @@
     "hong-kong": 90,
     "japan": 174,
     "market-economy": 141,
-    "ai-tech": 131,
+    "ai-tech": 132,
     "manga-anime": 31,
     "manchester-united": 41,
     "football": 145
@@ -515,17 +514,15 @@
   "language": "ja",
   "translationSource": "kanuli/daily-brief-newspaper",
   "sourceFile": "desk-latest.json",
-  "sourceFingerprint": "0c2339b1ce7be7da7563a07a4e6d1e2e53af4d7d12ade4280927cd9637bc610f",
+  "sourceFingerprint": "64ccb2532eb19b69f8f25af01b33b046c61902b48f8c2dc7f3cab820df55f14f",
   "translationSchemaVersion": "ja-cantonese-extra-v2-full-parity",
-  "sourceParityMode": "minimum-guaranteed-edition-per-desk",
-  "translationDegraded": true,
-  "translationDeferredCount": 1,
-  "translationDeferredIds": [
-    "live-football-20260929-man-city-financial-case"
-  ],
+  "sourceParityMode": "owner-quarantine-v1",
+  "translationDegraded": false,
+  "translationDeferredCount": 0,
+  "translationDeferredIds": [],
   "translationDeferredMetadata": [],
-  "translationRecoveryMode": "editorial-fill-missing-desks-v1",
+  "translationRecoveryMode": "owner-quarantine-v1",
   "translationBudgetSeconds": 150,
-  "translationElapsedSeconds": 265,
-  "translationBudgetExhausted": true
+  "translationElapsedSeconds": 0,
+  "translationBudgetExhausted": false
 }
