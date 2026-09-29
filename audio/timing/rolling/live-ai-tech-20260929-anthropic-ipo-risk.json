@@ -1,0 +1,450 @@
+{
+  "version": 3,
+  "duration": 196.911,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 638,
+  "charactersPerMinute": 194.4,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 11.313,
+      "text": "AnthropicのIPO申請は、高度なAIまたは壊滅的なリスクに関する長い警告です"
+    },
+    {
+      "key": "dek",
+      "start": 11.313,
+      "end": 35.021,
+      "text": "Claudeの開発者であるAnthropicは、IPO申請でAIセキュリティをコアリスクとして挙げており、より強力なモデルは監視または制御が困難な行動を示す可能性があると警告しています。"
+    },
+    {
+      "key": "body-0",
+      "start": 35.021,
+      "end": 86.996,
+      "text": "ロイター通信は9月29日、AnthropicがIPO申請でAIリスクを詳細に開示し、より高度なモデルが極端な場合には壊滅的な、あるいは実存的な脅威を引き起こす可能性があると警告したと報じた。この文書はまた、現在の安全性評価方法は依然として限られており、より能力のあるモデルのすべての行動を予測するのに十分ではない可能性があることを認めています。"
+    },
+    {
+      "key": "body-1",
+      "start": 86.996,
+      "end": 135.282,
+      "text": "Anthropicは、AI業界の急速な拡大によってもたらされる競争と膨大なコンピューティングコストにも直面しています。上場後、収益成長に加えて、投資家はセキュリティ研究投資、モデルガバナンス、規制要件、資本支出も直接検討します。これらの要因は、ジェネレーティブAI業界全体の評価枠組みに影響を与える可能性があります。"
+    },
+    {
+      "key": "why",
+      "start": 135.282,
+      "end": 170.134,
+      "text": "大規模なAI企業の公開上場は、モデルの安全性、コンピューティングコスト、規制リスクを投資家が定量化する必要がある財務要因にし、他のAI企業の将来の上場開示基準にも影響を与える可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 170.134,
+      "end": 196.911,
+      "text": "AnthropicのIPO評価、資金調達規模、その後の規制文書の改訂、投資家がAIセキュリティと大規模なコンピューティング支出をどのように価格設定しているかに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.484,
+      "end": 3.764,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "AnthropicのIPO申請は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.764,
+      "speechEnd": 10.453,
+      "end": 11.313,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "高度なAIまたは壊滅的なリスクに関する長い警告です。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 11.313,
+      "speechEnd": 16.33,
+      "end": 16.61,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Claudeの開発者であるAnthropicは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.61,
+      "speechEnd": 22.602,
+      "end": 22.882,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "IPO申請でAIセキュリティをコアリスクとして挙げており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.882,
+      "speechEnd": 26.784,
+      "end": 27.124,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "より強力なモデルは監視または"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.124,
+      "speechEnd": 34.161,
+      "end": 35.021,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "制御が困難な行動を示す可能性があると警告しています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 35.021,
+      "speechEnd": 39.689,
+      "end": 39.969,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信は9月29日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.969,
+      "speechEnd": 45.962,
+      "end": 46.242,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "AnthropicがIPO申請でAIリスクを詳細に開示し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.242,
+      "speechEnd": 52.373,
+      "end": 52.653,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "より高度なモデルが極端な場合には壊滅的な、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.653,
+      "speechEnd": 58.576,
+      "end": 58.916,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "あるいは実存的な脅威を引き起こす可能性が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.916,
+      "speechEnd": 62.19,
+      "end": 62.81,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "あると警告したと報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.81,
+      "speechEnd": 65.528,
+      "end": 65.808,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この文書はまた、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.808,
+      "speechEnd": 72.706,
+      "end": 72.986,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "現在の安全性評価方法は依然として限られており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.986,
+      "speechEnd": 81.277,
+      "end": 81.617,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "より能力のあるモデルのすべての行動を予測するのに十分では"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 81.617,
+      "speechEnd": 86.216,
+      "end": 86.996,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "ない可能性があることを認めています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 86.996,
+      "speechEnd": 89.435,
+      "end": 89.715,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Anthropicは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 89.715,
+      "speechEnd": 101.351,
+      "end": 101.971,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "AI業界の急速な拡大によってもたらされる競争と膨大なコンピューティングコストにも直面しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.971,
+      "speechEnd": 104.061,
+      "end": 104.341,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "上場後、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.341,
+      "speechEnd": 107.616,
+      "end": 107.896,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "収益成長に加えて、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.896,
+      "speechEnd": 111.867,
+      "end": 112.147,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "投資家はセキュリティ研究投資、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.147,
+      "speechEnd": 114.865,
+      "end": 115.145,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "モデルガバナンス、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.145,
+      "speechEnd": 117.374,
+      "end": 117.655,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "規制要件、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.655,
+      "speechEnd": 121.069,
+      "end": 121.689,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "資本支出も直接検討します。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.689,
+      "speechEnd": 124.267,
+      "end": 124.547,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "これらの要因は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 124.547,
+      "speechEnd": 130.748,
+      "end": 131.088,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ジェネレーティブAI業界全体の評価枠組みに影響を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 131.088,
+      "speechEnd": 134.502,
+      "end": 135.282,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "与える可能性があります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 135.282,
+      "speechEnd": 139.254,
+      "end": 139.874,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 139.874,
+      "speechEnd": 144.403,
+      "end": 144.683,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "大規模なAI企業の公開上場は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 144.683,
+      "speechEnd": 147.54,
+      "end": 147.82,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "モデルの安全性、"
+    },
+    {
+      "parentKey": "why",
+      "start": 147.82,
+      "speechEnd": 150.816,
+      "end": 151.096,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "コンピューティングコスト、"
+    },
+    {
+      "parentKey": "why",
+      "start": 151.096,
+      "speechEnd": 158.551,
+      "end": 158.831,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "規制リスクを投資家が定量化する必要がある財務要因にし、"
+    },
+    {
+      "parentKey": "why",
+      "start": 158.831,
+      "speechEnd": 165.52,
+      "end": 165.86,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "他のAI企業の将来の上場開示基準にも影響を"
+    },
+    {
+      "parentKey": "why",
+      "start": 165.86,
+      "speechEnd": 169.274,
+      "end": 170.134,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "与える可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 170.134,
+      "speechEnd": 172.225,
+      "end": 172.505,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 172.505,
+      "speechEnd": 175.71,
+      "end": 175.99,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "AnthropicのIPO評価、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 175.99,
+      "speechEnd": 178.359,
+      "end": 178.639,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "資金調達規模、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 178.639,
+      "speechEnd": 182.471,
+      "end": 182.751,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "その後の規制文書の改訂、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 182.751,
+      "speechEnd": 189.649,
+      "end": 189.989,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "投資家がAIセキュリティと大規模なコンピューティング支出を"
+    },
+    {
+      "parentKey": "watch",
+      "start": 189.989,
+      "speechEnd": 196.051,
+      "end": 196.911,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "どのように価格設定しているかに注目してください。"
+    }
+  ]
+}
