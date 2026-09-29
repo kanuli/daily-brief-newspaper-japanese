@@ -1,0 +1,550 @@
+{
+  "version": 3,
+  "duration": 240.771,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 657,
+  "charactersPerMinute": 163.7,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 17.375,
+      "text": "マレーシアは1,476人のビルマ人の最初の送還を開始し、安全保障上の懸念は解決されていません"
+    },
+    {
+      "key": "dek",
+      "start": 17.375,
+      "end": 51.047,
+      "text": "マレーシアは、国連と人権団体がミャンマーで進行中の紛争が彼らの帰還の安全性に疑問を投げかけると警告した後、最初の1,476人のグループが海路で帰還させられ、ビルマ国民の段階的な帰還を開始した。"
+    },
+    {
+      "key": "body-0",
+      "start": 51.047,
+      "end": 109.531,
+      "text": "マレーシアは、9月29日に第1回1476人のミャンマー国民の送還手続きを開始し、警察の護衛の下、数台のバスがペラ州クレイカーン付近に到着し、手続きが完了した後、海路でミャンマーに送られた。このグループは、マレーシアとミャンマーによって調整された段階的な計画であり、全体的な目標は約5,000人であり、マレーシア側は常に自発的な帰還と呼んでいます。"
+    },
+    {
+      "key": "body-1",
+      "start": 109.531,
+      "end": 172.377,
+      "text": "しかし、国連と多くの人権団体は、ミャンマーで進行中の武力紛争中の大規模な帰還の促進に以前から反対しており、帰還した人々が迫害、拘留、または強制徴兵に直面する可能性があることに懸念を表明している。マレーシア政府は、関係者の身元を確認し、安全性を重視していると述べ、ミャンマーはまた、安全で尊厳のある帰還を手配することを約束した。実際の帰還の扱いが次の段階の焦点になる。"
+    },
+    {
+      "key": "why",
+      "start": 172.377,
+      "end": 208.074,
+      "text": "今回、マレーシアの最近の大規模帰還政策は、難民保護、非送還の原則、ミャンマーに対するASEANの政策、地域の人口移動と人道的リスクをカバーし、正式に実施段階に入りました。"
+    },
+    {
+      "key": "watch",
+      "start": 208.074,
+      "end": 240.771,
+      "text": "最初の1,476人がミャンマーに到着した後の再定住と治安状況、マレーシアが計画どおりに残りのバッチを継続するかどうか、国連と人権機関が新たに介入または監視を要請するかどうかに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.647,
+      "end": 2.928,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マレーシアは1,"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.928,
+      "speechEnd": 10.731,
+      "end": 11.011,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "476人のビルマ人の最初の送還を開始し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 11.011,
+      "speechEnd": 16.515,
+      "end": 17.375,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "安全保障上の懸念は解決されていません。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.375,
+      "speechEnd": 19.744,
+      "end": 20.024,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マレーシアは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.024,
+      "speechEnd": 26.224,
+      "end": 26.564,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "国連と人権団体がミャンマーで進行中の紛争が"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.564,
+      "speechEnd": 33.81,
+      "end": 34.09,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "彼らの帰還の安全性に疑問を投げかけると警告した後、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 34.09,
+      "speechEnd": 36.389,
+      "end": 36.669,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "最初の1,"
+    },
+    {
+      "parentKey": "dek",
+      "start": 36.669,
+      "speechEnd": 43.845,
+      "end": 44.125,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "476人のグループが海路で帰還させられ、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 44.125,
+      "speechEnd": 50.187,
+      "end": 51.047,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ビルマ国民の段階的な帰還を開始した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.047,
+      "speechEnd": 53.416,
+      "end": 53.696,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マレーシアは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.696,
+      "speechEnd": 57.527,
+      "end": 57.707,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "9月29日に第1回"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.707,
+      "speechEnd": 60.703,
+      "end": 60.883,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "1476人"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.883,
+      "speechEnd": 66.596,
+      "end": 66.876,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "のミャンマー国民の送還手続きを開始し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.876,
+      "speechEnd": 69.524,
+      "end": 69.804,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "警察の護衛の下、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.804,
+      "speechEnd": 75.517,
+      "end": 75.797,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "数台のバスがペラ州クレイカーン付近に到着し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.797,
+      "speechEnd": 79.002,
+      "end": 79.282,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "手続きが完了した後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 79.282,
+      "speechEnd": 83.044,
+      "end": 83.664,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "海路でミャンマーに送られた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 83.664,
+      "speechEnd": 86.242,
+      "end": 86.522,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "このグループは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 86.522,
+      "speechEnd": 94.743,
+      "end": 95.023,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マレーシアとミャンマーによって調整された段階的な計画であり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 95.023,
+      "speechEnd": 98.716,
+      "end": 98.996,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "全体的な目標は約5,"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 98.996,
+      "speechEnd": 101.573,
+      "end": 101.853,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "000人であり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 101.853,
+      "speechEnd": 108.751,
+      "end": 109.531,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "マレーシア側は常に自発的な帰還と呼んでいます。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.531,
+      "speechEnd": 111.551,
+      "end": 111.831,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "しかし、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.831,
+      "speechEnd": 115.315,
+      "end": 115.595,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "国連と多くの人権団体は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.595,
+      "speechEnd": 127.509,
+      "end": 127.789,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ミャンマーで進行中の武力紛争中の大規模な帰還の促進に以前から反対しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 127.789,
+      "speechEnd": 130.994,
+      "end": 131.274,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "帰還した人々が迫害、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 131.274,
+      "speechEnd": 133.294,
+      "end": 133.574,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "拘留、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 133.574,
+      "speechEnd": 138.451,
+      "end": 138.791,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "または強制徴兵に直面する可能性が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 138.791,
+      "speechEnd": 142.971,
+      "end": 143.591,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "あることに懸念を表明している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 143.591,
+      "speechEnd": 146.587,
+      "end": 146.867,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マレーシア政府は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 146.867,
+      "speechEnd": 150.56,
+      "end": 150.84,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "関係者の身元を確認し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 150.84,
+      "speechEnd": 154.881,
+      "end": 155.161,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "安全性を重視していると述べ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 155.161,
+      "speechEnd": 157.738,
+      "end": 158.019,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ミャンマーはまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 158.019,
+      "speechEnd": 164.916,
+      "end": 165.536,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "安全で尊厳のある帰還を手配することを約束した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 165.536,
+      "speechEnd": 171.597,
+      "end": 172.377,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "実際の帰還の扱いが次の段階の焦点になる。"
+    },
+    {
+      "parentKey": "why",
+      "start": 172.377,
+      "speechEnd": 176.349,
+      "end": 176.969,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 176.969,
+      "speechEnd": 178.989,
+      "end": 179.269,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今回、"
+    },
+    {
+      "parentKey": "why",
+      "start": 179.269,
+      "speechEnd": 185.261,
+      "end": 185.541,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マレーシアの最近の大規模帰還政策は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 185.541,
+      "speechEnd": 187.91,
+      "end": 188.19,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "難民保護、"
+    },
+    {
+      "parentKey": "why",
+      "start": 188.19,
+      "speechEnd": 190.907,
+      "end": 191.187,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "非送還の原則、"
+    },
+    {
+      "parentKey": "why",
+      "start": 191.187,
+      "speechEnd": 195.994,
+      "end": 196.274,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ミャンマーに対するASEANの政策、"
+    },
+    {
+      "parentKey": "why",
+      "start": 196.274,
+      "speechEnd": 202.614,
+      "end": 202.894,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "地域の人口移動と人道的リスクをカバーし、"
+    },
+    {
+      "parentKey": "why",
+      "start": 202.894,
+      "speechEnd": 207.214,
+      "end": 208.074,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "正式に実施段階に入りました。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 208.074,
+      "speechEnd": 210.164,
+      "end": 210.444,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 210.444,
+      "speechEnd": 212.743,
+      "end": 213.023,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "最初の1,"
+    },
+    {
+      "parentKey": "watch",
+      "start": 213.023,
+      "speechEnd": 221.662,
+      "end": 221.942,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "476人がミャンマーに到着した後の再定住と治安状況、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 221.942,
+      "speechEnd": 229.188,
+      "end": 229.468,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マレーシアが計画どおりに残りのバッチを継続するかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 229.468,
+      "speechEnd": 234.275,
+      "end": 234.616,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "国連と人権機関が新たに介入または"
+    },
+    {
+      "parentKey": "watch",
+      "start": 234.616,
+      "speechEnd": 239.91,
+      "end": 240.771,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "監視を要請するかどうかに注意してください。"
+    }
+  ]
+}
