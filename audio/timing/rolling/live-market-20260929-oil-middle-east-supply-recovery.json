@@ -1,0 +1,490 @@
+{
+  "version": 3,
+  "duration": 254.041,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 757,
+  "charactersPerMinute": 178.8,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 11.52,
+      "text": "中東原油輸出は徐々に回復ブレント原油価格は約103ドルに下落"
+    },
+    {
+      "key": "dek",
+      "start": 11.52,
+      "end": 39.415,
+      "text": "サウジアラビアの紅海沿岸のヤンブー港での原油積荷の再開と、同地域からの原油輸出の回復は、火曜日にブレント油が2 ％近く下落するなど、即時の供給不足の懸念をわずかに冷やした。"
+    },
+    {
+      "key": "body-0",
+      "start": 39.415,
+      "end": 99.827,
+      "text": "投資家が中東の供給回復のペースを再評価したため、国際原油価格は火曜日に下落した。ロイター通信によると、ブレント原油はロンドンの取引セッションで1バレル当たり1.96ドルから103.32ドルに下落し、WTIは1.95ドルから90.65ドルに下落した。戦争によってもたらされた供給リスクが消えていないことを反映して、この2つは今月それぞれ約14 ％と5.6 ％上昇していた。"
+    },
+    {
+      "key": "body-1",
+      "start": 99.827,
+      "end": 164.066,
+      "text": "紅海の延部港は、サウジアラビア東西パイプラインの操業再開に伴い、原油が再積載されました。Kplerのデータによると、パイプラインの流れは1日あたり約265万バレルであり、さらに増加する可能性があります。この地域の原油輸出も紛争前の約80 ％に戻っています。供給の改善は短期的な原油価格を圧迫しているが、米イラン戦争が再び港湾、パイプライン、海運に影響を及ぼした場合、価格は依然として急速に回復する可能性がある。"
+    },
+    {
+      "key": "why",
+      "start": 164.066,
+      "end": 219.046,
+      "text": "原油価格の高騰からの引き下げは、世界的なインフレと企業のコスト圧力を緩和するのに役立ったが、ブレント原油価格は1バレル当たり100ドルを超えており、紛争前の水準をはるかに上回っている。供給回復の持続可能性は、中央銀行の金利期待、航空および輸送コスト、および世界の株式および債券市場におけるリスク選好に直接影響を及ぼします。"
+    },
+    {
+      "key": "watch",
+      "start": 219.046,
+      "end": 254.041,
+      "text": "ヤンプーパイプラインが徐々にフルキャパシティ、中東の日々の輸出量、地域の港湾と海運チャネルの安全性を回復できるかどうか、そして原油価格の下落がさらなる金利引き上げに対する市場の期待を下げるのに十分であるかどうかに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 10.659,
+      "end": 11.52,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "中東原油輸出は徐々に回復ブレント原油価格は約103ドルに下落。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 11.52,
+      "speechEnd": 19.671,
+      "end": 19.951,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "サウジアラビアの紅海沿岸のヤンブー港での原油積荷の再開と、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.951,
+      "speechEnd": 24.758,
+      "end": 25.038,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同地域からの原油輸出の回復は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.038,
+      "speechEnd": 31.796,
+      "end": 32.076,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "火曜日にブレント油が2 ％近く下落するなど、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.076,
+      "speechEnd": 38.555,
+      "end": 39.415,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "即時の供給不足の懸念をわずかに冷やした。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.415,
+      "speechEnd": 46.591,
+      "end": 46.871,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "投資家が中東の供給回復のペースを再評価したため、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.871,
+      "speechEnd": 52.166,
+      "end": 52.786,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "国際原油価格は火曜日に下落した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.786,
+      "speechEnd": 55.782,
+      "end": 56.062,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.062,
+      "speechEnd": 62.959,
+      "end": 63.139,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "ブレント原油はロンドンの取引セッションで1バレル当たり"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.139,
+      "speechEnd": 65.996,
+      "end": 66.176,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "1.96ドル"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.176,
+      "speechEnd": 71.331,
+      "end": 71.612,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "から103.32ドルに下落し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.612,
+      "speechEnd": 79.345,
+      "end": 79.965,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "WTIは1.95ドルから90.65ドルに下落した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 79.965,
+      "speechEnd": 84.772,
+      "end": 85.112,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "戦争によってもたらされた供給リスクが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 85.112,
+      "speechEnd": 89.083,
+      "end": 89.363,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "消えていないことを反映して、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 89.363,
+      "speechEnd": 99.047,
+      "end": 99.827,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "この2つは今月それぞれ約14 ％と5.6 ％上昇していた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.827,
+      "speechEnd": 102.614,
+      "end": 102.894,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "紅海の延部港は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.894,
+      "speechEnd": 108.816,
+      "end": 109.096,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "サウジアラビア東西パイプラインの操業再開に伴い、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.096,
+      "speechEnd": 112.719,
+      "end": 113.339,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "原油が再積載されました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 113.339,
+      "speechEnd": 116.544,
+      "end": 116.824,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Kplerのデータによると、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 116.824,
+      "speechEnd": 125.393,
+      "end": 125.673,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "パイプラインの流れは1日あたり約265万バレルであり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 125.673,
+      "speechEnd": 129.853,
+      "end": 130.474,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "さらに増加する可能性があります。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 130.474,
+      "speechEnd": 138.834,
+      "end": 139.454,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "この地域の原油輸出も紛争前の約80 ％に戻っています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 139.454,
+      "speechEnd": 146.282,
+      "end": 146.562,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "供給の改善は短期的な原油価格を圧迫しているが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 146.562,
+      "speechEnd": 150.115,
+      "end": 150.395,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米イラン戦争が再び港湾、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 150.395,
+      "speechEnd": 152.624,
+      "end": 152.904,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "パイプライン、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 152.904,
+      "speechEnd": 156.806,
+      "end": 157.086,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "海運に影響を及ぼした場合、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 157.086,
+      "speechEnd": 163.286,
+      "end": 164.066,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "価格は依然として急速に回復する可能性がある。"
+    },
+    {
+      "parentKey": "why",
+      "start": 164.066,
+      "speechEnd": 168.038,
+      "end": 168.658,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 168.658,
+      "speechEnd": 173.325,
+      "end": 173.606,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "原油価格の高騰からの引き下げは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 173.606,
+      "speechEnd": 178.831,
+      "end": 179.171,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "世界的なインフレと企業のコスト圧力を"
+    },
+    {
+      "parentKey": "why",
+      "start": 179.171,
+      "speechEnd": 182.724,
+      "end": 183.004,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "緩和するのに役立ったが、"
+    },
+    {
+      "parentKey": "why",
+      "start": 183.004,
+      "speechEnd": 191.155,
+      "end": 191.435,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ブレント原油価格は1バレル当たり100ドルを超えており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 191.435,
+      "speechEnd": 196.173,
+      "end": 196.793,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "紛争前の水準をはるかに上回っている。"
+    },
+    {
+      "parentKey": "why",
+      "start": 196.793,
+      "speechEnd": 200.416,
+      "end": 200.696,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "供給回復の持続可能性は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 200.696,
+      "speechEnd": 203.901,
+      "end": 204.181,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "中央銀行の金利期待、"
+    },
+    {
+      "parentKey": "why",
+      "start": 204.181,
+      "speechEnd": 207.525,
+      "end": 207.805,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "航空および輸送コスト、"
+    },
+    {
+      "parentKey": "why",
+      "start": 207.805,
+      "speechEnd": 218.185,
+      "end": 219.046,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "および世界の株式および債券市場におけるリスク選好に直接影響を及ぼします。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 219.046,
+      "speechEnd": 221.136,
+      "end": 221.416,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 221.416,
+      "speechEnd": 225.875,
+      "end": 226.155,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ヤンプーパイプラインが徐々にフルキャパシティ、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 226.155,
+      "speechEnd": 229.568,
+      "end": 229.848,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "中東の日々の輸出量、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 229.848,
+      "speechEnd": 237.373,
+      "end": 237.653,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "地域の港湾と海運チャネルの安全性を回復できるかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 237.653,
+      "speechEnd": 246.361,
+      "end": 246.701,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "そして原油価格の下落がさらなる金利引き上げに対する市場の期待を"
+    },
+    {
+      "parentKey": "watch",
+      "start": 246.701,
+      "speechEnd": 253.181,
+      "end": 254.041,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "下げるのに十分であるかどうかに注意してください。"
+    }
+  ]
+}
