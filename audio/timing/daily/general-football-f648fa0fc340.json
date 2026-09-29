@@ -1,0 +1,380 @@
+{
+  "version": 3,
+  "duration": 170.371,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 568,
+  "charactersPerMinute": 200.0,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 13.254,
+      "text": "UEFAヨーロッパリーグオールウィン王座リーディンググループを獲得したドイツ初の選手をギリシャが破った"
+    },
+    {
+      "key": "dek",
+      "start": 13.254,
+      "end": 28.398,
+      "text": "後方のディミトリス・クルベリス選手は後半にゴールを決め、ギリシャがアウクスブルクでドイツに1 -0で勝利するのを助けた。"
+    },
+    {
+      "key": "body-0",
+      "start": 28.398,
+      "end": 75.835,
+      "text": "UEFAは、ギリシャが2チームの歴史上初めてUEFAグループA 2でドイツを1 -0で破ったと報告しています。ドイツはほとんどの時間で試合をコントロールしていましたが、チャンスをつかむことができませんでした。後半に残り約15分で、予備ガードのDimitris Kourbelisは方向を変えてネットに入り、試合の唯一のゴールになりました。"
+    },
+    {
+      "key": "body-1",
+      "start": 75.835,
+      "end": 126.288,
+      "text": "ギリシャのウィンガー、クリストス・ツォリスは試合後、チームはプレッシャーにさらされてもポジションに留まり、集中し続け、チャンスを逃した後も別のゴールを信じていたと語った。ギリシャはリーグAの最初の2つのバトルで勝利し、6ポイントグループで1位になりました。ドイツは2つのバトルで1ポイントのみを獲得し、次のラウンドはセルビアと対戦し、ギリシャはオランダと対戦します。"
+    },
+    {
+      "key": "why",
+      "start": 126.288,
+      "end": 151.879,
+      "text": "その結果、グループA 2の初期段階の状況が変わり、新しい指揮官が次の2ラウンドで勝利した後、ドイツはより大きな圧力にさらされました。"
+    },
+    {
+      "key": "watch",
+      "start": 151.879,
+      "end": 170.371,
+      "text": "10月1日のドイツ対セルビア、ギリシャ対オランダ、そして両チームがチームを調整するかどうかに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 6.689,
+      "end": 7.029,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "UEFAヨーロッパリーグオールウィン王座リーディンググループを"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.029,
+      "speechEnd": 12.394,
+      "end": 13.254,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "獲得したドイツ初の選手をギリシャが破った。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.254,
+      "speechEnd": 19.942,
+      "end": 20.222,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "後方のディミトリス・クルベリス選手は後半にゴールを決め、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.222,
+      "speechEnd": 27.538,
+      "end": 28.398,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ギリシャがアウクスブルクでドイツに1 -0で勝利するのを助けた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 28.398,
+      "speechEnd": 30.628,
+      "end": 30.908,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "UEFAは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 30.908,
+      "speechEnd": 39.129,
+      "end": 39.469,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ギリシャが2チームの歴史上初めてUEFAグループA 2でドイツを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.469,
+      "speechEnd": 43.65,
+      "end": 44.27,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "1 -0で破ったと報告しています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.27,
+      "speechEnd": 51.586,
+      "end": 51.866,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ドイツはほとんどの時間で試合をコントロールしていましたが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.866,
+      "speechEnd": 56.813,
+      "end": 57.433,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "チャンスをつかむことができませんでした。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.433,
+      "speechEnd": 61.265,
+      "end": 61.545,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "後半に残り約15分で、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.545,
+      "speechEnd": 66.701,
+      "end": 67.041,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "予備ガードのDimitris Kourbelisは"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.041,
+      "speechEnd": 70.594,
+      "end": 70.874,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "方向を変えてネットに入り、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.874,
+      "speechEnd": 75.054,
+      "end": 75.835,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "試合の唯一のゴールになりました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 75.835,
+      "speechEnd": 78.691,
+      "end": 78.971,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ギリシャのウィンガー、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 78.971,
+      "speechEnd": 82.455,
+      "end": 82.735,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "クリストス・ツォリスは試合後、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.735,
+      "speechEnd": 88.518,
+      "end": 88.798,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "チームはプレッシャーにさらされてもポジションに留まり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.798,
+      "speechEnd": 91.097,
+      "end": 91.377,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "集中し続け、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.377,
+      "speechEnd": 97.578,
+      "end": 98.198,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "チャンスを逃した後も別のゴールを信じていたと語った。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 98.198,
+      "speechEnd": 104.469,
+      "end": 104.749,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ギリシャはリーグAの最初の2つのバトルで勝利し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.749,
+      "speechEnd": 109.765,
+      "end": 110.386,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "6ポイントグループで1位になりました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 110.386,
+      "speechEnd": 116.656,
+      "end": 116.936,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ドイツは2つのバトルで1ポイントのみを獲得し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 116.936,
+      "speechEnd": 121.465,
+      "end": 121.745,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "次のラウンドはセルビアと対戦し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.745,
+      "speechEnd": 125.507,
+      "end": 126.288,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "ギリシャはオランダと対戦します。"
+    },
+    {
+      "parentKey": "why",
+      "start": 126.288,
+      "speechEnd": 130.259,
+      "end": 130.879,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 130.879,
+      "speechEnd": 133.039,
+      "end": 133.319,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "その結果、"
+    },
+    {
+      "parentKey": "why",
+      "start": 133.319,
+      "speechEnd": 138.963,
+      "end": 139.243,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "グループA 2の初期段階の状況が変わり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 139.243,
+      "speechEnd": 145.513,
+      "end": 145.793,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "新しい指揮官が次の2ラウンドで勝利した後、"
+    },
+    {
+      "parentKey": "why",
+      "start": 145.793,
+      "speechEnd": 151.019,
+      "end": 151.879,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ドイツはより大きな圧力にさらされました。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 151.879,
+      "speechEnd": 153.969,
+      "end": 154.249,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 154.249,
+      "speechEnd": 158.778,
+      "end": 159.058,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "10月1日のドイツ対セルビア、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 159.058,
+      "speechEnd": 161.636,
+      "end": 161.916,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ギリシャ対オランダ、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 161.916,
+      "speechEnd": 169.51,
+      "end": 170.371,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "そして両チームがチームを調整するかどうかに注目してください。"
+    }
+  ]
+}

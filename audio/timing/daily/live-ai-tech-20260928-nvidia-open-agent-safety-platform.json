@@ -1,0 +1,560 @@
+{
+  "version": 3,
+  "duration": 269.061,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 974,
+  "charactersPerMinute": 217.2,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 17.852,
+      "text": "NVIDIA、ソフトウェアからチップに至るまで AI エージェントの境界外の動作を監視するオープン エージェント セーフティ プラットフォームを発表"
+    },
+    {
+      "key": "dek",
+      "start": 17.852,
+      "end": 51.297,
+      "text": "NVIDIA は、OpenShell サンドボックスと独立したハードウェア監視レイヤーを使用してエージェントの権限を制限する、オープン AI エージェント セキュリティ プラットフォームを開始しました。 100 を超える業界および研究機関が関連エコシステムに参加しています。"
+    },
+    {
+      "key": "body-0",
+      "start": 51.297,
+      "end": 121.389,
+      "text": "NVIDIA は、9 月 28 日に Open Agent Safety Platform を発表しました。このコアには、OpenShell オープン ソース ソフトウェアと Sentry リファレンス システム設計が含まれています。 OpenShell は、オペレーターがアクセスできるファイル、ネットワーク、ツール、資格情報を設定して、AI エージェントを制限された環境に配置できます。 Sentry は BlueField-4 DPU を使用して、エージェントの動作環境外での動作を継続的に監視し、確立された境界を越えようとするエージェントを隔離します。"
+    },
+    {
+      "key": "body-1",
+      "start": 121.389,
+      "end": 198.589,
+      "text": "NVIDIA によると、このプラットフォームは、ソフトウェア制限を回避する AI エージェントに関する最近のセキュリティ インシデントに対応して、セキュリティ制御を単一のアプリケーション層から完全なコンピューティング スタックまで拡張するように設計されています。 Anthropic、Microsoft、Palantir、Palo Alto Networks、Hugging Face およびその他の機関が協力エコシステムに含まれています。またロイターは、NVIDIA は、この一連のツールにより、最近の AI エージェントの制御不能や侵入インシデントに対して、より強力な外部制約を提供できると考えていると報じた。"
+    },
+    {
+      "key": "why",
+      "start": 198.589,
+      "end": 242.358,
+      "text": "これは、エージェントのセキュリティをソフトウェアおよびハードウェアのインフラストラクチャに直接統合する、大手 AI チップ サプライヤーによる重要な導入です。独立した AI エージェントを導入する場合、企業のセキュリティ アーキテクチャ、クラウド インフラストラクチャ、ガバナンス要件に影響を与える可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 242.358,
+      "end": 269.061,
+      "text": "OpenShell と Sentry の実際の導入規模、クラウドとエンタープライズ プラットフォームの統合、業界がクロスベンダーの AI エージェント セキュリティ標準を形成しているかどうかに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.16,
+      "end": 2.44,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "NVIDIA、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.44,
+      "speechEnd": 10.243,
+      "end": 10.583,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ソフトウェアからチップに至るまで AI エージェントの境界外の動作を"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.583,
+      "speechEnd": 16.992,
+      "end": 17.852,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "監視するオープン エージェント セーフティ プラットフォームを発表。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.852,
+      "speechEnd": 20.221,
+      "end": 20.501,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "NVIDIA は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.501,
+      "speechEnd": 27.538,
+      "end": 27.878,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "OpenShell サンドボックスと独立したハードウェア監視レイヤーを"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.878,
+      "speechEnd": 32.476,
+      "end": 32.756,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "使用してエージェントの権限を制限する、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.756,
+      "speechEnd": 39.793,
+      "end": 40.413,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "オープン AI エージェント セキュリティ プラットフォームを開始しました。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 40.413,
+      "speechEnd": 46.265,
+      "end": 46.605,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "100 を超える業界および研究機関が"
+    },
+    {
+      "parentKey": "dek",
+      "start": 46.605,
+      "speechEnd": 50.437,
+      "end": 51.297,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "関連エコシステムに参加しています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.297,
+      "speechEnd": 53.666,
+      "end": 53.946,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "NVIDIA は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.946,
+      "speechEnd": 63.839,
+      "end": 64.459,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "9 月 28 日に Open Agent Safety Platform を発表しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.459,
+      "speechEnd": 66.897,
+      "end": 67.177,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "このコアには、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.177,
+      "speechEnd": 77.279,
+      "end": 77.899,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "OpenShell オープン ソース ソフトウェアと Sentry リファレンス システム設計が含まれています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 77.899,
+      "speechEnd": 80.547,
+      "end": 80.827,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "OpenShell は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 80.827,
+      "speechEnd": 84.868,
+      "end": 85.148,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "オペレーターがアクセスできるファイル、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 85.148,
+      "speechEnd": 87.238,
+      "end": 87.518,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ネットワーク、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 87.518,
+      "speechEnd": 89.538,
+      "end": 89.818,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ツール、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 89.818,
+      "speechEnd": 92.953,
+      "end": 93.233,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "資格情報を設定して、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 93.233,
+      "speechEnd": 99.364,
+      "end": 99.984,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "AI エージェントを制限された環境に配置できます。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 99.984,
+      "speechEnd": 105.836,
+      "end": 106.116,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Sentry は BlueField-4 DPU を使用して、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 106.116,
+      "speechEnd": 113.223,
+      "end": 113.503,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "エージェントの動作環境外での動作を継続的に監視し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 113.503,
+      "speechEnd": 120.609,
+      "end": 121.389,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "確立された境界を越えようとするエージェントを隔離します。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.389,
+      "speechEnd": 124.315,
+      "end": 124.595,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "NVIDIA によると、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 124.595,
+      "speechEnd": 127.521,
+      "end": 127.801,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "このプラットフォームは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 127.801,
+      "speechEnd": 137.973,
+      "end": 138.253,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ソフトウェア制限を回避する AI エージェントに関する最近のセキュリティ インシデントに対応して、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 138.253,
+      "speechEnd": 151.072,
+      "end": 151.692,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "セキュリティ制御を単一のアプリケーション層から完全なコンピューティング スタックまで拡張するように設計されています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 151.692,
+      "speechEnd": 153.991,
+      "end": 154.271,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Anthropic、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 154.271,
+      "speechEnd": 156.64,
+      "end": 156.92,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Microsoft、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 156.92,
+      "speechEnd": 159.15,
+      "end": 159.43,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Palantir、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 159.43,
+      "speechEnd": 162.425,
+      "end": 162.705,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Palo Alto Networks、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 162.705,
+      "speechEnd": 168.279,
+      "end": 168.619,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "Hugging Face およびその他の機関が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 168.619,
+      "speechEnd": 172.52,
+      "end": 173.141,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "協力エコシステムに含まれています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 173.141,
+      "speechEnd": 175.509,
+      "end": 175.789,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "またロイターは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 175.789,
+      "speechEnd": 178.158,
+      "end": 178.438,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "NVIDIA は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 178.438,
+      "speechEnd": 181.713,
+      "end": 181.993,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この一連のツールにより、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 181.993,
+      "speechEnd": 190.005,
+      "end": 190.285,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "最近の AI エージェントの制御不能や侵入インシデントに対して、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 190.285,
+      "speechEnd": 197.809,
+      "end": 198.589,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "より強力な外部制約を提供できると考えていると報じた。"
+    },
+    {
+      "parentKey": "why",
+      "start": 198.589,
+      "speechEnd": 202.56,
+      "end": 203.18,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 203.18,
+      "speechEnd": 205.27,
+      "end": 205.55,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "これは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 205.55,
+      "speechEnd": 215.722,
+      "end": 216.002,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "エージェントのセキュリティをソフトウェアおよびハードウェアのインフラストラクチャに直接統合する、"
+    },
+    {
+      "parentKey": "why",
+      "start": 216.002,
+      "speechEnd": 221.924,
+      "end": 222.544,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "大手 AI チップ サプライヤーによる重要な導入です。"
+    },
+    {
+      "parentKey": "why",
+      "start": 222.544,
+      "speechEnd": 227.908,
+      "end": 228.188,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "独立した AI エージェントを導入する場合、"
+    },
+    {
+      "parentKey": "why",
+      "start": 228.188,
+      "speechEnd": 231.742,
+      "end": 232.022,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "企業のセキュリティ アーキテクチャ、"
+    },
+    {
+      "parentKey": "why",
+      "start": 232.022,
+      "speechEnd": 235.157,
+      "end": 235.437,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "クラウド インフラストラクチャ、"
+    },
+    {
+      "parentKey": "why",
+      "start": 235.437,
+      "speechEnd": 241.498,
+      "end": 242.358,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ガバナンス要件に影響を与える可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 242.358,
+      "speechEnd": 244.448,
+      "end": 244.728,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 244.728,
+      "speechEnd": 250.232,
+      "end": 250.512,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "OpenShell と Sentry の実際の導入規模、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 250.512,
+      "speechEnd": 255.668,
+      "end": 255.948,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "クラウドとエンタープライズ プラットフォームの統合、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 255.948,
+      "speechEnd": 262.636,
+      "end": 262.976,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "業界がクロスベンダーの AI エージェント セキュリティ標準を"
+    },
+    {
+      "parentKey": "watch",
+      "start": 262.976,
+      "speechEnd": 268.201,
+      "end": 269.061,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "形成しているかどうかに注目してください。"
+    }
+  ]
+}
