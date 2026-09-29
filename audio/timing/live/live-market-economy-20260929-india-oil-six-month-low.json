@@ -1,0 +1,480 @@
+{
+  "version": 3,
+  "duration": 209.267,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 616,
+  "charactersPerMinute": 176.6,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 11.64,
+      "text": "原油価格の上昇がインド市場の株価を6カ月ぶりの低水準付近に押し上げた"
+    },
+    {
+      "key": "dek",
+      "start": 11.64,
+      "end": 42.535,
+      "text": "中東の供給懸念は原油価格を押し上げた。インド株は、前日の取引日が6か月ぶりの低水準付近に落ち込んだ後、火曜日の初めに原油価格、流出、米国金利上昇の3倍の圧力にさらされている。"
+    },
+    {
+      "key": "body-0",
+      "start": 42.535,
+      "end": 98.469,
+      "text": "ロイター通信は9月29日、インドの株式市場が前日の約6ヶ月ぶりの低水準に落ち込んだ後、火曜日の上場前のセンチメントは依然として慎重だったと報じた。ブレント原油はかつて1バレルあたり約106.7ドルに上昇した。インドは世界の主要原油輸入国の1つであるため、原油価格の上昇は輸入コストを増加させ、インフレを押し上げ、企業利益を弱める可能性がある。"
+    },
+    {
+      "key": "body-1",
+      "start": 98.469,
+      "end": 153.947,
+      "text": "市場のプレッシャーはエネルギーだけではありません。インド株式への外国人保有は最近減少し続けており、米国債利回りは依然として高水準であり、新興市場国の資本コストを引き上げている。インドのメディアも同日、SensexとNiftyが約6カ月ぶりの低水準に落ち込んだと報じた。投資家は次に、原油価格、外国資本の流れ、インフレと成長の間のRBIの政策スタンスに焦点を当てます。"
+    },
+    {
+      "key": "why",
+      "start": 153.947,
+      "end": 185.491,
+      "text": "インドは大規模な原油輸入国であり、エネルギー価格はインフレ、貿易勘定、企業コスト、金融政策に直接影響を及ぼし、新興市場への世界的な資金配分を変える可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 185.491,
+      "end": 209.267,
+      "text": "ブレント原油の下落、インドへの外国資本の流れ、ルピーのトレンド、エネルギーインフレリスクに関するインド準備銀行からの最新のシグナルに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 5.086,
+      "end": 5.366,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "原油価格の上昇がインド市場の株価を"
+    },
+    {
+      "parentKey": "title",
+      "start": 5.366,
+      "speechEnd": 10.94,
+      "end": 11.64,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "6カ月ぶりの低水準付近に押し上げた。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 11.64,
+      "speechEnd": 18.05,
+      "end": 18.55,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "中東の供給懸念は原油価格を押し上げた。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.55,
+      "speechEnd": 20.78,
+      "end": 21.01,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "インド株は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.01,
+      "speechEnd": 28.883,
+      "end": 29.113,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "前日の取引日が6か月ぶりの低水準付近に落ち込んだ後、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 29.113,
+      "speechEnd": 33.293,
+      "end": 33.523,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "火曜日の初めに原油価格、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 33.523,
+      "speechEnd": 35.544,
+      "end": 35.774,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "流出、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 35.774,
+      "speechEnd": 41.835,
+      "end": 42.535,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "米国金利上昇の3倍の圧力にさらされている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.535,
+      "speechEnd": 47.204,
+      "end": 47.434,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信は9月29日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.434,
+      "speechEnd": 51.475,
+      "end": 51.615,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "インドの株式市場が前日の約"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.615,
+      "speechEnd": 53.775,
+      "end": 53.915,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "6ヶ月"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.915,
+      "speechEnd": 57.886,
+      "end": 58.116,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ぶりの低水準に落ち込んだ後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.116,
+      "speechEnd": 62.227,
+      "end": 62.507,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "火曜日の上場前のセンチメントは"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.507,
+      "speechEnd": 66.617,
+      "end": 67.118,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "依然として慎重だったと報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.118,
+      "speechEnd": 76.314,
+      "end": 76.814,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "ブレント原油はかつて1バレルあたり約106.7ドルに上昇した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.814,
+      "speechEnd": 84.13,
+      "end": 84.36,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "インドは世界の主要原油輸入国の1つであるため、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 84.36,
+      "speechEnd": 90.282,
+      "end": 90.512,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "原油価格の上昇は輸入コストを増加させ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 90.512,
+      "speechEnd": 93.299,
+      "end": 93.529,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "インフレを押し上げ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 93.529,
+      "speechEnd": 97.849,
+      "end": 98.469,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "企業利益を弱める可能性がある。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 98.469,
+      "speechEnd": 104.113,
+      "end": 104.613,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "市場のプレッシャーはエネルギーだけではありません。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.613,
+      "speechEnd": 111.859,
+      "end": 112.089,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "インド株式への外国人保有は最近減少し続けており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.089,
+      "speechEnd": 117.523,
+      "end": 117.753,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国債利回りは依然として高水準であり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.753,
+      "speechEnd": 123.118,
+      "end": 123.618,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "新興市場国の資本コストを引き上げている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 123.618,
+      "speechEnd": 126.823,
+      "end": 127.053,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "インドのメディアも同日、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 127.053,
+      "speechEnd": 129.98,
+      "end": 130.26,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "SensexとNiftyが"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 130.26,
+      "speechEnd": 136.391,
+      "end": 136.891,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "約6カ月ぶりの低水準に落ち込んだと報じた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 136.891,
+      "speechEnd": 139.469,
+      "end": 139.699,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "投資家は次に、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 139.699,
+      "speechEnd": 141.998,
+      "end": 142.228,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "原油価格、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 142.228,
+      "speechEnd": 145.085,
+      "end": 145.315,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "外国資本の流れ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 145.315,
+      "speechEnd": 153.327,
+      "end": 153.947,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "インフレと成長の間のRBIの政策スタンスに焦点を当てます。"
+    },
+    {
+      "parentKey": "why",
+      "start": 153.947,
+      "speechEnd": 157.919,
+      "end": 158.419,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 158.419,
+      "speechEnd": 163.644,
+      "end": 163.874,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "インドは大規模な原油輸入国であり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 163.874,
+      "speechEnd": 167.009,
+      "end": 167.24,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "エネルギー価格はインフレ、"
+    },
+    {
+      "parentKey": "why",
+      "start": 167.24,
+      "speechEnd": 169.469,
+      "end": 169.699,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "貿易勘定、"
+    },
+    {
+      "parentKey": "why",
+      "start": 169.699,
+      "speechEnd": 171.929,
+      "end": 172.159,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "企業コスト、"
+    },
+    {
+      "parentKey": "why",
+      "start": 172.159,
+      "speechEnd": 176.757,
+      "end": 176.987,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "金融政策に直接影響を及ぼし、"
+    },
+    {
+      "parentKey": "why",
+      "start": 176.987,
+      "speechEnd": 184.791,
+      "end": 185.491,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "新興市場への世界的な資金配分を変える可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 185.491,
+      "speechEnd": 187.581,
+      "end": 187.811,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 187.811,
+      "speechEnd": 191.155,
+      "end": 191.385,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ブレント原油の下落、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 191.385,
+      "speechEnd": 195.217,
+      "end": 195.447,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "インドへの外国資本の流れ、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 195.447,
+      "speechEnd": 198.165,
+      "end": 198.395,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ルピーのトレンド、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 198.395,
+      "speechEnd": 208.567,
+      "end": 209.267,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "エネルギーインフレリスクに関するインド準備銀行からの最新のシグナルに注目してください。"
+    }
+  ]
+}
