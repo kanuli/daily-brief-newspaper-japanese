@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 31.425,
+  "duration": 238.89,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 360.0,
-  "characters": 88,
-  "charactersPerMinute": 168.0,
+  "characters": 775,
+  "charactersPerMinute": 194.7,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.14,
@@ -21,76 +21,530 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 6.351,
-      "text": "速報：最新の確認済みニュース"
+      "end": 18.321,
+      "text": "ネットリストは、マイクロンメモリのGoogle、Nvidia AIデバイスのサプライチェーンに対する米国の禁止を要求し、注目を集めています"
+    },
+    {
+      "key": "dek",
+      "start": 18.321,
+      "end": 46.18,
+      "text": "Netlistは、一部のMicronメモリ製品の輸入を禁止する新たな苦情を米国国際貿易委員会に提出した。これらのチップは、GoogleとNvidiaのAIコンピューティングデバイスで使用されたとされている。"
     },
     {
       "key": "body-0",
-      "start": 6.351,
-      "end": 31.425,
-      "text": "記事に記載した出典で最新情報を確認しました。翻訳サービスの一時的な制限中のため、確認済み項目を先行掲載しています。詳細な日本語本文は自動復旧処理で更新します。"
+      "start": 46.18,
+      "end": 92.926,
+      "text": "メモリ会社のNetlistは火曜日、Micronのメモリチップの一部の輸入を禁止する新たな苦情を米国国際貿易委員会に提出したと発表した。ロイター通信によると、Netlistは、問題の製品がその特許に関連しており、関連するMicronメモリがGoogle、Nvidia、BroadcomのAIコンピューティングデバイスで使用されていると主張している。"
+    },
+    {
+      "key": "body-1",
+      "start": 92.926,
+      "end": 152.904,
+      "text": "異議申し立て自体は、入国禁止がすでに有効であることを意味するものではなく、委員会の提出、調査、および最終決定の対象となります。しかし、AIサーバーからの高性能メモリの需要が急増している中、米国で特定のMicron製品へのアクセスが制限されてしまうと、GoogleやNvidiaなどの企業が他のメモリプロバイダ、製品設計、在庫手配を通じてサプライチェーンリスクを軽減できるかどうかが懸念されます。"
+    },
+    {
+      "key": "why",
+      "start": 152.904,
+      "end": 204.2,
+      "text": "GoogleとNvidiaはどちらも世界的なAIコンピューティングインフラストラクチャの中心であり、メモリ供給の制約は、デバイスの配送、部品コスト、ベンダーの構成に影響を与える可能性があります。現段階で最も重要なことは、「不服申立て」と「強制禁止」を区別して、即時の業務上の影響を過大評価しないようにすることです。"
+    },
+    {
+      "key": "watch",
+      "start": 204.2,
+      "end": 238.89,
+      "text": "米国国際貿易委員会が正式に調査を開始したかどうか、マイクロンの対応、関与する製品範囲、およびGoogle、Nvidia、または他のAIハードウェア企業が代替供給契約を開示したかどうかに注意してください。"
     }
   ],
   "semanticUnits": [
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 2.022,
-      "end": 2.303,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "punctuation-semantic",
-      "text": "速報："
-    },
-    {
-      "parentKey": "title",
-      "start": 2.303,
-      "speechEnd": 5.65,
-      "end": 6.351,
-      "pause": 0.701,
-      "intendedPause": 0.7,
-      "reason": "punctuation-sentence",
-      "text": "最新の確認済みニュース。"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 6.351,
-      "speechEnd": 12.976,
-      "end": 13.476,
-      "pause": 0.501,
-      "intendedPause": 0.5,
-      "reason": "punctuation-sentence",
-      "text": "記事に記載した出典で最新情報を確認しました。"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 13.476,
-      "speechEnd": 18.776,
-      "end": 19.007,
+      "speechEnd": 2.23,
+      "end": 2.46,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
-      "text": "翻訳サービスの一時的な制限中のため、"
+      "text": "ネットリストは、"
     },
     {
-      "parentKey": "body-0",
-      "start": 19.007,
-      "speechEnd": 23.33,
-      "end": 23.831,
-      "pause": 0.501,
+      "parentKey": "title",
+      "start": 2.46,
+      "speechEnd": 6.222,
+      "end": 6.452,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "マイクロンメモリのGoogle、"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.452,
+      "speechEnd": 14.534,
+      "end": 14.764,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Nvidia AIデバイスのサプライチェーンに対する米国の禁止を要求し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 14.764,
+      "speechEnd": 17.621,
+      "end": 18.321,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "注目を集めています。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.321,
+      "speechEnd": 20.62,
+      "end": 20.85,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Netlistは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.85,
+      "speechEnd": 25.588,
+      "end": 25.868,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "一部のMicronメモリ製品の輸入を"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.868,
+      "speechEnd": 33.742,
+      "end": 34.242,
+      "pause": 0.5,
       "intendedPause": 0.5,
       "reason": "punctuation-sentence",
-      "text": "確認済み項目を先行掲載しています。"
+      "text": "禁止する新たな苦情を米国国際貿易委員会に提出した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 34.242,
+      "speechEnd": 36.889,
+      "end": 37.119,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "これらのチップは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 37.119,
+      "speechEnd": 45.48,
+      "end": 46.18,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "GoogleとNvidiaのAIコンピューティングデバイスで使用されたとされている。"
     },
     {
       "parentKey": "body-0",
-      "start": 23.831,
-      "speechEnd": 30.805,
-      "end": 31.425,
-      "pause": 0.621,
+      "start": 46.18,
+      "speechEnd": 50.57,
+      "end": 50.8,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "メモリ会社のNetlistは火曜日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.8,
+      "speechEnd": 55.747,
+      "end": 56.027,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "Micronのメモリチップの一部の輸入を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.027,
+      "speechEnd": 65.363,
+      "end": 65.863,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "禁止する新たな苦情を米国国際貿易委員会に提出したと発表した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.863,
+      "speechEnd": 68.859,
+      "end": 69.089,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.089,
+      "speechEnd": 71.389,
+      "end": 71.619,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Netlistは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.619,
+      "speechEnd": 76.775,
+      "end": 77.005,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "問題の製品がその特許に関連しており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 77.005,
+      "speechEnd": 81.394,
+      "end": 81.624,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "関連するMicronメモリがGoogle、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 81.624,
+      "speechEnd": 83.854,
+      "end": 84.084,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Nvidia、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 84.084,
+      "speechEnd": 92.305,
+      "end": 92.926,
+      "pause": 0.62,
       "intendedPause": 0.62,
       "reason": "punctuation-sentence",
-      "text": "詳細な日本語本文は自動復旧処理で更新します。"
+      "text": "BroadcomのAIコンピューティングデバイスで使用されていると主張している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.926,
+      "speechEnd": 95.991,
+      "end": 96.221,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "異議申し立て自体は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 96.221,
+      "speechEnd": 103.886,
+      "end": 104.116,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "入国禁止がすでに有効であることを意味するものではなく、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.116,
+      "speechEnd": 106.833,
+      "end": 107.063,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "委員会の提出、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.063,
+      "speechEnd": 109.083,
+      "end": 109.314,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "調査、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.314,
+      "speechEnd": 113.912,
+      "end": 114.412,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "および最終決定の対象となります。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.412,
+      "speechEnd": 116.433,
+      "end": 116.663,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "しかし、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 116.663,
+      "speechEnd": 123.77,
+      "end": 124.0,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "AIサーバーからの高性能メモリの需要が急増している中、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 124.0,
+      "speechEnd": 132.082,
+      "end": 132.312,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国で特定のMicron製品へのアクセスが制限されてしまうと、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 132.312,
+      "speechEnd": 136.701,
+      "end": 136.981,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "GoogleやNvidiaなどの企業が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 136.981,
+      "speechEnd": 140.117,
+      "end": 140.347,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "他のメモリプロバイダ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 140.347,
+      "speechEnd": 142.507,
+      "end": 142.737,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "製品設計、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 142.737,
+      "speechEnd": 147.544,
+      "end": 147.824,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "在庫手配を通じてサプライチェーンリスクを"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 147.824,
+      "speechEnd": 152.284,
+      "end": 152.904,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "軽減できるかどうかが懸念されます。"
+    },
+    {
+      "parentKey": "why",
+      "start": 152.904,
+      "speechEnd": 156.875,
+      "end": 157.375,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 157.375,
+      "speechEnd": 160.371,
+      "end": 160.651,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "GoogleとNvidiaは"
+    },
+    {
+      "parentKey": "why",
+      "start": 160.651,
+      "speechEnd": 169.221,
+      "end": 169.451,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "どちらも世界的なAIコンピューティングインフラストラクチャの中心であり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 169.451,
+      "speechEnd": 172.726,
+      "end": 172.956,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "メモリ供給の制約は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 172.956,
+      "speechEnd": 175.673,
+      "end": 175.903,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "デバイスの配送、"
+    },
+    {
+      "parentKey": "why",
+      "start": 175.903,
+      "speechEnd": 178.203,
+      "end": 178.433,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "部品コスト、"
+    },
+    {
+      "parentKey": "why",
+      "start": 178.433,
+      "speechEnd": 184.564,
+      "end": 185.064,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "ベンダーの構成に影響を与える可能性があります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 185.064,
+      "speechEnd": 189.245,
+      "end": 189.475,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "現段階で最も重要なことは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 189.475,
+      "speechEnd": 195.745,
+      "end": 195.975,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "「不服申立て」と「強制禁止」を区別して、"
+    },
+    {
+      "parentKey": "why",
+      "start": 195.975,
+      "speechEnd": 203.5,
+      "end": 204.2,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "即時の業務上の影響を過大評価しないようにすることです。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 204.2,
+      "speechEnd": 206.291,
+      "end": 206.521,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 206.521,
+      "speechEnd": 214.742,
+      "end": 214.972,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国国際貿易委員会が正式に調査を開始したかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 214.972,
+      "speechEnd": 217.62,
+      "end": 217.85,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "マイクロンの対応、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 217.85,
+      "speechEnd": 220.567,
+      "end": 220.797,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "関与する製品範囲、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 220.797,
+      "speechEnd": 223.724,
+      "end": 223.954,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "およびGoogle、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 223.954,
+      "speechEnd": 226.183,
+      "end": 226.413,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Nvidia、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 226.413,
+      "speechEnd": 230.803,
+      "end": 231.083,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "または他のAIハードウェア企業が"
+    },
+    {
+      "parentKey": "watch",
+      "start": 231.083,
+      "speechEnd": 238.19,
+      "end": 238.89,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "代替供給契約を開示したかどうかに注意してください。"
     }
   ]
 }
