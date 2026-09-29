@@ -59,7 +59,7 @@ def post(content: str) -> None:
         data=body,
         headers={
             "Content-Type": "application/json",
-            "User-Agent": "JapaneseDailyBriefGitHubActions/2.3",
+            "User-Agent": "JapaneseDailyBriefGitHubActions/2.4",
         },
         method="POST",
     )
@@ -171,13 +171,42 @@ def send_live() -> None:
     print("Live Japanese Discord notification sent with website-only links.")
 
 
+def send_published_live() -> None:
+    """Notify the currently published Live window once Pages has been verified.
+
+    This mode intentionally does not compare against HEAD^ because F3, health,
+    and Pages commits may sit between the news commit and the notification run.
+    The post-Pages workflow owns de-duplication with a publication fingerprint.
+    """
+    current = load("data/live.json")
+    material = safe_live_items(current)
+    if not material:
+        print("No safe published Live items available; Discord notification suppressed.")
+        return
+
+    update_label = current.get("lastUpdatedLabel") or current.get("lastUpdated") or "最新更新"
+    if corrupt(update_label):
+        update_label = current.get("lastUpdated") or "最新更新"
+
+    lines = [f"🔴 **最新ニュース速報｜{update_label}**", ""]
+    for item in material[:4]:
+        status = item.get("status", "UPDATED")
+        title = item.get("title", "更新")
+        lines.append(f"**{status}** · **{title}**")
+    if len(material) > 4:
+        lines.append(f"＋ほか {len(material) - 4} 件の更新")
+    lines += ["", f"🔴 続きを読む：{LIVE_PAGE}"]
+    post("\n".join(lines))
+    print("Published Live Japanese Discord notification sent with website-only links.")
+
+
 def send_hourly() -> None:
     """Compatibility mode for the xx:15 schedule: publish only real Live deltas.
 
     The old hourly mode reposted the current top headlines even when data had not
-    changed, causing the same Live news to appear repeatedly in Discord.  Keep
-    the workflow flag for compatibility, but route it through the material-delta
-    guard used by normal Live notifications.
+    changed, causing the same Live news to appear repeatedly in Discord. Keep
+    this legacy flag for direct sync runs; post-Pages delivery uses
+    --published-live with publication-fingerprint de-duplication instead.
     """
     print("Hourly compatibility mode is delta-only; checking material Live changes.")
     send_live()
@@ -188,16 +217,19 @@ def main() -> None:
     parser.add_argument("--daily", action="store_true")
     parser.add_argument("--live", action="store_true")
     parser.add_argument("--hourly", action="store_true")
+    parser.add_argument("--published-live", action="store_true")
     args = parser.parse_args()
 
-    if not args.daily and not args.live and not args.hourly:
-        raise SystemExit("Specify --daily, --live and/or --hourly")
+    if not args.daily and not args.live and not args.hourly and not args.published_live:
+        raise SystemExit("Specify --daily, --live, --hourly and/or --published-live")
     if args.daily:
         send_daily()
     if args.live:
         send_live()
     if args.hourly:
         send_hourly()
+    if args.published_live:
+        send_published_live()
 
 
 if __name__ == "__main__":
