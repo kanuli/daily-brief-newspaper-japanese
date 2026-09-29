@@ -1,0 +1,660 @@
+{
+  "version": 3,
+  "duration": 289.881,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 957,
+  "charactersPerMinute": 198.1,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 22.115,
+      "text": "Anthropicは、コアサプライヤーとしてGoogle、Amazon、Microsoftにコミットされた5,180億ドル以上のAIインフラストラクチャを明らかにします"
+    },
+    {
+      "key": "dek",
+      "start": 22.115,
+      "end": 63.025,
+      "text": "ロイターが入手したAnthropicの上場書類によると、同社の今後10年間のAIインフラストラクチャのコミットメントは少なくとも5,180億ドルであり、その約80 ％がキャンセル不可能または契約上の支払いの対象となっており、コンピューティングパワーの供給がAI競争の中核的制約となっています。"
+    },
+    {
+      "key": "body-0",
+      "start": 63.025,
+      "end": 143.214,
+      "text": "ロイターが9月29日に入手したAnthropicの上場書類によると、同社は今後10年間で少なくとも5,180億ドルのAIインフラストラクチャをコミットする予定であり、Google、Amazon、Microsoft、Broadcomなどの6つの主要パートナーが関与している。コミットメントの約80 ％はキャンセル不可能であり、サービスが完全に使用されていなくても支払いの対象となる。文書によると、高度なAIシステムの将来のニーズは、利用可能なコンピューティングパワーによって制限される可能性があるため、同社は長期契約でコンピューティングパワーを確保しています。"
+    },
+    {
+      "key": "body-1",
+      "start": 143.214,
+      "end": 208.511,
+      "text": "この文書はまた、Anthropicが純粋なクラウドモデルから社内データセンターおよびチップの直接リースに徐々に移行していることを示しています。この規模の長期的なコミットメントは、資本、需要予測、サプライヤー集中のリスクを高めながら、コンピューティングパワーを確保します。Google、Amazon、Microsoftは、インフラストラクチャと流通チャネルの両方を提供し、競争力のあるAIモデルを開発し、協力と競争関係は、マーケティング後の重要なリスク要因になります。"
+    },
+    {
+      "key": "why",
+      "start": 208.511,
+      "end": 253.199,
+      "text": "5,180億ドルを超える長期的なコミットメントは、Anthropicの資本ニーズ、収益性パス、サプライヤーの交渉力に直接影響を与え、Google、Amazon、Microsoft、および半導体サプライチェーンに定量化可能な長期的なAI需要シグナルを提供します。"
+    },
+    {
+      "key": "watch",
+      "start": 253.199,
+      "end": 289.881,
+      "text": "Anthropicの正式なIPO申請、評価および資金調達の取り決め、Google、Amazon、Microsoft、およびチップベンダーが関連する契約、キャパシティデリバリー、および収益ペーシングをどのように確認しているかに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.439,
+      "end": 2.719,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Anthropicは、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.719,
+      "speechEnd": 6.411,
+      "end": 6.691,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "コアサプライヤーとしてGoogle、"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.691,
+      "speechEnd": 8.921,
+      "end": 9.201,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Amazon、"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.201,
+      "speechEnd": 13.66,
+      "end": 13.94,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Microsoftにコミットされた5,"
+    },
+    {
+      "parentKey": "title",
+      "start": 13.94,
+      "speechEnd": 21.255,
+      "end": 22.115,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "180億ドル以上のAIインフラストラクチャを明らかにします。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.115,
+      "speechEnd": 28.665,
+      "end": 28.945,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイターが入手したAnthropicの上場書類によると、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 28.945,
+      "speechEnd": 38.768,
+      "end": 39.048,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同社の今後10年間のAIインフラストラクチャのコミットメントは少なくとも5,"
+    },
+    {
+      "parentKey": "dek",
+      "start": 39.048,
+      "speechEnd": 42.323,
+      "end": 42.603,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "180億ドルであり、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 42.603,
+      "speechEnd": 48.107,
+      "end": 48.447,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "その約80 ％がキャンセル不可能または"
+    },
+    {
+      "parentKey": "dek",
+      "start": 48.447,
+      "speechEnd": 52.976,
+      "end": 53.256,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "契約上の支払いの対象となっており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 53.256,
+      "speechEnd": 57.088,
+      "end": 57.428,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "コンピューティングパワーの供給が"
+    },
+    {
+      "parentKey": "dek",
+      "start": 57.428,
+      "speechEnd": 62.165,
+      "end": 63.025,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "AI競争の中核的制約となっています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.025,
+      "speechEnd": 72.152,
+      "end": 72.432,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイターが9月29日に入手したAnthropicの上場書類によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.432,
+      "speechEnd": 78.355,
+      "end": 78.635,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同社は今後10年間で少なくとも5,"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 78.635,
+      "speechEnd": 83.442,
+      "end": 83.782,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "180億ドルのAIインフラストラクチャを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 83.782,
+      "speechEnd": 87.266,
+      "end": 87.546,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "コミットする予定であり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 87.546,
+      "speechEnd": 89.636,
+      "end": 89.916,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Google、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 89.916,
+      "speechEnd": 92.145,
+      "end": 92.425,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Amazon、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 92.425,
+      "speechEnd": 94.794,
+      "end": 95.074,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Microsoft、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 95.074,
+      "speechEnd": 102.32,
+      "end": 102.94,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "Broadcomなどの6つの主要パートナーが関与している。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 102.94,
+      "speechEnd": 109.768,
+      "end": 110.048,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "コミットメントの約80 ％はキャンセル不可能であり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 110.048,
+      "speechEnd": 117.015,
+      "end": 117.635,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "サービスが完全に使用されていなくても支払いの対象となる。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 117.635,
+      "speechEnd": 120.143,
+      "end": 120.423,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "文書によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 120.423,
+      "speechEnd": 125.509,
+      "end": 125.79,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "高度なAIシステムの将来のニーズは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 125.79,
+      "speechEnd": 130.179,
+      "end": 130.519,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "利用可能なコンピューティングパワーによって"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 130.519,
+      "speechEnd": 134.56,
+      "end": 134.84,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "制限される可能性があるため、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 134.84,
+      "speechEnd": 142.434,
+      "end": 143.214,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "同社は長期契約でコンピューティングパワーを確保しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 143.214,
+      "speechEnd": 145.931,
+      "end": 146.211,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この文書はまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 146.211,
+      "speechEnd": 160.076,
+      "end": 160.696,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "Anthropicが純粋なクラウドモデルから社内データセンターおよびチップの直接リースに徐々に移行していることを示しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 160.696,
+      "speechEnd": 165.434,
+      "end": 165.714,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この規模の長期的なコミットメントは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 165.714,
+      "speechEnd": 167.734,
+      "end": 168.014,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "資本、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 168.014,
+      "speechEnd": 170.244,
+      "end": 170.524,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "需要予測、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 170.524,
+      "speechEnd": 175.401,
+      "end": 175.681,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "サプライヤー集中のリスクを高めながら、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 175.681,
+      "speechEnd": 180.07,
+      "end": 180.69,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "コンピューティングパワーを確保します。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 180.69,
+      "speechEnd": 182.781,
+      "end": 183.061,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Google、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 183.061,
+      "speechEnd": 185.29,
+      "end": 185.57,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Amazon、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 185.57,
+      "speechEnd": 188.078,
+      "end": 188.358,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Microsoftは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 188.358,
+      "speechEnd": 194.211,
+      "end": 194.491,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インフラストラクチャと流通チャネルの両方を提供し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 194.491,
+      "speechEnd": 199.298,
+      "end": 199.578,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "競争力のあるAIモデルを開発し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 199.578,
+      "speechEnd": 202.295,
+      "end": 202.575,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "協力と競争関係は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 202.575,
+      "speechEnd": 207.731,
+      "end": 208.511,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "マーケティング後の重要なリスク要因になります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 208.511,
+      "speechEnd": 212.482,
+      "end": 213.103,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 213.103,
+      "speechEnd": 215.053,
+      "end": 215.333,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "5,"
+    },
+    {
+      "parentKey": "why",
+      "start": 215.333,
+      "speechEnd": 221.743,
+      "end": 222.023,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "180億ドルを超える長期的なコミットメントは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 222.023,
+      "speechEnd": 225.437,
+      "end": 225.717,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Anthropicの資本ニーズ、"
+    },
+    {
+      "parentKey": "why",
+      "start": 225.717,
+      "speechEnd": 228.086,
+      "end": 228.366,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "収益性パス、"
+    },
+    {
+      "parentKey": "why",
+      "start": 228.366,
+      "speechEnd": 233.661,
+      "end": 233.941,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "サプライヤーの交渉力に直接影響を与え、"
+    },
+    {
+      "parentKey": "why",
+      "start": 233.941,
+      "speechEnd": 236.031,
+      "end": 236.311,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Google、"
+    },
+    {
+      "parentKey": "why",
+      "start": 236.311,
+      "speechEnd": 238.541,
+      "end": 238.821,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Amazon、"
+    },
+    {
+      "parentKey": "why",
+      "start": 238.821,
+      "speechEnd": 241.19,
+      "end": 241.47,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Microsoft、"
+    },
+    {
+      "parentKey": "why",
+      "start": 241.47,
+      "speechEnd": 252.339,
+      "end": 253.199,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "および半導体サプライチェーンに定量化可能な長期的なAI需要シグナルを提供します。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 253.199,
+      "speechEnd": 255.289,
+      "end": 255.569,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 255.569,
+      "speechEnd": 259.54,
+      "end": 259.82,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Anthropicの正式なIPO申請、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 259.82,
+      "speechEnd": 264.07,
+      "end": 264.35,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "評価および資金調達の取り決め、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 264.35,
+      "speechEnd": 266.44,
+      "end": 266.72,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Google、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 266.72,
+      "speechEnd": 268.95,
+      "end": 269.23,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Amazon、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 269.23,
+      "speechEnd": 271.599,
+      "end": 271.879,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Microsoft、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 271.879,
+      "speechEnd": 276.825,
+      "end": 277.105,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "およびチップベンダーが関連する契約、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 277.105,
+      "speechEnd": 279.892,
+      "end": 280.172,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "キャパシティデリバリー、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 280.172,
+      "speechEnd": 289.021,
+      "end": 289.881,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "および収益ペーシングをどのように確認しているかに注目してください。"
+    }
+  ]
+}
