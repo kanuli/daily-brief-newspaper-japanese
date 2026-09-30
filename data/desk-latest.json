@@ -1,6 +1,6 @@
 {
   "date": "2026-09-30",
-  "generatedAt": "2026-09-30T21:55:00+08:00",
+  "generatedAt": "2026-09-30T22:57:00+08:00",
   "mode": "ROLLING_DESK_LATEST",
   "editorialStandardVersion": 3,
   "contentVersion": 3,
@@ -134,9 +134,7 @@
           ]
         },
         "audio": "audio/rolling/live-hong-kong-20260930-university-ranking.mp3",
-        "timing": "audio/timing/rolling/live-hong-kong-20260930-university-ranking.json",
-        "audioSpeed": 0.72,
-        "audioDeliveryProfile": "jp-tv-news-semantic-v4"
+        "timing": "audio/timing/rolling/live-hong-kong-20260930-university-ranking.json"
       }
     ],
     "japan": [
@@ -243,49 +241,51 @@
     ],
     "ai-tech": [
       {
-        "id": "live-ai-tech-20260930-deepseek-huawei-ascend",
+        "id": "live-ai-20260930-ftc-ai-labs-probe",
         "desk": "ai-tech",
         "deskSlugs": [
           "ai-tech"
         ],
-        "section": "AI・科技",
-        "sectionLabel": "AI・科技",
-        "title": "DeepSeekはファーウェイと提携し、中国のAIソフトウェアエコシステムの自律性を促進するAscendプログラミングツールを開発",
-        "dek": "DeepSeekは、中国のAI開発におけるNvidia CUDAエコシステムへの依存を減らすことを目的として、高級プログラミング言語TileLangを含むファーウェイのAscendチップ用の多数のインフラストラクチャツールをオープンソース化した。",
-        "summary": "DeepSeek は Huawei と協力して Ascend ソフトウェア ツール チェーンを拡張し、純粋なチップのパフォーマンスから開発者のエコシステムまで焦点を広げます。ツールが成熟していれば、モデルの移行とメンテナンスの敷居を下げることができます。",
-        "body": "ロイター通信は9月30日、DeepSeekがファーウェイと協力してAscend AIチップ用のプログラミングツールを開発し、高水準プログラミング言語TileLangを含むインフラストラクチャソフトウェアのバッチをオープンソース化していると報じた。 DeepSeekは公式WeChatアカウントで関連取り決めを発表し、独立した効率的なGPUソフトウェアエコシステムを確立することが重要なステップであると述べた。\n\nAI アクセラレータの競争は、チップのコンピューティング能力だけでなく、開発者が低コストでモデルを導入できるかどうかを決定するコンパイラ、ライブラリ、開発ツールにも左右されます。したがって、この協力は Nvidia CUDA の長年確立されたソフトウェア堀に直接触れます。次のステップは、実際のトレーニングと推論のワークロードにおける TileLang の互換性、パフォーマンス、開発者の導入を観察することです。",
-        "context": "中国のテクノロジー企業は、外部供給の制約と単一プラットフォームへの依存を軽減するために、現地のAIチップとソフトウェアツールチェーンの構築を加速している。",
-        "why": "Ascendツールチェーンが使いやすくなれば、ファーウェイのAIチップの実際の展開能力が向上し、中国のAIコンピューティング市場におけるプラットフォーム競争の状況が変わる可能性がある。",
-        "watchNext": "TileLang のオープンソース コミュニティでの採用、主流のモデル フレームワークとの互換性、および大規模なモデルのトレーニングと推論における Ascend の測定されたパフォーマンスに注目してください。",
+        "section": "AIテクノロジー",
+        "sectionLabel": "AI科技",
+        "title": "米国連邦取引委員会（ FTC ）は、AIラボのAnthropic、OpenAIなどが直面するデータ要件の調査を拡大していると伝えられています。",
+        "dek": "米国連邦取引委員会は、高度なAIシステムが消費者にもたらす可能性のあるリスクを調査していると伝えられており、規制の焦点は自発的なセキュリティコミットメントから正式な執行ツールへとさらに拡大しています。",
+        "summary": "ロイターは、米国連邦取引委員会がAnthropic、OpenAI、AI研究所METRを含む広範な調査を実施しており、情報を要求し、高レベルの証言を手配する予定であると述べた。調査は、高度なAI技術が消費者にもたらす可能性のあるリスクに焦点を当てています。",
+        "body": "ロイター通信は9月30日、米国連邦取引委員会（ FTC ）がAnthropic、OpenAI、その他のAI関連機関に対して広範な調査を実施しており、公式のデータ要求を発行し、一部の上級幹部に証言を求める予定であると報じた。ニューヨークポストも、FTCが調査を進めていると報じています。調査の中核は、高度なAIシステムが消費者にもたらす可能性のあるリスクと、関連する企業がこれらのリスクを適切に管理しているかどうかです。\n\nこの動きは、米国の大手テクノロジー企業とAI企業が自主的なセキュリティ協定を発表した直後に行われ、ワシントンのAI政策ツールが業界の自律性に限定されていないことが示された。FTCが企業にモデルセキュリティ、テスト、またはリスク管理データの引き渡しを正式に要求した場合、AI開発者のコンプライアンスコストが増加し、モデルリリース、内部ガバナンス、セキュリティ評価がより直接的に監視される可能性があります。",
+        "context": "一方で、米国政府はAI投資と産業界に自主規制メカニズムを確立するよう奨励していますが、一方で規制当局は既存の消費者保護法と競争法の下で調査することができます。",
+        "why": "FTCが正式な調査に高度なAIリスクを含める場合、米国のAI規制が自発的なコミットメントから法執行機関のレビューに移行する重要なステップになる可能性があり、大規模なモデル開発者の製品発売とリスクガバナンスに直接影響します。",
+        "watchNext": "FTCが調査の範囲を正式に発表しているかどうか、どの企業に民事調査要請を発行しているか、AnthropicやOpenAIなどの企業がどのように対応しているかに注意してください。",
         "sourceName": "Reuters",
-        "sourceUrl": "https://www.reuters.com/world/asia-pacific/deepseek-partners-with-huawei-develop-chip-programming-tools-reducing-reliance-2026-09-30/",
+        "sourceUrl": "https://www.reuters.com/business/ftc-opens-probe-into-ai-giants-including-anthropic-openai-new-york-post-reports-2026-09-30/",
         "sources": [
           {
-            "name": "Reuters — DeepSeek partners with Huawei to develop chip programming tools",
-            "url": "https://www.reuters.com/world/asia-pacific/deepseek-partners-with-huawei-develop-chip-programming-tools-reducing-reliance-2026-09-30/"
+            "name": "Reuters — FTC opens probe into AI giants including Anthropic and OpenAI",
+            "url": "https://www.reuters.com/business/ftc-opens-probe-into-ai-giants-including-anthropic-openai-new-york-post-reports-2026-09-30/"
+          },
+          {
+            "name": "New York Post — FTC opens sweeping probe of Anthropic, OpenAI and other AI models",
+            "url": "https://nypost.com/2026/09/30/us-news/ftc-opens-sweeping-probe-of-anthropic-openai-and-other-super-intelligence-models/"
           }
         ],
-        "verifiedAt": "2026-09-30T13:01:00+08:00",
-        "timeLabel": "09月30日 13:01 HKT確認済み",
+        "verifiedAt": "2026-09-30T22:57:00+08:00",
+        "timeLabel": "09月30日 22:57 HKT確認済み",
         "status": "LATEST",
-        "sourceItemFingerprint": "72aab59611895bfc6648d3cade162e09ae0c780a3fcc35455a9c644b8fda4ea9",
+        "sourceItemFingerprint": "8eb979c3a54de3e292a519341582af77d7795bbd193ee893f44fbe70a8fcb998",
         "furigana": {
-          "section": "AI・<ruby>科技<rt>かぎ</rt></ruby>",
-          "title": "DeepSeekはファーウェイと<ruby>提携<rt>ていけい</rt></ruby>し、<ruby>中国<rt>ちゅうごく</rt></ruby>のAIソフトウェアエコシステムの<ruby>自律性<rt>じりつせい</rt></ruby>を<ruby>促進<rt>そくしん</rt></ruby>するAscendプログラミングツールを<ruby>開発<rt>かいはつ</rt></ruby>",
-          "dek": "DeepSeekは、<ruby>中国<rt>ちゅうごく</rt></ruby>のAI<ruby>開発<rt>かいはつ</rt></ruby>におけるNvidia CUDAエコシステムへの<ruby>依存<rt>いぞん</rt></ruby>を<ruby>減<rt>へ</rt></ruby>らすことを<ruby>目的<rt>もくてき</rt></ruby>として、<ruby>高級<rt>こうきゅう</rt></ruby>プログラミング<ruby>言語<rt>げんご</rt></ruby>TileLangを<ruby>含<rt>ふく</rt></ruby>むファーウェイのAscendチップ<ruby>用<rt>よう</rt></ruby>の<ruby>多数<rt>たすう</rt></ruby>のインフラストラクチャツールをオープンソース<ruby>化<rt>か</rt></ruby>した。",
-          "summary": "DeepSeek は Huawei と<ruby>協力<rt>きょうりょく</rt></ruby>して Ascend ソフトウェア ツール チェーンを<ruby>拡張<rt>かくちょう</rt></ruby>し、<ruby>純粋<rt>じゅんすい</rt></ruby>なチップのパフォーマンスから<ruby>開発者<rt>かいはつしゃ</rt></ruby>のエコシステムまで<ruby>焦点<rt>しょうてん</rt></ruby>を<ruby>広<rt>ひろ</rt></ruby>げます。ツールが<ruby>成熟<rt>せいじゅく</rt></ruby>していれば、モデルの<ruby>移行<rt>いこう</rt></ruby>とメンテナンスの<ruby>敷居<rt>しきい</rt></ruby>を<ruby>下<rt>さ</rt></ruby>げることができます。",
-          "context": "<ruby>中国<rt>ちゅうごく</rt></ruby>のテクノロジー<ruby>企業<rt>きぎょう</rt></ruby>は、<ruby>外部<rt>がいぶ</rt></ruby><ruby>供給<rt>きょうきゅう</rt></ruby>の<ruby>制約<rt>せいやく</rt></ruby>と<ruby>単一<rt>たんいつ</rt></ruby>プラットフォームへの<ruby>依存<rt>いぞん</rt></ruby>を<ruby>軽減<rt>けいげん</rt></ruby>するために、<ruby>現地<rt>げんち</rt></ruby>のAIチップとソフトウェアツールチェーンの<ruby>構築<rt>こうちく</rt></ruby>を<ruby>加速<rt>かそく</rt></ruby>している。",
-          "why": "Ascendツールチェーンが<ruby>使<rt>つか</rt></ruby>いやすくなれば、ファーウェイのAIチップの<ruby>実際<rt>じっさい</rt></ruby>の<ruby>展開<rt>てんかい</rt></ruby><ruby>能力<rt>のうりょく</rt></ruby>が<ruby>向上<rt>こうじょう</rt></ruby>し、<ruby>中国<rt>ちゅうごく</rt></ruby>のAIコンピューティング<ruby>市場<rt>しじょう</rt></ruby>におけるプラットフォーム<ruby>競争<rt>きょうそう</rt></ruby>の<ruby>状況<rt>じょうきょう</rt></ruby>が<ruby>変<rt>か</rt></ruby>わる<ruby>可能性<rt>かのうせい</rt></ruby>がある。",
-          "watchNext": "TileLang のオープンソース コミュニティでの<ruby>採用<rt>さいよう</rt></ruby>、<ruby>主流<rt>しゅりゅう</rt></ruby>のモデル フレームワークとの<ruby>互換性<rt>ごかんせい</rt></ruby>、および<ruby>大規模<rt>だいきぼ</rt></ruby>なモデルのトレーニングと<ruby>推論<rt>すいろん</rt></ruby>における Ascend の<ruby>測定<rt>そくてい</rt></ruby>されたパフォーマンスに<ruby>注目<rt>ちゅうもく</rt></ruby>してください。",
+          "section": "AIテクノロジー",
+          "title": "<ruby>米国<rt>べいこく</rt></ruby><ruby>連邦<rt>れんぽう</rt></ruby><ruby>取引<rt>とりひき</rt></ruby><ruby>委員会<rt>いいんかい</rt></ruby>（ FTC ）は、AIラボのAnthropic、OpenAIなどが<ruby>直面<rt>ちょくめん</rt></ruby>するデータ<ruby>要件<rt>ようけん</rt></ruby>の<ruby>調査<rt>ちょうさ</rt></ruby>を<ruby>拡大<rt>かくだい</rt></ruby>していると<ruby>伝<rt>つた</rt></ruby>えられています。",
+          "dek": "<ruby>米国<rt>べいこく</rt></ruby><ruby>連邦<rt>れんぽう</rt></ruby><ruby>取引<rt>とりひき</rt></ruby><ruby>委員会<rt>いいんかい</rt></ruby>は、<ruby>高度<rt>こうど</rt></ruby>なAIシステムが<ruby>消費者<rt>しょうひしゃ</rt></ruby>にもたらす<ruby>可能性<rt>かのうせい</rt></ruby>のあるリスクを<ruby>調査<rt>ちょうさ</rt></ruby>していると<ruby>伝<rt>つた</rt></ruby>えられており、<ruby>規制<rt>きせい</rt></ruby>の<ruby>焦点<rt>しょうてん</rt></ruby>は<ruby>自発的<rt>じはつてき</rt></ruby>なセキュリティコミットメントから<ruby>正式<rt>せいしき</rt></ruby>な<ruby>執行<rt>しっこう</rt></ruby>ツールへとさらに<ruby>拡大<rt>かくだい</rt></ruby>しています。",
+          "summary": "ロイターは、<ruby>米国<rt>べいこく</rt></ruby><ruby>連邦<rt>れんぽう</rt></ruby><ruby>取引<rt>とりひき</rt></ruby><ruby>委員会<rt>いいんかい</rt></ruby>がAnthropic、OpenAI、AI<ruby>研究所<rt>けんきゅうしょ</rt></ruby>METRを<ruby>含<rt>ふく</rt></ruby>む<ruby>広範<rt>こうはん</rt></ruby>な<ruby>調査<rt>ちょうさ</rt></ruby>を<ruby>実施<rt>じっし</rt></ruby>しており、<ruby>情報<rt>じょうほう</rt></ruby>を<ruby>要求<rt>ようきゅう</rt></ruby>し、<ruby>高<rt>こう</rt></ruby>レベルの<ruby>証言<rt>しょうげん</rt></ruby>を<ruby>手配<rt>てはい</rt></ruby>する<ruby>予定<rt>よてい</rt></ruby>であると<ruby>述<rt>の</rt></ruby>べた。<ruby>調査<rt>ちょうさ</rt></ruby>は、<ruby>高度<rt>こうど</rt></ruby>なAI<ruby>技術<rt>ぎじゅつ</rt></ruby>が<ruby>消費者<rt>しょうひしゃ</rt></ruby>にもたらす<ruby>可能性<rt>かのうせい</rt></ruby>のあるリスクに<ruby>焦点<rt>しょうてん</rt></ruby>を<ruby>当<rt>あ</rt></ruby>てています。",
+          "context": "<ruby>一方<rt>いっぽう</rt></ruby>で、<ruby>米国<rt>べいこく</rt></ruby><ruby>政府<rt>せいふ</rt></ruby>はAI<ruby>投資<rt>とうし</rt></ruby>と<ruby>産業界<rt>さんぎょうかい</rt></ruby>に<ruby>自主<rt>じしゅ</rt></ruby><ruby>規制<rt>きせい</rt></ruby>メカニズムを<ruby>確立<rt>かくりつ</rt></ruby>するよう<ruby>奨励<rt>しょうれい</rt></ruby>していますが、<ruby>一方<rt>いっぽう</rt></ruby>で<ruby>規制<rt>きせい</rt></ruby><ruby>当局<rt>とうきょく</rt></ruby>は<ruby>既存<rt>きそん</rt></ruby>の<ruby>消費者<rt>しょうひしゃ</rt></ruby><ruby>保護<rt>ほご</rt></ruby><ruby>法<rt>ほう</rt></ruby>と<ruby>競争法<rt>きょうそうほう</rt></ruby>の<ruby>下<rt>もと</rt></ruby>で<ruby>調査<rt>ちょうさ</rt></ruby>することができます。",
+          "why": "FTCが<ruby>正式<rt>せいしき</rt></ruby>な<ruby>調査<rt>ちょうさ</rt></ruby>に<ruby>高度<rt>こうど</rt></ruby>なAIリスクを<ruby>含<rt>ふく</rt></ruby>める<ruby>場合<rt>ばあい</rt></ruby>、<ruby>米国<rt>べいこく</rt></ruby>のAI<ruby>規制<rt>きせい</rt></ruby>が<ruby>自発的<rt>じはつてき</rt></ruby>なコミットメントから<ruby>法<rt>ほう</rt></ruby><ruby>執行機関<rt>しっこうきかん</rt></ruby>のレビューに<ruby>移行<rt>いこう</rt></ruby>する<ruby>重要<rt>じゅうよう</rt></ruby>なステップになる<ruby>可能性<rt>かのうせい</rt></ruby>があり、<ruby>大規模<rt>だいきぼ</rt></ruby>なモデル<ruby>開発者<rt>かいはつしゃ</rt></ruby>の<ruby>製品<rt>せいひん</rt></ruby><ruby>発売<rt>はつばい</rt></ruby>とリスクガバナンスに<ruby>直接<rt>ちょくせつ</rt></ruby><ruby>影響<rt>えいきょう</rt></ruby>します。",
+          "watchNext": "FTCが<ruby>調査<rt>ちょうさ</rt></ruby>の<ruby>範囲<rt>はんい</rt></ruby>を<ruby>正式<rt>せいしき</rt></ruby>に<ruby>発表<rt>はっぴょう</rt></ruby>しているかどうか、どの<ruby>企業<rt>きぎょう</rt></ruby>に<ruby>民事<rt>みんじ</rt></ruby><ruby>調査<rt>ちょうさ</rt></ruby><ruby>要請<rt>ようせい</rt></ruby>を<ruby>発行<rt>はっこう</rt></ruby>しているか、AnthropicやOpenAIなどの<ruby>企業<rt>きぎょう</rt></ruby>がどのように<ruby>対応<rt>たいおう</rt></ruby>しているかに<ruby>注意<rt>ちゅうい</rt></ruby>してください。",
           "bodyParagraphs": [
-            "ロイター<ruby>通信<rt>つうしん</rt></ruby>は<ruby>9月<rt>くがつ</rt></ruby><ruby>30日<rt>さんじゅうにち</rt></ruby>、DeepSeekがファーウェイと<ruby>協力<rt>きょうりょく</rt></ruby>してAscend AIチップ<ruby>用<rt>よう</rt></ruby>のプログラミングツールを<ruby>開発<rt>かいはつ</rt></ruby>し、<ruby>高水準<rt>こうすいじゅん</rt></ruby>プログラミング<ruby>言語<rt>げんご</rt></ruby>TileLangを<ruby>含<rt>ふく</rt></ruby>むインフラストラクチャソフトウェアのバッチをオープンソース<ruby>化<rt>か</rt></ruby>していると<ruby>報<rt>ほう</rt></ruby>じた。 DeepSeekは<ruby>公式<rt>こうしき</rt></ruby>WeChatアカウントで<ruby>関連<rt>かんれん</rt></ruby><ruby>取り決<rt>とりき</rt></ruby>めを<ruby>発表<rt>はっぴょう</rt></ruby>し、<ruby>独立<rt>どくりつ</rt></ruby>した<ruby>効率的<rt>こうりつてき</rt></ruby>なGPUソフトウェアエコシステムを<ruby>確立<rt>かくりつ</rt></ruby>することが<ruby>重要<rt>じゅうよう</rt></ruby>なステップであると<ruby>述<rt>の</rt></ruby>べた。",
-            "AI アクセラレータの<ruby>競争<rt>きょうそう</rt></ruby>は、チップのコンピューティング<ruby>能力<rt>のうりょく</rt></ruby>だけでなく、<ruby>開発者<rt>かいはつしゃ</rt></ruby>が<ruby>低<rt>てい</rt></ruby>コストでモデルを<ruby>導入<rt>どうにゅう</rt></ruby>できるかどうかを<ruby>決定<rt>けってい</rt></ruby>するコンパイラ、ライブラリ、<ruby>開発<rt>かいはつ</rt></ruby>ツールにも<ruby>左右<rt>さゆう</rt></ruby>されます。したがって、この<ruby>協力<rt>きょうりょく</rt></ruby>は Nvidia CUDA の<ruby>長年<rt>ながねん</rt></ruby><ruby>確立<rt>かくりつ</rt></ruby>されたソフトウェア<ruby>堀<rt>ほり</rt></ruby>に<ruby>直接<rt>ちょくせつ</rt></ruby><ruby>触<rt>ふ</rt></ruby>れます。<ruby>次<rt>つぎ</rt></ruby>のステップは、<ruby>実際<rt>じっさい</rt></ruby>のトレーニングと<ruby>推論<rt>すいろん</rt></ruby>のワークロードにおける TileLang の<ruby>互換性<rt>ごかんせい</rt></ruby>、パフォーマンス、<ruby>開発者<rt>かいはつしゃ</rt></ruby>の<ruby>導入<rt>どうにゅう</rt></ruby>を<ruby>観察<rt>かんさつ</rt></ruby>することです。"
+            "ロイター<ruby>通信<rt>つうしん</rt></ruby>は<ruby>9月<rt>くがつ</rt></ruby><ruby>30日<rt>さんじゅうにち</rt></ruby>、<ruby>米国<rt>べいこく</rt></ruby><ruby>連邦<rt>れんぽう</rt></ruby><ruby>取引<rt>とりひき</rt></ruby><ruby>委員会<rt>いいんかい</rt></ruby>（ FTC ）がAnthropic、OpenAI、その<ruby>他<rt>ほか</rt></ruby>のAI<ruby>関連機関<rt>かんれんきかん</rt></ruby>に<ruby>対<rt>たい</rt></ruby>して<ruby>広範<rt>こうはん</rt></ruby>な<ruby>調査<rt>ちょうさ</rt></ruby>を<ruby>実施<rt>じっし</rt></ruby>しており、<ruby>公式<rt>こうしき</rt></ruby>のデータ<ruby>要求<rt>ようきゅう</rt></ruby>を<ruby>発行<rt>はっこう</rt></ruby>し、<ruby>一部<rt>いちぶ</rt></ruby>の<ruby>上級<rt>じょうきゅう</rt></ruby><ruby>幹部<rt>かんぶ</rt></ruby>に<ruby>証言<rt>しょうげん</rt></ruby>を<ruby>求<rt>もと</rt></ruby>める<ruby>予定<rt>よてい</rt></ruby>であると<ruby>報<rt>ほう</rt></ruby>じた。ニューヨークポストも、FTCが<ruby>調査<rt>ちょうさ</rt></ruby>を<ruby>進<rt>すす</rt></ruby>めていると<ruby>報<rt>ほう</rt></ruby>じています。<ruby>調査<rt>ちょうさ</rt></ruby>の<ruby>中核<rt>ちゅうかく</rt></ruby>は、<ruby>高度<rt>こうど</rt></ruby>なAIシステムが<ruby>消費者<rt>しょうひしゃ</rt></ruby>にもたらす<ruby>可能性<rt>かのうせい</rt></ruby>のあるリスクと、<ruby>関連<rt>かんれん</rt></ruby>する<ruby>企業<rt>きぎょう</rt></ruby>がこれらのリスクを<ruby>適切<rt>てきせつ</rt></ruby>に<ruby>管理<rt>かんり</rt></ruby>しているかどうかです。",
+            "この<ruby>動<rt>うご</rt></ruby>きは、<ruby>米国<rt>べいこく</rt></ruby>の<ruby>大手<rt>おおて</rt></ruby>テクノロジー<ruby>企業<rt>きぎょう</rt></ruby>とAI<ruby>企業<rt>きぎょう</rt></ruby>が<ruby>自主的<rt>じしゅてき</rt></ruby>なセキュリティ<ruby>協定<rt>きょうてい</rt></ruby>を<ruby>発表<rt>はっぴょう</rt></ruby>した<ruby>直後<rt>ちょくご</rt></ruby>に<ruby>行<rt>おこな</rt></ruby>われ、ワシントンのAI<ruby>政策<rt>せいさく</rt></ruby>ツールが<ruby>業界<rt>ぎょうかい</rt></ruby>の<ruby>自律<rt>じりつ</rt></ruby><ruby>性<rt>せい</rt></ruby>に<ruby>限定<rt>げんてい</rt></ruby>されていないことが<ruby>示<rt>しめ</rt></ruby>された。FTCが<ruby>企業<rt>きぎょう</rt></ruby>にモデルセキュリティ、テスト、またはリスク<ruby>管理<rt>かんり</rt></ruby>データの<ruby>引き渡<rt>ひきわた</rt></ruby>しを<ruby>正式<rt>せいしき</rt></ruby>に<ruby>要求<rt>ようきゅう</rt></ruby>した<ruby>場合<rt>ばあい</rt></ruby>、AI<ruby>開発者<rt>かいはつしゃ</rt></ruby>のコンプライアンスコストが<ruby>増加<rt>ぞうか</rt></ruby>し、モデルリリース、<ruby>内部<rt>ないぶ</rt></ruby>ガバナンス、セキュリティ<ruby>評価<rt>ひょうか</rt></ruby>がより<ruby>直接的<rt>ちょくせつてき</rt></ruby>に<ruby>監視<rt>かんし</rt></ruby>される<ruby>可能性<rt>かのうせい</rt></ruby>があります。"
           ]
         },
-        "audio": "audio/rolling/live-ai-tech-20260930-deepseek-huawei-ascend.mp3",
-        "timing": "audio/timing/rolling/live-ai-tech-20260930-deepseek-huawei-ascend.json",
-        "audioSpeed": 0.72,
-        "audioDeliveryProfile": "jp-tv-news-semantic-v4"
+        "audio": "audio/rolling/live-ai-20260930-ftc-ai-labs-probe.mp3",
+        "timing": "audio/timing/rolling/live-ai-20260930-ftc-ai-labs-probe.json"
       }
     ],
     "manga-anime": [
@@ -481,7 +481,7 @@
     "hong-kong": 91,
     "japan": 177,
     "market-economy": 149,
-    "ai-tech": 137,
+    "ai-tech": 138,
     "manga-anime": 31,
     "manchester-united": 41,
     "football": 146
@@ -501,7 +501,7 @@
   "language": "ja",
   "translationSource": "kanuli/daily-brief-newspaper",
   "sourceFile": "desk-latest.json",
-  "sourceFingerprint": "0096e206c23c0718b789b84c778ba6cc59240512481508952cde8ee510ddffbb",
+  "sourceFingerprint": "be6b139ee56155d51bfb6afb1358b2dc2624051bf54f78b1a7bdb85f0f59c6f9",
   "translationSchemaVersion": "ja-cantonese-extra-v2-full-parity",
   "sourceParityMode": "minimum-guaranteed-edition-per-desk",
   "translationDegraded": true,
