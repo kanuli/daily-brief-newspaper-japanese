@@ -134,6 +134,17 @@ def iter_stories(payload: object):
             yield from iter_stories(value)
 
 
+def degraded_translation(payload: dict) -> bool:
+    """Fallback/minimum cards are not a healthy translated newsroom layer."""
+    if bool(payload.get("translationDegraded")):
+        return True
+    for story in iter_stories(payload):
+        status = str(story.get("translationStatus") or "").strip().upper()
+        if status in {"EDITORIAL_MINIMUM_FALLBACK", "TRANSLATION_FAILED", "TRANSLATION_DEGRADED"}:
+            return True
+    return False
+
+
 def verify_pages_assets(layers: Dict[str, dict]) -> list:
     failures = []
     for name, expected in layers.items():
@@ -183,6 +194,8 @@ def main() -> int:
     rolling_stale = (
         not current(upstream["desk-latest.json"], japanese["desk-latest.json"], 60)
         or not current(upstream["stocks-latest.json"], japanese["stocks-latest.json"], 60)
+        or degraded_translation(japanese["desk-latest.json"])
+        or degraded_translation(japanese["stocks-latest.json"])
     )
     if core_stale:
         dispatch("sync-japanese-news.yml")
