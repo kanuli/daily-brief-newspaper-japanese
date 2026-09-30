@@ -1,0 +1,96 @@
+{
+  "version": 3,
+  "duration": 31.425,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 88,
+  "charactersPerMinute": 168.0,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 6.351,
+      "text": "速報：最新の確認済みニュース"
+    },
+    {
+      "key": "body-0",
+      "start": 6.351,
+      "end": 31.425,
+      "text": "記事に記載した出典で最新情報を確認しました。翻訳サービスの一時的な制限中のため、確認済み項目を先行掲載しています。詳細な日本語本文は自動復旧処理で更新します。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.022,
+      "end": 2.303,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-semantic",
+      "text": "速報："
+    },
+    {
+      "parentKey": "title",
+      "start": 2.303,
+      "speechEnd": 5.65,
+      "end": 6.351,
+      "pause": 0.701,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "最新の確認済みニュース。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 6.351,
+      "speechEnd": 12.976,
+      "end": 13.476,
+      "pause": 0.501,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "記事に記載した出典で最新情報を確認しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 13.476,
+      "speechEnd": 18.776,
+      "end": 19.007,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "翻訳サービスの一時的な制限中のため、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 19.007,
+      "speechEnd": 23.33,
+      "end": 23.831,
+      "pause": 0.501,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "確認済み項目を先行掲載しています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 23.831,
+      "speechEnd": 30.805,
+      "end": 31.425,
+      "pause": 0.621,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "詳細な日本語本文は自動復旧処理で更新します。"
+    }
+  ]
+}
