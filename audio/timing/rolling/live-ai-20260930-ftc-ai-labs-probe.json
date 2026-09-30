@@ -1,0 +1,460 @@
+{
+  "version": 3,
+  "duration": 232.647,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 758,
+  "charactersPerMinute": 195.5,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 19.456,
+      "text": "米国連邦取引委員会（ FTC ）は、AIラボのAnthropic、OpenAIなどが直面するデータ要件の調査を拡大していると伝えられています。"
+    },
+    {
+      "key": "dek",
+      "start": 19.456,
+      "end": 48.04,
+      "text": "米国連邦取引委員会は、高度なAIシステムが消費者にもたらす可能性のあるリスクを調査していると伝えられており、規制の焦点は自発的なセキュリティコミットメントから正式な執行ツールへとさらに拡大しています。"
+    },
+    {
+      "key": "body-0",
+      "start": 48.04,
+      "end": 110.265,
+      "text": "ロイター通信は9月30日、米国連邦取引委員会（ FTC ）がAnthropic、OpenAI、その他のAI関連機関に対して広範な調査を実施しており、公式のデータ要求を発行し、一部の上級幹部に証言を求める予定であると報じた。ニューヨークポストも、FTCが調査を進めていると報じています。調査の中核は、高度なAIシステムが消費者にもたらす可能性のあるリスクと、関連する企業がこれらのリスクを適切に管理しているかどうかです。"
+    },
+    {
+      "key": "body-1",
+      "start": 110.265,
+      "end": 170.322,
+      "text": "この動きは、米国の大手テクノロジー企業とAI企業が自主的なセキュリティ協定を発表した直後に行われ、ワシントンのAI政策ツールが業界の自律性に限定されていないことが示された。FTCが企業にモデルセキュリティ、テスト、またはリスク管理データの引き渡しを正式に要求した場合、AI開発者のコンプライアンスコストが増加し、モデルリリース、内部ガバナンス、セキュリティ評価がより直接的に監視される可能性があります。"
+    },
+    {
+      "key": "why",
+      "start": 170.322,
+      "end": 206.152,
+      "text": "FTCが正式な調査に高度なAIリスクを含める場合、米国のAI規制が自発的なコミットメントから法執行機関のレビューに移行する重要なステップになる可能性があり、大規模なモデル開発者の製品発売とリスクガバナンスに直接影響します。"
+    },
+    {
+      "key": "watch",
+      "start": 206.152,
+      "end": 232.647,
+      "text": "FTCが調査の範囲を正式に発表しているかどうか、どの企業に民事調査要請を発行しているか、AnthropicやOpenAIなどの企業がどのように対応しているかに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.668,
+      "end": 4.948,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国連邦取引委員会（ FTC ）は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.948,
+      "speechEnd": 8.153,
+      "end": 8.433,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "AIラボのAnthropic、"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.433,
+      "speechEnd": 14.146,
+      "end": 14.486,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "OpenAIなどが直面するデータ要件の調査を"
+    },
+    {
+      "parentKey": "title",
+      "start": 14.486,
+      "speechEnd": 18.596,
+      "end": 19.456,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "拡大していると伝えられています。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.456,
+      "speechEnd": 23.079,
+      "end": 23.359,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国連邦取引委員会は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.359,
+      "speechEnd": 30.605,
+      "end": 30.945,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "高度なAIシステムが消費者にもたらす可能性のあるリスクを"
+    },
+    {
+      "parentKey": "dek",
+      "start": 30.945,
+      "speechEnd": 35.055,
+      "end": 35.336,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "調査していると伝えられており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 35.336,
+      "speechEnd": 47.179,
+      "end": 48.04,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "規制の焦点は自発的なセキュリティコミットメントから正式な執行ツールへとさらに拡大しています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.04,
+      "speechEnd": 52.429,
+      "end": 52.709,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信は9月30日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.709,
+      "speechEnd": 59.188,
+      "end": 59.468,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国連邦取引委員会（ FTC ）がAnthropic、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.468,
+      "speechEnd": 61.628,
+      "end": 61.908,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "OpenAI、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.908,
+      "speechEnd": 69.781,
+      "end": 70.061,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "その他のAI関連機関に対して広範な調査を実施しており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.061,
+      "speechEnd": 74.102,
+      "end": 74.382,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "公式のデータ要求を発行し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.382,
+      "speechEnd": 81.558,
+      "end": 82.178,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "一部の上級幹部に証言を求める予定であると報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 82.178,
+      "speechEnd": 84.825,
+      "end": 85.105,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ニューヨークポストも、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 85.105,
+      "speechEnd": 90.121,
+      "end": 90.741,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "FTCが調査を進めていると報じています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 90.741,
+      "speechEnd": 93.459,
+      "end": 93.739,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "調査の中核は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 93.739,
+      "speechEnd": 100.984,
+      "end": 101.264,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "高度なAIシステムが消費者にもたらす可能性のあるリスクと、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 101.264,
+      "speechEnd": 109.485,
+      "end": 110.265,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "関連する企業がこれらのリスクを適切に管理しているかどうかです。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 110.265,
+      "speechEnd": 112.565,
+      "end": 112.845,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この動きは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.845,
+      "speechEnd": 118.627,
+      "end": 118.967,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "米国の大手テクノロジー企業とAI企業が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.967,
+      "speechEnd": 125.656,
+      "end": 125.936,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "自主的なセキュリティ協定を発表した直後に行われ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 125.936,
+      "speechEnd": 129.767,
+      "end": 130.107,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ワシントンのAI政策ツールが"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 130.107,
+      "speechEnd": 136.308,
+      "end": 136.928,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "業界の自律性に限定されていないことが示された。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 136.928,
+      "speechEnd": 140.899,
+      "end": 141.179,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "FTCが企業にモデルセキュリティ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 141.179,
+      "speechEnd": 143.2,
+      "end": 143.48,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "テスト、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 143.48,
+      "speechEnd": 150.726,
+      "end": 151.006,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "またはリスク管理データの引き渡しを正式に要求した場合、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 151.006,
+      "speechEnd": 156.579,
+      "end": 156.859,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "AI開発者のコンプライアンスコストが増加し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 156.859,
+      "speechEnd": 159.158,
+      "end": 159.438,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "モデルリリース、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 159.438,
+      "speechEnd": 162.225,
+      "end": 162.505,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "内部ガバナンス、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 162.505,
+      "speechEnd": 169.542,
+      "end": 170.322,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "セキュリティ評価がより直接的に監視される可能性があります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 170.322,
+      "speechEnd": 174.293,
+      "end": 174.913,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 174.913,
+      "speechEnd": 181.741,
+      "end": 182.021,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "FTCが正式な調査に高度なAIリスクを含める場合、"
+    },
+    {
+      "parentKey": "why",
+      "start": 182.021,
+      "speechEnd": 196.303,
+      "end": 196.583,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国のAI規制が自発的なコミットメントから法執行機関のレビューに移行する重要なステップになる可能性があり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 196.583,
+      "speechEnd": 205.292,
+      "end": 206.152,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "大規模なモデル開発者の製品発売とリスクガバナンスに直接影響します。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 206.152,
+      "speechEnd": 208.242,
+      "end": 208.522,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 208.522,
+      "speechEnd": 214.932,
+      "end": 215.212,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "FTCが調査の範囲を正式に発表しているかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 215.212,
+      "speechEnd": 220.925,
+      "end": 221.205,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "どの企業に民事調査要請を発行しているか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 221.205,
+      "speechEnd": 226.012,
+      "end": 226.352,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "AnthropicやOpenAIなどの企業が"
+    },
+    {
+      "parentKey": "watch",
+      "start": 226.352,
+      "speechEnd": 231.786,
+      "end": 232.647,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "どのように対応しているかに注意してください。"
+    }
+  ]
+}
