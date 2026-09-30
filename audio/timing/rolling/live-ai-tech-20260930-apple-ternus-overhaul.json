@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 32.679,
+  "duration": 203.468,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 340.0,
-  "characters": 87,
-  "charactersPerMinute": 159.7,
+  "characters": 657,
+  "charactersPerMinute": 193.7,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.18,
@@ -21,82 +21,410 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 6.43,
-      "text": "ニュース：最新確認済みニュース"
+      "end": 15.91,
+      "text": "Appleの新CEOは大規模な改革を計画しており、製品発売の加速と経営の合理化を計画していると報じられている"
     },
     {
       "key": "dek",
-      "start": 6.43,
-      "end": 14.124,
-      "text": "出典で確認済みの最新情報を先行掲載しています。"
+      "start": 15.91,
+      "end": 40.672,
+      "text": "John Ternus氏は、製品発売サイクルの短縮、中間管理職の削減、AIによる製品開発の加速など、Appleのエンジニアリング中心の再構築に取り組んでいると伝えられています。"
     },
     {
       "key": "body-0",
-      "start": 14.124,
-      "end": 32.679,
-      "text": "記事に記載した出典で、この分類の最新ニュースを確認しました。完全な日本語本文は自動復旧処理で順次更新します。"
+      "start": 40.672,
+      "end": 86.39,
+      "text": "ロイターはブルームバーグに対し、アップルの新CEOであるジョン・ターナス氏は、より頻繁な製品発売、エンジニアリングプロジェクト管理職の削減、エンジニアとトップマネジメントの間の意思決定チェーンの短縮など、さまざまな組織改革と製品開発改革を検討していると述べた。報告書によると、一部のコスト削減措置はすでに進行中である。"
+    },
+    {
+      "key": "body-1",
+      "start": 86.39,
+      "end": 138.919,
+      "text": "Ternusはまた、製品開発と自動化の一部を加速するために人工知能の使用を研究していると報告されています。Appleは、ロイターのコメント要請に直ちに応答しなかった。現段階では、関連する計画はまだ検討中であり、市場は改革が実施されているかどうか、そしてAppleのAI製品の導入とハードウェアイノベーションのスピードを向上させることができるかどうかを観察します。"
+    },
+    {
+      "key": "why",
+      "start": 138.919,
+      "end": 174.325,
+      "text": "この改革が実施されれば、Appleの長期的な製品リリースのリズム、研究開発の意思決定プロセス、コスト構造が変わる可能性があり、AI時代に研究開発から商品化までの時間を短縮できるかどうかにも直接関係します。"
+    },
+    {
+      "key": "watch",
+      "start": 174.325,
+      "end": 203.468,
+      "text": "Appleが正式に組織の調整、製品リリースサイクルの変更、AI研究開発の展開、次のパフォーマンスまたは管理ラウンドでの改革の方向性の確認を発表するかどうかに注意してください。"
     }
   ],
   "semanticUnits": [
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 2.022,
-      "end": 2.362,
-      "pause": 0.34,
-      "intendedPause": 0.34,
-      "reason": "punctuation-semantic",
-      "text": "ニュース："
-    },
-    {
-      "parentKey": "title",
-      "start": 2.362,
-      "speechEnd": 5.57,
-      "end": 6.43,
-      "pause": 0.861,
-      "intendedPause": 0.86,
-      "reason": "punctuation-sentence",
-      "text": "最新確認済みニュース。"
-    },
-    {
-      "parentKey": "dek",
-      "start": 6.43,
-      "speechEnd": 13.263,
-      "end": 14.124,
-      "pause": 0.861,
-      "intendedPause": 0.86,
-      "reason": "punctuation-sentence",
-      "text": "出典で確認済みの最新情報を先行掲載しています。"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 14.124,
-      "speechEnd": 17.401,
-      "end": 17.682,
+      "speechEnd": 6.828,
+      "end": 7.108,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "記事に記載した出典で、"
+      "text": "Appleの新CEOは大規模な改革を計画しており、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.108,
+      "speechEnd": 15.05,
+      "end": 15.91,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "製品発売の加速と経営の合理化を計画していると報じられている。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.91,
+      "speechEnd": 18.906,
+      "end": 19.186,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "John Ternus氏は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.186,
+      "speechEnd": 22.46,
+      "end": 22.74,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "製品発売サイクルの短縮、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.74,
+      "speechEnd": 26.154,
+      "end": 26.434,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "中間管理職の削減、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.434,
+      "speechEnd": 30.614,
+      "end": 30.894,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "AIによる製品開発の加速など、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 30.894,
+      "speechEnd": 39.812,
+      "end": 40.672,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "Appleのエンジニアリング中心の再構築に取り組んでいると伝えられています。"
     },
     {
       "parentKey": "body-0",
-      "start": 17.682,
-      "speechEnd": 23.26,
-      "end": 23.88,
-      "pause": 0.621,
+      "start": 40.672,
+      "speechEnd": 44.434,
+      "end": 44.714,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイターはブルームバーグに対し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.714,
+      "speechEnd": 50.636,
+      "end": 50.916,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アップルの新CEOであるジョン・ターナス氏は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.916,
+      "speechEnd": 54.051,
+      "end": 54.331,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "より頻繁な製品発売、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.331,
+      "speechEnd": 59.974,
+      "end": 60.254,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "エンジニアリングプロジェクト管理職の削減、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.254,
+      "speechEnd": 67.43,
+      "end": 67.71,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "エンジニアとトップマネジメントの間の意思決定チェーンの短縮など、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.71,
+      "speechEnd": 75.792,
+      "end": 76.412,
+      "pause": 0.62,
       "intendedPause": 0.62,
       "reason": "punctuation-sentence",
-      "text": "この分類の最新ニュースを確認しました。"
+      "text": "さまざまな組織改革と製品開発改革を検討していると述べた。"
     },
     {
       "parentKey": "body-0",
-      "start": 23.88,
-      "speechEnd": 31.898,
-      "end": 32.679,
-      "pause": 0.781,
+      "start": 76.412,
+      "speechEnd": 78.99,
+      "end": 79.27,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "報告書によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 79.27,
+      "speechEnd": 85.61,
+      "end": 86.39,
+      "pause": 0.78,
       "intendedPause": 0.78,
       "reason": "punctuation-sentence",
-      "text": "完全な日本語本文は自動復旧処理で順次更新します。"
+      "text": "一部のコスト削減措置はすでに進行中である。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 86.39,
+      "speechEnd": 88.898,
+      "end": 89.178,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Ternusはまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 89.178,
+      "speechEnd": 94.543,
+      "end": 94.883,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "製品開発と自動化の一部を加速するため"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.883,
+      "speechEnd": 101.431,
+      "end": 102.052,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "に人工知能の使用を研究していると報告されています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.052,
+      "speechEnd": 104.211,
+      "end": 104.491,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Appleは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.491,
+      "speechEnd": 109.577,
+      "end": 110.197,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ロイターのコメント要請に直ちに応答しなかった。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 110.197,
+      "speechEnd": 112.705,
+      "end": 112.985,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "現段階では、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.985,
+      "speechEnd": 117.514,
+      "end": 117.794,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "関連する計画はまだ検討中であり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.794,
+      "speechEnd": 122.88,
+      "end": 123.16,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "市場は改革が実施されているかどうか、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 123.16,
+      "speechEnd": 138.139,
+      "end": 138.919,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "そしてAppleのAI製品の導入とハードウェアイノベーションのスピードを向上させることができるかどうかを観察します。"
+    },
+    {
+      "parentKey": "why",
+      "start": 138.919,
+      "speechEnd": 142.89,
+      "end": 143.51,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 143.51,
+      "speechEnd": 147.411,
+      "end": 147.691,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この改革が実施されれば、"
+    },
+    {
+      "parentKey": "why",
+      "start": 147.691,
+      "speechEnd": 152.917,
+      "end": 153.197,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Appleの長期的な製品リリースのリズム、"
+    },
+    {
+      "parentKey": "why",
+      "start": 153.197,
+      "speechEnd": 157.307,
+      "end": 157.587,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "研究開発の意思決定プロセス、"
+    },
+    {
+      "parentKey": "why",
+      "start": 157.587,
+      "speechEnd": 161.976,
+      "end": 162.256,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "コスト構造が変わる可能性があり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 162.256,
+      "speechEnd": 168.527,
+      "end": 168.867,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "AI時代に研究開発から商品化までの時間を"
+    },
+    {
+      "parentKey": "why",
+      "start": 168.867,
+      "speechEnd": 173.465,
+      "end": 174.325,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "短縮できるかどうかにも直接関係します。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 174.325,
+      "speechEnd": 176.415,
+      "end": 176.695,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 176.695,
+      "speechEnd": 180.805,
+      "end": 181.085,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Appleが正式に組織の調整、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 181.085,
+      "speechEnd": 184.569,
+      "end": 184.849,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "製品リリースサイクルの変更、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 184.849,
+      "speechEnd": 188.263,
+      "end": 188.543,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "AI研究開発の展開、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 188.543,
+      "speechEnd": 197.53,
+      "end": 197.87,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "次のパフォーマンスまたは管理ラウンドでの改革の方向性の確認を"
+    },
+    {
+      "parentKey": "watch",
+      "start": 197.87,
+      "speechEnd": 202.608,
+      "end": 203.468,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "発表するかどうかに注意してください。"
     }
   ]
 }
