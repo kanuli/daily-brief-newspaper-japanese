@@ -1,19 +1,17 @@
 name: 日本語ニュース Discord 公開通知
 
 on:
+  schedule:
+    - cron: '15 * * * *'
   workflow_run:
     workflows:
       - '日本語版 Pages 公開・広東語版レイアウト同期'
     types: [completed]
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/discord-after-pages.yml'
-      - 'scripts/notify_discord.py'
   workflow_dispatch:
 
 permissions:
   contents: read
+  actions: write
 
 concurrency:
   group: japanese-discord-publication
@@ -36,18 +34,22 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: GitHub Pagesが最新ニュースを公開済みか確認
+      - name: GitHub Pagesが通知対象の最新時刻を公開済みか確認
+        id: pages_ready
         shell: bash
         run: |
           set -euo pipefail
           python - <<'PY'
           import json
+          import os
           import pathlib
           import time
           import urllib.request
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
 
           local = json.loads(pathlib.Path('data/live.json').read_text(encoding='utf-8'))
-          stamp = local.get('lastUpdated') or local.get('generatedAt') or ''
+          stamp = str(local.get('lastUpdated') or local.get('generatedAt') or '')
           url = f'https://kanuli.github.io/daily-brief-newspaper-japanese/data/live.json?discord_check={int(time.time())}'
           request = urllib.request.Request(
               url,
@@ -59,13 +61,38 @@ jobs:
           )
           with urllib.request.urlopen(request, timeout=20) as response:
               published = json.loads(response.read().decode('utf-8'))
-          published_stamp = published.get('lastUpdated') or published.get('generatedAt') or ''
-          if published_stamp != stamp:
-              raise SystemExit(f'PAGES_NOT_CURRENT local={stamp} published={published_stamp}')
-          print(f'PAGES_CURRENT_FOR_DISCORD {stamp}')
+          published_stamp = str(published.get('lastUpdated') or published.get('generatedAt') or '')
+
+          ready = published_stamp == stamp
+          reason = ''
+          if not ready:
+              reason = f'pages-behind local={stamp} published={published_stamp}'
+
+          if ready and os.environ.get('GITHUB_EVENT_NAME') == 'schedule':
+              try:
+                  dt = datetime.fromisoformat(stamp.replace('Z', '+00:00')).astimezone(ZoneInfo('Asia/Hong_Kong'))
+                  now = datetime.now(ZoneInfo('Asia/Hong_Kong'))
+                  if (dt.year, dt.month, dt.day, dt.hour) != (now.year, now.month, now.day, now.hour):
+                      ready = False
+                      reason = f'no-current-hour-publication live={dt.isoformat()} now={now.isoformat()}'
+              except Exception as exc:
+                  ready = False
+                  reason = f'invalid-live-stamp:{exc}'
+
+          with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as handle:
+              handle.write(f'current={str(ready).lower()}\n')
+              handle.write(f'live_stamp={stamp}\n')
+
+          if ready:
+              print(f'PAGES_CURRENT_FOR_DISCORD {stamp}')
+          else:
+              print(f'DISCORD_NOT_READY {reason}')
+              if os.environ.get('GITHUB_EVENT_NAME') != 'schedule':
+                  raise SystemExit(reason)
           PY
 
-      - name: 公開版通知fingerprintを計算
+      - name: 公開時刻fingerprintを計算
+        if: steps.pages_ready.outputs.current == 'true'
         id: fingerprint
         shell: bash
         run: |
@@ -75,54 +102,62 @@ jobs:
           import json
           import os
           import pathlib
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
 
           daily = json.loads(pathlib.Path('data/latest.json').read_text(encoding='utf-8'))
           live = json.loads(pathlib.Path('data/live.json').read_text(encoding='utf-8'))
+          tz = ZoneInfo('Asia/Hong_Kong')
+
+          def hour(value):
+              text = str(value or '')
+              dt = datetime.fromisoformat(text.replace('Z', '+00:00')).astimezone(tz)
+              return dt.strftime('%Y-%m-%dT%H')
 
           daily_basis = str(daily.get('date') or '')
-          live_basis = json.dumps({
-              'lastUpdated': live.get('lastUpdated') or live.get('generatedAt') or '',
-              'leadId': live.get('leadId') or '',
-              'items': [
-                  {
-                      'id': item.get('id'),
-                      'status': item.get('status'),
-                      'title': item.get('title'),
-                  }
-                  for item in (live.get('items') or [])
-              ],
-          }, ensure_ascii=False, sort_keys=True)
+          live_stamp = live.get('lastUpdated') or live.get('generatedAt') or ''
+          live_hour = hour(live_stamp)
+          daily_stamp = daily.get('generatedAt') or daily.get('lastUpdated') or ''
+          try:
+              daily_hour = hour(daily_stamp)
+          except Exception:
+              daily_hour = ''
 
           daily_key = hashlib.sha256(('daily|' + daily_basis).encode()).hexdigest()[:24]
-          live_key = hashlib.sha256(('live|' + live_basis).encode()).hexdigest()[:24]
+          live_key = hashlib.sha256(('live-hour|' + live_hour).encode()).hexdigest()[:24]
           with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as handle:
               handle.write(f'daily_key={daily_key}\n')
               handle.write(f'live_key={live_key}\n')
               handle.write(f'daily_date={daily_basis}\n')
-              handle.write(f'live_stamp={live.get("lastUpdated") or live.get("generatedAt") or ""}\n')
+              handle.write(f'live_hour={live_hour}\n')
+              handle.write(f'daily_current_hour={str(bool(daily_hour and daily_hour == live_hour)).lower()}\n')
           PY
 
       - name: Daily通知済みfingerprintを確認
+        if: steps.pages_ready.outputs.current == 'true'
         id: daily_cache
         uses: actions/cache/restore@v4
         with:
           path: .discord-state/daily
           key: jp-discord-daily-${{ steps.fingerprint.outputs.daily_key }}
 
-      - name: Live通知済みfingerprintを確認
+      - name: Live時間帯通知済みfingerprintを確認
+        if: steps.pages_ready.outputs.current == 'true'
         id: live_cache
         uses: actions/cache/restore@v4
         with:
           path: .discord-state/live
-          key: jp-discord-live-${{ steps.fingerprint.outputs.live_key }}
+          key: jp-discord-live-hour-${{ steps.fingerprint.outputs.live_key }}
 
       - name: 公開済みニュースをDiscordへ通知
+        if: steps.pages_ready.outputs.current == 'true'
         id: discord_notify
         shell: bash
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           DAILY_CACHE_HIT: ${{ steps.daily_cache.outputs.cache-hit }}
           LIVE_CACHE_HIT: ${{ steps.live_cache.outputs.cache-hit }}
+          DAILY_CURRENT_HOUR: ${{ steps.fingerprint.outputs.daily_current_hour }}
         run: |
           set -euo pipefail
           if [ -z "${DISCORD_WEBHOOK_URL:-}" ]; then
@@ -131,43 +166,40 @@ jobs:
           fi
 
           mkdir -p .discord-state
+          live_covered=false
 
-          # The workflow-file creation/update push is a safe bootstrap: do not
-          # backfill an old Daily alert, but send the currently published Live
-          # window once so the connection is immediately proven.
-          if [ "${GITHUB_EVENT_NAME}" = 'push' ]; then
-            touch .discord-state/daily
-            if [ "${LIVE_CACHE_HIT:-false}" != 'true' ]; then
-              python scripts/notify_discord.py --published-live
+          # Daily is sent only in the hour that the new Daily edition itself was
+          # generated. If this workflow is introduced later in the day, mark the
+          # date handled without backfilling an oddly timed Daily alert.
+          if [ "${DAILY_CACHE_HIT:-false}" != 'true' ]; then
+            if [ "${DAILY_CURRENT_HOUR:-false}" = 'true' ]; then
+              python scripts/notify_discord.py --daily
+              live_covered=true
               touch .discord-state/live
             fi
-            exit 0
+            touch .discord-state/daily
           fi
 
-          # At the first successful Pages publication of a new Daily edition,
-          # send one Daily alert and mark the same Live window as covered so
-          # users do not receive two notices for the same publication.
-          if [ "${DAILY_CACHE_HIT:-false}" != 'true' ]; then
-            python scripts/notify_discord.py --daily
-            touch .discord-state/daily
-            touch .discord-state/live
-          elif [ "${LIVE_CACHE_HIT:-false}" != 'true' ]; then
+          # One public Live notice per HKT publication hour. Normal path is the
+          # xx:15 schedule; workflow_run is only a late-recovery path when Pages
+          # was not current at xx:15.
+          if [ "${LIVE_CACHE_HIT:-false}" != 'true' ] && [ "$live_covered" != 'true' ]; then
             python scripts/notify_discord.py --published-live
             touch .discord-state/live
-          else
-            echo 'DISCORD_NOTIFICATION_ALREADY_SENT for this published fingerprint.'
+          elif [ "${LIVE_CACHE_HIT:-false}" = 'true' ]; then
+            echo 'DISCORD_HOURLY_NOTIFICATION_ALREADY_SENT.'
           fi
 
       - name: Daily通知済みfingerprintを保存
-        if: ${{ success() && steps.daily_cache.outputs.cache-hit != 'true' }}
+        if: ${{ success() && steps.pages_ready.outputs.current == 'true' && steps.daily_cache.outputs.cache-hit != 'true' }}
         uses: actions/cache/save@v4
         with:
           path: .discord-state/daily
           key: jp-discord-daily-${{ steps.fingerprint.outputs.daily_key }}
 
-      - name: Live通知済みfingerprintを保存
-        if: ${{ success() && steps.live_cache.outputs.cache-hit != 'true' }}
+      - name: Live時間帯通知済みfingerprintを保存
+        if: ${{ success() && steps.pages_ready.outputs.current == 'true' && steps.live_cache.outputs.cache-hit != 'true' }}
         uses: actions/cache/save@v4
         with:
           path: .discord-state/live
-          key: jp-discord-live-${{ steps.fingerprint.outputs.live_key }}
+          key: jp-discord-live-hour-${{ steps.fingerprint.outputs.live_key }}
