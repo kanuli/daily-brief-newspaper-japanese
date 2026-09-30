@@ -1,0 +1,460 @@
+{
+  "version": 3,
+  "duration": 205.349,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 620,
+  "charactersPerMinute": 181.2,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 11.382,
+      "text": "ドバイフライトテルアビブ旅客機爆破コックピット攻撃乗客と乗組員が停止し、安全に着陸"
+    },
+    {
+      "key": "dek",
+      "start": 11.382,
+      "end": 38.776,
+      "text": "イスラエル当局者は、フライデュバイの副操縦士がパイロットを刺して旅客機を墜落させようとした後、乗客と乗組員がそれを止めるために介入したと述べた。飛行機はついに安全にイスラエルに到着した。"
+    },
+    {
+      "key": "body-0",
+      "start": 38.776,
+      "end": 86.439,
+      "text": "ロイターは、イスラエル当局者が水曜日にドバイからテルアビブへのフライデュバイ便で深刻なコックピット事故が発生したと述べたと引用した。副操縦士がパイロットを刺したとされ、飛行機は30秒以内に約14,000フィート落下した。乗客と他の乗組員が介入し、状況をうまくコントロールし、飛行機は最終的に安全にイスラエルに到着しました。"
+    },
+    {
+      "key": "body-1",
+      "start": 86.439,
+      "end": 144.207,
+      "text": "この事件には民間航空保安と国境を越えた飛行保安が関与しており、イスラエルはこの事件を旅客機を墜落させようとしていると説明した。現段階では、航空会社、UAE、および関連する航空保安機関が、事故時のコックピット状況、関係者の状況、および関連するルートまたは航空保安手順を調整する必要があるかどうかを含む調査結果をさらに発表するのを待つ必要があります。"
+    },
+    {
+      "key": "why",
+      "start": 144.207,
+      "end": 177.656,
+      "text": "民間航空機のコックピットでの暴力は重大な航空安全事故であり、その後の調査は、航空会社の内部セキュリティ、乗務員の手続き、および地域の飛行リスク評価に影響を与える可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 177.656,
+      "end": 205.349,
+      "text": "フライドバイ、エミレーツ航空の規制当局、イスラエル当局の公式調査結果、および関係する乗務員と乗客の状況、刑事手続き、新しい航空保安措置を確認してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.873,
+      "end": 8.153,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ドバイフライトテルアビブ旅客機爆破コックピット攻撃乗客と乗組員が停止し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.153,
+      "speechEnd": 10.522,
+      "end": 11.382,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "安全に着陸。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 11.382,
+      "speechEnd": 14.239,
+      "end": 14.519,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イスラエル当局者は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.519,
+      "speechEnd": 17.794,
+      "end": 18.134,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "フライデュバイの副操縦士が"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.134,
+      "speechEnd": 24.474,
+      "end": 24.754,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "パイロットを刺して旅客機を墜落させようとした後、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.754,
+      "speechEnd": 31.652,
+      "end": 32.272,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "乗客と乗組員がそれを止めるために介入したと述べた。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.272,
+      "speechEnd": 37.915,
+      "end": 38.776,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "飛行機はついに安全にイスラエルに到着した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.776,
+      "speechEnd": 40.935,
+      "end": 41.216,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイターは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.216,
+      "speechEnd": 56.962,
+      "end": 57.582,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "イスラエル当局者が水曜日にドバイからテルアビブへのフライデュバイ便で深刻なコックピット事故が発生したと述べたと引用した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.582,
+      "speechEnd": 62.25,
+      "end": 62.53,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "副操縦士がパイロットを刺したとされ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.53,
+      "speechEnd": 67.268,
+      "end": 67.548,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "飛行機は30秒以内に約14,"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.548,
+      "speechEnd": 70.614,
+      "end": 71.234,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "000フィート落下した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.234,
+      "speechEnd": 74.926,
+      "end": 75.206,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "乗客と他の乗組員が介入し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.206,
+      "speechEnd": 78.69,
+      "end": 78.97,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "状況をうまくコントロールし、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 78.97,
+      "speechEnd": 85.659,
+      "end": 86.439,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "飛行機は最終的に安全にイスラエルに到着しました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 86.439,
+      "speechEnd": 96.751,
+      "end": 97.031,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この事件には民間航空保安と国境を越えた飛行保安が関与しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.031,
+      "speechEnd": 105.601,
+      "end": 106.221,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "イスラエルはこの事件を旅客機を墜落させようとしていると説明した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 106.221,
+      "speechEnd": 108.729,
+      "end": 109.009,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "現段階では、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.009,
+      "speechEnd": 111.099,
+      "end": 111.379,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "航空会社、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.379,
+      "speechEnd": 113.4,
+      "end": 113.68,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "UAE、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 113.68,
+      "speechEnd": 118.418,
+      "end": 118.698,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "および関連する航空保安機関が、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.698,
+      "speechEnd": 122.042,
+      "end": 122.322,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "事故時のコックピット状況、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 122.322,
+      "speechEnd": 124.83,
+      "end": 125.11,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "関係者の状況、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 125.11,
+      "speechEnd": 128.803,
+      "end": 129.143,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "および関連するルートまたは"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 129.143,
+      "speechEnd": 143.426,
+      "end": 144.207,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "航空保安手順を調整する必要があるかどうかを含む調査結果をさらに発表するのを待つ必要があります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 144.207,
+      "speechEnd": 148.178,
+      "end": 148.798,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 148.798,
+      "speechEnd": 153.397,
+      "end": 153.737,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "民間航空機のコックピットでの暴力は"
+    },
+    {
+      "parentKey": "why",
+      "start": 153.737,
+      "speechEnd": 157.917,
+      "end": 158.197,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "重大な航空安全事故であり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 158.197,
+      "speechEnd": 160.984,
+      "end": 161.264,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "その後の調査は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 161.264,
+      "speechEnd": 164.817,
+      "end": 165.097,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "航空会社の内部セキュリティ、"
+    },
+    {
+      "parentKey": "why",
+      "start": 165.097,
+      "speechEnd": 167.745,
+      "end": 168.025,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "乗務員の手続き、"
+    },
+    {
+      "parentKey": "why",
+      "start": 168.025,
+      "speechEnd": 173.042,
+      "end": 173.382,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "および地域の飛行リスク評価に影響を"
+    },
+    {
+      "parentKey": "why",
+      "start": 173.382,
+      "speechEnd": 176.796,
+      "end": 177.656,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "与える可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 177.656,
+      "speechEnd": 179.746,
+      "end": 180.026,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 180.026,
+      "speechEnd": 182.325,
+      "end": 182.605,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "フライドバイ、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 182.605,
+      "speechEnd": 186.368,
+      "end": 186.648,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "エミレーツ航空の規制当局、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 186.648,
+      "speechEnd": 190.898,
+      "end": 191.178,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イスラエル当局の公式調査結果、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 191.178,
+      "speechEnd": 195.985,
+      "end": 196.266,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "および関係する乗務員と乗客の状況、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 196.266,
+      "speechEnd": 198.565,
+      "end": 198.845,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "刑事手続き、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 198.845,
+      "speechEnd": 204.488,
+      "end": 205.349,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "新しい航空保安措置を確認してください。"
+    }
+  ]
+}
