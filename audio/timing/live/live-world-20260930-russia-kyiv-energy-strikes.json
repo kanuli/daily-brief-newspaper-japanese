@@ -1,0 +1,450 @@
+{
+  "version": 3,
+  "duration": 203.703,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 637,
+  "charactersPerMinute": 187.6,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 13.61,
+      "text": "ロシア軍によるキエフのエネルギー施設への空爆で少なくとも4人が死亡し、首都は煙に包まれた。"
+    },
+    {
+      "key": "dek",
+      "start": 13.61,
+      "end": 35.485,
+      "text": "ウクライナ当局によると、ロシアは水曜日にキエフとその周辺地域をドローンとミサイルで攻撃し、少なくとも4人が死亡し、エネルギーインフラに損害を与えた。"
+    },
+    {
+      "key": "body-0",
+      "start": 35.485,
+      "end": 97.501,
+      "text": "ロシアは水曜日、キエフとその周辺地域に大規模なドローンとミサイル攻撃を開始した。ウクライナ当局は、14歳の少年を含む少なくとも4人が死亡したと述べている。この少年はいくつかのエネルギー施設や工業施設に被害を受けた。首都はかつて煙に包まれていたが、当局は住民に窓を閉めるよう求めている。ウクライナ空軍によると、188機のドローンのうち155機が迎撃され、さらに5機のミサイルが撃墜された。"
+    },
+    {
+      "key": "body-1",
+      "start": 97.501,
+      "end": 153.186,
+      "text": "エネルギー会社のDTEKは、約8,000世帯の電力を回復したと述べたが、全体的な被害はまだ評価されていない。戦闘の影響もウクライナ国境を越えました。ドローンがモルドバ領空に侵入し、ポーランドとルーマニアは軍事的予防措置を講じました。その後、電力供給の回復速度と、ロシアとウクライナによるエネルギーと精製インフラへの攻撃がさらにエスカレートするかどうかに焦点が当てられます。"
+    },
+    {
+      "key": "why",
+      "start": 153.186,
+      "end": 178.186,
+      "text": "エネルギー施設への損害は、生計と戦時経済に直接的な影響を及ぼし、ドローンの横断は近隣のヨーロッパ諸国でのセキュリティインシデントのリスクを高めます。"
+    },
+    {
+      "key": "watch",
+      "start": 178.186,
+      "end": 203.703,
+      "text": "キエフとその周辺地域での電力復旧、最新の死傷者数、近隣諸国からの防空反応、そしてその後のロシアのエネルギーインフラに対するウクライナの反撃に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 9.614,
+      "end": 9.845,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロシア軍によるキエフのエネルギー施設への空爆で少なくとも4人が死亡し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.845,
+      "speechEnd": 12.91,
+      "end": 13.61,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "首都は煙に包まれた。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.61,
+      "speechEnd": 16.676,
+      "end": 16.906,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ウクライナ当局によると、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.906,
+      "speechEnd": 22.201,
+      "end": 22.481,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ロシアは水曜日にキエフとその周辺地域を"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.481,
+      "speechEnd": 25.894,
+      "end": 26.125,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ドローンとミサイルで攻撃し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.125,
+      "speechEnd": 30.165,
+      "end": 30.395,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "少なくとも4人が死亡し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 30.395,
+      "speechEnd": 34.785,
+      "end": 35.485,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "エネルギーインフラに損害を与えた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 35.485,
+      "speechEnd": 38.202,
+      "end": 38.432,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロシアは水曜日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.432,
+      "speechEnd": 46.792,
+      "end": 47.292,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "キエフとその周辺地域に大規模なドローンとミサイル攻撃を開始した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.292,
+      "speechEnd": 49.87,
+      "end": 50.1,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ウクライナ当局は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.1,
+      "speechEnd": 54.977,
+      "end": 55.117,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "14歳の少年を含む少なくとも"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.117,
+      "speechEnd": 57.207,
+      "end": 57.347,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "4人"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.347,
+      "speechEnd": 60.692,
+      "end": 61.192,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "が死亡したと述べている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.192,
+      "speechEnd": 69.9,
+      "end": 70.4,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "この少年はいくつかのエネルギー施設や工業施設に被害を受けた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.4,
+      "speechEnd": 74.929,
+      "end": 75.159,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "首都はかつて煙に包まれていたが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.159,
+      "speechEnd": 80.524,
+      "end": 81.024,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "当局は住民に窓を閉めるよう求めている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 81.024,
+      "speechEnd": 84.089,
+      "end": 84.319,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ウクライナ空軍によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 84.319,
+      "speechEnd": 91.635,
+      "end": 91.865,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "188機のドローンのうち155機が迎撃され、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 91.865,
+      "speechEnd": 96.881,
+      "end": 97.501,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "さらに5機のミサイルが撃墜された。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.501,
+      "speechEnd": 100.776,
+      "end": 101.006,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "エネルギー会社のDTEKは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.006,
+      "speechEnd": 103.026,
+      "end": 103.256,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "約8,"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.256,
+      "speechEnd": 108.342,
+      "end": 108.572,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "000世帯の電力を回復したと述べたが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.572,
+      "speechEnd": 113.797,
+      "end": 114.297,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "全体的な被害はまだ評価されていない。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.297,
+      "speechEnd": 120.219,
+      "end": 120.719,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "戦闘の影響もウクライナ国境を越えました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.719,
+      "speechEnd": 125.109,
+      "end": 125.339,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ドローンがモルドバ領空に侵入し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 125.339,
+      "speechEnd": 132.724,
+      "end": 133.224,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "ポーランドとルーマニアは軍事的予防措置を講じました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 133.224,
+      "speechEnd": 135.314,
+      "end": 135.544,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "その後、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 135.544,
+      "speechEnd": 138.888,
+      "end": 139.118,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "電力供給の回復速度と、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 139.118,
+      "speechEnd": 145.737,
+      "end": 146.017,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ロシアとウクライナによるエネルギーと精製インフラへの攻撃が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 146.017,
+      "speechEnd": 152.566,
+      "end": 153.186,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "さらにエスカレートするかどうかに焦点が当てられます。"
+    },
+    {
+      "parentKey": "why",
+      "start": 153.186,
+      "speechEnd": 157.157,
+      "end": 157.657,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 157.657,
+      "speechEnd": 161.21,
+      "end": 161.44,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "エネルギー施設への損害は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 161.44,
+      "speechEnd": 167.362,
+      "end": 167.592,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "生計と戦時経済に直接的な影響を及ぼし、"
+    },
+    {
+      "parentKey": "why",
+      "start": 167.592,
+      "speechEnd": 177.486,
+      "end": 178.186,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "ドローンの横断は近隣のヨーロッパ諸国でのセキュリティインシデントのリスクを高めます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 178.186,
+      "speechEnd": 180.276,
+      "end": 180.506,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 180.506,
+      "speechEnd": 185.383,
+      "end": 185.613,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "キエフとその周辺地域での電力復旧、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 185.613,
+      "speechEnd": 188.678,
+      "end": 188.908,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "最新の死傷者数、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 188.908,
+      "speechEnd": 192.671,
+      "end": 192.901,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "近隣諸国からの防空反応、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 192.901,
+      "speechEnd": 203.003,
+      "end": 203.703,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "そしてその後のロシアのエネルギーインフラに対するウクライナの反撃に注目してください。"
+    }
+  ]
+}
