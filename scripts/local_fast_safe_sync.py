@@ -15,6 +15,7 @@ import current_sync_overrides
 import fast_safe_sync as fast
 import furigana_safe_runtime as furigana_safe
 import newsroom_quality
+import prewarm_retry_runtime
 import safe_sync as safe
 import self_healing_runtime as self_healing
 import sync_and_translate as base
@@ -30,6 +31,7 @@ def main():
     current_sync_overrides.install(base, safe)
     newsroom_quality.install(safe)
     self_healing.install()
+    prewarm_retry_runtime.install(self_healing)
     furigana_safe.install()
     fast.main()
 
