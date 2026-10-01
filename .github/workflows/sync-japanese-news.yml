@@ -2,6 +2,12 @@ name: 日本語ニュース同期・品質ゲート・Discord配信
 
 on:
   workflow_dispatch:
+  # One-shot repair trigger: this workflow-file change starts the core repair
+  # once. Generated news commits do not match this path, so it cannot loop.
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/sync-japanese-news.yml'
 
 permissions:
   contents: write
@@ -182,7 +188,7 @@ jobs:
         shell: bash
         run: |
           echo 'TRANSLATION_READY_FOR_F3'
-          echo 'Pages and external notification are intentionally deferred until the F3 workflow succeeds.'
+          echo 'Text publication may proceed independently; F3 audio follows asynchronously.'
 
   emergency_remote_core:
     name: 通常同期失敗時の遠隔コア復旧
@@ -283,4 +289,4 @@ jobs:
         shell: bash
         run: |
           echo 'EMERGENCY_TRANSLATION_READY_FOR_F3'
-          echo 'Pages remains blocked until the F3 workflow succeeds.'
+          echo 'Text publication may proceed independently; F3 audio follows asynchronously.'
