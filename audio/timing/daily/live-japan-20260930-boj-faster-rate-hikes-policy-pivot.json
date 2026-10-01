@@ -1,0 +1,490 @@
+{
+  "version": 3,
+  "duration": 218.305,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 632,
+  "charactersPerMinute": 173.7,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.17,
+      "text": "日本銀行の政策方針は、将来的に金利をより早く、またはより頻繁に引き上げるために変化する"
+    },
+    {
+      "key": "dek",
+      "start": 14.17,
+      "end": 35.16,
+      "text": "日本銀行は、政策の焦点をインフレを支援することから上昇リスクを防ぐことに移行しており、市場は次の利上げのペースを再評価する必要があります。"
+    },
+    {
+      "key": "body-0",
+      "start": 35.16,
+      "end": 98.902,
+      "text": "ロイター通信は9月30日、日本銀行の政策志向がシフトしていると報じた。基礎インフレ率が2%の目標に近づくにつれて、政策当局は将来、より速く、より定期的なペースで金利を引き上げる可能性があり、もはや過去の正常化の遅いペースに従わなくなる可能性がある。これは、日本銀行が単に価格の勢いがさらに強化されるのを待つのではなく、インフレがベンチマークを超えるリスクにもっと注意を払うようになったことを意味します。"
+    },
+    {
+      "key": "body-1",
+      "start": 98.902,
+      "end": 154.588,
+      "text": "日本銀行の公式データによると、現在の金融市場調整政策は無担保のオーバーナイト金利貸出を約1.25 ％に維持することを導くものであり、次回の金融政策決定会合は10月29日～ 30日に予定されている。政策路線がさらにイーグルに移行すれば、日本の国債利回り、円、銀行の資金調達コスト、政府の財政負担はすべて直接影響を受ける可能性がある。"
+    },
+    {
+      "key": "why",
+      "start": 154.588,
+      "end": 185.537,
+      "text": "日本の金利動向は円、国債、世界的なキャリートレードを牽引している。利上げのペースが加速すれば、その影響は日本の金融市場からアジアや世界の資産配分に波及するだろう。"
+    },
+    {
+      "key": "watch",
+      "start": 185.537,
+      "end": 218.305,
+      "text": "10月29日から30日にかけて開催される日銀総会に先立ち、インフレ、賃金、円を注視し、上田や他の政策メンバーがより速い利上げの方向性をさらに確認しているかどうかを注視してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.832,
+      "end": 4.112,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本銀行の政策方針は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.112,
+      "speechEnd": 7.874,
+      "end": 8.154,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "将来的に金利をより早く、"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.154,
+      "speechEnd": 13.31,
+      "end": 14.17,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "またはより頻繁に引き上げるために変化する。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.17,
+      "speechEnd": 16.539,
+      "end": 16.819,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本銀行は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.819,
+      "speechEnd": 22.044,
+      "end": 22.385,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "政策の焦点をインフレを支援することから"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.385,
+      "speechEnd": 27.192,
+      "end": 27.472,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "上昇リスクを防ぐことに移行しており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.472,
+      "speechEnd": 34.3,
+      "end": 35.16,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "市場は次の利上げのペースを再評価する必要があります。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 35.16,
+      "speechEnd": 39.549,
+      "end": 39.829,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信は9月30日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.829,
+      "speechEnd": 46.239,
+      "end": 46.859,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "日本銀行の政策志向がシフトしていると報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.859,
+      "speechEnd": 53.548,
+      "end": 53.828,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "基礎インフレ率が2%の目標に近づくにつれて、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.828,
+      "speechEnd": 57.172,
+      "end": 57.452,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "政策当局は将来、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.452,
+      "speechEnd": 59.542,
+      "end": 59.822,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "より速く、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.822,
+      "speechEnd": 66.65,
+      "end": 66.93,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "より定期的なペースで金利を引き上げる可能性があり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.93,
+      "speechEnd": 75.012,
+      "end": 75.632,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "もはや過去の正常化の遅いペースに従わなくなる可能性がある。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.632,
+      "speechEnd": 77.722,
+      "end": 78.002,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "これは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 78.002,
+      "speechEnd": 81.904,
+      "end": 82.244,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "日本銀行が単に価格の勢いが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 82.244,
+      "speechEnd": 87.26,
+      "end": 87.54,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "さらに強化されるのを待つのではなく、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 87.54,
+      "speechEnd": 93.602,
+      "end": 93.942,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "インフレがベンチマークを超えるリスクにもっと注意を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 93.942,
+      "speechEnd": 98.122,
+      "end": 98.902,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "払うようになったことを意味します。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 98.902,
+      "speechEnd": 103.083,
+      "end": 103.363,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本銀行の公式データによると、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.363,
+      "speechEnd": 111.654,
+      "end": 111.994,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "現在の金融市場調整政策は無担保のオーバーナイト金利貸出を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.994,
+      "speechEnd": 118.822,
+      "end": 119.102,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "約1.25 ％に維持することを導くものであり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 119.102,
+      "speechEnd": 123.491,
+      "end": 123.671,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "次回の金融政策決定会合は"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 123.671,
+      "speechEnd": 126.458,
+      "end": 126.638,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "10月29日"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 126.638,
+      "speechEnd": 130.609,
+      "end": 131.229,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "～ 30日に予定されている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 131.229,
+      "speechEnd": 136.942,
+      "end": 137.222,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "政策路線がさらにイーグルに移行すれば、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 137.222,
+      "speechEnd": 140.149,
+      "end": 140.429,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本の国債利回り、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 140.429,
+      "speechEnd": 142.379,
+      "end": 142.659,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "円、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 142.659,
+      "speechEnd": 145.934,
+      "end": 146.214,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "銀行の資金調達コスト、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 146.214,
+      "speechEnd": 153.808,
+      "end": 154.588,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "政府の財政負担はすべて直接影響を受ける可能性がある。"
+    },
+    {
+      "parentKey": "why",
+      "start": 154.588,
+      "speechEnd": 158.56,
+      "end": 159.18,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 159.18,
+      "speechEnd": 162.594,
+      "end": 162.874,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本の金利動向は円、"
+    },
+    {
+      "parentKey": "why",
+      "start": 162.874,
+      "speechEnd": 164.894,
+      "end": 165.174,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "国債、"
+    },
+    {
+      "parentKey": "why",
+      "start": 165.174,
+      "speechEnd": 170.051,
+      "end": 170.671,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "世界的なキャリートレードを牽引している。"
+    },
+    {
+      "parentKey": "why",
+      "start": 170.671,
+      "speechEnd": 174.643,
+      "end": 174.923,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "利上げのペースが加速すれば、"
+    },
+    {
+      "parentKey": "why",
+      "start": 174.923,
+      "speechEnd": 184.677,
+      "end": 185.537,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "その影響は日本の金融市場からアジアや世界の資産配分に波及するだろう。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 185.537,
+      "speechEnd": 187.627,
+      "end": 187.907,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 187.907,
+      "speechEnd": 196.477,
+      "end": 196.757,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "10月29日から30日にかけて開催される日銀総会に先立ち、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 196.757,
+      "speechEnd": 198.847,
+      "end": 199.127,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インフレ、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 199.127,
+      "speechEnd": 201.148,
+      "end": 201.428,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "賃金、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 201.428,
+      "speechEnd": 203.657,
+      "end": 203.937,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "円を注視し、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 203.937,
+      "speechEnd": 211.462,
+      "end": 211.802,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "上田や他の政策メンバーがより速い利上げの方向性を"
+    },
+    {
+      "parentKey": "watch",
+      "start": 211.802,
+      "speechEnd": 217.445,
+      "end": 218.305,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "さらに確認しているかどうかを注視してください。"
+    }
+  ]
+}

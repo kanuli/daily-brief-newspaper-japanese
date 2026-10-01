@@ -1,0 +1,400 @@
+{
+  "version": 3,
+  "duration": 206.942,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 773,
+  "charactersPerMinute": 224.1,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 16.809,
+      "text": "DeepSeekはファーウェイと提携し、中国のAIソフトウェアエコシステムの自律性を促進するAscendプログラミングツールを開発"
+    },
+    {
+      "key": "dek",
+      "start": 16.809,
+      "end": 46.082,
+      "text": "DeepSeekは、中国のAI開発におけるNvidia CUDAエコシステムへの依存を減らすことを目的として、高級プログラミング言語TileLangを含むファーウェイのAscendチップ用の多数のインフラストラクチャツールをオープンソース化した。"
+    },
+    {
+      "key": "body-0",
+      "start": 46.082,
+      "end": 94.081,
+      "text": "ロイター通信は9月30日、DeepSeekがファーウェイと協力してAscend AIチップ用のプログラミングツールを開発し、高水準プログラミング言語TileLangを含むインフラストラクチャソフトウェアのバッチをオープンソース化していると報じた。 DeepSeekは公式WeChatアカウントで関連取り決めを発表し、独立した効率的なGPUソフトウェアエコシステムを確立することが重要なステップであると述べた。"
+    },
+    {
+      "key": "body-1",
+      "start": 94.081,
+      "end": 151.016,
+      "text": "AI アクセラレータの競争は、チップのコンピューティング能力だけでなく、開発者が低コストでモデルを導入できるかどうかを決定するコンパイラ、ライブラリ、開発ツールにも左右されます。したがって、この協力は Nvidia CUDA の長年確立されたソフトウェア堀に直接触れます。次のステップは、実際のトレーニングと推論のワークロードにおける TileLang の互換性、パフォーマンス、開発者の導入を観察することです。"
+    },
+    {
+      "key": "why",
+      "start": 151.016,
+      "end": 179.044,
+      "text": "Ascendツールチェーンが使いやすくなれば、ファーウェイのAIチップの実際の展開能力が向上し、中国のAIコンピューティング市場におけるプラットフォーム競争の状況が変わる可能性がある。"
+    },
+    {
+      "key": "watch",
+      "start": 179.044,
+      "end": 206.942,
+      "text": "TileLang のオープンソース コミュニティでの採用、主流のモデル フレームワークとの互換性、および大規模なモデルのトレーニングと推論における Ascend の測定されたパフォーマンスに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.623,
+      "end": 3.903,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "DeepSeekはファーウェイと提携し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.903,
+      "speechEnd": 9.686,
+      "end": 10.026,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "中国のAIソフトウェアエコシステムの自律性を"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.026,
+      "speechEnd": 15.948,
+      "end": 16.809,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "促進するAscendプログラミングツールを開発。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.809,
+      "speechEnd": 19.108,
+      "end": 19.388,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "DeepSeekは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.388,
+      "speechEnd": 27.191,
+      "end": 27.531,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "中国のAI開発におけるNvidia CUDAエコシステムへの依存を"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.531,
+      "speechEnd": 31.085,
+      "end": 31.365,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "減らすことを目的として、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 31.365,
+      "speechEnd": 35.476,
+      "end": 35.816,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "高級プログラミング言語TileLangを"
+    },
+    {
+      "parentKey": "dek",
+      "start": 35.816,
+      "speechEnd": 45.222,
+      "end": 46.082,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "含むファーウェイのAscendチップ用の多数のインフラストラクチャツールをオープンソース化した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.082,
+      "speechEnd": 50.471,
+      "end": 50.751,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信は9月30日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.751,
+      "speechEnd": 60.506,
+      "end": 60.786,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "DeepSeekがファーウェイと協力してAscend AIチップ用のプログラミングツールを開発し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.786,
+      "speechEnd": 65.314,
+      "end": 65.655,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "高水準プログラミング言語TileLangを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.655,
+      "speechEnd": 73.458,
+      "end": 74.078,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "含むインフラストラクチャソフトウェアのバッチをオープンソース化していると報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.078,
+      "speechEnd": 81.603,
+      "end": 81.883,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "DeepSeekは公式WeChatアカウントで関連取り決めを発表し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 81.883,
+      "speechEnd": 89.268,
+      "end": 89.608,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "独立した効率的なGPUソフトウェアエコシステムを確立することが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 89.608,
+      "speechEnd": 93.301,
+      "end": 94.081,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "重要なステップであると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.081,
+      "speechEnd": 97.495,
+      "end": 97.775,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "AI アクセラレータの競争は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.775,
+      "speechEnd": 102.235,
+      "end": 102.515,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "チップのコンピューティング能力だけでなく、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.515,
+      "speechEnd": 111.363,
+      "end": 111.643,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "開発者が低コストでモデルを導入できるかどうかを決定するコンパイラ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.643,
+      "speechEnd": 113.803,
+      "end": 114.083,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ライブラリ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.083,
+      "speechEnd": 118.124,
+      "end": 118.744,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "開発ツールにも左右されます。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.744,
+      "speechEnd": 120.974,
+      "end": 121.254,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "したがって、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.254,
+      "speechEnd": 131.008,
+      "end": 131.628,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "この協力は Nvidia CUDA の長年確立されたソフトウェア堀に直接触れます。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 131.628,
+      "speechEnd": 134.067,
+      "end": 134.347,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "次のステップは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 134.347,
+      "speechEnd": 142.638,
+      "end": 142.918,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "実際のトレーニングと推論のワークロードにおける TileLang の互換性、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 142.918,
+      "speechEnd": 145.287,
+      "end": 145.567,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "パフォーマンス、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 145.567,
+      "speechEnd": 150.235,
+      "end": 151.016,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "開発者の導入を観察することです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 151.016,
+      "speechEnd": 154.987,
+      "end": 155.607,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 155.607,
+      "speechEnd": 160.624,
+      "end": 160.904,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Ascendツールチェーンが使いやすくなれば、"
+    },
+    {
+      "parentKey": "why",
+      "start": 160.904,
+      "speechEnd": 167.453,
+      "end": 167.733,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ファーウェイのAIチップの実際の展開能力が向上し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 167.733,
+      "speechEnd": 178.184,
+      "end": 179.044,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "中国のAIコンピューティング市場におけるプラットフォーム競争の状況が変わる可能性がある。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 179.044,
+      "speechEnd": 181.135,
+      "end": 181.415,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 181.415,
+      "speechEnd": 186.849,
+      "end": 187.129,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "TileLang のオープンソース コミュニティでの採用、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 187.129,
+      "speechEnd": 192.494,
+      "end": 192.774,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "主流のモデル フレームワークとの互換性、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 192.774,
+      "speechEnd": 206.082,
+      "end": 206.942,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "および大規模なモデルのトレーニングと推論における Ascend の測定されたパフォーマンスに注目してください。"
+    }
+  ]
+}
