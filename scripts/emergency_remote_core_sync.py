@@ -37,6 +37,7 @@ def ensure_lexical_furigana_dependencies() -> None:
 ensure_lexical_furigana_dependencies()
 
 import cantonese_snapshot as snapshot
+import current_story_overrides
 import current_sync_overrides
 import fast_safe_sync as fast
 import furigana_safe_runtime
@@ -59,6 +60,7 @@ def main():
     base.FILES = CURRENT_FILES
     base.fetch = snapshot_fetch
     current_sync_overrides.install(base, safe)
+    current_story_overrides.install(base)
     newsroom_quality.install(safe)
     self_healing_runtime.install()
     prewarm_retry_runtime.install(self_healing_runtime)
