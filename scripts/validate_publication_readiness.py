@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Publication-readiness gate that deliberately permits asynchronous F3 audio.
 
-News publication must be blocked by bad Japanese, broken schemas/references, or
-missing learner-facing text. It must NOT be blocked merely because the server
-has not generated the MP3/timing asset or final F3 metadata yet. Full audio
-completeness remains the responsibility of validate_site.py --data-only and the
-F3 audio health workflows.
+News publication must be blocked by bad Japanese, broken schemas/references,
+degraded fallback copy, or missing learner-facing text. It must NOT be blocked
+merely because the server has not generated the MP3/timing asset or final F3
+metadata yet. Full audio completeness remains the responsibility of
+validate_site.py --data-only and the F3 audio health workflows.
 """
 from __future__ import annotations
 
@@ -21,6 +21,11 @@ KANA_RE = re.compile(r"[\u3040-\u30ff]")
 HAN_RE = re.compile(r"[\u3400-\u9fff]")
 EXPECTED_AUDIO_SPEED = 0.72
 EXPECTED_DELIVERY_PROFILE = "jp-tv-news-semantic-v4"
+BAD_TRANSLATION_STATUSES = {
+    "EDITORIAL_MINIMUM_FALLBACK",
+    "TRANSLATION_FAILED",
+    "TRANSLATION_DEGRADED",
+}
 
 
 def fail(message: str) -> None:
@@ -42,10 +47,26 @@ def paragraphs(item: dict) -> list[str]:
     return [p for p in re.split(r"\n\s*\n", raw) if p.strip()]
 
 
+def check_payload_translation(name: str, data: dict) -> None:
+    if bool(data.get("translationDegraded")):
+        fail(f"{name}: translationDegraded=true")
+    try:
+        deferred = int(data.get("translationDeferredCount") or 0)
+    except Exception:
+        deferred = 1
+    if deferred > 0:
+        fail(f"{name}: translationDeferredCount={deferred}")
+
+
 def check_item(group: str, item: dict, warnings: list[str]) -> None:
     aid = str(item.get("id") or "").strip()
     if not aid:
         fail(f"{group}: article/item id missing")
+
+    translation_status = str(item.get("translationStatus") or "").strip().upper()
+    if translation_status in BAD_TRANSLATION_STATUSES:
+        fail(f"{group}:{aid}: degraded translationStatus={translation_status}")
+
     title = str(item.get("title") or "").strip()
     if not title:
         fail(f"{group}:{aid}: title missing")
@@ -71,9 +92,6 @@ def check_item(group: str, item: dict, warnings: list[str]) -> None:
     audio_exists = (ROOT / expected_audio).is_file()
     timing_exists = (ROOT / expected_timing).is_file()
 
-    # Speed/profile are final F3 metadata. Before synthesis they may legitimately
-    # be absent. Once present, however, they must match the approved delivery
-    # profile; a conflicting value is a real publication-integrity problem.
     speed_raw = item.get("audioSpeed")
     if speed_raw not in (None, ""):
         try:
@@ -92,8 +110,6 @@ def check_item(group: str, item: dict, warnings: list[str]) -> None:
     else:
         warnings.append(f"{group}:{aid}: audioDeliveryProfile pending")
 
-    # Missing physical audio/timing is a valid temporary state. The frontend's
-    # F3 voice-status layer will show 音声準備中 until the manifest/assets arrive.
     if not audio_exists:
         warnings.append(f"{group}:{aid}: audio pending")
     if not timing_exists:
@@ -130,6 +146,9 @@ def main() -> int:
         fail("latest.json language != ja")
     if live.get("language") != "ja":
         fail("live.json language != ja")
+
+    check_payload_translation("latest.json", latest)
+    check_payload_translation("live.json", live)
 
     daily = latest.get("articles") or []
     live_items = live.get("items") or []
