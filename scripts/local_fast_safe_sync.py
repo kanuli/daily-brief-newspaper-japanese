@@ -30,7 +30,7 @@ def main():
     base.likely_chinese_source = detector.needs_cantonese_translation
     base.fetch = lambda name: snapshot.load_json(name, optional=True)
     current_sync_overrides.install(base, safe)
-    current_story_overrides.install(base)
+    current_story_overrides.install(base, safe)
     newsroom_quality.install(safe)
     self_healing.install()
     prewarm_retry_runtime.install(self_healing)
