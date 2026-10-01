@@ -138,6 +138,8 @@ def degraded_translation(payload: dict) -> bool:
     """Fallback/minimum cards are not a healthy translated newsroom layer."""
     if bool(payload.get("translationDegraded")):
         return True
+    if int(payload.get("translationDeferredCount") or 0) > 0:
+        return True
     for story in iter_stories(payload):
         status = str(story.get("translationStatus") or "").strip().upper()
         if status in {"EDITORIAL_MINIMUM_FALLBACK", "TRANSLATION_FAILED", "TRANSLATION_DEGRADED"}:
@@ -154,6 +156,8 @@ def verify_pages_assets(layers: Dict[str, dict]) -> list:
                 failures.append(f"pages:{name}:stale")
         elif not current(expected, published, 0):
             failures.append(f"pages:{name}:stale")
+        if degraded_translation(published):
+            failures.append(f"pages:{name}:degraded-translation")
 
     seen = set()  # type: Set[Tuple[str, str]]
     for payload in layers.values():
@@ -190,6 +194,8 @@ def main() -> int:
         str(japanese["latest.json"].get("date") or "")[:10]
         < str(upstream["latest.json"].get("date") or "")[:10]
         or not current(upstream["live.json"], japanese["live.json"], 60)
+        or degraded_translation(japanese["latest.json"])
+        or degraded_translation(japanese["live.json"])
     )
     rolling_stale = (
         not current(upstream["desk-latest.json"], japanese["desk-latest.json"], 60)
@@ -207,8 +213,12 @@ def main() -> int:
 
     failures = verify_pages_assets(japanese)
     if failures:
+        degraded_failures = [failure for failure in failures if failure.endswith(":degraded-translation")]
         audio_failures = [failure for failure in failures if failure.startswith("f3:")]
-        if audio_failures:
+        if degraded_failures:
+            dispatch("sync-japanese-news.yml")
+            dispatch("repair-extra-translation-quality.yml")
+        elif audio_failures:
             dispatch(F3_WORKFLOW)
         else:
             dispatch(PAGES_WORKFLOW)
