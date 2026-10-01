@@ -24,11 +24,7 @@ OVERRIDES = {
 }
 
 
-def install(base_module) -> None:
-    if getattr(base_module, "_current_story_overrides_installed", False):
-        return
-    original = base_module.convert
-
+def _wrap(original):
     def convert(obj, parent_key=""):
         if isinstance(obj, dict):
             story_id = str(obj.get("id") or "")
@@ -41,7 +37,23 @@ def install(base_module) -> None:
                 print("CURRENT_STORY_EDITORIAL_OVERRIDE", f"id={story_id}")
                 return value
         return original(obj, parent_key)
+    return convert
 
-    base_module.convert = convert
-    base_module._current_story_overrides_installed = True
-    print("CURRENT_STORY_OVERRIDES_INSTALLED count=1 provenance_preserved=true")
+
+def install(base_module, safe_module=None) -> None:
+    if not getattr(base_module, "_current_story_overrides_installed", False):
+        base_module.convert = _wrap(base_module.convert)
+        base_module._current_story_overrides_installed = True
+
+    if safe_module is not None and not getattr(safe_module, "_current_story_overrides_installed", False):
+        # safe_sync.main later assigns base.convert = safe_convert. Wrapping the
+        # module-global symbol here ensures that assignment keeps the override.
+        safe_module.safe_convert = _wrap(safe_module.safe_convert)
+        safe_module._current_story_overrides_installed = True
+
+    print(
+        "CURRENT_STORY_OVERRIDES_INSTALLED",
+        "count=1",
+        "provenance_preserved=true",
+        f"safe_recursive={safe_module is not None}",
+    )
