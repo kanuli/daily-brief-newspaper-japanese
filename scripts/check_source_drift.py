@@ -99,8 +99,6 @@ def main():
     integrity_bad = []
     scope = str(os.environ.get("PARITY_SCOPE") or "all").strip().lower()
 
-    # Current-news recovery is deliberately independent from archive history.
-    # "base" remains an alias because the existing hourly workflow already uses it.
     primary_files = CURRENT_FILES if scope in {"current", "base"} else BASE_FILES
 
     for name in primary_files:
@@ -112,12 +110,22 @@ def main():
         local = local_json(name)
         if expected != actual:
             drift.append(name)
+            print(
+                "SOURCE_FINGERPRINT_MISMATCH",
+                f"file={name}",
+                f"expected={expected}",
+                f"actual={actual or 'missing'}",
+            )
         if local is None:
             integrity_bad.append(name)
         else:
             issues = integrity.collect_issues(name, local)
             if issues:
                 integrity_bad.append(name)
+                for issue in issues[:50]:
+                    print("LOCAL_CONTENT_INTEGRITY_ISSUE", issue)
+                if len(issues) > 50:
+                    print(f"LOCAL_CONTENT_INTEGRITY_ISSUE ... and {len(issues) - 50} more")
 
     if scope not in {"current", "base"}:
         extra_names = list(EXTRA_FILES)
