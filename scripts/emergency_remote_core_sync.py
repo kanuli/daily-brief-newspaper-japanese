@@ -42,6 +42,7 @@ import fast_safe_sync as fast
 import furigana_safe_runtime
 import newsroom_postedit_core
 import newsroom_quality
+import prewarm_retry_runtime
 import safe_sync as safe
 import self_healing_runtime
 import sync_and_translate as base
@@ -60,6 +61,7 @@ def main():
     current_sync_overrides.install(base, safe)
     newsroom_quality.install(safe)
     self_healing_runtime.install()
+    prewarm_retry_runtime.install(self_healing_runtime)
     furigana_safe_runtime.install()
     fast.main()
     newsroom_postedit_core.main()
@@ -70,6 +72,7 @@ def main():
         "current_only=true",
         f"furigana_engine={furigana_safe_runtime.engine_name()}",
         "newsroom_quality=true",
+        "prewarm_deferred_requires_real_translation=true",
     )
 
 
