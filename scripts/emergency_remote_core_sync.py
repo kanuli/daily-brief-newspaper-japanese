@@ -60,7 +60,7 @@ def main():
     base.FILES = CURRENT_FILES
     base.fetch = snapshot_fetch
     current_sync_overrides.install(base, safe)
-    current_story_overrides.install(base)
+    current_story_overrides.install(base, safe)
     newsroom_quality.install(safe)
     self_healing_runtime.install()
     prewarm_retry_runtime.install(self_healing_runtime)
