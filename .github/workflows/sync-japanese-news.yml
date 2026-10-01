@@ -2,8 +2,8 @@ name: 日本語ニュース同期・品質ゲート・Discord配信
 
 on:
   workflow_dispatch:
-  # One-shot repair trigger: this workflow-file change starts the core repair
-  # once. Generated news commits do not match this path, so it cannot loop.
+  # One-shot repair trigger: workflow-file changes start the repair while
+  # generated news commits do not match this path, so publication cannot loop.
   push:
     branches: [main]
     paths:
@@ -14,16 +14,12 @@ permissions:
 
 concurrency:
   group: japanese-news-hourly
-  # Never cancel an active translation/publication run. The newest queued run
-  # may follow it, preventing watchdog/dispatch triggers from starving output.
   cancel-in-progress: false
 
 jobs:
   sync:
     runs-on: ubuntu-latest
     timeout-minutes: 25
-    # A failed normal/local-model path is allowed to hand control to the
-    # emergency job. The workflow still fails if that emergency job fails.
     continue-on-error: true
     outputs:
       core_ok: ${{ steps.core_status.outputs.ok }}
@@ -131,6 +127,41 @@ jobs:
       - name: 学習単語データを検証
         run: python scripts/validate_vocab_quality.py
 
+      - name: degraded core fallbackを公開前に拒否
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          BAD = {'EDITORIAL_MINIMUM_FALLBACK','TRANSLATION_FAILED','TRANSLATION_DEGRADED'}
+          def stories(value):
+              if isinstance(value, dict):
+                  if value.get('id') and (value.get('title') or value.get('summary') or value.get('body')):
+                      yield value
+                  for child in value.values():
+                      yield from stories(child)
+              elif isinstance(value, list):
+                  for child in value:
+                      yield from stories(child)
+          failures = []
+          for name in ('latest.json','live.json'):
+              data = json.loads((Path('data') / name).read_text(encoding='utf-8'))
+              if data.get('translationDegraded'):
+                  failures.append(f'{name}:translationDegraded=true')
+              if int(data.get('translationDeferredCount') or 0) > 0:
+                  failures.append(f'{name}:translationDeferredCount={data.get("translationDeferredCount")}')
+              for item in stories(data):
+                  status = str(item.get('translationStatus') or '').strip().upper()
+                  if status in BAD:
+                      failures.append(f'{name}:{item.get("id")}:translationStatus={status}')
+          if failures:
+              print('CORE_DEGRADED_TRANSLATION_REJECT')
+              for failure in failures[:50]: print(' -', failure)
+              raise SystemExit(1)
+          print('CORE_TRANSLATION_COMPLETE_OK')
+          PY
+
       - name: デイリー・速報・アーカイブを公開候補として保存
         id: publish_news
         shell: bash
@@ -139,20 +170,17 @@ jobs:
           git config user.name 'daily-brief-japanese-bot'
           git config user.email 'actions@users.noreply.github.com'
           git add data/latest.json data/live.json data/archive.json
-
           latest_changed=false
           live_changed=false
           if git diff --cached --name-only | grep -Fxq 'data/latest.json'; then latest_changed=true; fi
           if git diff --cached --name-only | grep -Fxq 'data/live.json'; then live_changed=true; fi
           echo "latest_changed=${latest_changed}" >> "$GITHUB_OUTPUT"
           echo "live_changed=${live_changed}" >> "$GITHUB_OUTPUT"
-
           if git diff --cached --quiet; then
             echo '現在ニュースの実効変更なし'
             echo 'published=false' >> "$GITHUB_OUTPUT"
             exit 0
           fi
-
           git commit -m '編集品質確認済みの現在ニュースを日本語版へ同期'
           for attempt in 1 2 3 4 5; do
             git fetch origin main
@@ -246,6 +274,36 @@ jobs:
       - name: 学習単語データを検証
         run: python scripts/validate_vocab_quality.py
 
+      - name: 遠隔復旧にもdegraded fallbackを許可しない
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          BAD = {'EDITORIAL_MINIMUM_FALLBACK','TRANSLATION_FAILED','TRANSLATION_DEGRADED'}
+          def stories(value):
+              if isinstance(value, dict):
+                  if value.get('id') and (value.get('title') or value.get('summary') or value.get('body')):
+                      yield value
+                  for child in value.values(): yield from stories(child)
+              elif isinstance(value, list):
+                  for child in value: yield from stories(child)
+          failures=[]
+          for name in ('latest.json','live.json'):
+              data=json.loads((Path('data')/name).read_text(encoding='utf-8'))
+              if data.get('translationDegraded') or int(data.get('translationDeferredCount') or 0)>0:
+                  failures.append(f'{name}:degraded-metadata')
+              for item in stories(data):
+                  status=str(item.get('translationStatus') or '').strip().upper()
+                  if status in BAD: failures.append(f'{name}:{item.get("id")}:{status}')
+          if failures:
+              print('EMERGENCY_CORE_DEGRADED_TRANSLATION_REJECT')
+              for failure in failures[:50]: print(' -', failure)
+              raise SystemExit(1)
+          print('EMERGENCY_CORE_TRANSLATION_COMPLETE_OK')
+          PY
+
       - name: 遠隔復旧済みコアニュースを公開
         id: emergency_publish
         shell: bash
@@ -254,14 +312,12 @@ jobs:
           git config user.name 'daily-brief-japanese-bot'
           git config user.email 'actions@users.noreply.github.com'
           git add data/latest.json data/live.json data/archive.json data/translation-cache.json
-
           latest_changed=false
           live_changed=false
           if git diff --cached --name-only | grep -Fxq 'data/latest.json'; then latest_changed=true; fi
           if git diff --cached --name-only | grep -Fxq 'data/live.json'; then live_changed=true; fi
           echo "latest_changed=${latest_changed}" >> "$GITHUB_OUTPUT"
           echo "live_changed=${live_changed}" >> "$GITHUB_OUTPUT"
-
           if git diff --cached --quiet; then
             echo 'Emergency remote recovery found no publication change.'
             echo 'published=false' >> "$GITHUB_OUTPUT"
