@@ -19,7 +19,7 @@ OVERRIDES = {
         "context": "香港では近年、高等教育と研究への投資を拡大し、海外からの学生や研究人材の誘致を政策上の重点の一つとしている。",
         "why": "複数の香港の大学が世界トップ100の位置を維持することは、地域の高等教育、研究人材、国際協力をめぐる競争で香港の存在感を保つ上でプラスとなる。",
         "watchNext": "THEが公表する各大学の項目別データや、各大学による最新ランキング、学生募集、研究戦略への対応に注目する。",
-        "timeLabel": "09月30日 15:03 HKT確認済み",
+        "timeLabel": "09月30日 14:00 HKT確認済み",
     }
 }
 
@@ -46,8 +46,6 @@ def install(base_module, safe_module=None) -> None:
         base_module._current_story_overrides_installed = True
 
     if safe_module is not None and not getattr(safe_module, "_current_story_overrides_installed", False):
-        # safe_sync.main later assigns base.convert = safe_convert. Wrapping the
-        # module-global symbol here ensures that assignment keeps the override.
         safe_module.safe_convert = _wrap(safe_module.safe_convert)
         safe_module._current_story_overrides_installed = True
 
