@@ -1,0 +1,290 @@
+{
+  "version": 3,
+  "duration": 151.04,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 462,
+  "charactersPerMinute": 183.5,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 8.525,
+      "text": "ニュージーランドで開催された初の太平洋災害管理演習"
+    },
+    {
+      "key": "dek",
+      "start": 8.525,
+      "end": 23.742,
+      "text": "台湾と米国は、災害対応とレジリエンス協力に焦点を当てるために、太平洋のパートナーと協力しています。"
+    },
+    {
+      "key": "body-0",
+      "start": 23.742,
+      "end": 63.881,
+      "text": "台湾と米国の当局者と太平洋のパートナーは、災害対応の調整とレジリエンス協力に焦点を当てて、ニュージーランドで最初のGCTF災害管理演習を開催しました。このイベントは、緊急対応と地域協力を強化することを目的とした国内初のGCTFラリーと見なされたと伝えられています。"
+    },
+    {
+      "key": "body-1",
+      "start": 63.881,
+      "end": 103.75,
+      "text": "このイベントは、災害管理と対応の取り決めに焦点を当て、地域の防災に関する台湾と米国および太平洋のパートナー間の実際の調整を反映しています。公式には、この演習は緊急事態への備えを改善し、多国籍コラボレーションの枠組みを強化することを目的としています。"
+    },
+    {
+      "key": "why",
+      "start": 103.75,
+      "end": 132.827,
+      "text": "この演習は、地域の災害対応とレジリエンス協力に関する米国との実践的な調整を示すものであり、太平洋パートナーシップにおける災害管理の重要性を直接反映しています。"
+    },
+    {
+      "key": "watch",
+      "start": 132.827,
+      "end": 151.04,
+      "text": "演習がより緊密な地域対応協力と定期的な訓練の取り決めにつながるかどうかについて、その後の観察が行われます。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.665,
+      "end": 8.525,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ニュージーランドで開催された初の太平洋災害管理演習。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 8.525,
+      "speechEnd": 11.034,
+      "end": 11.314,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "台湾と米国は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 11.314,
+      "speechEnd": 17.794,
+      "end": 18.074,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "災害対応とレジリエンス協力に焦点を当てるために、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.074,
+      "speechEnd": 22.882,
+      "end": 23.742,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "太平洋のパートナーと協力しています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 23.742,
+      "speechEnd": 30.292,
+      "end": 30.572,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "台湾と米国の当局者と太平洋のパートナーは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 30.572,
+      "speechEnd": 37.331,
+      "end": 37.611,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "災害対応の調整とレジリエンス協力に焦点を当てて、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.611,
+      "speechEnd": 45.834,
+      "end": 46.454,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ニュージーランドで最初のGCTF災害管理演習を開催しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.454,
+      "speechEnd": 48.962,
+      "end": 49.242,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "このイベントは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.242,
+      "speechEnd": 54.329,
+      "end": 54.669,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "緊急対応と地域協力を強化することを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.669,
+      "speechEnd": 63.1,
+      "end": 63.881,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "目的とした国内初のGCTFラリーと見なされたと伝えられています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 63.881,
+      "speechEnd": 66.389,
+      "end": 66.669,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "このイベントは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 66.669,
+      "speechEnd": 72.383,
+      "end": 72.663,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "災害管理と対応の取り決めに焦点を当て、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 72.663,
+      "speechEnd": 85.902,
+      "end": 86.523,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "地域の防災に関する台湾と米国および太平洋のパートナー間の実際の調整を反映しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 86.523,
+      "speechEnd": 88.752,
+      "end": 89.032,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "公式には、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 89.032,
+      "speechEnd": 94.746,
+      "end": 95.026,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この演習は緊急事態への備えを改善し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 95.026,
+      "speechEnd": 102.97,
+      "end": 103.75,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "多国籍コラボレーションの枠組みを強化することを目的としています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 103.75,
+      "speechEnd": 107.722,
+      "end": 108.342,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 108.342,
+      "speechEnd": 110.711,
+      "end": 110.991,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この演習は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 110.991,
+      "speechEnd": 122.419,
+      "end": 122.699,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "地域の災害対応とレジリエンス協力に関する米国との実践的な調整を示すものであり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 122.699,
+      "speechEnd": 131.966,
+      "end": 132.827,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "太平洋パートナーシップにおける災害管理の重要性を直接反映しています。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 132.827,
+      "speechEnd": 134.917,
+      "end": 135.197,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 135.197,
+      "speechEnd": 146.207,
+      "end": 146.487,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "演習がより緊密な地域対応協力と定期的な訓練の取り決めにつながるかどうかについて、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 146.487,
+      "speechEnd": 150.18,
+      "end": 151.04,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "その後の観察が行われます。"
+    }
+  ]
+}

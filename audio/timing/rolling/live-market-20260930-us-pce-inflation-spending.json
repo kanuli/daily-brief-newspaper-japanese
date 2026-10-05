@@ -1,0 +1,470 @@
+{
+  "version": 3,
+  "duration": 205.009,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 578,
+  "charactersPerMinute": 169.2,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 13.324,
+      "text": "米国のPCEインフレ率が予想を下回った8月の消費者支出は依然として0.9 ％急増"
+    },
+    {
+      "key": "dek",
+      "start": 13.324,
+      "end": 39.132,
+      "text": "FRBのインフレ指標への焦点は市場の予想よりも穏やかで、金利を再び引き上げる10月の圧力を軽減したが、消費者支出は依然として強く、金利の道筋はその後のデータに依存している。"
+    },
+    {
+      "key": "body-0",
+      "start": 39.132,
+      "end": 94.603,
+      "text": "米国商務省経済分析局は9月30日、個人消費支出（ PCE ）が8月に1,908億ドル増加し、前月比0.9 ％増加し、個人所得が0.2 ％増加したと発表した。ロイター通信によると、PCE物価指数は前月比0.3 ％、前年同期比2.6 ％上昇したが、コアPCEは前年同期比3.0 ％上昇し、全体的なインフレ結果は市場が予想していたよりも穏やかだった。"
+    },
+    {
+      "key": "body-1",
+      "start": 94.603,
+      "end": 149.232,
+      "text": "このデータにより、市場はFRBの金利期待を再調整することになりました。ドルは下落し、金は上昇し、10月に再び利上げの可能性が低下しました。しかし、消費支出は依然として堅調であり、需要は大幅に停滞していないことを意味します。投資家はまた、インフレの冷却が継続するかどうか、そして強い支出が価格圧力を再び蓄積させるかどうかも判断します。"
+    },
+    {
+      "key": "why",
+      "start": 149.232,
+      "end": 180.95,
+      "text": "PCEはFRBのコアインフレ指標の1つである。読み取り値の低下は米国債利回り、米ドル、金、株式の評価に直接影響するが、強い消費指令政策のシグナルは一方向ではない。"
+    },
+    {
+      "key": "watch",
+      "start": 180.95,
+      "end": 205.009,
+      "text": "次回の米国の雇用、賃金、インフレ率のデータ、そしてFRB当局者が10月の利上げの必要性をさらに軽視するかどうかに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 8.361,
+      "end": 8.701,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "米国のPCEインフレ率が予想を下回った8月の消費者支出は"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.701,
+      "speechEnd": 12.464,
+      "end": 13.324,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "依然として0.9 ％急増。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.324,
+      "speechEnd": 20.849,
+      "end": 21.129,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "FRBのインフレ指標への焦点は市場の予想よりも穏やかで、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.129,
+      "speechEnd": 27.818,
+      "end": 28.098,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "金利を再び引き上げる10月の圧力を軽減したが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 28.098,
+      "speechEnd": 32.278,
+      "end": 32.558,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "消費者支出は依然として強く、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.558,
+      "speechEnd": 38.272,
+      "end": 39.132,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "金利の道筋はその後のデータに依存している。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.132,
+      "speechEnd": 45.403,
+      "end": 45.683,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国商務省経済分析局は9月30日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.683,
+      "speechEnd": 50.7,
+      "end": 50.98,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "個人消費支出（ PCE ）が8月に1,"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.98,
+      "speechEnd": 54.533,
+      "end": 54.813,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "908億ドル増加し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.813,
+      "speechEnd": 58.645,
+      "end": 58.925,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "前月比0.9 ％増加し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.925,
+      "speechEnd": 64.569,
+      "end": 65.189,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "個人所得が0.2 ％増加したと発表した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.189,
+      "speechEnd": 68.185,
+      "end": 68.465,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.465,
+      "speechEnd": 73.343,
+      "end": 73.623,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "PCE物価指数は前月比0.3 ％、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.623,
+      "speechEnd": 79.057,
+      "end": 79.338,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "前年同期比2.6 ％上昇したが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 79.338,
+      "speechEnd": 85.121,
+      "end": 85.401,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "コアPCEは前年同期比3.0 ％上昇し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 85.401,
+      "speechEnd": 89.372,
+      "end": 89.712,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "全体的なインフレ結果は市場が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 89.712,
+      "speechEnd": 93.823,
+      "end": 94.603,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "予想していたよりも穏やかだった。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.603,
+      "speechEnd": 97.251,
+      "end": 97.531,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "このデータにより、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.531,
+      "speechEnd": 104.708,
+      "end": 105.328,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "市場はFRBの金利期待を再調整することになりました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 105.328,
+      "speechEnd": 107.975,
+      "end": 108.256,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ドルは下落し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.256,
+      "speechEnd": 110.625,
+      "end": 110.905,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "金は上昇し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 110.905,
+      "speechEnd": 117.245,
+      "end": 117.865,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "10月に再び利上げの可能性が低下しました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.865,
+      "speechEnd": 119.886,
+      "end": 120.166,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "しかし、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.166,
+      "speechEnd": 124.904,
+      "end": 125.184,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "消費支出は依然として堅調であり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 125.184,
+      "speechEnd": 131.455,
+      "end": 132.075,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "需要は大幅に停滞していないことを意味します。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 132.075,
+      "speechEnd": 134.513,
+      "end": 134.794,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "投資家はまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 134.794,
+      "speechEnd": 139.741,
+      "end": 140.021,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インフレの冷却が継続するかどうか、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 140.021,
+      "speechEnd": 148.451,
+      "end": 149.232,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "そして強い支出が価格圧力を再び蓄積させるかどうかも判断します。"
+    },
+    {
+      "parentKey": "why",
+      "start": 149.232,
+      "speechEnd": 153.203,
+      "end": 153.823,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 153.823,
+      "speechEnd": 159.676,
+      "end": 160.296,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "PCEはFRBのコアインフレ指標の1つである。"
+    },
+    {
+      "parentKey": "why",
+      "start": 160.296,
+      "speechEnd": 164.337,
+      "end": 164.617,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "読み取り値の低下は米国債利回り、"
+    },
+    {
+      "parentKey": "why",
+      "start": 164.617,
+      "speechEnd": 166.708,
+      "end": 166.988,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米ドル、"
+    },
+    {
+      "parentKey": "why",
+      "start": 166.988,
+      "speechEnd": 168.939,
+      "end": 169.219,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "金、"
+    },
+    {
+      "parentKey": "why",
+      "start": 169.219,
+      "speechEnd": 173.051,
+      "end": 173.331,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "株式の評価に直接影響するが、"
+    },
+    {
+      "parentKey": "why",
+      "start": 173.331,
+      "speechEnd": 180.089,
+      "end": 180.95,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "強い消費指令政策のシグナルは一方向ではない。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 180.95,
+      "speechEnd": 183.04,
+      "end": 183.32,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 183.32,
+      "speechEnd": 186.455,
+      "end": 186.735,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "次回の米国の雇用、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 186.735,
+      "speechEnd": 188.756,
+      "end": 189.036,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "賃金、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 189.036,
+      "speechEnd": 191.684,
+      "end": 191.964,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インフレ率のデータ、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 191.964,
+      "speechEnd": 198.513,
+      "end": 198.853,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "そしてFRB当局者が10月の利上げの必要性を"
+    },
+    {
+      "parentKey": "watch",
+      "start": 198.853,
+      "speechEnd": 204.149,
+      "end": 205.009,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "さらに軽視するかどうかに注目してください。"
+    }
+  ]
+}
