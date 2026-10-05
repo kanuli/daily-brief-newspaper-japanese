@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 33.176,
+  "duration": 150.1,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 340.0,
-  "characters": 90,
-  "charactersPerMinute": 162.8,
+  "characters": 470,
+  "charactersPerMinute": 187.9,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.18,
@@ -21,82 +21,290 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 6.92,
-      "text": "マーケット・経済：最新確認済みニュース"
+      "end": 7.2,
+      "text": "フランスとドイツは迅速なEU貿易対応メカニズムを推進"
     },
     {
       "key": "dek",
-      "start": 6.92,
-      "end": 14.616,
-      "text": "出典で確認済みの最新情報を先行掲載しています。"
+      "start": 7.2,
+      "end": 21.718,
+      "text": "EUは中国を含む貿易リスクに焦点を当て、迅速に対応する貿易ツールの推進を加速していると報じられている。"
     },
     {
       "key": "body-0",
-      "start": 14.616,
-      "end": 33.176,
-      "text": "記事に記載した出典で、この分類の最新ニュースを確認しました。完全な日本語本文は自動復旧処理で順次更新します。"
+      "start": 21.718,
+      "end": 58.786,
+      "text": "フランスとドイツはEUに対し、貿易混乱に対処し、中国関連のリスクに焦点を当てるための迅速な対応貿易手段の確立を求めていると報じられている。報告書は、この動きを地政学的緊張に直接関係する欧州政策分野における特定の取り組みであると説明している。"
+    },
+    {
+      "key": "body-1",
+      "start": 58.786,
+      "end": 99.617,
+      "text": "関連メカニズムは、貿易混乱への対応に焦点を当てた当面の政策展開とみなされており、中国関連のリスクが主要な考慮事項として挙げられている。記事は、この動きには明らかに商業的かつ戦略的な意味があり、EUによる貿易安全保障の展開の加速を反映していると指摘した。"
+    },
+    {
+      "key": "why",
+      "start": 99.617,
+      "end": 127.088,
+      "text": "この取り組みは、貿易ショックや地政学リスクに直面したEUの政策対応の加速を反映しており、国際的なビジネスやサプライチェーンの取り決めに直接的な影響を与える。"
+    },
+    {
+      "key": "watch",
+      "start": 127.088,
+      "end": 150.1,
+      "text": "フォローアップでは、関連するEUツールがどのように実施されるか、また中国に関連した貿易協定が重要な問題となるかどうかを観察する予定である。"
     }
   ],
   "semanticUnits": [
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 2.511,
-      "end": 2.851,
-      "pause": 0.34,
-      "intendedPause": 0.34,
-      "reason": "punctuation-semantic",
-      "text": "マーケット・経済："
-    },
-    {
-      "parentKey": "title",
-      "start": 2.851,
-      "speechEnd": 6.059,
-      "end": 6.92,
-      "pause": 0.861,
+      "speechEnd": 6.34,
+      "end": 7.2,
+      "pause": 0.86,
       "intendedPause": 0.86,
       "reason": "punctuation-sentence",
-      "text": "最新確認済みニュース。"
+      "text": "フランスとドイツは迅速なEU貿易対応メカニズムを推進。"
     },
     {
       "parentKey": "dek",
-      "start": 6.92,
-      "speechEnd": 13.755,
-      "end": 14.616,
-      "pause": 0.861,
-      "intendedPause": 0.86,
-      "reason": "punctuation-sentence",
-      "text": "出典で確認済みの最新情報を先行掲載しています。"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 14.616,
-      "speechEnd": 17.894,
-      "end": 18.174,
+      "start": 7.2,
+      "speechEnd": 13.053,
+      "end": 13.333,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "記事に記載した出典で、"
+      "text": "EUは中国を含む貿易リスクに焦点を当て、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.333,
+      "speechEnd": 20.857,
+      "end": 21.718,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "迅速に対応する貿易ツールの推進を加速していると報じられている。"
     },
     {
       "parentKey": "body-0",
-      "start": 18.174,
-      "speechEnd": 23.754,
-      "end": 24.374,
-      "pause": 0.621,
+      "start": 21.718,
+      "speechEnd": 25.34,
+      "end": 25.621,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "フランスとドイツはEUに対し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 25.621,
+      "speechEnd": 28.616,
+      "end": 28.896,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "貿易混乱に対処し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 28.896,
+      "speechEnd": 33.913,
+      "end": 34.253,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "中国関連のリスクに焦点を当てるため"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.253,
+      "speechEnd": 41.986,
+      "end": 42.607,
+      "pause": 0.62,
       "intendedPause": 0.62,
       "reason": "punctuation-sentence",
-      "text": "この分類の最新ニュースを確認しました。"
+      "text": "の迅速な対応貿易手段の確立を求めていると報じられている。"
     },
     {
       "parentKey": "body-0",
-      "start": 24.374,
-      "speechEnd": 32.395,
-      "end": 33.176,
-      "pause": 0.781,
+      "start": 42.607,
+      "speechEnd": 44.766,
+      "end": 45.046,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "報告書は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.046,
+      "speechEnd": 58.005,
+      "end": 58.786,
+      "pause": 0.78,
       "intendedPause": 0.78,
       "reason": "punctuation-sentence",
-      "text": "完全な日本語本文は自動復旧処理で順次更新します。"
+      "text": "この動きを地政学的緊張に直接関係する欧州政策分野における特定の取り組みであると説明している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 58.786,
+      "speechEnd": 61.433,
+      "end": 61.713,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "関連メカニズムは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 61.713,
+      "speechEnd": 71.258,
+      "end": 71.538,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "貿易混乱への対応に焦点を当てた当面の政策展開とみなされており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 71.538,
+      "speechEnd": 78.575,
+      "end": 79.195,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "中国関連のリスクが主要な考慮事項として挙げられている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 79.195,
+      "speechEnd": 81.285,
+      "end": 81.565,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "記事は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 81.565,
+      "speechEnd": 89.299,
+      "end": 89.579,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この動きには明らかに商業的かつ戦略的な意味があり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 89.579,
+      "speechEnd": 95.153,
+      "end": 95.493,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "EUによる貿易安全保障の展開の加速を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 95.493,
+      "speechEnd": 98.837,
+      "end": 99.617,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "反映していると指摘した。"
+    },
+    {
+      "parentKey": "why",
+      "start": 99.617,
+      "speechEnd": 103.589,
+      "end": 104.209,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 104.209,
+      "speechEnd": 106.647,
+      "end": 106.927,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この取り組みは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 106.927,
+      "speechEnd": 117.239,
+      "end": 117.519,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "貿易ショックや地政学リスクに直面したEUの政策対応の加速を反映しており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 117.519,
+      "speechEnd": 126.228,
+      "end": 127.088,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "国際的なビジネスやサプライチェーンの取り決めに直接的な影響を与える。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 127.088,
+      "speechEnd": 129.178,
+      "end": 129.458,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 129.458,
+      "speechEnd": 132.106,
+      "end": 132.386,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "フォローアップでは、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 132.386,
+      "speechEnd": 138.029,
+      "end": 138.309,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "関連するEUツールがどのように実施されるか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 138.309,
+      "speechEnd": 142.699,
+      "end": 143.039,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "また中国に関連した貿易協定が"
+    },
+    {
+      "parentKey": "watch",
+      "start": 143.039,
+      "speechEnd": 149.239,
+      "end": 150.1,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "重要な問題となるかどうかを観察する予定である。"
     }
   ]
 }

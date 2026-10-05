@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 32.888,
+  "duration": 133.904,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 340.0,
-  "characters": 88,
-  "charactersPerMinute": 160.5,
+  "characters": 448,
+  "charactersPerMinute": 200.7,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.18,
@@ -21,82 +21,270 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 6.64,
-      "text": "漫画・アニメ：最新確認済みニュース"
+      "end": 9.222,
+      "text": "満州アエンス分隊アニメーションアダプテーションリブート新プロダクションシステム"
     },
     {
       "key": "dek",
-      "start": 6.64,
-      "end": 14.333,
-      "text": "出典で確認済みの最新情報を先行掲載しています。"
+      "start": 9.222,
+      "end": 23.045,
+      "text": "日本のマスコミによると、漫画「満州あえんす班」は新たな制作体制で再開されるという。"
     },
     {
       "key": "body-0",
-      "start": 14.333,
-      "end": 32.888,
-      "text": "記事に記載した出典で、この分類の最新ニュースを確認しました。完全な日本語本文は自動復旧処理で順次更新します。"
+      "start": 23.045,
+      "end": 64.233,
+      "text": "日本のエンターテイメントメディアによると、漫画「万寿あえんす班」がアニメーション化され、オリジナルの画家が亡くなった後、新しい制作構造に従ってプロジェクトが再開されると報じられた。報告によると、これは特定のアニメーション制作のアップデートであり、一般的なプロモーションやルーチンイベントではありません。"
+    },
+    {
+      "key": "body-1",
+      "start": 64.233,
+      "end": 92.117,
+      "text": "適応計画は、元の画家の死後の元の作品の再編成に基づいて、新しい制作システムで開始されると報告されています。これはまた、アニメーション制作の分野における明確な進歩と見なされています。"
+    },
+    {
+      "key": "why",
+      "start": 92.117,
+      "end": 117.362,
+      "text": "アニメーション適応の再開は、フォローアップ手配におけるオリジナルと制作チームの実際の調整を直接反映しており、アニメーション業界にとって具体的な進歩である。"
+    },
+    {
+      "key": "watch",
+      "start": 117.362,
+      "end": 133.904,
+      "text": "その後、新プロダクションシステムの下でのアニメーションプロジェクトの進捗とリリーススケジュールを観察します。"
     }
   ],
   "semanticUnits": [
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 2.231,
-      "end": 2.571,
-      "pause": 0.34,
-      "intendedPause": 0.34,
-      "reason": "punctuation-semantic",
-      "text": "漫画・アニメ："
-    },
-    {
-      "parentKey": "title",
-      "start": 2.571,
-      "speechEnd": 5.779,
-      "end": 6.64,
-      "pause": 0.861,
+      "speechEnd": 8.362,
+      "end": 9.222,
+      "pause": 0.86,
       "intendedPause": 0.86,
       "reason": "punctuation-sentence",
-      "text": "最新確認済みニュース。"
+      "text": "満州アエンス分隊アニメーションアダプテーションリブート新プロダクションシステム。"
     },
     {
       "parentKey": "dek",
-      "start": 6.64,
-      "speechEnd": 13.473,
-      "end": 14.333,
-      "pause": 0.861,
-      "intendedPause": 0.86,
-      "reason": "punctuation-sentence",
-      "text": "出典で確認済みの最新情報を先行掲載しています。"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 14.333,
-      "speechEnd": 17.61,
-      "end": 17.891,
+      "start": 9.222,
+      "speechEnd": 12.846,
+      "end": 13.126,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "記事に記載した出典で、"
+      "text": "日本のマスコミによると、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.126,
+      "speechEnd": 22.185,
+      "end": 23.045,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "漫画「満州あえんす班」は新たな制作体制で再開されるという。"
     },
     {
       "parentKey": "body-0",
-      "start": 17.891,
-      "speechEnd": 23.469,
-      "end": 24.089,
-      "pause": 0.621,
+      "start": 23.045,
+      "speechEnd": 27.365,
+      "end": 27.645,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本のエンターテイメントメディアによると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 27.645,
+      "speechEnd": 33.708,
+      "end": 33.988,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "漫画「万寿あえんす班」がアニメーション化され、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 33.988,
+      "speechEnd": 38.029,
+      "end": 38.31,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "オリジナルの画家が亡くなった後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.31,
+      "speechEnd": 43.118,
+      "end": 43.458,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "新しい制作構造に従ってプロジェクトが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.458,
+      "speechEnd": 46.872,
+      "end": 47.492,
+      "pause": 0.62,
       "intendedPause": 0.62,
       "reason": "punctuation-sentence",
-      "text": "この分類の最新ニュースを確認しました。"
+      "text": "再開されると報じられた。"
     },
     {
       "parentKey": "body-0",
-      "start": 24.089,
-      "speechEnd": 32.107,
-      "end": 32.888,
-      "pause": 0.781,
+      "start": 47.492,
+      "speechEnd": 49.862,
+      "end": 50.142,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "報告によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.142,
+      "speechEnd": 56.344,
+      "end": 56.624,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "これは特定のアニメーション制作のアップデートであり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.624,
+      "speechEnd": 63.453,
+      "end": 64.233,
+      "pause": 0.78,
       "intendedPause": 0.78,
       "reason": "punctuation-sentence",
-      "text": "完全な日本語本文は自動復旧処理で順次更新します。"
+      "text": "一般的なプロモーションやルーチンイベントではありません。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 64.233,
+      "speechEnd": 66.463,
+      "end": 66.743,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "適応計画は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 66.743,
+      "speechEnd": 73.641,
+      "end": 73.921,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "元の画家の死後の元の作品の再編成に基づいて、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 73.921,
+      "speechEnd": 80.402,
+      "end": 81.022,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "新しい制作システムで開始されると報告されています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 81.022,
+      "speechEnd": 83.252,
+      "end": 83.532,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "これはまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 83.532,
+      "speechEnd": 91.337,
+      "end": 92.117,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "アニメーション制作の分野における明確な進歩と見なされています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 92.117,
+      "speechEnd": 96.089,
+      "end": 96.709,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 96.709,
+      "speechEnd": 99.984,
+      "end": 100.264,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アニメーション適応の再開は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 100.264,
+      "speechEnd": 110.368,
+      "end": 110.648,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "フォローアップ手配におけるオリジナルと制作チームの実際の調整を直接反映しており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 110.648,
+      "speechEnd": 116.502,
+      "end": 117.362,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "アニメーション業界にとって具体的な進歩である。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 117.362,
+      "speechEnd": 119.452,
+      "end": 119.733,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 119.733,
+      "speechEnd": 121.823,
+      "end": 122.103,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "その後、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 122.103,
+      "speechEnd": 133.043,
+      "end": 133.904,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "新プロダクションシステムの下でのアニメーションプロジェクトの進捗とリリーススケジュールを観察します。"
     }
   ]
 }

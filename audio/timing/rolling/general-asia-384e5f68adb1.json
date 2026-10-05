@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 32.758,
+  "duration": 139.755,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 340.0,
-  "characters": 86,
-  "charactersPerMinute": 157.5,
+  "characters": 403,
+  "charactersPerMinute": 173.0,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.18,
@@ -21,82 +21,240 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 6.502,
-      "text": "アジア：最新確認済みニュース"
+      "end": 9.57,
+      "text": "マンダレー海峡に近づいているイエメン政府軍が紅海の航路に影響"
     },
     {
       "key": "dek",
-      "start": 6.502,
-      "end": 14.198,
-      "text": "出典で確認済みの最新情報を先行掲載しています。"
+      "start": 9.57,
+      "end": 26.458,
+      "text": "政府軍はマンダレー海峡付近を前進し、戦闘が重要な海上レーンと地域の安全に影響を与えたと報告した。"
     },
     {
       "key": "body-0",
-      "start": 14.198,
-      "end": 32.758,
-      "text": "記事に記載した出典で、この分類の最新ニュースを確認しました。完全な日本語本文は自動復旧処理で順次更新します。"
+      "start": 26.458,
+      "end": 64.306,
+      "text": "イエメン政府軍は、マンダレー海峡近くのフーシ派に向かって進軍する際に、この重要な海上の喉を効果的に制御したと伝えられている。報告書によると、この戦闘は紅海航路と地域の安全保障に影響を与えており、戦闘の焦点は海峡の入り口にあったという。"
+    },
+    {
+      "key": "body-1",
+      "start": 64.306,
+      "end": 96.647,
+      "text": "現場の状況は、政府軍が主要な海運回廊に焦点を当ててフーシ派の陣地に近づいているイエメンの紛争における主要な戦略的変化と説明されている。報告によると、戦闘は紅海の輸送路と地域の安全に影響を及ぼしています。"
+    },
+    {
+      "key": "why",
+      "start": 96.647,
+      "end": 129.766,
+      "text": "マンダレー海峡は重要な海上通路であり、この地域における政府軍の前進は、重要な海運と戦略的深さにおける戦争の重心を表しており、地域の安全保障に直接的な影響を与えています。"
+    },
+    {
+      "key": "watch",
+      "start": 129.766,
+      "end": 139.755,
+      "text": "地域の軍事力学と紅海水路の通過に従います。"
     }
   ],
   "semanticUnits": [
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 2.092,
-      "end": 2.433,
-      "pause": 0.34,
-      "intendedPause": 0.34,
-      "reason": "punctuation-semantic",
-      "text": "アジア："
-    },
-    {
-      "parentKey": "title",
-      "start": 2.433,
-      "speechEnd": 5.641,
-      "end": 6.502,
-      "pause": 0.861,
+      "speechEnd": 8.71,
+      "end": 9.57,
+      "pause": 0.86,
       "intendedPause": 0.86,
       "reason": "punctuation-sentence",
-      "text": "最新確認済みニュース。"
+      "text": "マンダレー海峡に近づいているイエメン政府軍が紅海の航路に影響。"
     },
     {
       "parentKey": "dek",
-      "start": 6.502,
-      "speechEnd": 13.337,
-      "end": 14.198,
-      "pause": 0.861,
-      "intendedPause": 0.86,
-      "reason": "punctuation-sentence",
-      "text": "出典で確認済みの最新情報を先行掲載しています。"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 14.198,
-      "speechEnd": 17.476,
-      "end": 17.756,
+      "start": 9.57,
+      "speechEnd": 15.981,
+      "end": 16.261,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "punctuation-comma",
-      "text": "記事に記載した出典で、"
+      "text": "政府軍はマンダレー海峡付近を前進し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.261,
+      "speechEnd": 25.598,
+      "end": 26.458,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "戦闘が重要な海上レーンと地域の安全に影響を与えたと報告した。"
     },
     {
       "parentKey": "body-0",
-      "start": 17.756,
-      "speechEnd": 23.335,
-      "end": 23.956,
-      "pause": 0.621,
+      "start": 26.458,
+      "speechEnd": 29.245,
+      "end": 29.525,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イエメン政府軍は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 29.525,
+      "speechEnd": 36.563,
+      "end": 36.843,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マンダレー海峡近くのフーシ派に向かって進軍する際に、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.843,
+      "speechEnd": 44.717,
+      "end": 45.337,
+      "pause": 0.62,
       "intendedPause": 0.62,
       "reason": "punctuation-sentence",
-      "text": "この分類の最新ニュースを確認しました。"
+      "text": "この重要な海上の喉を効果的に制御したと伝えられている。"
     },
     {
       "parentKey": "body-0",
-      "start": 23.956,
-      "speechEnd": 31.977,
-      "end": 32.758,
-      "pause": 0.781,
+      "start": 45.337,
+      "speechEnd": 47.915,
+      "end": 48.195,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "報告書によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.195,
+      "speechEnd": 57.253,
+      "end": 57.533,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この戦闘は紅海航路と地域の安全保障に影響を与えており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.533,
+      "speechEnd": 63.526,
+      "end": 64.306,
+      "pause": 0.78,
       "intendedPause": 0.78,
       "reason": "punctuation-sentence",
-      "text": "完全な日本語本文は自動復旧処理で順次更新します。"
+      "text": "戦闘の焦点は海峡の入り口にあったという。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 64.306,
+      "speechEnd": 66.745,
+      "end": 67.025,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "現場の状況は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 67.025,
+      "speechEnd": 84.236,
+      "end": 84.856,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "政府軍が主要な海運回廊に焦点を当ててフーシ派の陣地に近づいているイエメンの紛争における主要な戦略的変化と説明されている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.856,
+      "speechEnd": 87.225,
+      "end": 87.505,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "報告によると、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 87.505,
+      "speechEnd": 95.866,
+      "end": 96.647,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "戦闘は紅海の輸送路と地域の安全に影響を及ぼしています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 96.647,
+      "speechEnd": 100.618,
+      "end": 101.239,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 101.239,
+      "speechEnd": 107.44,
+      "end": 107.72,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マンダレー海峡は重要な海上通路であり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 107.72,
+      "speechEnd": 112.946,
+      "end": 113.226,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この地域における政府軍の前進は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 113.226,
+      "speechEnd": 121.866,
+      "end": 122.146,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "重要な海運と戦略的深さにおける戦争の重心を表しており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 122.146,
+      "speechEnd": 128.905,
+      "end": 129.766,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "地域の安全保障に直接的な影響を与えています。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 129.766,
+      "speechEnd": 131.856,
+      "end": 132.136,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 132.136,
+      "speechEnd": 138.895,
+      "end": 139.755,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "地域の軍事力学と紅海水路の通過に従います。"
     }
   ]
 }
