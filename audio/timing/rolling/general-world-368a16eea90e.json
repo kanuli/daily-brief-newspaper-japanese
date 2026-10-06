@@ -1,0 +1,350 @@
+{
+  "version": 3,
+  "duration": 173.845,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 528,
+  "charactersPerMinute": 182.2,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 12.837,
+      "text": "タジキスタン、イラン産石油製品の輸入を拡大ロシアは依然として主要供給国"
+    },
+    {
+      "key": "dek",
+      "start": 12.837,
+      "end": 30.838,
+      "text": "タジキスタンは8月下旬からイランから石油と石油製品を輸入しており、8月15日のテヘラン会談直後に納入が開始された。"
+    },
+    {
+      "key": "body-0",
+      "start": 30.838,
+      "end": 78.0,
+      "text": "タジキスタンのエネルギー・水資源省によると、タジキスタンは8月下旬からイランから石油と石油製品の輸入を開始し、8月15日にテヘランでタジキスタンとイランのエネルギー当局者が会談した直後に引き渡しが開始されたという。公式データは、これがタジキスタンの最近のエネルギー供給源の拡大における明確な進歩を示していることを示している。"
+    },
+    {
+      "key": "body-1",
+      "start": 78.0,
+      "end": 122.185,
+      "text": "タジキスタンの公式データによると、ロシアは2026年上半期にタジキスタンに599,500トンの石油製品を供給し、同国の輸入総額の91.1 ％を占めている。イランの供給品の到着により、タジクの石油製品の輸入は拡大しており、これまでロシアが支配していた供給パターンとは対照的である。"
+    },
+    {
+      "key": "why",
+      "start": 122.185,
+      "end": 154.597,
+      "text": "この変更は、タジキスタンが石油製品の輸入源を拡大しており、以前はロシアが主な供給国であったことを反映している。公式の数字は、供給構造の具体的で明確な変化を示しています。"
+    },
+    {
+      "key": "watch",
+      "start": 154.597,
+      "end": 173.845,
+      "text": "タジキスタンのその後のイラン供給のペースと、ロシアの石油製品輸入の割合がさらに変化したかどうかを観察してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.229,
+      "end": 2.51,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "タジキスタン、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.51,
+      "speechEnd": 8.153,
+      "end": 8.493,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "イラン産石油製品の輸入を拡大ロシアは"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.493,
+      "speechEnd": 11.977,
+      "end": 12.837,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "依然として主要供給国。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.837,
+      "speechEnd": 22.242,
+      "end": 22.523,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "タジキスタンは8月下旬からイランから石油と石油製品を輸入しており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.523,
+      "speechEnd": 29.977,
+      "end": 30.838,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "8月15日のテヘラン会談直後に納入が開始された。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 30.838,
+      "speechEnd": 36.133,
+      "end": 36.413,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "タジキスタンのエネルギー・水資源省によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.413,
+      "speechEnd": 46.167,
+      "end": 46.447,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "タジキスタンは8月下旬からイランから石油と石油製品の輸入を開始し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.447,
+      "speechEnd": 54.529,
+      "end": 54.869,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "8月15日にテヘランでタジキスタンとイランのエネルギー当局者が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.869,
+      "speechEnd": 60.582,
+      "end": 61.202,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "会談した直後に引き渡しが開始されたという。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.202,
+      "speechEnd": 63.571,
+      "end": 63.851,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "公式データは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.851,
+      "speechEnd": 73.466,
+      "end": 73.806,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "これがタジキスタンの最近のエネルギー供給源の拡大における明確な進歩を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.806,
+      "speechEnd": 77.22,
+      "end": 78.0,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "示していることを示している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 78.0,
+      "speechEnd": 82.18,
+      "end": 82.46,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "タジキスタンの公式データによると、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.46,
+      "speechEnd": 90.403,
+      "end": 90.683,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロシアは2026年上半期にタジキスタンに599,"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.683,
+      "speechEnd": 95.56,
+      "end": 95.84,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "500トンの石油製品を供給し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 95.84,
+      "speechEnd": 102.528,
+      "end": 103.148,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "同国の輸入総額の91.1 ％を占めている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.148,
+      "speechEnd": 107.05,
+      "end": 107.33,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イランの供給品の到着により、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.33,
+      "speechEnd": 113.182,
+      "end": 113.463,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "タジクの石油製品の輸入は拡大しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 113.463,
+      "speechEnd": 121.405,
+      "end": 122.185,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "これまでロシアが支配していた供給パターンとは対照的である。"
+    },
+    {
+      "parentKey": "why",
+      "start": 122.185,
+      "speechEnd": 126.157,
+      "end": 126.777,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 126.777,
+      "speechEnd": 129.215,
+      "end": 129.495,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この変更は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 129.495,
+      "speechEnd": 136.114,
+      "end": 136.394,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "タジキスタンが石油製品の輸入源を拡大しており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 136.394,
+      "speechEnd": 143.919,
+      "end": 144.539,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "以前はロシアが主な供給国であったことを反映している。"
+    },
+    {
+      "parentKey": "why",
+      "start": 144.539,
+      "speechEnd": 147.256,
+      "end": 147.536,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "公式の数字は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 147.536,
+      "speechEnd": 153.737,
+      "end": 154.597,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "供給構造の具体的で明確な変化を示しています。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 154.597,
+      "speechEnd": 156.687,
+      "end": 156.967,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 156.967,
+      "speechEnd": 162.193,
+      "end": 162.473,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "タジキスタンのその後のイラン供給のペースと、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 162.473,
+      "speechEnd": 167.141,
+      "end": 167.481,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ロシアの石油製品輸入の割合が"
+    },
+    {
+      "parentKey": "watch",
+      "start": 167.481,
+      "speechEnd": 172.985,
+      "end": 173.845,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "さらに変化したかどうかを観察してください。"
+    }
+  ]
+}
