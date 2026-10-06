@@ -22,7 +22,7 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 35
     continue-on-error: true
     outputs:
       core_ok: ${{ steps.core_status.outputs.ok }}
