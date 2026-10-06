@@ -77,6 +77,36 @@ jobs:
           EXTRA_VALIDATE_SCOPE: desk
         run: python scripts/validate_extra_layers.py
 
+
+      - name: Reject degraded desk translation before publication
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          BAD={'EDITORIAL_MINIMUM_FALLBACK','TRANSLATION_FAILED','TRANSLATION_DEGRADED'}
+          def stories(v):
+              if isinstance(v, dict):
+                  if v.get('id') and (v.get('title') or v.get('summary') or v.get('body')): yield v
+                  for x in v.values(): yield from stories(x)
+              elif isinstance(v, list):
+                  for x in v: yield from stories(x)
+          data=json.loads(Path('data/desk-latest.json').read_text(encoding='utf-8'))
+          failures=[]
+          if data.get('translationDegraded'): failures.append('translationDegraded=true')
+          if int(data.get('translationDeferredCount') or 0)>0:
+              failures.append(f"translationDeferredCount={data.get('translationDeferredCount')}")
+          for item in stories(data):
+              status=str(item.get('translationStatus') or '').strip().upper()
+              if status in BAD: failures.append(f"{item.get('id')}:{status}")
+          if failures:
+              print('ROLLING_PRIMARY_DEGRADED_DESK_REJECT')
+              for failure in failures[:50]: print(' -', failure)
+              raise SystemExit(1)
+          print('ROLLING_PRIMARY_DESK_CLEAN')
+          PY
+
       - name: Enforce one current story for every source-backed desk
         shell: bash
         run: |
@@ -159,6 +189,38 @@ jobs:
         env:
           EXTRA_VALIDATE_SCOPE: remaining
         run: python scripts/validate_extra_layers.py
+
+
+      - name: Reject degraded stocks/topic translation before publication
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          BAD={'EDITORIAL_MINIMUM_FALLBACK','TRANSLATION_FAILED','TRANSLATION_DEGRADED'}
+          def stories(v):
+              if isinstance(v, dict):
+                  if v.get('id') and (v.get('title') or v.get('summary') or v.get('body')): yield v
+                  for x in v.values(): yield from stories(x)
+              elif isinstance(v, list):
+                  for x in v: yield from stories(x)
+          failures=[]
+          for path in [Path('data/stocks-latest.json'), *sorted(Path('data/topic-more').glob('*.json'))[-1:]]:
+              if not path.exists(): continue
+              data=json.loads(path.read_text(encoding='utf-8'))
+              if data.get('translationDegraded'): failures.append(f'{path}:translationDegraded=true')
+              if int(data.get('translationDeferredCount') or 0)>0:
+                  failures.append(f'{path}:translationDeferredCount={data.get("translationDeferredCount")}')
+              for item in stories(data):
+                  status=str(item.get('translationStatus') or '').strip().upper()
+                  if status in BAD: failures.append(f'{path}:{item.get("id")}:{status}')
+          if failures:
+              print('ROLLING_PRIMARY_DEGRADED_REMAINING_REJECT')
+              for failure in failures[:50]: print(' -', failure)
+              raise SystemExit(1)
+          print('ROLLING_PRIMARY_REMAINING_CLEAN')
+          PY
 
       - name: Publish stocks and topic minimum edition
         shell: bash
