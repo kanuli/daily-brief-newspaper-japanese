@@ -1,6 +1,6 @@
 {
   "version": 6,
-  "assessedAt": "2026-10-06T15:01:57.294Z",
+  "assessedAt": "2026-10-06T15:02:14.930Z",
   "state": "RED",
   "summary": "NOT_GREEN:daily-date-lag upstream=2026-10-06 japanese=2026-10-01 | live-lag-minutes=865 | desk-lag-minutes=113 | desk-translation-degraded | stocks-relative-lag-minutes=11803 | nas-delivery-fingerprint=2026-10-01|2026-10-05T22:12:00.000Z|2026-10-06T10:44:00.000Z|2026-09-28T09:58:01.264Z",
   "faultReasons": [
@@ -96,8 +96,8 @@
         "dispatched": false,
         "active": false,
         "reason": "writer-active",
-        "blockerWorkflow": "repair-extra-translation-quality.yml",
-        "blockerRunId": 37483904636,
+        "blockerWorkflow": "sync-japanese-news.yml",
+        "blockerRunId": 37482443593,
         "primaryRunId": 37483165621
       }
     ]
@@ -111,7 +111,7 @@
   },
   "robot": {
     "current": true,
-    "runId": 37483908743,
+    "runId": 37483931332,
     "event": "workflow_run",
     "role": "nas-attestation-recorder",
     "executor": "github-subordinate-workers",
