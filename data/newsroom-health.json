@@ -1,31 +1,53 @@
 {
   "version": 6,
-  "assessedAt": "2026-10-05T18:42:08.326Z",
-  "state": "GREEN",
-  "summary": "ALL_REQUIRED_NEWS_LAYERS_AND_DELIVERY_VERIFIED_BY_NAS",
+  "assessedAt": "2026-10-06T12:48:30.892Z",
+  "state": "RED",
+  "summary": "NOT_GREEN:daily-date-lag upstream=2026-10-06 japanese=2026-10-01 | live-lag-minutes=865 | desk-translation-degraded | stocks-relative-lag-minutes=11662 | nas-delivery-fingerprint=2026-10-01|2026-10-05T22:12:00.000Z|2026-10-06T10:44:00.000Z|2026-09-28T09:58:01.264Z",
+  "faultReasons": [
+    "daily-date-lag upstream=2026-10-06 japanese=2026-10-01",
+    "live-lag-minutes=865",
+    "desk-translation-degraded",
+    "stocks-relative-lag-minutes=11662",
+    "nas-delivery-fingerprint=2026-10-01|2026-10-05T22:12:00.000Z|2026-10-06T10:44:00.000Z|2026-09-28T09:58:01.264Z"
+  ],
   "layers": {
     "daily": {
-      "current": true,
-      "upstream": "2026-10-01",
-      "japanese": "2026-10-01"
+      "current": false,
+      "upstream": "2026-10-06",
+      "japanese": "2026-10-01",
+      "degradedTranslation": false
     },
     "live": {
-      "current": true,
-      "upstream": "2026-10-01T07:00:00+08:00",
-      "japanese": "2026-10-01T07:00:00+08:00",
-      "lagMinutes": 0
+      "current": false,
+      "degradedTranslation": false,
+      "upstream": "2026-10-06T20:37:00+08:00",
+      "japanese": "2026-10-06T06:12:00+08:00",
+      "lagMinutes": 865
     },
     "desk": {
-      "current": true,
-      "upstream": "2026-10-01T07:00:00+08:00",
-      "japanese": "2026-10-01T07:00:00+08:00",
+      "current": false,
+      "degradedTranslation": true,
+      "upstream": "2026-10-06T18:44:00+08:00",
+      "japanese": "2026-10-06T18:44:00+08:00",
       "lagMinutes": 0
     },
     "stocks": {
-      "current": true,
-      "upstream": "2026-09-28T09:58:01.264563+00:00",
+      "current": false,
+      "degradedTranslation": false,
+      "upstream": "2026-10-06T12:20:04.500181+00:00",
       "japanese": "2026-09-28T09:58:01.264563+00:00",
-      "lagMinutes": 0
+      "lagMinutes": 11662,
+      "relativeCurrent": false,
+      "sourceAbsoluteFresh": true,
+      "sourceAgeMinutes": 28,
+      "maxAgeHours": 96
+    },
+    "vocab": {
+      "current": true,
+      "expectedHktDate": "2026-10-06",
+      "upstream": "2026-10-06",
+      "japanese": "2026-10-06",
+      "datedArchivePresent": true
     },
     "structural": {
       "current": true,
@@ -33,30 +55,32 @@
       "pagesChecked": 13
     },
     "delivery": {
-      "current": true,
+      "current": false,
       "required": true,
       "owner": "NAS Editor-in-Chief",
       "verifies": [
         "github-f3",
         "github-pages"
       ],
-      "publicationFingerprint": "2026-10-01|2026-09-30T23:00:00.000Z|2026-09-30T23:00:00.000Z|2026-09-28T09:58:01.264Z",
-      "attestedFingerprint": "2026-10-01|2026-09-30T23:00:00.000Z|2026-09-30T23:00:00.000Z|2026-09-28T09:58:01.264Z",
-      "attestedAt": "2026-10-05T18:41:56Z"
+      "publicationFingerprint": "2026-10-01|2026-10-05T22:12:00.000Z|2026-10-06T10:44:00.000Z|2026-09-28T09:58:01.264Z",
+      "attestedFingerprint": null,
+      "attestedAt": null
     }
   },
   "recovery": {
-    "coreRequired": false,
-    "rollingRequired": false,
+    "coreRequired": true,
+    "rollingRequired": true,
+    "upstreamStockRequired": false,
+    "vocabRequired": false,
     "structuralRequired": false
   },
   "maintenance": {
     "owner": "Editor-in-Chief",
     "executor": "Maintenance Robot",
-    "incidentKey": "healthy",
+    "incidentKey": "daily@2026-10-06|live@2026-10-06T12:37:00.000Z|desk@translation-degraded|stocks@2026-10-06T12:20:04.500Z|nas-delivery@2026-10-01|2026-10-05T22:12:00.000Z|2026-10-06T10:44:00.000Z|2026-09-28T09:58:01.264Z",
     "sourceVersionBound": true,
-    "status": "resolved",
-    "decision": "NO_REPAIR_REQUIRED",
+    "status": "awaiting-nas-repair-dispatch",
+    "decision": "NAS_CONTROLLER_MUST_DISPATCH_REPAIR",
     "attempts": 0,
     "lastAttemptAt": null,
     "nextEligibleAt": null,
@@ -75,8 +99,8 @@
   },
   "robot": {
     "current": true,
-    "runId": 37357911708,
-    "event": "workflow_dispatch",
+    "runId": 37465944441,
+    "event": "workflow_run",
     "role": "nas-attestation-recorder",
     "executor": "github-subordinate-workers",
     "selfHealingLoop": false
@@ -95,6 +119,10 @@
     "archiveBackfillAllowed": false,
     "recoveryCompletionAlwaysRechecked": true,
     "upstreamReadFailureDoesNotAuthorizeMutation": true,
-    "greenRequiresFreshNasDeliveryAttestation": true
+    "greenRequiresFreshNasDeliveryAttestation": true,
+    "stockAbsoluteFreshnessHours": 96,
+    "vocabCurrentHktDateRequired": true,
+    "vocabDatedArchiveRequired": true,
+    "vocabSelfHealingWorkflow": "sync-daily-vocab.yml"
   }
 }
