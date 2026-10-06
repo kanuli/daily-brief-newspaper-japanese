@@ -16,7 +16,7 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Dict, Optional, Set, Tuple
 
@@ -47,18 +47,26 @@ STATE_PATH = Path(
 LAYERS = ("latest.json", "live.json", "desk-latest.json", "stocks-latest.json")
 ROBOTS = {
     "core-translator": "sync-japanese-news.yml",
+    "core-exhaustive-recovery": "recover-core-news.yml",
     "rolling-translator": "repair-extra-translation-quality.yml",
     "rolling-exhaustive-recovery": "repair-all-published-quality.yml",
+    "vocab-translator": "sync-daily-vocab.yml",
+    "vocab-exhaustive-recovery": "recover-daily-vocab.yml",
     "f3-voice": "rebuild-f3-pacing.yml",
     "pages-publisher": "pages.yml",
     "delivery-auditor": "editor-in-chief-newsroom-robot.yml",
 }
 MUTATING_ROBOTS = (
     "core-translator",
+    "core-exhaustive-recovery",
     "rolling-translator",
     "rolling-exhaustive-recovery",
+    "vocab-translator",
+    "vocab-exhaustive-recovery",
     "f3-voice",
 )
+STOCK_MAX_AGE_SECONDS = max(3600, int(os.getenv("STOCK_MAX_AGE_SECONDS", str(6 * 3600))))
+HKT = timezone(timedelta(hours=8))
 
 
 def request(url: str, *, method: str = "GET", payload: Optional[dict] = None) -> bytes:
@@ -107,14 +115,16 @@ def iso_millis(value: Optional[datetime]) -> str:
     return value.astimezone(timezone.utc).isoformat(timespec="milliseconds").replace("+00:00", "Z")
 
 
-def publication_fingerprint(layers: Dict[str, dict]) -> str:
+def publication_fingerprint(layers: Dict[str, dict], vocab: Optional[dict] = None) -> str:
     daily = str(layers["latest.json"].get("date") or "")[:10] or "missing"
+    vocab_day = str((vocab or {}).get("date") or "")[:10] or "missing"
     return "|".join(
         (
             daily,
             iso_millis(parse_stamp(layers["live.json"])),
             iso_millis(parse_stamp(layers["desk-latest.json"])),
             iso_millis(parse_stamp(layers["stocks-latest.json"])),
+            vocab_day,
         )
     )
 
@@ -123,6 +133,35 @@ def current(source: dict, japanese: dict, tolerance_seconds: int) -> bool:
     source_stamp = parse_stamp(source)
     japanese_stamp = parse_stamp(japanese)
     return bool(source_stamp and japanese_stamp and japanese_stamp.timestamp() + tolerance_seconds >= source_stamp.timestamp())
+
+
+def absolute_fresh(payload: dict, max_age_seconds: int) -> bool:
+    stamp = parse_stamp(payload)
+    if stamp is None:
+        return False
+    age = (datetime.now(timezone.utc) - stamp).total_seconds()
+    return 0 <= age <= max_age_seconds
+
+
+def hkt_today() -> str:
+    return datetime.now(HKT).date().isoformat()
+
+
+def translation_reasons(label: str, payload: dict) -> list:
+    reasons = []
+    if bool(payload.get("translationDegraded")):
+        reasons.append(f"{label}:translationDegraded=true")
+    deferred = int(payload.get("translationDeferredCount") or 0)
+    if deferred > 0:
+        reasons.append(f"{label}:translationDeferredCount={deferred}")
+    bad = {"EDITORIAL_MINIMUM_FALLBACK", "TRANSLATION_FAILED", "TRANSLATION_DEGRADED"}
+    for story in iter_stories(payload):
+        status = str(story.get("translationStatus") or "").strip().upper()
+        if status in bad:
+            reasons.append(f"{label}:{story.get('id')}:translationStatus={status}")
+            if len(reasons) >= 12:
+                break
+    return reasons
 
 
 def workflow_runs(workflow: str) -> list:
@@ -285,12 +324,29 @@ def verify_pages(layers: Dict[str, dict]) -> list:
     return failures
 
 
+def choose_alternate_robot(primary: str, fallback: str) -> str:
+    """Alternate after a completed attempt; verification, not workflow success, is authoritative."""
+    primary_run = latest_completed_run(ROBOTS[primary])
+    fallback_run = latest_completed_run(ROBOTS[fallback])
+    if primary_run is None:
+        return primary
+    if fallback_run is None:
+        return fallback
+    primary_at = str(primary_run.get("updated_at") or primary_run.get("created_at") or "")
+    fallback_at = str(fallback_run.get("updated_at") or fallback_run.get("created_at") or "")
+    return fallback if primary_at >= fallback_at else primary
+
+
+def choose_core_robot() -> str:
+    return choose_alternate_robot("core-translator", "core-exhaustive-recovery")
+
+
 def choose_rolling_robot() -> str:
-    """Use the exhaustive repair path after a failed primary rolling run."""
-    latest = latest_completed_run(ROBOTS["rolling-translator"])
-    if latest and latest.get("conclusion") not in {"success", "neutral", "skipped"}:
-        return "rolling-exhaustive-recovery"
-    return "rolling-translator"
+    return choose_alternate_robot("rolling-translator", "rolling-exhaustive-recovery")
+
+
+def choose_vocab_robot() -> str:
+    return choose_alternate_robot("vocab-translator", "vocab-exhaustive-recovery")
 
 
 def main() -> int:
@@ -301,39 +357,101 @@ def main() -> int:
     state = load_state()
     upstream = {name: load_json(UPSTREAM, name) for name in LAYERS}
     japanese = {name: load_json(JAPANESE, name) for name in LAYERS}
+    upstream_vocab = load_json(UPSTREAM, "vocab/latest.json")
+    japanese_vocab = load_json(JAPANESE, "vocab/latest.json")
+    today = hkt_today()
 
-    core_stale = (
-        str(japanese["latest.json"].get("date") or "")[:10]
-        < str(upstream["latest.json"].get("date") or "")[:10]
-        or not current(upstream["live.json"], japanese["live.json"], 60)
-        or degraded_translation(japanese["latest.json"])
-        or degraded_translation(japanese["live.json"])
-    )
-    rolling_stale = (
-        not current(upstream["desk-latest.json"], japanese["desk-latest.json"], 60)
-        or not current(upstream["stocks-latest.json"], japanese["stocks-latest.json"], 60)
-        or degraded_translation(japanese["desk-latest.json"])
-        or degraded_translation(japanese["stocks-latest.json"])
-    )
+    core_reasons = []
+    upstream_daily = str(upstream["latest.json"].get("date") or "")[:10]
+    japanese_daily = str(japanese["latest.json"].get("date") or "")[:10]
+    if japanese_daily < upstream_daily:
+        core_reasons.append(f"latest-date-stale:upstream={upstream_daily}:japanese={japanese_daily}")
+    if not current(upstream["live.json"], japanese["live.json"], 60):
+        core_reasons.append(
+            "live-stale:"
+            f"upstream={iso_millis(parse_stamp(upstream['live.json']))}:"
+            f"japanese={iso_millis(parse_stamp(japanese['live.json']))}"
+        )
+    core_reasons.extend(translation_reasons("latest.json", japanese["latest.json"]))
+    core_reasons.extend(translation_reasons("live.json", japanese["live.json"]))
 
-    # Publication writers are deliberately serialized. The old design allowed
-    # translation/F3 commits to overwrite each other's data fields.
+    rolling_reasons = []
+    if not current(upstream["desk-latest.json"], japanese["desk-latest.json"], 60):
+        rolling_reasons.append(
+            "desk-stale:"
+            f"upstream={iso_millis(parse_stamp(upstream['desk-latest.json']))}:"
+            f"japanese={iso_millis(parse_stamp(japanese['desk-latest.json']))}"
+        )
+    if not current(upstream["stocks-latest.json"], japanese["stocks-latest.json"], 60):
+        rolling_reasons.append(
+            "stocks-relative-stale:"
+            f"upstream={iso_millis(parse_stamp(upstream['stocks-latest.json']))}:"
+            f"japanese={iso_millis(parse_stamp(japanese['stocks-latest.json']))}"
+        )
+    if not absolute_fresh(upstream["stocks-latest.json"], STOCK_MAX_AGE_SECONDS):
+        rolling_reasons.append(
+            "stocks-upstream-absolute-stale:"
+            f"stamp={iso_millis(parse_stamp(upstream['stocks-latest.json']))}:"
+            f"maxAgeSeconds={STOCK_MAX_AGE_SECONDS}"
+        )
+    if not absolute_fresh(japanese["stocks-latest.json"], STOCK_MAX_AGE_SECONDS):
+        rolling_reasons.append(
+            "stocks-japanese-absolute-stale:"
+            f"stamp={iso_millis(parse_stamp(japanese['stocks-latest.json']))}:"
+            f"maxAgeSeconds={STOCK_MAX_AGE_SECONDS}"
+        )
+    rolling_reasons.extend(translation_reasons("desk-latest.json", japanese["desk-latest.json"]))
+    rolling_reasons.extend(translation_reasons("stocks-latest.json", japanese["stocks-latest.json"]))
+
+    vocab_reasons = []
+    upstream_vocab_day = str(upstream_vocab.get("date") or "")[:10]
+    japanese_vocab_day = str(japanese_vocab.get("date") or "")[:10]
+    if upstream_vocab_day != today:
+        vocab_reasons.append(f"vocab-upstream-date-not-today:expected={today}:actual={upstream_vocab_day}")
+    if japanese_vocab_day != today:
+        vocab_reasons.append(f"vocab-latest-date-not-today:expected={today}:actual={japanese_vocab_day}")
+    if japanese_vocab_day < upstream_vocab_day:
+        vocab_reasons.append(f"vocab-relative-stale:upstream={upstream_vocab_day}:japanese={japanese_vocab_day}")
+    try:
+        archive_vocab = load_json(JAPANESE, f"vocab/{today}.json")
+        if str(archive_vocab.get("date") or "")[:10] != today:
+            vocab_reasons.append(f"vocab-dated-archive-invalid:{today}.json")
+    except (urllib.error.URLError, json.JSONDecodeError):
+        vocab_reasons.append(f"vocab-dated-archive-missing:{today}.json")
+
+    core_stale = bool(core_reasons)
+    rolling_stale = bool(rolling_reasons)
+    vocab_stale = bool(vocab_reasons)
+
+    # Publication writers are deliberately serialized. A stage is only verified
+    # from resulting data; completed workflow status alone never advances control.
     if core_stale:
-        robot = "core-translator"
-        assigned = dispatch_robot(robot, reason="core-stale-or-degraded", serialize_writers=True)
-        mark_job(state, "content-core", "assigned" if assigned else "waiting", reason="core-stale", robot=robot)
-        print(f"NAS_CONTROLLER_RED stage=content-core core_stale={core_stale} rolling_stale={rolling_stale}")
+        robot = choose_core_robot()
+        reason = ";".join(core_reasons[:12])
+        assigned = dispatch_robot(robot, reason=reason, serialize_writers=True)
+        mark_job(state, "content-core", "assigned" if assigned else "waiting", reason=reason, robot=robot)
+        print(f"NAS_CONTROLLER_RED stage=content-core robot={robot} reasons={reason}")
         return 1
 
     if rolling_stale:
         robot = choose_rolling_robot()
-        assigned = dispatch_robot(robot, reason="rolling-stale-or-degraded", serialize_writers=True)
-        mark_job(state, "content-rolling", "assigned" if assigned else "waiting", reason="rolling-stale", robot=robot)
-        print(f"NAS_CONTROLLER_RED stage=content-rolling robot={robot}")
+        reason = ";".join(rolling_reasons[:12])
+        assigned = dispatch_robot(robot, reason=reason, serialize_writers=True)
+        mark_job(state, "content-rolling", "assigned" if assigned else "waiting", reason=reason, robot=robot)
+        print(f"NAS_CONTROLLER_RED stage=content-rolling robot={robot} reasons={reason}")
         return 1
 
-    mark_job(state, "content-core", "verified", reason="source-current")
-    mark_job(state, "content-rolling", "verified", reason="source-current")
+    if vocab_stale:
+        robot = choose_vocab_robot()
+        reason = ";".join(vocab_reasons[:12])
+        assigned = dispatch_robot(robot, reason=reason, serialize_writers=True)
+        mark_job(state, "content-vocab", "assigned" if assigned else "waiting", reason=reason, robot=robot)
+        print(f"NAS_CONTROLLER_RED stage=content-vocab robot={robot} reasons={reason}")
+        return 1
+
+    mark_job(state, "content-core", "verified", reason="source-current-and-translation-clean")
+    mark_job(state, "content-rolling", "verified", reason="source-current-absolute-fresh-and-translation-clean")
+    mark_job(state, "content-vocab", "verified", reason=f"today={today}-latest-and-dated-archive-current")
 
     f3_failures = verify_main_f3(japanese)
     if f3_failures:
@@ -363,7 +481,7 @@ def main() -> int:
         return 1
     mark_job(state, "pages", "verified", reason="production-matches-main")
 
-    fingerprint = publication_fingerprint(japanese)
+    fingerprint = publication_fingerprint(japanese, japanese_vocab)
     try:
         health = load_json(JAPANESE, "newsroom-health.json")
     except (urllib.error.URLError, json.JSONDecodeError):
