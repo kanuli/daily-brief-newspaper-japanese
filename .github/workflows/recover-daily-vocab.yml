@@ -37,20 +37,6 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             if python scripts/sync_vocab_ja.py && python scripts/validate_vocab_quality.py; then
-              python - <<'PY'
-import json
-from datetime import datetime
-from pathlib import Path
-from zoneinfo import ZoneInfo
-today = datetime.now(ZoneInfo('Asia/Hong_Kong')).date().isoformat()
-latest = Path('data/vocab/latest.json')
-dated = Path('data/vocab') / f'{today}.json'
-data = json.loads(latest.read_text(encoding='utf-8'))
-assert data.get('date') == today, f"latest.date={data.get('date')} expected={today}"
-assert dated.exists(), f"missing {dated}"
-assert json.loads(dated.read_text(encoding='utf-8')) == data, 'dated archive differs from latest'
-print(f'VOCAB_EXHAUSTIVE_CURRENT_OK date={today}')
-PY
               echo "VOCAB_EXHAUSTIVE_RECOVERY_OK attempt=${attempt}"
               break
             fi
@@ -62,6 +48,26 @@ PY
             echo "VOCAB_EXHAUSTIVE_COOLDOWN delay=${delay}s"
             sleep "$delay"
           done
+
+      - name: Verify current HKT vocab and dated archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from datetime import datetime
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+
+          today = datetime.now(ZoneInfo('Asia/Hong_Kong')).date().isoformat()
+          latest = Path('data/vocab/latest.json')
+          dated = Path('data/vocab') / f'{today}.json'
+          data = json.loads(latest.read_text(encoding='utf-8'))
+          assert data.get('date') == today, f"latest.date={data.get('date')} expected={today}"
+          assert dated.exists(), f"missing {dated}"
+          assert json.loads(dated.read_text(encoding='utf-8')) == data, 'dated archive differs from latest'
+          print(f'VOCAB_EXHAUSTIVE_CURRENT_OK date={today}')
+          PY
 
       - name: Publish recovered vocabulary
         shell: bash
