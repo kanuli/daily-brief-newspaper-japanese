@@ -104,10 +104,11 @@ jobs:
           TOKENIZERS_PARALLELISM: "false"
         run: python scripts/local_fast_safe_sync.py
 
-      - name: 文字化けした現在ニュースを遠隔優先で本修復
-        timeout-minutes: 3
+      - name: 文字化けした現在ニュースを429-awareで本修復
+        timeout-minutes: 8
         env:
           TOKENIZERS_PARALLELISM: "false"
+          GOOGLE_429_COOLDOWN_SECONDS: "90"
         run: python scripts/repair_garbled_core.py
 
       - name: 同一スナップショットとの基本ニュース一致を検証
@@ -226,6 +227,7 @@ jobs:
     timeout-minutes: 18
     env:
       CANTONESE_SNAPSHOT_DIR: .cantonese-snapshot/data
+      GOOGLE_429_COOLDOWN_SECONDS: "120"
     steps:
       - name: 最新production mainを取得
         uses: actions/checkout@v4
@@ -346,3 +348,135 @@ jobs:
         run: |
           echo 'EMERGENCY_TRANSLATION_READY_FOR_F3'
           echo 'Text publication may proceed independently; F3 audio follows asynchronously.'
+
+
+  alternate_core_recovery:
+    name: Primary/emergency outcome failed — bounded alternate core recovery
+    needs: [sync, emergency_remote_core]
+    if: ${{ always() && needs.sync.outputs.core_ok != 'true' && needs.emergency_remote_core.result != 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 28
+    env:
+      CANTONESE_SNAPSHOT_DIR: .cantonese-snapshot/data
+      GOOGLE_429_COOLDOWN_SECONDS: "120"
+    steps:
+      - name: Checkout latest production main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 30
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install bounded recovery dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --disable-pip-version-check --quiet \
+            requests==2.32.5 \
+            deep-translator==1.11.4 \
+            pykakasi==2.3.0
+
+      - name: Syntax check alternate core recovery
+        run: |
+          python -m py_compile \
+            scripts/cantonese_snapshot.py \
+            scripts/emergency_remote_core_sync.py \
+            scripts/safe_sync.py \
+            scripts/validate_content_integrity.py \
+            scripts/validate_editorial_quality.py \
+            scripts/validate_furigana_readings.py \
+            scripts/check_source_drift.py
+
+      - name: Freeze one Cantonese source commit
+        run: python scripts/cantonese_snapshot.py
+
+      - name: Retry only until real non-degraded Japanese exists
+        shell: bash
+        run: |
+          set -euo pipefail
+          recovered=false
+          for attempt in 1 2 3; do
+            echo "CORE_ALTERNATE_ATTEMPT attempt=${attempt}"
+            python scripts/emergency_remote_core_sync.py || true
+            if python - <<'PY'
+          import json
+          from pathlib import Path
+          BAD = {'EDITORIAL_MINIMUM_FALLBACK','TRANSLATION_FAILED','TRANSLATION_DEGRADED'}
+          def stories(value):
+              if isinstance(value, dict):
+                  if value.get('id') and (value.get('title') or value.get('summary') or value.get('body')):
+                      yield value
+                  for child in value.values():
+                      yield from stories(child)
+              elif isinstance(value, list):
+                  for child in value:
+                      yield from stories(child)
+          failures=[]
+          for name in ('latest.json','live.json'):
+              data=json.loads((Path('data')/name).read_text(encoding='utf-8'))
+              if data.get('translationDegraded') or int(data.get('translationDeferredCount') or 0)>0:
+                  failures.append(f'{name}:degraded-metadata')
+              for item in stories(data):
+                  status=str(item.get('translationStatus') or '').strip().upper()
+                  if status in BAD:
+                      failures.append(f'{name}:{item.get("id")}:{status}')
+          if failures:
+              print('CORE_ALTERNATE_NOT_READY')
+              for failure in failures[:30]: print(' -', failure)
+              raise SystemExit(1)
+          print('CORE_ALTERNATE_TRANSLATION_READY')
+          PY
+            then
+              recovered=true
+              break
+            fi
+            if [ "${attempt}" -lt 3 ]; then
+              delay=$((attempt * 90))
+              echo "CORE_ALTERNATE_BACKOFF delay=${delay}s"
+              sleep "${delay}"
+            fi
+          done
+          if [ "${recovered}" != "true" ]; then
+            echo "CORE_ALTERNATE_EXHAUSTED"
+            exit 1
+          fi
+
+      - name: Verify alternate outcome against frozen source
+        env:
+          PARITY_SCOPE: base
+        run: |
+          python scripts/check_source_drift.py
+          python scripts/validate_content_integrity.py
+          python scripts/validate_editorial_quality.py
+          python scripts/validate_furigana_readings.py
+
+      - name: Publish verified alternate recovery
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'daily-brief-japanese-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add data/latest.json data/live.json data/archive.json data/translation-cache.json
+          if git diff --cached --quiet; then
+            echo 'CORE_ALTERNATE_NO_DIFF_AFTER_VERIFICATION'
+            exit 0
+          fi
+          git commit -m '429後の代替経路で現在ニュースを復旧'
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              sleep $((attempt * 2))
+              continue
+            fi
+            if git push origin HEAD:main; then
+              echo 'CORE_ALTERNATE_RECOVERY_PUSH_OK'
+              exit 0
+            fi
+            sleep $((attempt * 2))
+          done
+          exit 1

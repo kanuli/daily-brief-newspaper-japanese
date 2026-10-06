@@ -1,19 +1,31 @@
 {
-  "version": 2,
+  "version": 3,
   "owner": "NAS Editor-in-Chief",
   "principles": [
     "Editor-in-Chief is the sole scheduler and recovery authority",
     "robots execute bounded jobs and do not schedule peer robots",
     "publication writers are serialized to prevent lost updates",
     "each stage must be verified before the next stage is assigned",
-    "GREEN requires deployed production verification and fresh NAS attestation"
+    "GREEN requires deployed production verification and fresh NAS attestation",
+    "workflow success is never trusted without post-run data verification",
+    "absolute freshness gates prevent upstream+downstream stale equality from being marked healthy"
   ],
   "stages": [
     {
       "id": "content-core",
       "primaryRobot": "core-translator",
       "workflow": "sync-japanese-news.yml",
-      "writes": ["data/latest.json", "data/live.json", "data/translation-cache.json"]
+      "writes": [
+        "data/latest.json",
+        "data/live.json",
+        "data/translation-cache.json"
+      ],
+      "fallbackRobot": "core-alternate-recovery",
+      "fallbackMode": "bounded alternate job inside sync-japanese-news.yml after normal and emergency outcomes fail",
+      "recoveryPolicy": {
+        "google429CircuitBreakerSeconds": 90,
+        "verifyOutcomeBeforeAccepting": true
+      }
     },
     {
       "id": "content-rolling",
@@ -21,32 +33,79 @@
       "workflow": "repair-extra-translation-quality.yml",
       "fallbackRobot": "rolling-exhaustive-recovery",
       "fallbackWorkflow": "repair-all-published-quality.yml",
-      "writes": ["data/desk-latest.json", "data/stocks-latest.json", "data/topic-more/**", "data/translation-cache.json"]
+      "writes": [
+        "data/desk-latest.json",
+        "data/stocks-latest.json",
+        "data/topic-more/**",
+        "data/translation-cache.json"
+      ],
+      "recoveryPolicy": {
+        "rejectDegradedBeforePublish": true,
+        "verifyOutcomeBeforeAccepting": true,
+        "boundedExhaustiveRetries": 3
+      }
+    },
+    {
+      "id": "vocab",
+      "primaryRobot": "vocab-translator",
+      "workflow": "sync-daily-vocab.yml",
+      "supervisedBy": "delivery-auditor",
+      "freshness": "latest.date must equal current HKT date and data/vocab/YYYY-MM-DD.json must exist",
+      "selfHealing": true,
+      "writes": [
+        "data/vocab/latest.json",
+        "data/vocab/YYYY-MM-DD.json"
+      ]
     },
     {
       "id": "f3",
       "primaryRobot": "f3-voice",
       "workflow": "rebuild-f3-pacing.yml",
-      "dependsOn": ["content-core", "content-rolling"],
-      "writes": ["data/** audio metadata", "audio/**"]
+      "dependsOn": [
+        "content-core",
+        "content-rolling"
+      ],
+      "writes": [
+        "data/** audio metadata",
+        "audio/**"
+      ]
     },
     {
       "id": "pages",
       "primaryRobot": "pages-publisher",
       "workflow": "pages.yml",
-      "dependsOn": ["f3"],
-      "writes": ["GitHub Pages deployment"]
+      "dependsOn": [
+        "f3"
+      ],
+      "writes": [
+        "GitHub Pages deployment"
+      ]
     },
     {
       "id": "delivery-attestation",
       "primaryRobot": "delivery-auditor",
       "workflow": "editor-in-chief-newsroom-robot.yml",
-      "dependsOn": ["pages"],
-      "writes": ["data/newsroom-health.json"]
+      "dependsOn": [
+        "pages"
+      ],
+      "writes": [
+        "data/newsroom-health.json"
+      ]
     }
   ],
   "state": {
     "defaultPath": "/volume2/docker/editor-in-chief/state/japanese-newsroom-control-plane.json",
-    "statuses": ["assigned", "waiting", "verified"]
+    "statuses": [
+      "assigned",
+      "waiting",
+      "verified"
+    ]
+  },
+  "policies": {
+    "stockAbsoluteFreshnessHours": 96,
+    "vocabCurrentHktDateRequired": true,
+    "vocabDatedArchiveRequired": true,
+    "detailedFaultReasons": true,
+    "workflowOutcomeVerification": true
   }
 }
