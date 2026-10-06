@@ -51,7 +51,7 @@ assert dated.exists(), f"missing {dated}"
 assert json.loads(dated.read_text(encoding='utf-8')) == data, 'dated archive differs from latest'
 print(f'VOCAB_EXHAUSTIVE_CURRENT_OK date={today}')
 PY
-              echo "VOCAB_EXHAUSTIVE_RECOVERY_OK attempt=$"'{attempt}'
+              echo "VOCAB_EXHAUSTIVE_RECOVERY_OK attempt=${attempt}"
               break
             fi
             if [ "$attempt" -eq 3 ]; then
@@ -59,7 +59,7 @@ PY
               exit 1
             fi
             delay=$((attempt * 120))
-            echo "VOCAB_EXHAUSTIVE_COOLDOWN delay=$"'{delay}s'
+            echo "VOCAB_EXHAUSTIVE_COOLDOWN delay=${delay}s"
             sleep "$delay"
           done
 
