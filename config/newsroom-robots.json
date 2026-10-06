@@ -25,6 +25,13 @@
       "recoveryPolicy": {
         "google429CircuitBreakerSeconds": 90,
         "verifyOutcomeBeforeAccepting": true
+      },
+      "finalFallbackRobot": "github-models-core-recovery",
+      "finalFallbackWorkflow": "sync-japanese-news.yml",
+      "finalFallbackPolicy": {
+        "backend": "GitHub Models via built-in GITHUB_TOKEN",
+        "scope": "rejected fields only",
+        "publishRequires": "source parity + non-degraded + content integrity + editorial quality + furigana + vocab validation"
       }
     },
     {
