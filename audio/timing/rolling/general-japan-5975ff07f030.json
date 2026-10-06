@@ -1,0 +1,250 @@
+{
+  "version": 3,
+  "duration": 111.464,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 334,
+  "charactersPerMinute": 179.8,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 9.013,
+      "text": "日本は最近の国際試合でニュージーランドを2 -1で破った"
+    },
+    {
+      "key": "dek",
+      "start": 9.013,
+      "end": 15.865,
+      "text": "今年は「発売 ブラジルの批准 最近無視」"
+    },
+    {
+      "key": "body-0",
+      "start": 15.865,
+      "end": 43.748,
+      "text": "日本代表はニュージーランドを2 -1で破り、最近の国際優勝を達成した。この試合は、キリンチャレンジカップの重要な成果であり、日本の最近のスケジュールの具体的な進展と見なされています。"
+    },
+    {
+      "key": "body-1",
+      "start": 43.748,
+      "end": 72.258,
+      "text": "トーナメントの報道では、勝利は時間に敏感なスポーツの結果と見なされ、最近のレースでの日本チームの重要な勝利と説明されました。この結果は、代表チームの国際トーナメントスケジュールに直接表示されます。"
+    },
+    {
+      "key": "why",
+      "start": 72.258,
+      "end": 95.133,
+      "text": "日本チームにとって、この勝利は現実世界の結果であり、国際大会での代表チームの継続的な具体的な進歩を反映しています。"
+    },
+    {
+      "key": "watch",
+      "start": 95.133,
+      "end": 111.464,
+      "text": "その後、その後の試合での日本チームのパフォーマンスと戦術的なアレンジメントを観察します。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 8.153,
+      "end": 9.013,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "日本は最近の国際試合でニュージーランドを2 -1で破った。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 9.013,
+      "speechEnd": 15.005,
+      "end": 15.865,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "clause",
+      "text": "今年は「発売 ブラジルの批准 最近無視」"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 15.865,
+      "speechEnd": 22.206,
+      "end": 22.486,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本代表はニュージーランドを2 -1で破り、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 22.486,
+      "speechEnd": 26.458,
+      "end": 27.078,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "最近の国際優勝を達成した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 27.078,
+      "speechEnd": 29.447,
+      "end": 29.727,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この試合は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 29.727,
+      "speechEnd": 34.605,
+      "end": 34.885,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "キリンチャレンジカップの重要な成果であり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.885,
+      "speechEnd": 42.968,
+      "end": 43.748,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "日本の最近のスケジュールの具体的な進展と見なされています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 43.748,
+      "speechEnd": 46.814,
+      "end": 47.094,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "トーナメントの報道では、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 47.094,
+      "speechEnd": 52.947,
+      "end": 53.227,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "勝利は時間に敏感なスポーツの結果と見なされ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 53.227,
+      "speechEnd": 61.101,
+      "end": 61.721,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "最近のレースでの日本チームの重要な勝利と説明されました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 61.721,
+      "speechEnd": 64.021,
+      "end": 64.301,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この結果は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 64.301,
+      "speechEnd": 71.478,
+      "end": 72.258,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "代表チームの国際トーナメントスケジュールに直接表示されます。"
+    },
+    {
+      "parentKey": "why",
+      "start": 72.258,
+      "speechEnd": 76.23,
+      "end": 76.85,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 76.85,
+      "speechEnd": 79.567,
+      "end": 79.847,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本チームにとって、"
+    },
+    {
+      "parentKey": "why",
+      "start": 79.847,
+      "speechEnd": 84.864,
+      "end": 85.144,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この勝利は現実世界の結果であり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 85.144,
+      "speechEnd": 94.272,
+      "end": 95.133,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "国際大会での代表チームの継続的な具体的な進歩を反映しています。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 95.133,
+      "speechEnd": 97.223,
+      "end": 97.503,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 97.503,
+      "speechEnd": 99.594,
+      "end": 99.874,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "その後、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 99.874,
+      "speechEnd": 110.604,
+      "end": 111.464,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "その後の試合での日本チームのパフォーマンスと戦術的なアレンジメントを観察します。"
+    }
+  ]
+}
