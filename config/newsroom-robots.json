@@ -1,0 +1,52 @@
+{
+  "version": 2,
+  "owner": "NAS Editor-in-Chief",
+  "principles": [
+    "Editor-in-Chief is the sole scheduler and recovery authority",
+    "robots execute bounded jobs and do not schedule peer robots",
+    "publication writers are serialized to prevent lost updates",
+    "each stage must be verified before the next stage is assigned",
+    "GREEN requires deployed production verification and fresh NAS attestation"
+  ],
+  "stages": [
+    {
+      "id": "content-core",
+      "primaryRobot": "core-translator",
+      "workflow": "sync-japanese-news.yml",
+      "writes": ["data/latest.json", "data/live.json", "data/translation-cache.json"]
+    },
+    {
+      "id": "content-rolling",
+      "primaryRobot": "rolling-translator",
+      "workflow": "repair-extra-translation-quality.yml",
+      "fallbackRobot": "rolling-exhaustive-recovery",
+      "fallbackWorkflow": "repair-all-published-quality.yml",
+      "writes": ["data/desk-latest.json", "data/stocks-latest.json", "data/topic-more/**", "data/translation-cache.json"]
+    },
+    {
+      "id": "f3",
+      "primaryRobot": "f3-voice",
+      "workflow": "rebuild-f3-pacing.yml",
+      "dependsOn": ["content-core", "content-rolling"],
+      "writes": ["data/** audio metadata", "audio/**"]
+    },
+    {
+      "id": "pages",
+      "primaryRobot": "pages-publisher",
+      "workflow": "pages.yml",
+      "dependsOn": ["f3"],
+      "writes": ["GitHub Pages deployment"]
+    },
+    {
+      "id": "delivery-attestation",
+      "primaryRobot": "delivery-auditor",
+      "workflow": "editor-in-chief-newsroom-robot.yml",
+      "dependsOn": ["pages"],
+      "writes": ["data/newsroom-health.json"]
+    }
+  ],
+  "state": {
+    "defaultPath": "/volume2/docker/editor-in-chief/state/japanese-newsroom-control-plane.json",
+    "statuses": ["assigned", "waiting", "verified"]
+  }
+}
