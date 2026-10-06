@@ -618,10 +618,12 @@ def verify_pages(
         published_archive = try_load_json(PAGES + "data/vocab/", f"{today}.json")
         if source_day(published_vocab) != source_day(vocab):
             failures.append("pages:vocab-latest:stale")
+        elif published_vocab != vocab:
+            failures.append("pages:vocab-latest:content-mismatch")
         if published_archive is None:
             failures.append(f"pages:vocab-archive:{today}:missing")
-        elif published_vocab != published_archive:
-            failures.append(f"pages:vocab-archive:{today}:mismatch")
+        elif published_archive != vocab:
+            failures.append(f"pages:vocab-archive:{today}:content-mismatch")
 
     seen = set()  # type: Set[Tuple[str, str]]
     for payload in layers.values():
