@@ -34,8 +34,23 @@ jobs:
       - name: Install sync dependencies
         run: python -m pip install --disable-pip-version-check requests==2.32.5 deep-translator==1.11.4
 
-      - name: Sync teacher-audited upstream vocabulary
-        run: python scripts/sync_vocab_ja.py
+      - name: Sync teacher-audited upstream vocabulary with bounded recovery
+        shell: bash
+        run: |
+          set -euo pipefail
+          for attempt in 1 2 3; do
+            if python scripts/sync_vocab_ja.py; then
+              echo "VOCAB_SYNC_RECOVERED attempt=${attempt}"
+              exit 0
+            fi
+            if [ "$attempt" -lt 3 ]; then
+              delay=$((attempt * 60))
+              echo "VOCAB_SYNC_RETRY attempt=${attempt} delay=${delay}s"
+              sleep "$delay"
+            fi
+          done
+          echo "VOCAB_SYNC_EXHAUSTED"
+          exit 1
 
       - name: Require today's Hong Kong source date
         run: |
