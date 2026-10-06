@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import threading
 from pathlib import Path
 
@@ -87,9 +88,12 @@ def load_model():
     return _TOKENIZER, _MODEL
 
 
-def translate_chunk(text: str) -> str:
+def model_translate(text: str, source_lang: str, target_lang: str, *, beams: int = 4) -> str:
     tokenizer, model = load_model()
-    source = _T2S.convert(str(text or ""))
+    source = str(text or "")
+    if source_lang == "zh":
+        source = _T2S.convert(source)
+    tokenizer.src_lang = source_lang
     encoded = tokenizer(
         source,
         return_tensors="pt",
@@ -98,20 +102,90 @@ def translate_chunk(text: str) -> str:
     )
     if not hasattr(tokenizer, "get_lang_id"):
         raise RuntimeError("M2M100 tokenizer does not expose get_lang_id")
-    target_id = tokenizer.get_lang_id(TARGET_LANG)
+    target_id = tokenizer.get_lang_id(target_lang)
     with torch.inference_mode():
         generated = model.generate(
             **encoded,
             forced_bos_token_id=target_id,
             max_new_tokens=MAX_NEW_TOKENS,
-            num_beams=4,
+            num_beams=max(1, int(beams)),
             early_stopping=True,
             renormalize_logits=True,
         )
     value = tokenizer.batch_decode(generated, skip_special_tokens=True)[0].strip()
     if not value:
-        raise RuntimeError("M2M100 returned empty translation")
+        raise RuntimeError(
+            f"M2M100 returned empty translation source={source_lang} target={target_lang}"
+        )
     return value
+
+
+def translate_chunk(text: str, strict: bool, field: str) -> str:
+    direct = model_translate(text, SOURCE_LANG, TARGET_LANG, beams=5)
+    direct = newsroom_quality.deterministic_postedit(text, direct, field)
+    if not bad_translation(text, direct, strict, field):
+        return direct
+
+    print(
+        "SECONDARY_LOCAL_DIRECT_REJECT",
+        f"field={field}",
+        f"source={text[:100]!r}",
+        f"output={direct[:100]!r}",
+    )
+
+    # Independent decoding path using the same fully-local model. Chinese->English
+    # and English->Japanese often resolves a malformed direct zh->ja decode without
+    # touching any hosted translation provider.
+    english = model_translate(text, SOURCE_LANG, "en", beams=5)
+    pivot = model_translate(english, "en", TARGET_LANG, beams=5)
+    pivot = newsroom_quality.deterministic_postedit(text, pivot, field)
+    if not bad_translation(text, pivot, strict, field):
+        print(
+            "SECONDARY_LOCAL_PIVOT_OK",
+            f"field={field}",
+            f"source={text[:100]!r}",
+        )
+        return pivot
+
+    print(
+        "SECONDARY_LOCAL_PIVOT_REJECT",
+        f"field={field}",
+        f"source={text[:100]!r}",
+        f"english={english[:100]!r}",
+        f"output={pivot[:100]!r}",
+    )
+
+    # Final local-only retry: translate clauses independently, choosing direct
+    # or pivot per clause, then re-run the authoritative whole-field quality gate.
+    clauses = [
+        part for part in re.split(r"(?<=[，,；;：:。！？!?])", str(text or ""))
+        if part and part.strip()
+    ]
+    if len(clauses) > 1:
+        resolved = []
+        for index, clause in enumerate(clauses, 1):
+            candidate = model_translate(clause, SOURCE_LANG, TARGET_LANG, beams=6)
+            candidate = newsroom_quality.deterministic_postedit(clause, candidate, field)
+            if bad_translation(clause, candidate, False, field):
+                en_clause = model_translate(clause, SOURCE_LANG, "en", beams=6)
+                candidate = model_translate(en_clause, "en", TARGET_LANG, beams=6)
+                candidate = newsroom_quality.deterministic_postedit(clause, candidate, field)
+            if bad_translation(clause, candidate, False, field):
+                raise RuntimeError(
+                    f"clause {index}/{len(clauses)} failed direct and pivot quality"
+                )
+            resolved.append(candidate)
+        combined = "".join(resolved)
+        combined = newsroom_quality.deterministic_postedit(text, combined, field)
+        if not bad_translation(text, combined, strict, field):
+            print(
+                "SECONDARY_LOCAL_CLAUSE_RETRY_OK",
+                f"field={field}",
+                f"clauses={len(clauses)}",
+            )
+            return combined
+
+    raise RuntimeError("direct, pivot and clause-local M2M100 paths all failed quality")
 
 
 def bad_translation(source: str, target: str, strict: bool, field: str) -> bool:
@@ -128,9 +202,7 @@ def translate(source: str, strict: bool, field: str) -> str:
     translated = []
     for index, piece in enumerate(pieces, 1):
         try:
-            value = translate_chunk(piece)
-            if bad_translation(piece, value, False, field):
-                raise RuntimeError("chunk failed newsroom quality gate")
+            value = translate_chunk(piece, False, field)
             translated.append(value)
             print(
                 "SECONDARY_LOCAL_CHUNK_OK",
