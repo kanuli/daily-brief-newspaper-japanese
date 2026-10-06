@@ -264,6 +264,21 @@ def degraded_translation(payload: dict) -> bool:
 def verify_main_f3(layers: Dict[str, dict]) -> list:
     """Verify current main has complete F3 metadata/assets before publication."""
     failures = []
+    if vocab is not None:
+        try:
+            published_vocab = load_json(PAGES + "data/", "vocab/latest.json")
+            expected_day = str(vocab.get("date") or "")[:10]
+            published_day = str(published_vocab.get("date") or "")[:10]
+            if published_day != expected_day:
+                failures.append(f"pages:vocab/latest.json:stale:{published_day}!={expected_day}")
+            dated_day = today or expected_day
+            if dated_day:
+                published_archive = load_json(PAGES + "data/", f"vocab/{dated_day}.json")
+                if str(published_archive.get("date") or "")[:10] != dated_day:
+                    failures.append(f"pages:vocab/{dated_day}.json:invalid")
+        except (urllib.error.URLError, json.JSONDecodeError) as exc:
+            failures.append(f"pages:vocab:{type(exc).__name__}")
+
     seen = set()  # type: Set[Tuple[str, str]]
     for payload in layers.values():
         for story in iter_stories(payload):
@@ -287,8 +302,8 @@ def verify_main_f3(layers: Dict[str, dict]) -> list:
     return failures
 
 
-def verify_pages(layers: Dict[str, dict]) -> list:
-    """Verify deployed Pages matches main after content and F3 are complete."""
+def verify_pages(layers: Dict[str, dict], vocab: Optional[dict] = None, today: Optional[str] = None) -> list:
+    """Verify deployed Pages matches main after content, vocab and F3 are complete."""
     failures = []
     for name, expected in layers.items():
         try:
@@ -467,7 +482,7 @@ def main() -> int:
         return 1
     mark_job(state, "f3", "verified", reason="main-f3-assets-current")
 
-    page_failures = verify_pages(japanese)
+    page_failures = verify_pages(japanese, japanese_vocab, today)
     if page_failures:
         assigned = dispatch_robot("pages-publisher", reason="pages-not-current")
         mark_job(
