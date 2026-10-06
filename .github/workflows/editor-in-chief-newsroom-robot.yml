@@ -11,21 +11,12 @@ on:
         description: 'UTC ISO timestamp of the NAS verification'
         required: false
         type: string
-  workflow_run:
-    workflows:
-      - "日本語ニュース同期・品質ゲート・Discord配信"
-      - "Maintenance Robot — 日本語ローリング翻訳品質修復"
-      - "日本語全公開コンテンツ品質修復"
-      - "Sync daily Japanese vocab"
-      - "Editor Recovery — Daily Vocab Exhaustive"
-    types: [completed]
 
 permissions:
-  actions: write
   contents: write
 
 concurrency:
-  group: editor-in-chief-newsroom-robot
+  group: japanese-newsroom-writer
   cancel-in-progress: false
 
 jobs:
@@ -174,52 +165,6 @@ jobs:
               return Number.isFinite(valueMs) ? new Date(valueMs).toISOString() : 'missing';
             }
 
-            async function active(workflow) {
-              const response = await github.rest.actions.listWorkflowRuns({
-                owner,
-                repo,
-                workflow_id: workflow,
-                branch: 'main',
-                per_page: 20,
-              });
-              return response.data.workflow_runs.find((run) => run.status !== 'completed') || null;
-            }
-
-            async function latestCompleted(workflow) {
-              const response = await github.rest.actions.listWorkflowRuns({
-                owner,
-                repo,
-                workflow_id: workflow,
-                branch: 'main',
-                per_page: 20,
-              });
-              return response.data.workflow_runs.find((run) => run.status === 'completed') || null;
-            }
-
-            async function activeWriter() {
-              for (const workflow of [
-                'sync-japanese-news.yml',
-                'repair-extra-translation-quality.yml',
-                'repair-all-published-quality.yml',
-                'rebuild-f3-pacing.yml',
-              ]) {
-                const running = await active(workflow);
-                if (running) return { workflow, run: running };
-              }
-              return null;
-            }
-
-            async function dispatch(workflow, reason) {
-              const running = await active(workflow);
-              if (running) {
-                core.warning(`RECOVERY_ALREADY_ACTIVE workflow=${workflow} run=${running.id} reason=${reason}`);
-                return { workflow, dispatched: false, active: true, runId: running.id };
-              }
-              await github.rest.actions.createWorkflowDispatch({ owner, repo, workflow_id: workflow, ref: 'main' });
-              core.warning(`MAINTENANCE_ROBOT_DISPATCH workflow=${workflow} reason=${reason}`);
-              return { workflow, dispatched: true, active: false, runId: null };
-            }
-
             const pageChecks = [
               ['index.html', 'home-current-ja.js', null],
               ['live.html', 'live-guard.js', null],
@@ -349,6 +294,7 @@ jobs:
               sourceVersion('live', localLive),
               sourceVersion('desk', localDesk),
               sourceVersion('stocks', localStocks),
+              localVocabDay || 'missing',
             ].join('|');
             const nasVerifiedAtMs = Date.parse(nasVerifiedAt);
             const nasDeliveryCurrent = Boolean(
@@ -459,92 +405,6 @@ jobs:
             let decision = state === 'GREEN' ? 'NO_REPAIR_REQUIRED' : 'ASSESS_RECOVERY';
             const results = [];
 
-            if (state === 'RED' && recovery.rollingRequired) {
-              const primary = await latestCompleted('repair-extra-translation-quality.yml');
-              const fallback = await latestCompleted('repair-all-published-quality.yml');
-              const primaryAt = Date.parse(String(primary?.created_at || ''));
-              const fallbackAt = Date.parse(String(fallback?.created_at || ''));
-              const fallbackAlreadyTriedForPrimary = Boolean(
-                Number.isFinite(primaryAt) &&
-                Number.isFinite(fallbackAt) &&
-                fallbackAt >= primaryAt
-              );
-              const primaryOutcomeStillBad = Boolean(primary && !fallbackAlreadyTriedForPrimary);
-              if (primaryOutcomeStillBad) {
-                const writer = await activeWriter();
-                if (writer) {
-                  core.warning(
-                    `ROLLING_EXHAUSTIVE_WAIT writer=${writer.workflow} run=${writer.run.id} primary=${primary.id}`
-                  );
-                  results.push({
-                    robot: 'rolling-exhaustive-recovery',
-                    workflow: 'repair-all-published-quality.yml',
-                    dispatched: false,
-                    active: false,
-                    reason: 'writer-active',
-                    blockerWorkflow: writer.workflow,
-                    blockerRunId: writer.run.id,
-                    primaryRunId: primary.id,
-                  });
-                } else {
-                  const rollingFallback = await dispatch(
-                    'repair-all-published-quality.yml',
-                    `rolling-exhaustive-after-verified-stale primaryRun=${primary.id} conclusion=${primary.conclusion || 'unknown'}`
-                  );
-                  results.push({
-                    robot: 'rolling-exhaustive-recovery',
-                    workflow: rollingFallback.workflow,
-                    dispatched: rollingFallback.dispatched,
-                    active: rollingFallback.active,
-                    runId: rollingFallback.runId,
-                    primaryRunId: primary.id,
-                  });
-                }
-              }
-            }
-
-            if (state === 'RED' && recovery.vocabRequired) {
-              const primary = await latestCompleted('sync-daily-vocab.yml');
-              const fallback = await latestCompleted('recover-daily-vocab.yml');
-              const primaryAt = Date.parse(String(primary?.created_at || ''));
-              const fallbackAt = Date.parse(String(fallback?.created_at || ''));
-              const useFallback = Boolean(
-                primary &&
-                (!fallback || !Number.isFinite(fallbackAt) || (Number.isFinite(primaryAt) && primaryAt >= fallbackAt))
-              );
-              const targetWorkflow = useFallback ? 'recover-daily-vocab.yml' : 'sync-daily-vocab.yml';
-              const otherWorkflow = useFallback ? 'sync-daily-vocab.yml' : 'recover-daily-vocab.yml';
-              const otherActive = await active(otherWorkflow);
-              if (otherActive) {
-                core.warning(
-                  `VOCAB_RECOVERY_WAIT target=${targetWorkflow} blocker=${otherWorkflow} run=${otherActive.id}`
-                );
-                results.push({
-                  robot: useFallback ? 'vocab-exhaustive-recovery' : 'vocab-translator',
-                  workflow: targetWorkflow,
-                  dispatched: false,
-                  active: false,
-                  reason: 'alternate-vocab-worker-active',
-                  blockerWorkflow: otherWorkflow,
-                  blockerRunId: otherActive.id,
-                });
-              } else {
-                const vocabResult = await dispatch(
-                  targetWorkflow,
-                  `vocab-outcome-verified-stale expected=${todayHkt} local=${localVocabDay || 'missing'} archive=${vocabArchiveCurrent}`
-                );
-                results.push({
-                  robot: useFallback ? 'vocab-exhaustive-recovery' : 'vocab-translator',
-                  workflow: vocabResult.workflow,
-                  dispatched: vocabResult.dispatched,
-                  active: vocabResult.active,
-                  runId: vocabResult.runId,
-                  previousPrimaryRunId: primary?.id || null,
-                  previousFallbackRunId: fallback?.id || null,
-                });
-              }
-            }
-
             if (state === 'RED' && !sourceReadable) {
               status = 'source-read-degraded';
               decision = 'NO_MUTATION_RECHECK_NEXT_PATROL';
@@ -554,14 +414,11 @@ jobs:
               if (recovery.upstreamStockRequired) {
                 status = 'upstream-stock-source-stale';
                 decision = 'WAIT_FOR_UPSTREAM_STOCK_COLLECTOR';
-              } else if (recovery.vocabRequired && !recovery.coreRequired && !recovery.rollingRequired && !recovery.structuralRequired) {
-                status = 'vocab-self-healing';
-                decision = 'VOCAB_ROBOT_DISPATCHED_OR_ACTIVE';
               } else {
-                status = recovery.coreRequired || recovery.rollingRequired || recovery.structuralRequired
+                status = recovery.coreRequired || recovery.rollingRequired || recovery.vocabRequired || recovery.structuralRequired
                   ? 'awaiting-nas-repair-dispatch'
                   : 'awaiting-nas-delivery-verification';
-                decision = recovery.coreRequired || recovery.rollingRequired || recovery.structuralRequired
+                decision = recovery.coreRequired || recovery.rollingRequired || recovery.vocabRequired || recovery.structuralRequired
                   ? 'NAS_CONTROLLER_MUST_DISPATCH_REPAIR'
                   : 'NAS_CONTROLLER_MUST_VERIFY_F3_AND_PAGES';
               }
@@ -608,8 +465,8 @@ jobs:
                 current: true,
                 runId: context.runId,
                 event: context.eventName,
-                role: 'nas-attestation-recorder',
-                executor: 'github-subordinate-workers',
+                role: 'nas-attestation-auditor',
+                executor: 'github-auditor-only',
                 selfHealingLoop: false,
               },
               policy: {
@@ -630,8 +487,10 @@ jobs:
                 stockAbsoluteFreshnessHours: STOCK_MAX_AGE_MS / (60 * MINUTE),
                 vocabCurrentHktDateRequired: true,
                 vocabDatedArchiveRequired: true,
-                vocabSelfHealingWorkflow: 'sync-daily-vocab.yml -> verify -> recover-daily-vocab.yml -> verify',
+                vocabSelfHealingWorkflow: 'NAS: source-vocab -> vocab-primary -> verify -> vocab-exhaustive -> verify',
                 workflowOutcomeMustBeDataVerifiedBeforeAdvancing: true,
+                nasIsSoleScheduler: true,
+                auditorDispatchesPeerRobots: false,
               },
             };
 
