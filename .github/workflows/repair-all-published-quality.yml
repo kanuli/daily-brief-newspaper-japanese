@@ -85,6 +85,40 @@ jobs:
       - name: Validate every rolling topic and stock layer
         run: python scripts/validate_extra_layers.py
 
+      - name: Reject any remaining degraded rolling metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          BAD={'EDITORIAL_MINIMUM_FALLBACK','TRANSLATION_FAILED','TRANSLATION_DEGRADED'}
+          def stories(v):
+              if isinstance(v, dict):
+                  if v.get('id') and (v.get('title') or v.get('summary') or v.get('body')): yield v
+                  for x in v.values(): yield from stories(x)
+              elif isinstance(v, list):
+                  for x in v: yield from stories(x)
+          failures=[]
+          paths=[Path('data/desk-latest.json'),Path('data/stocks-latest.json')]
+          topics=sorted(Path('data/topic-more').glob('*.json'))
+          if topics: paths.append(topics[-1])
+          for path in paths:
+              if not path.exists(): continue
+              data=json.loads(path.read_text(encoding='utf-8'))
+              if data.get('translationDegraded'): failures.append(f'{path}:translationDegraded=true')
+              if int(data.get('translationDeferredCount') or 0)>0:
+                  failures.append(f'{path}:translationDeferredCount={data.get("translationDeferredCount")}')
+              for item in stories(data):
+                  status=str(item.get('translationStatus') or '').strip().upper()
+                  if status in BAD: failures.append(f'{path}:{item.get("id")}:{status}')
+          if failures:
+              print('ROLLING_EXHAUSTIVE_DEGRADED_REJECT')
+              for failure in failures[:80]: print(' -',failure)
+              raise SystemExit(1)
+          print('ROLLING_EXHAUSTIVE_NON_DEGRADED_PASS')
+          PY
+
       - name: Publish repaired rolling Japanese immediately
         shell: bash
         run: |
