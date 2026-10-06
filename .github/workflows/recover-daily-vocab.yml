@@ -1,0 +1,91 @@
+name: Editor Recovery — Daily Vocab Exhaustive
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: editor-vocab-exhaustive-recovery
+  cancel-in-progress: false
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout current Japanese main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 30
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install vocab recovery dependencies
+        run: python -m pip install --disable-pip-version-check requests==2.32.5 deep-translator==1.11.4
+
+      - name: Recover today's vocabulary with long backoff
+        shell: bash
+        run: |
+          set -euo pipefail
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            if python scripts/sync_vocab_ja.py && python scripts/validate_vocab_quality.py; then
+              python - <<'PY'
+import json
+from datetime import datetime
+from pathlib import Path
+from zoneinfo import ZoneInfo
+today=datetime.now(ZoneInfo('Asia/Hong_Kong')).date().isoformat()
+latest=Path('data/vocab/latest.json')
+dated=Path('data/vocab')/f'{today}.json'
+data=json.loads(latest.read_text(encoding='utf-8'))
+assert data.get('date') == today, (data.get('date'), today)
+assert dated.exists(), dated
+assert json.loads(dated.read_text(encoding='utf-8')) == data
+print(f'VOCAB_EXHAUSTIVE_CURRENT_OK date={today}')
+PY
+              echo "VOCAB_EXHAUSTIVE_RECOVERY_OK attempt=${attempt}"
+              break
+            fi
+            if [ "$attempt" -eq 3 ]; then
+              echo 'VOCAB_EXHAUSTIVE_RECOVERY_EXHAUSTED'
+              exit 1
+            fi
+            delay=$((attempt * 120))
+            echo "VOCAB_EXHAUSTIVE_COOLDOWN delay=${delay}s"
+            sleep "$delay"
+          done
+
+      - name: Publish recovered vocabulary
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/vocab
+          if git diff --cached --quiet; then
+            echo 'VOCAB_EXHAUSTIVE_NO_CHANGE'
+            exit 0
+          fi
+          git commit -m 'Editor-in-Chief vocab exhaustive recovery'
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              sleep $((attempt * 3))
+              continue
+            fi
+            if git push origin HEAD:main; then
+              echo 'VOCAB_EXHAUSTIVE_PUSH_OK'
+              exit 0
+            fi
+            sleep $((attempt * 3))
+          done
+          exit 1
