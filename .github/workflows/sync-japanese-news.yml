@@ -11,6 +11,7 @@ on:
 
 permissions:
   contents: write
+  models: read
 
 concurrency:
   group: japanese-news-hourly
@@ -475,6 +476,127 @@ jobs:
             fi
             if git push origin HEAD:main; then
               echo 'CORE_ALTERNATE_RECOVERY_PUSH_OK'
+              exit 0
+            fi
+            sleep $((attempt * 2))
+          done
+          exit 1
+
+
+  github_models_core_recovery:
+    name: Final independent core recovery — GitHub Models
+    needs: [sync, emergency_remote_core, alternate_core_recovery]
+    if: ${{ always() && needs.sync.outputs.core_ok != 'true' && needs.emergency_remote_core.result != 'success' && needs.alternate_core_recovery.result != 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      CANTONESE_SNAPSHOT_DIR: .cantonese-snapshot/data
+      GITHUB_MODELS_TOKEN: ${{ github.token }}
+      GITHUB_MODELS_TRANSLATION_MODELS: openai/gpt-4o,openai/gpt-4o-mini
+    steps:
+      - name: Checkout latest production main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 30
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install independent recovery dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --disable-pip-version-check --quiet \
+            requests==2.32.5 \
+            deep-translator==1.11.4 \
+            pykakasi==2.3.0
+
+      - name: Syntax check GitHub Models recovery
+        run: |
+          python -m py_compile \
+            scripts/cantonese_snapshot.py \
+            scripts/emergency_remote_core_sync.py \
+            scripts/github_models_core_recovery.py \
+            scripts/repair_garbled_core.py \
+            scripts/safe_sync.py \
+            scripts/validate_content_integrity.py \
+            scripts/validate_editorial_quality.py \
+            scripts/validate_furigana_readings.py \
+            scripts/check_source_drift.py
+
+      - name: Freeze one Cantonese source commit
+        run: python scripts/cantonese_snapshot.py
+
+      - name: Rebuild current structure before independent field repair
+        run: python scripts/emergency_remote_core_sync.py
+
+      - name: Repair only rejected fields with GitHub Models
+        run: python scripts/github_models_core_recovery.py
+
+      - name: Reject any remaining degraded marker
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          BAD={'EDITORIAL_MINIMUM_FALLBACK','TRANSLATION_FAILED','TRANSLATION_DEGRADED'}
+          def stories(v):
+              if isinstance(v,dict):
+                  if v.get('id') and (v.get('title') or v.get('summary') or v.get('body')): yield v
+                  for x in v.values(): yield from stories(x)
+              elif isinstance(v,list):
+                  for x in v: yield from stories(x)
+          failures=[]
+          for name in ('latest.json','live.json'):
+              data=json.loads((Path('data')/name).read_text(encoding='utf-8'))
+              if data.get('translationDegraded'): failures.append(f'{name}:translationDegraded')
+              if int(data.get('translationDeferredCount') or 0)>0: failures.append(f'{name}:deferred')
+              for item in stories(data):
+                  status=str(item.get('translationStatus') or '').strip().upper()
+                  if status in BAD: failures.append(f'{name}:{item.get("id")}:{status}')
+          if failures:
+              print('GITHUB_MODELS_CORE_DEGRADED_REJECT')
+              for item in failures[:50]: print(' -',item)
+              raise SystemExit(1)
+          print('GITHUB_MODELS_CORE_NON_DEGRADED_PASS')
+          PY
+
+      - name: Verify independent recovery outcome
+        env:
+          PARITY_SCOPE: base
+        run: |
+          set -euo pipefail
+          python scripts/check_source_drift.py
+          python scripts/validate_content_integrity.py
+          python scripts/validate_editorial_quality.py
+          python scripts/validate_furigana_readings.py
+          python scripts/validate_vocab_quality.py
+
+      - name: Publish GitHub Models verified core recovery
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'daily-brief-japanese-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add data/latest.json data/live.json data/archive.json data/translation-cache.json
+          if git diff --cached --quiet; then
+            echo 'GITHUB_MODELS_CORE_NO_DIFF_AFTER_VERIFICATION'
+            exit 0
+          fi
+          git commit -m '独立翻訳経路で現在ニュースを品質復旧'
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              sleep $((attempt * 2))
+              continue
+            fi
+            if git push origin HEAD:main; then
+              echo 'GITHUB_MODELS_CORE_RECOVERY_PUSH_OK'
               exit 0
             fi
             sleep $((attempt * 2))
