@@ -1,16 +1,14 @@
 {
   "version": 6,
-  "assessedAt": "2026-10-06T17:48:41.377Z",
+  "assessedAt": "2026-10-06T17:58:27.432Z",
   "state": "RED",
-  "summary": "NOT_GREEN:daily-date-lag upstream=2026-10-06 japanese=2026-10-01 | live-lag-minutes=1012 | desk-lag-minutes=260 | desk-translation-degraded | stocks-relative-lag-minutes=11864 | vocab-japanese-date expected=2026-10-07 actual=2026-10-06 | vocab-dated-archive-missing data/vocab/2026-10-07.json | nas-delivery-fingerprint=2026-10-01|2026-10-05T22:12:00.000Z|2026-10-06T10:44:00.000Z|2026-09-28T09:58:01.264Z",
+  "summary": "NOT_GREEN:daily-date-lag upstream=2026-10-06 japanese=2026-10-01 | live-lag-minutes=1012 | desk-lag-minutes=260 | desk-translation-degraded | stocks-relative-lag-minutes=11864 | nas-delivery-fingerprint=2026-10-01|2026-10-05T22:12:00.000Z|2026-10-06T10:44:00.000Z|2026-09-28T09:58:01.264Z",
   "faultReasons": [
     "daily-date-lag upstream=2026-10-06 japanese=2026-10-01",
     "live-lag-minutes=1012",
     "desk-lag-minutes=260",
     "desk-translation-degraded",
     "stocks-relative-lag-minutes=11864",
-    "vocab-japanese-date expected=2026-10-07 actual=2026-10-06",
-    "vocab-dated-archive-missing data/vocab/2026-10-07.json",
     "nas-delivery-fingerprint=2026-10-01|2026-10-05T22:12:00.000Z|2026-10-06T10:44:00.000Z|2026-09-28T09:58:01.264Z"
   ],
   "layers": {
@@ -42,15 +40,15 @@
       "lagMinutes": 11864,
       "relativeCurrent": false,
       "sourceAbsoluteFresh": true,
-      "sourceAgeMinutes": 127,
+      "sourceAgeMinutes": 136,
       "maxAgeHours": 8
     },
     "vocab": {
-      "current": false,
+      "current": true,
       "expectedHktDate": "2026-10-07",
       "upstream": "2026-10-07",
-      "japanese": "2026-10-06",
-      "datedArchivePresent": false
+      "japanese": "2026-10-07",
+      "datedArchivePresent": true
     },
     "structural": {
       "current": true,
@@ -74,13 +72,13 @@
     "coreRequired": true,
     "rollingRequired": true,
     "upstreamStockRequired": false,
-    "vocabRequired": true,
+    "vocabRequired": false,
     "structuralRequired": false
   },
   "maintenance": {
     "owner": "Editor-in-Chief",
     "executor": "Maintenance Robot",
-    "incidentKey": "daily@2026-10-06|live@2026-10-06T15:04:00.000Z|desk@2026-10-06T15:04:00.000Z|desk@translation-degraded|stocks@2026-10-06T15:41:59.633Z|vocab@2026-10-07->2026-10-06|nas-delivery@2026-10-01|2026-10-05T22:12:00.000Z|2026-10-06T10:44:00.000Z|2026-09-28T09:58:01.264Z",
+    "incidentKey": "daily@2026-10-06|live@2026-10-06T15:04:00.000Z|desk@2026-10-06T15:04:00.000Z|desk@translation-degraded|stocks@2026-10-06T15:41:59.633Z|nas-delivery@2026-10-01|2026-10-05T22:12:00.000Z|2026-10-06T10:44:00.000Z|2026-09-28T09:58:01.264Z",
     "sourceVersionBound": true,
     "status": "awaiting-nas-repair-dispatch",
     "decision": "NAS_CONTROLLER_MUST_DISPATCH_REPAIR",
@@ -91,17 +89,7 @@
     "terminalRepairBudget": false,
     "currentOnlyCoreRepair": true,
     "archiveBackfillAllowed": false,
-    "results": [
-      {
-        "robot": "vocab-exhaustive-recovery",
-        "workflow": "recover-daily-vocab.yml",
-        "dispatched": false,
-        "active": true,
-        "runId": 37505591712,
-        "previousPrimaryRunId": 37503606738,
-        "previousFallbackRunId": 37471131403
-      }
-    ]
+    "results": []
   },
   "sourceRead": {
     "mode": "public-raw-retry",
@@ -112,7 +100,7 @@
   },
   "robot": {
     "current": true,
-    "runId": 37506377218,
+    "runId": 37507660585,
     "event": "workflow_run",
     "role": "nas-attestation-recorder",
     "executor": "github-subordinate-workers",
