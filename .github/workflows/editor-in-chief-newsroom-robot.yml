@@ -211,6 +211,12 @@ jobs:
 
             const todayHkt = hktToday();
             const localVocabArchive = await localEntry(`data/vocab/${todayHkt}.json`);
+            let localVocabArchiveData = null;
+            try {
+              localVocabArchiveData = localVocabArchive?.text ? JSON.parse(localVocabArchive.text) : null;
+            } catch (error) {
+              core.warning(`LOCAL_VOCAB_ARCHIVE_INVALID ${todayHkt}: ${error.message}`);
+            }
 
             const sourceReadFailures = [];
             if (!sourceDaily) sourceReadFailures.push('daily');
@@ -245,7 +251,15 @@ jobs:
             const localVocabDay = dateDay(localVocab);
             const vocabSourceCurrent = sourceVocabDay === todayHkt;
             const vocabArchiveCurrent = Boolean(localVocabArchive?.text);
-            const vocabCurrent = vocabSourceCurrent && localVocabDay === todayHkt && vocabArchiveCurrent;
+            const vocabArchiveMatchesLatest = Boolean(
+              localVocabArchiveData &&
+              localVocab &&
+              JSON.stringify(localVocabArchiveData) === JSON.stringify(localVocab)
+            );
+            const vocabCurrent = vocabSourceCurrent
+              && localVocabDay === todayHkt
+              && vocabArchiveCurrent
+              && vocabArchiveMatchesLatest;
             const structuralCurrent = structuralDefects.length === 0;
 
             const layers = {
@@ -281,6 +295,7 @@ jobs:
                 upstream: sourceVocabDay || null,
                 japanese: localVocabDay || null,
                 datedArchivePresent: vocabArchiveCurrent,
+                datedArchiveMatchesLatest: vocabArchiveMatchesLatest,
               },
               structural: {
                 current: structuralCurrent,
@@ -367,6 +382,7 @@ jobs:
               stale.push('vocab');
               if (localVocabDay !== todayHkt) faultReasons.push(`vocab-japanese-date expected=${todayHkt} actual=${localVocabDay || 'missing'}`);
               if (!vocabArchiveCurrent) faultReasons.push(`vocab-dated-archive-missing data/vocab/${todayHkt}.json`);
+              else if (!vocabArchiveMatchesLatest) faultReasons.push(`vocab-dated-archive-mismatch data/vocab/${todayHkt}.json`);
             }
             if (!structuralCurrent) {
               stale.push('structural');
@@ -413,7 +429,7 @@ jobs:
             } else if (state === 'RED') {
               if (recovery.upstreamStockRequired) {
                 status = 'upstream-stock-source-stale';
-                decision = 'WAIT_FOR_UPSTREAM_STOCK_COLLECTOR';
+                decision = 'NAS_CONTROLLER_MUST_DISPATCH_SOURCE_STOCK_RECOVERY';
               } else {
                 status = recovery.coreRequired || recovery.rollingRequired || recovery.vocabRequired || recovery.structuralRequired
                   ? 'awaiting-nas-repair-dispatch'
@@ -442,7 +458,7 @@ jobs:
             };
 
             const health = {
-              version: 6,
+              version: 7,
               assessedAt: new Date().toISOString(),
               state,
               summary: state === 'GREEN'
@@ -591,7 +607,7 @@ jobs:
             } catch (_) {}
 
             const fallback = {
-              version: 6,
+              version: 7,
               assessedAt: new Date().toISOString(),
               state: 'RED',
               summary: 'EDITOR_ORCHESTRATOR_FAILED_BEFORE_ASSESSMENT',
