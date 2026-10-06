@@ -1,6 +1,6 @@
 {
   "version": 6,
-  "assessedAt": "2026-10-06T13:25:59.892Z",
+  "assessedAt": "2026-10-06T13:28:27.806Z",
   "state": "RED",
   "summary": "NOT_GREEN:daily-date-lag upstream=2026-10-06 japanese=2026-10-01 | live-lag-minutes=865 | desk-lag-minutes=113 | desk-translation-degraded | stocks-relative-lag-minutes=11662 | nas-delivery-fingerprint=2026-10-01|2026-10-05T22:12:00.000Z|2026-10-06T10:44:00.000Z|2026-09-28T09:58:01.264Z",
   "faultReasons": [
@@ -40,7 +40,7 @@
       "lagMinutes": 11662,
       "relativeCurrent": false,
       "sourceAbsoluteFresh": true,
-      "sourceAgeMinutes": 66,
+      "sourceAgeMinutes": 68,
       "maxAgeHours": 8
     },
     "vocab": {
@@ -89,7 +89,18 @@
     "terminalRepairBudget": false,
     "currentOnlyCoreRepair": true,
     "archiveBackfillAllowed": false,
-    "results": []
+    "results": [
+      {
+        "robot": "rolling-exhaustive-recovery",
+        "workflow": "repair-all-published-quality.yml",
+        "dispatched": false,
+        "active": false,
+        "reason": "writer-active",
+        "blockerWorkflow": "sync-japanese-news.yml",
+        "blockerRunId": 37470342528,
+        "primaryRunId": 37469680678
+      }
+    ]
   },
   "sourceRead": {
     "mode": "public-raw-retry",
@@ -100,7 +111,7 @@
   },
   "robot": {
     "current": true,
-    "runId": 37470727234,
+    "runId": 37471045655,
     "event": "workflow_run",
     "role": "nas-attestation-recorder",
     "executor": "github-subordinate-workers",
