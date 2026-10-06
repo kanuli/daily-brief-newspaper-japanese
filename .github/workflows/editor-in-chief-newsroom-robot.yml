@@ -16,6 +16,8 @@ on:
       - "日本語ニュース同期・品質ゲート・Discord配信"
       - "Maintenance Robot — 日本語ローリング翻訳品質修復"
       - "日本語全公開コンテンツ品質修復"
+      - "Sync daily Japanese vocab"
+      - "Editor Recovery — Daily Vocab Exhaustive"
     types: [completed]
 
 permissions:
@@ -460,7 +462,6 @@ jobs:
             if (state === 'RED' && recovery.rollingRequired) {
               const primary = await latestCompleted('repair-extra-translation-quality.yml');
               const fallback = await latestCompleted('repair-all-published-quality.yml');
-              const primaryFailed = Boolean(primary && !['success','neutral','skipped'].includes(String(primary.conclusion || '')));
               const primaryAt = Date.parse(String(primary?.created_at || ''));
               const fallbackAt = Date.parse(String(fallback?.created_at || ''));
               const fallbackAlreadyTriedForPrimary = Boolean(
@@ -468,7 +469,8 @@ jobs:
                 Number.isFinite(fallbackAt) &&
                 fallbackAt >= primaryAt
               );
-              if (primaryFailed && !fallbackAlreadyTriedForPrimary) {
+              const primaryOutcomeStillBad = Boolean(primary && !fallbackAlreadyTriedForPrimary);
+              if (primaryOutcomeStillBad) {
                 const writer = await activeWriter();
                 if (writer) {
                   core.warning(
@@ -487,7 +489,7 @@ jobs:
                 } else {
                   const rollingFallback = await dispatch(
                     'repair-all-published-quality.yml',
-                    `rolling-exhaustive-after-primary-failure primaryRun=${primary.id}`
+                    `rolling-exhaustive-after-verified-stale primaryRun=${primary.id} conclusion=${primary.conclusion || 'unknown'}`
                   );
                   results.push({
                     robot: 'rolling-exhaustive-recovery',
@@ -502,17 +504,45 @@ jobs:
             }
 
             if (state === 'RED' && recovery.vocabRequired) {
-              const vocabResult = await dispatch(
-                'sync-daily-vocab.yml',
-                `vocab-self-heal expected=${todayHkt} local=${localVocabDay || 'missing'} archive=${vocabArchiveCurrent}`
+              const primary = await latestCompleted('sync-daily-vocab.yml');
+              const fallback = await latestCompleted('recover-daily-vocab.yml');
+              const primaryAt = Date.parse(String(primary?.created_at || ''));
+              const fallbackAt = Date.parse(String(fallback?.created_at || ''));
+              const useFallback = Boolean(
+                primary &&
+                (!fallback || !Number.isFinite(fallbackAt) || (Number.isFinite(primaryAt) && primaryAt >= fallbackAt))
               );
-              results.push({
-                robot: 'vocab-translator',
-                workflow: vocabResult.workflow,
-                dispatched: vocabResult.dispatched,
-                active: vocabResult.active,
-                runId: vocabResult.runId,
-              });
+              const targetWorkflow = useFallback ? 'recover-daily-vocab.yml' : 'sync-daily-vocab.yml';
+              const otherWorkflow = useFallback ? 'sync-daily-vocab.yml' : 'recover-daily-vocab.yml';
+              const otherActive = await active(otherWorkflow);
+              if (otherActive) {
+                core.warning(
+                  `VOCAB_RECOVERY_WAIT target=${targetWorkflow} blocker=${otherWorkflow} run=${otherActive.id}`
+                );
+                results.push({
+                  robot: useFallback ? 'vocab-exhaustive-recovery' : 'vocab-translator',
+                  workflow: targetWorkflow,
+                  dispatched: false,
+                  active: false,
+                  reason: 'alternate-vocab-worker-active',
+                  blockerWorkflow: otherWorkflow,
+                  blockerRunId: otherActive.id,
+                });
+              } else {
+                const vocabResult = await dispatch(
+                  targetWorkflow,
+                  `vocab-outcome-verified-stale expected=${todayHkt} local=${localVocabDay || 'missing'} archive=${vocabArchiveCurrent}`
+                );
+                results.push({
+                  robot: useFallback ? 'vocab-exhaustive-recovery' : 'vocab-translator',
+                  workflow: vocabResult.workflow,
+                  dispatched: vocabResult.dispatched,
+                  active: vocabResult.active,
+                  runId: vocabResult.runId,
+                  previousPrimaryRunId: primary?.id || null,
+                  previousFallbackRunId: fallback?.id || null,
+                });
+              }
             }
 
             if (state === 'RED' && !sourceReadable) {
@@ -600,7 +630,8 @@ jobs:
                 stockAbsoluteFreshnessHours: STOCK_MAX_AGE_MS / (60 * MINUTE),
                 vocabCurrentHktDateRequired: true,
                 vocabDatedArchiveRequired: true,
-                vocabSelfHealingWorkflow: 'sync-daily-vocab.yml',
+                vocabSelfHealingWorkflow: 'sync-daily-vocab.yml -> verify -> recover-daily-vocab.yml -> verify',
+                workflowOutcomeMustBeDataVerifiedBeforeAdvancing: true,
               },
             };
 

@@ -1,5 +1,5 @@
 {
-  "version": 5,
+  "version": 6,
   "owner": "NAS Editor-in-Chief",
   "principles": [
     "Editor-in-Chief is the sole scheduler and recovery authority",
@@ -77,7 +77,15 @@
       "writes": [
         "data/vocab/latest.json",
         "data/vocab/YYYY-MM-DD.json"
-      ]
+      ],
+      "fallbackRobot": "vocab-exhaustive-recovery",
+      "fallbackWorkflow": "recover-daily-vocab.yml",
+      "recoveryPolicy": {
+        "verifyOutcomeBeforeAccepting": true,
+        "primary": "sync-daily-vocab.yml with bounded retries",
+        "fallback": "recover-daily-vocab.yml with longer bounded backoff",
+        "acceptance": "latest.date == today HKT and dated archive exists and matches latest"
+      }
     },
     {
       "id": "f3",
@@ -128,6 +136,7 @@
     "vocabCurrentHktDateRequired": true,
     "vocabDatedArchiveRequired": true,
     "detailedFaultReasons": true,
-    "workflowOutcomeVerification": true
+    "workflowOutcomeVerification": true,
+    "vocabOutcomeAlternateRecovery": true
   }
 }

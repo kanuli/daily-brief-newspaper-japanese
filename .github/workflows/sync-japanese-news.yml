@@ -22,7 +22,7 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 35
     continue-on-error: true
     outputs:
       core_ok: ${{ steps.core_status.outputs.ok }}
@@ -202,17 +202,88 @@ jobs:
           done
           exit 1
 
+      - name: 通常コア結果をデータで再検証
+        id: verify_core_outcome
+        if: always() && steps.publish_news.outcome == 'success'
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          SNAP=Path('.cantonese-snapshot/data')
+          DATA=Path('data')
+          BAD={'EDITORIAL_MINIMUM_FALLBACK','TRANSLATION_FAILED','TRANSLATION_DEGRADED'}
+
+          def load(base, name):
+              return json.loads((base/name).read_text(encoding='utf-8'))
+
+          def stamp(payload):
+              for key in ('generatedAt','lastUpdated','sourceGeneratedAt','checkedAt'):
+                  value=payload.get(key)
+                  if not value:
+                      continue
+                  try:
+                      dt=datetime.fromisoformat(str(value).replace('Z','+00:00'))
+                      if dt.tzinfo is None: dt=dt.replace(tzinfo=timezone.utc)
+                      return dt.astimezone(timezone.utc)
+                  except ValueError:
+                      pass
+              return None
+
+          def stories(value):
+              if isinstance(value, dict):
+                  if value.get('id') and (value.get('title') or value.get('summary') or value.get('body')):
+                      yield value
+                  for child in value.values():
+                      yield from stories(child)
+              elif isinstance(value, list):
+                  for child in value:
+                      yield from stories(child)
+
+          failures=[]
+          source_latest=load(SNAP,'latest.json')
+          local_latest=load(DATA,'latest.json')
+          source_live=load(SNAP,'live.json')
+          local_live=load(DATA,'live.json')
+
+          source_day=str(source_latest.get('date') or '')[:10]
+          local_day=str(local_latest.get('date') or '')[:10]
+          if local_day < source_day:
+              failures.append(f'latest-date-stale:{local_day}<{source_day}')
+
+          ss=stamp(source_live); ls=stamp(local_live)
+          if not ss or not ls or ls.timestamp()+60 < ss.timestamp():
+              failures.append(f'live-stale:source={ss}:local={ls}')
+
+          for name, data in [('latest.json',local_latest),('live.json',local_live)]:
+              if data.get('translationDegraded') or int(data.get('translationDeferredCount') or 0)>0:
+                  failures.append(f'{name}:degraded-metadata')
+              for story in stories(data):
+                  status=str(story.get('translationStatus') or '').strip().upper()
+                  if status in BAD:
+                      failures.append(f'{name}:{story.get("id")}:{status}')
+
+          if failures:
+              print('NORMAL_CORE_OUTCOME_NOT_ACCEPTED')
+              for failure in failures[:50]: print(' -', failure)
+              raise SystemExit(1)
+          print('NORMAL_CORE_OUTCOME_VERIFIED')
+          PY
+
       - name: 通常コア同期結果を記録
         id: core_status
         if: always()
         shell: bash
         run: |
-          if [ "${{ steps.publish_news.outcome }}" = 'success' ]; then
+          if [ "${{ steps.verify_core_outcome.outcome }}" = 'success' ]; then
             echo 'ok=true' >> "$GITHUB_OUTPUT"
-            echo 'NORMAL_CORE_SYNC_OK'
+            echo 'NORMAL_CORE_SYNC_OK_DATA_VERIFIED'
           else
             echo 'ok=false' >> "$GITHUB_OUTPUT"
-            echo 'NORMAL_CORE_SYNC_FAILED_HANDOFF_TO_REMOTE_RECOVERY'
+            echo 'NORMAL_CORE_SYNC_FAILED_OR_NO_IMPROVEMENT_HANDOFF_TO_RECOVERY'
           fi
 
       - name: F3 workerへ引き渡し
