@@ -9,7 +9,7 @@
     "GREEN requires deployed production verification and fresh NAS attestation",
     "workflow success is never trusted without post-run data verification",
     "absolute freshness gates prevent upstream+downstream stale equality from being marked healthy",
-    "final Core recovery must remain independent of retired or rate-limited hosted translation APIs"
+    "final Core recovery must remain local and independent of retired or rate-limited hosted translation APIs"
   ],
   "stages": [
     {
@@ -30,9 +30,10 @@
       "finalFallbackRobot": "secondary-local-core-recovery",
       "finalFallbackWorkflow": "sync-japanese-news.yml",
       "finalFallbackPolicy": {
-        "backend": "facebook/nllb-200-distilled-600M on GitHub Actions CPU",
-        "sourceLanguage": "Traditional Chinese normalized locally to zho_Hans",
-        "targetLanguage": "jpn_Jpan",
+        "backend": "facebook/m2m100_418M on GitHub Actions CPU",
+        "license": "MIT",
+        "sourceLanguage": "zh after local Traditional-to-Simplified normalization",
+        "targetLanguage": "ja",
         "independentFrom": [
           "Google/GTX",
           "MyMemory",
