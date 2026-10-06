@@ -491,6 +491,7 @@ jobs:
                   summary: item?.summary,
                   layers: item?.layers,
                   recovery: item?.recovery,
+                  faultReasons: item?.faultReasons,
                   maintenance: item?.maintenance,
                   sourceRead: item?.sourceRead,
                   policy: item?.policy,
@@ -583,6 +584,7 @@ jobs:
               summary: 'EDITOR_ORCHESTRATOR_FAILED_BEFORE_ASSESSMENT',
               layers: prior?.layers || {},
               recovery: prior?.recovery || {},
+              faultReasons: prior?.faultReasons || ['editor-orchestrator-failed-before-assessment'],
               maintenance: {
                 ...(prior?.maintenance || {}),
                 owner: 'Editor-in-Chief',
