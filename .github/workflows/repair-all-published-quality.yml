@@ -58,6 +58,54 @@ jobs:
       - name: Freeze one Cantonese source commit
         run: python scripts/cantonese_snapshot.py
 
+      - name: Refuse stale upstream stock source before Japanese repair
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          path = Path('.cantonese-snapshot/data/stocks-latest.json')
+          payload = json.loads(path.read_text(encoding='utf-8'))
+
+          stamp = None
+          for key in ('generatedAt','lastUpdated','sourceGeneratedAt','checkedAt'):
+              value = payload.get(key)
+              if not value:
+                  continue
+              try:
+                  stamp = datetime.fromisoformat(str(value).replace('Z','+00:00'))
+                  if stamp.tzinfo is None:
+                      stamp = stamp.replace(tzinfo=timezone.utc)
+                  stamp = stamp.astimezone(timezone.utc)
+                  break
+              except ValueError:
+                  pass
+
+          if stamp is None:
+              print('STOCK_UPSTREAM_ABSOLUTE_FRESHNESS_FAIL reason=missing-timestamp')
+              raise SystemExit(1)
+
+          age = (datetime.now(timezone.utc) - stamp).total_seconds()
+          max_age = 8 * 60 * 60
+          if age < 0 or age > max_age:
+              print(
+                  'STOCK_UPSTREAM_ABSOLUTE_FRESHNESS_FAIL',
+                  f'ageMinutes={round(age / 60)}',
+                  'maxHours=8',
+                  f'source={stamp.isoformat()}',
+              )
+              raise SystemExit(1)
+
+          print(
+              'STOCK_UPSTREAM_ABSOLUTE_FRESHNESS_OK',
+              f'ageMinutes={round(age / 60)}',
+              f'source={stamp.isoformat()}',
+          )
+          PY
+
       - name: Repair and verify rolling Japanese with bounded alternate retries
         timeout-minutes: 10
         shell: bash

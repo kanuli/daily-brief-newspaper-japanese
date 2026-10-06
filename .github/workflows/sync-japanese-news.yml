@@ -528,6 +528,78 @@ jobs:
           python scripts/validate_furigana_readings.py
           python scripts/validate_vocab_quality.py
 
+      - name: Require alternate recovery to improve actual core freshness
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          snap = Path('.cantonese-snapshot/data')
+          data = Path('data')
+          bad = {'EDITORIAL_MINIMUM_FALLBACK','TRANSLATION_FAILED','TRANSLATION_DEGRADED'}
+
+          def load(base, name):
+              return json.loads((base / name).read_text(encoding='utf-8'))
+
+          def stamp(payload):
+              for key in ('generatedAt','lastUpdated','sourceGeneratedAt','checkedAt'):
+                  value = payload.get(key)
+                  if not value:
+                      continue
+                  try:
+                      dt = datetime.fromisoformat(str(value).replace('Z','+00:00'))
+                      if dt.tzinfo is None:
+                          dt = dt.replace(tzinfo=timezone.utc)
+                      return dt.astimezone(timezone.utc)
+                  except ValueError:
+                      pass
+              return None
+
+          def stories(value):
+              if isinstance(value, dict):
+                  if value.get('id') and (value.get('title') or value.get('summary') or value.get('body')):
+                      yield value
+                  for child in value.values():
+                      yield from stories(child)
+              elif isinstance(value, list):
+                  for child in value:
+                      yield from stories(child)
+
+          failures = []
+          source_latest = load(snap, 'latest.json')
+          local_latest = load(data, 'latest.json')
+          source_live = load(snap, 'live.json')
+          local_live = load(data, 'live.json')
+
+          source_day = str(source_latest.get('date') or '')[:10]
+          local_day = str(local_latest.get('date') or '')[:10]
+          if local_day < source_day:
+              failures.append(f'latest-date-stale:{local_day}<{source_day}')
+
+          source_live_at = stamp(source_live)
+          local_live_at = stamp(local_live)
+          if not source_live_at or not local_live_at or local_live_at.timestamp() + 60 < source_live_at.timestamp():
+              failures.append(f'live-stale:source={source_live_at}:local={local_live_at}')
+
+          for name, payload in [('latest.json', local_latest), ('live.json', local_live)]:
+              if payload.get('translationDegraded') or int(payload.get('translationDeferredCount') or 0) > 0:
+                  failures.append(f'{name}:degraded-metadata')
+              for story in stories(payload):
+                  status = str(story.get('translationStatus') or '').strip().upper()
+                  if status in bad:
+                      failures.append(f'{name}:{story.get("id")}:{status}')
+
+          if failures:
+              print('CORE_ALTERNATE_OUTCOME_NOT_ACCEPTED')
+              for failure in failures[:50]:
+                  print(' -', failure)
+              raise SystemExit(1)
+          print('CORE_ALTERNATE_OUTCOME_VERIFIED')
+          PY
+
       - name: Publish verified independent alternate recovery
         shell: bash
         run: |
