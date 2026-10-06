@@ -1,6 +1,6 @@
 {
   "version": 6,
-  "assessedAt": "2026-10-06T13:16:59.128Z",
+  "assessedAt": "2026-10-06T13:17:51.932Z",
   "state": "RED",
   "summary": "NOT_GREEN:daily-date-lag upstream=2026-10-06 japanese=2026-10-01 | live-lag-minutes=865 | desk-lag-minutes=113 | desk-translation-degraded | stocks-relative-lag-minutes=11662 | nas-delivery-fingerprint=2026-10-01|2026-10-05T22:12:00.000Z|2026-10-06T10:44:00.000Z|2026-09-28T09:58:01.264Z",
   "faultReasons": [
@@ -40,7 +40,7 @@
       "lagMinutes": 11662,
       "relativeCurrent": false,
       "sourceAbsoluteFresh": true,
-      "sourceAgeMinutes": 57,
+      "sourceAgeMinutes": 58,
       "maxAgeHours": 8
     },
     "vocab": {
@@ -111,7 +111,7 @@
   },
   "robot": {
     "current": true,
-    "runId": 37469547567,
+    "runId": 37469663097,
     "event": "workflow_run",
     "role": "nas-attestation-recorder",
     "executor": "github-subordinate-workers",
