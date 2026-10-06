@@ -40,7 +40,8 @@
           "primary OPUS-MT"
         ],
         "scope": "rejected source-linked fields only",
-        "publishRequires": "source parity + non-degraded + content integrity + editorial quality + furigana + vocab validation"
+        "publishRequires": "source parity + non-degraded + content integrity + editorial quality + furigana + vocab validation",
+        "decodeStrategy": "direct zh→ja; if rejected, local zh→en→ja pivot; then clause-local retry; never relax quality gates"
       }
     },
     {
