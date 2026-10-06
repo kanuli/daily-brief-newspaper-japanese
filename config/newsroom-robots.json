@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "owner": "NAS Editor-in-Chief",
   "principles": [
     "Editor-in-Chief is the sole scheduler and recovery authority",
@@ -8,7 +8,8 @@
     "each stage must be verified before the next stage is assigned",
     "GREEN requires deployed production verification and fresh NAS attestation",
     "workflow success is never trusted without post-run data verification",
-    "absolute freshness gates prevent upstream+downstream stale equality from being marked healthy"
+    "absolute freshness gates prevent upstream+downstream stale equality from being marked healthy",
+    "final Core recovery must remain independent of retired or rate-limited hosted translation APIs"
   ],
   "stages": [
     {
@@ -26,11 +27,18 @@
         "google429CircuitBreakerSeconds": 90,
         "verifyOutcomeBeforeAccepting": true
       },
-      "finalFallbackRobot": "github-models-core-recovery",
+      "finalFallbackRobot": "secondary-local-core-recovery",
       "finalFallbackWorkflow": "sync-japanese-news.yml",
       "finalFallbackPolicy": {
-        "backend": "GitHub Models via built-in GITHUB_TOKEN",
-        "scope": "rejected fields only",
+        "backend": "facebook/nllb-200-distilled-600M on GitHub Actions CPU",
+        "sourceLanguage": "Traditional Chinese normalized locally to zho_Hans",
+        "targetLanguage": "jpn_Jpan",
+        "independentFrom": [
+          "Google/GTX",
+          "MyMemory",
+          "primary OPUS-MT"
+        ],
+        "scope": "rejected source-linked fields only",
         "publishRequires": "source parity + non-degraded + content integrity + editorial quality + furigana + vocab validation"
       }
     },
