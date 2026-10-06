@@ -165,6 +165,76 @@ def repair_tree(local, source, name: str, story_mode: str) -> int:
     return repaired
 
 
+
+def iter_story_dicts(value):
+    if extra.story_like(value):
+        yield value
+    if isinstance(value, dict):
+        for child in value.values():
+            yield from iter_story_dicts(child)
+    elif isinstance(value, list):
+        for child in value:
+            yield from iter_story_dicts(child)
+
+
+def index_story_dicts(value):
+    return {
+        str(story.get("id")): story
+        for story in iter_story_dicts(value)
+        if story.get("id")
+    }
+
+
+def finalize_clean_metadata(name: str) -> None:
+    """Clear degraded markers only after every source-linked field is healthy."""
+    path = DATA / name
+    if not path.is_file():
+        return
+    source = source_for(name)
+    if source is None:
+        return
+    local = json.loads(path.read_text(encoding="utf-8"))
+    source_by_id = index_story_dicts(source)
+    failures = []
+
+    for story in iter_story_dicts(local):
+        story_id = str(story.get("id") or "")
+        source_story = source_by_id.get(story_id)
+        status = str(story.get("translationStatus") or "").strip().upper()
+        if not source_story:
+            if status in {"EDITORIAL_MINIMUM_FALLBACK", "TRANSLATION_FAILED", "TRANSLATION_DEGRADED"}:
+                failures.append(f"{name}:{story_id}:unmatched-{status}")
+            continue
+
+        for field in TRANSLATE_KEYS:
+            source_text = source_story.get(field)
+            target_text = story.get(field)
+            if not isinstance(source_text, str) or not source_text.strip():
+                continue
+            if not isinstance(target_text, str):
+                failures.append(f"{name}:{story_id}:{field}:missing")
+                continue
+            strict = field in integrity.PROSE_FIELDS
+            if bad(source_text, target_text, strict, field):
+                failures.append(f"{name}:{story_id}:{field}:rejected")
+
+        if status in {"EDITORIAL_MINIMUM_FALLBACK", "TRANSLATION_FAILED", "TRANSLATION_DEGRADED"}:
+            story.pop("translationStatus", None)
+
+    if failures:
+        raise RuntimeError(
+            "Rolling recovery cannot clear degraded metadata; "
+            + ", ".join(failures[:40])
+        )
+
+    local["translationDegraded"] = False
+    local["translationDeferredCount"] = 0
+    local["translationDeferredIds"] = []
+    if "translationDeferredMetadata" in local:
+        local["translationDeferredMetadata"] = []
+    path.write_text(json.dumps(local, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print("REMOTE_FULL_DEGRADED_MARKERS_CLEARED", name)
+
 def source_for(name: str):
     return snapshot.load_json(name, optional=name.startswith("topic-more/"))
 
@@ -223,6 +293,16 @@ def main():
         for name in names:
             count, ok = repair_rolling_file_isolated(name)
             total += count
+            if ok:
+                try:
+                    finalize_clean_metadata(name)
+                except Exception as exc:
+                    ok = False
+                    print(
+                        "REMOTE_FULL_METADATA_FINALIZE_FAILED",
+                        f"file={name}",
+                        f"error={type(exc).__name__}:{str(exc)[:500]}",
+                    )
             if not ok:
                 isolated_failures.append(name)
 
