@@ -32,9 +32,11 @@ CORE_FILES = ("latest.json", "live.json")
 CORE_FIELDS = ("section", "sectionLabel") + integrity.STORY_TEXT_FIELDS
 BAD_STATUSES = {"EDITORIAL_MINIMUM_FALLBACK", "TRANSLATION_FAILED", "TRANSLATION_DEGRADED"}
 
-MODEL_NAME = os.getenv("SECONDARY_CORE_MODEL", "facebook/m2m100_418M")
-SOURCE_LANG = os.getenv("SECONDARY_CORE_SOURCE_LANG", "zh")
-TARGET_LANG = os.getenv("SECONDARY_CORE_TARGET_LANG", "ja")
+# Keep the final fallback deterministic across queued/older workflow runs.
+# Do not let stale workflow environment variables switch this backend.
+MODEL_NAME = "facebook/m2m100_418M"
+SOURCE_LANG = "zh"
+TARGET_LANG = "ja"
 MAX_SOURCE_TOKENS = 480
 MAX_NEW_TOKENS = 520
 _MODEL = None
