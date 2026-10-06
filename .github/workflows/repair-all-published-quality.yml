@@ -7,8 +7,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: japanese-full-published-quality-repair
-  cancel-in-progress: true
+  group: japanese-newsroom-writer
+  cancel-in-progress: false
 
 jobs:
   repair-rolling:
