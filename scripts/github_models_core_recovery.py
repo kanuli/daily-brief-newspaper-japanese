@@ -12,7 +12,7 @@ from __future__ import annotations
 
 import json
 import os
-from typing import Iterable
+from pathlib import Path
 
 import requests
 
@@ -134,6 +134,53 @@ def github_models_translate(source: str, strict: bool = False) -> str:
     raise RuntimeError("GitHub Models translation repair exhausted: " + "; ".join(errors))
 
 
+BAD_STATUSES = {"EDITORIAL_MINIMUM_FALLBACK", "TRANSLATION_FAILED", "TRANSLATION_DEGRADED"}
+
+
+def _finalize_clean_metadata() -> None:
+    """Clear degraded markers only after every source-linked field revalidates."""
+    for name in repair.CORE_FILES:
+        path = repair.DATA / name
+        data = json.loads(path.read_text(encoding="utf-8"))
+        source = repair.snapshot.load_json(name)
+        source_by_id = repair.index_stories(source)
+        local_by_id = repair.index_stories(data)
+        failures: list[str] = []
+
+        for story_id, local_story in local_by_id.items():
+            source_story = source_by_id.get(story_id)
+            if not source_story:
+                continue
+            for field in repair.CORE_FIELDS:
+                source_text = source_story.get(field)
+                if not isinstance(source_text, str) or not source_text.strip():
+                    continue
+                target = local_story.get(field)
+                strict = field in repair.integrity.PROSE_FIELDS
+                if repair.bad_translation(source_text, str(target or ""), strict, field):
+                    failures.append(f"{name}:{story_id}:{field}")
+            status = str(local_story.get("translationStatus") or "").strip().upper()
+            if status in BAD_STATUSES:
+                local_story.pop("translationStatus", None)
+
+        if failures:
+            raise RuntimeError(
+                "GitHub Models recovery still has rejected fields: "
+                + ", ".join(failures[:30])
+            )
+
+        data["translationDegraded"] = False
+        data["translationDeferredCount"] = 0
+        data["translationDeferredIds"] = []
+        if "translationDeferredMetadata" in data:
+            data["translationDeferredMetadata"] = []
+        path.write_text(
+            json.dumps(data, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
+        print("GITHUB_MODELS_DEGRADED_MARKERS_CLEARED", name)
+
+
 def main() -> int:
     if not TOKEN:
         raise SystemExit("GITHUB_MODELS_TOKEN/GITHUB_TOKEN is required")
@@ -144,6 +191,8 @@ def main() -> int:
     # on the existing local translator and all publication gates stay unchanged.
     runtime._remote_quality_fallback = github_models_translate
     repair.main()
+    _finalize_clean_metadata()
+    runtime.checkpoint_cache("github-models-core-final")
     print("GITHUB_MODELS_CORE_RECOVERY_OK")
     return 0
 
