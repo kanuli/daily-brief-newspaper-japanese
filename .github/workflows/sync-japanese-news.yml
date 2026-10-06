@@ -13,10 +13,11 @@ permissions:
   contents: write
 
 concurrency:
-  group: japanese-news-hourly
-  # NAS already suppresses duplicate dispatches. If this recovery workflow
-  # itself is upgraded, the newest code must supersede an older in-flight run.
-  cancel-in-progress: true
+  # All NAS-dispatched publication writers share one server-side lock.
+  # Workflow-file upgrade pushes use a separate superseding group so stale
+  # recovery code is cancelled without cancelling a live newsroom writer.
+  group: ${{ github.event_name == 'workflow_dispatch' && 'japanese-newsroom-writer' || 'japanese-newsroom-core-upgrade' }}
+  cancel-in-progress: ${{ github.event_name != 'workflow_dispatch' }}
 
 jobs:
   sync:
