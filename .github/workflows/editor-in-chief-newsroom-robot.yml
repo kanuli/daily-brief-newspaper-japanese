@@ -462,7 +462,6 @@ jobs:
             if (state === 'RED' && recovery.rollingRequired) {
               const primary = await latestCompleted('repair-extra-translation-quality.yml');
               const fallback = await latestCompleted('repair-all-published-quality.yml');
-              const primaryFailed = Boolean(primary && !['success','neutral','skipped'].includes(String(primary.conclusion || '')));
               const primaryAt = Date.parse(String(primary?.created_at || ''));
               const fallbackAt = Date.parse(String(fallback?.created_at || ''));
               const fallbackAlreadyTriedForPrimary = Boolean(
@@ -470,7 +469,8 @@ jobs:
                 Number.isFinite(fallbackAt) &&
                 fallbackAt >= primaryAt
               );
-              if (primaryFailed && !fallbackAlreadyTriedForPrimary) {
+              const primaryOutcomeStillBad = Boolean(primary && !fallbackAlreadyTriedForPrimary);
+              if (primaryOutcomeStillBad) {
                 const writer = await activeWriter();
                 if (writer) {
                   core.warning(
@@ -489,7 +489,7 @@ jobs:
                 } else {
                   const rollingFallback = await dispatch(
                     'repair-all-published-quality.yml',
-                    `rolling-exhaustive-after-primary-failure primaryRun=${primary.id}`
+                    `rolling-exhaustive-after-verified-stale primaryRun=${primary.id} conclusion=${primary.conclusion || 'unknown'}`
                   );
                   results.push({
                     robot: 'rolling-exhaustive-recovery',
