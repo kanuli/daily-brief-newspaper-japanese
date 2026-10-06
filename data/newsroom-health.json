@@ -1,6 +1,6 @@
 {
   "version": 6,
-  "assessedAt": "2026-10-06T12:49:13.024Z",
+  "assessedAt": "2026-10-06T12:53:17.155Z",
   "state": "RED",
   "summary": "NOT_GREEN:daily-date-lag upstream=2026-10-06 japanese=2026-10-01 | live-lag-minutes=865 | desk-translation-degraded | stocks-relative-lag-minutes=11662 | nas-delivery-fingerprint=2026-10-01|2026-10-05T22:12:00.000Z|2026-10-06T10:44:00.000Z|2026-09-28T09:58:01.264Z",
   "faultReasons": [
@@ -39,8 +39,8 @@
       "lagMinutes": 11662,
       "relativeCurrent": false,
       "sourceAbsoluteFresh": true,
-      "sourceAgeMinutes": 29,
-      "maxAgeHours": 96
+      "sourceAgeMinutes": 33,
+      "maxAgeHours": 8
     },
     "vocab": {
       "current": true,
@@ -99,7 +99,7 @@
   },
   "robot": {
     "current": true,
-    "runId": 37466037671,
+    "runId": 37466538881,
     "event": "workflow_run",
     "role": "nas-attestation-recorder",
     "executor": "github-subordinate-workers",
@@ -120,7 +120,7 @@
     "recoveryCompletionAlwaysRechecked": true,
     "upstreamReadFailureDoesNotAuthorizeMutation": true,
     "greenRequiresFreshNasDeliveryAttestation": true,
-    "stockAbsoluteFreshnessHours": 96,
+    "stockAbsoluteFreshnessHours": 8,
     "vocabCurrentHktDateRequired": true,
     "vocabDatedArchiveRequired": true,
     "vocabSelfHealingWorkflow": "sync-daily-vocab.yml"
