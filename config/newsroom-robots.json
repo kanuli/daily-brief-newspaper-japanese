@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 5,
   "owner": "NAS Editor-in-Chief",
   "principles": [
     "Editor-in-Chief is the sole scheduler and recovery authority",
@@ -24,12 +24,17 @@
       "fallbackRobot": "core-alternate-recovery",
       "fallbackMode": "bounded alternate job inside sync-japanese-news.yml after normal and emergency outcomes fail",
       "recoveryPolicy": {
+        "primary": "local OPUS-MT with 429 circuit breaker",
+        "firstFallback": "single emergency remote rebuild",
+        "alternate": "independent local M2M100 direct → zh-en-ja pivot → clause retry",
+        "retryPolicy": "verify each outcome; do not repeat hosted recovery loops after emergency failure",
         "google429CircuitBreakerSeconds": 90,
+        "publishRequiresNonDegraded": true,
         "verifyOutcomeBeforeAccepting": true
       },
-      "finalFallbackRobot": "secondary-local-core-recovery",
-      "finalFallbackWorkflow": "sync-japanese-news.yml",
-      "finalFallbackPolicy": {
+      "alternateRobot": "core-secondary-local-recovery",
+      "alternateWorkflow": "sync-japanese-news.yml",
+      "alternatePolicy": {
         "backend": "facebook/m2m100_418M on GitHub Actions CPU",
         "license": "MIT",
         "sourceLanguage": "zh after local Traditional-to-Simplified normalization",
