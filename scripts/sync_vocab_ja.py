@@ -9,7 +9,7 @@ import time
 from pathlib import Path
 
 import requests
-from deep_translator import GoogleTranslator
+from deep_translator import GoogleTranslator, MyMemoryTranslator
 
 SOURCE = "https://raw.githubusercontent.com/kanuli/daily-brief-newspaper/main/data/vocab/latest.json"
 OUT = Path("data/vocab/latest.json")
@@ -35,35 +35,62 @@ def looks_chinese(text):
 
 
 def gtx(text):
-    r = requests.get(
-        "https://translate.googleapis.com/translate_a/single",
-        params={"client": "gtx", "sl": "zh-TW" if looks_chinese(text) else "auto", "tl": "ja", "dt": "t", "q": text},
-        headers={"User-Agent": "daily-brief-newspaper-japanese"}, timeout=25,
-    )
-    r.raise_for_status()
-    payload = r.json()
-    segments = payload[0] if isinstance(payload, list) and payload else []
-    value = "".join(str(x[0]) for x in segments if isinstance(x, list) and x and x[0])
-    if not value.strip():
-        raise RuntimeError("empty GTX translation")
-    return value
+    last_error = None
+    for attempt in range(3):
+        try:
+            r = requests.get(
+                "https://translate.googleapis.com/translate_a/single",
+                params={"client": "gtx", "sl": "zh-TW" if looks_chinese(text) else "auto", "tl": "ja", "dt": "t", "q": text},
+                headers={"User-Agent": "daily-brief-newspaper-japanese"}, timeout=25,
+            )
+            r.raise_for_status()
+            payload = r.json()
+            segments = payload[0] if isinstance(payload, list) and payload else []
+            value = "".join(str(x[0]) for x in segments if isinstance(x, list) and x and x[0])
+            if not value.strip():
+                raise RuntimeError("empty GTX translation")
+            return value
+        except Exception as exc:
+            last_error = exc
+            rate_limited = "429" in str(exc) or "Too Many Requests" in str(exc)
+            delay = (20 * (attempt + 1)) if rate_limited else (2 * (attempt + 1))
+            print(f"VOCAB_TRANSLATION_RETRY provider=gtx attempt={attempt + 1} delay={delay}s error={type(exc).__name__}")
+            if attempt < 2:
+                time.sleep(delay)
+    raise RuntimeError(f"GTX translation failed: {last_error}")
 
 
 def translate(text):
     text = str(text or "").strip()
     if not text or not looks_chinese(text):
         return text
+    errors = []
     try:
         return gtx(text)
-    except Exception:
-        for source in ("zh-TW", "auto", "zh-CN"):
-            try:
-                value = GoogleTranslator(source=source, target="ja").translate(text)
-                if value:
-                    return value
-            except Exception:
-                time.sleep(0.5)
-    raise RuntimeError(f"vocab translation failed: {text!r}")
+    except Exception as exc:
+        errors.append(f"gtx={exc}")
+
+    for source in ("zh-TW", "auto", "zh-CN"):
+        try:
+            value = GoogleTranslator(source=source, target="ja").translate(text)
+            if value:
+                return value
+        except Exception as exc:
+            errors.append(f"google-{source}={exc}")
+            if "429" in str(exc) or "Too Many Requests" in str(exc):
+                time.sleep(20)
+            else:
+                time.sleep(1)
+
+    try:
+        value = MyMemoryTranslator(source="chinese traditional", target="japanese").translate(text)
+        if value and value.strip() and value.strip() != text:
+            print("VOCAB_TRANSLATION_FALLBACK provider=mymemory")
+            return value
+    except Exception as exc:
+        errors.append(f"mymemory={exc}")
+
+    raise RuntimeError(f"vocab translation failed: {text!r}; " + "; ".join(errors))
 
 
 def validate_source(src):
