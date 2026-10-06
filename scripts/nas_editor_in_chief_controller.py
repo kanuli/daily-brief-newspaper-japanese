@@ -212,13 +212,13 @@ def load_state() -> dict:
     try:
         return json.loads(STATE_PATH.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError):
-        return {"version": 2, "jobs": {}, "updatedAt": None}
+        return {"version": 3, "jobs": {}, "updatedAt": None}
 
 
 def save_state(state: dict) -> None:
     try:
         STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
-        state["version"] = 2
+        state["version"] = 3
         state["updatedAt"] = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
         temp = STATE_PATH.with_suffix(STATE_PATH.suffix + ".tmp")
         temp.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
