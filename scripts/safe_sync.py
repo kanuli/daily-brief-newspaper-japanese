@@ -8,6 +8,7 @@ metadata deterministically, and only hands clean Japanese data to the existing
 furigana/audio pipeline.
 """
 import hashlib
+import os
 import re
 import time
 
@@ -31,6 +32,35 @@ DIGIT_KANJI = {
     "0": "〇", "1": "一", "2": "二", "3": "三", "4": "四",
     "5": "五", "6": "六", "7": "七", "8": "八", "9": "九",
 }
+
+GOOGLE_429_COOLDOWN_SECONDS = max(30, int(os.getenv("GOOGLE_429_COOLDOWN_SECONDS", "90")))
+_GOOGLE_BLOCK_UNTIL = 0.0
+
+
+def _rate_limited(exc):
+    text = str(exc or "").lower()
+    return "429" in text or "too many requests" in text or "rate limit" in text
+
+
+def _google_circuit_remaining():
+    return max(0, int(_GOOGLE_BLOCK_UNTIL - time.time()))
+
+
+def _guard_google_circuit():
+    remaining = _google_circuit_remaining()
+    if remaining > 0:
+        raise RuntimeError(f"Google translation circuit open after HTTP 429; retry_after={remaining}s")
+
+
+def _record_google_failure(exc):
+    global _GOOGLE_BLOCK_UNTIL
+    if not _rate_limited(exc):
+        return
+    _GOOGLE_BLOCK_UNTIL = max(_GOOGLE_BLOCK_UNTIL, time.time() + GOOGLE_429_COOLDOWN_SECONDS)
+    print(
+        "TRANSLATION_PROVIDER_RATE_LIMIT",
+        f"provider=google retry_after={GOOGLE_429_COOLDOWN_SECONDS}s",
+    )
 
 # Editorial semantic anchors. These operate on the source and target directly,
 # so a fluent-looking Japanese sentence cannot pass after changing causal agency
@@ -171,6 +201,7 @@ def target_quality_ok(source_text, value, strict=False):
 
 
 def google_gtx_translate(part, strict=False):
+    _guard_google_circuit()
     sources = ("zh-TW", "auto", "zh-CN") if base.likely_chinese_source(part) else ("auto",)
     last_error = None
     for source in sources:
@@ -194,11 +225,17 @@ def google_gtx_translate(part, strict=False):
                 return value
             except Exception as exc:
                 last_error = exc
+                _record_google_failure(exc)
+                if _rate_limited(exc):
+                    raise RuntimeError(
+                        f"Google GTX rate limited; circuit_open={GOOGLE_429_COOLDOWN_SECONDS}s"
+                    ) from exc
                 time.sleep(0.6 * (attempt + 1))
     raise RuntimeError(str(last_error or "Google GTX translation failed"))
 
 
 def google_translate(part, strict=False):
+    _guard_google_circuit()
     sources = ("zh-TW", "auto", "zh-CN") if base.likely_chinese_source(part) else ("auto",)
     last_error = None
     for source in sources:
@@ -210,6 +247,11 @@ def google_translate(part, strict=False):
                 return value
             except Exception as exc:
                 last_error = exc
+                _record_google_failure(exc)
+                if _rate_limited(exc):
+                    raise RuntimeError(
+                        f"Google translator rate limited; circuit_open={GOOGLE_429_COOLDOWN_SECONDS}s"
+                    ) from exc
                 time.sleep(0.8 * (attempt + 1))
     raise RuntimeError(str(last_error or "Google translation failed"))
 
