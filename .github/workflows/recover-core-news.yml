@@ -1,0 +1,133 @@
+name: Editor Recovery — Core News Exhaustive
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: editor-core-exhaustive-recovery
+  cancel-in-progress: false
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      CANTONESE_SNAPSHOT_DIR: .cantonese-snapshot/data
+      GOOGLE_429_COOLDOWN_SECONDS: '120'
+    steps:
+      - name: Checkout current Japanese main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 40
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install lightweight recovery dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --disable-pip-version-check --quiet             requests==2.32.5             deep-translator==1.11.4             pykakasi==2.3.0             SudachiPy==0.6.11             SudachiDict-core==20260723
+
+      - name: Syntax check exhaustive core recovery
+        run: |
+          python -m py_compile             scripts/cantonese_snapshot.py             scripts/emergency_remote_core_sync.py             scripts/safe_sync.py             scripts/self_healing_runtime.py             scripts/prewarm_retry_runtime.py             scripts/validate_content_integrity.py             scripts/validate_editorial_quality.py             scripts/validate_furigana_readings.py             scripts/check_source_drift.py
+
+      - name: Recover core with bounded provider cooldown
+        shell: bash
+        run: |
+          set -euo pipefail
+          for attempt in 1 2 3; do
+            echo "CORE_EXHAUSTIVE_ATTEMPT attempt=${attempt}"
+            git fetch origin main
+            git reset --hard origin/main
+            git clean -fd
+            python scripts/cantonese_snapshot.py
+
+            if python scripts/emergency_remote_core_sync.py; then
+              if python - <<'PY'
+import json
+from pathlib import Path
+BAD = {'EDITORIAL_MINIMUM_FALLBACK','TRANSLATION_FAILED','TRANSLATION_DEGRADED'}
+def stories(value):
+    if isinstance(value, dict):
+        if value.get('id') and (value.get('title') or value.get('summary') or value.get('body')):
+            yield value
+        for child in value.values():
+            yield from stories(child)
+    elif isinstance(value, list):
+        for child in value:
+            yield from stories(child)
+failures=[]
+for name in ('latest.json','live.json'):
+    data=json.loads((Path('data')/name).read_text(encoding='utf-8'))
+    if data.get('translationDegraded') or int(data.get('translationDeferredCount') or 0)>0:
+        failures.append(f'{name}:degraded-metadata')
+    for item in stories(data):
+        status=str(item.get('translationStatus') or '').strip().upper()
+        if status in BAD:
+            failures.append(f'{name}:{item.get("id")}:{status}')
+if failures:
+    print('CORE_EXHAUSTIVE_QUALITY_REJECT')
+    for failure in failures[:50]: print(' -', failure)
+    raise SystemExit(1)
+print('CORE_EXHAUSTIVE_QUALITY_OK')
+PY
+              then
+                echo "CORE_EXHAUSTIVE_RECOVERY_OK attempt=${attempt}"
+                break
+              fi
+            fi
+
+            if [ "$attempt" -eq 3 ]; then
+              echo 'CORE_EXHAUSTIVE_RECOVERY_EXHAUSTED'
+              exit 1
+            fi
+            delay=$((attempt * 120))
+            echo "CORE_EXHAUSTIVE_COOLDOWN delay=${delay}s"
+            sleep "$delay"
+          done
+
+      - name: Verify recovered core against frozen source
+        env:
+          PARITY_SCOPE: base
+        run: python scripts/check_source_drift.py
+
+      - name: Validate recovered core
+        run: |
+          python scripts/validate_content_integrity.py
+          python scripts/validate_editorial_quality.py
+          python scripts/validate_furigana_readings.py
+
+      - name: Publish recovered core
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'daily-brief-japanese-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add data/latest.json data/live.json data/archive.json data/translation-cache.json
+          if git diff --cached --quiet; then
+            echo 'CORE_EXHAUSTIVE_NO_CHANGE'
+            exit 0
+          fi
+          git commit -m 'Editor-in-Chief core exhaustive recovery'
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              sleep $((attempt * 3))
+              continue
+            fi
+            if git push origin HEAD:main; then
+              echo 'CORE_EXHAUSTIVE_PUSH_OK'
+              exit 0
+            fi
+            sleep $((attempt * 3))
+          done
+          exit 1
