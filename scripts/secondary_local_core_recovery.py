@@ -1,0 +1,259 @@
+#!/usr/bin/env python3
+"""Independent secondary local NLLB recovery for degraded Daily/Live fields.
+
+This is the final Core translation fallback. It is deliberately independent of
+Google/GTX/MyMemory and independent of the primary OPUS-MT model. Traditional
+Chinese is normalized locally with OpenCC, then translated locally with NLLB.
+Only source-linked fields that still fail newsroom quality gates are replaced.
+No degraded marker is cleared until a full second-pass validation succeeds.
+"""
+from __future__ import annotations
+
+import json
+import os
+import threading
+from pathlib import Path
+
+import torch
+from opencc import OpenCC
+from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+
+import cantonese_snapshot as snapshot
+import furigana_safe_runtime
+import newsroom_quality
+import safe_sync as safe
+import sync_and_translate as base
+import validate_content_integrity as integrity
+
+
+ROOT = Path(__file__).resolve().parents[1]
+DATA = ROOT / "data"
+CORE_FILES = ("latest.json", "live.json")
+CORE_FIELDS = ("section", "sectionLabel") + integrity.STORY_TEXT_FIELDS
+BAD_STATUSES = {"EDITORIAL_MINIMUM_FALLBACK", "TRANSLATION_FAILED", "TRANSLATION_DEGRADED"}
+
+MODEL_NAME = os.getenv("SECONDARY_CORE_MODEL", "facebook/nllb-200-distilled-600M")
+SOURCE_LANG = os.getenv("SECONDARY_CORE_SOURCE_LANG", "zho_Hans")
+TARGET_LANG = os.getenv("SECONDARY_CORE_TARGET_LANG", "jpn_Jpan")
+MAX_SOURCE_TOKENS = 480
+MAX_NEW_TOKENS = 520
+_MODEL = None
+_TOKENIZER = None
+_LOAD_LOCK = threading.Lock()
+_T2S = OpenCC("t2s")
+
+
+def iter_stories(value):
+    if isinstance(value, dict):
+        if value.get("id") and (value.get("title") or value.get("summary") or value.get("body")):
+            yield value
+        for child in value.values():
+            yield from iter_stories(child)
+    elif isinstance(value, list):
+        for child in value:
+            yield from iter_stories(child)
+
+
+def index_stories(value):
+    return {
+        str(story.get("id")): story
+        for story in iter_stories(value)
+        if story.get("id")
+    }
+
+
+def load_model():
+    global _MODEL, _TOKENIZER
+    if _MODEL is not None and _TOKENIZER is not None:
+        return _TOKENIZER, _MODEL
+    with _LOAD_LOCK:
+        if _MODEL is None or _TOKENIZER is None:
+            threads = max(1, min(4, os.cpu_count() or 2))
+            torch.set_num_threads(threads)
+            _TOKENIZER = AutoTokenizer.from_pretrained(MODEL_NAME, src_lang=SOURCE_LANG)
+            _TOKENIZER.src_lang = SOURCE_LANG
+            _MODEL = AutoModelForSeq2SeqLM.from_pretrained(
+                MODEL_NAME,
+                use_safetensors=True,
+            )
+            _MODEL.to("cpu")
+            _MODEL.eval()
+            print(
+                "SECONDARY_LOCAL_MODEL_READY",
+                f"model={MODEL_NAME}",
+                f"source_lang={SOURCE_LANG}",
+                f"target_lang={TARGET_LANG}",
+                f"cpu_threads={threads}",
+            )
+    return _TOKENIZER, _MODEL
+
+
+def translate_chunk(text: str) -> str:
+    tokenizer, model = load_model()
+    source = _T2S.convert(str(text or ""))
+    encoded = tokenizer(
+        source,
+        return_tensors="pt",
+        truncation=True,
+        max_length=MAX_SOURCE_TOKENS,
+    )
+    target_id = tokenizer.convert_tokens_to_ids(TARGET_LANG)
+    if target_id is None or target_id == tokenizer.unk_token_id:
+        raise RuntimeError(f"NLLB target language token unavailable: {TARGET_LANG}")
+    with torch.inference_mode():
+        generated = model.generate(
+            **encoded,
+            forced_bos_token_id=target_id,
+            max_new_tokens=MAX_NEW_TOKENS,
+            num_beams=4,
+            early_stopping=True,
+            renormalize_logits=True,
+        )
+    value = tokenizer.batch_decode(generated, skip_special_tokens=True)[0].strip()
+    if not value:
+        raise RuntimeError("NLLB returned empty translation")
+    return value
+
+
+def bad_translation(source: str, target: str, strict: bool, field: str) -> bool:
+    if not isinstance(target, str) or not target.strip():
+        return True
+    if not safe.target_quality_ok(source, target, strict=strict):
+        return True
+    return bool(newsroom_quality.hard_reason(source, target, field))
+
+
+def translate(source: str, strict: bool, field: str) -> str:
+    errors = []
+    pieces = base.chunks(source, limit=280) or [source]
+    translated = []
+    for index, piece in enumerate(pieces, 1):
+        try:
+            value = translate_chunk(piece)
+            if bad_translation(piece, value, False, field):
+                raise RuntimeError("chunk failed newsroom quality gate")
+            translated.append(value)
+            print(
+                "SECONDARY_LOCAL_CHUNK_OK",
+                f"field={field}",
+                f"part={index}/{len(pieces)}",
+                f"source={piece[:70]!r}",
+            )
+        except Exception as exc:
+            errors.append(f"part={index}:{type(exc).__name__}:{exc}")
+            raise RuntimeError(
+                "Secondary local NLLB translation failed: " + "; ".join(errors)
+            ) from exc
+
+    value = "".join(translated)
+    value = newsroom_quality.deterministic_postedit(source, value, field)
+    if bad_translation(source, value, strict, field):
+        raise RuntimeError(
+            f"Secondary local NLLB result rejected after reassembly: field={field}"
+        )
+    return value
+
+
+def rebuild_decorations(name: str, payload: dict) -> dict:
+    if name == "latest.json":
+        payload = base.add_furigana(base.attach_daily_audio(payload), "articles")
+    elif name == "live.json":
+        payload = base.add_furigana(base.attach_live_audio(payload), "items")
+    payload["furiganaEngineVersion"] = furigana_safe_runtime.engine_name()
+    payload["newsroomQualityVersion"] = 1
+    return payload
+
+
+def repair_file(name: str) -> int:
+    path = DATA / name
+    local = json.loads(path.read_text(encoding="utf-8"))
+    source = snapshot.load_json(name)
+    source_by_id = index_stories(source)
+    local_by_id = index_stories(local)
+    repaired = 0
+    failures = []
+
+    for story_id, local_story in local_by_id.items():
+        source_story = source_by_id.get(story_id)
+        if not source_story:
+            status = str(local_story.get("translationStatus") or "").strip().upper()
+            if status in BAD_STATUSES:
+                failures.append(f"{name}:{story_id}:degraded-story-not-in-source")
+            continue
+
+        changed = False
+        for field in CORE_FIELDS:
+            source_text = source_story.get(field)
+            if not isinstance(source_text, str) or not source_text.strip():
+                continue
+            target = str(local_story.get(field) or "")
+            strict = field in integrity.PROSE_FIELDS
+            polished = newsroom_quality.deterministic_postedit(source_text, target, field)
+            if polished != target and not bad_translation(source_text, polished, strict, field):
+                local_story[field] = polished
+                target = polished
+                changed = True
+                repaired += 1
+            if bad_translation(source_text, target, strict, field):
+                local_story[field] = translate(source_text, strict, field)
+                changed = True
+                repaired += 1
+
+        if changed:
+            local_story.pop("furigana", None)
+
+    # Second-pass source-linked validation before any degraded marker can clear.
+    for story_id, local_story in index_stories(local).items():
+        source_story = source_by_id.get(story_id)
+        status = str(local_story.get("translationStatus") or "").strip().upper()
+        if not source_story:
+            if status in BAD_STATUSES:
+                failures.append(f"{name}:{story_id}:unmatched-{status}")
+            continue
+        for field in CORE_FIELDS:
+            source_text = source_story.get(field)
+            if not isinstance(source_text, str) or not source_text.strip():
+                continue
+            target = str(local_story.get(field) or "")
+            strict = field in integrity.PROSE_FIELDS
+            if bad_translation(source_text, target, strict, field):
+                failures.append(f"{name}:{story_id}:{field}:revalidation")
+        if status in BAD_STATUSES:
+            local_story.pop("translationStatus", None)
+
+    if failures:
+        raise RuntimeError(
+            "Secondary local recovery still has rejected fields: "
+            + ", ".join(sorted(set(failures))[:40])
+        )
+
+    local["translationDegraded"] = False
+    local["translationDeferredCount"] = 0
+    local["translationDeferredIds"] = []
+    if "translationDeferredMetadata" in local:
+        local["translationDeferredMetadata"] = []
+    local = rebuild_decorations(name, local)
+    path.write_text(json.dumps(local, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print("SECONDARY_LOCAL_CORE_FILE_OK", name, f"repaired_fields={repaired}")
+    return repaired
+
+
+def main() -> int:
+    newsroom_quality.install(safe)
+    furigana_safe_runtime.install()
+    total = 0
+    for name in CORE_FILES:
+        total += repair_file(name)
+    print(
+        "SECONDARY_LOCAL_CORE_RECOVERY_OK",
+        f"repaired_fields={total}",
+        f"snapshot={snapshot.snapshot_commit()}",
+        f"model={MODEL_NAME}",
+        "remote_translation_api=false",
+        "degraded=false",
+    )
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
