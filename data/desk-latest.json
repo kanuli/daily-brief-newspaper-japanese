@@ -331,7 +331,18 @@
       {
         "id": "general-ai-tech-260a6730428c",
         "desk": "ai-tech",
-        "status": "LATEST",
+        "deskSlugs": [
+          "ai-tech"
+        ],
+        "section": "AI・テクノロジー",
+        "sectionLabel": "AI / 科技",
+        "title": "ASOS ユーザーはハッカーからプッシュ メッセージを受信しました。サイバーセキュリティの専門家らは、侵入範囲は単一のデータベースを超えて拡大する可能性があると述べた。",
+        "dek": "BBC は、ASOS アプリのユーザーが Snowflake を侵害したと主張するハッカーからプッシュ通知を受け取ったと報告しました。",
+        "summary": "BBC は、ASOS ユーザーがハッカーからプッシュ通知を受け取ったと報告しました。そのプッシュ通知は、攻撃者が Snowflake に完全に侵入し、Telegram チャネルにリンクしたと主張しました。ネットワーク セキュリティの専門家は、攻撃者のアクセス範囲が単一のデータベースを超えて拡大する可能性があると考えています。",
+        "body": "BBC は、ASOS アプリのユーザーがハッカーからプッシュ通知を受け取り、攻撃者が「Snowflake インスタンスを完全に侵害した」と主張し、Telegram チャネルへのリンクが添付されたと報告しました。報告書によると、この通知の異常な点は、通知がユーザーに直接送信され、企業のデータ保護責任者と IT チームに宛てて書かれていることです。これは、攻撃者がより広範囲の通信チャネルを持っているようであることを示しています。\n\nサイバーセキュリティ専門家のダン・バード氏はインタビューで、これらの通知は攻撃者が複数のSnowflakeデータベースにアクセスできることを暗示していると述べた。 BBCの報道では、これらのプッシュコンテンツは通常のフィッシングメッセージではなく、企業やユーザーを直接ターゲットにした脅威情報であり、潜在的なデータ漏洩や悪意のある侵入の範囲を外部に警告していると指摘した。",
+        "context": "BBC は、ASOS アプリのユーザーがハッカーからプッシュ通知を受け取り、攻撃者が「Snowflake インスタンスを完全に侵害」し、Telegram チャネルにリンクしたと主張するプッシュ通知を受け取ったと報告しました。通知はユーザー、データ保護責任者、IT チームに送信され、異常とみなされます。",
+        "why": "この通知はユーザーに向けられており、Snowflake などの技術環境が関与しているため、サイバーセキュリティの専門家は、攻撃者が複数のデータベースにアクセスできる可能性があると考えており、データ漏洩や悪意のある侵入の可能性に対する懸念を強調しています。",
+        "watchNext": "次の観察ポイントは、より影響を受けるユーザーや関連するアクセス範囲を示す第三者の証拠があるかどうか、企業や調査員がさらなる説明を公開するかどうかなどです。",
         "sourceName": "BBC",
         "sourceUrl": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFA3QkdMc0FVTXJPS1lXbWdxWXdYRFRBZ2Q3R0dVTkJHTUNDQkZES1gxMGVVNUt1dS1qNHlxdGVmZ3EyUHZ2YnFGX1NDazdncUFMRkJ3SFFSWUJUV1N3Z0E?oc=5",
         "sources": [
@@ -346,26 +357,31 @@
             ]
           }
         ],
-        "deskSlugs": [
-          "ai-tech"
-        ],
-        "verifiedAt": "2026-10-06T10:53:24.719754Z",
         "publishedAt": "2026-10-06T09:49:42Z",
-        "section": "ニュース",
-        "sectionLabel": "ニュース",
-        "title": "ニュース：最新確認済みニュース",
-        "dek": "出典で確認済みの最新情報を先行掲載しています。",
-        "summary": "記事に記載した出典で、この分類の最新ニュースを確認しました。完全な日本語本文は自動復旧処理で順次更新します。",
+        "verifiedAt": "2026-10-06T10:53:24.719754Z",
         "timeLabel": "10月06日 18:53 HKT確認済み",
-        "translationStatus": "EDITORIAL_MINIMUM_FALLBACK",
+        "verification": {
+          "mode": "source-evidence-cantonese",
+          "candidateId": "7de0d11d8f43915d17f1",
+          "provider": "Google News RSS",
+          "query": "(cybersecurity OR data breach OR ransomware) when:8h",
+          "originalTitle": "ASOS app users receive notifications from hackers in apparent breach - BBC",
+          "noUnsupportedDetail": true,
+          "cantoneseCopyVerified": true
+        },
+        "status": "LATEST",
         "sourceItemFingerprint": "95d637d289ae8a9964ac9510d1742a86501e15eab11bed96133e5d5539cbf9ab",
         "furigana": {
-          "section": "ニュース",
-          "title": "ニュース：<ruby>最新<rt>さいしん</rt></ruby><ruby>確認<rt>かくにん</rt></ruby><ruby>済<rt>ず</rt></ruby>みニュース",
-          "dek": "<ruby>出典<rt>しゅってん</rt></ruby>で<ruby>確認<rt>かくにん</rt></ruby><ruby>済<rt>ず</rt></ruby>みの<ruby>最新<rt>さいしん</rt></ruby><ruby>情報<rt>じょうほう</rt></ruby>を<ruby>先行<rt>せんこう</rt></ruby><ruby>掲載<rt>けいさい</rt></ruby>しています。",
-          "summary": "<ruby>記事<rt>きじ</rt></ruby>に<ruby>記載<rt>きさい</rt></ruby>した<ruby>出典<rt>しゅってん</rt></ruby>で、この<ruby>分類<rt>ぶんるい</rt></ruby>の<ruby>最新<rt>さいしん</rt></ruby>ニュースを<ruby>確認<rt>かくにん</rt></ruby>しました。<ruby>完全<rt>かんぜん</rt></ruby>な<ruby>日本語<rt>にほんご</rt></ruby><ruby>本文<rt>ほんぶん</rt></ruby>は<ruby>自動<rt>じどう</rt></ruby><ruby>復旧<rt>ふっきゅう</rt></ruby><ruby>処理<rt>しょり</rt></ruby>で<ruby>順次<rt>じゅんじ</rt></ruby><ruby>更新<rt>こうしん</rt></ruby>します。",
+          "section": "AI・テクノロジー",
+          "title": "ASOS ユーザーはハッカーからプッシュ メッセージを<ruby>受信<rt>じゅしん</rt></ruby>しました。サイバーセキュリティの<ruby>専門家<rt>せんもんか</rt></ruby>らは、<ruby>侵入<rt>しんにゅう</rt></ruby><ruby>範囲<rt>はんい</rt></ruby>は<ruby>単一<rt>たんいつ</rt></ruby>のデータベースを<ruby>超<rt>こ</rt></ruby>えて<ruby>拡大<rt>かくだい</rt></ruby>する<ruby>可能性<rt>かのうせい</rt></ruby>があると<ruby>述<rt>の</rt></ruby>べた。",
+          "dek": "BBC は、ASOS アプリのユーザーが Snowflake を<ruby>侵害<rt>しんがい</rt></ruby>したと<ruby>主張<rt>しゅちょう</rt></ruby>するハッカーからプッシュ<ruby>通知<rt>つうち</rt></ruby>を<ruby>受け取<rt>うけと</rt></ruby>ったと<ruby>報告<rt>ほうこく</rt></ruby>しました。",
+          "summary": "BBC は、ASOS ユーザーがハッカーからプッシュ<ruby>通知<rt>つうち</rt></ruby>を<ruby>受け取<rt>うけと</rt></ruby>ったと<ruby>報告<rt>ほうこく</rt></ruby>しました。そのプッシュ<ruby>通知<rt>つうち</rt></ruby>は、<ruby>攻撃者<rt>こうげきしゃ</rt></ruby>が Snowflake に<ruby>完全<rt>かんぜん</rt></ruby>に<ruby>侵入<rt>しんにゅう</rt></ruby>し、Telegram チャネルにリンクしたと<ruby>主張<rt>しゅちょう</rt></ruby>しました。ネットワーク セキュリティの<ruby>専門家<rt>せんもんか</rt></ruby>は、<ruby>攻撃者<rt>こうげきしゃ</rt></ruby>のアクセス<ruby>範囲<rt>はんい</rt></ruby>が<ruby>単一<rt>たんいつ</rt></ruby>のデータベースを<ruby>超<rt>こ</rt></ruby>えて<ruby>拡大<rt>かくだい</rt></ruby>する<ruby>可能性<rt>かのうせい</rt></ruby>があると<ruby>考<rt>かんが</rt></ruby>えています。",
+          "context": "BBC は、ASOS アプリのユーザーがハッカーからプッシュ<ruby>通知<rt>つうち</rt></ruby>を<ruby>受け取<rt>うけと</rt></ruby>り、<ruby>攻撃者<rt>こうげきしゃ</rt></ruby>が「Snowflake インスタンスを<ruby>完全<rt>かんぜん</rt></ruby>に<ruby>侵害<rt>しんがい</rt></ruby>」し、Telegram チャネルにリンクしたと<ruby>主張<rt>しゅちょう</rt></ruby>するプッシュ<ruby>通知<rt>つうち</rt></ruby>を<ruby>受け取<rt>うけと</rt></ruby>ったと<ruby>報告<rt>ほうこく</rt></ruby>しました。<ruby>通知<rt>つうち</rt></ruby>はユーザー、データ<ruby>保護<rt>ほご</rt></ruby><ruby>責任者<rt>せきにんしゃ</rt></ruby>、IT チームに<ruby>送信<rt>そうしん</rt></ruby>され、<ruby>異常<rt>いじょう</rt></ruby>とみなされます。",
+          "why": "この<ruby>通知<rt>つうち</rt></ruby>はユーザーに<ruby>向<rt>む</rt></ruby>けられており、Snowflake などの<ruby>技術<rt>ぎじゅつ</rt></ruby><ruby>環境<rt>かんきょう</rt></ruby>が<ruby>関与<rt>かんよ</rt></ruby>しているため、サイバーセキュリティの<ruby>専門家<rt>せんもんか</rt></ruby>は、<ruby>攻撃<rt>こうげき</rt></ruby><ruby>者<rt>もの</rt></ruby>が<ruby>複数<rt>ふくすう</rt></ruby>のデータベースにアクセスできる<ruby>可能性<rt>かのうせい</rt></ruby>があると<ruby>考<rt>かんが</rt></ruby>えており、データ<ruby>漏洩<rt>ろうえい</rt></ruby>や<ruby>悪意<rt>あくい</rt></ruby>のある<ruby>侵入<rt>しんにゅう</rt></ruby>の<ruby>可能性<rt>かのうせい</rt></ruby>に<ruby>対<rt>たい</rt></ruby>する<ruby>懸念<rt>けねん</rt></ruby>を<ruby>強調<rt>きょうちょう</rt></ruby>しています。",
+          "watchNext": "<ruby>次<rt>つぎ</rt></ruby>の<ruby>観察<rt>かんさつ</rt></ruby>ポイントは、より<ruby>影響<rt>えいきょう</rt></ruby>を<ruby>受<rt>う</rt></ruby>けるユーザーや<ruby>関連<rt>かんれん</rt></ruby>するアクセス<ruby>範囲<rt>はんい</rt></ruby>を<ruby>示<rt>しめ</rt></ruby>す<ruby>第三者<rt>だいさんしゃ</rt></ruby>の<ruby>証拠<rt>しょうこ</rt></ruby>があるかどうか、<ruby>企業<rt>きぎょう</rt></ruby>や<ruby>調査員<rt>ちょうさいん</rt></ruby>がさらなる<ruby>説明<rt>せつめい</rt></ruby>を<ruby>公開<rt>こうかい</rt></ruby>するかどうかなどです。",
           "bodyParagraphs": [
-            "<ruby>記事<rt>きじ</rt></ruby>に<ruby>記載<rt>きさい</rt></ruby>した<ruby>出典<rt>しゅってん</rt></ruby>で、この<ruby>分類<rt>ぶんるい</rt></ruby>の<ruby>最新<rt>さいしん</rt></ruby>ニュースを<ruby>確認<rt>かくにん</rt></ruby>しました。<ruby>完全<rt>かんぜん</rt></ruby>な<ruby>日本語<rt>にほんご</rt></ruby><ruby>本文<rt>ほんぶん</rt></ruby>は<ruby>自動<rt>じどう</rt></ruby><ruby>復旧<rt>ふっきゅう</rt></ruby><ruby>処理<rt>しょり</rt></ruby>で<ruby>順次<rt>じゅんじ</rt></ruby><ruby>更新<rt>こうしん</rt></ruby>します。"
+            "BBC は、ASOS アプリのユーザーがハッカーからプッシュ<ruby>通知<rt>つうち</rt></ruby>を<ruby>受け取<rt>うけと</rt></ruby>り、<ruby>攻撃者<rt>こうげきしゃ</rt></ruby>が「Snowflake インスタンスを<ruby>完全<rt>かんぜん</rt></ruby>に<ruby>侵害<rt>しんがい</rt></ruby>した」と<ruby>主張<rt>しゅちょう</rt></ruby>し、Telegram チャネルへのリンクが<ruby>添付<rt>てんぷ</rt></ruby>されたと<ruby>報告<rt>ほうこく</rt></ruby>しました。<ruby>報告書<rt>ほうこくしょ</rt></ruby>によると、この<ruby>通知<rt>つうち</rt></ruby>の<ruby>異常<rt>いじょう</rt></ruby>な<ruby>点<rt>てん</rt></ruby>は、<ruby>通知<rt>つうち</rt></ruby>がユーザーに<ruby>直接<rt>ちょくせつ</rt></ruby><ruby>送信<rt>そうしん</rt></ruby>され、<ruby>企業<rt>きぎょう</rt></ruby>のデータ<ruby>保護<rt>ほご</rt></ruby><ruby>責任者<rt>せきにんしゃ</rt></ruby>と IT チームに<ruby>宛<rt>あ</rt></ruby>てて<ruby>書<rt>か</rt></ruby>かれていることです。これは、<ruby>攻撃者<rt>こうげきしゃ</rt></ruby>がより<ruby>広範囲<rt>こうはんい</rt></ruby>の<ruby>通信<rt>つうしん</rt></ruby>チャネルを<ruby>持<rt>も</rt></ruby>っているようであることを<ruby>示<rt>しめ</rt></ruby>しています。",
+            "サイバーセキュリティ<ruby>専門家<rt>せんもんか</rt></ruby>のダン・バード<ruby>氏<rt>し</rt></ruby>はインタビューで、これらの<ruby>通知<rt>つうち</rt></ruby>は<ruby>攻撃者<rt>こうげきしゃ</rt></ruby>が<ruby>複数<rt>ふくすう</rt></ruby>のSnowflakeデータベースにアクセスできることを<ruby>暗示<rt>あんじ</rt></ruby>していると<ruby>述<rt>の</rt></ruby>べた。 BBCの<ruby>報道<rt>ほうどう</rt></ruby>では、これらのプッシュコンテンツは<ruby>通常<rt>つうじょう</rt></ruby>のフィッシングメッセージではなく、<ruby>企業<rt>きぎょう</rt></ruby>やユーザーを<ruby>直接<rt>ちょくせつ</rt></ruby>ターゲットにした<ruby>脅威<rt>きょうい</rt></ruby><ruby>情報<rt>じょうほう</rt></ruby>であり、<ruby>潜在的<rt>せんざいてき</rt></ruby>なデータ<ruby>漏洩<rt>ろうえい</rt></ruby>や<ruby>悪意<rt>あくい</rt></ruby>のある<ruby>侵入<rt>しんにゅう</rt></ruby>の<ruby>範囲<rt>はんい</rt></ruby>を<ruby>外部<rt>がいぶ</rt></ruby>に<ruby>警告<rt>けいこく</rt></ruby>していると<ruby>指摘<rt>してき</rt></ruby>した。"
           ]
         },
         "audio": "audio/rolling/general-ai-tech-260a6730428c.mp3",
@@ -609,15 +625,14 @@
   "translationSchemaVersion": "ja-cantonese-extra-v2-full-parity",
   "sourceParityMode": "minimum-guaranteed-edition-per-desk",
   "translationDegraded": true,
-  "translationDeferredCount": 3,
+  "translationDeferredCount": 2,
   "translationDeferredIds": [
-    "general-ai-tech-260a6730428c",
     "general-football-29436fe6f0dd",
     "general-japan-5c52867550b6"
   ],
   "translationDeferredMetadata": [],
   "translationRecoveryMode": "editorial-fill-missing-desks-v1",
   "translationBudgetSeconds": 150,
-  "translationElapsedSeconds": 185,
+  "translationElapsedSeconds": 216,
   "translationBudgetExhausted": true
 }
