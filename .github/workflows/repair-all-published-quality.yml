@@ -17,6 +17,7 @@ jobs:
     env:
       CANTONESE_SNAPSHOT_DIR: .cantonese-snapshot/data
       REMOTE_REPAIR_SCOPE: rolling
+      GOOGLE_429_COOLDOWN_SECONDS: "120"
     steps:
       - name: Checkout current Japanese main
         uses: actions/checkout@v4
@@ -57,9 +58,29 @@ jobs:
       - name: Freeze one Cantonese source commit
         run: python scripts/cantonese_snapshot.py
 
-      - name: Repair all rolling Japanese from source
-        timeout-minutes: 7
-        run: python scripts/remote_repair_all_published_quality.py
+      - name: Repair and verify rolling Japanese with bounded alternate retries
+        timeout-minutes: 10
+        shell: bash
+        run: |
+          set -euo pipefail
+          recovered=false
+          for attempt in 1 2 3; do
+            echo "ROLLING_EXHAUSTIVE_ATTEMPT attempt=${attempt}"
+            python scripts/remote_repair_all_published_quality.py || true
+            if python scripts/validate_extra_layers.py; then
+              recovered=true
+              break
+            fi
+            if [ "${attempt}" -lt 3 ]; then
+              delay=$((attempt * 60))
+              echo "ROLLING_EXHAUSTIVE_BACKOFF delay=${delay}s"
+              sleep "${delay}"
+            fi
+          done
+          if [ "${recovered}" != "true" ]; then
+            echo "ROLLING_EXHAUSTIVE_EXHAUSTED"
+            exit 1
+          fi
 
       - name: Validate every rolling topic and stock layer
         run: python scripts/validate_extra_layers.py
