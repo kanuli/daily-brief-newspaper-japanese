@@ -15,7 +15,9 @@ permissions:
 
 concurrency:
   group: japanese-news-hourly
-  cancel-in-progress: false
+  # NAS already suppresses duplicate dispatches. If this recovery workflow
+  # itself is upgraded, the newest code must supersede an older in-flight run.
+  cancel-in-progress: true
 
 jobs:
   sync:
