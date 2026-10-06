@@ -1,12 +1,9 @@
 name: F3ニュース読み再生成
 
 on:
+  # The NAS Editor-in-Chief is the sole scheduler. Content robots must finish
+  # before this robot is assigned, preventing F3 from racing translation writes.
   workflow_dispatch:
-  workflow_run:
-    workflows:
-      - '日本語ニュース同期・品質ゲート・Discord配信'
-      - 'Maintenance Robot — 日本語ローリング翻訳品質修復'
-    types: [completed]
 
 permissions:
   contents: write
