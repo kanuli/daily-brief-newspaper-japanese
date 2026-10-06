@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
-"""Targeted GitHub Models fallback for quarantined current-news fields.
+"""Independent targeted GitHub Models recovery for degraded Daily/Live fields.
 
-This is deliberately NOT the bulk translator. The normal local OPUS-MT path,
-the remote emergency path, and the bounded alternate path run first. Only fields
-that still fail the existing Japanese quality gates reach this backend.
-
-The result is always re-validated by the existing structural, semantic,
-editorial, source-parity and furigana gates before publication.
+This final fallback deliberately avoids torch/transformers/local OPUS-MT.
+The emergency rebuild establishes current source structure first; this script
+repairs only fields that still fail the existing Japanese newsroom quality gates,
+then rebuilds furigana/audio metadata and clears degraded markers only after a
+full source-linked revalidation succeeds.
 """
 from __future__ import annotations
 
@@ -16,11 +15,19 @@ from pathlib import Path
 
 import requests
 
-import local_translation_runtime as runtime
-import repair_garbled_core as repair
+import cantonese_snapshot as snapshot
+import furigana_safe_runtime
+import newsroom_quality
 import safe_sync as safe
 import sync_and_translate as base
+import validate_content_integrity as integrity
 
+
+ROOT = Path(__file__).resolve().parents[1]
+DATA = ROOT / "data"
+CORE_FILES = ("latest.json", "live.json")
+CORE_FIELDS = ("section", "sectionLabel") + integrity.STORY_TEXT_FIELDS
+BAD_STATUSES = {"EDITORIAL_MINIMUM_FALLBACK", "TRANSLATION_FAILED", "TRANSLATION_DEGRADED"}
 
 API = os.getenv(
     "GITHUB_MODELS_ENDPOINT",
@@ -35,6 +42,25 @@ MODELS = tuple(
     if x.strip()
 )
 TOKEN = os.getenv("GITHUB_MODELS_TOKEN") or os.getenv("GITHUB_TOKEN")
+
+
+def iter_stories(value):
+    if isinstance(value, dict):
+        if value.get("id") and (value.get("title") or value.get("summary") or value.get("body")):
+            yield value
+        for child in value.values():
+            yield from iter_stories(child)
+    elif isinstance(value, list):
+        for child in value:
+            yield from iter_stories(child)
+
+
+def index_stories(value):
+    return {
+        str(story.get("id")): story
+        for story in iter_stories(value)
+        if story.get("id")
+    }
 
 
 def _clean_model_text(value: str) -> str:
@@ -77,7 +103,7 @@ def _call_model(model: str, source: str) -> str:
             "Authorization": f"Bearer {TOKEN}",
             "Accept": "application/vnd.github+json",
             "Content-Type": "application/json",
-            "X-GitHub-Api-Version": "2026-03-10",
+            "X-GitHub-Api-Version": "2022-11-28",
         },
         json={
             "model": model,
@@ -100,27 +126,39 @@ def _call_model(model: str, source: str) -> str:
     return value
 
 
-def github_models_translate(source: str, strict: bool = False) -> str:
+def bad_translation(source: str, target: str, strict: bool, field: str) -> bool:
+    if not isinstance(target, str) or not target.strip():
+        return True
+    if not safe.target_quality_ok(source, target, strict=strict):
+        return True
+    return bool(newsroom_quality.hard_reason(source, target, field))
+
+
+def translate(source: str, strict: bool, field: str) -> str:
     if not TOKEN:
         raise RuntimeError("GITHUB_MODELS_TOKEN/GITHUB_TOKEN missing")
-    errors: list[str] = []
+    errors = []
     for model in MODELS:
         try:
-            value = _call_model(model, source)
-            if not safe.target_quality_ok(source, value, strict=strict):
+            value = newsroom_quality.deterministic_postedit(
+                source,
+                _call_model(model, source),
+                field,
+            )
+            if bad_translation(source, value, strict, field):
                 errors.append(f"{model}=quality-rejected")
                 print(
                     "GITHUB_MODELS_TRANSLATION_REJECT",
                     f"model={model}",
+                    f"field={field}",
                     f"source={source[:80]!r}",
                     f"output={value[:80]!r}",
                 )
                 continue
-            base.CACHE[runtime.cache_key(source)] = value
-            runtime.checkpoint_cache(f"github-models-{model.replace('/', '-')}")
             print(
                 "GITHUB_MODELS_TRANSLATION_OK",
                 f"model={model}",
+                f"field={field}",
                 f"source={source[:80]!r}",
             )
             return value
@@ -129,56 +167,96 @@ def github_models_translate(source: str, strict: bool = False) -> str:
             print(
                 "GITHUB_MODELS_TRANSLATION_ERROR",
                 f"model={model}",
+                f"field={field}",
                 f"error={type(exc).__name__}:{str(exc)[:240]}",
             )
     raise RuntimeError("GitHub Models translation repair exhausted: " + "; ".join(errors))
 
 
-BAD_STATUSES = {"EDITORIAL_MINIMUM_FALLBACK", "TRANSLATION_FAILED", "TRANSLATION_DEGRADED"}
+def rebuild_decorations(name: str, payload: dict) -> dict:
+    if name == "latest.json":
+        payload = base.add_furigana(base.attach_daily_audio(payload), "articles")
+    elif name == "live.json":
+        payload = base.add_furigana(base.attach_live_audio(payload), "items")
+    payload["furiganaEngineVersion"] = furigana_safe_runtime.engine_name()
+    payload["newsroomQualityVersion"] = 1
+    return payload
 
 
-def _finalize_clean_metadata() -> None:
-    """Clear degraded markers only after every source-linked field revalidates."""
-    for name in repair.CORE_FILES:
-        path = repair.DATA / name
-        data = json.loads(path.read_text(encoding="utf-8"))
-        source = repair.snapshot.load_json(name)
-        source_by_id = repair.index_stories(source)
-        local_by_id = repair.index_stories(data)
-        failures: list[str] = []
+def repair_file(name: str) -> int:
+    path = DATA / name
+    local = json.loads(path.read_text(encoding="utf-8"))
+    source = snapshot.load_json(name)
+    source_by_id = index_stories(source)
+    local_by_id = index_stories(local)
+    repaired = 0
+    failures = []
 
-        for story_id, local_story in local_by_id.items():
-            source_story = source_by_id.get(story_id)
-            if not source_story:
-                continue
-            for field in repair.CORE_FIELDS:
-                source_text = source_story.get(field)
-                if not isinstance(source_text, str) or not source_text.strip():
-                    continue
-                target = local_story.get(field)
-                strict = field in repair.integrity.PROSE_FIELDS
-                if repair.bad_translation(source_text, str(target or ""), strict, field):
-                    failures.append(f"{name}:{story_id}:{field}")
+    for story_id, local_story in local_by_id.items():
+        source_story = source_by_id.get(story_id)
+        if not source_story:
             status = str(local_story.get("translationStatus") or "").strip().upper()
             if status in BAD_STATUSES:
-                local_story.pop("translationStatus", None)
+                failures.append(f"{name}:{story_id}:degraded-story-not-in-source")
+            continue
 
-        if failures:
-            raise RuntimeError(
-                "GitHub Models recovery still has rejected fields: "
-                + ", ".join(failures[:30])
-            )
+        changed = False
+        for field in CORE_FIELDS:
+            source_text = source_story.get(field)
+            if not isinstance(source_text, str) or not source_text.strip():
+                continue
+            target = str(local_story.get(field) or "")
+            strict = field in integrity.PROSE_FIELDS
+            polished = newsroom_quality.deterministic_postedit(source_text, target, field)
+            if polished != target and not bad_translation(source_text, polished, strict, field):
+                local_story[field] = polished
+                target = polished
+                changed = True
+                repaired += 1
+            if bad_translation(source_text, target, strict, field):
+                local_story[field] = translate(source_text, strict, field)
+                changed = True
+                repaired += 1
+            if bad_translation(source_text, str(local_story.get(field) or ""), strict, field):
+                failures.append(f"{name}:{story_id}:{field}")
 
-        data["translationDegraded"] = False
-        data["translationDeferredCount"] = 0
-        data["translationDeferredIds"] = []
-        if "translationDeferredMetadata" in data:
-            data["translationDeferredMetadata"] = []
-        path.write_text(
-            json.dumps(data, ensure_ascii=False, indent=2) + "\n",
-            encoding="utf-8",
+        if changed:
+            local_story.pop("furigana", None)
+
+    # Full second-pass source-linked validation before clearing any degraded bit.
+    for story_id, local_story in index_stories(local).items():
+        source_story = source_by_id.get(story_id)
+        status = str(local_story.get("translationStatus") or "").strip().upper()
+        if not source_story:
+            if status in BAD_STATUSES:
+                failures.append(f"{name}:{story_id}:unmatched-{status}")
+            continue
+        for field in CORE_FIELDS:
+            source_text = source_story.get(field)
+            if not isinstance(source_text, str) or not source_text.strip():
+                continue
+            target = str(local_story.get(field) or "")
+            strict = field in integrity.PROSE_FIELDS
+            if bad_translation(source_text, target, strict, field):
+                failures.append(f"{name}:{story_id}:{field}:revalidation")
+        if status in BAD_STATUSES:
+            local_story.pop("translationStatus", None)
+
+    if failures:
+        raise RuntimeError(
+            "GitHub Models recovery still has rejected fields: "
+            + ", ".join(sorted(set(failures))[:40])
         )
-        print("GITHUB_MODELS_DEGRADED_MARKERS_CLEARED", name)
+
+    local["translationDegraded"] = False
+    local["translationDeferredCount"] = 0
+    local["translationDeferredIds"] = []
+    if "translationDeferredMetadata" in local:
+        local["translationDeferredMetadata"] = []
+    local = rebuild_decorations(name, local)
+    path.write_text(json.dumps(local, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print("GITHUB_MODELS_CORE_FILE_OK", name, f"repaired_fields={repaired}")
+    return repaired
 
 
 def main() -> int:
@@ -187,13 +265,20 @@ def main() -> int:
     if not MODELS:
         raise SystemExit("No GitHub Models translation model configured")
 
-    # Replace only the last-resort remote-quality repair hook. Bulk work remains
-    # on the existing local translator and all publication gates stay unchanged.
-    runtime._remote_quality_fallback = github_models_translate
-    repair.main()
-    _finalize_clean_metadata()
-    runtime.checkpoint_cache("github-models-core-final")
-    print("GITHUB_MODELS_CORE_RECOVERY_OK")
+    newsroom_quality.install(safe)
+    furigana_safe_runtime.install()
+
+    total = 0
+    for name in CORE_FILES:
+        total += repair_file(name)
+
+    print(
+        "GITHUB_MODELS_CORE_RECOVERY_OK",
+        f"repaired_fields={total}",
+        f"snapshot={snapshot.snapshot_commit()}",
+        "torch_independent=true",
+        "degraded=false",
+    )
     return 0
 
 
