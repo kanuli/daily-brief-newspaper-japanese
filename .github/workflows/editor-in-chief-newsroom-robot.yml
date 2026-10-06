@@ -11,6 +11,12 @@ on:
         description: 'UTC ISO timestamp of the NAS verification'
         required: false
         type: string
+  workflow_run:
+    workflows:
+      - "日本語ニュース同期・品質ゲート・Discord配信"
+      - "Maintenance Robot — 日本語ローリング翻訳品質修復"
+      - "日本語全公開コンテンツ品質修復"
+    types: [completed]
 
 permissions:
   actions: write
@@ -119,6 +125,28 @@ jobs:
             function dateDay(payload) {
               const value = String(payload?.date || '').slice(0, 10);
               return /^\d{4}-\d{2}-\d{2}$/.test(value) ? value : '';
+            }
+
+            function degradedTranslation(payload) {
+              const bad = new Set(['EDITORIAL_MINIMUM_FALLBACK','TRANSLATION_FAILED','TRANSLATION_DEGRADED']);
+              if (!payload || typeof payload !== 'object') return false;
+              if (payload.translationDegraded === true) return true;
+              if (Number(payload.translationDeferredCount || 0) > 0) return true;
+              const stack = [payload];
+              while (stack.length) {
+                const value = stack.pop();
+                if (Array.isArray(value)) {
+                  for (const child of value) if (child && typeof child === 'object') stack.push(child);
+                  continue;
+                }
+                if (!value || typeof value !== 'object') continue;
+                const status = String(value.translationStatus || '').trim().toUpperCase();
+                if (bad.has(status)) return true;
+                for (const child of Object.values(value)) {
+                  if (child && typeof child === 'object') stack.push(child);
+                }
+              }
+              return false;
             }
 
             function hktToday() {
@@ -230,6 +258,10 @@ jobs:
             const localDeskMs = stamp(localDesk);
             const sourceStocksMs = stamp(sourceStocks);
             const localStocksMs = stamp(localStocks);
+            const dailyDegraded = degradedTranslation(localDaily);
+            const liveDegraded = degradedTranslation(localLive);
+            const deskDegraded = degradedTranslation(localDesk);
+            const stocksDegraded = degradedTranslation(localStocks);
             const liveCurrent = currentTimestamp(sourceLiveMs, localLiveMs, MINUTE);
             const deskCurrent = currentTimestamp(sourceDeskMs, localDeskMs, MINUTE);
             const stocksRelativeCurrent = currentTimestamp(sourceStocksMs, localStocksMs, MINUTE);
@@ -246,21 +278,24 @@ jobs:
             const structuralCurrent = structuralDefects.length === 0;
 
             const layers = {
-              daily: { current: dailyCurrent, upstream: sourceDailyDay || null, japanese: localDailyDay || null },
+              daily: { current: dailyCurrent && !dailyDegraded, upstream: sourceDailyDay || null, japanese: localDailyDay || null, degradedTranslation: dailyDegraded },
               live: {
-                current: liveCurrent,
+                current: liveCurrent && !liveDegraded,
+                degradedTranslation: liveDegraded,
                 upstream: sourceLive?.lastUpdated || sourceLive?.generatedAt || null,
                 japanese: localLive?.lastUpdated || localLive?.generatedAt || null,
                 lagMinutes: lagMinutes(sourceLiveMs, localLiveMs),
               },
               desk: {
-                current: deskCurrent,
+                current: deskCurrent && !deskDegraded,
+                degradedTranslation: deskDegraded,
                 upstream: sourceDesk?.generatedAt || sourceDesk?.lastUpdated || null,
                 japanese: localDesk?.generatedAt || localDesk?.lastUpdated || null,
                 lagMinutes: lagMinutes(sourceDeskMs, localDeskMs),
               },
               stocks: {
-                current: stocksCurrent,
+                current: stocksCurrent && !stocksDegraded,
+                degradedTranslation: stocksDegraded,
                 upstream: sourceStocks?.generatedAt || sourceStocks?.lastUpdated || null,
                 japanese: localStocks?.generatedAt || localStocks?.lastUpdated || null,
                 lagMinutes: lagMinutes(sourceStocksMs, localStocksMs),
@@ -308,8 +343,8 @@ jobs:
             };
 
             const recovery = {
-              coreRequired: sourceReadable && (!dailyCurrent || !liveCurrent),
-              rollingRequired: sourceReadable && (!deskCurrent || (!stocksRelativeCurrent && stocksSourceAbsoluteFresh)),
+              coreRequired: sourceReadable && (!dailyCurrent || !liveCurrent || dailyDegraded || liveDegraded),
+              rollingRequired: sourceReadable && (!deskCurrent || deskDegraded || stocksDegraded || (!stocksRelativeCurrent && stocksSourceAbsoluteFresh)),
               upstreamStockRequired: sourceReadable && !stocksSourceAbsoluteFresh,
               vocabRequired: sourceReadable && vocabSourceCurrent && !vocabCurrent,
               structuralRequired: !structuralCurrent,
@@ -321,17 +356,33 @@ jobs:
               stale.push('daily');
               faultReasons.push(`daily-date-lag upstream=${sourceDailyDay || 'missing'} japanese=${localDailyDay || 'missing'}`);
             }
+            if (sourceReadable && dailyDegraded) {
+              if (!stale.includes('daily')) stale.push('daily');
+              faultReasons.push('daily-translation-degraded');
+            }
             if (sourceReadable && !liveCurrent) {
               stale.push('live');
               faultReasons.push(`live-lag-minutes=${lagMinutes(sourceLiveMs, localLiveMs)}`);
+            }
+            if (sourceReadable && liveDegraded) {
+              if (!stale.includes('live')) stale.push('live');
+              faultReasons.push('live-translation-degraded');
             }
             if (sourceReadable && !deskCurrent) {
               stale.push('desk');
               faultReasons.push(`desk-lag-minutes=${lagMinutes(sourceDeskMs, localDeskMs)}`);
             }
+            if (sourceReadable && deskDegraded) {
+              if (!stale.includes('desk')) stale.push('desk');
+              faultReasons.push('desk-translation-degraded');
+            }
             if (sourceReadable && !stocksRelativeCurrent) {
               stale.push('stocks');
               faultReasons.push(`stocks-relative-lag-minutes=${lagMinutes(sourceStocksMs, localStocksMs)}`);
+            }
+            if (sourceReadable && stocksDegraded) {
+              if (!stale.includes('stocks')) stale.push('stocks');
+              faultReasons.push('stocks-translation-degraded');
             }
             if (sourceReadable && !stocksSourceAbsoluteFresh) {
               if (!stale.includes('stocks')) stale.push('stocks');
@@ -357,9 +408,13 @@ jobs:
             const incidentParts = [];
             if (!sourceReadable) incidentParts.push(`source-read:${sourceReadFailures.join('+')}`);
             if (sourceReadable && !dailyCurrent) incidentParts.push(`daily@${sourceVersion('daily', sourceDaily)}`);
+            if (sourceReadable && dailyDegraded) incidentParts.push('daily@translation-degraded');
             if (sourceReadable && !liveCurrent) incidentParts.push(`live@${sourceVersion('live', sourceLive)}`);
+            if (sourceReadable && liveDegraded) incidentParts.push('live@translation-degraded');
             if (sourceReadable && !deskCurrent) incidentParts.push(`desk@${sourceVersion('desk', sourceDesk)}`);
+            if (sourceReadable && deskDegraded) incidentParts.push('desk@translation-degraded');
             if (sourceReadable && !stocksCurrent) incidentParts.push(`stocks@${sourceVersion('stocks', sourceStocks)}`);
+            if (sourceReadable && stocksDegraded) incidentParts.push('stocks@translation-degraded');
             if (sourceReadable && !vocabCurrent) incidentParts.push(`vocab@${sourceVocabDay || 'missing'}->${localVocabDay || 'missing'}`);
             if (!structuralCurrent) incidentParts.push(`structural@${[...structuralDefects].sort().join(',')}`);
             if (!nasDeliveryCurrent) incidentParts.push(`nas-delivery@${publicationFingerprint}`);
