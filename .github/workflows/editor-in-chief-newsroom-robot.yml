@@ -43,7 +43,7 @@ jobs:
             const COOLDOWN_MS = 25 * MINUTE;
             const HEARTBEAT_MS = 30 * MINUTE;
             const NAS_ATTESTATION_MAX_AGE_MS = 30 * MINUTE;
-            const STOCK_MAX_AGE_MS = 96 * 60 * MINUTE;
+            const STOCK_MAX_AGE_MS = 8 * 60 * MINUTE;
             const nasVerifiedFingerprint = String(context.payload.inputs?.nas_verified_fingerprint || '');
             const nasVerifiedAt = String(context.payload.inputs?.nas_verified_at || '');
             const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -410,7 +410,7 @@ jobs:
             }
             if (sourceReadable && !stocksSourceAbsoluteFresh) {
               if (!stale.includes('stocks')) stale.push('stocks');
-              faultReasons.push(`stocks-upstream-absolute-stale ageMinutes=${Number.isFinite(sourceStocksAgeMs) ? Math.round(sourceStocksAgeMs / MINUTE) : 'missing'} maxHours=96`);
+              faultReasons.push(`stocks-upstream-absolute-stale ageMinutes=${Number.isFinite(sourceStocksAgeMs) ? Math.round(sourceStocksAgeMs / MINUTE) : 'missing'} maxHours=8`);
             }
             if (sourceReadable && !vocabSourceCurrent) {
               stale.push('vocab');
