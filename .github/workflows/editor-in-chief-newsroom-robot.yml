@@ -13,7 +13,7 @@ on:
         type: string
 
 permissions:
-  actions: read
+  actions: write
   contents: write
 
 concurrency:
@@ -37,6 +37,7 @@ jobs:
             const COOLDOWN_MS = 25 * MINUTE;
             const HEARTBEAT_MS = 30 * MINUTE;
             const NAS_ATTESTATION_MAX_AGE_MS = 30 * MINUTE;
+            const STOCK_MAX_AGE_MS = 96 * 60 * MINUTE;
             const nasVerifiedFingerprint = String(context.payload.inputs?.nas_verified_fingerprint || '');
             const nasVerifiedAt = String(context.payload.inputs?.nas_verified_at || '');
             const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -120,6 +121,14 @@ jobs:
               return /^\d{4}-\d{2}-\d{2}$/.test(value) ? value : '';
             }
 
+            function hktToday() {
+              const parts = new Intl.DateTimeFormat('en-US', {
+                timeZone: 'Asia/Hong_Kong', year: 'numeric', month: '2-digit', day: '2-digit',
+              }).formatToParts(new Date());
+              const get = (type) => parts.find((part) => part.type === type)?.value || '';
+              return `${get('year')}-${get('month')}-${get('day')}`;
+            }
+
             function currentTimestamp(sourceMs, localMs, toleranceMs) {
               return Number.isFinite(sourceMs) && Number.isFinite(localMs) && localMs >= sourceMs - toleranceMs;
             }
@@ -190,20 +199,26 @@ jobs:
               sourceLive, localLive,
               sourceDesk, localDesk,
               sourceStocks, localStocks,
+              sourceVocab, localVocab,
               previousHealth,
             ] = await Promise.all([
               sourceJson('data/latest.json'), localJson('data/latest.json'),
               sourceJson('data/live.json'), localJson('data/live.json'),
               sourceJson('data/desk-latest.json'), localJson('data/desk-latest.json'),
               sourceJson('data/stocks-latest.json'), localJson('data/stocks-latest.json'),
+              sourceJson('data/vocab/latest.json'), localJson('data/vocab/latest.json'),
               localJson(HEALTH_PATH),
             ]);
+
+            const todayHkt = hktToday();
+            const localVocabArchive = await localEntry(`data/vocab/${todayHkt}.json`);
 
             const sourceReadFailures = [];
             if (!sourceDaily) sourceReadFailures.push('daily');
             if (!sourceLive) sourceReadFailures.push('live');
             if (!sourceDesk) sourceReadFailures.push('desk');
             if (!sourceStocks) sourceReadFailures.push('stocks');
+            if (!sourceVocab) sourceReadFailures.push('vocab');
             const sourceReadable = sourceReadFailures.length === 0;
 
             const sourceDailyDay = dateDay(sourceDaily);
@@ -217,7 +232,17 @@ jobs:
             const localStocksMs = stamp(localStocks);
             const liveCurrent = currentTimestamp(sourceLiveMs, localLiveMs, MINUTE);
             const deskCurrent = currentTimestamp(sourceDeskMs, localDeskMs, MINUTE);
-            const stocksCurrent = currentTimestamp(sourceStocksMs, localStocksMs, MINUTE);
+            const stocksRelativeCurrent = currentTimestamp(sourceStocksMs, localStocksMs, MINUTE);
+            const sourceStocksAgeMs = Number.isFinite(sourceStocksMs) ? Date.now() - sourceStocksMs : NaN;
+            const stocksSourceAbsoluteFresh = Number.isFinite(sourceStocksAgeMs)
+              && sourceStocksAgeMs >= 0
+              && sourceStocksAgeMs <= STOCK_MAX_AGE_MS;
+            const stocksCurrent = stocksRelativeCurrent && stocksSourceAbsoluteFresh;
+            const sourceVocabDay = dateDay(sourceVocab);
+            const localVocabDay = dateDay(localVocab);
+            const vocabSourceCurrent = sourceVocabDay === todayHkt;
+            const vocabArchiveCurrent = Boolean(localVocabArchive?.text);
+            const vocabCurrent = vocabSourceCurrent && localVocabDay === todayHkt && vocabArchiveCurrent;
             const structuralCurrent = structuralDefects.length === 0;
 
             const layers = {
@@ -239,6 +264,17 @@ jobs:
                 upstream: sourceStocks?.generatedAt || sourceStocks?.lastUpdated || null,
                 japanese: localStocks?.generatedAt || localStocks?.lastUpdated || null,
                 lagMinutes: lagMinutes(sourceStocksMs, localStocksMs),
+                relativeCurrent: stocksRelativeCurrent,
+                sourceAbsoluteFresh: stocksSourceAbsoluteFresh,
+                sourceAgeMinutes: Number.isFinite(sourceStocksAgeMs) ? Math.round(sourceStocksAgeMs / MINUTE) : null,
+                maxAgeHours: STOCK_MAX_AGE_MS / (60 * MINUTE),
+              },
+              vocab: {
+                current: vocabCurrent,
+                expectedHktDate: todayHkt,
+                upstream: sourceVocabDay || null,
+                japanese: localVocabDay || null,
+                datedArchivePresent: vocabArchiveCurrent,
               },
               structural: {
                 current: structuralCurrent,
@@ -273,17 +309,50 @@ jobs:
 
             const recovery = {
               coreRequired: sourceReadable && (!dailyCurrent || !liveCurrent),
-              rollingRequired: sourceReadable && (!deskCurrent || !stocksCurrent),
+              rollingRequired: sourceReadable && (!deskCurrent || (!stocksRelativeCurrent && stocksSourceAbsoluteFresh)),
+              upstreamStockRequired: sourceReadable && !stocksSourceAbsoluteFresh,
+              vocabRequired: sourceReadable && vocabSourceCurrent && !vocabCurrent,
               structuralRequired: !structuralCurrent,
             };
 
             const stale = [];
-            if (sourceReadable && !dailyCurrent) stale.push('daily');
-            if (sourceReadable && !liveCurrent) stale.push('live');
-            if (sourceReadable && !deskCurrent) stale.push('desk');
-            if (sourceReadable && !stocksCurrent) stale.push('stocks');
-            if (!structuralCurrent) stale.push('structural');
-            if (!nasDeliveryCurrent) stale.push('nas-delivery-verification');
+            const faultReasons = [];
+            if (sourceReadable && !dailyCurrent) {
+              stale.push('daily');
+              faultReasons.push(`daily-date-lag upstream=${sourceDailyDay || 'missing'} japanese=${localDailyDay || 'missing'}`);
+            }
+            if (sourceReadable && !liveCurrent) {
+              stale.push('live');
+              faultReasons.push(`live-lag-minutes=${lagMinutes(sourceLiveMs, localLiveMs)}`);
+            }
+            if (sourceReadable && !deskCurrent) {
+              stale.push('desk');
+              faultReasons.push(`desk-lag-minutes=${lagMinutes(sourceDeskMs, localDeskMs)}`);
+            }
+            if (sourceReadable && !stocksRelativeCurrent) {
+              stale.push('stocks');
+              faultReasons.push(`stocks-relative-lag-minutes=${lagMinutes(sourceStocksMs, localStocksMs)}`);
+            }
+            if (sourceReadable && !stocksSourceAbsoluteFresh) {
+              if (!stale.includes('stocks')) stale.push('stocks');
+              faultReasons.push(`stocks-upstream-absolute-stale ageMinutes=${Number.isFinite(sourceStocksAgeMs) ? Math.round(sourceStocksAgeMs / MINUTE) : 'missing'} maxHours=96`);
+            }
+            if (sourceReadable && !vocabSourceCurrent) {
+              stale.push('vocab');
+              faultReasons.push(`vocab-upstream-date expected=${todayHkt} actual=${sourceVocabDay || 'missing'}`);
+            } else if (sourceReadable && !vocabCurrent) {
+              stale.push('vocab');
+              if (localVocabDay !== todayHkt) faultReasons.push(`vocab-japanese-date expected=${todayHkt} actual=${localVocabDay || 'missing'}`);
+              if (!vocabArchiveCurrent) faultReasons.push(`vocab-dated-archive-missing data/vocab/${todayHkt}.json`);
+            }
+            if (!structuralCurrent) {
+              stale.push('structural');
+              faultReasons.push(`structural=${[...structuralDefects].sort().join(',')}`);
+            }
+            if (!nasDeliveryCurrent) {
+              stale.push('nas-delivery-verification');
+              faultReasons.push(`nas-delivery-fingerprint=${publicationFingerprint}`);
+            }
 
             const incidentParts = [];
             if (!sourceReadable) incidentParts.push(`source-read:${sourceReadFailures.join('+')}`);
@@ -291,6 +360,7 @@ jobs:
             if (sourceReadable && !liveCurrent) incidentParts.push(`live@${sourceVersion('live', sourceLive)}`);
             if (sourceReadable && !deskCurrent) incidentParts.push(`desk@${sourceVersion('desk', sourceDesk)}`);
             if (sourceReadable && !stocksCurrent) incidentParts.push(`stocks@${sourceVersion('stocks', sourceStocks)}`);
+            if (sourceReadable && !vocabCurrent) incidentParts.push(`vocab@${sourceVocabDay || 'missing'}->${localVocabDay || 'missing'}`);
             if (!structuralCurrent) incidentParts.push(`structural@${[...structuralDefects].sort().join(',')}`);
             if (!nasDeliveryCurrent) incidentParts.push(`nas-delivery@${publicationFingerprint}`);
             const incidentKey = incidentParts.join('|') || 'healthy';
@@ -308,18 +378,40 @@ jobs:
             let decision = state === 'GREEN' ? 'NO_REPAIR_REQUIRED' : 'ASSESS_RECOVERY';
             const results = [];
 
+            if (state === 'RED' && recovery.vocabRequired) {
+              const vocabResult = await dispatch(
+                'sync-daily-vocab.yml',
+                `vocab-self-heal expected=${todayHkt} local=${localVocabDay || 'missing'} archive=${vocabArchiveCurrent}`
+              );
+              results.push({
+                robot: 'vocab-translator',
+                workflow: vocabResult.workflow,
+                dispatched: vocabResult.dispatched,
+                active: vocabResult.active,
+                runId: vocabResult.runId,
+              });
+            }
+
             if (state === 'RED' && !sourceReadable) {
               status = 'source-read-degraded';
               decision = 'NO_MUTATION_RECHECK_NEXT_PATROL';
               attempts = 0;
               lastAttemptAt = null;
             } else if (state === 'RED') {
-              status = recovery.coreRequired || recovery.rollingRequired || recovery.structuralRequired
-                ? 'awaiting-nas-repair-dispatch'
-                : 'awaiting-nas-delivery-verification';
-              decision = recovery.coreRequired || recovery.rollingRequired || recovery.structuralRequired
-                ? 'NAS_CONTROLLER_MUST_DISPATCH_REPAIR'
-                : 'NAS_CONTROLLER_MUST_VERIFY_F3_AND_PAGES';
+              if (recovery.upstreamStockRequired) {
+                status = 'upstream-stock-source-stale';
+                decision = 'WAIT_FOR_UPSTREAM_STOCK_COLLECTOR';
+              } else if (recovery.vocabRequired && !recovery.coreRequired && !recovery.rollingRequired && !recovery.structuralRequired) {
+                status = 'vocab-self-healing';
+                decision = 'VOCAB_ROBOT_DISPATCHED_OR_ACTIVE';
+              } else {
+                status = recovery.coreRequired || recovery.rollingRequired || recovery.structuralRequired
+                  ? 'awaiting-nas-repair-dispatch'
+                  : 'awaiting-nas-delivery-verification';
+                decision = recovery.coreRequired || recovery.rollingRequired || recovery.structuralRequired
+                  ? 'NAS_CONTROLLER_MUST_DISPATCH_REPAIR'
+                  : 'NAS_CONTROLLER_MUST_VERIFY_F3_AND_PAGES';
+              }
             }
 
             const maintenance = {
@@ -344,10 +436,11 @@ jobs:
               assessedAt: new Date().toISOString(),
               state,
               summary: state === 'GREEN'
-                ? 'ALL_REQUIRED_NEWS_LAYERS_AND_DELIVERY_VERIFIED_BY_NAS'
+                ? 'ALL_REQUIRED_NEWS_LAYERS_VOCAB_AND_DELIVERY_VERIFIED_BY_NAS'
                 : !sourceReadable
                   ? `SOURCE_READ_DEGRADED:${sourceReadFailures.join(',')}`
-                  : `NOT_GREEN:${stale.join(',')}`,
+                  : `NOT_GREEN:${faultReasons.join(' | ')}`,
+              faultReasons,
               layers,
               recovery,
               maintenance,
@@ -381,6 +474,10 @@ jobs:
                 recoveryCompletionAlwaysRechecked: true,
                 upstreamReadFailureDoesNotAuthorizeMutation: true,
                 greenRequiresFreshNasDeliveryAttestation: true,
+                stockAbsoluteFreshnessHours: STOCK_MAX_AGE_MS / (60 * MINUTE),
+                vocabCurrentHktDateRequired: true,
+                vocabDatedArchiveRequired: true,
+                vocabSelfHealingWorkflow: 'sync-daily-vocab.yml',
               },
             };
 
@@ -430,7 +527,9 @@ jobs:
             core.info(`EDITOR state=${state} incident=${incidentKey} status=${status} decision=${decision}`);
             core.info(`EDITOR Live upstream=${layers.live.upstream || 'missing'} japanese=${layers.live.japanese || 'missing'} lag=${layers.live.lagMinutes}`);
             core.info(`EDITOR Desk upstream=${layers.desk.upstream || 'missing'} japanese=${layers.desk.japanese || 'missing'} lag=${layers.desk.lagMinutes}`);
-            core.info(`EDITOR Stocks upstream=${layers.stocks.upstream || 'missing'} japanese=${layers.stocks.japanese || 'missing'} lag=${layers.stocks.lagMinutes}`);
+            core.info(`EDITOR Stocks upstream=${layers.stocks.upstream || 'missing'} japanese=${layers.stocks.japanese || 'missing'} lag=${layers.stocks.lagMinutes} sourceAgeMinutes=${layers.stocks.sourceAgeMinutes} absoluteFresh=${layers.stocks.sourceAbsoluteFresh}`);
+            core.info(`EDITOR Vocab expected=${todayHkt} upstream=${sourceVocabDay || 'missing'} japanese=${localVocabDay || 'missing'} archive=${vocabArchiveCurrent}`);
+            if (faultReasons.length) core.warning(`EDITOR_FAULT_REASONS ${faultReasons.join(' | ')}`);
 
             const healthCommit = await publishHealth(health);
             core.setOutput('assessment_complete', 'true');
