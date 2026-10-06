@@ -2,22 +2,15 @@ name: 日本語ニュース同期・品質ゲート・Discord配信
 
 on:
   workflow_dispatch:
-  # One-shot repair trigger: workflow-file changes start the repair while
-  # generated news commits do not match this path, so publication cannot loop.
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/sync-japanese-news.yml'
 
 permissions:
   contents: write
 
 concurrency:
-  # All NAS-dispatched publication writers share one server-side lock.
-  # Workflow-file upgrade pushes use a separate superseding group so stale
-  # recovery code is cancelled without cancelling a live newsroom writer.
-  group: ${{ github.event_name == 'workflow_dispatch' && 'japanese-newsroom-writer' || 'japanese-newsroom-core-upgrade' }}
-  cancel-in-progress: ${{ github.event_name != 'workflow_dispatch' }}
+  # NAS Editor-in-Chief is the sole scheduler. All mutating newsroom robots
+  # share one server-side writer lock.
+  group: japanese-newsroom-writer
+  cancel-in-progress: false
 
 jobs:
   sync:
@@ -173,7 +166,7 @@ jobs:
           set -euo pipefail
           git config user.name 'daily-brief-japanese-bot'
           git config user.email 'actions@users.noreply.github.com'
-          git add data/latest.json data/live.json data/archive.json
+          git add data/latest.json data/live.json data/archive.json data/translation-cache.json
           latest_changed=false
           live_changed=false
           if git diff --cached --name-only | grep -Fxq 'data/latest.json'; then latest_changed=true; fi
@@ -186,6 +179,7 @@ jobs:
             exit 0
           fi
           git commit -m '編集品質確認済みの現在ニュースを日本語版へ同期'
+          git stash push -u -m "core-normal-residual-${GITHUB_RUN_ID}" >/dev/null 2>&1 || true
           for attempt in 1 2 3 4 5; do
             git fetch origin main
             if ! git rebase origin/main; then
@@ -400,6 +394,7 @@ jobs:
             exit 0
           fi
           git commit -m '通常同期失敗を遠隔翻訳で編集品質復旧'
+          git stash push -u -m "core-emergency-residual-${GITHUB_RUN_ID}" >/dev/null 2>&1 || true
           for attempt in 1 2 3 4 5; do
             git fetch origin main
             if ! git rebase origin/main; then
@@ -606,12 +601,13 @@ jobs:
           set -euo pipefail
           git config user.name 'daily-brief-japanese-bot'
           git config user.email 'actions@users.noreply.github.com'
-          git add data/latest.json data/live.json data/archive.json
+          git add data/latest.json data/live.json data/archive.json data/translation-cache.json
           if git diff --cached --quiet; then
             echo 'CORE_ALTERNATE_NO_DIFF_AFTER_VERIFICATION'
             exit 0
           fi
           git commit -m '独立ローカル翻訳経路で現在ニュースを品質復旧'
+          git stash push -u -m "core-alternate-residual-${GITHUB_RUN_ID}" >/dev/null 2>&1 || true
           for attempt in 1 2 3 4 5; do
             git fetch origin main
             if ! git rebase origin/main; then
