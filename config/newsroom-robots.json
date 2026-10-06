@@ -8,7 +8,9 @@
     "each stage must be verified before the next stage is assigned",
     "GREEN requires deployed production verification and fresh NAS attestation",
     "workflow success is never trusted without post-run data verification",
-    "absolute freshness gates prevent upstream+downstream stale equality from being marked healthy"
+    "absolute freshness gates prevent upstream+downstream stale equality from being marked healthy",
+    "workflow completion never advances a stage without post-run data verification",
+    "absolute freshness gates prevent equally-stale upstream/downstream data from appearing healthy"
   ],
   "stages": [
     {
@@ -20,12 +22,18 @@
         "data/live.json",
         "data/translation-cache.json"
       ],
-      "fallbackRobot": "core-alternate-recovery",
+      "fallbackRobot": "core-exhaustive-recovery",
       "fallbackMode": "bounded alternate job inside sync-japanese-news.yml after normal and emergency outcomes fail",
       "recoveryPolicy": {
         "google429CircuitBreakerSeconds": 90,
         "verifyOutcomeBeforeAccepting": true
-      }
+      },
+      "fallbackWorkflow": "recover-core-news.yml",
+      "verification": [
+        "latest date parity",
+        "live timestamp parity",
+        "no degraded translation"
+      ]
     },
     {
       "id": "content-rolling",
@@ -43,7 +51,28 @@
         "rejectDegradedBeforePublish": true,
         "verifyOutcomeBeforeAccepting": true,
         "boundedExhaustiveRetries": 3
-      }
+      },
+      "verification": [
+        "desk timestamp parity",
+        "stocks timestamp parity",
+        "stocks absolute freshness",
+        "no degraded translation"
+      ]
+    },
+    {
+      "id": "content-vocab",
+      "primaryRobot": "vocab-translator",
+      "workflow": "sync-daily-vocab.yml",
+      "fallbackRobot": "vocab-exhaustive-recovery",
+      "fallbackWorkflow": "recover-daily-vocab.yml",
+      "verification": [
+        "data/vocab/latest.json date == today HKT",
+        "data/vocab/YYYY-MM-DD.json exists and matches latest"
+      ],
+      "writes": [
+        "data/vocab/latest.json",
+        "data/vocab/YYYY-MM-DD.json"
+      ]
     },
     {
       "id": "vocab",
@@ -63,7 +92,8 @@
       "workflow": "rebuild-f3-pacing.yml",
       "dependsOn": [
         "content-core",
-        "content-rolling"
+        "content-rolling",
+        "content-vocab"
       ],
       "writes": [
         "data/** audio metadata",
