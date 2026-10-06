@@ -1,6 +1,6 @@
 {
   "version": 6,
-  "assessedAt": "2026-10-06T15:52:20.490Z",
+  "assessedAt": "2026-10-06T15:58:39.822Z",
   "state": "RED",
   "summary": "NOT_GREEN:daily-date-lag upstream=2026-10-06 japanese=2026-10-01 | live-lag-minutes=1012 | desk-lag-minutes=260 | desk-translation-degraded | stocks-relative-lag-minutes=11864 | nas-delivery-fingerprint=2026-10-01|2026-10-05T22:12:00.000Z|2026-10-06T10:44:00.000Z|2026-09-28T09:58:01.264Z",
   "faultReasons": [
@@ -40,7 +40,7 @@
       "lagMinutes": 11864,
       "relativeCurrent": false,
       "sourceAbsoluteFresh": true,
-      "sourceAgeMinutes": 10,
+      "sourceAgeMinutes": 17,
       "maxAgeHours": 8
     },
     "vocab": {
@@ -96,8 +96,8 @@
         "dispatched": false,
         "active": false,
         "reason": "writer-active",
-        "blockerWorkflow": "sync-japanese-news.yml",
-        "blockerRunId": 37490569230,
+        "blockerWorkflow": "repair-extra-translation-quality.yml",
+        "blockerRunId": 37491283958,
         "primaryRunId": 37489859488
       }
     ]
@@ -111,7 +111,7 @@
   },
   "robot": {
     "current": true,
-    "runId": 37491100744,
+    "runId": 37491968213,
     "event": "workflow_run",
     "role": "nas-attestation-recorder",
     "executor": "github-subordinate-workers",
