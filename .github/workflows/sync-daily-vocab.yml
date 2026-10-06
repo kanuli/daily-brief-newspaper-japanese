@@ -1,19 +1,13 @@
 name: Sync daily Japanese vocab
 
 on:
-  schedule:
-    # 00:20 Hong Kong time every day, after upstream generation at 00:10 HKT.
-    - cron: "20 16 * * *"
   workflow_dispatch:
-  push:
-    paths:
-      - ".daily-vocab-sync-trigger"
 
 permissions:
   contents: write
 
 concurrency:
-  group: sync-daily-japanese-vocab
+  group: japanese-newsroom-writer
   cancel-in-progress: false
 
 jobs:
