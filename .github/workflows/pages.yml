@@ -2,10 +2,8 @@ name: 日本語版 Pages 公開・広東語版レイアウト同期
 run-name: 編集品質ゲート・Pages公開 @ ${{ github.sha }}
 
 on:
-  push:
-    branches: ["main"]
-    paths-ignore:
-      - 'data/newsroom-health.json'
+  # Publication is assigned only after the Editor-in-Chief verifies content and
+  # F3 readiness. Do not deploy every intermediate robot commit.
   workflow_dispatch:
 
 permissions:
