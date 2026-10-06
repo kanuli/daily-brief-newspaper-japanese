@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Independent secondary local NLLB recovery for degraded Daily/Live fields.
+"""Independent secondary local M2M100 recovery for degraded Daily/Live fields.
 
 This is the final Core translation fallback. It is deliberately independent of
 Google/GTX/MyMemory and independent of the primary OPUS-MT model. Traditional
-Chinese is normalized locally with OpenCC, then translated locally with NLLB.
+Chinese is normalized locally with OpenCC, then translated locally with M2M100.
 Only source-linked fields that still fail newsroom quality gates are replaced.
 No degraded marker is cleared until a full second-pass validation succeeds.
 """
@@ -32,9 +32,9 @@ CORE_FILES = ("latest.json", "live.json")
 CORE_FIELDS = ("section", "sectionLabel") + integrity.STORY_TEXT_FIELDS
 BAD_STATUSES = {"EDITORIAL_MINIMUM_FALLBACK", "TRANSLATION_FAILED", "TRANSLATION_DEGRADED"}
 
-MODEL_NAME = os.getenv("SECONDARY_CORE_MODEL", "facebook/nllb-200-distilled-600M")
-SOURCE_LANG = os.getenv("SECONDARY_CORE_SOURCE_LANG", "zho_Hans")
-TARGET_LANG = os.getenv("SECONDARY_CORE_TARGET_LANG", "jpn_Jpan")
+MODEL_NAME = os.getenv("SECONDARY_CORE_MODEL", "facebook/m2m100_418M")
+SOURCE_LANG = os.getenv("SECONDARY_CORE_SOURCE_LANG", "zh")
+TARGET_LANG = os.getenv("SECONDARY_CORE_TARGET_LANG", "ja")
 MAX_SOURCE_TOKENS = 480
 MAX_NEW_TOKENS = 520
 _MODEL = None
@@ -70,12 +70,9 @@ def load_model():
         if _MODEL is None or _TOKENIZER is None:
             threads = max(1, min(4, os.cpu_count() or 2))
             torch.set_num_threads(threads)
-            _TOKENIZER = AutoTokenizer.from_pretrained(MODEL_NAME, src_lang=SOURCE_LANG)
+            _TOKENIZER = AutoTokenizer.from_pretrained(MODEL_NAME)
             _TOKENIZER.src_lang = SOURCE_LANG
-            _MODEL = AutoModelForSeq2SeqLM.from_pretrained(
-                MODEL_NAME,
-                use_safetensors=True,
-            )
+            _MODEL = AutoModelForSeq2SeqLM.from_pretrained(MODEL_NAME)
             _MODEL.to("cpu")
             _MODEL.eval()
             print(
@@ -97,9 +94,9 @@ def translate_chunk(text: str) -> str:
         truncation=True,
         max_length=MAX_SOURCE_TOKENS,
     )
-    target_id = tokenizer.convert_tokens_to_ids(TARGET_LANG)
-    if target_id is None or target_id == tokenizer.unk_token_id:
-        raise RuntimeError(f"NLLB target language token unavailable: {TARGET_LANG}")
+    if not hasattr(tokenizer, "get_lang_id"):
+        raise RuntimeError("M2M100 tokenizer does not expose get_lang_id")
+    target_id = tokenizer.get_lang_id(TARGET_LANG)
     with torch.inference_mode():
         generated = model.generate(
             **encoded,
@@ -111,7 +108,7 @@ def translate_chunk(text: str) -> str:
         )
     value = tokenizer.batch_decode(generated, skip_special_tokens=True)[0].strip()
     if not value:
-        raise RuntimeError("NLLB returned empty translation")
+        raise RuntimeError("M2M100 returned empty translation")
     return value
 
 
@@ -142,14 +139,14 @@ def translate(source: str, strict: bool, field: str) -> str:
         except Exception as exc:
             errors.append(f"part={index}:{type(exc).__name__}:{exc}")
             raise RuntimeError(
-                "Secondary local NLLB translation failed: " + "; ".join(errors)
+                "Secondary local M2M100 translation failed: " + "; ".join(errors)
             ) from exc
 
     value = "".join(translated)
     value = newsroom_quality.deterministic_postedit(source, value, field)
     if bad_translation(source, value, strict, field):
         raise RuntimeError(
-            f"Secondary local NLLB result rejected after reassembly: field={field}"
+            f"Secondary local M2M100 result rejected after reassembly: field={field}"
         )
     return value
 
