@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""NAS-owned controller for the Japanese news delivery chain.
+"""NAS-owned Editor-in-Chief control plane for the Japanese newsroom.
 
-The NAS runs this script on its existing Editor-in-Chief schedule. GitHub
-workflows have no newsroom cron ownership: the NAS dispatches translation or a
-repair, GitHub chains successful translation to F3 and successful F3 to Pages,
-and the NAS is the only component allowed to attest final GREEN health.
+The Editor-in-Chief is the only scheduler/orchestrator. GitHub Actions are
+specialist robots: they execute one bounded job and return. The controller
+serializes publication writers, verifies each stage, chooses an alternate
+recovery robot when available, and only attests GREEN after deployed Pages and
+F3 assets match the current Japanese newsroom state.
 """
 from __future__ import annotations
 
@@ -16,6 +17,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
+from pathlib import Path
 from typing import Dict, Optional, Set, Tuple
 
 
@@ -26,19 +28,37 @@ UPSTREAM = os.getenv(
     "CANTONESE_RAW_BASE",
     "https://raw.githubusercontent.com/kanuli/daily-brief-newspaper/main/data/",
 ).rstrip("/") + "/"
-JAPANESE = os.getenv(
-    "JAPANESE_RAW_BASE",
-    "https://raw.githubusercontent.com/kanuli/daily-brief-newspaper-japanese/main/data/",
+JAPANESE_ROOT = os.getenv(
+    "JAPANESE_RAW_ROOT",
+    "https://raw.githubusercontent.com/kanuli/daily-brief-newspaper-japanese/main/",
 ).rstrip("/") + "/"
+JAPANESE = os.getenv("JAPANESE_RAW_BASE", JAPANESE_ROOT + "data/").rstrip("/") + "/"
 PAGES = os.getenv(
     "JAPANESE_PAGES_BASE",
     "https://kanuli.github.io/daily-brief-newspaper-japanese/",
 ).rstrip("/") + "/"
+STATE_PATH = Path(
+    os.getenv(
+        "EDITOR_STATE_PATH",
+        "/volume2/docker/editor-in-chief/state/japanese-newsroom-control-plane.json",
+    )
+)
 
 LAYERS = ("latest.json", "live.json", "desk-latest.json", "stocks-latest.json")
-F3_WORKFLOW = "rebuild-f3-pacing.yml"
-PAGES_WORKFLOW = "pages.yml"
-ATTEST_WORKFLOW = "editor-in-chief-newsroom-robot.yml"
+ROBOTS = {
+    "core-translator": "sync-japanese-news.yml",
+    "rolling-translator": "repair-extra-translation-quality.yml",
+    "rolling-exhaustive-recovery": "repair-all-published-quality.yml",
+    "f3-voice": "rebuild-f3-pacing.yml",
+    "pages-publisher": "pages.yml",
+    "delivery-auditor": "editor-in-chief-newsroom-robot.yml",
+}
+MUTATING_ROBOTS = (
+    "core-translator",
+    "rolling-translator",
+    "rolling-exhaustive-recovery",
+    "f3-voice",
+)
 
 
 def request(url: str, *, method: str = "GET", payload: Optional[dict] = None) -> bytes:
@@ -46,7 +66,7 @@ def request(url: str, *, method: str = "GET", payload: Optional[dict] = None) ->
         "Accept": "application/vnd.github+json",
         "Cache-Control": "no-cache, no-store, max-age=0",
         "Pragma": "no-cache",
-        "User-Agent": "nas-japanese-editor-in-chief",
+        "User-Agent": "nas-japanese-editor-in-chief-v2",
         "X-GitHub-Api-Version": "2022-11-28",
     }
     if TOKEN and url.startswith("https://api.github.com/"):
@@ -110,17 +130,72 @@ def workflow_runs(workflow: str) -> list:
     return list(data.get("workflow_runs") or [])
 
 
-def dispatch(workflow: str, inputs: Optional[dict] = None) -> bool:
-    active = next((run for run in workflow_runs(workflow) if run.get("status") != "completed"), None)
-    if active:
-        print(f"NAS_DISPATCH_SKIPPED_ACTIVE workflow={workflow} run={active.get('id')}")
+def active_run(workflow: str) -> Optional[dict]:
+    return next((run for run in workflow_runs(workflow) if run.get("status") != "completed"), None)
+
+
+def latest_completed_run(workflow: str) -> Optional[dict]:
+    return next((run for run in workflow_runs(workflow) if run.get("status") == "completed"), None)
+
+
+def any_mutating_robot_active() -> Optional[Tuple[str, dict]]:
+    for robot in MUTATING_ROBOTS:
+        run = active_run(ROBOTS[robot])
+        if run:
+            return robot, run
+    return None
+
+
+def dispatch_robot(robot: str, *, reason: str, inputs: Optional[dict] = None, serialize_writers: bool = False) -> bool:
+    workflow = ROBOTS[robot]
+    own_active = active_run(workflow)
+    if own_active:
+        print(f"EDITOR_JOB_WAIT robot={robot} workflow={workflow} run={own_active.get('id')} reason={reason}")
         return False
+    if serialize_writers:
+        blocker = any_mutating_robot_active()
+        if blocker:
+            blocker_robot, blocker_run = blocker
+            print(
+                "EDITOR_JOB_BLOCKED_BY_WRITER "
+                f"robot={robot} blocker={blocker_robot} run={blocker_run.get('id')} reason={reason}"
+            )
+            return False
     payload = {"ref": "main"}
     if inputs:
         payload["inputs"] = inputs
     request(f"{API}/actions/workflows/{workflow}/dispatches", method="POST", payload=payload)
-    print(f"NAS_DISPATCHED workflow={workflow}")
+    print(f"EDITOR_JOB_ASSIGNED robot={robot} workflow={workflow} reason={reason}")
     return True
+
+
+def load_state() -> dict:
+    try:
+        return json.loads(STATE_PATH.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {"version": 2, "jobs": {}, "updatedAt": None}
+
+
+def save_state(state: dict) -> None:
+    try:
+        STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
+        state["version"] = 2
+        state["updatedAt"] = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
+        temp = STATE_PATH.with_suffix(STATE_PATH.suffix + ".tmp")
+        temp.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        temp.replace(STATE_PATH)
+    except OSError as exc:
+        print(f"EDITOR_STATE_WARNING path={STATE_PATH} error={exc}", file=sys.stderr)
+
+
+def mark_job(state: dict, job: str, status: str, *, reason: str, robot: Optional[str] = None) -> None:
+    state.setdefault("jobs", {})[job] = {
+        "status": status,
+        "robot": robot,
+        "reason": reason,
+        "at": datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z"),
+    }
+    save_state(state)
 
 
 def iter_stories(payload: object):
@@ -147,10 +222,41 @@ def degraded_translation(payload: dict) -> bool:
     return False
 
 
-def verify_pages_assets(layers: Dict[str, dict]) -> list:
+def verify_main_f3(layers: Dict[str, dict]) -> list:
+    """Verify current main has complete F3 metadata/assets before publication."""
+    failures = []
+    seen = set()  # type: Set[Tuple[str, str]]
+    for payload in layers.values():
+        for story in iter_stories(payload):
+            audio = str(story.get("audio") or "")
+            timing = str(story.get("timing") or "")
+            if not audio or not timing:
+                failures.append(f"f3:{story.get('id')}:missing-audio-metadata")
+                continue
+            if (audio, timing) in seen:
+                continue
+            seen.add((audio, timing))
+            try:
+                request(urllib.parse.urljoin(JAPANESE_ROOT, audio) + f"?nas_main_audio={time.time_ns()}")
+                timing_data = json.loads(
+                    request(urllib.parse.urljoin(JAPANESE_ROOT, timing) + f"?nas_main_timing={time.time_ns()}").decode("utf-8")
+                )
+                if timing_data.get("deliveryProfile") != "jp-tv-news-semantic-v4":
+                    failures.append(f"f3:{story.get('id')}:wrong-profile")
+            except (urllib.error.URLError, json.JSONDecodeError) as exc:
+                failures.append(f"f3:{story.get('id')}:{type(exc).__name__}")
+    return failures
+
+
+def verify_pages(layers: Dict[str, dict]) -> list:
+    """Verify deployed Pages matches main after content and F3 are complete."""
     failures = []
     for name, expected in layers.items():
-        published = load_json(PAGES + "data/", name)
+        try:
+            published = load_json(PAGES + "data/", name)
+        except (urllib.error.URLError, json.JSONDecodeError) as exc:
+            failures.append(f"pages:{name}:{type(exc).__name__}")
+            continue
         if name == "latest.json":
             if str(published.get("date") or "")[:10] < str(expected.get("date") or "")[:10]:
                 failures.append(f"pages:{name}:stale")
@@ -164,22 +270,27 @@ def verify_pages_assets(layers: Dict[str, dict]) -> list:
         for story in iter_stories(payload):
             audio = str(story.get("audio") or "")
             timing = str(story.get("timing") or "")
-            if not audio or not timing:
-                failures.append(f"f3:{story.get('id')}:missing-audio-metadata")
-                continue
-            if (audio, timing) in seen:
+            if not audio or not timing or (audio, timing) in seen:
                 continue
             seen.add((audio, timing))
             try:
-                request(urllib.parse.urljoin(PAGES, audio) + f"?nas_audio={time.time_ns()}")
+                request(urllib.parse.urljoin(PAGES, audio) + f"?nas_page_audio={time.time_ns()}")
                 timing_data = json.loads(
-                    request(urllib.parse.urljoin(PAGES, timing) + f"?nas_timing={time.time_ns()}").decode("utf-8")
+                    request(urllib.parse.urljoin(PAGES, timing) + f"?nas_page_timing={time.time_ns()}").decode("utf-8")
                 )
                 if timing_data.get("deliveryProfile") != "jp-tv-news-semantic-v4":
-                    failures.append(f"f3:{story.get('id')}:wrong-profile")
+                    failures.append(f"pages-f3:{story.get('id')}:wrong-profile")
             except (urllib.error.URLError, json.JSONDecodeError) as exc:
-                failures.append(f"f3:{story.get('id')}:{type(exc).__name__}")
+                failures.append(f"pages-f3:{story.get('id')}:{type(exc).__name__}")
     return failures
+
+
+def choose_rolling_robot() -> str:
+    """Use the exhaustive repair path after a failed primary rolling run."""
+    latest = latest_completed_run(ROBOTS["rolling-translator"])
+    if latest and latest.get("conclusion") not in {"success", "neutral", "skipped"}:
+        return "rolling-exhaustive-recovery"
+    return "rolling-translator"
 
 
 def main() -> int:
@@ -187,6 +298,7 @@ def main() -> int:
         print("NAS_CONTROLLER_RED GITHUB_TOKEN is required for workflow dispatch", file=sys.stderr)
         return 2
 
+    state = load_state()
     upstream = {name: load_json(UPSTREAM, name) for name in LAYERS}
     japanese = {name: load_json(JAPANESE, name) for name in LAYERS}
 
@@ -203,27 +315,53 @@ def main() -> int:
         or degraded_translation(japanese["desk-latest.json"])
         or degraded_translation(japanese["stocks-latest.json"])
     )
+
+    # Publication writers are deliberately serialized. The old design allowed
+    # translation/F3 commits to overwrite each other's data fields.
     if core_stale:
-        dispatch("sync-japanese-news.yml")
-    if rolling_stale:
-        dispatch("repair-extra-translation-quality.yml")
-    if core_stale or rolling_stale:
-        print(f"NAS_CONTROLLER_RED core_stale={core_stale} rolling_stale={rolling_stale}")
+        robot = "core-translator"
+        assigned = dispatch_robot(robot, reason="core-stale-or-degraded", serialize_writers=True)
+        mark_job(state, "content-core", "assigned" if assigned else "waiting", reason="core-stale", robot=robot)
+        print(f"NAS_CONTROLLER_RED stage=content-core core_stale={core_stale} rolling_stale={rolling_stale}")
         return 1
 
-    failures = verify_pages_assets(japanese)
-    if failures:
-        degraded_failures = [failure for failure in failures if failure.endswith(":degraded-translation")]
-        audio_failures = [failure for failure in failures if failure.startswith("f3:")]
-        if degraded_failures:
-            dispatch("sync-japanese-news.yml")
-            dispatch("repair-extra-translation-quality.yml")
-        elif audio_failures:
-            dispatch(F3_WORKFLOW)
-        else:
-            dispatch(PAGES_WORKFLOW)
-        print("NAS_CONTROLLER_RED " + " | ".join(failures[:20]))
+    if rolling_stale:
+        robot = choose_rolling_robot()
+        assigned = dispatch_robot(robot, reason="rolling-stale-or-degraded", serialize_writers=True)
+        mark_job(state, "content-rolling", "assigned" if assigned else "waiting", reason="rolling-stale", robot=robot)
+        print(f"NAS_CONTROLLER_RED stage=content-rolling robot={robot}")
         return 1
+
+    mark_job(state, "content-core", "verified", reason="source-current")
+    mark_job(state, "content-rolling", "verified", reason="source-current")
+
+    f3_failures = verify_main_f3(japanese)
+    if f3_failures:
+        assigned = dispatch_robot("f3-voice", reason="main-f3-incomplete", serialize_writers=True)
+        mark_job(
+            state,
+            "f3",
+            "assigned" if assigned else "waiting",
+            reason=";".join(f3_failures[:8]),
+            robot="f3-voice",
+        )
+        print("NAS_CONTROLLER_RED stage=f3 " + " | ".join(f3_failures[:20]))
+        return 1
+    mark_job(state, "f3", "verified", reason="main-f3-assets-current")
+
+    page_failures = verify_pages(japanese)
+    if page_failures:
+        assigned = dispatch_robot("pages-publisher", reason="pages-not-current")
+        mark_job(
+            state,
+            "pages",
+            "assigned" if assigned else "waiting",
+            reason=";".join(page_failures[:8]),
+            robot="pages-publisher",
+        )
+        print("NAS_CONTROLLER_RED stage=pages " + " | ".join(page_failures[:20]))
+        return 1
+    mark_job(state, "pages", "verified", reason="production-matches-main")
 
     fingerprint = publication_fingerprint(japanese)
     try:
@@ -243,6 +381,7 @@ def main() -> int:
         and attestation_age is not None
         and 0 <= attestation_age < 20 * 60
     ):
+        mark_job(state, "delivery-attestation", "verified", reason="fresh-attestation", robot="delivery-auditor")
         print(
             "NAS_CONTROLLER_GREEN_ALREADY_ATTESTED "
             f"fingerprint={fingerprint} age_seconds={int(attestation_age)}"
@@ -250,14 +389,22 @@ def main() -> int:
         return 0
 
     verified_at = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
-    dispatched = dispatch(
-        ATTEST_WORKFLOW,
-        {"nas_verified_fingerprint": fingerprint, "nas_verified_at": verified_at},
+    assigned = dispatch_robot(
+        "delivery-auditor",
+        reason="all-stages-verified",
+        inputs={"nas_verified_fingerprint": fingerprint, "nas_verified_at": verified_at},
     )
-    if not dispatched:
+    mark_job(
+        state,
+        "delivery-attestation",
+        "assigned" if assigned else "waiting",
+        reason=fingerprint,
+        robot="delivery-auditor",
+    )
+    if not assigned:
         print(f"NAS_CONTROLLER_VERIFY_PENDING fingerprint={fingerprint}")
         return 1
-    print(f"NAS_CONTROLLER_GREEN fingerprint={fingerprint} verified_at={verified_at}")
+    print(f"NAS_CONTROLLER_GREEN_PENDING_ATTESTATION fingerprint={fingerprint} verified_at={verified_at}")
     return 0
 
 
