@@ -264,21 +264,6 @@ def degraded_translation(payload: dict) -> bool:
 def verify_main_f3(layers: Dict[str, dict]) -> list:
     """Verify current main has complete F3 metadata/assets before publication."""
     failures = []
-    if vocab is not None:
-        try:
-            published_vocab = load_json(PAGES + "data/", "vocab/latest.json")
-            expected_day = str(vocab.get("date") or "")[:10]
-            published_day = str(published_vocab.get("date") or "")[:10]
-            if published_day != expected_day:
-                failures.append(f"pages:vocab/latest.json:stale:{published_day}!={expected_day}")
-            dated_day = today or expected_day
-            if dated_day:
-                published_archive = load_json(PAGES + "data/", f"vocab/{dated_day}.json")
-                if str(published_archive.get("date") or "")[:10] != dated_day:
-                    failures.append(f"pages:vocab/{dated_day}.json:invalid")
-        except (urllib.error.URLError, json.JSONDecodeError) as exc:
-            failures.append(f"pages:vocab:{type(exc).__name__}")
-
     seen = set()  # type: Set[Tuple[str, str]]
     for payload in layers.values():
         for story in iter_stories(payload):
@@ -318,6 +303,21 @@ def verify_pages(layers: Dict[str, dict], vocab: Optional[dict] = None, today: O
             failures.append(f"pages:{name}:stale")
         if degraded_translation(published):
             failures.append(f"pages:{name}:degraded-translation")
+
+    if vocab is not None:
+        try:
+            published_vocab = load_json(PAGES + "data/", "vocab/latest.json")
+            expected_day = str(vocab.get("date") or "")[:10]
+            published_day = str(published_vocab.get("date") or "")[:10]
+            if published_day != expected_day:
+                failures.append(f"pages:vocab/latest.json:stale:{published_day}!={expected_day}")
+            dated_day = today or expected_day
+            if dated_day:
+                published_archive = load_json(PAGES + "data/", f"vocab/{dated_day}.json")
+                if str(published_archive.get("date") or "")[:10] != dated_day:
+                    failures.append(f"pages:vocab/{dated_day}.json:invalid")
+        except (urllib.error.URLError, json.JSONDecodeError) as exc:
+            failures.append(f"pages:vocab:{type(exc).__name__}")
 
     seen = set()  # type: Set[Tuple[str, str]]
     for payload in layers.values():
