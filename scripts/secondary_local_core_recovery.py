@@ -202,7 +202,7 @@ def translate(source: str, strict: bool, field: str) -> str:
     translated = []
     for index, piece in enumerate(pieces, 1):
         try:
-            value = translate_chunk(piece, False, field)
+            value = translate_chunk(piece, strict, field)
             translated.append(value)
             print(
                 "SECONDARY_LOCAL_CHUNK_OK",
