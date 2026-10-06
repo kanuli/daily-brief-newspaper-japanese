@@ -77,6 +77,37 @@ jobs:
           EXTRA_VALIDATE_SCOPE: desk
         run: python scripts/validate_extra_layers.py
 
+      - name: Reject degraded desk translation before publication
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+import json
+from pathlib import Path
+data=json.loads(Path('data/desk-latest.json').read_text(encoding='utf-8'))
+failures=[]
+if data.get('translationDegraded'):
+    failures.append('translationDegraded=true')
+if int(data.get('translationDeferredCount') or 0)>0:
+    failures.append(f"translationDeferredCount={data.get('translationDeferredCount')}")
+bad={'EDITORIAL_MINIMUM_FALLBACK','TRANSLATION_FAILED','TRANSLATION_DEGRADED'}
+def walk(v):
+    if isinstance(v, dict):
+        if v.get('id'):
+            status=str(v.get('translationStatus') or '').strip().upper()
+            if status in bad:
+                failures.append(f"{v.get('id')}:{status}")
+        for x in v.values(): walk(x)
+    elif isinstance(v, list):
+        for x in v: walk(x)
+walk(data)
+if failures:
+    print('ROLLING_DESK_DEGRADED_REJECT')
+    for failure in failures[:50]: print(' -', failure)
+    raise SystemExit(1)
+print('ROLLING_DESK_TRANSLATION_CLEAN')
+PY
+
 
       - name: Reject degraded desk translation before publication
         shell: bash
@@ -189,6 +220,37 @@ jobs:
         env:
           EXTRA_VALIDATE_SCOPE: remaining
         run: python scripts/validate_extra_layers.py
+
+      - name: Reject degraded stocks translation before publication
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+import json
+from pathlib import Path
+data=json.loads(Path('data/stocks-latest.json').read_text(encoding='utf-8'))
+failures=[]
+if data.get('translationDegraded'):
+    failures.append('translationDegraded=true')
+if int(data.get('translationDeferredCount') or 0)>0:
+    failures.append(f"translationDeferredCount={data.get('translationDeferredCount')}")
+bad={'EDITORIAL_MINIMUM_FALLBACK','TRANSLATION_FAILED','TRANSLATION_DEGRADED'}
+def walk(v):
+    if isinstance(v, dict):
+        if v.get('id'):
+            status=str(v.get('translationStatus') or '').strip().upper()
+            if status in bad:
+                failures.append(f"{v.get('id')}:{status}")
+        for x in v.values(): walk(x)
+    elif isinstance(v, list):
+        for x in v: walk(x)
+walk(data)
+if failures:
+    print('ROLLING_STOCKS_DEGRADED_REJECT')
+    for failure in failures[:50]: print(' -', failure)
+    raise SystemExit(1)
+print('ROLLING_STOCKS_TRANSLATION_CLEAN')
+PY
 
 
       - name: Reject degraded stocks/topic translation before publication
