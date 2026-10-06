@@ -181,3 +181,152 @@
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
   window.addEventListener('pageshow',()=>{ensureBaseStyles();normalizeNav();normalizeTopicShell();applyStaticRuby();ensurePageAssets();mountSystemPanel();ensureVoiceProductionStatus();ensureIntegrityGuard();refreshHealth();});
 })();
+
+(() => {
+  'use strict';
+
+  if (window.__idleAutoReloadInitialized) return;
+  window.__idleAutoReloadInitialized = true;
+
+  const IDLE_TIME_MS = 30 * 60 * 1000;
+  const RECHECK_TIME_MS = 60 * 1000;
+  const RETURN_GRACE_TIME_MS = 2 * 60 * 1000;
+  const ACTIVITY_THROTTLE_MS = 1000;
+
+  let lastActivityAt = Date.now();
+  let reloadPending = false;
+  let checkTimer = null;
+  let graceUntil = 0;
+  let lastThrottledActivityAt = 0;
+  let wasVisible = document.visibilityState === 'visible';
+  let wasFocused = document.hasFocus();
+
+  function scheduleCheck(delay) {
+    if (checkTimer) clearTimeout(checkTimer);
+    checkTimer = setTimeout(checkReload, Math.max(0, delay));
+  }
+
+  function recordActivity(event) {
+    if (event && event.isTrusted === false) return;
+    lastActivityAt = Date.now();
+    reloadPending = false;
+    graceUntil = 0;
+    scheduleCheck(IDLE_TIME_MS);
+  }
+
+  function recordThrottledActivity(event) {
+    if (event && event.isTrusted === false) return;
+    const now = Date.now();
+    if (now - lastThrottledActivityAt < ACTIVITY_THROTTLE_MS) return;
+    lastThrottledActivityAt = now;
+    recordActivity(event);
+  }
+
+  function mediaIsPlaying() {
+    return [...document.querySelectorAll('audio, video')].some(media => !media.paused && !media.ended);
+  }
+
+  function editableIsActive() {
+    const active = document.activeElement;
+    if (!active || active === document.body) return false;
+    if (active.matches?.('input, textarea, select')) return true;
+    if (active.isContentEditable) return true;
+    return Boolean(active.closest?.('[contenteditable=""], [contenteditable="true"], [contenteditable="plaintext-only"]'));
+  }
+
+  function isDisplayed(element) {
+    if (!element || element.hidden) return false;
+    const style = window.getComputedStyle(element);
+    return style.display !== 'none' && style.visibility !== 'hidden';
+  }
+
+  function blockingUiIsOpen() {
+    const systemPanel = document.getElementById('system-status-panel');
+    if (systemPanel && !systemPanel.hidden) return true;
+    if (document.querySelector('#system-status-button[aria-expanded="true"]')) return true;
+    if (document.querySelector('[aria-haspopup="menu"][aria-expanded="true"]')) return true;
+
+    const selectors = [
+      'dialog[open]',
+      '[role="dialog"]:not([hidden])',
+      '[aria-modal="true"]:not([hidden])',
+      '[role="menu"]:not([hidden])',
+      '.modal.show',
+      '.modal.open',
+      '.dialog.open',
+      '.menu.open'
+    ];
+    return [...document.querySelectorAll(selectors.join(','))].some(isDisplayed);
+  }
+
+  function reloadIsSafe() {
+    return !mediaIsPlaying() && !editableIsActive() && !blockingUiIsOpen();
+  }
+
+  function checkReload() {
+    const now = Date.now();
+    const idleFor = now - lastActivityAt;
+
+    if (idleFor < IDLE_TIME_MS) {
+      reloadPending = false;
+      scheduleCheck(IDLE_TIME_MS - idleFor);
+      return;
+    }
+
+    reloadPending = true;
+    if (graceUntil > now) {
+      scheduleCheck(graceUntil - now);
+      return;
+    }
+
+    if (reloadIsSafe()) {
+      window.location.reload();
+      return;
+    }
+
+    scheduleCheck(RECHECK_TIME_MS);
+  }
+
+  function grantReturnGraceIfOverdue() {
+    const now = Date.now();
+    if (now - lastActivityAt < IDLE_TIME_MS && !reloadPending) return;
+    reloadPending = true;
+    if (graceUntil <= now) graceUntil = now + RETURN_GRACE_TIME_MS;
+    scheduleCheck(graceUntil - now);
+  }
+
+  function handleVisibilityChange() {
+    const visible = document.visibilityState === 'visible';
+    if (visible && !wasVisible) grantReturnGraceIfOverdue();
+    wasVisible = visible;
+  }
+
+  function handleFocus() {
+    if (!wasFocused) grantReturnGraceIfOverdue();
+    wasFocused = true;
+  }
+
+  function handleBlur() {
+    wasFocused = false;
+  }
+
+  ['click', 'mousedown', 'pointerdown', 'keydown', 'touchstart'].forEach(type => {
+    document.addEventListener(type, recordActivity, { capture: true, passive: type.startsWith('touch') });
+  });
+  ['mousemove', 'scroll', 'touchmove'].forEach(type => {
+    document.addEventListener(type, recordThrottledActivity, { capture: true, passive: true });
+  });
+
+  document.addEventListener('visibilitychange', handleVisibilityChange);
+  window.addEventListener('focus', handleFocus);
+  window.addEventListener('blur', handleBlur);
+  window.addEventListener('pageshow', () => {
+    if (document.visibilityState === 'visible' && Date.now() - lastActivityAt >= IDLE_TIME_MS) {
+      grantReturnGraceIfOverdue();
+    } else {
+      checkReload();
+    }
+  });
+
+  scheduleCheck(IDLE_TIME_MS);
+})();
