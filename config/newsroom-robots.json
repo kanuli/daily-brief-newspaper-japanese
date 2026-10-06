@@ -1,15 +1,16 @@
 {
-  "version": 6,
+  "version": 7,
   "owner": "NAS Editor-in-Chief",
   "principles": [
-    "Editor-in-Chief is the sole scheduler and recovery authority",
-    "robots execute bounded jobs and do not schedule peer robots",
+    "NAS Editor-in-Chief is the sole scheduler and recovery authority",
+    "GitHub robots execute bounded jobs and never schedule peer robots",
+    "source collectors, translators, F3, Pages and auditor are verified stage-by-stage",
     "publication writers are serialized to prevent lost updates",
-    "each stage must be verified before the next stage is assigned",
+    "each stage is bound to a source version before primary-to-alternate escalation",
     "GREEN requires deployed production verification and fresh NAS attestation",
     "workflow success is never trusted without post-run data verification",
     "absolute freshness gates prevent upstream+downstream stale equality from being marked healthy",
-    "final Core recovery must remain local and independent of retired or rate-limited hosted translation APIs"
+    "final Core recovery remains local and independent of rate-limited hosted translation APIs"
   ],
   "stages": [
     {
@@ -50,6 +51,24 @@
       }
     },
     {
+      "id": "source-stocks",
+      "primaryRobot": "source-stock-primary",
+      "repository": "kanuli/daily-brief-newspaper",
+      "workflow": "stock-publication-maintenance.yml",
+      "primaryInput": {
+        "recovery_mode": "normal"
+      },
+      "fallbackRobot": "source-stock-deep",
+      "fallbackInput": {
+        "recovery_mode": "deep"
+      },
+      "freshness": "upstream stocks-latest timestamp must be no older than 8 hours",
+      "recoveryPolicy": {
+        "verifyOutcomeBeforeAccepting": true,
+        "alternateAfterNoImprovementForSameSourceVersion": true
+      }
+    },
+    {
       "id": "content-rolling",
       "primaryRobot": "rolling-translator",
       "workflow": "repair-extra-translation-quality.yml",
@@ -68,10 +87,17 @@
       }
     },
     {
+      "id": "source-vocab",
+      "primaryRobot": "source-vocab-generator",
+      "repository": "kanuli/daily-brief-newspaper",
+      "workflow": "daily-japanese-vocab.yml",
+      "freshness": "upstream data/vocab/latest.json date must equal current HKT date",
+      "selfHealing": true
+    },
+    {
       "id": "vocab",
       "primaryRobot": "vocab-translator",
       "workflow": "sync-daily-vocab.yml",
-      "supervisedBy": "delivery-auditor",
       "freshness": "latest.date must equal current HKT date and data/vocab/YYYY-MM-DD.json must exist",
       "selfHealing": true,
       "writes": [
@@ -85,7 +111,8 @@
         "primary": "sync-daily-vocab.yml with bounded retries",
         "fallback": "recover-daily-vocab.yml with longer bounded backoff",
         "acceptance": "latest.date == today HKT and dated archive exists and matches latest"
-      }
+      },
+      "supervisedBy": "NAS Editor-in-Chief"
     },
     {
       "id": "f3",
@@ -120,16 +147,20 @@
       ],
       "writes": [
         "data/newsroom-health.json"
-      ]
+      ],
+      "role": "audit-only",
+      "dispatchesPeerRobots": false
     }
   ],
   "state": {
     "defaultPath": "/volume2/docker/editor-in-chief/state/japanese-newsroom-control-plane.json",
+    "version": 3,
     "statuses": [
       "assigned",
       "waiting",
       "verified"
-    ]
+    ],
+    "sourceVersionBound": true
   },
   "policies": {
     "stockAbsoluteFreshnessHours": 8,
@@ -137,6 +168,10 @@
     "vocabDatedArchiveRequired": true,
     "detailedFaultReasons": true,
     "workflowOutcomeVerification": true,
-    "vocabOutcomeAlternateRecovery": true
+    "vocabOutcomeAlternateRecovery": true,
+    "sourceVersionBoundEscalation": true,
+    "nasIsSoleScheduler": true,
+    "githubAuditorDispatchesPeerRobots": false,
+    "greenOnlyAfterFreshAuditorAttestation": true
   }
 }
