@@ -485,16 +485,16 @@ jobs:
 
 
   secondary_local_core_recovery:
-    name: Final independent core recovery — local NLLB
+    name: Final independent core recovery — local M2M100
     needs: [sync, emergency_remote_core, alternate_core_recovery]
     if: ${{ always() && needs.sync.outputs.core_ok != 'true' && needs.emergency_remote_core.result != 'success' && needs.alternate_core_recovery.result != 'success' }}
     runs-on: ubuntu-latest
     timeout-minutes: 28
     env:
       CANTONESE_SNAPSHOT_DIR: .cantonese-snapshot/data
-      SECONDARY_CORE_MODEL: facebook/nllb-200-distilled-600M
-      SECONDARY_CORE_SOURCE_LANG: zho_Hans
-      SECONDARY_CORE_TARGET_LANG: jpn_Jpan
+      SECONDARY_CORE_MODEL: facebook/m2m100_418M
+      SECONDARY_CORE_SOURCE_LANG: zh
+      SECONDARY_CORE_TARGET_LANG: ja
     steps:
       - name: Checkout latest production main
         uses: actions/checkout@v4
@@ -510,11 +510,11 @@ jobs:
           cache-dependency-path: |
             requirements-translation.txt
 
-      - name: Cache secondary local NLLB model
+      - name: Cache secondary local M2M100 model
         uses: actions/cache@v4
         with:
           path: ~/.cache/huggingface/hub
-          key: hf-nllb-200-distilled-600m-core-fallback-v1
+          key: hf-m2m100-418m-core-fallback-v1
 
       - name: Install independent local recovery dependencies
         shell: bash
@@ -549,7 +549,7 @@ jobs:
       - name: Rebuild current source structure without local ML
         run: python scripts/emergency_remote_core_sync.py
 
-      - name: Repair rejected fields with independent local NLLB
+      - name: Repair rejected fields with independent local M2M100
         run: python scripts/secondary_local_core_recovery.py
 
       - name: Reject any remaining degraded marker
