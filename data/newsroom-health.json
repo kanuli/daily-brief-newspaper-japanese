@@ -1,44 +1,41 @@
 {
-  "version": 6,
-  "assessedAt": "2026-10-06T19:06:44.499Z",
+  "version": 7,
+  "assessedAt": "2026-10-07T09:18:54.655Z",
   "state": "RED",
-  "summary": "NOT_GREEN:desk-lag-minutes=260 | desk-translation-degraded | stocks-relative-lag-minutes=12066 | nas-delivery-fingerprint=2026-10-06|2026-10-06T15:04:00.000Z|2026-10-06T10:44:00.000Z|2026-09-28T09:58:01.264Z",
+  "summary": "NOT_GREEN:stocks-relative-lag-minutes=56",
   "faultReasons": [
-    "desk-lag-minutes=260",
-    "desk-translation-degraded",
-    "stocks-relative-lag-minutes=12066",
-    "nas-delivery-fingerprint=2026-10-06|2026-10-06T15:04:00.000Z|2026-10-06T10:44:00.000Z|2026-09-28T09:58:01.264Z"
+    "stocks-relative-lag-minutes=56"
   ],
   "layers": {
     "daily": {
       "current": true,
-      "upstream": "2026-10-06",
-      "japanese": "2026-10-06",
+      "upstream": "2026-10-07",
+      "japanese": "2026-10-07",
       "degradedTranslation": false
     },
     "live": {
       "current": true,
       "degradedTranslation": false,
-      "upstream": "2026-10-06T23:04:00+08:00",
-      "japanese": "2026-10-06T23:04:00+08:00",
+      "upstream": "2026-10-07T15:38:00+08:00",
+      "japanese": "2026-10-07T15:38:00+08:00",
       "lagMinutes": 0
     },
     "desk": {
-      "current": false,
-      "degradedTranslation": true,
-      "upstream": "2026-10-06T23:04:00+08:00",
-      "japanese": "2026-10-06T18:44:00+08:00",
-      "lagMinutes": 260
+      "current": true,
+      "degradedTranslation": false,
+      "upstream": "2026-10-07T15:38:00+08:00",
+      "japanese": "2026-10-07T15:38:00+08:00",
+      "lagMinutes": 0
     },
     "stocks": {
       "current": false,
       "degradedTranslation": false,
-      "upstream": "2026-10-06T19:03:51.826151+00:00",
-      "japanese": "2026-09-28T09:58:01.264563+00:00",
-      "lagMinutes": 12066,
+      "upstream": "2026-10-07T09:18:25.787323+00:00",
+      "japanese": "2026-10-07T08:22:41.256953+00:00",
+      "lagMinutes": 56,
       "relativeCurrent": false,
       "sourceAbsoluteFresh": true,
-      "sourceAgeMinutes": 3,
+      "sourceAgeMinutes": 0,
       "maxAgeHours": 8
     },
     "vocab": {
@@ -46,7 +43,8 @@
       "expectedHktDate": "2026-10-07",
       "upstream": "2026-10-07",
       "japanese": "2026-10-07",
-      "datedArchivePresent": true
+      "datedArchivePresent": true,
+      "datedArchiveMatchesLatest": true
     },
     "structural": {
       "current": true,
@@ -54,16 +52,16 @@
       "pagesChecked": 13
     },
     "delivery": {
-      "current": false,
+      "current": true,
       "required": true,
       "owner": "NAS Editor-in-Chief",
       "verifies": [
         "github-f3",
         "github-pages"
       ],
-      "publicationFingerprint": "2026-10-06|2026-10-06T15:04:00.000Z|2026-10-06T10:44:00.000Z|2026-09-28T09:58:01.264Z",
-      "attestedFingerprint": null,
-      "attestedAt": null
+      "publicationFingerprint": "2026-10-07|2026-10-07T07:38:00.000Z|2026-10-07T07:38:00.000Z|2026-10-07T08:22:41.256Z|2026-10-07",
+      "attestedFingerprint": "2026-10-07|2026-10-07T07:38:00.000Z|2026-10-07T07:38:00.000Z|2026-10-07T08:22:41.256Z|2026-10-07",
+      "attestedAt": "2026-10-07T09:18:27Z"
     }
   },
   "recovery": {
@@ -76,7 +74,7 @@
   "maintenance": {
     "owner": "Editor-in-Chief",
     "executor": "Maintenance Robot",
-    "incidentKey": "desk@2026-10-06T15:04:00.000Z|desk@translation-degraded|stocks@2026-10-06T19:03:51.826Z|nas-delivery@2026-10-06|2026-10-06T15:04:00.000Z|2026-10-06T10:44:00.000Z|2026-09-28T09:58:01.264Z",
+    "incidentKey": "stocks@2026-10-07T09:18:25.787Z",
     "sourceVersionBound": true,
     "status": "awaiting-nas-repair-dispatch",
     "decision": "NAS_CONTROLLER_MUST_DISPATCH_REPAIR",
@@ -98,10 +96,10 @@
   },
   "robot": {
     "current": true,
-    "runId": 37516461984,
-    "event": "workflow_run",
-    "role": "nas-attestation-recorder",
-    "executor": "github-subordinate-workers",
+    "runId": 37599737325,
+    "event": "workflow_dispatch",
+    "role": "nas-attestation-auditor",
+    "executor": "github-auditor-only",
     "selfHealingLoop": false
   },
   "policy": {
@@ -122,7 +120,9 @@
     "stockAbsoluteFreshnessHours": 8,
     "vocabCurrentHktDateRequired": true,
     "vocabDatedArchiveRequired": true,
-    "vocabSelfHealingWorkflow": "sync-daily-vocab.yml -> verify -> recover-daily-vocab.yml -> verify",
-    "workflowOutcomeMustBeDataVerifiedBeforeAdvancing": true
+    "vocabSelfHealingWorkflow": "NAS: source-vocab -> vocab-primary -> verify -> vocab-exhaustive -> verify",
+    "workflowOutcomeMustBeDataVerifiedBeforeAdvancing": true,
+    "nasIsSoleScheduler": true,
+    "auditorDispatchesPeerRobots": false
   }
 }
