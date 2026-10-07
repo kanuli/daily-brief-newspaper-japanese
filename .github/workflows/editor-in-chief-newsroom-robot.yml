@@ -16,7 +16,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: japanese-newsroom-writer
+  # Editor-in-Chief patrol/audit must never compete with production writers.
+  group: japanese-newsroom-auditor
   cancel-in-progress: false
 
 jobs:
