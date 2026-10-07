@@ -1,0 +1,264 @@
+{
+  "version": 3,
+  "duration": 114.547,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 342,
+  "charactersPerMinute": 179.1,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 6.346,
+      "text": "速報：最新の確認済みニュース"
+    },
+    {
+      "key": "dek",
+      "start": 6.346,
+      "end": 24.718,
+      "text": "57%の登録有権者は、トランプ政権がAIリスクを十分に評価していないと判断し、54%は議会に同様の評価を与えた。"
+    },
+    {
+      "key": "body-0",
+      "start": 24.718,
+      "end": 70.73,
+      "text": "ロイターによると、6日間のロイター/イプソス調査では、ほとんどのアメリカの有権者がトランプ政権と議会が人工知能のリスクを完全に正当化していないと考えている。57%の登録有権者が政府の重視度が低いと述べ、54%が議会に対して同様の評価を行い、84%がAIがアメリカの労働者にとって脅威であると見ている。"
+    },
+    {
+      "key": "why",
+      "start": 70.73,
+      "end": 92.926,
+      "text": "投票者の態度は議会選挙と規制政策に影響を及ぼし、AI企業が直面する政治的および規制環境を変える可能性がある。"
+    },
+    {
+      "key": "watch",
+      "start": 92.926,
+      "end": 114.547,
+      "text": "国会とホワイトハウスは、新しい連邦AI規制、データセンター、または軍事アプリケーションの制限を提案するかどうかを注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.021,
+      "end": 2.301,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-semantic",
+      "text": "速報："
+    },
+    {
+      "parentKey": "title",
+      "start": 2.301,
+      "speechEnd": 5.646,
+      "end": 6.346,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "最新の確認済みニュース。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 6.346,
+      "speechEnd": 10.527,
+      "end": 10.757,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "57%の登録有権者は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 10.757,
+      "speechEnd": 17.586,
+      "end": 17.816,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "トランプ政権がAIリスクを十分に評価していないと判断し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.816,
+      "speechEnd": 24.018,
+      "end": 24.718,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "54%は議会に同様の評価を与えた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 24.718,
+      "speechEnd": 27.296,
+      "end": 27.526,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイターによると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 27.526,
+      "speechEnd": 32.683,
+      "end": 32.913,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "6日間のロイター/イプソス調査では、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 32.913,
+      "speechEnd": 36.746,
+      "end": 37.026,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ほとんどのアメリカの有権者が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.026,
+      "speechEnd": 46.433,
+      "end": 46.933,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "トランプ政権と議会が人工知能のリスクを完全に正当化していないと考えている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.933,
+      "speechEnd": 55.016,
+      "end": 55.246,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "57%の登録有権者が政府の重視度が低いと述べ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.246,
+      "speechEnd": 61.587,
+      "end": 61.818,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "54%が議会に対して同様の評価を行い、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.818,
+      "speechEnd": 70.11,
+      "end": 70.73,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "84%がAIがアメリカの労働者にとって脅威であると見ている。"
+    },
+    {
+      "parentKey": "why",
+      "start": 70.73,
+      "speechEnd": 74.702,
+      "end": 75.202,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 75.202,
+      "speechEnd": 82.589,
+      "end": 82.819,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "投票者の態度は議会選挙と規制政策に影響を及ぼし、"
+    },
+    {
+      "parentKey": "why",
+      "start": 82.819,
+      "speechEnd": 92.226,
+      "end": 92.926,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "AI企業が直面する政治的および規制環境を変える可能性がある。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 92.926,
+      "speechEnd": 95.017,
+      "end": 95.247,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 95.247,
+      "speechEnd": 98.313,
+      "end": 98.543,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "国会とホワイトハウスは、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 98.543,
+      "speechEnd": 101.678,
+      "end": 101.909,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "新しい連邦AI規制、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 101.909,
+      "speechEnd": 104.208,
+      "end": 104.438,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "データセンター、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 104.438,
+      "speechEnd": 108.898,
+      "end": 109.178,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "または軍事アプリケーションの制限を"
+    },
+    {
+      "parentKey": "watch",
+      "start": 109.178,
+      "speechEnd": 113.847,
+      "end": 114.547,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "提案するかどうかを注意してください。"
+    }
+  ]
+}

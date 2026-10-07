@@ -1,0 +1,394 @@
+{
+  "version": 3,
+  "duration": 183.85,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 649,
+  "charactersPerMinute": 211.8,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 12.011,
+      "text": "マイクロソフトとNVIDIAがAIノートメーカーを推進し、エージェントの任務を実行"
+    },
+    {
+      "key": "dek",
+      "start": 12.011,
+      "end": 33.428,
+      "text": "新しいSurface Laptop UltraはNvidia RTX Sparkクリスタルを採用し、AI作業の一部をクラウドからコンピュータに転送することを目指しています。"
+    },
+    {
+      "key": "body-0",
+      "start": 33.428,
+      "end": 122.691,
+      "text": "マイクロソフトはサンフランシスコのイベントで新しいSurface Laptop Ultraを発表し、Nvidia RTX Sparkクリスタルを採用します。製品の位置は、AIエージェントがWindowsコンピュータでプログラミングやその他の複雑な作業を処理し、一部の仕事がクラウドオペレーティングに依存することを減らすことです。Microsoftにとって、これは一部のAzureクラウド負荷を企業および家庭用デバイスに移転するのに役立ちます。Nvidiaにとっては、IntelおよびAMDが長期にわたって支配するPC市場へのさらなる切断です。しかし、メモリコストの上昇は、AIハードウェアの価格を急速に上昇させ、販売価格とセキュリティコントロールが新製品の普及の鍵となります。"
+    },
+    {
+      "key": "why",
+      "start": 122.691,
+      "end": 149.597,
+      "text": "この協力はマイクロソフト、NVIDIA、PC市場のパターンに直接関与し、AIの運用コストがより多くのオリジナル化プログラムを推進していることを反映しています。"
+    },
+    {
+      "key": "watch",
+      "start": 149.597,
+      "end": 183.85,
+      "text": "Microsoft が発表した最終販売価格、正式な出荷時期、ネイティブ人工知能のパフォーマンス、セキュリティおよびエンタープライズ管理メカニズム、および他の PC ブランドが同様の Nvidia ソリューションを採用するかどうかに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.554,
+      "end": 3.834,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "マイクロソフトとNVIDIAが"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.834,
+      "speechEnd": 7.457,
+      "end": 7.687,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "AIノートメーカーを推進し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.687,
+      "speechEnd": 11.31,
+      "end": 12.011,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "エージェントの任務を実行。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.011,
+      "speechEnd": 16.679,
+      "end": 16.959,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "新しいSurface Laptop Ultraは"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.959,
+      "speechEnd": 23.3,
+      "end": 23.53,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Nvidia RTX Sparkクリスタルを採用し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.53,
+      "speechEnd": 32.728,
+      "end": 33.428,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "AI作業の一部をクラウドからコンピュータに転送することを目指しています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 33.428,
+      "speechEnd": 44.019,
+      "end": 44.249,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "マイクロソフトはサンフランシスコのイベントで新しいSurface Laptop Ultraを発表し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.249,
+      "speechEnd": 50.799,
+      "end": 51.299,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "Nvidia RTX Sparkクリスタルを採用します。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.299,
+      "speechEnd": 53.807,
+      "end": 54.037,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "製品の位置は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.037,
+      "speechEnd": 65.116,
+      "end": 65.346,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "AIエージェントがWindowsコンピュータでプログラミングやその他の複雑な作業を処理し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.346,
+      "speechEnd": 73.917,
+      "end": 74.417,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "一部の仕事がクラウドオペレーティングに依存することを減らすことです。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.417,
+      "speechEnd": 77.344,
+      "end": 77.574,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Microsoftにとって、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 77.574,
+      "speechEnd": 82.242,
+      "end": 82.522,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "これは一部のAzureクラウド負荷を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 82.522,
+      "speechEnd": 89.699,
+      "end": 90.199,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "企業および家庭用デバイスに移転するのに役立ちます。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 90.199,
+      "speechEnd": 93.056,
+      "end": 93.286,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Nvidiaにとっては、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 93.286,
+      "speechEnd": 102.484,
+      "end": 102.984,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "IntelおよびAMDが長期にわたって支配するPC市場へのさらなる切断です。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 102.984,
+      "speechEnd": 105.005,
+      "end": 105.235,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "しかし、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 105.235,
+      "speechEnd": 108.3,
+      "end": 108.53,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "メモリコストの上昇は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 108.53,
+      "speechEnd": 113.617,
+      "end": 113.847,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "AIハードウェアの価格を急速に上昇させ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 113.847,
+      "speechEnd": 117.958,
+      "end": 118.238,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "販売価格とセキュリティコントロールが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 118.238,
+      "speechEnd": 122.071,
+      "end": 122.691,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "新製品の普及の鍵となります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 122.691,
+      "speechEnd": 126.662,
+      "end": 127.163,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 127.163,
+      "speechEnd": 130.716,
+      "end": 130.946,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この協力はマイクロソフト、"
+    },
+    {
+      "parentKey": "why",
+      "start": 130.946,
+      "speechEnd": 133.106,
+      "end": 133.336,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "NVIDIA、"
+    },
+    {
+      "parentKey": "why",
+      "start": 133.336,
+      "speechEnd": 137.238,
+      "end": 137.468,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "PC市場のパターンに直接関与し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 137.468,
+      "speechEnd": 144.227,
+      "end": 144.507,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "AIの運用コストがより多くのオリジナル化プログラムを"
+    },
+    {
+      "parentKey": "why",
+      "start": 144.507,
+      "speechEnd": 148.897,
+      "end": 149.597,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "推進していることを反映しています。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 149.597,
+      "speechEnd": 151.688,
+      "end": 151.918,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 151.918,
+      "speechEnd": 157.283,
+      "end": 157.513,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Microsoft が発表した最終販売価格、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 157.513,
+      "speechEnd": 160.231,
+      "end": 160.461,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "正式な出荷時期、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 160.461,
+      "speechEnd": 164.432,
+      "end": 164.662,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ネイティブ人工知能のパフォーマンス、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 164.662,
+      "speechEnd": 170.306,
+      "end": 170.536,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "セキュリティおよびエンタープライズ管理メカニズム、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 170.536,
+      "speechEnd": 174.369,
+      "end": 174.649,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "および他の PC ブランドが"
+    },
+    {
+      "parentKey": "watch",
+      "start": 174.649,
+      "speechEnd": 183.15,
+      "end": 183.85,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "同様の Nvidia ソリューションを採用するかどうかに注目してください。"
+    }
+  ]
+}
