@@ -149,8 +149,12 @@ jobs:
                   for x in v: yield from stories(x)
           failures=[]
           paths=[Path('data/desk-latest.json'),Path('data/stocks-latest.json')]
-          topics=sorted(Path('data/topic-more').glob('*.json'))
-          if topics: paths.append(topics[-1])
+          latest=json.loads(Path('data/latest.json').read_text(encoding='utf-8'))
+          day=str(latest.get('date') or '')
+          if day:
+              current_topic=Path('data/topic-more') / f'{day}.json'
+              if current_topic.exists():
+                  paths.append(current_topic)
           for path in paths:
               if not path.exists(): continue
               data=json.loads(path.read_text(encoding='utf-8'))
@@ -167,6 +171,54 @@ jobs:
           print('ROLLING_EXHAUSTIVE_NON_DEGRADED_PASS')
           PY
 
+      - name: Require exhaustive recovery to advance current source freshness
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          def stamp(payload):
+              for key in ('generatedAt','lastUpdated','sourceGeneratedAt','checkedAt'):
+                  value=payload.get(key) if isinstance(payload,dict) else None
+                  if not value:
+                      continue
+                  try:
+                      dt=datetime.fromisoformat(str(value).replace('Z','+00:00'))
+                      if dt.tzinfo is None:
+                          dt=dt.replace(tzinfo=timezone.utc)
+                      return dt.astimezone(timezone.utc)
+                  except ValueError:
+                      pass
+              return None
+
+          failures=[]
+          for name in ('desk-latest.json','stocks-latest.json'):
+              source_path=Path('.cantonese-snapshot/data') / name
+              local_path=Path('data') / name
+              source=json.loads(source_path.read_text(encoding='utf-8'))
+              local=json.loads(local_path.read_text(encoding='utf-8'))
+              source_ts=stamp(source)
+              local_ts=stamp(local)
+              if source_ts is None:
+                  failures.append(f'{name}:source-timestamp-missing')
+                  continue
+              if local_ts is None or local_ts < source_ts:
+                  failures.append(
+                      f'{name}:local-stale source={source_ts.isoformat()} '
+                      f'local={local_ts.isoformat() if local_ts else "missing"}'
+                  )
+
+          if failures:
+              print('ROLLING_EXHAUSTIVE_OUTCOME_NOT_ACCEPTED')
+              for failure in failures:
+                  print(' -', failure)
+              raise SystemExit(1)
+
+          print('ROLLING_EXHAUSTIVE_OUTCOME_VERIFIED')
+          PY
       - name: Publish repaired rolling Japanese immediately
         shell: bash
         run: |
@@ -179,6 +231,7 @@ jobs:
             exit 0
           fi
           git commit -m '全ローリング日本語の文字化け・意味不一致・自然さを修復'
+          git stash push -u -m "rolling-exhaustive-residual-${GITHUB_RUN_ID}" >/dev/null 2>&1 || true
           for attempt in 1 2 3 4 5; do
             git fetch origin main
             if ! git rebase origin/main; then

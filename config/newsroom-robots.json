@@ -1,5 +1,5 @@
 {
-  "version": 8,
+  "version": 9,
   "owner": "NAS Editor-in-Chief",
   "principles": [
     "NAS Editor-in-Chief is the sole scheduler and recovery authority",
@@ -84,7 +84,12 @@
       "recoveryPolicy": {
         "rejectDegradedBeforePublish": true,
         "verifyOutcomeBeforeAccepting": true,
-        "boundedExhaustiveRetries": 3
+        "boundedExhaustiveRetries": 3,
+        "primaryAttemptsPerSourceVersion": 1,
+        "fallbackAttemptsPerSourceVersion": 1,
+        "nasRedispatchAfterBudgetExhausted": false,
+        "currentLayerGate": "desk-latest.json + stocks-latest.json + current-date topic-more only",
+        "exhaustiveRequiresFreshnessOutcome": true
       }
     },
     {
@@ -174,7 +179,8 @@
     "statuses": [
       "assigned",
       "waiting",
-      "verified"
+      "verified",
+      "exhausted"
     ],
     "sourceVersionBound": true
   },
@@ -192,6 +198,8 @@
     "discordOwnedByNasEditor": true,
     "discordIndependentScheduleDisabled": true,
     "discordWorkflowRunTriggerDisabled": true,
-    "discordMaxAttemptsPerSourceVersion": 2
+    "discordMaxAttemptsPerSourceVersion": 2,
+    "rollingAttemptBudgetPerSourceVersion": 2,
+    "staleArchiveCannotBlockCurrentRollingPublication": true
   }
 }
