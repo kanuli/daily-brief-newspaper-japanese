@@ -100,6 +100,10 @@ ROBOTS = {
         "repo": JAPANESE_REPOSITORY,
         "workflow": "editor-in-chief-newsroom-robot.yml",
     },
+    "discord-publisher": {
+        "repo": JAPANESE_REPOSITORY,
+        "workflow": "discord-after-pages.yml",
+    },
 }
 
 MUTATING_ROBOTS = (
@@ -243,6 +247,23 @@ def active_run(robot: str) -> Optional[dict]:
     )
 
 
+def latest_completed_run(robot: str) -> Optional[dict]:
+    return next(
+        (run for run in workflow_runs(robot) if run.get("status") == "completed"),
+        None,
+    )
+
+
+def parse_iso(value: object) -> Optional[datetime]:
+    try:
+        parsed = datetime.fromisoformat(str(value or "").replace("Z", "+00:00"))
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(tzinfo=timezone.utc)
+        return parsed.astimezone(timezone.utc)
+    except ValueError:
+        return None
+
+
 def any_mutating_robot_active(
     *, exclude_robot: Optional[str] = None
 ) -> Optional[Tuple[str, dict]]:
@@ -351,6 +372,7 @@ def mark_job(
     reason: str,
     robot: Optional[str] = None,
     source_version: Optional[str] = None,
+    attempts: Optional[int] = None,
 ) -> None:
     entry = {
         "status": status,
@@ -364,6 +386,8 @@ def mark_job(
     }
     if source_version is not None:
         entry["sourceVersion"] = source_version
+    if attempts is not None:
+        entry["attempts"] = attempts
     state.setdefault("jobs", {})[job] = entry
     save_state(state)
 
@@ -562,6 +586,122 @@ def choose_vocab_robot(state: dict, source_version: str) -> str:
     }:
         return "vocab-exhaustive-recovery"
     return "vocab-translator"
+
+
+def discord_delivery_version(layers: Dict[str, dict]) -> str:
+    live_stamp = parse_stamp(layers.get("live.json"))
+    live_hour = (
+        live_stamp.astimezone(HKT).strftime("%Y-%m-%dT%H")
+        if live_stamp
+        else "missing"
+    )
+    return f"{source_day(layers.get('latest.json')) or 'missing'}|{live_hour}"
+
+
+def ensure_discord_delivery(state: dict, layers: Dict[str, dict]) -> bool:
+    """Dispatch and verify one Discord publication per HKT Live publication hour."""
+    source_version = discord_delivery_version(layers)
+    job = (state.get("jobs") or {}).get("discord-delivery") or {}
+    same_source = job.get("sourceVersion") == source_version
+
+    if same_source and job.get("status") == "verified":
+        print(
+            "NAS_DISCORD_ALREADY_VERIFIED "
+            f"sourceVersion={source_version}"
+        )
+        return True
+
+    running = active_run("discord-publisher")
+    if running:
+        attempts = int(job.get("attempts") or 1) if same_source else 1
+        mark_job(
+            state,
+            "discord-delivery",
+            "waiting",
+            reason=f"discord-workflow-active:run={running.get('id')}",
+            robot="discord-publisher",
+            source_version=source_version,
+            attempts=attempts,
+        )
+        print(
+            "NAS_CONTROLLER_RED stage=discord-delivery "
+            f"status=waiting run={running.get('id')} sourceVersion={source_version}"
+        )
+        return False
+
+    if same_source:
+        latest = latest_completed_run("discord-publisher")
+        assigned_at = parse_iso(job.get("at"))
+        completed_at = parse_iso((latest or {}).get("updated_at") or (latest or {}).get("created_at"))
+        if latest and assigned_at and completed_at and completed_at >= assigned_at:
+            conclusion = str(latest.get("conclusion") or "")
+            if conclusion in {"success", "neutral"}:
+                mark_job(
+                    state,
+                    "discord-delivery",
+                    "verified",
+                    reason=f"discord-workflow-success:run={latest.get('id')}",
+                    robot="discord-publisher",
+                    source_version=source_version,
+                    attempts=int(job.get("attempts") or 1),
+                )
+                print(
+                    "NAS_DISCORD_DELIVERY_VERIFIED "
+                    f"run={latest.get('id')} sourceVersion={source_version}"
+                )
+                return True
+
+            attempts = int(job.get("attempts") or 1)
+            if attempts >= 2:
+                mark_job(
+                    state,
+                    "discord-delivery",
+                    "waiting",
+                    reason=f"discord-retry-budget-exhausted:{conclusion or 'unknown'}",
+                    robot="discord-publisher",
+                    source_version=source_version,
+                    attempts=attempts,
+                )
+                print(
+                    "NAS_CONTROLLER_RED stage=discord-delivery "
+                    f"reason=retry-budget-exhausted conclusion={conclusion or 'unknown'} "
+                    f"sourceVersion={source_version}"
+                )
+                return False
+
+            assigned = dispatch_robot(
+                "discord-publisher",
+                reason=f"discord-retry-after-{conclusion or 'unknown'}",
+            )
+            mark_job(
+                state,
+                "discord-delivery",
+                "assigned" if assigned else "waiting",
+                reason=f"discord-retry-after-{conclusion or 'unknown'}",
+                robot="discord-publisher",
+                source_version=source_version,
+                attempts=attempts + 1,
+            )
+            return False
+
+    assigned = dispatch_robot(
+        "discord-publisher",
+        reason=f"verified-pages-hour:{source_version}",
+    )
+    mark_job(
+        state,
+        "discord-delivery",
+        "assigned" if assigned else "waiting",
+        reason="verified-pages-awaiting-discord-delivery",
+        robot="discord-publisher",
+        source_version=source_version,
+        attempts=1,
+    )
+    print(
+        "NAS_CONTROLLER_RED stage=discord-delivery "
+        f"status={'assigned' if assigned else 'waiting'} sourceVersion={source_version}"
+    )
+    return False
 
 
 def verify_main_f3(layers: Dict[str, dict]) -> List[str]:
@@ -869,9 +1009,12 @@ def main() -> int:
             robot="delivery-auditor",
             source_version=fingerprint,
         )
+        if not ensure_discord_delivery(state, japanese):
+            return 1
         print(
-            "NAS_CONTROLLER_GREEN_ALREADY_ATTESTED "
-            f"fingerprint={fingerprint} age_seconds={int(attestation_age)}"
+            "NAS_CONTROLLER_GREEN "
+            f"fingerprint={fingerprint} age_seconds={int(attestation_age)} "
+            "discord=verified"
         )
         return 0
 
