@@ -1,5 +1,5 @@
 {
-  "version": 7,
+  "version": 8,
   "owner": "NAS Editor-in-Chief",
   "principles": [
     "NAS Editor-in-Chief is the sole scheduler and recovery authority",
@@ -10,7 +10,8 @@
     "GREEN requires deployed production verification and fresh NAS attestation",
     "workflow success is never trusted without post-run data verification",
     "absolute freshness gates prevent upstream+downstream stale equality from being marked healthy",
-    "final Core recovery remains local and independent of rate-limited hosted translation APIs"
+    "final Core recovery remains local and independent of rate-limited hosted translation APIs",
+    "Discord publication is a final NAS-assigned delivery stage, not an independent scheduler"
   ],
   "stages": [
     {
@@ -150,6 +151,21 @@
       ],
       "role": "audit-only",
       "dispatchesPeerRobots": false
+    },
+    {
+      "id": "discord-delivery",
+      "primaryRobot": "discord-publisher",
+      "workflow": "discord-after-pages.yml",
+      "dependsOn": [
+        "delivery-attestation"
+      ],
+      "role": "external-delivery",
+      "deliveryPolicy": {
+        "onePerHktLivePublicationHour": true,
+        "pagesMustMatchMain": true,
+        "maxAttemptsPerSourceVersion": 2,
+        "successRequiredBeforeNasGreen": true
+      }
     }
   ],
   "state": {
@@ -172,6 +188,10 @@
     "sourceVersionBoundEscalation": true,
     "nasIsSoleScheduler": true,
     "githubAuditorDispatchesPeerRobots": false,
-    "greenOnlyAfterFreshAuditorAttestation": true
+    "greenOnlyAfterFreshAuditorAttestation": true,
+    "discordOwnedByNasEditor": true,
+    "discordIndependentScheduleDisabled": true,
+    "discordWorkflowRunTriggerDisabled": true,
+    "discordMaxAttemptsPerSourceVersion": 2
   }
 }

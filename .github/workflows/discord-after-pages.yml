@@ -1,12 +1,6 @@
 name: 日本語ニュース Discord 公開通知
 
 on:
-  schedule:
-    - cron: '15 * * * *'
-  workflow_run:
-    workflows:
-      - '日本語版 Pages 公開・広東語版レイアウト同期'
-    types: [completed]
   workflow_dispatch:
 
 permissions:
@@ -19,7 +13,6 @@ concurrency:
 
 jobs:
   notify:
-    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
@@ -68,17 +61,6 @@ jobs:
           if not ready:
               reason = f'pages-behind local={stamp} published={published_stamp}'
 
-          if ready and os.environ.get('GITHUB_EVENT_NAME') == 'schedule':
-              try:
-                  dt = datetime.fromisoformat(stamp.replace('Z', '+00:00')).astimezone(ZoneInfo('Asia/Hong_Kong'))
-                  now = datetime.now(ZoneInfo('Asia/Hong_Kong'))
-                  if (dt.year, dt.month, dt.day, dt.hour) != (now.year, now.month, now.day, now.hour):
-                      ready = False
-                      reason = f'no-current-hour-publication live={dt.isoformat()} now={now.isoformat()}'
-              except Exception as exc:
-                  ready = False
-                  reason = f'invalid-live-stamp:{exc}'
-
           with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as handle:
               handle.write(f'current={str(ready).lower()}\n')
               handle.write(f'live_stamp={stamp}\n')
@@ -87,8 +69,7 @@ jobs:
               print(f'PAGES_CURRENT_FOR_DISCORD {stamp}')
           else:
               print(f'DISCORD_NOT_READY {reason}')
-              if os.environ.get('GITHUB_EVENT_NAME') != 'schedule':
-                  raise SystemExit(reason)
+              raise SystemExit(reason)
           PY
 
       - name: 公開時刻fingerprintを計算
@@ -180,9 +161,9 @@ jobs:
             touch .discord-state/daily
           fi
 
-          # One public Live notice per HKT publication hour. Normal path is the
-          # xx:15 schedule; workflow_run is only a late-recovery path when Pages
-          # was not current at xx:15.
+          # One public Live notice per HKT publication hour. The NAS
+          # Editor-in-Chief is the sole scheduler and dispatches this bounded
+          # delivery robot only after Pages and delivery attestation pass.
           if [ "${LIVE_CACHE_HIT:-false}" != 'true' ] && [ "$live_covered" != 'true' ]; then
             python scripts/notify_discord.py --published-live
             touch .discord-state/live
