@@ -1,10 +1,10 @@
 {
   "version": 7,
-  "assessedAt": "2026-10-07T11:33:49.444Z",
+  "assessedAt": "2026-10-07T11:55:20.456Z",
   "state": "RED",
-  "summary": "NOT_GREEN:nas-delivery-fingerprint=2026-10-07|2026-10-07T09:56:00.000Z|2026-10-07T09:56:00.000Z|2026-10-07T10:24:29.820Z|2026-10-07",
+  "summary": "NOT_GREEN:nas-delivery-fingerprint=2026-10-07|2026-10-07T09:56:00.000Z|2026-10-07T09:56:00.000Z|2026-10-07T11:35:49.570Z|2026-10-07",
   "faultReasons": [
-    "nas-delivery-fingerprint=2026-10-07|2026-10-07T09:56:00.000Z|2026-10-07T09:56:00.000Z|2026-10-07T10:24:29.820Z|2026-10-07"
+    "nas-delivery-fingerprint=2026-10-07|2026-10-07T09:56:00.000Z|2026-10-07T09:56:00.000Z|2026-10-07T11:35:49.570Z|2026-10-07"
   ],
   "layers": {
     "daily": {
@@ -30,12 +30,12 @@
     "stocks": {
       "current": true,
       "degradedTranslation": false,
-      "upstream": "2026-10-07T10:24:29.820996+00:00",
-      "japanese": "2026-10-07T10:24:29.820996+00:00",
+      "upstream": "2026-10-07T11:35:49.570143+00:00",
+      "japanese": "2026-10-07T11:35:49.570143+00:00",
       "lagMinutes": 0,
       "relativeCurrent": true,
       "sourceAbsoluteFresh": true,
-      "sourceAgeMinutes": 69,
+      "sourceAgeMinutes": 20,
       "maxAgeHours": 8
     },
     "vocab": {
@@ -59,9 +59,9 @@
         "github-f3",
         "github-pages"
       ],
-      "publicationFingerprint": "2026-10-07|2026-10-07T09:56:00.000Z|2026-10-07T09:56:00.000Z|2026-10-07T10:24:29.820Z|2026-10-07",
-      "attestedFingerprint": "2026-10-07|2026-10-07T09:56:00.000Z|2026-10-07T09:56:00.000Z|2026-10-07T10:24:29.820Z",
-      "attestedAt": "2026-10-07T11:33:34Z"
+      "publicationFingerprint": "2026-10-07|2026-10-07T09:56:00.000Z|2026-10-07T09:56:00.000Z|2026-10-07T11:35:49.570Z|2026-10-07",
+      "attestedFingerprint": null,
+      "attestedAt": null
     }
   },
   "recovery": {
@@ -74,7 +74,7 @@
   "maintenance": {
     "owner": "Editor-in-Chief",
     "executor": "Maintenance Robot",
-    "incidentKey": "nas-delivery@2026-10-07|2026-10-07T09:56:00.000Z|2026-10-07T09:56:00.000Z|2026-10-07T10:24:29.820Z|2026-10-07",
+    "incidentKey": "nas-delivery@2026-10-07|2026-10-07T09:56:00.000Z|2026-10-07T09:56:00.000Z|2026-10-07T11:35:49.570Z|2026-10-07",
     "sourceVersionBound": true,
     "status": "awaiting-nas-delivery-verification",
     "decision": "NAS_CONTROLLER_MUST_VERIFY_F3_AND_PAGES",
@@ -96,7 +96,7 @@
   },
   "robot": {
     "current": true,
-    "runId": 37614898411,
+    "runId": 37617354580,
     "event": "workflow_dispatch",
     "role": "nas-attestation-auditor",
     "executor": "github-auditor-only",
