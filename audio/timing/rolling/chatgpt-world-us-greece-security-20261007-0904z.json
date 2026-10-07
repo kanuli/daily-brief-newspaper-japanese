@@ -1,0 +1,360 @@
+{
+  "version": 3,
+  "duration": 177.398,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 511,
+  "charactersPerMinute": 172.8,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 8.526,
+      "text": "米国とギリシャ、新たな対テロ情報共有協力を開始"
+    },
+    {
+      "key": "dek",
+      "start": 8.526,
+      "end": 29.236,
+      "text": "ルビオ米国務長官はアテネ訪問中、両国の法執行機関が新たな共同安全保障計画を通じてテロ対策の情報交換を強化すると発表した。"
+    },
+    {
+      "key": "body-0",
+      "start": 29.236,
+      "end": 79.197,
+      "text": "ロイター通信によると、マルコ・ルビオ米国務長官はアテネでギリシャのジョージ・ゲラペトリティス外相と会談し、米国とギリシャが新たな共同安全保障計画を策定し、覚書を通じて両国の法執行機関間の対テロ情報共有を強化すると発表した。ルビオ氏は、両国は人の移動や人身売買などの共通の安全保障上のリスクに直面していると述べた。"
+    },
+    {
+      "key": "body-1",
+      "start": 79.197,
+      "end": 128.378,
+      "text": "ギリシャ外務省はこれまで、両国が10月7日に第6回ギリシャ・米国戦略対話をアテネで開催すると発表した。ギリシャはNATO加盟国でもあり、東地中海と紅海の安全保障問題で重要な役割を果たしている。この協力により、法執行、テロ対策、地域安全保障に関する両国間の情報交換がさらに制度化されることになる。"
+    },
+    {
+      "key": "why",
+      "start": 128.378,
+      "end": 157.452,
+      "text": "新しい共同安全保障計画には、両国間の法執行機関と対テロ情報の交換が含まれており、東地中海とヨーロッパの南側における安全保障協力に直接影響を与えることになる。"
+    },
+    {
+      "key": "watch",
+      "start": 157.452,
+      "end": 177.398,
+      "text": "覚書の履行詳細や参加機関、両国がより具体的な情報共有や海上安全保障協定を発表するかどうかに注目してほしい。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.508,
+      "end": 2.788,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国とギリシャ、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.788,
+      "speechEnd": 7.666,
+      "end": 8.526,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "新たな対テロ情報共有協力を開始。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 8.526,
+      "speechEnd": 13.751,
+      "end": 14.031,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ルビオ米国務長官はアテネ訪問中、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.031,
+      "speechEnd": 21.417,
+      "end": 21.757,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "両国の法執行機関が新たな共同安全保障計画を"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.757,
+      "speechEnd": 28.376,
+      "end": 29.236,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "通じてテロ対策の情報交換を強化すると発表した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 29.236,
+      "speechEnd": 32.232,
+      "end": 32.512,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 32.512,
+      "speechEnd": 37.39,
+      "end": 37.73,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "マルコ・ルビオ米国務長官は"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.73,
+      "speechEnd": 44.14,
+      "end": 44.42,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アテネでギリシャのジョージ・ゲラペトリティス外相と会談し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.42,
+      "speechEnd": 52.154,
+      "end": 52.434,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国とギリシャが新たな共同安全保障計画を策定し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.434,
+      "speechEnd": 62.537,
+      "end": 63.157,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "覚書を通じて両国の法執行機関間の対テロ情報共有を強化すると発表した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.157,
+      "speechEnd": 65.456,
+      "end": 65.736,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ルビオ氏は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.736,
+      "speechEnd": 78.417,
+      "end": 79.197,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "両国は人の移動や人身売買などの共通の安全保障上のリスクに直面していると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 79.197,
+      "speechEnd": 82.89,
+      "end": 83.17,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ギリシャ外務省はこれまで、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 83.17,
+      "speechEnd": 91.252,
+      "end": 91.592,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "両国が10月7日に第6回ギリシャ・米国戦略対話を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.592,
+      "speechEnd": 95.215,
+      "end": 95.836,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "アテネで開催すると発表した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 95.836,
+      "speechEnd": 100.086,
+      "end": 100.366,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ギリシャはNATO加盟国でもあり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 100.366,
+      "speechEnd": 108.518,
+      "end": 109.138,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "東地中海と紅海の安全保障問題で重要な役割を果たしている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.138,
+      "speechEnd": 111.786,
+      "end": 112.066,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この協力により、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.066,
+      "speechEnd": 114.156,
+      "end": 114.436,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "法執行、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.436,
+      "speechEnd": 116.596,
+      "end": 116.876,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "テロ対策、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 116.876,
+      "speechEnd": 123.286,
+      "end": 123.626,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "地域安全保障に関する両国間の情報交換が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 123.626,
+      "speechEnd": 127.598,
+      "end": 128.378,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "さらに制度化されることになる。"
+    },
+    {
+      "parentKey": "why",
+      "start": 128.378,
+      "speechEnd": 132.349,
+      "end": 132.969,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 132.969,
+      "speechEnd": 137.777,
+      "end": 138.057,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "新しい共同安全保障計画には、"
+    },
+    {
+      "parentKey": "why",
+      "start": 138.057,
+      "speechEnd": 145.512,
+      "end": 145.792,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "両国間の法執行機関と対テロ情報の交換が含まれており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 145.792,
+      "speechEnd": 156.592,
+      "end": 157.452,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "東地中海とヨーロッパの南側における安全保障協力に直接影響を与えることになる。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 157.452,
+      "speechEnd": 159.542,
+      "end": 159.822,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 159.822,
+      "speechEnd": 163.515,
+      "end": 163.795,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "覚書の履行詳細や参加機関、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 163.795,
+      "speechEnd": 171.738,
+      "end": 172.078,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "両国がより具体的な情報共有や海上安全保障協定を"
+    },
+    {
+      "parentKey": "watch",
+      "start": 172.078,
+      "speechEnd": 176.537,
+      "end": 177.398,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "発表するかどうかに注目してほしい。"
+    }
+  ]
+}
