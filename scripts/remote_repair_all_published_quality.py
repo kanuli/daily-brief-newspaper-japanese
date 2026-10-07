@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 import os
 import re
+from datetime import datetime, timezone
 from pathlib import Path
 
 import cantonese_snapshot as snapshot
@@ -239,6 +240,111 @@ def source_for(name: str):
     return snapshot.load_json(name, optional=name.startswith("topic-more/"))
 
 
+def payload_stamp(payload):
+    if not isinstance(payload, dict):
+        return None
+    for key in ("generatedAt", "lastUpdated", "sourceGeneratedAt", "checkedAt"):
+        value = payload.get(key)
+        if not value:
+            continue
+        try:
+            parsed = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+            if parsed.tzinfo is None:
+                parsed = parsed.replace(tzinfo=timezone.utc)
+            return parsed.astimezone(timezone.utc)
+        except ValueError:
+            continue
+    return None
+
+
+def minimum_rolling_source(name: str, source: dict) -> dict:
+    """Keep a small current source-backed edition for remote fallback recovery."""
+    if not isinstance(source, dict):
+        return source
+
+    copy = dict(source)
+    if name == "desk-latest.json" and isinstance(source.get("desks"), dict):
+        desks = {}
+        for desk, rows in source["desks"].items():
+            selected = list(rows) if isinstance(rows, list) else []
+            desks[str(desk)] = selected[:1]
+        copy["desks"] = desks
+        copy["editorSelectionMode"] = "remote-minimum-guaranteed-edition-per-desk"
+    elif name == "stocks-latest.json" and isinstance(source.get("tickers"), dict):
+        tickers = {}
+        for ticker, info in source["tickers"].items():
+            if not isinstance(info, dict):
+                tickers[ticker] = info
+                continue
+            item = dict(info)
+            rows = list(info.get("stories") or []) if isinstance(info.get("stories"), list) else []
+            item["stories"] = rows[:1]
+            tickers[ticker] = item
+        copy["tickers"] = tickers
+        copy["editorSelectionMode"] = "remote-minimum-guaranteed-edition-per-ticker"
+    return copy
+
+
+def refresh_stale_static_rolling(name: str) -> bool:
+    """Rebuild stale Desk/Stocks from the frozen fresh source before post-editing.
+
+    The old exhaustive path only edited fields already present in the Japanese
+    file. That could never advance generatedAt/source structure after the
+    Cantonese source changed, so NAS kept seeing the same stale layer forever.
+    """
+    if name not in {"desk-latest.json", "stocks-latest.json"}:
+        return False
+
+    source = source_for(name)
+    if not isinstance(source, dict):
+        return False
+    path = DATA / name
+    try:
+        local = json.loads(path.read_text(encoding="utf-8")) if path.is_file() else {}
+    except Exception:
+        local = {}
+
+    source_ts = payload_stamp(source)
+    local_ts = payload_stamp(local)
+    if source_ts is None:
+        raise RuntimeError(f"{name}: source timestamp missing")
+    if local_ts is not None and local_ts >= source_ts:
+        return False
+
+    prepared = minimum_rolling_source(name, source)
+    base.likely_chinese_source = extra.needs_cantonese_translation
+    base.TRANSLATE_KEYS.update({"impactLabel", "sectionLabel"})
+    safe.prune_cache()
+    translated = safe.safe_convert(prepared)
+    extra.decorate_story_tree(translated, "rolling")
+    if not isinstance(translated, dict):
+        raise RuntimeError(f"{name}: translated payload is not an object")
+
+    translated["language"] = "ja"
+    translated["translationSource"] = "kanuli/daily-brief-newspaper"
+    translated["sourceFile"] = name
+    translated["sourceFingerprint"] = extra.fingerprint(prepared)
+    translated["translationSchemaVersion"] = extra.SCHEMA
+    translated["sourceParityMode"] = "remote-minimum-source-refresh-v1"
+    translated["translationDegraded"] = False
+    translated["translationDeferredCount"] = 0
+    translated["translationDeferredIds"] = []
+    translated["translationDeferredMetadata"] = []
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        json.dumps(translated, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    print(
+        "REMOTE_FULL_SOURCE_REFRESH_OK",
+        f"file={name}",
+        f"source={source_ts.isoformat()}",
+        f"previous={local_ts.isoformat() if local_ts else 'missing'}",
+    )
+    return True
+
+
 def repair_file(name: str, mode: str) -> int:
     path = DATA / name
     if not path.is_file():
@@ -291,7 +397,19 @@ def main():
         if re.fullmatch(r"\d{4}-\d{2}-\d{2}", date):
             names.append(f"topic-more/{date}.json")
         for name in names:
+            refresh_ok = True
+            if name in {"desk-latest.json", "stocks-latest.json"}:
+                try:
+                    refresh_stale_static_rolling(name)
+                except Exception as exc:
+                    refresh_ok = False
+                    print(
+                        "REMOTE_FULL_SOURCE_REFRESH_FAILED",
+                        f"file={name}",
+                        f"error={type(exc).__name__}:{str(exc)[:500]}",
+                    )
             count, ok = repair_rolling_file_isolated(name)
+            ok = ok and refresh_ok
             total += count
             if ok:
                 try:
