@@ -1,9 +1,11 @@
 {
   "version": 7,
-  "assessedAt": "2026-10-07T18:11:08.865Z",
-  "state": "GREEN",
-  "summary": "ALL_REQUIRED_NEWS_LAYERS_VOCAB_AND_DELIVERY_VERIFIED_BY_NAS",
-  "faultReasons": [],
+  "assessedAt": "2026-10-07T18:28:25.343Z",
+  "state": "RED",
+  "summary": "NOT_GREEN:nas-delivery-fingerprint=2026-10-07|2026-10-07T16:00:00.000Z|2026-10-07T12:31:00.000Z|2026-10-07T16:28:43.994Z|2026-10-08",
+  "faultReasons": [
+    "nas-delivery-fingerprint=2026-10-07|2026-10-07T16:00:00.000Z|2026-10-07T12:31:00.000Z|2026-10-07T16:28:43.994Z|2026-10-08"
+  ],
   "layers": {
     "daily": {
       "current": true,
@@ -33,7 +35,7 @@
       "lagMinutes": 0,
       "relativeCurrent": true,
       "sourceAbsoluteFresh": true,
-      "sourceAgeMinutes": 102,
+      "sourceAgeMinutes": 120,
       "maxAgeHours": 8
     },
     "vocab": {
@@ -50,7 +52,7 @@
       "pagesChecked": 13
     },
     "delivery": {
-      "current": true,
+      "current": false,
       "required": true,
       "owner": "NAS Editor-in-Chief",
       "verifies": [
@@ -58,8 +60,8 @@
         "github-pages"
       ],
       "publicationFingerprint": "2026-10-07|2026-10-07T16:00:00.000Z|2026-10-07T12:31:00.000Z|2026-10-07T16:28:43.994Z|2026-10-08",
-      "attestedFingerprint": "2026-10-07|2026-10-07T16:00:00.000Z|2026-10-07T12:31:00.000Z|2026-10-07T16:28:43.994Z|2026-10-08",
-      "attestedAt": "2026-10-07T18:10:24Z"
+      "attestedFingerprint": null,
+      "attestedAt": null
     }
   },
   "recovery": {
@@ -72,10 +74,10 @@
   "maintenance": {
     "owner": "Editor-in-Chief",
     "executor": "Maintenance Robot",
-    "incidentKey": "healthy",
+    "incidentKey": "nas-delivery@2026-10-07|2026-10-07T16:00:00.000Z|2026-10-07T12:31:00.000Z|2026-10-07T16:28:43.994Z|2026-10-08",
     "sourceVersionBound": true,
-    "status": "resolved",
-    "decision": "NO_REPAIR_REQUIRED",
+    "status": "awaiting-nas-delivery-verification",
+    "decision": "NAS_CONTROLLER_MUST_VERIFY_F3_AND_PAGES",
     "attempts": 0,
     "lastAttemptAt": null,
     "nextEligibleAt": null,
@@ -94,7 +96,7 @@
   },
   "robot": {
     "current": true,
-    "runId": 37664849674,
+    "runId": 37667078429,
     "event": "workflow_dispatch",
     "role": "nas-attestation-auditor",
     "executor": "github-auditor-only",
