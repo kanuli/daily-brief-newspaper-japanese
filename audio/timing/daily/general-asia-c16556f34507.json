@@ -1,0 +1,304 @@
+{
+  "version": 3,
+  "duration": 134.792,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 412,
+  "charactersPerMinute": 183.4,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 12.361,
+      "text": "ワンス氏は、イランが戦争を終わらせるためには、を減らす必要があると述べた。"
+    },
+    {
+      "key": "dek",
+      "start": 12.361,
+      "end": 21.863,
+      "text": "ロイターによると、ワンズ副大統領はインタビューで条件を提示した。"
+    },
+    {
+      "key": "body-0",
+      "start": 21.863,
+      "end": 85.765,
+      "text": "ロイターによると、アメリカ副大統領ヴァンスはインタビューで、イランが戦争を終わらせるためには、濃縮を削減する必要があると述べた。彼はこの条件を紛争の終結と直接結びつけ、この条件のみで紛争の終結の可能性があると強調した。この表現は、インタビュー内容の重要な条件の一つであり、イランと紛争に関連する議論と直接関連していると述べた。中東の状況に関心のある人にとって、これは米側が紛争の終結の条件について明確な表現である。"
+    },
+    {
+      "key": "why",
+      "start": 85.765,
+      "end": 113.719,
+      "text": "それは、紛争における米国の上級の条件を直接反映しているため、外交や軍事状況がどのように定義されているかを理解するための重要なシグナルを提供している。"
+    },
+    {
+      "key": "watch",
+      "start": 113.719,
+      "end": 134.792,
+      "text": "ワンズのインタビュー内容の後継の発言に注意し、イランが濃縮を削減し、紛争を終わらせる条件に反応しているかどうかを注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.23,
+      "end": 2.51,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ワンス氏は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.51,
+      "speechEnd": 7.248,
+      "end": 7.528,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イランが戦争を終わらせるためには、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.528,
+      "speechEnd": 11.5,
+      "end": 12.361,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "を減らす必要があると述べた。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.361,
+      "speechEnd": 14.939,
+      "end": 15.219,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイターによると、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.219,
+      "speechEnd": 21.003,
+      "end": 21.863,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ワンズ副大統領はインタビューで条件を提示した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 21.863,
+      "speechEnd": 24.441,
+      "end": 24.721,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイターによると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 24.721,
+      "speechEnd": 29.669,
+      "end": 29.949,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アメリカ副大統領ヴァンスはインタビューで、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 29.949,
+      "speechEnd": 34.687,
+      "end": 34.968,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イランが戦争を終わらせるためには、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.968,
+      "speechEnd": 39.776,
+      "end": 40.396,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "濃縮を削減する必要があると述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.396,
+      "speechEnd": 46.598,
+      "end": 46.878,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "彼はこの条件を紛争の終結と直接結びつけ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.878,
+      "speechEnd": 54.334,
+      "end": 54.954,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "この条件のみで紛争の終結の可能性があると強調した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.954,
+      "speechEnd": 57.323,
+      "end": 57.603,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この表現は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.603,
+      "speechEnd": 63.387,
+      "end": 63.667,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インタビュー内容の重要な条件の一つであり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.667,
+      "speechEnd": 70.287,
+      "end": 70.907,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "イランと紛争に関連する議論と直接関連していると述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.907,
+      "speechEnd": 76.134,
+      "end": 76.414,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "中東の状況に関心のある人にとって、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.414,
+      "speechEnd": 84.985,
+      "end": 85.765,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "これは米側が紛争の終結の条件について明確な表現である。"
+    },
+    {
+      "parentKey": "why",
+      "start": 85.765,
+      "speechEnd": 89.737,
+      "end": 90.357,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 90.357,
+      "speechEnd": 92.448,
+      "end": 92.728,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "それは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 92.728,
+      "speechEnd": 100.323,
+      "end": 100.603,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "紛争における米国の上級の条件を直接反映しているため、"
+    },
+    {
+      "parentKey": "why",
+      "start": 100.603,
+      "speechEnd": 108.199,
+      "end": 108.539,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "外交や軍事状況がどのように定義されているかを理解するため"
+    },
+    {
+      "parentKey": "why",
+      "start": 108.539,
+      "speechEnd": 112.859,
+      "end": 113.719,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "の重要なシグナルを提供している。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 113.719,
+      "speechEnd": 115.81,
+      "end": 116.09,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 116.09,
+      "speechEnd": 121.804,
+      "end": 122.084,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ワンズのインタビュー内容の後継の発言に注意し、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 122.084,
+      "speechEnd": 125.359,
+      "end": 125.639,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "イランが濃縮を削減し、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 125.639,
+      "speechEnd": 133.932,
+      "end": 134.792,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "紛争を終わらせる条件に反応しているかどうかを注意してください。"
+    }
+  ]
+}

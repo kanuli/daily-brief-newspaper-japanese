@@ -1,0 +1,360 @@
+{
+  "version": 3,
+  "duration": 148.376,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 434,
+  "charactersPerMinute": 175.5,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 11.732,
+      "text": "ロシア軍が再びウクライナを攻撃、キエフで２人死亡、多くの施設が被害"
+    },
+    {
+      "key": "dek",
+      "start": 11.732,
+      "end": 29.32,
+      "text": "ロイター通信は、ロシアの新たな空爆がキエフ、ドニプロ、ザポリージャ、クレメンチュグに影響を与えたと報じた。"
+    },
+    {
+      "key": "body-0",
+      "start": 29.32,
+      "end": 65.834,
+      "text": "ロイター通信は、ロシアが10月7日にウクライナの複数の都市に空爆を開始したと報じた。キエフのクリチコ市長は、ガレージ協同組合が攻撃を受けて火災が発生し、後に現場で2人の死亡が発見されたと述べた。ロイター記者も市内で爆発音を聞いた。"
+    },
+    {
+      "key": "body-1",
+      "start": 65.834,
+      "end": 107.777,
+      "text": "同日、ドニプロペトロウシクの産業施設、ザポリージャの交通インフラ、クレメンチュグの住宅建物にも被害が報告された。新たな攻撃は、ロシア・ウクライナ戦争が都市やインフラに圧力をかけ続けていることを示している。今後も死傷者や施設被害がさらに拡大するのか、引き続き注視していく必要がある。"
+    },
+    {
+      "key": "why",
+      "start": 107.777,
+      "end": 131.277,
+      "text": "この事件は民間人の死傷者と交通機関や産業施設の安全に直接関わるものであり、戦争がまだ冷めていないことを反映している。"
+    },
+    {
+      "key": "watch",
+      "start": 131.277,
+      "end": 148.376,
+      "text": "死傷者、施設の損傷、ロシア版の攻撃に関するウクライナ公式の最新情報に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.25,
+      "end": 4.53,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロシア軍が再びウクライナを攻撃、"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.53,
+      "speechEnd": 7.387,
+      "end": 7.667,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "キエフで２人死亡、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.667,
+      "speechEnd": 10.872,
+      "end": 11.732,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "多くの施設が被害。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 11.732,
+      "speechEnd": 14.241,
+      "end": 14.521,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.521,
+      "speechEnd": 18.353,
+      "end": 18.633,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロシアの新たな空爆がキエフ、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.633,
+      "speechEnd": 20.793,
+      "end": 21.073,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ドニプロ、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.073,
+      "speechEnd": 23.372,
+      "end": 23.652,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ザポリージャ、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.652,
+      "speechEnd": 28.46,
+      "end": 29.32,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "クレメンチュグに影響を与えたと報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 29.32,
+      "speechEnd": 31.829,
+      "end": 32.109,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 32.109,
+      "speechEnd": 42.003,
+      "end": 42.623,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ロシアが10月7日にウクライナの複数の都市に空爆を開始したと報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.623,
+      "speechEnd": 46.037,
+      "end": 46.317,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "キエフのクリチコ市長は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.317,
+      "speechEnd": 52.797,
+      "end": 53.077,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ガレージ協同組合が攻撃を受けて火災が発生し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.077,
+      "speechEnd": 59.487,
+      "end": 60.107,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "後に現場で2人の死亡が発見されたと述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.107,
+      "speechEnd": 65.054,
+      "end": 65.834,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "ロイター記者も市内で爆発音を聞いた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 65.834,
+      "speechEnd": 67.925,
+      "end": 68.205,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同日、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 68.205,
+      "speechEnd": 72.385,
+      "end": 72.665,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ドニプロペトロウシクの産業施設、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 72.665,
+      "speechEnd": 76.01,
+      "end": 76.29,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ザポリージャの交通インフラ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 76.29,
+      "speechEnd": 82.63,
+      "end": 83.25,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "クレメンチュグの住宅建物にも被害が報告された。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 83.25,
+      "speechEnd": 85.759,
+      "end": 86.039,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "新たな攻撃は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 86.039,
+      "speechEnd": 91.752,
+      "end": 92.092,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ロシア・ウクライナ戦争が都市やインフラに圧力を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.092,
+      "speechEnd": 95.715,
+      "end": 96.336,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "かけ続けていることを示している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 96.336,
+      "speechEnd": 102.885,
+      "end": 103.165,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後も死傷者や施設被害がさらに拡大するのか、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.165,
+      "speechEnd": 106.997,
+      "end": 107.777,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "引き続き注視していく必要がある。"
+    },
+    {
+      "parentKey": "why",
+      "start": 107.777,
+      "speechEnd": 111.749,
+      "end": 112.369,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 112.369,
+      "speechEnd": 124.144,
+      "end": 124.424,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この事件は民間人の死傷者と交通機関や産業施設の安全に直接関わるものであり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 124.424,
+      "speechEnd": 130.417,
+      "end": 131.277,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "戦争がまだ冷めていないことを反映している。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 131.277,
+      "speechEnd": 133.367,
+      "end": 133.647,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 133.647,
+      "speechEnd": 135.737,
+      "end": 136.017,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "死傷者、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 136.017,
+      "speechEnd": 138.317,
+      "end": 138.597,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "施設の損傷、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 138.597,
+      "speechEnd": 147.515,
+      "end": 148.376,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ロシア版の攻撃に関するウクライナ公式の最新情報に注目してください。"
+    }
+  ]
+}

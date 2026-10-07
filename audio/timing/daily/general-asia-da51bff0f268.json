@@ -1,0 +1,314 @@
+{
+  "version": 3,
+  "duration": 141.819,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 442,
+  "charactersPerMinute": 187.0,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 17.927,
+      "text": "トランプ氏は、イランがロサンゼルスやサンディエゴを「破壊する」可能性があると述べ、カリフォルニア当局者は危険だと述べている。"
+    },
+    {
+      "key": "dek",
+      "start": 17.927,
+      "end": 31.819,
+      "text": "米国当局者とカリフォルニア当局者は、大統領の発言が脅威であるかどうかについて公に議論している。"
+    },
+    {
+      "key": "body-0",
+      "start": 31.819,
+      "end": 94.047,
+      "text": "アメリカのトランプ大統領はネブラスカル会議で、イランがロサンゼルスやサンテジャゴを「タッキング」することができ、それを世界の安全保障を維持する代償として描いたと述べた。トランプ大統領は当時、彼が行動しないなら、これらのアメリカの都市はイランからの脅威に直面するだろうと強調した。カリフォルニア州知事ガヴィン・ニューソンはこの発言を「恐れ、危険」と述べ、ロサンゼルス市長ケレン・バスはそれを脅威とし、アメリカ国民に対する攻撃を奨励した。"
+    },
+    {
+      "key": "why",
+      "start": 94.047,
+      "end": 120.477,
+      "text": "事件は、米国の都市安全、核脅威の物語と政治言語の境界線を結び、戦略的警告と脅威的な表現に関する各当事者の判断が異なる。"
+    },
+    {
+      "key": "watch",
+      "start": 120.477,
+      "end": 141.819,
+      "text": "カリフォルニア政府とロサンゼルス市政府がさらに公然と反応し、ホワイトハウスがトランプ氏の発言の解釈をどのように再確認するかを観察する。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.369,
+      "end": 2.649,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "トランプ氏は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.649,
+      "speechEnd": 6.761,
+      "end": 7.101,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "イランがロサンゼルスやサンディエゴを"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.101,
+      "speechEnd": 11.839,
+      "end": 12.119,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "「破壊する」可能性があると述べ、"
+    },
+    {
+      "parentKey": "title",
+      "start": 12.119,
+      "speechEnd": 17.067,
+      "end": 17.927,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "カリフォルニア当局者は危険だと述べている。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.927,
+      "speechEnd": 22.944,
+      "end": 23.224,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国当局者とカリフォルニア当局者は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.224,
+      "speechEnd": 30.959,
+      "end": 31.819,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "大統領の発言が脅威であるかどうかについて公に議論している。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 31.819,
+      "speechEnd": 37.463,
+      "end": 37.743,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アメリカのトランプ大統領はネブラスカル会議で、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.743,
+      "speechEnd": 41.855,
+      "end": 42.195,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "イランがロサンゼルスやサンテジャゴを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.195,
+      "speechEnd": 45.888,
+      "end": 46.168,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "「タッキング」することができ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.168,
+      "speechEnd": 54.46,
+      "end": 55.081,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "それを世界の安全保障を維持する代償として描いたと述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.081,
+      "speechEnd": 58.495,
+      "end": 58.775,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "トランプ大統領は当時、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.775,
+      "speechEnd": 61.841,
+      "end": 62.121,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "彼が行動しないなら、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.121,
+      "speechEnd": 71.041,
+      "end": 71.661,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "これらのアメリカの都市はイランからの脅威に直面するだろうと強調した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.661,
+      "speechEnd": 78.908,
+      "end": 79.188,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "カリフォルニア州知事ガヴィン・ニューソンはこの発言を「恐れ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 79.188,
+      "speechEnd": 81.766,
+      "end": 82.046,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "危険」と述べ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 82.046,
+      "speechEnd": 88.248,
+      "end": 88.528,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロサンゼルス市長ケレン・バスはそれを脅威とし、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 88.528,
+      "speechEnd": 93.266,
+      "end": 94.047,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "アメリカ国民に対する攻撃を奨励した。"
+    },
+    {
+      "parentKey": "why",
+      "start": 94.047,
+      "speechEnd": 98.018,
+      "end": 98.639,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 98.639,
+      "speechEnd": 100.729,
+      "end": 101.009,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "事件は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 101.009,
+      "speechEnd": 104.075,
+      "end": 104.355,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国の都市安全、"
+    },
+    {
+      "parentKey": "why",
+      "start": 104.355,
+      "speechEnd": 110.836,
+      "end": 111.116,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "核脅威の物語と政治言語の境界線を結び、"
+    },
+    {
+      "parentKey": "why",
+      "start": 111.116,
+      "speechEnd": 119.617,
+      "end": 120.477,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "戦略的警告と脅威的な表現に関する各当事者の判断が異なる。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 120.477,
+      "speechEnd": 122.568,
+      "end": 122.848,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 122.848,
+      "speechEnd": 131.071,
+      "end": 131.351,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "カリフォルニア政府とロサンゼルス市政府がさらに公然と反応し、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 131.351,
+      "speechEnd": 136.228,
+      "end": 136.569,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ホワイトハウスがトランプ氏の発言の解釈を"
+    },
+    {
+      "parentKey": "watch",
+      "start": 136.569,
+      "speechEnd": 140.958,
+      "end": 141.819,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "どのように再確認するかを観察する。"
+    }
+  ]
+}
