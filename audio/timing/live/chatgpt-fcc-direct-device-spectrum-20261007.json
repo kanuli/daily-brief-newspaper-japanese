@@ -1,0 +1,430 @@
+{
+  "version": 3,
+  "duration": 200.934,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 631,
+  "charactersPerMinute": 188.4,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 15.722,
+      "text": "米国FCC、衛星直接接続デバイスサービスを対象とした、月末の新しい周波数オークションの推進を投票で決定"
+    },
+    {
+      "key": "dek",
+      "start": 15.722,
+      "end": 49.715,
+      "text": "米国連邦通信委員会は、周波数オークションの新たなラウンドを進めるかどうかを10月29日に投票する予定である。政策の優先事項には、携帯電話やその他のデバイスを直接接続するための衛星のサービス機能を拡張することが含まれます。"
+    },
+    {
+      "key": "body-0",
+      "start": 49.715,
+      "end": 99.186,
+      "text": "米国連邦通信委員会は、「デバイスへの直接」を含む無線サービスをサポートするための新しい周波数オークションプロセスを進めるかどうかを10月29日に投票すると発表した。このタイプの技術により、衛星が通常のモバイル デバイスに直接接続できるようになり、従来の電気通信ネットワークと衛星事業者との間の新しい競争と協力の分野になりつつあります。"
+    },
+    {
+      "key": "body-1",
+      "start": 99.186,
+      "end": 152.295,
+      "text": "ロイターは、FCC委員長のブレンダン・カー氏が、将来の周波数帯販売による潜在的な収益は1000億ドルを超える可能性があると述べたと伝えた。市場にとって重要なのは、政府のオークション収入だけではなく、新しい周波数帯が実際に商用サービスにいつ投入できるか、そして通信事業者、衛星会社、デバイスエコシステムが新しい容量をどのように割り当てるかということだ。"
+    },
+    {
+      "key": "why",
+      "start": 152.295,
+      "end": 180.522,
+      "text": "スペクトルは無線および衛星ネットワークの中核となる希少資産であり、新たなオークションの取り決めは通信設備投資、衛星サービス競争、政府収入に影響を与える可能性がある。"
+    },
+    {
+      "key": "watch",
+      "start": 180.522,
+      "end": 200.934,
+      "text": "10月29日のFCCの投票内容、オークションの周波数帯やスケジュール、大手通信事業者や衛星事業者の参加意向に注目だ。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.16,
+      "end": 2.39,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国FCC、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.39,
+      "speechEnd": 7.616,
+      "end": 7.846,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "衛星直接接続デバイスサービスを対象とした、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.846,
+      "speechEnd": 15.022,
+      "end": 15.722,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "月末の新しい周波数オークションの推進を投票で決定。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.722,
+      "speechEnd": 19.624,
+      "end": 19.854,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国連邦通信委員会は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.854,
+      "speechEnd": 24.662,
+      "end": 24.942,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "周波数オークションの新たなラウンドを"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.942,
+      "speechEnd": 32.397,
+      "end": 32.897,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "進めるかどうかを10月29日に投票する予定である。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.897,
+      "speechEnd": 36.311,
+      "end": 36.541,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "政策の優先事項には、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 36.541,
+      "speechEnd": 42.534,
+      "end": 42.814,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "携帯電話やその他のデバイスを直接接続するため"
+    },
+    {
+      "parentKey": "dek",
+      "start": 42.814,
+      "speechEnd": 49.015,
+      "end": 49.715,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "の衛星のサービス機能を拡張することが含まれます。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.715,
+      "speechEnd": 53.617,
+      "end": 53.847,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国連邦通信委員会は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.847,
+      "speechEnd": 61.023,
+      "end": 61.303,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "「デバイスへの直接」を含む無線サービスをサポートするため"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.303,
+      "speechEnd": 68.41,
+      "end": 68.55,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "の新しい周波数オークションプロセスを進めるかどうかを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.55,
+      "speechEnd": 71.337,
+      "end": 71.477,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "10月29日"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.477,
+      "speechEnd": 74.752,
+      "end": 75.252,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "に投票すると発表した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.252,
+      "speechEnd": 78.527,
+      "end": 78.757,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "このタイプの技術により、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 78.757,
+      "speechEnd": 86.212,
+      "end": 86.442,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "衛星が通常のモバイル デバイスに直接接続できるようになり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 86.442,
+      "speechEnd": 98.566,
+      "end": 99.186,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "従来の電気通信ネットワークと衛星事業者との間の新しい競争と協力の分野になりつつあります。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.186,
+      "speechEnd": 101.346,
+      "end": 101.576,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイターは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.576,
+      "speechEnd": 106.593,
+      "end": 106.823,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "FCC委員長のブレンダン・カー氏が、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 106.823,
+      "speechEnd": 112.815,
+      "end": 113.095,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "将来の周波数帯販売による潜在的な収益は"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 113.095,
+      "speechEnd": 120.411,
+      "end": 120.911,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "1000億ドルを超える可能性があると述べたと伝えた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.911,
+      "speechEnd": 124.185,
+      "end": 124.416,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "市場にとって重要なのは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 124.416,
+      "speechEnd": 129.223,
+      "end": 129.453,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "政府のオークション収入だけではなく、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 129.453,
+      "speechEnd": 136.769,
+      "end": 136.999,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "新しい周波数帯が実際に商用サービスにいつ投入できるか、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 136.999,
+      "speechEnd": 140.135,
+      "end": 140.365,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "そして通信事業者、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 140.365,
+      "speechEnd": 142.455,
+      "end": 142.685,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "衛星会社、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 142.685,
+      "speechEnd": 147.005,
+      "end": 147.285,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "デバイスエコシステムが新しい容量を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 147.285,
+      "speechEnd": 151.674,
+      "end": 152.295,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "どのように割り当てるかということだ。"
+    },
+    {
+      "parentKey": "why",
+      "start": 152.295,
+      "speechEnd": 156.266,
+      "end": 156.766,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 156.766,
+      "speechEnd": 164.918,
+      "end": 165.148,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "スペクトルは無線および衛星ネットワークの中核となる希少資産であり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 165.148,
+      "speechEnd": 170.931,
+      "end": 171.161,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "新たなオークションの取り決めは通信設備投資、"
+    },
+    {
+      "parentKey": "why",
+      "start": 171.161,
+      "speechEnd": 173.67,
+      "end": 173.9,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "衛星サービス競争、"
+    },
+    {
+      "parentKey": "why",
+      "start": 173.9,
+      "speechEnd": 179.822,
+      "end": 180.522,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "政府収入に影響を与える可能性がある。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 180.522,
+      "speechEnd": 182.612,
+      "end": 182.843,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 182.843,
+      "speechEnd": 187.998,
+      "end": 188.229,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "10月29日のFCCの投票内容、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 188.229,
+      "speechEnd": 192.2,
+      "end": 192.43,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "オークションの周波数帯やスケジュール、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 192.43,
+      "speechEnd": 200.234,
+      "end": 200.934,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "大手通信事業者や衛星事業者の参加意向に注目だ。"
+    }
+  ]
+}
