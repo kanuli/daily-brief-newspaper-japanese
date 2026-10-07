@@ -51,6 +51,12 @@ jobs:
       - name: 音声生成前に日本語コンテンツ完全性を検証
         run: python scripts/validate_content_integrity.py
 
+      - name: JavaScript構文チェック
+        run: |
+          node --check assets/js/newspaper-ja.js
+          node --check assets/js/system-ja.js
+          node --check assets/js/live-guard.js
+
       - name: Daily・速報F3を3記事ずつ意味区切り生成
         run: python scripts/generate_supertonic_f3_chunked.py
 
@@ -59,12 +65,6 @@ jobs:
 
       - name: 音声・速度・意味区切りQA
         run: python scripts/validate_site.py --data-only
-
-      - name: JavaScript構文チェック
-        run: |
-          node --check assets/js/newspaper-ja.js
-          node --check assets/js/system-ja.js
-          node --check assets/js/live-guard.js
 
       - name: 生成物をmainへ保存
         shell: bash
