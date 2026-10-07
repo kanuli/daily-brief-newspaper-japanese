@@ -1,0 +1,314 @@
+{
+  "version": 3,
+  "duration": 136.307,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 390,
+  "charactersPerMinute": 171.7,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 11.542,
+      "text": "選挙委員会の選挙分野は、最初の日、307件の候補表を取得した。"
+    },
+    {
+      "key": "dek",
+      "start": 11.542,
+      "end": 33.953,
+      "text": "選挙事務局によると、2026年の選挙委員会の総選挙候補期間の最初の日には、合計305名の候補者候補表と2名の指定グループ候補表が届いた。"
+    },
+    {
+      "key": "body-0",
+      "start": 33.953,
+      "end": 94.726,
+      "text": "選挙事務局によると、2026年の選挙委員会の差別分割総選挙期間の最初の日には、合計305候補者候補表と指定集団が提出した2つの候補表が受信され、選挙は11月22日に開催され、新選挙委員会を生成する予定です。\\n\\n選挙委員会には、5つの差別から1500人のメンバーが含まれ、任務は行政長官の選出を含み、立法委員会の選挙委員会の40人の差別議員の選出を含みます。"
+    },
+    {
+      "key": "why",
+      "start": 94.726,
+      "end": 119.658,
+      "text": "初日の候補数は、11月の選挙委員会選挙が正式に選挙プロセスに入った後の最初の総合データであり、さまざまな範囲の候補の配置を反映する。"
+    },
+    {
+      "key": "watch",
+      "start": 119.658,
+      "end": 136.307,
+      "text": "候補期限の残りの日に新たな追加候補、資格審査の結果、そして競争が必要な範囲に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.553,
+      "end": 3.783,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "選挙委員会の選挙分野は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.783,
+      "speechEnd": 6.083,
+      "end": 6.313,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "最初の日、"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.313,
+      "speechEnd": 10.842,
+      "end": 11.542,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "307件の候補表を取得した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 11.542,
+      "speechEnd": 14.538,
+      "end": 14.768,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "選挙事務局によると、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.768,
+      "speechEnd": 23.547,
+      "end": 23.777,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "2026年の選挙委員会の総選挙候補期間の最初の日には、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.777,
+      "speechEnd": 33.253,
+      "end": 33.953,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "合計305名の候補者候補表と2名の指定グループ候補表が届いた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 33.953,
+      "speechEnd": 36.949,
+      "end": 37.179,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "選挙事務局によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.179,
+      "speechEnd": 46.446,
+      "end": 46.676,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "2026年の選挙委員会の差別分割総選挙期間の最初の日には、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.676,
+      "speechEnd": 52.111,
+      "end": 52.391,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "合計305候補者候補表と指定集団が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.391,
+      "speechEnd": 57.407,
+      "end": 57.637,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "提出した2つの候補表が受信され、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.637,
+      "speechEnd": 62.793,
+      "end": 63.023,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "選挙は11月22日に開催され、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.023,
+      "speechEnd": 67.97,
+      "end": 68.47,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "新選挙委員会を生成する予定です。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.47,
+      "speechEnd": 71.397,
+      "end": 71.627,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "\\n\\n選挙委員会には、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.627,
+      "speechEnd": 78.037,
+      "end": 78.267,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "5つの差別から1500人のメンバーが含まれ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 78.267,
+      "speechEnd": 83.493,
+      "end": 83.723,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "任務は行政長官の選出を含み、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 83.723,
+      "speechEnd": 87.903,
+      "end": 88.043,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "立法委員会の選挙委員会の"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 88.043,
+      "speechEnd": 90.203,
+      "end": 90.343,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "40人"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 90.343,
+      "speechEnd": 94.106,
+      "end": 94.726,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "の差別議員の選出を含みます。"
+    },
+    {
+      "parentKey": "why",
+      "start": 94.726,
+      "speechEnd": 98.697,
+      "end": 99.197,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 99.197,
+      "speechEnd": 101.984,
+      "end": 102.215,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "初日の候補数は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 102.215,
+      "speechEnd": 113.223,
+      "end": 113.453,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "11月の選挙委員会選挙が正式に選挙プロセスに入った後の最初の総合データであり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 113.453,
+      "speechEnd": 118.958,
+      "end": 119.658,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "さまざまな範囲の候補の配置を反映する。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 119.658,
+      "speechEnd": 121.748,
+      "end": 121.978,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 121.978,
+      "speechEnd": 127.343,
+      "end": 127.573,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "候補期限の残りの日に新たな追加候補、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 127.573,
+      "speechEnd": 130.151,
+      "end": 130.381,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "資格審査の結果、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 130.381,
+      "speechEnd": 135.607,
+      "end": 136.307,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "そして競争が必要な範囲に注意してください。"
+    }
+  ]
+}
