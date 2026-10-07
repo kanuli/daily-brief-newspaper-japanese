@@ -560,18 +560,28 @@ def choose_stock_robot(state: dict, source_version: str) -> str:
     return "source-stock-primary"
 
 
-def choose_rolling_robot(state: dict, source_version: str) -> str:
+def stage_attempts(state: dict, stage: str, source_version: str) -> int:
+    prior = previous_same_source(state, stage, source_version) or {}
+    try:
+        return max(0, int(prior.get("attempts") or 0))
+    except (TypeError, ValueError):
+        return 0
+
+
+def choose_rolling_robot(
+    state: dict, source_version: str
+) -> Optional[str]:
     if active_run("rolling-exhaustive-recovery"):
         return "rolling-exhaustive-recovery"
     if active_run("rolling-translator"):
         return "rolling-translator"
-    prior = previous_same_source(state, "content-rolling", source_version)
-    if prior and prior.get("robot") in {
-        "rolling-translator",
-        "rolling-exhaustive-recovery",
-    }:
+
+    attempts = stage_attempts(state, "content-rolling", source_version)
+    if attempts == 0:
+        return "rolling-translator"
+    if attempts == 1:
         return "rolling-exhaustive-recovery"
-    return "rolling-translator"
+    return None
 
 
 def choose_vocab_robot(state: dict, source_version: str) -> str:
@@ -871,8 +881,28 @@ def main() -> int:
     if rolling_reasons:
         source_version = version_for_rolling(upstream)
         reason = ";".join(rolling_reasons)
+        attempts = stage_attempts(state, "content-rolling", source_version)
         robot = choose_rolling_robot(state, source_version)
+
+        if robot is None:
+            mark_job(
+                state,
+                "content-rolling",
+                "exhausted",
+                reason=f"repair-budget-exhausted;{reason}",
+                robot="rolling-exhaustive-recovery",
+                source_version=source_version,
+                attempts=attempts,
+            )
+            print(
+                "NAS_CONTROLLER_RED stage=content-rolling "
+                f"reason=repair-budget-exhausted attempts={attempts} "
+                f"reasons={reason} sourceVersion={source_version}"
+            )
+            return 1
+
         assigned = dispatch_robot(robot, reason=reason, serialize_writers=True)
+        next_attempts = attempts + 1 if assigned else attempts
         mark_job(
             state,
             "content-rolling",
@@ -880,10 +910,12 @@ def main() -> int:
             reason=reason,
             robot=robot,
             source_version=source_version,
+            attempts=next_attempts,
         )
         print(
             "NAS_CONTROLLER_RED stage=content-rolling "
-            f"robot={robot} reasons={reason} sourceVersion={source_version}"
+            f"robot={robot} attempts={next_attempts} reasons={reason} "
+            f"sourceVersion={source_version}"
         )
         return 1
     mark_job(
