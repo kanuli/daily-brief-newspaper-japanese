@@ -3,11 +3,11 @@
   "date": "2026-10-07",
   "editorialStandardVersion": 3,
   "contentVersion": 3,
-  "lastUpdated": "2026-10-07T20:22:00+08:00",
-  "lastUpdatedLabel": "2026年10月7日 20:22 HKT",
+  "lastUpdated": "2026-10-07T20:31:00+08:00",
+  "lastUpdatedLabel": "2026年10月7日 20:31 HKT",
   "nextUpdateLabel": "次回発行予定 21:00 HKT",
   "windowLabel": "20:00 HKT 速報版",
-  "newCount": 2,
+  "newCount": 3,
   "updatedCount": 0,
   "developingCount": 0,
   "coverage": {
@@ -21,7 +21,7 @@
     "deskLatestStoryCounts": {
       "world": 225,
       "asia": 267,
-      "hong-kong": 94,
+      "hong-kong": 95,
       "japan": 179,
       "market-economy": 155,
       "ai-tech": 146,
@@ -33,22 +33,32 @@
     "japanCountVerified": 179,
     "publicationFailoverUsed": true,
     "publicationSource": "watchdog-chatgpt-failover",
-    "verifiedDraftId": "chatgpt-live-20261007-2022-hkt",
-    "verifiedDraftCreatedAt": "2026-10-07T12:22:00Z",
-    "sourceOrganizationCount": 1,
-    "freshSearchCount": 3,
-    "rawFreshCandidateCount": 2,
-    "verifiedCandidateCount": 2,
-    "incrementalCandidateCount": 2,
+    "verifiedDraftId": "chatgpt-live-20261007-2031-hkt-content-repair",
+    "verifiedDraftCreatedAt": "2026-10-07T12:31:00Z",
+    "sourceOrganizationCount": 3,
+    "freshSearchCount": 5,
+    "rawFreshCandidateCount": 3,
+    "verifiedCandidateCount": 3,
+    "incrementalCandidateCount": 3,
     "scheduledSlot": "20:00 HKT"
   },
-  "leadId": "chatgpt-ai-msft-nvda-laptop-20261007-1005z",
+  "leadId": "chatgpt-hk-etomidate-record-seizure-20261007-1805hkt",
   "items": [
     {
       "id": "chatgpt-ai-msft-nvda-laptop-20261007-1005z",
       "desk": "ai-tech",
+      "deskSlugs": [
+        "ai-tech"
+      ],
       "section": "AI / 科技",
-      "status": "NEW",
+      "sectionLabel": "AI・テクノロジー",
+      "title": "マイクロソフトとNVIDIAがAIノートメーカーを推進し、エージェントの任務を実行",
+      "dek": "新しいSurface Laptop UltraはNvidia RTX Sparkクリスタルを採用し、AI作業の一部をクラウドからコンピュータに転送することを目指しています。",
+      "summary": "マイクロソフトは、Nvidia RTX Sparkを搭載したSurface Laptop Ultraをサンフランシスコ市のイベントで発表し、AIエージェントがプログラミングや複雑なビジネスタスクを現地で処理できるようにすることに焦点を当てている。",
+      "body": "マイクロソフトはサンフランシスコのイベントで新しいSurface Laptop Ultraを発表し、Nvidia RTX Sparkクリスタルを採用します。製品の位置は、AIエージェントがWindowsコンピュータでプログラミングやその他の複雑な作業を処理し、一部の仕事がクラウドオペレーティングに依存することを減らすことです。Microsoftにとって、これは一部のAzureクラウド負荷を企業および家庭用デバイスに移転するのに役立ちます。Nvidiaにとっては、IntelおよびAMDが長期にわたって支配するPC市場へのさらなる切断です。しかし、メモリコストの上昇は、AIハードウェアの価格を急速に上昇させ、販売価格とセキュリティコントロールが新製品の普及の鍵となります。",
+      "context": "AI世代の理由は、クラウドが本機実行に向かって進み、PCハードウェアとオペレーティングシステムとの競争の新しい方向となっている。",
+      "why": "この協力はマイクロソフト、NVIDIA、PC市場のパターンに直接関与し、AIの運用コストがより多くのオリジナル化プログラムを推進していることを反映しています。",
+      "watchNext": "Microsoft が発表した最終販売価格、正式な出荷時期、ネイティブ人工知能のパフォーマンス、セキュリティおよびエンタープライズ管理メカニズム、および他の PC ブランドが同様の Nvidia ソリューションを採用するかどうかに注目してください。",
       "sourceName": "Reuters",
       "sourceUrl": "https://www.reuters.com/business/microsoft-nvidia-ceos-unveil-new-ai-laptop-san-francisco-event-2026-10-07/",
       "sources": [
@@ -62,24 +72,19 @@
           ]
         }
       ],
-      "deskSlugs": [
-        "ai-tech"
-      ],
-      "verifiedAt": "2026-10-07T12:22:00Z",
       "publishedAt": "2026-10-07T10:05:00Z",
-      "title": "マイクロソフトとNVIDIAがAIノートメーカーを推進し、エージェントの任務を実行",
-      "summary": "マイクロソフトは、Nvidia RTX Sparkを搭載したSurface Laptop Ultraをサンフランシスコ市のイベントで発表し、AIエージェントがプログラミングや複雑なビジネスタスクを現地で処理できるようにすることに焦点を当てている。",
-      "translationFallbackReason": "RuntimeError",
-      "sourceItemFingerprint": "87e13636517bd9824f465c46d4d4a61c73b03e68c689ff5e7665d863156b5d7b",
+      "verifiedAt": "2026-10-07T12:22:00Z",
+      "timeLabel": "10月07日 20:22 HKT 確認",
+      "verification": {
+        "mode": "chatgpt-web-direct",
+        "provider": "Reuters",
+        "noUnsupportedDetail": true,
+        "cantoneseCopyVerified": true
+      },
+      "status": "NEW",
+      "sourceItemFingerprint": "7a233265244879bec0eb8fa301911901a0b6871ca2582301b12881d10f4e335f",
       "audio": "audio/live/chatgpt-ai-msft-nvda-laptop-20261007-1005z.mp3",
       "timing": "audio/timing/live/chatgpt-ai-msft-nvda-laptop-20261007-1005z.json",
-      "sectionLabel": "AI・テクノロジー",
-      "dek": "新しいSurface Laptop UltraはNvidia RTX Sparkクリスタルを採用し、AI作業の一部をクラウドからコンピュータに転送することを目指しています。",
-      "body": "マイクロソフトはサンフランシスコのイベントで新しいSurface Laptop Ultraを発表し、Nvidia RTX Sparkクリスタルを採用します。製品の位置は、AIエージェントがWindowsコンピュータでプログラミングやその他の複雑な作業を処理し、一部の仕事がクラウドオペレーティングに依存することを減らすことです。Microsoftにとって、これは一部のAzureクラウド負荷を企業および家庭用デバイスに移転するのに役立ちます。Nvidiaにとっては、IntelおよびAMDが長期にわたって支配するPC市場へのさらなる切断です。しかし、メモリコストの上昇は、AIハードウェアの価格を急速に上昇させ、販売価格とセキュリティコントロールが新製品の普及の鍵となります。",
-      "context": "AI世代の理由は、クラウドが本機実行に向かって進み、PCハードウェアとオペレーティングシステムとの競争の新しい方向となっている。",
-      "why": "この協力はマイクロソフト、NVIDIA、PC市場のパターンに直接関与し、AIの運用コストがより多くのオリジナル化プログラムを推進していることを反映しています。",
-      "watchNext": "マイクロソフトが発表した最終販売価格、配達時間、セキュリティメカニズム、現地AIのパフォーマンスに注意してください。",
-      "timeLabel": "10月07日 20:22 HKT 確認",
       "furigana": {
         "section": "AI / <ruby>科技<rt>かぎ</rt></ruby>",
         "title": "マイクロソフトとNVIDIAがAIノートメーカーを<ruby>推進<rt>すいしん</rt></ruby>し、エージェントの<ruby>任務<rt>にんむ</rt></ruby>を<ruby>実行<rt>じっこう</rt></ruby>",
@@ -87,7 +92,7 @@
         "summary": "マイクロソフトは、Nvidia RTX Sparkを<ruby>搭載<rt>とうさい</rt></ruby>したSurface Laptop Ultraをサンフランシスコ<ruby>市<rt>し</rt></ruby>のイベントで<ruby>発表<rt>はっぴょう</rt></ruby>し、AIエージェントがプログラミングや<ruby>複雑<rt>ふくざつ</rt></ruby>なビジネスタスクを<ruby>現地<rt>げんち</rt></ruby>で<ruby>処理<rt>しょり</rt></ruby>できるようにすることに<ruby>焦点<rt>しょうてん</rt></ruby>を<ruby>当<rt>あ</rt></ruby>てている。",
         "context": "AI<ruby>世代<rt>せだい</rt></ruby>の<ruby>理由<rt>りゆう</rt></ruby>は、クラウドが<ruby>本機<rt>ほんき</rt></ruby><ruby>実行<rt>じっこう</rt></ruby>に<ruby>向<rt>む</rt></ruby>かって<ruby>進<rt>すす</rt></ruby>み、PCハードウェアとオペレーティングシステムとの<ruby>競争<rt>きょうそう</rt></ruby>の<ruby>新<rt>あたら</rt></ruby>しい<ruby>方向<rt>ほうこう</rt></ruby>となっている。",
         "why": "この<ruby>協力<rt>きょうりょく</rt></ruby>はマイクロソフト、NVIDIA、PC<ruby>市場<rt>しじょう</rt></ruby>のパターンに<ruby>直接<rt>ちょくせつ</rt></ruby><ruby>関与<rt>かんよ</rt></ruby>し、AIの<ruby>運用<rt>うんよう</rt></ruby>コストがより<ruby>多<rt>おお</rt></ruby>くのオリジナル<ruby>化<rt>か</rt></ruby>プログラムを<ruby>推進<rt>すいしん</rt></ruby>していることを<ruby>反映<rt>はんえい</rt></ruby>しています。",
-        "watchNext": "マイクロソフトが<ruby>発表<rt>はっぴょう</rt></ruby>した<ruby>最終<rt>さいしゅう</rt></ruby><ruby>販売価格<rt>はんばいかかく</rt></ruby>、<ruby>配達<rt>はいたつ</rt></ruby><ruby>時間<rt>じかん</rt></ruby>、セキュリティメカニズム、<ruby>現地<rt>げんち</rt></ruby>AIのパフォーマンスに<ruby>注意<rt>ちゅうい</rt></ruby>してください。",
+        "watchNext": "Microsoft が<ruby>発表<rt>はっぴょう</rt></ruby>した<ruby>最終<rt>さいしゅう</rt></ruby><ruby>販売価格<rt>はんばいかかく</rt></ruby>、<ruby>正式<rt>せいしき</rt></ruby>な<ruby>出荷<rt>しゅっか</rt></ruby><ruby>時期<rt>じき</rt></ruby>、ネイティブ<ruby>人工知能<rt>じんこうちのう</rt></ruby>のパフォーマンス、セキュリティおよびエンタープライズ<ruby>管理<rt>かんり</rt></ruby>メカニズム、および<ruby>他<rt>ほか</rt></ruby>の PC ブランドが<ruby>同様<rt>どうよう</rt></ruby>の Nvidia ソリューションを<ruby>採用<rt>さいよう</rt></ruby>するかどうかに<ruby>注目<rt>ちゅうもく</rt></ruby>してください。",
         "bodyParagraphs": [
           "マイクロソフトはサンフランシスコのイベントで<ruby>新<rt>あたら</rt></ruby>しいSurface Laptop Ultraを<ruby>発表<rt>はっぴょう</rt></ruby>し、Nvidia RTX Sparkクリスタルを<ruby>採用<rt>さいよう</rt></ruby>します。<ruby>製品<rt>せいひん</rt></ruby>の<ruby>位置<rt>いち</rt></ruby>は、AIエージェントがWindowsコンピュータでプログラミングやその<ruby>他<rt>た</rt></ruby>の<ruby>複雑<rt>ふくざつ</rt></ruby>な<ruby>作業<rt>さぎょう</rt></ruby>を<ruby>処理<rt>しょり</rt></ruby>し、<ruby>一部<rt>いちぶ</rt></ruby>の<ruby>仕事<rt>しごと</rt></ruby>がクラウドオペレーティングに<ruby>依存<rt>いぞん</rt></ruby>することを<ruby>減<rt>へ</rt></ruby>らすことです。Microsoftにとって、これは<ruby>一部<rt>いちぶ</rt></ruby>のAzureクラウド<ruby>負荷<rt>ふか</rt></ruby>を<ruby>企業<rt>きぎょう</rt></ruby>および<ruby>家庭用<rt>かていよう</rt></ruby>デバイスに<ruby>移転<rt>いてん</rt></ruby>するのに<ruby>役立<rt>やくだ</rt></ruby>ちます。Nvidiaにとっては、IntelおよびAMDが<ruby>長期<rt>ちょうき</rt></ruby>にわたって<ruby>支配<rt>しはい</rt></ruby>するPC<ruby>市場<rt>しじょう</rt></ruby>へのさらなる<ruby>切断<rt>せつだん</rt></ruby>です。しかし、メモリコストの<ruby>上昇<rt>じょうしょう</rt></ruby>は、AIハードウェアの<ruby>価格<rt>かかく</rt></ruby>を<ruby>急速<rt>きゅうそく</rt></ruby>に<ruby>上昇<rt>じょうしょう</rt></ruby>させ、<ruby>販売価格<rt>はんばいかかく</rt></ruby>とセキュリティコントロールが<ruby>新製品<rt>しんせいひん</rt></ruby>の<ruby>普及<rt>ふきゅう</rt></ruby>の<ruby>鍵<rt>かぎ</rt></ruby>となります。"
         ]
@@ -96,8 +101,18 @@
     {
       "id": "chatgpt-ai-reuters-ipsos-20261007-1002z",
       "desk": "world",
+      "deskSlugs": [
+        "world"
+      ],
       "section": "世界",
-      "status": "NEW",
+      "sectionLabel": "世界",
+      "title": "速報：最新の確認済みニュース",
+      "dek": "57%の登録有権者は、トランプ政権がAIリスクを十分に評価していないと判断し、54%は議会に同様の評価を与えた。",
+      "summary": "記事に記載した出典で最新情報を確認しました。翻訳サービスの一時的な制限中のため、確認済み項目を先行掲載しています。詳細な日本語本文は自動復旧処理で更新します。",
+      "body": "ロイターによると、6日間のロイター/イプソス調査では、ほとんどのアメリカの有権者がトランプ政権と議会が人工知能のリスクを完全に正当化していないと考えている。57%の登録有権者が政府の重視度が低いと述べ、54%が議会に対して同様の評価を行い、84%がAIがアメリカの労働者にとって脅威であると見ている。",
+      "context": "アメリカのAI投資は急速に成長しているが、規制枠組みはまだ連邦標準を形成していない。",
+      "why": "投票者の態度は議会選挙と規制政策に影響を及ぼし、AI企業が直面する政治的および規制環境を変える可能性がある。",
+      "watchNext": "国会とホワイトハウスは、新しい連邦AI規制、データセンター、または軍事アプリケーションの制限を提案するかどうかを注意してください。",
       "sourceName": "Reuters",
       "sourceUrl": "https://www.reuters.com/world/most-us-voters-say-trump-congress-dont-take-ai-risks-seriously-reutersipsos-poll-2026-10-07/",
       "sources": [
@@ -111,24 +126,19 @@
           ]
         }
       ],
-      "deskSlugs": [
-        "world"
-      ],
-      "verifiedAt": "2026-10-07T12:22:00Z",
       "publishedAt": "2026-10-07T10:02:00Z",
-      "title": "速報：最新の確認済みニュース",
-      "summary": "記事に記載した出典で最新情報を確認しました。翻訳サービスの一時的な制限中のため、確認済み項目を先行掲載しています。詳細な日本語本文は自動復旧処理で更新します。",
-      "translationFallbackReason": "RuntimeError",
+      "verifiedAt": "2026-10-07T12:22:00Z",
+      "timeLabel": "10月07日 20:22 HKT 確認",
+      "verification": {
+        "mode": "chatgpt-web-direct",
+        "provider": "Reuters/Ipsos",
+        "noUnsupportedDetail": true,
+        "cantoneseCopyVerified": true
+      },
+      "status": "NEW",
       "sourceItemFingerprint": "f77a833cadbd4ed0362ddb7b81a69c5680f50f6ed1a5d00571ead2bf341c93c2",
       "audio": "audio/live/chatgpt-ai-reuters-ipsos-20261007-1002z.mp3",
       "timing": "audio/timing/live/chatgpt-ai-reuters-ipsos-20261007-1002z.json",
-      "sectionLabel": "世界",
-      "dek": "57%の登録有権者は、トランプ政権がAIリスクを十分に評価していないと判断し、54%は議会に同様の評価を与えた。",
-      "body": "ロイターによると、6日間のロイター/イプソス調査では、ほとんどのアメリカの有権者がトランプ政権と議会が人工知能のリスクを完全に正当化していないと考えている。57%の登録有権者が政府の重視度が低いと述べ、54%が議会に対して同様の評価を行い、84%がAIがアメリカの労働者にとって脅威であると見ている。",
-      "context": "アメリカのAI投資は急速に成長しているが、規制枠組みはまだ連邦標準を形成していない。",
-      "why": "投票者の態度は議会選挙と規制政策に影響を及ぼし、AI企業が直面する政治的および規制環境を変える可能性がある。",
-      "watchNext": "国会とホワイトハウスは、新しい連邦AI規制、データセンター、または軍事アプリケーションの制限を提案するかどうかを注意してください。",
-      "timeLabel": "10月07日 20:22 HKT 確認",
       "furigana": {
         "section": "<ruby>世界<rt>せかい</rt></ruby>",
         "title": "<ruby>速報<rt>そくほう</rt></ruby>：<ruby>最新<rt>さいしん</rt></ruby>の<ruby>確認<rt>かくにん</rt></ruby><ruby>済<rt>ず</rt></ruby>みニュース",
@@ -141,6 +151,70 @@
           "ロイターによると、<ruby>6日間<rt>むいかかん</rt></ruby>のロイター/イプソス<ruby>調査<rt>ちょうさ</rt></ruby>では、ほとんどのアメリカの<ruby>有権者<rt>ゆうけんしゃ</rt></ruby>がトランプ<ruby>政権<rt>せいけん</rt></ruby>と<ruby>議会<rt>ぎかい</rt></ruby>が<ruby>人工知能<rt>じんこうちのう</rt></ruby>のリスクを<ruby>完全<rt>かんぜん</rt></ruby>に<ruby>正当化<rt>せいとうか</rt></ruby>していないと<ruby>考<rt>かんが</rt></ruby>えている。57%の<ruby>登録<rt>とうろく</rt></ruby><ruby>有権者<rt>ゆうけんしゃ</rt></ruby>が<ruby>政府<rt>せいふ</rt></ruby>の<ruby>重視<rt>じゅうし</rt></ruby><ruby>度<rt>ど</rt></ruby>が<ruby>低<rt>ひく</rt></ruby>いと<ruby>述<rt>の</rt></ruby>べ、54%が<ruby>議会<rt>ぎかい</rt></ruby>に<ruby>対<rt>たい</rt></ruby>して<ruby>同様<rt>どうよう</rt></ruby>の<ruby>評価<rt>ひょうか</rt></ruby>を<ruby>行<rt>おこな</rt></ruby>い、84%がAIがアメリカの<ruby>労働者<rt>ろうどうしゃ</rt></ruby>にとって<ruby>脅威<rt>きょうい</rt></ruby>であると<ruby>見<rt>み</rt></ruby>ている。"
         ]
       }
+    },
+    {
+      "id": "chatgpt-hk-etomidate-record-seizure-20261007-1805hkt",
+      "desk": "hong-kong",
+      "deskSlugs": [
+        "hong-kong"
+      ],
+      "section": "香港",
+      "sectionLabel": "香港",
+      "title": "警察、史上最大の事件と称してエトミデート容疑で3,100万台湾ドル以上を押収",
+      "dek": "警察は、ライチコックの工業団地で約25キログラムのイミド酸粉末と大量の包装材料を発見し、2人の男性を逮捕し、この薬物は12万個以上の電子タバコ爆弾になる可能性があると述べた。",
+      "summary": "香港警察によると、薬物捜査局は物流会社の事務所を装った薬物貯蔵施設に侵入し、推定時価総額3100万香港ドルを超える約25キログラムの疑いのあるエトミデートを押収したという。これは警察史上最大の事件である。",
+      "body": "RTHKは、警察薬物捜査局がライチコックの産業ユニットで、物流会社のオフィスをカバーとして使用している疑いのある薬物貯蔵施設を破壊するための措置を講じ、約25キログラムの疑いのあるイミド酸粉末と大量の包装材料を押収したと報告した。警察は、この薬物の市場価値は3,100万香港ドルを超えており、指標量は12万本以上の電子タバコになる可能性があると推定しており、これは警察史上最大の同種の押収となった。物流会社で働いていた疑いのある2人の男性が現場で逮捕され、まだ調査中です。\n\n警察によると、グループは新しいエクスプレスパッケージが薬物を一般的な貨物配達に変装させるために使用されたと疑っており、この事件はまだ調査中であるという。警察はまた、ハロウィーンが近づいていると述べ、誰かが事前に薬物を備蓄し、娯楽施設に流入する準備をしている可能性は排除されていません。エトミデートは香港では危険薬物として登録されており、保安局と警察は近年、法執行、教育、報告の経路を強化し続けており、警察は、多数の関連薬物が市場に流入すると、特にティーンエイジャーに明らかなリスクをもたらすと指摘した。",
+      "context": "エトミデートは、香港が近年その対策に注力している新興薬物の1つとなっている。政府は関連物質を危険ドラッグ規制の対象に含めた。警察はまた、特別な通報ルートを設置し、学校と公教育を強化した。",
+      "why": "今回押収された金額と評価額はいずれも大規模な事件であり、エトミデートのサプライチェーンが依然として大規模であることを示しており、物流や包装隠蔽技術も含まれており、法執行や青少年の薬物防止、娯楽施設でのリスク管理に直接的な影響を及ぼしている。",
+      "watchNext": "逮捕された2人の司法手続きの行方、警察がこの事件に関係した他の人物を逮捕するのか、さらに麻薬や倉庫、流通網の追跡が行われるのかに注目だ。",
+      "sourceName": "RTHK",
+      "sourceUrl": "https://news.rthk.hk/rthk/en/component/k2/1873038-20261007.htm?archive_date=2026-10-07",
+      "sources": [
+        {
+          "name": "RTHK",
+          "url": "https://news.rthk.hk/rthk/en/component/k2/1873038-20261007.htm?archive_date=2026-10-07",
+          "facts": [
+            "Police seized about 25 kilograms of suspected etomidate with an estimated street value above HK$31 million.",
+            "Police described it as the largest etomidate seizure in force history.",
+            "Two men were arrested at a Lai Chi Kok industrial unit disguised as a logistics office.",
+            "Police estimated the powder could produce more than 120,000 etomidate e-cigarette pods."
+          ]
+        },
+        {
+          "name": "Hong Kong Narcotics Division",
+          "url": "https://www.nd.gov.hk/en/etomidate.html",
+          "facts": [
+            "Etomidate is treated as a dangerous drug in Hong Kong.",
+            "Police operate a 24-hour etomidate reporting channel as part of anti-drug enforcement and prevention."
+          ]
+        }
+      ],
+      "publishedAt": "2026-10-07T18:05:00+08:00",
+      "verifiedAt": "2026-10-07T12:31:00Z",
+      "timeLabel": "10月07日 20:31 HKT確認済み",
+      "verification": {
+        "mode": "chatgpt-web-direct",
+        "provider": "RTHK + Hong Kong Narcotics Division",
+        "noUnsupportedDetail": true,
+        "cantoneseCopyVerified": true
+      },
+      "status": "NEW",
+      "sourceItemFingerprint": "57b2df2538d2c202cd31aefa86ffa9c43a8c5dcd0f9cba94f4051a5e8bd10283",
+      "audio": "audio/live/chatgpt-hk-etomidate-record-seizure-20261007-1805hkt.mp3",
+      "timing": "audio/timing/live/chatgpt-hk-etomidate-record-seizure-20261007-1805hkt.json",
+      "furigana": {
+        "section": "<ruby>香港<rt>ほんこん</rt></ruby>",
+        "title": "<ruby>警察<rt>けいさつ</rt></ruby>、<ruby>史上最大<rt>しじょうさいだい</rt></ruby>の<ruby>事件<rt>じけん</rt></ruby>と<ruby>称<rt>しょう</rt></ruby>してエトミデート<ruby>容疑<rt>ようぎ</rt></ruby>で3,100<ruby>万<rt>まん</rt></ruby><ruby>台湾<rt>たいわん</rt></ruby>ドル<ruby>以上<rt>いじょう</rt></ruby>を<ruby>押収<rt>おうしゅう</rt></ruby>",
+        "dek": "<ruby>警察<rt>けいさつ</rt></ruby>は、ライチコックの<ruby>工業<rt>こうぎょう</rt></ruby><ruby>団地<rt>だんち</rt></ruby>で<ruby>約<rt>やく</rt></ruby>25キログラムのイミド<ruby>酸<rt>さん</rt></ruby><ruby>粉末<rt>ふんまつ</rt></ruby>と<ruby>大量<rt>たいりょう</rt></ruby>の<ruby>包装<rt>ほうそう</rt></ruby><ruby>材料<rt>ざいりょう</rt></ruby>を<ruby>発見<rt>はっけん</rt></ruby>し、<ruby>2人<rt>ふたり</rt></ruby>の<ruby>男性<rt>だんせい</rt></ruby>を<ruby>逮捕<rt>たいほ</rt></ruby>し、この<ruby>薬物<rt>やくぶつ</rt></ruby>は12<ruby>万個<rt>まんこ</rt></ruby><ruby>以上<rt>いじょう</rt></ruby>の<ruby>電子<rt>でんし</rt></ruby>タバコ<ruby>爆弾<rt>ばくだん</rt></ruby>になる<ruby>可能性<rt>かのうせい</rt></ruby>があると<ruby>述<rt>の</rt></ruby>べた。",
+        "summary": "<ruby>香港<rt>ほんこん</rt></ruby><ruby>警察<rt>けいさつ</rt></ruby>によると、<ruby>薬物<rt>やくぶつ</rt></ruby><ruby>捜査<rt>そうさ</rt></ruby><ruby>局<rt>きょく</rt></ruby>は<ruby>物流<rt>ぶつりゅう</rt></ruby><ruby>会社<rt>かいしゃ</rt></ruby>の<ruby>事務所<rt>じむしょ</rt></ruby>を<ruby>装<rt>よそお</rt></ruby>った<ruby>薬物<rt>やくぶつ</rt></ruby><ruby>貯蔵<rt>ちょぞう</rt></ruby><ruby>施設<rt>しせつ</rt></ruby>に<ruby>侵入<rt>しんにゅう</rt></ruby>し、<ruby>推定<rt>すいてい</rt></ruby><ruby>時価<rt>じか</rt></ruby><ruby>総額<rt>そうがく</rt></ruby>3100<ruby>万<rt>まん</rt></ruby><ruby>香港<rt>ほんこん</rt></ruby>ドルを<ruby>超<rt>こ</rt></ruby>える<ruby>約<rt>やく</rt></ruby>25キログラムの<ruby>疑<rt>うたが</rt></ruby>いのあるエトミデートを<ruby>押収<rt>おうしゅう</rt></ruby>したという。これは<ruby>警察<rt>けいさつ</rt></ruby><ruby>史上最大<rt>しじょうさいだい</rt></ruby>の<ruby>事件<rt>じけん</rt></ruby>である。",
+        "context": "エトミデートは、<ruby>香港<rt>ほんこん</rt></ruby>が<ruby>近年<rt>きんねん</rt></ruby>その<ruby>対策<rt>たいさく</rt></ruby>に<ruby>注力<rt>ちゅうりょく</rt></ruby>している<ruby>新興<rt>しんこう</rt></ruby><ruby>薬物<rt>やくぶつ</rt></ruby>の1つとなっている。<ruby>政府<rt>せいふ</rt></ruby>は<ruby>関連<rt>かんれん</rt></ruby><ruby>物質<rt>ぶっしつ</rt></ruby>を<ruby>危険<rt>きけん</rt></ruby>ドラッグ<ruby>規制<rt>きせい</rt></ruby>の<ruby>対象<rt>たいしょう</rt></ruby>に<ruby>含<rt>ふく</rt></ruby>めた。<ruby>警察<rt>けいさつ</rt></ruby>はまた、<ruby>特別<rt>とくべつ</rt></ruby>な<ruby>通報<rt>つうほう</rt></ruby>ルートを<ruby>設置<rt>せっち</rt></ruby>し、<ruby>学校<rt>がっこう</rt></ruby>と<ruby>公教育<rt>こうきょういく</rt></ruby>を<ruby>強化<rt>きょうか</rt></ruby>した。",
+        "why": "<ruby>今回<rt>こんかい</rt></ruby><ruby>押収<rt>おうしゅう</rt></ruby>された<ruby>金額<rt>きんがく</rt></ruby>と<ruby>評価<rt>ひょうか</rt></ruby><ruby>額<rt>がく</rt></ruby>はいずれも<ruby>大規模<rt>だいきぼ</rt></ruby>な<ruby>事件<rt>じけん</rt></ruby>であり、エトミデートのサプライチェーンが<ruby>依然<rt>いぜん</rt></ruby>として<ruby>大規模<rt>だいきぼ</rt></ruby>であることを<ruby>示<rt>しめ</rt></ruby>しており、<ruby>物流<rt>ぶつりゅう</rt></ruby>や<ruby>包装<rt>ほうそう</rt></ruby><ruby>隠蔽<rt>いんぺい</rt></ruby><ruby>技術<rt>ぎじゅつ</rt></ruby>も<ruby>含<rt>ふく</rt></ruby>まれており、<ruby>法<rt>ほう</rt></ruby><ruby>執行<rt>しっこう</rt></ruby>や<ruby>青少年<rt>せいしょうねん</rt></ruby>の<ruby>薬物<rt>やくぶつ</rt></ruby><ruby>防止<rt>ぼうし</rt></ruby>、<ruby>娯楽<rt>ごらく</rt></ruby><ruby>施設<rt>しせつ</rt></ruby>でのリスク<ruby>管理<rt>かんり</rt></ruby>に<ruby>直接的<rt>ちょくせつてき</rt></ruby>な<ruby>影響<rt>えいきょう</rt></ruby>を<ruby>及<rt>およ</rt></ruby>ぼしている。",
+        "watchNext": "<ruby>逮捕<rt>たいほ</rt></ruby>された<ruby>2人<rt>ふたり</rt></ruby>の<ruby>司法<rt>しほう</rt></ruby><ruby>手続<rt>てつづ</rt></ruby>きの<ruby>行方<rt>なめがた</rt></ruby>、<ruby>警察<rt>けいさつ</rt></ruby>がこの<ruby>事件<rt>じけん</rt></ruby>に<ruby>関係<rt>かんけい</rt></ruby>した<ruby>他<rt>ほか</rt></ruby>の<ruby>人物<rt>じんぶつ</rt></ruby>を<ruby>逮捕<rt>たいほ</rt></ruby>するのか、さらに<ruby>麻薬<rt>まやく</rt></ruby>や<ruby>倉庫<rt>そうこ</rt></ruby>、<ruby>流通<rt>りゅうつう</rt></ruby><ruby>網<rt>あみ</rt></ruby>の<ruby>追跡<rt>ついせき</rt></ruby>が<ruby>行<rt>おこな</rt></ruby>われるのかに<ruby>注目<rt>ちゅうもく</rt></ruby>だ。",
+        "bodyParagraphs": [
+          "RTHKは、<ruby>警察<rt>けいさつ</rt></ruby><ruby>薬物<rt>やくぶつ</rt></ruby><ruby>捜査<rt>そうさ</rt></ruby><ruby>局<rt>きょく</rt></ruby>がライチコックの<ruby>産業<rt>さんぎょう</rt></ruby>ユニットで、<ruby>物流<rt>ぶつりゅう</rt></ruby><ruby>会社<rt>かいしゃ</rt></ruby>のオフィスをカバーとして<ruby>使用<rt>しよう</rt></ruby>している<ruby>疑<rt>うたが</rt></ruby>いのある<ruby>薬物<rt>やくぶつ</rt></ruby><ruby>貯蔵<rt>ちょぞう</rt></ruby><ruby>施設<rt>しせつ</rt></ruby>を<ruby>破壊<rt>はかい</rt></ruby>するための<ruby>措置<rt>そち</rt></ruby>を<ruby>講<rt>こう</rt></ruby>じ、<ruby>約<rt>やく</rt></ruby>25キログラムの<ruby>疑<rt>うたが</rt></ruby>いのあるイミド<ruby>酸<rt>さん</rt></ruby><ruby>粉末<rt>ふんまつ</rt></ruby>と<ruby>大量<rt>たいりょう</rt></ruby>の<ruby>包装<rt>ほうそう</rt></ruby><ruby>材料<rt>ざいりょう</rt></ruby>を<ruby>押収<rt>おうしゅう</rt></ruby>したと<ruby>報告<rt>ほうこく</rt></ruby>した。<ruby>警察<rt>けいさつ</rt></ruby>は、この<ruby>薬物<rt>やくぶつ</rt></ruby>の<ruby>市場価値<rt>しじょうかち</rt></ruby>は3,100<ruby>万<rt>まん</rt></ruby><ruby>香港<rt>ほんこん</rt></ruby>ドルを<ruby>超<rt>こ</rt></ruby>えており、<ruby>指標<rt>しひょう</rt></ruby><ruby>量<rt>りょう</rt></ruby>は12<ruby>万<rt>まん</rt></ruby><ruby>本<rt>ほん</rt></ruby><ruby>以上<rt>いじょう</rt></ruby>の<ruby>電子<rt>でんし</rt></ruby>タバコになる<ruby>可能性<rt>かのうせい</rt></ruby>があると<ruby>推定<rt>すいてい</rt></ruby>しており、これは<ruby>警察<rt>けいさつ</rt></ruby><ruby>史上最大<rt>しじょうさいだい</rt></ruby>の<ruby>同種<rt>どうしゅ</rt></ruby>の<ruby>押収<rt>おうしゅう</rt></ruby>となった。<ruby>物流<rt>ぶつりゅう</rt></ruby><ruby>会社<rt>かいしゃ</rt></ruby>で<ruby>働<rt>はたら</rt></ruby>いていた<ruby>疑<rt>うたが</rt></ruby>いのある<ruby>2人<rt>ふたり</rt></ruby>の<ruby>男性<rt>だんせい</rt></ruby>が<ruby>現場<rt>げんば</rt></ruby>で<ruby>逮捕<rt>たいほ</rt></ruby>され、まだ<ruby>調査中<rt>ちょうさちゅう</rt></ruby>です。",
+          "<ruby>警察<rt>けいさつ</rt></ruby>によると、グループは<ruby>新<rt>あたら</rt></ruby>しいエクスプレスパッケージが<ruby>薬物<rt>やくぶつ</rt></ruby>を<ruby>一般的<rt>いっぱんてき</rt></ruby>な<ruby>貨物<rt>かもつ</rt></ruby><ruby>配達<rt>はいたつ</rt></ruby>に<ruby>変装<rt>へんそう</rt></ruby>させるために<ruby>使用<rt>しよう</rt></ruby>されたと<ruby>疑<rt>うたが</rt></ruby>っており、この<ruby>事件<rt>じけん</rt></ruby>はまだ<ruby>調査<rt>ちょうさ</rt></ruby><ruby>中<rt>ちゅう</rt></ruby>であるという。<ruby>警察<rt>けいさつ</rt></ruby>はまた、ハロウィーンが<ruby>近<rt>ちか</rt></ruby>づいていると<ruby>述<rt>の</rt></ruby>べ、<ruby>誰<rt>だれ</rt></ruby>かが<ruby>事前<rt>じぜん</rt></ruby>に<ruby>薬物<rt>やくぶつ</rt></ruby>を<ruby>備蓄<rt>びちく</rt></ruby>し、<ruby>娯楽<rt>ごらく</rt></ruby><ruby>施設<rt>しせつ</rt></ruby>に<ruby>流入<rt>りゅうにゅう</rt></ruby>する<ruby>準備<rt>じゅんび</rt></ruby>をしている<ruby>可能性<rt>かのうせい</rt></ruby>は<ruby>排除<rt>はいじょ</rt></ruby>されていません。エトミデートは<ruby>香港<rt>ほんこん</rt></ruby>では<ruby>危険<rt>きけん</rt></ruby><ruby>薬物<rt>やくぶつ</rt></ruby>として<ruby>登録<rt>とうろく</rt></ruby>されており、<ruby>保安<rt>ほあん</rt></ruby><ruby>局<rt>きょく</rt></ruby>と<ruby>警察<rt>けいさつ</rt></ruby>は<ruby>近年<rt>きんねん</rt></ruby>、<ruby>法<rt>ほう</rt></ruby><ruby>執行<rt>しっこう</rt></ruby>、<ruby>教育<rt>きょういく</rt></ruby>、<ruby>報告<rt>ほうこく</rt></ruby>の<ruby>経路<rt>けいろ</rt></ruby>を<ruby>強化<rt>きょうか</rt></ruby>し<ruby>続<rt>つづ</rt></ruby>けており、<ruby>警察<rt>けいさつ</rt></ruby>は、<ruby>多数<rt>たすう</rt></ruby>の<ruby>関連<rt>かんれん</rt></ruby><ruby>薬物<rt>やくぶつ</rt></ruby>が<ruby>市場<rt>しじょう</rt></ruby>に<ruby>流入<rt>りゅうにゅう</rt></ruby>すると、<ruby>特<rt>とく</rt></ruby>にティーンエイジャーに<ruby>明<rt>あき</rt></ruby>らかなリスクをもたらすと<ruby>指摘<rt>してき</rt></ruby>した。"
+        ]
+      }
     }
   ],
   "translationDegraded": false,
@@ -150,7 +224,7 @@
   "language": "ja",
   "translationSource": "kanuli/daily-brief-newspaper",
   "sourceFile": "live.json",
-  "sourceFingerprint": "dd799b8db4cbdf0bdee9eebf172326cc48fe78888ea04e2025698cb42d5374d0",
+  "sourceFingerprint": "352161fa84dbe1c5c357d1c40d705c8a5b92218863048ccbc8dffd288c1595df",
   "translationSchemaVersion": "ja-furigana-v3-context-sensitive",
   "furiganaEngineVersion": "sudachi-core-mode-c+context",
   "newsroomQualityVersion": 1
