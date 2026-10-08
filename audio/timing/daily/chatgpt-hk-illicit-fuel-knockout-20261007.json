@@ -1,0 +1,510 @@
+{
+  "version": 3,
+  "duration": 220.787,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 637,
+  "charactersPerMinute": 173.1,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 16.051,
+      "text": "税関は違法燃料取り締まりのため全土で消火活動を実施、3万リットル以上の燃料を押収、9人を逮捕"
+    },
+    {
+      "key": "dek",
+      "start": 16.051,
+      "end": 41.381,
+      "text": "税関と消防署は共同作戦「ストップ」の結果を発表し、7件の事件を摘発し、3万リットル以上の違法燃料と推定時価約170万台湾ドルの車両8台を押収した。"
+    },
+    {
+      "key": "body-0",
+      "start": 41.381,
+      "end": 101.259,
+      "text": "香港税関消防局によると、9月16日から30日にかけて、香港全域で「ブレイクスルー」というコードネームの共同作戦が開始され、7件の違法燃料関連事件が発生し、3万リットル以上の違法燃料と8台の車両が押収され、推定市場価値は約170万元、9人が逮捕されたという。当局は、新田と屯門の2つの違法ガソリン貯蔵施設を捜索し、複数の地区の違法ガソリンスタンドを破壊した。"
+    },
+    {
+      "key": "body-1",
+      "start": 101.259,
+      "end": 169.616,
+      "text": "政府の情報によると、法執行官はまた、九龍湾（ Kowloon Bay ）、観塘（ Kwun Tong ）、カムティン（ Kam Tin ）、葵涌（ Kwai Chung ）、屯門（ Tuen Mun ）の5つの違法なガソリンスタンドを壊し、課税されていないガソリンとディーゼルを押収した。税関は、調査が進行中であり、違法な燃料活動を取り締まるために消防署と協力し続けていると述べた。このケースはまた、国境を越えた供給、保管、都市の流通チェーンに法執行機関が焦点を当てていることを反映している。"
+    },
+    {
+      "key": "why",
+      "start": 169.616,
+      "end": 196.033,
+      "text": "この作戦は供給源と複数の違法給油地点の両方に影響を与えた。作戦の規模は単一の場所よりも広範囲であり、公共の安全上のリスクも伴いました。"
+    },
+    {
+      "key": "watch",
+      "start": 196.033,
+      "end": 220.787,
+      "text": "捜査の追跡調査、誰かが正式に起訴されたかどうか、そして当局がさらなる国境を越えたサプライチェーンの執行の結果を発表するかどうかに注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.943,
+      "end": 8.223,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "税関は違法燃料取り締まりのため全土で消火活動を実施、"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.223,
+      "speechEnd": 12.473,
+      "end": 12.753,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "3万リットル以上の燃料を押収、"
+    },
+    {
+      "parentKey": "title",
+      "start": 12.753,
+      "speechEnd": 15.191,
+      "end": 16.051,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "9人を逮捕。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.051,
+      "speechEnd": 23.506,
+      "end": 23.787,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "税関と消防署は共同作戦「ストップ」の結果を発表し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.787,
+      "speechEnd": 27.409,
+      "end": 27.69,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "7件の事件を摘発し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.69,
+      "speechEnd": 33.124,
+      "end": 33.304,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "3万リットル以上の違法燃料と推定時価約"
+    },
+    {
+      "parentKey": "dek",
+      "start": 33.304,
+      "speechEnd": 35.673,
+      "end": 35.853,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "170万台"
+    },
+    {
+      "parentKey": "dek",
+      "start": 35.853,
+      "speechEnd": 40.521,
+      "end": 41.381,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "湾ドルの車両8台を押収した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.381,
+      "speechEnd": 45.004,
+      "end": 45.284,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "香港税関消防局によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.284,
+      "speechEnd": 50.37,
+      "end": 50.65,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "9月16日から30日にかけて、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.65,
+      "speechEnd": 60.822,
+      "end": 61.103,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "香港全域で「ブレイクスルー」というコードネームの共同作戦が開始され、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.103,
+      "speechEnd": 66.119,
+      "end": 66.399,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "7件の違法燃料関連事件が発生し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.399,
+      "speechEnd": 70.44,
+      "end": 70.62,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "3万リットル以上の違法燃料と"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.62,
+      "speechEnd": 72.641,
+      "end": 72.821,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "8台"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.821,
+      "speechEnd": 76.026,
+      "end": 76.306,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "の車両が押収され、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.306,
+      "speechEnd": 80.556,
+      "end": 80.836,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "推定市場価値は約170万元、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 80.836,
+      "speechEnd": 84.319,
+      "end": 84.939,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "9人が逮捕されたという。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 84.939,
+      "speechEnd": 87.03,
+      "end": 87.31,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "当局は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 87.31,
+      "speechEnd": 94.277,
+      "end": 94.557,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "新田と屯門の2つの違法ガソリン貯蔵施設を捜索し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 94.557,
+      "speechEnd": 100.479,
+      "end": 101.259,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "複数の地区の違法ガソリンスタンドを破壊した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.259,
+      "speechEnd": 104.464,
+      "end": 104.744,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "政府の情報によると、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.744,
+      "speechEnd": 107.601,
+      "end": 107.881,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "法執行官はまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.881,
+      "speechEnd": 111.225,
+      "end": 111.505,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "九龍湾（ Kowloon Bay ）、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.505,
+      "speechEnd": 114.362,
+      "end": 114.642,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "観塘（ Kwun Tong ）、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.642,
+      "speechEnd": 117.707,
+      "end": 117.987,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "カムティン（ Kam Tin ）、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.987,
+      "speechEnd": 120.844,
+      "end": 121.124,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "葵涌（ Kwai Chung ）、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.124,
+      "speechEnd": 128.37,
+      "end": 128.65,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "屯門（ Tuen Mun ）の5つの違法なガソリンスタンドを壊し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 128.65,
+      "speechEnd": 134.433,
+      "end": 135.053,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "課税されていないガソリンとディーゼルを押収した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 135.053,
+      "speechEnd": 137.073,
+      "end": 137.354,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "税関は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 137.354,
+      "speechEnd": 140.907,
+      "end": 141.187,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "調査が進行中であり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 141.187,
+      "speechEnd": 149.687,
+      "end": 150.307,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "違法な燃料活動を取り締まるために消防署と協力し続けていると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 150.307,
+      "speechEnd": 152.885,
+      "end": 153.165,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "このケースはまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 153.165,
+      "speechEnd": 156.509,
+      "end": 156.789,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "国境を越えた供給、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 156.789,
+      "speechEnd": 158.81,
+      "end": 159.09,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "保管、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 159.09,
+      "speechEnd": 163.619,
+      "end": 163.959,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "都市の流通チェーンに法執行機関が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 163.959,
+      "speechEnd": 168.836,
+      "end": 169.616,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "焦点を当てていることを反映している。"
+    },
+    {
+      "parentKey": "why",
+      "start": 169.616,
+      "speechEnd": 173.587,
+      "end": 174.207,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 174.207,
+      "speechEnd": 183.892,
+      "end": 184.512,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "この作戦は供給源と複数の違法給油地点の両方に影響を与えた。"
+    },
+    {
+      "parentKey": "why",
+      "start": 184.512,
+      "speechEnd": 190.016,
+      "end": 190.296,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "作戦の規模は単一の場所よりも広範囲であり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 190.296,
+      "speechEnd": 195.173,
+      "end": 196.033,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "公共の安全上のリスクも伴いました。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 196.033,
+      "speechEnd": 198.123,
+      "end": 198.404,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 198.404,
+      "speechEnd": 201.121,
+      "end": 201.401,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "捜査の追跡調査、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 201.401,
+      "speechEnd": 206.139,
+      "end": 206.419,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "誰かが正式に起訴されたかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 206.419,
+      "speechEnd": 214.849,
+      "end": 215.189,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "そして当局がさらなる国境を越えたサプライチェーンの執行の結果を"
+    },
+    {
+      "parentKey": "watch",
+      "start": 215.189,
+      "speechEnd": 219.927,
+      "end": 220.787,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "発表するかどうかに注目してください。"
+    }
+  ]
+}
