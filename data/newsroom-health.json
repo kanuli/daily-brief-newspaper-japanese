@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "assessedAt": "2026-10-08T02:48:10.782Z",
+  "assessedAt": "2026-10-08T17:12:04.005Z",
   "state": "GREEN",
   "summary": "ALL_REQUIRED_NEWS_LAYERS_VOCAB_AND_DELIVERY_VERIFIED_BY_NAS",
   "faultReasons": [],
@@ -14,33 +14,33 @@
     "live": {
       "current": true,
       "degradedTranslation": false,
-      "upstream": "2026-10-08T09:06:00+08:00",
-      "japanese": "2026-10-08T09:06:00+08:00",
+      "upstream": "2026-10-08T13:11:48+08:00",
+      "japanese": "2026-10-08T13:11:48+08:00",
       "lagMinutes": 0
     },
     "desk": {
       "current": true,
       "degradedTranslation": false,
-      "upstream": "2026-10-08T09:06:00+08:00",
-      "japanese": "2026-10-08T09:06:00+08:00",
+      "upstream": "2026-10-08T13:11:48+08:00",
+      "japanese": "2026-10-08T13:11:48+08:00",
       "lagMinutes": 0
     },
     "stocks": {
       "current": true,
       "degradedTranslation": false,
-      "upstream": "2026-10-08T02:03:00.966328+00:00",
-      "japanese": "2026-10-08T02:03:00.966328+00:00",
+      "upstream": "2026-10-08T16:52:14.661955+00:00",
+      "japanese": "2026-10-08T16:52:14.661955+00:00",
       "lagMinutes": 0,
       "relativeCurrent": true,
       "sourceAbsoluteFresh": true,
-      "sourceAgeMinutes": 45,
+      "sourceAgeMinutes": 20,
       "maxAgeHours": 8
     },
     "vocab": {
       "current": true,
-      "expectedHktDate": "2026-10-08",
-      "upstream": "2026-10-08",
-      "japanese": "2026-10-08",
+      "expectedHktDate": "2026-10-09",
+      "upstream": "2026-10-09",
+      "japanese": "2026-10-09",
       "datedArchivePresent": true,
       "datedArchiveMatchesLatest": true
     },
@@ -57,9 +57,9 @@
         "github-f3",
         "github-pages"
       ],
-      "publicationFingerprint": "2026-10-08|2026-10-08T01:06:00.000Z|2026-10-08T01:06:00.000Z|2026-10-08T02:03:00.966Z|2026-10-08",
-      "attestedFingerprint": "2026-10-08|2026-10-08T01:06:00.000Z|2026-10-08T01:06:00.000Z|2026-10-08T02:03:00.966Z|2026-10-08",
-      "attestedAt": "2026-10-08T02:47:29Z"
+      "publicationFingerprint": "2026-10-08|2026-10-08T05:11:48.000Z|2026-10-08T05:11:48.000Z|2026-10-08T16:52:14.661Z|2026-10-09",
+      "attestedFingerprint": "2026-10-08|2026-10-08T05:11:48.000Z|2026-10-08T05:11:48.000Z|2026-10-08T16:52:14.661Z|2026-10-09",
+      "attestedAt": "2026-10-08T17:11:19Z"
     }
   },
   "recovery": {
@@ -94,7 +94,7 @@
   },
   "robot": {
     "current": true,
-    "runId": 37719641463,
+    "runId": 37814685786,
     "event": "workflow_dispatch",
     "role": "nas-attestation-auditor",
     "executor": "github-auditor-only",
