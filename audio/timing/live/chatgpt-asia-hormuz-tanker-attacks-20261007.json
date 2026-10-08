@@ -1,0 +1,274 @@
+{
+  "version": 3,
+  "duration": 129.384,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 373,
+  "charactersPerMinute": 173.0,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 9.69,
+      "text": "ホルムズ海峡で1週間に少なくとも12隻のタンカーが襲撃された。"
+    },
+    {
+      "key": "dek",
+      "start": 9.69,
+      "end": 37.421,
+      "text": "海事セキュリティ情報によると、9月28日から10月5日まで、海峡近くで少なくとも12隻の石油・液化ガス輸送船が襲撃され、国連海事機関は同期に9件の関連事故を記録した。"
+    },
+    {
+      "key": "body-0",
+      "start": 37.421,
+      "end": 88.563,
+      "text": "ロイター通信によると、9月28日から10月5日までの1週間で、ホルムズ海峡近くで原油、液化天然ガス、液化石油ガス輸送船に関する少なくとも12件の攻撃が発生し、今年2月28日のイラン戦争爆発以来最大の単週数となった。国連海事機関は同期に9件の船舶関連事件を記録し、2件の数字は検証方法と進歩によって異なっている。"
+    },
+    {
+      "key": "why",
+      "start": 88.563,
+      "end": 112.872,
+      "text": "攻撃密度の増加は、輸送と保険のコストを高め、湾岸エネルギー輸出の回復が国際石油価格の緩和作用を弱体化させる可能性がある。"
+    },
+    {
+      "key": "watch",
+      "start": 112.872,
+      "end": 129.384,
+      "text": "海事機関の連続検証、船舶保険およびルートの変更、湾岸諸国のエネルギー輸出規制に注意を払う。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 8.989,
+      "end": 9.69,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "ホルムズ海峡で1週間に少なくとも12隻のタンカーが襲撃された。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 9.69,
+      "speechEnd": 13.244,
+      "end": 13.474,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "海事セキュリティ情報によると、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.474,
+      "speechEnd": 19.188,
+      "end": 19.418,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "9月28日から10月5日まで、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.418,
+      "speechEnd": 29.313,
+      "end": 29.543,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "海峡近くで少なくとも12隻の石油・液化ガス輸送船が襲撃され、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 29.543,
+      "speechEnd": 36.721,
+      "end": 37.421,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "国連海事機関は同期に9件の関連事故を記録した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.421,
+      "speechEnd": 40.418,
+      "end": 40.648,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.648,
+      "speechEnd": 47.965,
+      "end": 48.195,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "9月28日から10月5日までの1週間で、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.195,
+      "speechEnd": 52.028,
+      "end": 52.258,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ホルムズ海峡近くで原油、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.258,
+      "speechEnd": 54.975,
+      "end": 55.205,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "液化天然ガス、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.205,
+      "speechEnd": 64.265,
+      "end": 64.495,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "液化石油ガス輸送船に関する少なくとも12件の攻撃が発生し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.495,
+      "speechEnd": 73.345,
+      "end": 73.845,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "今年2月28日のイラン戦争爆発以来最大の単週数となった。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.845,
+      "speechEnd": 81.301,
+      "end": 81.531,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "国連海事機関は同期に9件の船舶関連事件を記録し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 81.531,
+      "speechEnd": 87.942,
+      "end": 88.563,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "2件の数字は検証方法と進歩によって異なっている。"
+    },
+    {
+      "parentKey": "why",
+      "start": 88.563,
+      "speechEnd": 92.535,
+      "end": 93.035,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 93.035,
+      "speechEnd": 96.031,
+      "end": 96.261,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "攻撃密度の増加は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 96.261,
+      "speechEnd": 100.164,
+      "end": 100.394,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "輸送と保険のコストを高め、"
+    },
+    {
+      "parentKey": "why",
+      "start": 100.394,
+      "speechEnd": 103.669,
+      "end": 103.949,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "湾岸エネルギー輸出の回復が"
+    },
+    {
+      "parentKey": "why",
+      "start": 103.949,
+      "speechEnd": 112.172,
+      "end": 112.872,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "国際石油価格の緩和作用を弱体化させる可能性がある。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 112.872,
+      "speechEnd": 114.963,
+      "end": 115.193,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 115.193,
+      "speechEnd": 118.538,
+      "end": 118.768,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "海事機関の連続検証、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 118.768,
+      "speechEnd": 123.158,
+      "end": 123.388,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "船舶保険およびルートの変更、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 123.388,
+      "speechEnd": 128.684,
+      "end": 129.384,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "湾岸諸国のエネルギー輸出規制に注意を払う。"
+    }
+  ]
+}

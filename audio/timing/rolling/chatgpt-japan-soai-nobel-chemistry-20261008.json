@@ -1,0 +1,364 @@
+{
+  "version": 3,
+  "duration": 201.482,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 574,
+  "charactersPerMinute": 170.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 13.671,
+      "text": "日本の化学者合三がノーベル化学賞を受賞 研究が鏡の分子形成のメカニズムを明らかに"
+    },
+    {
+      "key": "dek",
+      "start": 13.671,
+      "end": 35.007,
+      "text": "東京科学大学名誉教授合憲三とフランスの科学者ヘンリー・カゴンが2026年ノーベル化学賞を受賞し、日本首相高市早明が電話で祝福。"
+    },
+    {
+      "key": "body-0",
+      "start": 35.007,
+      "end": 151.063,
+      "text": "2026年のノーベル化学賞は10月7日に明らかにされ、日本東京科学大学の名誉教授合憲三とフランスの科学者ヘンリー・カゴンと共に賞を受賞した。両者の研究は科学界が化学反応がどのように偏見の鏡の分子を生成するかを理解するのに役立ちます。このような分子は、構成が同じであるにもかかわらず、空間の順序は互いに鏡のイメージであり、生物作用と薬物製造の分野で異なる効果を持つ可能性がありますので、関連する成果は現代化学と薬物研究にとって重要です。・The日本首相の公式住宅は10月7日に発表され、高市早明が電話で憲三賞受賞を祝福し、首相の祝福メッセージを発表した。合の研究は、化学反応の分子性がどのように自発的に形成され、拡大するかを重要な方向にしたが、今回の受賞はまた、日本の基礎科学研究が再び国際的な関心を得た。"
+    },
+    {
+      "key": "why",
+      "start": 151.063,
+      "end": 178.464,
+      "text": "日本の研究者は、国際的に最高レベルの科学賞の1つを獲得し、日本の首相が、当日の重要な科学・社会ニュースであることを公然と祝福した。"
+    },
+    {
+      "key": "watch",
+      "start": 178.464,
+      "end": 201.482,
+      "text": "ノーベル賞が公式に発表された研究の説明と、関連する成果と将来の研究の方向に関する日本の学術機関のさらなる説明に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.246,
+      "end": 7.586,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "日本の化学者合三がノーベル化学賞を受賞 研究が"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.586,
+      "speechEnd": 12.811,
+      "end": 13.671,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "鏡の分子形成のメカニズムを明らかに。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.671,
+      "speechEnd": 22.45,
+      "end": 22.79,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "東京科学大学名誉教授合憲三とフランスの科学者ヘンリー・カゴンが"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.79,
+      "speechEnd": 28.572,
+      "end": 28.852,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "2026年ノーベル化学賞を受賞し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 28.852,
+      "speechEnd": 34.147,
+      "end": 35.007,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "日本首相高市早明が電話で祝福。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 35.007,
+      "speechEnd": 43.925,
+      "end": 44.205,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "2026年のノーベル化学賞は10月7日に明らかにされ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.205,
+      "speechEnd": 56.955,
+      "end": 57.575,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "日本東京科学大学の名誉教授合憲三とフランスの科学者ヘンリー・カゴンと共に賞を受賞した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.575,
+      "speechEnd": 62.87,
+      "end": 63.21,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "両者の研究は科学界が化学反応が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.21,
+      "speechEnd": 71.431,
+      "end": 72.051,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "どのように偏見の鏡の分子を生成するかを理解するのに役立ちます。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.051,
+      "speechEnd": 75.117,
+      "end": 75.397,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "このような分子は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.397,
+      "speechEnd": 80.204,
+      "end": 80.484,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "構成が同じであるにもかかわらず、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 80.484,
+      "speechEnd": 85.709,
+      "end": 85.989,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "空間の順序は互いに鏡のイメージであり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 85.989,
+      "speechEnd": 91.911,
+      "end": 92.252,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "生物作用と薬物製造の分野で異なる効果を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 92.252,
+      "speechEnd": 96.014,
+      "end": 96.294,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "持つ可能性がありますので、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 96.294,
+      "speechEnd": 103.748,
+      "end": 104.369,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "関連する成果は現代化学と薬物研究にとって重要です。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 104.369,
+      "speechEnd": 112.52,
+      "end": 112.8,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "・The日本首相の公式住宅は10月7日に発表され、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 112.8,
+      "speechEnd": 118.792,
+      "end": 119.072,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "高市早明が電話で憲三賞受賞を祝福し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 119.072,
+      "speechEnd": 123.6,
+      "end": 124.22,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "首相の祝福メッセージを発表した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 124.22,
+      "speechEnd": 126.659,
+      "end": 126.939,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "合の研究は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 126.939,
+      "speechEnd": 134.463,
+      "end": 134.743,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "化学反応の分子性がどのように自発的に形成され、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 134.743,
+      "speechEnd": 139.481,
+      "end": 139.761,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "拡大するかを重要な方向にしたが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 139.761,
+      "speechEnd": 142.687,
+      "end": 142.967,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今回の受賞はまた、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 142.967,
+      "speechEnd": 150.283,
+      "end": 151.063,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "日本の基礎科学研究が再び国際的な関心を得た。"
+    },
+    {
+      "parentKey": "why",
+      "start": 151.063,
+      "speechEnd": 155.034,
+      "end": 155.654,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 155.654,
+      "speechEnd": 158.65,
+      "end": 158.93,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本の研究者は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 158.93,
+      "speechEnd": 165.827,
+      "end": 166.107,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "国際的に最高レベルの科学賞の1つを獲得し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 166.107,
+      "speechEnd": 168.964,
+      "end": 169.244,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "日本の首相が、"
+    },
+    {
+      "parentKey": "why",
+      "start": 169.244,
+      "speechEnd": 177.604,
+      "end": 178.464,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "当日の重要な科学・社会ニュースであることを公然と祝福した。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 178.464,
+      "speechEnd": 180.555,
+      "end": 180.835,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 180.835,
+      "speechEnd": 187.314,
+      "end": 187.594,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ノーベル賞が公式に発表された研究の説明と、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 187.594,
+      "speechEnd": 200.622,
+      "end": 201.482,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "関連する成果と将来の研究の方向に関する日本の学術機関のさらなる説明に注意してください。"
+    }
+  ]
+}

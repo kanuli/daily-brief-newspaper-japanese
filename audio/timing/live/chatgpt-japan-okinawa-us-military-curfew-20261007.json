@@ -1,0 +1,264 @@
+{
+  "version": 3,
+  "duration": 127.582,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 358,
+  "charactersPerMinute": 168.4,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 12.078,
+      "text": "米軍が殺人事件の後2日間の訓練停止、その後30日間の夜禁令が施行"
+    },
+    {
+      "key": "dek",
+      "start": 12.078,
+      "end": 37.975,
+      "text": "アメリカ軍の兵士はナゲで女性を殺害した容疑で逮捕され、オキナバのアメリカ軍は活動を48時間中止し、その後30日の午夜から午前5時まで外出制限を施行した。"
+    },
+    {
+      "key": "body-0",
+      "start": 37.975,
+      "end": 88.182,
+      "text": "日本沖縄県の39歳の女性がナヘグ市ホテルで殺害された後、20歳の米海軍兵士が強盗殺害の容疑で逮捕され、容疑者は関連する告発を否定した。10月7日の午後から米軍が軍隊活動を48時間中止し、キャンプを制限し飲酒を禁止し、10月9日から30日の夜間外出制限を再施行し、夜間禁止時間は午夜から午前5時まで。"
+    },
+    {
+      "key": "why",
+      "start": 88.182,
+      "end": 109.748,
+      "text": "事件は刑事責任だけでなく、日本とアメリカの軍事協力の下での軍事管理と地元住民の信頼を検証するものである。"
+    },
+    {
+      "key": "watch",
+      "start": 109.748,
+      "end": 127.582,
+      "text": "事件の司法手続き、米軍の規律措置の実施、そして日本政府と沖縄県との継続的な協議に注意を払う。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 6.062,
+      "end": 6.292,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米軍が殺人事件の後2日間の訓練停止、"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.292,
+      "speechEnd": 11.378,
+      "end": 12.078,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "その後30日間の夜禁令が施行。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.078,
+      "speechEnd": 19.673,
+      "end": 19.903,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "アメリカ軍の兵士はナゲで女性を殺害した容疑で逮捕され、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.903,
+      "speechEnd": 27.289,
+      "end": 27.519,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "オキナバのアメリカ軍は活動を48時間中止し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.519,
+      "speechEnd": 31.351,
+      "end": 31.491,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "その後30日の午夜から午前"
+    },
+    {
+      "parentKey": "dek",
+      "start": 31.491,
+      "speechEnd": 33.511,
+      "end": 33.651,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "5時"
+    },
+    {
+      "parentKey": "dek",
+      "start": 33.651,
+      "speechEnd": 37.274,
+      "end": 37.975,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "まで外出制限を施行した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.975,
+      "speechEnd": 46.754,
+      "end": 46.984,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本沖縄県の39歳の女性がナヘグ市ホテルで殺害された後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.984,
+      "speechEnd": 54.3,
+      "end": 54.53,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "20歳の米海軍兵士が強盗殺害の容疑で逮捕され、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.53,
+      "speechEnd": 59.198,
+      "end": 59.698,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "容疑者は関連する告発を否定した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.698,
+      "speechEnd": 68.826,
+      "end": 69.056,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "10月7日の午後から米軍が軍隊活動を48時間中止し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.056,
+      "speechEnd": 73.585,
+      "end": 73.815,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "キャンプを制限し飲酒を禁止し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.815,
+      "speechEnd": 81.688,
+      "end": 81.918,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "10月9日から30日の夜間外出制限を再施行し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 81.918,
+      "speechEnd": 87.562,
+      "end": 88.182,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "夜間禁止時間は午夜から午前5時まで。"
+    },
+    {
+      "parentKey": "why",
+      "start": 88.182,
+      "speechEnd": 92.153,
+      "end": 92.653,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 92.653,
+      "speechEnd": 96.625,
+      "end": 96.855,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "事件は刑事責任だけでなく、"
+    },
+    {
+      "parentKey": "why",
+      "start": 96.855,
+      "speechEnd": 109.048,
+      "end": 109.748,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "日本とアメリカの軍事協力の下での軍事管理と地元住民の信頼を検証するものである。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 109.748,
+      "speechEnd": 111.839,
+      "end": 112.069,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 112.069,
+      "speechEnd": 114.995,
+      "end": 115.225,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "事件の司法手続き、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 115.225,
+      "speechEnd": 118.848,
+      "end": 119.078,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米軍の規律措置の実施、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 119.078,
+      "speechEnd": 126.882,
+      "end": 127.582,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "そして日本政府と沖縄県との継続的な協議に注意を払う。"
+    }
+  ]
+}

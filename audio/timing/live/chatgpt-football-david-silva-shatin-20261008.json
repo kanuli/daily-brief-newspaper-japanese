@@ -1,0 +1,394 @@
+{
+  "version": 3,
+  "duration": 194.978,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 622,
+  "charactersPerMinute": 191.4,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 8.225,
+      "text": "デイヴィッド・シュワウが40歳の前マンシュ・シティ・メディアに復帰"
+    },
+    {
+      "key": "dek",
+      "start": 8.225,
+      "end": 32.19,
+      "text": "元スペイン足のデイヴィッド・シュワは退職後3年後、香港スーパーリーグ選手権に加わることを発表し、港への適応訓練に到着し、正式に出場日付はまだ定められていない。"
+    },
+    {
+      "key": "body-0",
+      "start": 32.19,
+      "end": 152.538,
+      "text": "香港スーパーリーグ選手権は、40歳の元スペイン足のデイヴィッド・シュワがチームに加わり、2023年から膝の重傷で始まった退職生活を終えることを発表した。シュワールはマンチェスターで10シーズンプレーし、スペインとともに2010年ワールドカップと2回のヨーロッパカップを獲得し、サッカーはソーシャルメディアを通じてメンバーシップのニュースと自分のビデオを公開し、シュワルは香港の文化とサッカーの環境を体験することを期待している。シュワールは後で港に到着し、チームメンバーと練習し、徐々に体力を向上させ、現在の段階では正式に初戦の日付が発表されていない。至尊沙田は今シーズン上班チームで、シーズン4の後排リーグで第8位で、次の試合は10月18日に香港対サッカー大会で開催される。この加入は国際的に有名な選手をハンガリーに導入するが、チームは体の状態に応じて出場時間を決定しなければならず、次の試合を直ちに再び初戦と見なすべきではない。"
+    },
+    {
+      "key": "why",
+      "start": 152.538,
+      "end": 177.123,
+      "text": "ワールドカップ選手の加入港は、リーグの関心度を高め、外界がチームが上級選手の復帰をどのように整理するかを観察することを望んでいます。"
+    },
+    {
+      "key": "watch",
+      "start": 177.123,
+      "end": 194.978,
+      "text": "シュワイ港への到着、訓練進展、登録、サッカー会が正式に発表した初戦の予定に注意を払う。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.525,
+      "end": 8.225,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "デイヴィッド・シュワウが40歳の前マンシュ・シティ・メディアに復帰。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 8.225,
+      "speechEnd": 15.471,
+      "end": 15.701,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "元スペイン足のデイヴィッド・シュワは退職後3年後、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.701,
+      "speechEnd": 22.599,
+      "end": 22.829,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "香港スーパーリーグ選手権に加わることを発表し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.829,
+      "speechEnd": 26.104,
+      "end": 26.334,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "港への適応訓練に到着し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.334,
+      "speechEnd": 31.49,
+      "end": 32.19,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "正式に出場日付はまだ定められていない。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 32.19,
+      "speechEnd": 36.231,
+      "end": 36.461,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "香港スーパーリーグ選手権は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.461,
+      "speechEnd": 44.056,
+      "end": 44.286,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "40歳の元スペイン足のデイヴィッド・シュワがチームに加わり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.286,
+      "speechEnd": 51.254,
+      "end": 51.534,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "2023年から膝の重傷で始まった退職生活を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.534,
+      "speechEnd": 54.808,
+      "end": 55.309,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "終えることを発表した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.309,
+      "speechEnd": 61.092,
+      "end": 61.322,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "シュワールはマンチェスターで10シーズンプレーし、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.322,
+      "speechEnd": 69.961,
+      "end": 70.191,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "スペインとともに2010年ワールドカップと2回のヨーロッパカップを獲得し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.191,
+      "speechEnd": 79.876,
+      "end": 80.106,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "サッカーはソーシャルメディアを通じてメンバーシップのニュースと自分のビデオを公開し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 80.106,
+      "speechEnd": 85.75,
+      "end": 86.03,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "シュワルは香港の文化とサッカーの環境を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 86.03,
+      "speechEnd": 89.653,
+      "end": 90.153,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "体験することを期待している。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 90.153,
+      "speechEnd": 93.776,
+      "end": 94.006,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "シュワールは後で港に到着し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 94.006,
+      "speechEnd": 96.933,
+      "end": 97.163,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "チームメンバーと練習し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 97.163,
+      "speechEnd": 100.856,
+      "end": 101.086,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "徐々に体力を向上させ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 101.086,
+      "speechEnd": 108.82,
+      "end": 109.32,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "現在の段階では正式に初戦の日付が発表されていない。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 109.32,
+      "speechEnd": 114.197,
+      "end": 114.427,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "至尊沙田は今シーズン上班チームで、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 114.427,
+      "speechEnd": 119.653,
+      "end": 119.883,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "シーズン4の後排リーグで第8位で、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 119.883,
+      "speechEnd": 128.662,
+      "end": 129.162,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "次の試合は10月18日に香港対サッカー大会で開催される。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 129.162,
+      "speechEnd": 136.966,
+      "end": 137.196,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この加入は国際的に有名な選手をハンガリーに導入するが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 137.196,
+      "speechEnd": 144.79,
+      "end": 145.02,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "チームは体の状態に応じて出場時間を決定しなければならず、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 145.02,
+      "speechEnd": 151.918,
+      "end": 152.538,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "次の試合を直ちに再び初戦と見なすべきではない。"
+    },
+    {
+      "parentKey": "why",
+      "start": 152.538,
+      "speechEnd": 156.51,
+      "end": 157.01,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 157.01,
+      "speechEnd": 160.912,
+      "end": 161.142,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ワールドカップ選手の加入港は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 161.142,
+      "speechEnd": 164.695,
+      "end": 164.925,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "リーグの関心度を高め、"
+    },
+    {
+      "parentKey": "why",
+      "start": 164.925,
+      "speechEnd": 172.241,
+      "end": 172.521,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "外界がチームが上級選手の復帰をどのように整理するかを"
+    },
+    {
+      "parentKey": "why",
+      "start": 172.521,
+      "speechEnd": 176.423,
+      "end": 177.123,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "観察することを望んでいます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 177.123,
+      "speechEnd": 179.214,
+      "end": 179.444,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 179.444,
+      "speechEnd": 182.231,
+      "end": 182.461,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "シュワイ港への到着、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 182.461,
+      "speechEnd": 184.621,
+      "end": 184.851,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "訓練進展、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 184.851,
+      "speechEnd": 186.871,
+      "end": 187.101,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "登録、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 187.101,
+      "speechEnd": 194.278,
+      "end": 194.978,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "サッカー会が正式に発表した初戦の予定に注意を払う。"
+    }
+  ]
+}

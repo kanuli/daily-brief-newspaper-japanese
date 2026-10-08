@@ -1,0 +1,404 @@
+{
+  "version": 3,
+  "duration": 205.819,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 633,
+  "charactersPerMinute": 184.5,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 16.07,
+      "text": "国際エネルギー機関(IEA)は、戦略的な石油資源の放出を加速させるために、約1億バレルを投入する予定だ。"
+    },
+    {
+      "key": "dek",
+      "start": 16.07,
+      "end": 38.042,
+      "text": "IEA加盟国は3月に開始された緊急ガソリンリリース作戦をできるだけ早く完了することを支持し、ディーゼル市場の緊張によりディーゼルの倉庫の配置を優先する。"
+    },
+    {
+      "key": "body-0",
+      "start": 38.042,
+      "end": 167.584,
+      "text": "国際エネルギー機関(IAEA)は10月7日、加盟国が今年3月に発表された緊急石油貯蔵の解放作戦の実施を加速することを支持し、当初の約束をできるだけ早く完了し、可能な限りディーゼルを優先することを目指していると述べた。現在までに約325億バレルの石油が関連する集団行動に基づいて市場に投入されており、未完成の約束の貯蔵量が完全にリリースされた場合、さらに約100万バレルの供給が市場に提供されます。この決定は、新たな100万バレルの予備を発表する代わりに、既に計画されている実施を加速させることに焦点を当てている。国際エネルギー機関(IAEA)によると、加盟国はまだ2億バレル以上のディーゼルを含む約11億バレルの公共緊急石油資源を保有しており、市場はさらなる措置を検討する必要があると考えている。中東の輸送中断とディーゼル供給の緊張は、輸送と産業コストに影響を及ぼし続け、将来の実際のリリース速度と配分の順序は、短期市場の反応を引き起こす。"
+    },
+    {
+      "key": "why",
+      "start": 167.584,
+      "end": 190.655,
+      "text": "収納の加速は、短期供給の圧力を緩和するのに役立ちますが、航路のリスクが続く場合、収納は過渡的なポンプのみを提供します。"
+    },
+    {
+      "key": "watch",
+      "start": 190.655,
+      "end": 205.819,
+      "text": "IEA理事会は来週、各国のディーゼル放出の進歩とホルムズ海峡の航行安全を検討する。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.623,
+      "end": 3.853,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "国際エネルギー機関(IEA)は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.853,
+      "speechEnd": 10.402,
+      "end": 10.632,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "戦略的な石油資源の放出を加速させるために、"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.632,
+      "speechEnd": 15.37,
+      "end": 16.07,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "約1億バレルを投入する予定だ。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.07,
+      "speechEnd": 24.222,
+      "end": 24.502,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "IEA加盟国は3月に開始された緊急ガソリンリリース作戦を"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.502,
+      "speechEnd": 29.588,
+      "end": 29.818,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "できるだけ早く完了することを支持し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 29.818,
+      "speechEnd": 37.342,
+      "end": 38.042,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "ディーゼル市場の緊張によりディーゼルの倉庫の配置を優先する。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.042,
+      "speechEnd": 44.104,
+      "end": 44.334,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "国際エネルギー機関(IAEA)は10月7日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.334,
+      "speechEnd": 54.506,
+      "end": 54.786,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "加盟国が今年3月に発表された緊急石油貯蔵の解放作戦の実施を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.786,
+      "speechEnd": 58.061,
+      "end": 58.291,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "加速することを支持し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.291,
+      "speechEnd": 63.725,
+      "end": 63.955,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "当初の約束をできるだけ早く完了し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.955,
+      "speechEnd": 68.832,
+      "end": 69.112,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "可能な限りディーゼルを優先することを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.112,
+      "speechEnd": 72.178,
+      "end": 72.678,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "目指していると述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.678,
+      "speechEnd": 79.018,
+      "end": 79.298,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "現在までに約325億バレルの石油が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 79.298,
+      "speechEnd": 85.847,
+      "end": 86.077,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "関連する集団行動に基づいて市場に投入されており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 86.077,
+      "speechEnd": 92.905,
+      "end": 93.135,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "未完成の約束の貯蔵量が完全にリリースされた場合、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 93.135,
+      "speechEnd": 100.381,
+      "end": 100.881,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "さらに約100万バレルの供給が市場に提供されます。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 100.881,
+      "speechEnd": 103.25,
+      "end": 103.48,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この決定は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 103.48,
+      "speechEnd": 110.447,
+      "end": 110.677,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "新たな100万バレルの予備を発表する代わりに、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 110.677,
+      "speechEnd": 118.341,
+      "end": 118.841,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "既に計画されている実施を加速させることに焦点を当てている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 118.841,
+      "speechEnd": 123.3,
+      "end": 123.53,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "国際エネルギー機関(IAEA)によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 123.53,
+      "speechEnd": 129.661,
+      "end": 129.941,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "加盟国はまだ2億バレル以上のディーゼルを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 129.941,
+      "speechEnd": 138.441,
+      "end": 138.671,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "含む約11億バレルの公共緊急石油資源を保有しており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 138.671,
+      "speechEnd": 145.151,
+      "end": 145.651,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "市場はさらなる措置を検討する必要があると考えている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 145.651,
+      "speechEnd": 151.503,
+      "end": 151.733,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中東の輸送中断とディーゼル供給の緊張は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 151.733,
+      "speechEnd": 156.61,
+      "end": 156.84,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "輸送と産業コストに影響を及ぼし続け、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 156.84,
+      "speechEnd": 162.763,
+      "end": 162.993,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "将来の実際のリリース速度と配分の順序は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 162.993,
+      "speechEnd": 166.964,
+      "end": 167.584,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "短期市場の反応を引き起こす。"
+    },
+    {
+      "parentKey": "why",
+      "start": 167.584,
+      "speechEnd": 171.555,
+      "end": 172.055,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 172.055,
+      "speechEnd": 174.564,
+      "end": 174.794,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "収納の加速は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 174.794,
+      "speechEnd": 180.855,
+      "end": 181.085,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "短期供給の圧力を緩和するのに役立ちますが、"
+    },
+    {
+      "parentKey": "why",
+      "start": 181.085,
+      "speechEnd": 184.429,
+      "end": 184.659,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "航路のリスクが続く場合、"
+    },
+    {
+      "parentKey": "why",
+      "start": 184.659,
+      "speechEnd": 189.954,
+      "end": 190.655,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "収納は過渡的なポンプのみを提供します。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 190.655,
+      "speechEnd": 192.745,
+      "end": 192.975,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 192.975,
+      "speechEnd": 196.249,
+      "end": 196.479,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "IEA理事会は来週、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 196.479,
+      "speechEnd": 205.119,
+      "end": 205.819,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "各国のディーゼル放出の進歩とホルムズ海峡の航行安全を検討する。"
+    }
+  ]
+}
