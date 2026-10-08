@@ -97,9 +97,10 @@ def model_translate(text: str, source_lang: str, target_lang: str, *, beams: int
     encoded = tokenizer(
         source,
         return_tensors="pt",
-        truncation=True,
-        max_length=MAX_SOURCE_TOKENS,
+        truncation=False,
     )
+    if encoded["input_ids"].shape[-1] > MAX_SOURCE_TOKENS:
+        raise RuntimeError("M2M100 source exceeds token budget; refusing silent truncation")
     if not hasattr(tokenizer, "get_lang_id"):
         raise RuntimeError("M2M100 tokenizer does not expose get_lang_id")
     target_id = tokenizer.get_lang_id(target_lang)
@@ -109,6 +110,7 @@ def model_translate(text: str, source_lang: str, target_lang: str, *, beams: int
             forced_bos_token_id=target_id,
             max_new_tokens=MAX_NEW_TOKENS,
             num_beams=max(1, int(beams)),
+            no_repeat_ngram_size=4,
             early_stopping=True,
             renormalize_logits=True,
         )
@@ -155,6 +157,42 @@ def translate_chunk(text: str, strict: bool, field: str) -> str:
         f"output={pivot[:100]!r}",
     )
 
+    # Preserve sentence context before splitting at commas. Short subordinate
+    # clauses lose referents and can fail even when the complete sentence has
+    # an acceptable direct or pivot translation. Every sentence and the final
+    # assembled field must still pass the existing source-linked quality gates.
+    sentences = [
+        part for part in re.split(r"(?<=[。！？!?])|\n\s*\n", str(text or ""))
+        if part and part.strip()
+    ]
+    if len(sentences) > 1:
+        resolved = []
+        for index, sentence in enumerate(sentences, 1):
+            candidate = model_translate(sentence, SOURCE_LANG, TARGET_LANG, beams=6)
+            candidate = newsroom_quality.deterministic_postedit(sentence, candidate, field)
+            if bad_translation(sentence, candidate, strict, field):
+                en_sentence = model_translate(sentence, SOURCE_LANG, "en", beams=6)
+                candidate = model_translate(en_sentence, "en", TARGET_LANG, beams=6)
+                candidate = newsroom_quality.deterministic_postedit(sentence, candidate, field)
+            if bad_translation(sentence, candidate, strict, field):
+                print(
+                    "SECONDARY_LOCAL_SENTENCE_REJECT",
+                    f"field={field}",
+                    f"sentence={index}/{len(sentences)}",
+                    f"source={sentence!r}",
+                    f"output={candidate!r}",
+                    f"reason={quality_reason(sentence, candidate, strict, field)}",
+                )
+                break
+            resolved.append(candidate)
+        else:
+            combined = "".join(resolved)
+            combined = newsroom_quality.deterministic_postedit(text, combined, field)
+            if not bad_translation(text, combined, strict, field):
+                print("SECONDARY_LOCAL_SENTENCE_RETRY_OK", f"field={field}",
+                      f"sentences={len(sentences)}")
+                return combined
+
     # Final local-only retry: translate clauses independently, choosing direct
     # or pivot per clause, then re-run the authoritative whole-field quality gate.
     clauses = [
@@ -172,7 +210,9 @@ def translate_chunk(text: str, strict: bool, field: str) -> str:
                 candidate = newsroom_quality.deterministic_postedit(clause, candidate, field)
             if bad_translation(clause, candidate, False, field):
                 raise RuntimeError(
-                    f"clause {index}/{len(clauses)} failed direct and pivot quality"
+                    f"clause {index}/{len(clauses)} failed direct and pivot quality; "
+                    f"field={field}; source={clause!r}; output={candidate!r}; "
+                    f"reason={quality_reason(clause, candidate, False, field)}"
                 )
             resolved.append(candidate)
         combined = "".join(resolved)
@@ -194,6 +234,14 @@ def bad_translation(source: str, target: str, strict: bool, field: str) -> bool:
     if not safe.target_quality_ok(source, target, strict=strict):
         return True
     return bool(newsroom_quality.hard_reason(source, target, field))
+
+
+def quality_reason(source: str, target: str, strict: bool, field: str) -> str:
+    return (
+        safe.source_target_quality_reason(source, target, strict=strict)
+        or newsroom_quality.hard_reason(source, target, field)
+        or "target_quality_ok rejected output"
+    )
 
 
 def translate(source: str, strict: bool, field: str) -> str:
@@ -328,3 +376,5 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
+
