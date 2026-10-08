@@ -1,0 +1,424 @@
+{
+  "version": 3,
+  "duration": 184.973,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 531,
+  "charactersPerMinute": 172.2,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 12.078,
+      "text": "サウジアラビアの2つの空港で襲撃、3人死亡36人負傷 イエメン戦争拡大"
+    },
+    {
+      "key": "dek",
+      "start": 12.078,
+      "end": 36.461,
+      "text": "サウジアラビアの民間航空当局は、リヤドとアブハの2つの空港の攻撃を確認し、3人が死亡し36人が負傷したと確認し、武装勢力は攻撃を開始したと主張した。"
+    },
+    {
+      "key": "body-0",
+      "start": 36.461,
+      "end": 143.621,
+      "text": "サウジアラビア民間航空当局は、首都リヤードのハリド・ドイツ国王国際空港と南アブハ空港は火曜日から水曜日まで襲撃された。合計で3人が死亡、36人が負傷。リヤド空港で1人が死亡、8人が負傷。アブハ空港で2人が死亡、28人が負傷。武装勢力は攻撃の責任を認め、しかし、サウジアラビアの民間航空当局は、攻撃者を直接指摘していない。イエメンのアディン空港も同日、ミサイルと無人機が襲撃された。ミサイルは、カイロからのフライトが予定されている着陸前に走行道の近くに落下した。サウジアラビアが率いる連合軍は次のように述べた。イエメンのいくつかの州で80以上の武装勢力が攻撃した。戦争はマンデ海峡周辺で起きている。民間航空セキュリティ、人道救助、赤海運送はさらに圧力をかけている。"
+    },
+    {
+      "key": "why",
+      "start": 143.621,
+      "end": 167.488,
+      "text": "民間空港の攻撃は死傷を引き起こし、地域紛争が民間航空や国境を越える交通に対する直接の脅威が増加していることを示している。"
+    },
+    {
+      "key": "watch",
+      "start": 167.488,
+      "end": 184.973,
+      "text": "サウジアラビアの民間航空作戦、連合軍の追跡作戦、マンダ峡周辺の航行と人道的状況に注意を払う。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.947,
+      "end": 5.177,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "サウジアラビアの2つの空港で襲撃、"
+    },
+    {
+      "parentKey": "title",
+      "start": 5.177,
+      "speechEnd": 11.378,
+      "end": 12.078,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "3人死亡36人負傷 イエメン戦争拡大。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.078,
+      "speechEnd": 16.607,
+      "end": 16.837,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "サウジアラビアの民間航空当局は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.837,
+      "speechEnd": 22.968,
+      "end": 23.198,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "リヤドとアブハの2つの空港の攻撃を確認し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.198,
+      "speechEnd": 29.817,
+      "end": 30.047,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "3人が死亡し36人が負傷したと確認し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 30.047,
+      "speechEnd": 35.761,
+      "end": 36.461,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "武装勢力は攻撃を開始したと主張した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.461,
+      "speechEnd": 40.641,
+      "end": 40.871,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "サウジアラビア民間航空当局は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.871,
+      "speechEnd": 49.023,
+      "end": 49.303,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "首都リヤードのハリド・ドイツ国王国際空港と南アブハ空港は"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.303,
+      "speechEnd": 54.041,
+      "end": 54.541,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "火曜日から水曜日まで襲撃された。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.541,
+      "speechEnd": 57.816,
+      "end": 58.046,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "合計で3人が死亡、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.046,
+      "speechEnd": 60.903,
+      "end": 61.403,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "36人が負傷。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.403,
+      "speechEnd": 65.026,
+      "end": 65.256,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "リヤド空港で1人が死亡、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.256,
+      "speechEnd": 67.625,
+      "end": 68.125,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "8人が負傷。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.125,
+      "speechEnd": 71.818,
+      "end": 72.048,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "アブハ空港で2人が死亡、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.048,
+      "speechEnd": 74.765,
+      "end": 75.265,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "28人が負傷。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.265,
+      "speechEnd": 79.933,
+      "end": 80.163,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "武装勢力は攻撃の責任を認め、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 80.163,
+      "speechEnd": 82.184,
+      "end": 82.414,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "しかし、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 82.414,
+      "speechEnd": 86.943,
+      "end": 87.173,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "サウジアラビアの民間航空当局は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 87.173,
+      "speechEnd": 91.075,
+      "end": 91.575,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "攻撃者を直接指摘していない。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 91.575,
+      "speechEnd": 95.267,
+      "end": 95.498,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "イエメンのアディン空港も同日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 95.498,
+      "speechEnd": 99.748,
+      "end": 100.248,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "ミサイルと無人機が襲撃された。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 100.248,
+      "speechEnd": 102.408,
+      "end": 102.638,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ミサイルは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 102.638,
+      "speechEnd": 111.626,
+      "end": 112.126,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "カイロからのフライトが予定されている着陸前に走行道の近くに落下した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 112.126,
+      "speechEnd": 118.606,
+      "end": 119.106,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "サウジアラビアが率いる連合軍は次のように述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 119.106,
+      "speechEnd": 126.839,
+      "end": 127.34,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "イエメンのいくつかの州で80以上の武装勢力が攻撃した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 127.34,
+      "speechEnd": 132.286,
+      "end": 132.787,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "戦争はマンデ海峡周辺で起きている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 132.787,
+      "speechEnd": 135.783,
+      "end": 136.013,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "民間航空セキュリティ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 136.013,
+      "speechEnd": 138.242,
+      "end": 138.472,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "人道救助、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 138.472,
+      "speechEnd": 143.001,
+      "end": 143.621,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "赤海運送はさらに圧力をかけている。"
+    },
+    {
+      "parentKey": "why",
+      "start": 143.621,
+      "speechEnd": 147.593,
+      "end": 148.093,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 148.093,
+      "speechEnd": 153.667,
+      "end": 153.897,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "民間空港の攻撃は死傷を引き起こし、"
+    },
+    {
+      "parentKey": "why",
+      "start": 153.897,
+      "speechEnd": 162.885,
+      "end": 163.165,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "地域紛争が民間航空や国境を越える交通に対する直接の脅威が"
+    },
+    {
+      "parentKey": "why",
+      "start": 163.165,
+      "speechEnd": 166.788,
+      "end": 167.488,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "増加していることを示している。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 167.488,
+      "speechEnd": 169.578,
+      "end": 169.808,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 169.808,
+      "speechEnd": 174.407,
+      "end": 174.637,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "サウジアラビアの民間航空作戦、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 174.637,
+      "speechEnd": 177.703,
+      "end": 177.933,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "連合軍の追跡作戦、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 177.933,
+      "speechEnd": 184.273,
+      "end": 184.973,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "マンダ峡周辺の航行と人道的状況に注意を払う。"
+    }
+  ]
+}

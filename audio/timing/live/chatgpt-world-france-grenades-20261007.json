@@ -1,0 +1,444 @@
+{
+  "version": 3,
+  "duration": 180.088,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 508,
+  "charactersPerMinute": 169.3,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 12.846,
+      "text": "フランス、学生の抗議デモを停止 警察が18件の法執行事件を調査"
+    },
+    {
+      "key": "dek",
+      "start": 12.846,
+      "end": 30.59,
+      "text": "15歳の少年がデモ中に重傷を負った後、フランス内務省は警察が学生デモに衝撃弾を使用し、法執行調査を開始した。"
+    },
+    {
+      "key": "body-0",
+      "start": 30.59,
+      "end": 138.086,
+      "text": "フランス内務大臣ヌネス氏は、警察は高校生の抗議デモで衝撃弾を使用した。15歳の少年がロンス北部のデモで手を失った。彼は言った、怪我はショックによって引き起こされる可能性があります。しかし、正確な理由はまだ調査中です。警察は現在、18件の法執行事件を調査している。学生デモは2週間以上続いた。要請には、学校の建物の改善、教員の増加、教室の負担の削減が含まれています。ロイターによると、水曜日には500以上の学校が閉鎖された。学生団体は集会を継続する計画を立てている。レコルニ首相は10月末までに具体的な計画を提案することを約束した。ただし、直ちに発表されていない。抗議デモは警察との武力使用の争いが続く。政府は政治的なプレッシャーにさらされている。"
+    },
+    {
+      "key": "why",
+      "start": 138.086,
+      "end": 163.16,
+      "text": "停止爆弾は、当局が法執行のリスクを検討する必要があると認めていることを反映しているが、教育改革やデモの温暖化はまだ明らかになっていない。"
+    },
+    {
+      "key": "watch",
+      "start": 163.16,
+      "end": 180.088,
+      "text": "警察の監視調査結果、学生グループの追跡行動、政府が月末に発表した教育プログラムに注意を払う。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.09,
+      "end": 2.32,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "フランス、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.32,
+      "speechEnd": 6.571,
+      "end": 6.711,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "学生の抗議デモを停止 警察が"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.711,
+      "speechEnd": 8.801,
+      "end": 8.941,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "18件"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.941,
+      "speechEnd": 12.146,
+      "end": 12.846,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "の法執行事件を調査。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.846,
+      "speechEnd": 18.978,
+      "end": 19.208,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "15歳の少年がデモ中に重傷を負った後、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.208,
+      "speechEnd": 26.176,
+      "end": 26.406,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "フランス内務省は警察が学生デモに衝撃弾を使用し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.406,
+      "speechEnd": 29.89,
+      "end": 30.59,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "法執行調査を開始した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 30.59,
+      "speechEnd": 34.631,
+      "end": 34.861,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "フランス内務大臣ヌネス氏は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.861,
+      "speechEnd": 40.993,
+      "end": 41.493,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "警察は高校生の抗議デモで衝撃弾を使用した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.493,
+      "speechEnd": 48.252,
+      "end": 48.752,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "15歳の少年がロンス北部のデモで手を失った。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.752,
+      "speechEnd": 50.982,
+      "end": 51.212,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "彼は言った、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.212,
+      "speechEnd": 58.04,
+      "end": 58.54,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "怪我はショックによって引き起こされる可能性があります。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.54,
+      "speechEnd": 60.561,
+      "end": 60.791,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "しかし、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.791,
+      "speechEnd": 65.459,
+      "end": 65.959,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "正確な理由はまだ調査中です。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.959,
+      "speechEnd": 68.259,
+      "end": 68.489,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "警察は現在、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.489,
+      "speechEnd": 73.575,
+      "end": 74.075,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "18件の法執行事件を調査している。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.075,
+      "speechEnd": 78.186,
+      "end": 78.687,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "学生デモは2週間以上続いた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 78.687,
+      "speechEnd": 80.847,
+      "end": 81.077,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "要請には、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 81.077,
+      "speechEnd": 84.351,
+      "end": 84.582,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "学校の建物の改善、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 84.582,
+      "speechEnd": 86.951,
+      "end": 87.181,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "教員の増加、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 87.181,
+      "speechEnd": 91.988,
+      "end": 92.488,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "教室の負担の削減が含まれています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 92.488,
+      "speechEnd": 95.067,
+      "end": 95.297,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイターによると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 95.297,
+      "speechEnd": 101.637,
+      "end": 102.137,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "水曜日には500以上の学校が閉鎖された。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 102.137,
+      "speechEnd": 107.781,
+      "end": 108.281,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "学生団体は集会を継続する計画を立てている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 108.281,
+      "speechEnd": 115.04,
+      "end": 115.32,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "レコルニ首相は10月末までに具体的な計画を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 115.32,
+      "speechEnd": 118.804,
+      "end": 119.304,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "提案することを約束した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 119.304,
+      "speechEnd": 121.395,
+      "end": 121.625,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ただし、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 121.625,
+      "speechEnd": 124.969,
+      "end": 125.469,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "直ちに発表されていない。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 125.469,
+      "speechEnd": 130.904,
+      "end": 131.404,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "抗議デモは警察との武力使用の争いが続く。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 131.404,
+      "speechEnd": 137.466,
+      "end": 138.086,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "政府は政治的なプレッシャーにさらされている。"
+    },
+    {
+      "parentKey": "why",
+      "start": 138.086,
+      "speechEnd": 142.058,
+      "end": 142.558,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 142.558,
+      "speechEnd": 144.997,
+      "end": 145.227,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "停止爆弾は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 145.227,
+      "speechEnd": 150.104,
+      "end": 150.384,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "当局が法執行のリスクを検討する必要が"
+    },
+    {
+      "parentKey": "why",
+      "start": 150.384,
+      "speechEnd": 155.331,
+      "end": 155.561,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "あると認めていることを反映しているが、"
+    },
+    {
+      "parentKey": "why",
+      "start": 155.561,
+      "speechEnd": 162.46,
+      "end": 163.16,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "教育改革やデモの温暖化はまだ明らかになっていない。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 163.16,
+      "speechEnd": 165.25,
+      "end": 165.48,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 165.48,
+      "speechEnd": 168.476,
+      "end": 168.706,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "警察の監視調査結果、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 168.706,
+      "speechEnd": 172.26,
+      "end": 172.49,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "学生グループの追跡行動、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 172.49,
+      "speechEnd": 179.388,
+      "end": 180.088,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "政府が月末に発表した教育プログラムに注意を払う。"
+    }
+  ]
+}

@@ -1,0 +1,460 @@
+{
+  "version": 3,
+  "duration": 191.347,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 537,
+  "charactersPerMinute": 168.4,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 10.546,
+      "text": "米長期債金利が再び24年ぶり高水準、入札後に上昇幅縮小"
+    },
+    {
+      "key": "dek",
+      "start": 10.546,
+      "end": 31.466,
+      "text": "米国10年および30年国債利回りは、10年国債オークションの需要が改善するにつれて後退する前に、市場で数年ぶりの高値に上昇した。"
+    },
+    {
+      "key": "body-0",
+      "start": 31.466,
+      "end": 83.188,
+      "text": "10年国債利回りは一時5.3645%、30年ぶりに5.7322%の高水準に上昇し、いずれも24年ぶりの高水準に達したとRTHKは今朝報じた。その後、米国財務省の390億米ドルの10年国債オークションは好評を博し、債券購入は回復し、2つの利回りは高い水準から低下しましたが、高い水準にとどまりました。"
+    },
+    {
+      "key": "body-1",
+      "start": 83.188,
+      "end": 155.905,
+      "text": "米ドル指数は、ニューヨーク市場のテールエンドで102.28近くまで上昇した。これは、連邦準備制度理事会の議事録が発表された後も市場が米国の金利に焦点を当て続けていることを反映している。ロイター通信が先に報じたところによると、長期債券の売却は、インフレ、政府債務、エネルギー価格の懸念に関連していた。金利の上昇は通常、企業の資金調達と政府の借入コストを増加させ、株式の評価にも影響を与える可能性があります。その後の債券オークションと経済データが観察の焦点になります。"
+    },
+    {
+      "key": "why",
+      "start": 155.905,
+      "end": 177.038,
+      "text": "長期債金利の上昇は、住宅ローン、企業融資、政府融資、リスク資産の評価に影響を与えるだろう。"
+    },
+    {
+      "key": "watch",
+      "start": 177.038,
+      "end": 191.347,
+      "text": "米国の30年国債入札やFRB当局者の講演、インフレ統計に注目してほしい。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 5.992,
+      "end": 6.272,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米長期債金利が再び24年ぶり高水準、"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.272,
+      "speechEnd": 9.686,
+      "end": 10.546,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "入札後に上昇幅縮小。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 10.546,
+      "speechEnd": 16.746,
+      "end": 17.027,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国10年および30年国債利回りは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.027,
+      "speechEnd": 21.137,
+      "end": 21.477,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "10年国債オークションの需要が"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.477,
+      "speechEnd": 25.866,
+      "end": 26.146,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "改善するにつれて後退する前に、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.146,
+      "speechEnd": 30.605,
+      "end": 31.466,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "市場で数年ぶりの高値に上昇した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 31.466,
+      "speechEnd": 38.502,
+      "end": 38.782,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "10年国債利回りは一時5.3645%、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.782,
+      "speechEnd": 46.516,
+      "end": 46.796,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "30年ぶりに5.7322%の高水準に上昇し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.796,
+      "speechEnd": 55.156,
+      "end": 55.776,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "いずれも24年ぶりの高水準に達したとRTHKは今朝報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.776,
+      "speechEnd": 57.867,
+      "end": 58.147,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "その後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.147,
+      "speechEnd": 63.302,
+      "end": 63.482,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "米国財務省の390億米ドルの"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.482,
+      "speechEnd": 65.572,
+      "end": 65.752,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "10年"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.752,
+      "speechEnd": 69.654,
+      "end": 69.934,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "国債オークションは好評を博し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.934,
+      "speechEnd": 72.582,
+      "end": 72.862,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "債券購入は回復し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.862,
+      "speechEnd": 78.714,
+      "end": 78.994,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "2つの利回りは高い水準から低下しましたが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 78.994,
+      "speechEnd": 82.408,
+      "end": 83.188,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "高い水準にとどまりました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 83.188,
+      "speechEnd": 85.696,
+      "end": 85.976,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米ドル指数は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 85.976,
+      "speechEnd": 93.779,
+      "end": 94.399,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ニューヨーク市場のテールエンドで102.28近くまで上昇した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.399,
+      "speechEnd": 96.49,
+      "end": 96.77,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "これは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 96.77,
+      "speechEnd": 101.02,
+      "end": 101.36,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "連邦準備制度理事会の議事録が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.36,
+      "speechEnd": 110.974,
+      "end": 111.594,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "発表された後も市場が米国の金利に焦点を当て続けていることを反映している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.594,
+      "speechEnd": 116.82,
+      "end": 117.1,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信が先に報じたところによると、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.1,
+      "speechEnd": 120.305,
+      "end": 120.585,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "長期債券の売却は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.585,
+      "speechEnd": 122.675,
+      "end": 122.955,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インフレ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 122.955,
+      "speechEnd": 125.254,
+      "end": 125.534,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "政府債務、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 125.534,
+      "speechEnd": 129.714,
+      "end": 130.334,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "エネルギー価格の懸念に関連していた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 130.334,
+      "speechEnd": 133.469,
+      "end": 133.75,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "金利の上昇は通常、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 133.75,
+      "speechEnd": 140.647,
+      "end": 140.927,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "企業の資金調達と政府の借入コストを増加させ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 140.927,
+      "speechEnd": 146.988,
+      "end": 147.608,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "株式の評価にも影響を与える可能性があります。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 147.608,
+      "speechEnd": 151.719,
+      "end": 152.059,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "その後の債券オークションと経済データが"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 152.059,
+      "speechEnd": 155.125,
+      "end": 155.905,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "観察の焦点になります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 155.905,
+      "speechEnd": 159.876,
+      "end": 160.496,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 160.496,
+      "speechEnd": 163.631,
+      "end": 163.911,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "長期債金利の上昇は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 163.911,
+      "speechEnd": 166.071,
+      "end": 166.351,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "住宅ローン、"
+    },
+    {
+      "parentKey": "why",
+      "start": 166.351,
+      "speechEnd": 168.511,
+      "end": 168.791,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "企業融資、"
+    },
+    {
+      "parentKey": "why",
+      "start": 168.791,
+      "speechEnd": 171.09,
+      "end": 171.37,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "政府融資、"
+    },
+    {
+      "parentKey": "why",
+      "start": 171.37,
+      "speechEnd": 176.177,
+      "end": 177.038,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "リスク資産の評価に影響を与えるだろう。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 177.038,
+      "speechEnd": 179.128,
+      "end": 179.408,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 179.408,
+      "speechEnd": 186.445,
+      "end": 186.725,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国の30年国債入札やFRB当局者の講演、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 186.725,
+      "speechEnd": 190.487,
+      "end": 191.347,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "インフレ統計に注目してほしい。"
+    }
+  ]
+}
