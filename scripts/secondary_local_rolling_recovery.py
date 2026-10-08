@@ -44,6 +44,26 @@ FALLBACK_COPY_RE = re.compile(
 CALENDAR_LABEL_RE = re.compile(
     r"\d{4}年\d{1,2}月\d{1,2}日(?: \d{1,2}:\d{2}(?: (?:HKT|UTC|JST))?)?"
 )
+# Exact, reviewed section chrome only: never article prose or fuzzy matches.
+# Six labels retain the existing Japanese edition's canonical localization.
+# Football uses faithful 規制と監督 for 監管; it preserves regulatory oversight
+# and passes the unchanged source-aware quality gate, unlike malformed MT.
+STATIC_SECTION_SUBTITLES = {
+    ("world", "非亞洲國際政治、社會、外交、安全、氣候與公共事務"):
+        "アジア以外の国際政治・社会・外交・安全保障・気候・公共問題",
+    ("hong-kong", "香港公共事務、社會、民生與城市發展"):
+        "香港の公共問題・社会・暮らし・都市開発",
+    ("japan", "日本政治、社會、經濟、公共安全與民生"):
+        "日本の政治・社会・経済・公共安全・暮らし",
+    ("market-economy", "全球市場、宏觀經濟、企業與產業"):
+        "世界市場・マクロ経済・企業・産業",
+    ("ai-tech", "人工智能、半導體、平台、科研與科技產業"):
+        "人工知能・半導体・プラットフォーム・研究・テクノロジー産業",
+    ("manchester-united", "曼聯球會、賽事、球員與管理層"):
+        "マンチェスター・ユナイテッドのクラブ・試合・選手・経営",
+    ("football", "全球足球賽事、球會、國家隊、轉會與監管"):
+        "世界のサッカー大会・クラブ・代表チーム・移籍・規制と監督",
+}
 
 
 def atomic_json(path: Path, value) -> None:
@@ -192,15 +212,38 @@ def translate_field(source_text: str, field: str) -> str:
     return candidate
 
 
+def localize_static_subtitle(source: dict, parent_key: str) -> str | None:
+    """Resolve exact non-story section chrome; gates still remain authoritative.
+
+    Deliberately do not seed the shared article cache: the same text occurring
+    in an article must continue through the normal source-bound/model path.
+    """
+    if parent_key not in {"sections", "extraTopics"} or source.get("id") or extra.story_like(source):
+        return None
+    source_text = source.get("subtitle")
+    slug = source.get("slug")
+    if not isinstance(slug, str) or not isinstance(source_text, str):
+        return None
+    candidate = STATIC_SECTION_SUBTITLES.get((slug, source_text))
+    if candidate is None:
+        return None
+    if not valid_field(source_text, candidate, "subtitle"):
+        raise RuntimeError("Static section subtitle failed unchanged source-aware quality gate")
+    return candidate
+
+
 def convert_tree(source, parent_key=""):
     """Build from current source, not old targets; untouched metadata is exact."""
     if isinstance(source, list):
         return [convert_tree(child, parent_key) for child in source]
     if isinstance(source, dict):
         output = {}
+        static_subtitle = localize_static_subtitle(source, parent_key)
         for key, value in source.items():
             if key in base.KEEP_KEYS or key == "furigana":
                 output[key] = deepcopy(value)
+            elif key == "subtitle" and static_subtitle is not None:
+                output[key] = static_subtitle
             else:
                 output[key] = convert_tree(value, key)
         return output
