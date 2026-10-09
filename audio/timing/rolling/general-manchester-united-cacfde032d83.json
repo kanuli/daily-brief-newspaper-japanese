@@ -1,0 +1,420 @@
+{
+  "version": 3,
+  "duration": 183.118,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 645,
+  "charactersPerMinute": 211.3,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 11.095,
+      "text": "フットボールベッティングの専門家、ルイス・ジョーンズ: プレミアリーグ回帰分析"
+    },
+    {
+      "key": "dek",
+      "start": 11.095,
+      "end": 43.514,
+      "text": "プレミアリーグのリターン分析: マンチェスター・ユナイテッド VS トッテナム、クリスタル・パレス VS ノッティンガム・フォレスト、ハル・シティ VS エバートン、リヴァプール VS マンチェスター・シティ、コベントリー VS ニューカッスル・ユナイテッドおよびその他のライブ放送。"
+    },
+    {
+      "key": "body-0",
+      "start": 43.514,
+      "end": 63.527,
+      "text": "フットボールベッティングの専門家、ルイス・ジョーンズ、別名ジョーンズ・ノウズが、プレミアリーグの週末をカバーする分析とベッティングの洞察を提供します。"
+    },
+    {
+      "key": "body-1",
+      "start": 63.527,
+      "end": 111.319,
+      "text": "過去5シーズンにわたって、プレミアリーグとFAカップの大会全体で初戦得点率は0.3ゴール減少した。プレミアリーグのリターン分析: マンチェスター・ユナイテッド VS トッテナム、クリスタル・パレス VS ノッティンガム・フォレスト、ハル・シティ VS エバートン、リヴァプール VS マンチェスター・シティ、コベントリー VS ニューカッスル・ユナイテッドおよびその他のライブ放送。"
+    },
+    {
+      "key": "why",
+      "start": 111.319,
+      "end": 148.329,
+      "text": "プレミアリーグのリターン分析: マンチェスター・ユナイテッド VS トッテナム、クリスタル・パレス VS ノッティンガム・フォレスト、ハル・シティ VS エバートン、リヴァプール VS マンチェスター・シティ、コベントリー VS ニューカッスル・ユナイテッドおよびその他のライブ放送。"
+    },
+    {
+      "key": "watch",
+      "start": 148.329,
+      "end": 183.118,
+      "text": "プレミアリーグのリターン分析: マンチェスター・ユナイテッド VS トッテナム、クリスタル・パレス VS ノッティンガム・フォレスト、ハル・シティ VS エバートン、リヴァプール VS マンチェスター・シティ、コベントリー VS ニューカッスル・ユナイテッドおよびその他のライブ放送。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.832,
+      "end": 4.112,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "フットボールベッティングの専門家、"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.112,
+      "speechEnd": 6.829,
+      "end": 7.169,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "punctuation-semantic",
+      "text": "ルイス・ジョーンズ:"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.169,
+      "speechEnd": 10.235,
+      "end": 11.095,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "プレミアリーグ回帰分析。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 11.095,
+      "speechEnd": 14.579,
+      "end": 14.919,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "punctuation-semantic",
+      "text": "プレミアリーグのリターン分析:"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.919,
+      "speechEnd": 19.447,
+      "end": 19.727,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マンチェスター・ユナイテッド VS トッテナム、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.727,
+      "speechEnd": 25.51,
+      "end": 25.79,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "クリスタル・パレス VS ノッティンガム・フォレスト、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.79,
+      "speechEnd": 29.134,
+      "end": 29.415,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ハル・シティ VS エバートン、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 29.415,
+      "speechEnd": 33.804,
+      "end": 34.084,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "リヴァプール VS マンチェスター・シティ、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 34.084,
+      "speechEnd": 42.654,
+      "end": 43.514,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "コベントリー VS ニューカッスル・ユナイテッドおよびその他のライブ放送。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.514,
+      "speechEnd": 47.346,
+      "end": 47.626,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "フットボールベッティングの専門家、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.626,
+      "speechEnd": 50.343,
+      "end": 50.623,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ルイス・ジョーンズ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.623,
+      "speechEnd": 54.107,
+      "end": 54.387,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "別名ジョーンズ・ノウズが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.387,
+      "speechEnd": 62.747,
+      "end": 63.527,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "プレミアリーグの週末をカバーする分析とベッティングの洞察を提供します。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 63.527,
+      "speechEnd": 67.22,
+      "end": 67.5,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "過去5シーズンにわたって、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 67.5,
+      "speechEnd": 74.816,
+      "end": 75.156,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "プレミアリーグとFAカップの大会全体で初戦得点率は"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 75.156,
+      "speechEnd": 78.361,
+      "end": 78.981,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "0.3ゴール減少した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 78.981,
+      "speechEnd": 82.464,
+      "end": 82.804,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "punctuation-semantic",
+      "text": "プレミアリーグのリターン分析:"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.804,
+      "speechEnd": 87.333,
+      "end": 87.613,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マンチェスター・ユナイテッド VS トッテナム、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 87.613,
+      "speechEnd": 93.396,
+      "end": 93.676,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "クリスタル・パレス VS ノッティンガム・フォレスト、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.676,
+      "speechEnd": 97.02,
+      "end": 97.3,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ハル・シティ VS エバートン、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.3,
+      "speechEnd": 101.69,
+      "end": 101.97,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "リヴァプール VS マンチェスター・シティ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.97,
+      "speechEnd": 110.539,
+      "end": 111.319,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "コベントリー VS ニューカッスル・ユナイテッドおよびその他のライブ放送。"
+    },
+    {
+      "parentKey": "why",
+      "start": 111.319,
+      "speechEnd": 115.291,
+      "end": 115.911,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 115.911,
+      "speechEnd": 119.394,
+      "end": 119.734,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "punctuation-semantic",
+      "text": "プレミアリーグのリターン分析:"
+    },
+    {
+      "parentKey": "why",
+      "start": 119.734,
+      "speechEnd": 124.263,
+      "end": 124.543,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マンチェスター・ユナイテッド VS トッテナム、"
+    },
+    {
+      "parentKey": "why",
+      "start": 124.543,
+      "speechEnd": 130.326,
+      "end": 130.606,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "クリスタル・パレス VS ノッティンガム・フォレスト、"
+    },
+    {
+      "parentKey": "why",
+      "start": 130.606,
+      "speechEnd": 133.95,
+      "end": 134.23,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ハル・シティ VS エバートン、"
+    },
+    {
+      "parentKey": "why",
+      "start": 134.23,
+      "speechEnd": 138.62,
+      "end": 138.9,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "リヴァプール VS マンチェスター・シティ、"
+    },
+    {
+      "parentKey": "why",
+      "start": 138.9,
+      "speechEnd": 147.469,
+      "end": 148.329,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "コベントリー VS ニューカッスル・ユナイテッドおよびその他のライブ放送。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 148.329,
+      "speechEnd": 150.42,
+      "end": 150.7,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 150.7,
+      "speechEnd": 154.183,
+      "end": 154.523,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "punctuation-semantic",
+      "text": "プレミアリーグのリターン分析:"
+    },
+    {
+      "parentKey": "watch",
+      "start": 154.523,
+      "speechEnd": 159.052,
+      "end": 159.332,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マンチェスター・ユナイテッド VS トッテナム、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 159.332,
+      "speechEnd": 165.115,
+      "end": 165.395,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "クリスタル・パレス VS ノッティンガム・フォレスト、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 165.395,
+      "speechEnd": 168.739,
+      "end": 169.019,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ハル・シティ VS エバートン、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 169.019,
+      "speechEnd": 173.409,
+      "end": 173.689,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "リヴァプール VS マンチェスター・シティ、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 173.689,
+      "speechEnd": 182.258,
+      "end": 183.118,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "コベントリー VS ニューカッスル・ユナイテッドおよびその他のライブ放送。"
+    }
+  ]
+}

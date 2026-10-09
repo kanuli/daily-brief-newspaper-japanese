@@ -1,0 +1,344 @@
+{
+  "version": 3,
+  "duration": 127.164,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 464,
+  "charactersPerMinute": 218.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 9.203,
+      "text": "サッカー・ギャンブル・エキスパート ルイス・ジョーンズ:英超回復分析"
+    },
+    {
+      "key": "dek",
+      "start": 9.203,
+      "end": 35.094,
+      "text": "イギリス超回復分析:マンチェスターVSホットタッチ、クリスタル宮VSノーディンハン森、ヘルシティVSエヴァートン、リバプールVSマンシティ、コヴァンテルVSニューカッサルユニオンなど、試合イベントのライブ放送。"
+    },
+    {
+      "key": "body-0",
+      "start": 35.094,
+      "end": 68.588,
+      "text": "私たちのサッカーギャンブル専門家ルイス・ジョーンズ(Jones Knows)は、イングランド・スーパーの週末をカバーする彼の分析と賭けの見解を提供しています。過去5シーズンでイングランドとイングランドカップの試合で、最初の試合のゴール率は0.3ゴールを下げました。"
+    },
+    {
+      "key": "why",
+      "start": 68.588,
+      "end": 98.952,
+      "text": "イギリス超回復分析:マンチェスターVSホットタッチ、クリスタル宮VSノーディンハン森、ヘルシティVSエヴァートン、リバプールVSマンシティ、コヴァンテルVSニューカッサルユニオンなど、試合イベントのライブ放送。"
+    },
+    {
+      "key": "watch",
+      "start": 98.952,
+      "end": 127.164,
+      "text": "イギリス超回復分析:マンチェスターVSホットタッチ、クリスタル宮VSノーディンハン森、ヘルシティVSエヴァートン、リバプールVSマンシティ、コヴァンテルVSニューカッサルユニオンなど、試合イベントのライブ放送。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 5.853,
+      "end": 6.133,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-semantic",
+      "text": "サッカー・ギャンブル・エキスパート ルイス・ジョーンズ:"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.133,
+      "speechEnd": 8.502,
+      "end": 9.203,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "英超回復分析。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 9.203,
+      "speechEnd": 11.99,
+      "end": 12.27,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-semantic",
+      "text": "イギリス超回復分析:"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.27,
+      "speechEnd": 15.545,
+      "end": 15.775,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "マンチェスターVSホットタッチ、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.775,
+      "speechEnd": 19.468,
+      "end": 19.698,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "クリスタル宮VSノーディンハン森、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.698,
+      "speechEnd": 22.764,
+      "end": 22.994,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ヘルシティVSエヴァートン、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.994,
+      "speechEnd": 26.13,
+      "end": 26.36,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "リバプールVSマンシティ、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.36,
+      "speechEnd": 30.68,
+      "end": 30.91,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "コヴァンテルVSニューカッサルユニオンなど、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 30.91,
+      "speechEnd": 34.394,
+      "end": 35.094,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "試合イベントのライブ放送。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 35.094,
+      "speechEnd": 43.804,
+      "end": 44.034,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "私たちのサッカーギャンブル専門家ルイス・ジョーンズ(Jones Knows)は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.034,
+      "speechEnd": 53.372,
+      "end": 53.872,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "イングランド・スーパーの週末をカバーする彼の分析と賭けの見解を提供しています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.872,
+      "speechEnd": 60.77,
+      "end": 61.0,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "過去5シーズンでイングランドとイングランドカップの試合で、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.0,
+      "speechEnd": 67.968,
+      "end": 68.588,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "最初の試合のゴール率は0.3ゴールを下げました。"
+    },
+    {
+      "parentKey": "why",
+      "start": 68.588,
+      "speechEnd": 72.56,
+      "end": 73.06,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 73.06,
+      "speechEnd": 75.847,
+      "end": 76.128,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-semantic",
+      "text": "イギリス超回復分析:"
+    },
+    {
+      "parentKey": "why",
+      "start": 76.128,
+      "speechEnd": 79.403,
+      "end": 79.633,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "マンチェスターVSホットタッチ、"
+    },
+    {
+      "parentKey": "why",
+      "start": 79.633,
+      "speechEnd": 83.326,
+      "end": 83.556,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "クリスタル宮VSノーディンハン森、"
+    },
+    {
+      "parentKey": "why",
+      "start": 83.556,
+      "speechEnd": 86.622,
+      "end": 86.852,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ヘルシティVSエヴァートン、"
+    },
+    {
+      "parentKey": "why",
+      "start": 86.852,
+      "speechEnd": 89.987,
+      "end": 90.217,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "リバプールVSマンシティ、"
+    },
+    {
+      "parentKey": "why",
+      "start": 90.217,
+      "speechEnd": 94.538,
+      "end": 94.768,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "コヴァンテルVSニューカッサルユニオンなど、"
+    },
+    {
+      "parentKey": "why",
+      "start": 94.768,
+      "speechEnd": 98.252,
+      "end": 98.952,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "試合イベントのライブ放送。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 98.952,
+      "speechEnd": 101.042,
+      "end": 101.272,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 101.272,
+      "speechEnd": 104.06,
+      "end": 104.34,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-semantic",
+      "text": "イギリス超回復分析:"
+    },
+    {
+      "parentKey": "watch",
+      "start": 104.34,
+      "speechEnd": 107.615,
+      "end": 107.845,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "マンチェスターVSホットタッチ、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 107.845,
+      "speechEnd": 111.538,
+      "end": 111.768,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "クリスタル宮VSノーディンハン森、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 111.768,
+      "speechEnd": 114.834,
+      "end": 115.064,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ヘルシティVSエヴァートン、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 115.064,
+      "speechEnd": 118.2,
+      "end": 118.43,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "リバプールVSマンシティ、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 118.43,
+      "speechEnd": 122.75,
+      "end": 122.98,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "コヴァンテルVSニューカッサルユニオンなど、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 122.98,
+      "speechEnd": 126.464,
+      "end": 127.164,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "試合イベントのライブ放送。"
+    }
+  ]
+}
