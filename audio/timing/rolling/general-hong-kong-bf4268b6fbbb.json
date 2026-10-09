@@ -1,0 +1,310 @@
+{
+  "version": 3,
+  "duration": 151.615,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 409,
+  "charactersPerMinute": 161.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 11.451,
+      "text": "立法会は5カ年計画を支持する動議と政策演説に対する感謝の動議を可決した"
+    },
+    {
+      "key": "dek",
+      "start": 11.451,
+      "end": 22.685,
+      "text": "香港政府ニュースネットワーク - 立法会が5カ年計画を支持する動議を可決"
+    },
+    {
+      "key": "body-0",
+      "start": 22.685,
+      "end": 65.392,
+      "text": "立法会は本日、香港特別行政区の第一次5カ年計画を支持する動議と2026年の政策演説に対する感謝動議を可決した。李嘉秋行政長官は感謝の意を表明した。同氏は、2つの文書の出所が同じであり、作成過程ではあらゆる関係者から意見を集めたと指摘した。"
+    },
+    {
+      "key": "body-1",
+      "start": 65.392,
+      "end": 128.37,
+      "text": "李家超氏は、特別行政区政府が5カ年計画を策定し、国家第15次5カ年計画と積極的に連携し、香港が発展の機会をよりよく捉え、国家全体の発展にうまく統合し貢献できるよう導くことが非常に重要であると述べた。同氏は、5か年計画は将来を見据えた戦略的かつ方向性のある指針文書である一方、政策演説は5か年計画を実施するための年次行動計画であると述べた。 2つの書類"
+    },
+    {
+      "key": "why",
+      "start": 128.37,
+      "end": 139.675,
+      "text": "李嘉秋行政長官が感謝の意を表明"
+    },
+    {
+      "key": "watch",
+      "start": 139.675,
+      "end": 151.615,
+      "text": "政府は政策を確実に実行するために慎重に分析および検討する"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 10.591,
+      "end": 11.451,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "立法会は5カ年計画を支持する動議と政策演説に対する感謝の動議を可決した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 11.451,
+      "speechEnd": 16.398,
+      "end": 16.738,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "香港政府ニュースネットワーク - 立法会が"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.738,
+      "speechEnd": 21.824,
+      "end": 22.685,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "continuation",
+      "text": "5カ年計画を支持する動議を可決"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 22.685,
+      "speechEnd": 25.332,
+      "end": 25.612,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "立法会は本日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 25.612,
+      "speechEnd": 32.162,
+      "end": 32.502,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "香港特別行政区の第一次5カ年計画を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 32.502,
+      "speechEnd": 41.629,
+      "end": 42.25,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "支持する動議と2026年の政策演説に対する感謝動議を可決した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.25,
+      "speechEnd": 48.799,
+      "end": 49.419,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "李嘉秋行政長官は感謝の意を表明した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.419,
+      "speechEnd": 51.579,
+      "end": 51.859,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同氏は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.859,
+      "speechEnd": 56.806,
+      "end": 57.086,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "2つの文書の出所が同じであり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.086,
+      "speechEnd": 64.611,
+      "end": 65.392,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "作成過程ではあらゆる関係者から意見を集めたと指摘した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 65.392,
+      "speechEnd": 67.83,
+      "end": 68.11,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "李家超氏は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 68.11,
+      "speechEnd": 74.799,
+      "end": 75.079,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "特別行政区政府が5カ年計画を策定し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 75.079,
+      "speechEnd": 82.256,
+      "end": 82.536,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "国家第15次5カ年計画と積極的に連携し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.536,
+      "speechEnd": 87.553,
+      "end": 87.833,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "香港が発展の機会をよりよく捉え、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 87.833,
+      "speechEnd": 95.358,
+      "end": 95.698,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "国家全体の発展にうまく統合し貢献できるよう導くことが"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 95.698,
+      "speechEnd": 99.46,
+      "end": 100.08,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "非常に重要であると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 100.08,
+      "speechEnd": 102.24,
+      "end": 102.52,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同氏は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.52,
+      "speechEnd": 113.599,
+      "end": 113.879,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "5か年計画は将来を見据えた戦略的かつ方向性のある指針文書である一方、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 113.879,
+      "speechEnd": 119.592,
+      "end": 119.932,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "政策演説は5か年計画を実施するため"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 119.932,
+      "speechEnd": 124.601,
+      "end": 125.221,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "の年次行動計画であると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 125.221,
+      "speechEnd": 127.59,
+      "end": 128.37,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "clause",
+      "text": "2つの書類"
+    },
+    {
+      "parentKey": "why",
+      "start": 128.37,
+      "speechEnd": 132.342,
+      "end": 132.962,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 132.962,
+      "speechEnd": 138.814,
+      "end": 139.675,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "clause",
+      "text": "李嘉秋行政長官が感謝の意を表明"
+    },
+    {
+      "parentKey": "watch",
+      "start": 139.675,
+      "speechEnd": 141.765,
+      "end": 142.045,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 142.045,
+      "speechEnd": 150.754,
+      "end": 151.615,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "clause",
+      "text": "政府は政策を確実に実行するために慎重に分析および検討する"
+    }
+  ]
+}

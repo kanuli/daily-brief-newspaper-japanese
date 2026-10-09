@@ -1,0 +1,394 @@
+{
+  "version": 3,
+  "duration": 143.151,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 403,
+  "charactersPerMinute": 168.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 11.662,
+      "text": "賞を受賞したマイクロイメージはAI生成に明らかにされ、ニコンはルールを再検討"
+    },
+    {
+      "key": "dek",
+      "start": 11.662,
+      "end": 28.402,
+      "text": "小世界マイクロイメージコンテスト賞を受賞したビデオはAIによって生成され、Nikonはコンテストのルールを再評価しました。"
+    },
+    {
+      "key": "body-0",
+      "start": 28.402,
+      "end": 110.84,
+      "text": "賞を受賞した映画の著者 Dr Ning Xu は、中国の清華大学から、彼は短編を紹介し、子どもの呼吸道における小さな髪型の構造を示し、すなわち、空気管内の毛細胞。しかし、多くの科学者、前回の試合も含めて、ニコンのLinkedInページで会社に苦情を申し立て、「この映画は真実ではない」と。科学者ロバート・ヒルストは、彼は20年間、PCDを診断してきました。患者の毛毛細胞の波形、長さ、細胞の大きさ、形状を観察することによって判断する。このビデオの細胞と毛細胞は、PCD患者の細胞や毛細胞と「完全に異なります」。"
+    },
+    {
+      "key": "why",
+      "start": 110.84,
+      "end": 124.376,
+      "text": "競技規則は、生成AIの使用を明確に禁止しています。"
+    },
+    {
+      "key": "watch",
+      "start": 124.376,
+      "end": 143.151,
+      "text": "このイベントは、PCD患者、科学者、医師、およびサポートネットワークに影響を与えました。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.386,
+      "end": 7.666,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "賞を受賞したマイクロイメージはAI生成に明らかにされ、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.666,
+      "speechEnd": 10.802,
+      "end": 11.662,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ニコンはルールを再検討。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 11.662,
+      "speechEnd": 18.491,
+      "end": 18.831,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "小世界マイクロイメージコンテスト賞を受賞したビデオは"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.831,
+      "speechEnd": 21.966,
+      "end": 22.246,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "AIによって生成され、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.246,
+      "speechEnd": 27.542,
+      "end": 28.402,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "Nikonはコンテストのルールを再評価しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 28.402,
+      "speechEnd": 34.046,
+      "end": 34.326,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "賞を受賞した映画の著者 Dr Ning Xu は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.326,
+      "speechEnd": 37.88,
+      "end": 38.16,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "中国の清華大学から、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.16,
+      "speechEnd": 40.738,
+      "end": 41.018,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "彼は短編を紹介し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.018,
+      "speechEnd": 48.056,
+      "end": 48.336,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "子どもの呼吸道における小さな髪型の構造を示し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.336,
+      "speechEnd": 50.496,
+      "end": 50.776,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "すなわち、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.776,
+      "speechEnd": 53.703,
+      "end": 54.323,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "空気管内の毛細胞。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.323,
+      "speechEnd": 56.344,
+      "end": 56.624,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "しかし、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.624,
+      "speechEnd": 59.202,
+      "end": 59.482,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "多くの科学者、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.482,
+      "speechEnd": 62.757,
+      "end": 63.037,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "前回の試合も含めて、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.037,
+      "speechEnd": 69.308,
+      "end": 69.588,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ニコンのLinkedInページで会社に苦情を申し立て、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.588,
+      "speechEnd": 74.466,
+      "end": 75.086,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "「この映画は真実ではない」と。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.086,
+      "speechEnd": 78.709,
+      "end": 78.99,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "科学者ロバート・ヒルストは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 78.99,
+      "speechEnd": 81.777,
+      "end": 82.057,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "彼は20年間、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 82.057,
+      "speechEnd": 85.123,
+      "end": 85.743,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "PCDを診断してきました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 85.743,
+      "speechEnd": 89.088,
+      "end": 89.368,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "患者の毛毛細胞の波形、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 89.368,
+      "speechEnd": 91.388,
+      "end": 91.668,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "長さ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 91.668,
+      "speechEnd": 94.316,
+      "end": 94.596,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "細胞の大きさ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 94.596,
+      "speechEnd": 99.265,
+      "end": 99.885,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "形状を観察することによって判断する。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 99.885,
+      "speechEnd": 103.857,
+      "end": 104.137,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "このビデオの細胞と毛細胞は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 104.137,
+      "speechEnd": 110.06,
+      "end": 110.84,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "PCD患者の細胞や毛細胞と「完全に異なります」。"
+    },
+    {
+      "parentKey": "why",
+      "start": 110.84,
+      "speechEnd": 114.812,
+      "end": 115.432,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 115.432,
+      "speechEnd": 117.662,
+      "end": 117.942,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "競技規則は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 117.942,
+      "speechEnd": 123.516,
+      "end": 124.376,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "生成AIの使用を明確に禁止しています。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 124.376,
+      "speechEnd": 126.467,
+      "end": 126.747,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 126.747,
+      "speechEnd": 129.255,
+      "end": 129.535,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "このイベントは、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 129.535,
+      "speechEnd": 131.626,
+      "end": 131.906,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "PCD患者、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 131.906,
+      "speechEnd": 133.996,
+      "end": 134.276,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "科学者、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 134.276,
+      "speechEnd": 136.297,
+      "end": 136.577,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "医師、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 136.577,
+      "speechEnd": 142.291,
+      "end": 143.151,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "およびサポートネットワークに影響を与えました。"
+    }
+  ]
+}

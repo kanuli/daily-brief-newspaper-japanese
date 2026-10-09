@@ -1,0 +1,320 @@
+{
+  "version": 3,
+  "duration": 124.735,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 354,
+  "charactersPerMinute": 170.3,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.309,
+      "text": "国務院は新たな生産力の発展を支援し、銀行に関連融資商品の開発を奨励する文書を発行した。"
+    },
+    {
+      "key": "dek",
+      "start": 14.309,
+      "end": 25.622,
+      "text": "国務院は新たな生産性を支援し、銀行に関連融資商品の開発を奨励している"
+    },
+    {
+      "key": "body-0",
+      "start": 25.622,
+      "end": 63.73,
+      "text": "国務院は新たな生産力の発展を支援する文書を発表した。この文書は、新興産業を育成・強化し、新興柱産業の構築に努め、新世代情報技術、新エネルギー、ハイエンド機器、航空宇宙などの戦略的新興産業の発展を加速することを提案した。"
+    },
+    {
+      "key": "body-1",
+      "start": 63.73,
+      "end": 104.348,
+      "text": "この文書には、市場アクセスシステムを改善し、人工知能、生物学、その他の分野のガバナンスを強化する必要があるとも述べられている。金融イノベーション商品の供給を増やし、科学技術イノベーション債券商品システムを充実させ、高品質テクノロジー企業の上場と融資を支援する。"
+    },
+    {
+      "key": "why",
+      "start": 104.348,
+      "end": 114.676,
+      "text": "国務院は新たな生産力を支援します。"
+    },
+    {
+      "key": "watch",
+      "start": 114.676,
+      "end": 124.735,
+      "text": "国務院は銀行に関連融資商品の開発を奨励している。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 5.923,
+      "end": 6.153,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "国務院は新たな生産力の発展を支援し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.153,
+      "speechEnd": 13.609,
+      "end": 14.309,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "銀行に関連融資商品の開発を奨励する文書を発行した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.309,
+      "speechEnd": 19.256,
+      "end": 19.486,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "国務院は新たな生産性を支援し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.486,
+      "speechEnd": 24.921,
+      "end": 25.622,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "clause",
+      "text": "銀行に関連融資商品の開発を奨励している"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 25.622,
+      "speechEnd": 33.774,
+      "end": 34.274,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "国務院は新たな生産力の発展を支援する文書を発表した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.274,
+      "speechEnd": 36.644,
+      "end": 36.874,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この文書は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.874,
+      "speechEnd": 40.776,
+      "end": 41.006,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "新興産業を育成・強化し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.006,
+      "speechEnd": 44.629,
+      "end": 44.859,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "新興柱産業の構築に努め、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.859,
+      "speechEnd": 47.786,
+      "end": 48.016,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "新世代情報技術、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.016,
+      "speechEnd": 50.246,
+      "end": 50.476,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "新エネルギー、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.476,
+      "speechEnd": 52.915,
+      "end": 53.145,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ハイエンド機器、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.145,
+      "speechEnd": 59.416,
+      "end": 59.696,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "航空宇宙などの戦略的新興産業の発展を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.696,
+      "speechEnd": 63.11,
+      "end": 63.73,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "加速することを提案した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 63.73,
+      "speechEnd": 66.309,
+      "end": 66.539,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この文書には、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 66.539,
+      "speechEnd": 70.301,
+      "end": 70.531,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "市場アクセスシステムを改善し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 70.531,
+      "speechEnd": 72.761,
+      "end": 72.991,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "人工知能、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 72.991,
+      "speechEnd": 75.082,
+      "end": 75.312,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "生物学、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 75.312,
+      "speechEnd": 81.235,
+      "end": 81.515,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "その他の分野のガバナンスを強化する必要が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 81.515,
+      "speechEnd": 84.72,
+      "end": 85.22,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "あるとも述べられている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 85.22,
+      "speechEnd": 90.655,
+      "end": 90.885,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "金融イノベーション商品の供給を増やし、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.885,
+      "speechEnd": 97.435,
+      "end": 97.665,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "科学技術イノベーション債券商品システムを充実させ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.665,
+      "speechEnd": 103.728,
+      "end": 104.348,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "高品質テクノロジー企業の上場と融資を支援する。"
+    },
+    {
+      "parentKey": "why",
+      "start": 104.348,
+      "speechEnd": 108.32,
+      "end": 108.82,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 108.82,
+      "speechEnd": 113.976,
+      "end": 114.676,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "国務院は新たな生産力を支援します。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 114.676,
+      "speechEnd": 116.767,
+      "end": 116.997,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 116.997,
+      "speechEnd": 124.034,
+      "end": 124.735,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "国務院は銀行に関連融資商品の開発を奨励している。"
+    }
+  ]
+}
