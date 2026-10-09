@@ -1,0 +1,266 @@
+{
+  "version": 3,
+  "duration": 107.624,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 292,
+  "charactersPerMinute": 162.8,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 9.571,
+      "text": "香港政府ニュースネットワーク - 黄崗港の開港式が日曜日に開催"
+    },
+    {
+      "key": "dek",
+      "start": 9.571,
+      "end": 18.794,
+      "text": "香港政府ニュースネットワーク - 黄崗港の開港式が日曜日に開催"
+    },
+    {
+      "key": "body-0",
+      "start": 18.794,
+      "end": 30.946,
+      "text": "再建された黄崗港は10月12日午前6時30分に正式に開港した。"
+    },
+    {
+      "key": "body-1",
+      "start": 30.946,
+      "end": 42.529,
+      "text": "香港と深センは10月11日午前、深セン方港区で開通式典を行った。"
+    },
+    {
+      "key": "body-2",
+      "start": 42.529,
+      "end": 72.853,
+      "text": "唐炳強安全保障長官は、乗客と乗用車に24時間通関サービスを提供する黄崗港の開港は、特別行政区政府が国の全体的な発展により良く統合し、貢献するための重要なマイルストーンであると述べた。"
+    },
+    {
+      "key": "why",
+      "start": 72.853,
+      "end": 91.35,
+      "text": "香港政府は黄崗港が10月12日午前6時30分に正式に開港すると発表した。"
+    },
+    {
+      "key": "watch",
+      "start": 91.35,
+      "end": 107.624,
+      "text": "香港政府は黄崗港が10月12日午前6時30分に正式に開港すると発表した。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 8.711,
+      "end": 9.571,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "香港政府ニュースネットワーク - 黄崗港の開港式が日曜日に開催。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 9.571,
+      "speechEnd": 17.934,
+      "end": 18.794,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "clause",
+      "text": "香港政府ニュースネットワーク - 黄崗港の開港式が日曜日に開催"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 18.794,
+      "speechEnd": 22.0,
+      "end": 22.18,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "再建された黄崗港は"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 22.18,
+      "speechEnd": 24.828,
+      "end": 25.008,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "10月12日"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 25.008,
+      "speechEnd": 30.165,
+      "end": 30.946,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "午前6時30分に正式に開港した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 30.946,
+      "speechEnd": 36.242,
+      "end": 36.522,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "香港と深センは10月11日午前、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 36.522,
+      "speechEnd": 41.749,
+      "end": 42.529,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "深セン方港区で開通式典を行った。"
+    },
+    {
+      "parentKey": "body-2",
+      "start": 42.529,
+      "speechEnd": 46.711,
+      "end": 46.991,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "唐炳強安全保障長官は、"
+    },
+    {
+      "parentKey": "body-2",
+      "start": 46.991,
+      "speechEnd": 52.775,
+      "end": 53.115,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "乗客と乗用車に24時間通関サービスを"
+    },
+    {
+      "parentKey": "body-2",
+      "start": 53.115,
+      "speechEnd": 56.948,
+      "end": 57.228,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "提供する黄崗港の開港は、"
+    },
+    {
+      "parentKey": "body-2",
+      "start": 57.228,
+      "speechEnd": 65.591,
+      "end": 65.871,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "特別行政区政府が国の全体的な発展により良く統合し、"
+    },
+    {
+      "parentKey": "body-2",
+      "start": 65.871,
+      "speechEnd": 72.073,
+      "end": 72.853,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "貢献するための重要なマイルストーンであると述べた。"
+    },
+    {
+      "parentKey": "why",
+      "start": 72.853,
+      "speechEnd": 76.826,
+      "end": 77.446,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 77.446,
+      "speechEnd": 81.07,
+      "end": 81.25,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "香港政府は黄崗港が"
+    },
+    {
+      "parentKey": "why",
+      "start": 81.25,
+      "speechEnd": 83.898,
+      "end": 84.078,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "10月12日"
+    },
+    {
+      "parentKey": "why",
+      "start": 84.078,
+      "speechEnd": 90.489,
+      "end": 91.35,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "午前6時30分に正式に開港すると発表した。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 91.35,
+      "speechEnd": 93.44,
+      "end": 93.721,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 93.721,
+      "speechEnd": 97.344,
+      "end": 97.525,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "香港政府は黄崗港が"
+    },
+    {
+      "parentKey": "watch",
+      "start": 97.525,
+      "speechEnd": 100.173,
+      "end": 100.353,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "10月12日"
+    },
+    {
+      "parentKey": "watch",
+      "start": 100.353,
+      "speechEnd": 106.764,
+      "end": 107.624,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "午前6時30分に正式に開港すると発表した。"
+    }
+  ]
+}
