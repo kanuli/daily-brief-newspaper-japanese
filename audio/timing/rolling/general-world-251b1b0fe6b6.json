@@ -1,0 +1,350 @@
+{
+  "version": 3,
+  "duration": 141.453,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 388,
+  "charactersPerMinute": 164.6,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 17.436,
+      "text": "国連報告書：世界の教育における男女格差は縮小しているが、女子は依然として学業において障害に直面している"
+    },
+    {
+      "key": "dek",
+      "start": 17.436,
+      "end": 32.224,
+      "text": "ユネスコの報告書：男女格差は縮小しているが、女子は依然として教育の面で障害に直面している"
+    },
+    {
+      "key": "body-0",
+      "start": 32.224,
+      "end": 81.553,
+      "text": "教育における世界的な男女格差は縮小し、教育のあらゆるレベルで男女平等が達成されていますが、一部の地域では依然として格差が存在します。報告書は、一部の国では既婚、妊娠、子育て中の少女が教育を受け続けることを禁止する規制を撤廃し、アフリカ東部と南部の国々も関連政策を導入していると指摘した。"
+    },
+    {
+      "key": "body-1",
+      "start": 81.553,
+      "end": 117.023,
+      "text": "少女たちは、早婚、経済的困難、支援の不足など、学校を卒業するのに依然として障壁に直面しています。ユネスコは各国に対し、政策提言やその他の手段を通じて教育における男女平等をさらに推進するよう求めている。"
+    },
+    {
+      "key": "why",
+      "start": 117.023,
+      "end": 130.348,
+      "text": "レポートは国際少女デーに焦点を当てることを目的としています"
+    },
+    {
+      "key": "watch",
+      "start": 130.348,
+      "end": 141.453,
+      "text": "国連、教育における男女平等への支援を呼びかけ"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.299,
+      "end": 2.639,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "punctuation-semantic",
+      "text": "国連報告書："
+    },
+    {
+      "parentKey": "title",
+      "start": 2.639,
+      "speechEnd": 8.98,
+      "end": 9.26,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "世界の教育における男女格差は縮小しているが、"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.26,
+      "speechEnd": 16.576,
+      "end": 17.436,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "女子は依然として学業において障害に直面している。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.436,
+      "speechEnd": 20.014,
+      "end": 20.354,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "punctuation-semantic",
+      "text": "ユネスコの報告書："
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.354,
+      "speechEnd": 24.256,
+      "end": 24.536,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "男女格差は縮小しているが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.536,
+      "speechEnd": 31.364,
+      "end": 32.224,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "clause",
+      "text": "女子は依然として教育の面で障害に直面している"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 32.224,
+      "speechEnd": 38.147,
+      "end": 38.427,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "教育における世界的な男女格差は縮小し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.427,
+      "speechEnd": 45.952,
+      "end": 46.232,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "教育のあらゆるレベルで男女平等が達成されていますが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.232,
+      "speechEnd": 52.642,
+      "end": 53.262,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "一部の地域では依然として格差が存在します。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.262,
+      "speechEnd": 55.422,
+      "end": 55.702,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "報告書は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.702,
+      "speechEnd": 58.907,
+      "end": 59.187,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "一部の国では既婚、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.187,
+      "speechEnd": 61.208,
+      "end": 61.488,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "妊娠、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.488,
+      "speechEnd": 67.131,
+      "end": 67.472,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "子育て中の少女が教育を受け続けることを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.472,
+      "speechEnd": 70.886,
+      "end": 71.166,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "禁止する規制を撤廃し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.166,
+      "speechEnd": 77.088,
+      "end": 77.428,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "アフリカ東部と南部の国々も関連政策を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 77.428,
+      "speechEnd": 80.773,
+      "end": 81.553,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "導入していると指摘した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 81.553,
+      "speechEnd": 83.991,
+      "end": 84.271,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "少女たちは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.271,
+      "speechEnd": 86.292,
+      "end": 86.572,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "早婚、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 86.572,
+      "speechEnd": 89.011,
+      "end": 89.291,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "経済的困難、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 89.291,
+      "speechEnd": 92.008,
+      "end": 92.288,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "支援の不足など、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.288,
+      "speechEnd": 99.465,
+      "end": 100.085,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "学校を卒業するのに依然として障壁に直面しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 100.085,
+      "speechEnd": 103.29,
+      "end": 103.57,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ユネスコは各国に対し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.57,
+      "speechEnd": 112.001,
+      "end": 112.341,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "政策提言やその他の手段を通じて教育における男女平等を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.341,
+      "speechEnd": 116.243,
+      "end": 117.023,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "さらに推進するよう求めている。"
+    },
+    {
+      "parentKey": "why",
+      "start": 117.023,
+      "speechEnd": 120.994,
+      "end": 121.614,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 121.614,
+      "speechEnd": 129.488,
+      "end": 130.348,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "clause",
+      "text": "レポートは国際少女デーに焦点を当てることを目的としています"
+    },
+    {
+      "parentKey": "watch",
+      "start": 130.348,
+      "speechEnd": 132.438,
+      "end": 132.718,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 132.718,
+      "speechEnd": 134.739,
+      "end": 135.019,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "国連、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 135.019,
+      "speechEnd": 140.593,
+      "end": 141.453,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "clause",
+      "text": "教育における男女平等への支援を呼びかけ"
+    }
+  ]
+}

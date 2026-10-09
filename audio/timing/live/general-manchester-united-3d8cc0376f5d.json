@@ -1,0 +1,270 @@
+{
+  "version": 3,
+  "duration": 107.703,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 366,
+  "charactersPerMinute": 203.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 13.174,
+      "text": "マンチェスター・ユナイテッドのファンはマンチェスター・シティを挑発するために反撃旗を掲げる準備をしている"
+    },
+    {
+      "key": "dek",
+      "start": 13.174,
+      "end": 24.068,
+      "text": "マンチェスター・シティの優勝は疑わしいが、ファンは反撃の旗を翻す準備をしている"
+    },
+    {
+      "key": "body-0",
+      "start": 24.068,
+      "end": 50.802,
+      "text": "マンチェスター・ユナイテッドのファンは、トッテナムとの試合に向けて有名な「カウンターアタック」の旗を掲げ、マンチェスター・シティを挑発する準備をしている。試合はホームのセントフォード・エンドゾーンスタンドで行われる予定だ。"
+    },
+    {
+      "key": "body-1",
+      "start": 50.802,
+      "end": 86.132,
+      "text": "この旗の出現は、マンチェスター・シティが115件の犯罪すべてで有罪判決を受けたことと関連しており、これにより優勝や獲得した賞に疑問が投げかけられている。現在、多くの人がこれらのチャンピオンシップや賞が汚されていると信じています。"
+    },
+    {
+      "key": "why",
+      "start": 86.132,
+      "end": 98.481,
+      "text": "ファンはマンチェスター・シティを嘲笑することを望んでいる。"
+    },
+    {
+      "key": "watch",
+      "start": 98.481,
+      "end": 107.703,
+      "text": "マンチェスター・シティの判決のその後の展開に注目"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.972,
+      "end": 4.252,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "マンチェスター・ユナイテッドのファンは"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.252,
+      "speechEnd": 12.474,
+      "end": 13.174,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "マンチェスター・シティを挑発するために反撃旗を掲げる準備をしている。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.174,
+      "speechEnd": 18.33,
+      "end": 18.56,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "マンチェスター・シティの優勝は疑わしいが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.56,
+      "speechEnd": 23.368,
+      "end": 24.068,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "clause",
+      "text": "ファンは反撃の旗を翻す準備をしている"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 24.068,
+      "speechEnd": 28.109,
+      "end": 28.34,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "マンチェスター・ユナイテッドのファンは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 28.34,
+      "speechEnd": 36.004,
+      "end": 36.234,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "トッテナムとの試合に向けて有名な「カウンターアタック」の旗を掲げ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.234,
+      "speechEnd": 41.53,
+      "end": 42.03,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "マンチェスター・シティを挑発する準備をしている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.03,
+      "speechEnd": 50.182,
+      "end": 50.802,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "試合はホームのセントフォード・エンドゾーンスタンドで行われる予定だ。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 50.802,
+      "speechEnd": 53.52,
+      "end": 53.75,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この旗の出現は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 53.75,
+      "speechEnd": 56.676,
+      "end": 56.816,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "マンチェスター・シティが"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 56.816,
+      "speechEnd": 59.046,
+      "end": 59.186,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "115件"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 59.186,
+      "speechEnd": 63.576,
+      "end": 63.856,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "after-key-number",
+      "text": "の犯罪すべてで有罪判決を受け"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 63.856,
+      "speechEnd": 66.852,
+      "end": 67.082,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "たことと関連しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 67.082,
+      "speechEnd": 73.841,
+      "end": 74.341,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "これにより優勝や獲得した賞に疑問が投げかけられている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 74.341,
+      "speechEnd": 76.362,
+      "end": 76.592,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "現在、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 76.592,
+      "speechEnd": 81.678,
+      "end": 81.958,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "多くの人がこれらのチャンピオンシップや賞が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 81.958,
+      "speechEnd": 85.512,
+      "end": 86.132,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "汚されていると信じています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 86.132,
+      "speechEnd": 90.104,
+      "end": 90.604,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 90.604,
+      "speechEnd": 97.781,
+      "end": 98.481,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "ファンはマンチェスター・シティを嘲笑することを望んでいる。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 98.481,
+      "speechEnd": 100.571,
+      "end": 100.801,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 100.801,
+      "speechEnd": 107.003,
+      "end": 107.703,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "clause",
+      "text": "マンチェスター・シティの判決のその後の展開に注目"
+    }
+  ]
+}
