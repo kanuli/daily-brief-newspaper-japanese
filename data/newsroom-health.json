@@ -1,12 +1,9 @@
 {
   "version": 7,
-  "assessedAt": "2026-10-10T16:01:09.857Z",
-  "state": "RED",
-  "summary": "NOT_GREEN:vocab-upstream-date expected=2026-10-11 actual=2026-10-10 | nas-delivery-fingerprint=2026-10-10|2026-10-10T13:06:34.000Z|2026-10-10T13:06:34.000Z|2026-10-10T15:52:48.223Z|2026-10-10",
-  "faultReasons": [
-    "vocab-upstream-date expected=2026-10-11 actual=2026-10-10",
-    "nas-delivery-fingerprint=2026-10-10|2026-10-10T13:06:34.000Z|2026-10-10T13:06:34.000Z|2026-10-10T15:52:48.223Z|2026-10-10"
-  ],
+  "assessedAt": "2026-10-10T16:25:44.054Z",
+  "state": "GREEN",
+  "summary": "ALL_REQUIRED_NEWS_LAYERS_VOCAB_AND_DELIVERY_VERIFIED_BY_NAS",
+  "faultReasons": [],
   "layers": {
     "daily": {
       "current": true,
@@ -36,16 +33,16 @@
       "lagMinutes": 0,
       "relativeCurrent": true,
       "sourceAbsoluteFresh": true,
-      "sourceAgeMinutes": 8,
+      "sourceAgeMinutes": 33,
       "maxAgeHours": 8
     },
     "vocab": {
-      "current": false,
+      "current": true,
       "expectedHktDate": "2026-10-11",
-      "upstream": "2026-10-10",
-      "japanese": "2026-10-10",
-      "datedArchivePresent": false,
-      "datedArchiveMatchesLatest": false
+      "upstream": "2026-10-11",
+      "japanese": "2026-10-11",
+      "datedArchivePresent": true,
+      "datedArchiveMatchesLatest": true
     },
     "structural": {
       "current": true,
@@ -53,16 +50,16 @@
       "pagesChecked": 13
     },
     "delivery": {
-      "current": false,
+      "current": true,
       "required": true,
       "owner": "NAS Editor-in-Chief",
       "verifies": [
         "github-f3",
         "github-pages"
       ],
-      "publicationFingerprint": "2026-10-10|2026-10-10T13:06:34.000Z|2026-10-10T13:06:34.000Z|2026-10-10T15:52:48.223Z|2026-10-10",
-      "attestedFingerprint": null,
-      "attestedAt": null
+      "publicationFingerprint": "2026-10-10|2026-10-10T13:06:34.000Z|2026-10-10T13:06:34.000Z|2026-10-10T15:52:48.223Z|2026-10-11",
+      "attestedFingerprint": "2026-10-10|2026-10-10T13:06:34.000Z|2026-10-10T13:06:34.000Z|2026-10-10T15:52:48.223Z|2026-10-11",
+      "attestedAt": "2026-10-10T16:25:01Z"
     }
   },
   "recovery": {
@@ -75,10 +72,10 @@
   "maintenance": {
     "owner": "Editor-in-Chief",
     "executor": "Maintenance Robot",
-    "incidentKey": "vocab@2026-10-10->2026-10-10|nas-delivery@2026-10-10|2026-10-10T13:06:34.000Z|2026-10-10T13:06:34.000Z|2026-10-10T15:52:48.223Z|2026-10-10",
+    "incidentKey": "healthy",
     "sourceVersionBound": true,
-    "status": "awaiting-nas-delivery-verification",
-    "decision": "NAS_CONTROLLER_MUST_VERIFY_F3_AND_PAGES",
+    "status": "resolved",
+    "decision": "NO_REPAIR_REQUIRED",
     "attempts": 0,
     "lastAttemptAt": null,
     "nextEligibleAt": null,
@@ -97,7 +94,7 @@
   },
   "robot": {
     "current": true,
-    "runId": 38065936203,
+    "runId": 38067612025,
     "event": "workflow_dispatch",
     "role": "nas-attestation-auditor",
     "executor": "github-auditor-only",
