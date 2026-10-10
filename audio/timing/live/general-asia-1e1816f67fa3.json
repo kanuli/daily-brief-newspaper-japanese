@@ -1,0 +1,314 @@
+{
+  "version": 3,
+  "duration": 133.407,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 397,
+  "charactersPerMinute": 178.6,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 6.414,
+      "text": "フィリピンのタグレイ枢機卿がカトリック枢機卿に就任"
+    },
+    {
+      "key": "dek",
+      "start": 6.414,
+      "end": 16.612,
+      "text": "フィリピンのタグレイ枢機卿がカトリック枢機卿に就任し、アジアの第一位となった。"
+    },
+    {
+      "key": "body-0",
+      "start": 16.612,
+      "end": 106.337,
+      "text": "カトリック教会は、フィリピン人枢機卿タグレイがカトリック枢機卿の指揮官に就任し、天主教史上初のアジア人枢機長に就任したと発表した。タグレイは現在69歳で、現在は教会福音伝達部の代理部長を務めています。元枢機卿は92歳のレイで、7日、中国共和国大使館の国祭酒会に出席した。レイ2020年に選出され、2025年に教皇フランシスコによって再任を承認され、総指導部はほぼ7年になります。教会の報道室が9日に発表した、タグレー枢機卿は8日にカルダン主教によって選出され、タグレはローマの郊外のオースティア教会を主導し、市郊外のアルバノ教会の主権を維持します。"
+    },
+    {
+      "key": "why",
+      "start": 106.337,
+      "end": 121.307,
+      "text": "枢機卿の任期は、もはや終身ではなく、5年間の任期である。"
+    },
+    {
+      "key": "watch",
+      "start": 121.307,
+      "end": 133.407,
+      "text": "タグレイはアジアの教会の事柄をよく知り、世界の教会をよく知っている。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 5.714,
+      "end": 6.414,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "フィリピンのタグレイ枢機卿がカトリック枢機卿に就任。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 6.414,
+      "speechEnd": 12.476,
+      "end": 12.706,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "フィリピンのタグレイ枢機卿がカトリック枢機卿に就任し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.706,
+      "speechEnd": 15.912,
+      "end": 16.612,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "アジアの第一位となった。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 16.612,
+      "speechEnd": 19.19,
+      "end": 19.42,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "カトリック教会は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 19.42,
+      "speechEnd": 22.974,
+      "end": 23.254,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "フィリピン人枢機卿タグレイが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 23.254,
+      "speechEnd": 27.923,
+      "end": 28.153,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "カトリック枢機卿の指揮官に就任し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 28.153,
+      "speechEnd": 36.306,
+      "end": 36.806,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "天主教史上初のアジア人枢機長に就任したと発表した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.806,
+      "speechEnd": 41.196,
+      "end": 41.426,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "タグレイは現在69歳で、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.426,
+      "speechEnd": 49.091,
+      "end": 49.591,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "現在は教会福音伝達部の代理部長を務めています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.591,
+      "speechEnd": 54.051,
+      "end": 54.281,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "元枢機卿は92歳のレイで、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.281,
+      "speechEnd": 56.371,
+      "end": 56.601,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "7日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.601,
+      "speechEnd": 63.709,
+      "end": 64.209,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "中国共和国大使館の国祭酒会に出席した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.209,
+      "speechEnd": 68.25,
+      "end": 68.48,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "レイ2020年に選出され、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.48,
+      "speechEnd": 75.936,
+      "end": 76.166,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "2025年に教皇フランシスコによって再任を承認され、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.166,
+      "speechEnd": 80.626,
+      "end": 81.126,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "総指導部はほぼ7年になります。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 81.126,
+      "speechEnd": 86.004,
+      "end": 86.234,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "教会の報道室が9日に発表した、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 86.234,
+      "speechEnd": 93.341,
+      "end": 93.572,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "タグレー枢機卿は8日にカルダン主教によって選出され、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 93.572,
+      "speechEnd": 99.982,
+      "end": 100.212,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "タグレはローマの郊外のオースティア教会を主導し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 100.212,
+      "speechEnd": 105.717,
+      "end": 106.337,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "市郊外のアルバノ教会の主権を維持します。"
+    },
+    {
+      "parentKey": "why",
+      "start": 106.337,
+      "speechEnd": 110.309,
+      "end": 110.809,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 110.809,
+      "speechEnd": 113.527,
+      "end": 113.757,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "枢機卿の任期は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 113.757,
+      "speechEnd": 116.823,
+      "end": 117.053,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "もはや終身ではなく、"
+    },
+    {
+      "parentKey": "why",
+      "start": 117.053,
+      "speechEnd": 120.607,
+      "end": 121.307,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "5年間の任期である。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 121.307,
+      "speechEnd": 123.397,
+      "end": 123.628,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 123.628,
+      "speechEnd": 128.784,
+      "end": 129.014,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "タグレイはアジアの教会の事柄をよく知り、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 129.014,
+      "speechEnd": 132.707,
+      "end": 133.407,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "世界の教会をよく知っている。"
+    }
+  ]
+}

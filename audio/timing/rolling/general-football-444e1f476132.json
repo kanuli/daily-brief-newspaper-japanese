@@ -1,0 +1,314 @@
+{
+  "version": 3,
+  "duration": 146.155,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 474,
+  "charactersPerMinute": 194.6,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 6.566,
+      "text": "速報：最新の確認済みニュース"
+    },
+    {
+      "key": "dek",
+      "start": 6.566,
+      "end": 17.869,
+      "text": "アルテタが新たな契約を締結 リーダーシップを強化 チームを頂点に戻すことを期待"
+    },
+    {
+      "key": "body-0",
+      "start": 17.869,
+      "end": 108.004,
+      "text": "アルテタは2019年に就任した後、チームのリーダーシップは大きな変化を経験し、現在はイギリスのスーパートップに戻っています。彼は彼のリーダーの能力に対するサッカーの信頼を反映する新しい契約を締結し、彼のためにより多くの栄光を得るために基礎を置いた。サッカーは、マンチェスターのトレーナーペペの影響と他のチームの不安定さが彼らに攻撃をもたらしたと信じています。アルテタのトレーニングスタイルは安定し、チームは国内リーグやヨーロッパのイベントで大きな進歩を遂げました。夏のトランスフォーマンス市場では、攻撃ラインの短い板を補完することができなかったにもかかわらず、チームは24〜28歳の間に多くの経験豊富なプレイヤーを抱えています。"
+    },
+    {
+      "key": "why",
+      "start": 108.004,
+      "end": 129.754,
+      "text": "チームは、マンチェスター・トレーナーのペペの影響と他のチームの不安定さが彼らに攻撃の機会をもたらしたと信じている。"
+    },
+    {
+      "key": "watch",
+      "start": 129.754,
+      "end": 146.155,
+      "text": "アルテタのトレーニングスタイルは健全で、チームは国内リーグやヨーロッパのイベントで大きな進歩を遂げた。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.021,
+      "end": 2.361,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "punctuation-semantic",
+      "text": "速報："
+    },
+    {
+      "parentKey": "title",
+      "start": 2.361,
+      "speechEnd": 5.705,
+      "end": 6.566,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "最新の確認済みニュース。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 6.566,
+      "speechEnd": 12.14,
+      "end": 12.48,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "アルテタが新たな契約を締結 リーダーシップを"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.48,
+      "speechEnd": 17.009,
+      "end": 17.869,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "continuation",
+      "text": "強化 チームを頂点に戻すことを期待"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 17.869,
+      "speechEnd": 23.025,
+      "end": 23.306,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アルテタは2019年に就任した後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 23.306,
+      "speechEnd": 28.81,
+      "end": 29.09,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "チームのリーダーシップは大きな変化を経験し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 29.09,
+      "speechEnd": 34.316,
+      "end": 34.936,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "現在はイギリスのスーパートップに戻っています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.936,
+      "speechEnd": 40.929,
+      "end": 41.269,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "彼は彼のリーダーの能力に対するサッカーの信頼を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.269,
+      "speechEnd": 45.798,
+      "end": 46.078,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "反映する新しい契約を締結し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.078,
+      "speechEnd": 52.906,
+      "end": 53.527,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "彼のためにより多くの栄光を得るために基礎を置いた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.527,
+      "speechEnd": 55.687,
+      "end": 55.967,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "サッカーは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.967,
+      "speechEnd": 63.492,
+      "end": 63.832,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "マンチェスターのトレーナーペペの影響と他のチームの不安定さが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.832,
+      "speechEnd": 68.849,
+      "end": 69.469,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "彼らに攻撃をもたらしたと信じています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.469,
+      "speechEnd": 74.277,
+      "end": 74.557,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アルテタのトレーニングスタイルは安定し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.557,
+      "speechEnd": 83.127,
+      "end": 83.748,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "チームは国内リーグやヨーロッパのイベントで大きな進歩を遂げました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 83.748,
+      "speechEnd": 87.719,
+      "end": 87.999,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "夏のトランスフォーマンス市場では、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 87.999,
+      "speechEnd": 92.319,
+      "end": 92.66,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "攻撃ラインの短い板を補完することが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 92.66,
+      "speechEnd": 96.422,
+      "end": 96.702,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "できなかったにもかかわらず、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 96.702,
+      "speechEnd": 107.224,
+      "end": 108.004,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "チームは24〜28歳の間に多くの経験豊富なプレイヤーを抱えています。"
+    },
+    {
+      "parentKey": "why",
+      "start": 108.004,
+      "speechEnd": 111.976,
+      "end": 112.596,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 112.596,
+      "speechEnd": 114.686,
+      "end": 114.966,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "チームは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 114.966,
+      "speechEnd": 122.701,
+      "end": 123.041,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "マンチェスター・トレーナーのペペの影響と他のチームの不安定さが"
+    },
+    {
+      "parentKey": "why",
+      "start": 123.041,
+      "speechEnd": 128.894,
+      "end": 129.754,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "彼らに攻撃の機会をもたらしたと信じている。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 129.754,
+      "speechEnd": 131.844,
+      "end": 132.124,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 132.124,
+      "speechEnd": 137.002,
+      "end": 137.282,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アルテタのトレーニングスタイルは健全で、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 137.282,
+      "speechEnd": 145.295,
+      "end": 146.155,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "チームは国内リーグやヨーロッパのイベントで大きな進歩を遂げた。"
+    }
+  ]
+}
