@@ -8,6 +8,7 @@ Original/source news URLs are never exposed in Discord.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import pathlib
@@ -198,6 +199,11 @@ def send_published_live() -> None:
     lines += ["", f"🔴 続きを読む：{LIVE_PAGE}"]
     post("\n".join(lines))
     print("Published Live Japanese Discord notification sent with website-only links.")
+    # Emitted only after the real webhook succeeded; cache hits/alerts have no proof.
+    if len(material) == len(current.get("items") or []):
+        digest = hashlib.sha256(json.dumps(current, ensure_ascii=False, sort_keys=True,
+                                          separators=(",", ":")).encode("utf-8")).hexdigest()
+        print(f"DISCORD_LIVE_PUBLICATION_PROOF {digest}")
 
 
 def send_hourly() -> None:
