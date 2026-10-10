@@ -1,0 +1,270 @@
+{
+  "version": 3,
+  "duration": 112.091,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 328,
+  "charactersPerMinute": 175.6,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 10.319,
+      "text": "インドのデリーで抗議活動：若者運動が選挙委員長の辞任を要求"
+    },
+    {
+      "key": "dek",
+      "start": 10.319,
+      "end": 19.124,
+      "text": "抗議活動が注目を集める中、デリー中心部が封鎖される"
+    },
+    {
+      "key": "body-0",
+      "start": 19.124,
+      "end": 44.818,
+      "text": "この抗議活動は、インド人民党に有利なものとして選挙人名簿の改訂に抗議するためにゴキブリ青年運動によって組織された。現場の警察は待機し、地下鉄の駅と携帯電話網を閉鎖した。"
+    },
+    {
+      "key": "body-1",
+      "start": 44.818,
+      "end": 89.611,
+      "text": "インドの野党は数カ月間、ほぼ毎日抗議活動を展開しており、モディ政権への挑戦となっている。以前、教育大臣は試験問題の漏洩を理由に辞任しており、政府が政治的圧力に直面していることが示された。インドでは2027年初めに重要な地方選挙が実施され、ウッタルプラデーシュ州が重要な選挙区となる。"
+    },
+    {
+      "key": "why",
+      "start": 89.611,
+      "end": 101.962,
+      "text": "デモ参加者は選挙委員会委員長の辞任を要求した。"
+    },
+    {
+      "key": "watch",
+      "start": 101.962,
+      "end": 112.091,
+      "text": "インドの選挙は2027年初めに実施される予定"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.693,
+      "end": 3.974,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-semantic",
+      "text": "インドのデリーで抗議活動："
+    },
+    {
+      "parentKey": "title",
+      "start": 3.974,
+      "speechEnd": 9.618,
+      "end": 10.319,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "若者運動が選挙委員長の辞任を要求。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 10.319,
+      "speechEnd": 14.43,
+      "end": 14.66,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "抗議活動が注目を集める中、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.66,
+      "speechEnd": 18.424,
+      "end": 19.124,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "clause",
+      "text": "デリー中心部が封鎖される"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 19.124,
+      "speechEnd": 21.911,
+      "end": 22.142,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この抗議活動は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 22.142,
+      "speechEnd": 30.434,
+      "end": 30.715,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "インド人民党に有利なものとして選挙人名簿の改訂に抗議するため"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 30.715,
+      "speechEnd": 36.081,
+      "end": 36.581,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "にゴキブリ青年運動によって組織された。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.581,
+      "speechEnd": 39.717,
+      "end": 39.947,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "現場の警察は待機し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.947,
+      "speechEnd": 44.198,
+      "end": 44.818,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "地下鉄の駅と携帯電話網を閉鎖した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 44.818,
+      "speechEnd": 48.721,
+      "end": 48.951,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "インドの野党は数カ月間、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 48.951,
+      "speechEnd": 53.968,
+      "end": 54.198,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ほぼ毎日抗議活動を展開しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 54.198,
+      "speechEnd": 58.38,
+      "end": 58.88,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "モディ政権への挑戦となっている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 58.88,
+      "speechEnd": 60.901,
+      "end": 61.131,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "以前、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 61.131,
+      "speechEnd": 68.17,
+      "end": 68.4,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "教育大臣は試験問題の漏洩を理由に辞任しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 68.4,
+      "speechEnd": 75.229,
+      "end": 75.729,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "政府が政治的圧力に直面していることが示された。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 75.729,
+      "speechEnd": 83.813,
+      "end": 84.043,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "インドでは2027年初めに重要な地方選挙が実施され、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.043,
+      "speechEnd": 88.991,
+      "end": 89.611,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ウッタルプラデーシュ州が重要な選挙区となる。"
+    },
+    {
+      "parentKey": "why",
+      "start": 89.611,
+      "speechEnd": 93.584,
+      "end": 94.084,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 94.084,
+      "speechEnd": 101.262,
+      "end": 101.962,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "デモ参加者は選挙委員会委員長の辞任を要求した。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 101.962,
+      "speechEnd": 104.053,
+      "end": 104.283,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 104.283,
+      "speechEnd": 111.391,
+      "end": 112.091,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "clause",
+      "text": "インドの選挙は2027年初めに実施される予定"
+    }
+  ]
+}
