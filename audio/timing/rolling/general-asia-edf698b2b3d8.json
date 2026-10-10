@@ -1,0 +1,330 @@
+{
+  "version": 3,
+  "duration": 171.259,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 526,
+  "charactersPerMinute": 184.3,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 20.905,
+      "text": "通商交渉は暫定的な成果を上げている。 EU: ヨーロッパで販売される中国製ガソリン車と電気自動車の台数は半減する可能性がある。"
+    },
+    {
+      "key": "dek",
+      "start": 20.905,
+      "end": 40.154,
+      "text": "EUと中国は北京で通商交渉の予備的な結果に達し、欧州で販売されるガソリン電気自動車の台数が大幅に減少する可能性がある。"
+    },
+    {
+      "key": "body-0",
+      "start": 40.154,
+      "end": 81.834,
+      "text": "ＥＵのセフコビッチ貿易委員は、中国からＥＵへのハイブリッド車（ＨＥＶ）とプラグインハイブリッド車（ＰＨＥＶ）の台数を調整することで双方が合意に達し、これにより中国の輸出が半分以上減少する可能性があると指摘した。また、双方は最恵国関税の引き下げによるEUの拡大でも共通認識に達した。"
+    },
+    {
+      "key": "body-1",
+      "start": 81.834,
+      "end": 123.768,
+      "text": "欧州委員会のファンデルライエン委員長は、対話は実りあるものでなければならないと述べた。対話が進展できない場合、EUは独自の政策手段を用いてリバランスが確実に達成されるよう努める。両国は世界貿易機関（WTO）規則の枠内で特定品目の関税を削減または撤廃する可能性を引き続き模索する。"
+    },
+    {
+      "key": "why",
+      "start": 123.768,
+      "end": 152.906,
+      "text": "ＥＵ通商委員のセフコビッチ氏は、貿易赤字はＥＵにとって困難な課題であり、貿易赤字を再均衡させるための実行可能かつ信頼できる方法を見つける必要があると強調した。"
+    },
+    {
+      "key": "watch",
+      "start": 152.906,
+      "end": 171.259,
+      "text": "ファンデルライエン欧州委員長はこれらの結果を評価し、欧州理事会の指導者らと次のステップについて話し合う予定だ。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 5.226,
+      "end": 5.846,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "通商交渉は暫定的な成果を上げている。"
+    },
+    {
+      "parentKey": "title",
+      "start": 5.846,
+      "speechEnd": 7.867,
+      "end": 8.207,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "punctuation-semantic",
+      "text": "EU:"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.207,
+      "speechEnd": 16.499,
+      "end": 16.839,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ヨーロッパで販売される中国製ガソリン車と電気自動車の台数は"
+    },
+    {
+      "parentKey": "title",
+      "start": 16.839,
+      "speechEnd": 20.045,
+      "end": 20.905,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "半減する可能性がある。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.905,
+      "speechEnd": 28.291,
+      "end": 28.571,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "EUと中国は北京で通商交渉の予備的な結果に達し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 28.571,
+      "speechEnd": 34.773,
+      "end": 35.113,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "欧州で販売されるガソリン電気自動車の台数が"
+    },
+    {
+      "parentKey": "dek",
+      "start": 35.113,
+      "speechEnd": 39.294,
+      "end": 40.154,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "大幅に減少する可能性がある。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.154,
+      "speechEnd": 44.126,
+      "end": 44.406,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ＥＵのセフコビッチ貿易委員は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.406,
+      "speechEnd": 59.526,
+      "end": 59.807,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "中国からＥＵへのハイブリッド車（ＨＥＶ）とプラグインハイブリッド車（ＰＨＥＶ）の台数を調整することで双方が合意に達し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.807,
+      "speechEnd": 68.935,
+      "end": 69.555,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "これにより中国の輸出が半分以上減少する可能性があると指摘した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.555,
+      "speechEnd": 71.576,
+      "end": 71.856,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "また、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.856,
+      "speechEnd": 81.054,
+      "end": 81.834,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "双方は最恵国関税の引き下げによるEUの拡大でも共通認識に達した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 81.834,
+      "speechEnd": 87.687,
+      "end": 87.967,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "欧州委員会のファンデルライエン委員長は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 87.967,
+      "speechEnd": 94.099,
+      "end": 94.719,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "対話は実りあるものでなければならないと述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.719,
+      "speechEnd": 98.134,
+      "end": 98.414,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "対話が進展できない場合、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 98.414,
+      "speechEnd": 104.058,
+      "end": 104.398,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "EUは独自の政策手段を用いてリバランスが"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.398,
+      "speechEnd": 108.091,
+      "end": 108.711,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "確実に達成されるよう努める。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.711,
+      "speechEnd": 117.073,
+      "end": 117.413,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "両国は世界貿易機関（WTO）規則の枠内で特定品目の関税を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.413,
+      "speechEnd": 122.988,
+      "end": 123.768,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "削減または撤廃する可能性を引き続き模索する。"
+    },
+    {
+      "parentKey": "why",
+      "start": 123.768,
+      "speechEnd": 127.74,
+      "end": 128.36,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 128.36,
+      "speechEnd": 132.819,
+      "end": 133.099,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ＥＵ通商委員のセフコビッチ氏は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 133.099,
+      "speechEnd": 138.883,
+      "end": 139.163,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "貿易赤字はＥＵにとって困難な課題であり、"
+    },
+    {
+      "parentKey": "why",
+      "start": 139.163,
+      "speechEnd": 147.803,
+      "end": 148.144,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "貿易赤字を再均衡させるための実行可能かつ信頼できる方法を"
+    },
+    {
+      "parentKey": "why",
+      "start": 148.144,
+      "speechEnd": 152.046,
+      "end": 152.906,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "見つける必要があると強調した。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 152.906,
+      "speechEnd": 154.996,
+      "end": 155.276,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 155.276,
+      "speechEnd": 162.105,
+      "end": 162.385,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ファンデルライエン欧州委員長はこれらの結果を評価し、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 162.385,
+      "speechEnd": 170.399,
+      "end": 171.259,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "欧州理事会の指導者らと次のステップについて話し合う予定だ。"
+    }
+  ]
+}
