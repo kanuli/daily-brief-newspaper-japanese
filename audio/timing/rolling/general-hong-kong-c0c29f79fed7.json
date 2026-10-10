@@ -1,0 +1,310 @@
+{
+  "version": 3,
+  "duration": 125.884,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 354,
+  "charactersPerMinute": 168.7,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 11.593,
+      "text": "香港政府、屯門の少女虐待疑惑に注目、一時宿泊施設を手配"
+    },
+    {
+      "key": "dek",
+      "start": 11.593,
+      "end": 20.816,
+      "text": "屯門少女虐待事件、政府が一時宿泊施設を手配"
+    },
+    {
+      "key": "body-0",
+      "start": 20.816,
+      "end": 64.163,
+      "text": "社会福祉局は、虐待が疑われる少女とその兄弟は直ちに帰宅するのは適切ではないと考えており、できるだけ早く複数の専門職による事件会議を開催する予定だ。ソーシャルワーカー、教師、医療スタッフ、警察官が３兄弟の家族状況と長期的な福祉ニーズを検討し、長期計画を策定する。"
+    },
+    {
+      "key": "body-1",
+      "start": 64.163,
+      "end": 106.053,
+      "text": "会議の評価と勧告次第では、政府は３姉妹が安全上の危険に直面している、あるいは家族の状況が不適切であると判断した場合、裁判所にケア命令や保護命令を申請する可能性がある。社会福祉局はまた、少女の家族のCSSA受給状況を調査し、CSSA乱用事件を厳しく取り締まる予定だ。"
+    },
+    {
+      "key": "why",
+      "start": 106.053,
+      "end": 116.522,
+      "text": "政府は社会福祉局の評価結果に注目"
+    },
+    {
+      "key": "watch",
+      "start": 116.522,
+      "end": 125.884,
+      "text": "SWD は多分野にわたるケースカンファレンスを企画します"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.439,
+      "end": 2.719,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "香港政府、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.719,
+      "speechEnd": 6.551,
+      "end": 6.831,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "屯門の少女虐待疑惑に注目、"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.831,
+      "speechEnd": 10.733,
+      "end": 11.593,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "一時宿泊施設を手配。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 11.593,
+      "speechEnd": 14.659,
+      "end": 14.939,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "屯門少女虐待事件、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.939,
+      "speechEnd": 19.956,
+      "end": 20.816,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "clause",
+      "text": "政府が一時宿泊施設を手配"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 20.816,
+      "speechEnd": 23.394,
+      "end": 23.674,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "社会福祉局は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 23.674,
+      "speechEnd": 28.482,
+      "end": 28.822,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "虐待が疑われる少女とその兄弟は"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 28.822,
+      "speechEnd": 34.745,
+      "end": 35.025,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "直ちに帰宅するのは適切ではないと考えており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 35.025,
+      "speechEnd": 43.386,
+      "end": 44.007,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "できるだけ早く複数の専門職による事件会議を開催する予定だ。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.007,
+      "speechEnd": 46.445,
+      "end": 46.725,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ソーシャルワーカー、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.725,
+      "speechEnd": 48.746,
+      "end": 49.026,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "教師、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.026,
+      "speechEnd": 51.186,
+      "end": 51.466,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "医療スタッフ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.466,
+      "speechEnd": 59.967,
+      "end": 60.247,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "警察官が３兄弟の家族状況と長期的な福祉ニーズを検討し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.247,
+      "speechEnd": 63.383,
+      "end": 64.163,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "長期計画を策定する。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 64.163,
+      "speechEnd": 67.647,
+      "end": 67.927,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "会議の評価と勧告次第では、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 67.927,
+      "speechEnd": 74.686,
+      "end": 74.966,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "政府は３姉妹が安全上の危険に直面している、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 74.966,
+      "speechEnd": 81.794,
+      "end": 82.074,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "あるいは家族の状況が不適切であると判断した場合、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.074,
+      "speechEnd": 89.599,
+      "end": 90.22,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "裁判所にケア命令や保護命令を申請する可能性がある。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.22,
+      "speechEnd": 93.076,
+      "end": 93.356,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "社会福祉局はまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.356,
+      "speechEnd": 99.349,
+      "end": 99.629,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "少女の家族のCSSA受給状況を調査し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.629,
+      "speechEnd": 105.273,
+      "end": 106.053,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "CSSA乱用事件を厳しく取り締まる予定だ。"
+    },
+    {
+      "parentKey": "why",
+      "start": 106.053,
+      "speechEnd": 110.025,
+      "end": 110.645,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 110.645,
+      "speechEnd": 115.662,
+      "end": 116.522,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "clause",
+      "text": "政府は社会福祉局の評価結果に注目"
+    },
+    {
+      "parentKey": "watch",
+      "start": 116.522,
+      "speechEnd": 118.612,
+      "end": 118.892,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 118.892,
+      "speechEnd": 125.024,
+      "end": 125.884,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "clause",
+      "text": "SWD は多分野にわたるケースカンファレンスを企画します"
+    }
+  ]
+}
