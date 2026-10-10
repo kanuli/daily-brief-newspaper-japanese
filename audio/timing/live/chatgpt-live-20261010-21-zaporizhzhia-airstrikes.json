@@ -1,0 +1,390 @@
+{
+  "version": 3,
+  "duration": 171.233,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 512,
+  "charactersPerMinute": 179.4,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.12,
+      "text": "ウクライナのザポリージャに対するロシアの空爆は、12人が死亡し、14人が負傷したと報告した"
+    },
+    {
+      "key": "dek",
+      "start": 14.12,
+      "end": 30.589,
+      "text": "3人の子供を含む住宅地が攻撃され、ウクライナはロシアのディーゼル制裁を緩和したとして米国を批判した。"
+    },
+    {
+      "key": "body-0",
+      "start": 30.589,
+      "end": 83.372,
+      "text": "ウクライナ南部のザポリージャは、10月10日早朝にロシアの空爆を受けた。ロイター通信によると、地元当局者は、この攻撃で子ども3人を含む12人が死亡し、14人が負傷したと述べた。複数の家屋が被害を受け、救助隊は瓦礫の中で住民の捜索を続けた。AP通信はまた、同日の攻撃で民間人が死傷したと報じたが、統計的な時間と範囲は異なる。"
+    },
+    {
+      "key": "body-1",
+      "start": 83.372,
+      "end": 135.943,
+      "text": "ドナルド・トランプ米大統領は以前、ロシアのディーゼル輸出に対する制裁緩和を発表していた。ウクライナのゼレンスキー大統領は、この動きがロシアへの圧力を弱める可能性があると批判し、攻撃をエネルギー政策の論争に結びつけている。ロシアとウクライナでの停戦交渉の見通しは依然として不透明であり、ウクライナの都市の民間施設と電力供給は引き続き危険にさらされている。"
+    },
+    {
+      "key": "why",
+      "start": 135.943,
+      "end": 154.235,
+      "text": "民間人の犠牲者と制裁政策の変化が、戦争とヨーロッパと米国の対ロシア戦略を推進しています。"
+    },
+    {
+      "key": "watch",
+      "start": 154.235,
+      "end": 171.233,
+      "text": "最新の救助統計、ディーゼル制裁に対する当事者の公式な対応、停戦の進捗状況に従ってください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 5.783,
+      "end": 6.013,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ウクライナのザポリージャに対するロシアの空爆は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.013,
+      "speechEnd": 9.009,
+      "end": 9.239,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "12人が死亡し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.239,
+      "speechEnd": 13.42,
+      "end": 14.12,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "14人が負傷したと報告した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.12,
+      "speechEnd": 20.252,
+      "end": 20.482,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "3人の子供を含む住宅地が攻撃され、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.482,
+      "speechEnd": 25.08,
+      "end": 25.36,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ウクライナはロシアのディーゼル制裁を"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.36,
+      "speechEnd": 29.889,
+      "end": 30.589,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "緩和したとして米国を批判した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 30.589,
+      "speechEnd": 34.491,
+      "end": 34.721,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ウクライナ南部のザポリージャは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.721,
+      "speechEnd": 40.574,
+      "end": 41.074,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "10月10日早朝にロシアの空爆を受けた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.074,
+      "speechEnd": 44.07,
+      "end": 44.3,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.3,
+      "speechEnd": 47.018,
+      "end": 47.248,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "地元当局者は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.248,
+      "speechEnd": 54.773,
+      "end": 55.003,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この攻撃で子ども3人を含む12人が死亡し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.003,
+      "speechEnd": 59.044,
+      "end": 59.544,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "14人が負傷したと述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.544,
+      "speechEnd": 63.307,
+      "end": 63.537,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "複数の家屋が被害を受け、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.537,
+      "speechEnd": 69.041,
+      "end": 69.541,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "救助隊は瓦礫の中で住民の捜索を続けた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.541,
+      "speechEnd": 72.05,
+      "end": 72.28,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "AP通信はまた、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.28,
+      "speechEnd": 78.69,
+      "end": 78.92,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同日の攻撃で民間人が死傷したと報じたが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 78.92,
+      "speechEnd": 82.752,
+      "end": 83.372,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "統計的な時間と範囲は異なる。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 83.372,
+      "speechEnd": 88.11,
+      "end": 88.34,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ドナルド・トランプ米大統領は以前、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.34,
+      "speechEnd": 96.005,
+      "end": 96.505,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "ロシアのディーゼル輸出に対する制裁緩和を発表していた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 96.505,
+      "speechEnd": 100.894,
+      "end": 101.124,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ウクライナのゼレンスキー大統領は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.124,
+      "speechEnd": 108.998,
+      "end": 109.228,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この動きがロシアへの圧力を弱める可能性があると批判し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.228,
+      "speechEnd": 115.011,
+      "end": 115.511,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "攻撃をエネルギー政策の論争に結びつけている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.511,
+      "speechEnd": 121.085,
+      "end": 121.365,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ロシアとウクライナでの停戦交渉の見通しは"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.365,
+      "speechEnd": 125.267,
+      "end": 125.497,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "依然として不透明であり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 125.497,
+      "speechEnd": 131.42,
+      "end": 131.7,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ウクライナの都市の民間施設と電力供給は"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 131.7,
+      "speechEnd": 135.323,
+      "end": 135.943,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "引き続き危険にさらされている。"
+    },
+    {
+      "parentKey": "why",
+      "start": 135.943,
+      "speechEnd": 139.914,
+      "end": 140.415,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 140.415,
+      "speechEnd": 146.198,
+      "end": 146.428,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "民間人の犠牲者と制裁政策の変化が、"
+    },
+    {
+      "parentKey": "why",
+      "start": 146.428,
+      "speechEnd": 153.535,
+      "end": 154.235,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "戦争とヨーロッパと米国の対ロシア戦略を推進しています。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 154.235,
+      "speechEnd": 156.325,
+      "end": 156.555,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 156.555,
+      "speechEnd": 159.412,
+      "end": 159.642,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "最新の救助統計、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 159.642,
+      "speechEnd": 165.843,
+      "end": 166.073,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ディーゼル制裁に対する当事者の公式な対応、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 166.073,
+      "speechEnd": 170.532,
+      "end": 171.233,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "停戦の進捗状況に従ってください。"
+    }
+  ]
+}

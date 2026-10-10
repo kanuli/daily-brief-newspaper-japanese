@@ -1,0 +1,370 @@
+{
+  "version": 3,
+  "duration": 170.24,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 486,
+  "charactersPerMinute": 171.3,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 6.155,
+      "text": "ライ・チンデの台湾海峡平和批判演説"
+    },
+    {
+      "key": "dek",
+      "start": 6.155,
+      "end": 23.183,
+      "text": "台湾の指導者たちは、平和を大切にしているが自由をあきらめておらず、防衛投資は挑発ではないと強調した。"
+    },
+    {
+      "key": "body-0",
+      "start": 23.183,
+      "end": 82.277,
+      "text": "ライ・チンデ氏は10月10日、台北で開催されたダブル・テン・フェスティバルでスピーチを行い、台湾は平和を大切にしているが、自由を放棄することはないと述べた。防衛投資を増やす目的は、紛争を回避し、尊厳ある対話条件を維持することである。彼はまた、競争を管理し、戦争のリスクを減らすための米国と中国の間の対話を歓迎し、地域のすべての当事者が共同で平和と安定を維持するよう求めた。"
+    },
+    {
+      "key": "body-1",
+      "start": 82.277,
+      "end": 134.042,
+      "text": "その後、中国台湾事務所は、この演説が事実を歪曲し、台湾に対する北京の立場を繰り返していると批判した。米政府当局者は、台湾海峡の平和と安定を維持するための支援を表明している。政治的地位や安全保障の取り決めに関する当事者の立場には依然として根本的な違いがあり、今後の外交交流や軍事活動が注目されることになるだろう。"
+    },
+    {
+      "key": "why",
+      "start": 134.042,
+      "end": 153.77,
+      "text": "首脳の公的な声明と対応は、地域の安全保障と外交上のリスクに影響を与える可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 153.77,
+      "end": 170.24,
+      "text": "北京とワシントンからのその後の声明、ならびに台湾海峡周辺の軍事活動に注意を払ってください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 5.295,
+      "end": 6.155,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ライ・チンデの台湾海峡平和批判演説。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 6.155,
+      "speechEnd": 9.36,
+      "end": 9.64,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "台湾の指導者たちは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 9.64,
+      "speechEnd": 16.747,
+      "end": 17.027,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "平和を大切にしているが自由をあきらめておらず、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.027,
+      "speechEnd": 22.322,
+      "end": 23.183,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "防衛投資は挑発ではないと強調した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 23.183,
+      "speechEnd": 27.293,
+      "end": 27.573,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ライ・チンデ氏は10月10日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 27.573,
+      "speechEnd": 34.819,
+      "end": 35.099,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "台北で開催されたダブル・テン・フェスティバルでスピーチを行い、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 35.099,
+      "speechEnd": 39.907,
+      "end": 40.187,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "台湾は平和を大切にしているが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.187,
+      "speechEnd": 44.855,
+      "end": 45.475,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "自由を放棄することはないと述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.475,
+      "speechEnd": 49.238,
+      "end": 49.518,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "防衛投資を増やす目的は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.518,
+      "speechEnd": 52.026,
+      "end": 52.306,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "紛争を回避し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.306,
+      "speechEnd": 57.322,
+      "end": 57.943,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "尊厳ある対話条件を維持することである。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.943,
+      "speechEnd": 60.033,
+      "end": 60.313,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "彼はまた、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.313,
+      "speechEnd": 62.891,
+      "end": 63.171,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "競争を管理し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.171,
+      "speechEnd": 71.601,
+      "end": 71.881,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "戦争のリスクを減らすための米国と中国の間の対話を歓迎し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.881,
+      "speechEnd": 81.496,
+      "end": 82.277,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "地域のすべての当事者が共同で平和と安定を維持するよう求めた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.277,
+      "speechEnd": 84.367,
+      "end": 84.647,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "その後、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.647,
+      "speechEnd": 87.921,
+      "end": 88.201,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "中国台湾事務所は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.201,
+      "speechEnd": 92.034,
+      "end": 92.314,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この演説が事実を歪曲し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.314,
+      "speechEnd": 99.142,
+      "end": 99.762,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "台湾に対する北京の立場を繰り返していると批判した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.762,
+      "speechEnd": 102.827,
+      "end": 103.107,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米政府当局者は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.107,
+      "speechEnd": 111.399,
+      "end": 112.019,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "台湾海峡の平和と安定を維持するための支援を表明している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.019,
+      "speechEnd": 120.589,
+      "end": 120.929,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "政治的地位や安全保障の取り決めに関する当事者の立場には"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.929,
+      "speechEnd": 125.248,
+      "end": 125.528,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "依然として根本的な違いがあり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 125.528,
+      "speechEnd": 133.262,
+      "end": 134.042,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "今後の外交交流や軍事活動が注目されることになるだろう。"
+    },
+    {
+      "parentKey": "why",
+      "start": 134.042,
+      "speechEnd": 138.014,
+      "end": 138.634,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 138.634,
+      "speechEnd": 142.954,
+      "end": 143.234,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "首脳の公的な声明と対応は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 143.234,
+      "speechEnd": 149.156,
+      "end": 149.496,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "地域の安全保障と外交上のリスクに影響を"
+    },
+    {
+      "parentKey": "why",
+      "start": 149.496,
+      "speechEnd": 152.91,
+      "end": 153.77,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "与える可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 153.77,
+      "speechEnd": 155.86,
+      "end": 156.14,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 156.14,
+      "speechEnd": 161.087,
+      "end": 161.367,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "北京とワシントンからのその後の声明、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 161.367,
+      "speechEnd": 169.38,
+      "end": 170.24,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ならびに台湾海峡周辺の軍事活動に注意を払ってください。"
+    }
+  ]
+}

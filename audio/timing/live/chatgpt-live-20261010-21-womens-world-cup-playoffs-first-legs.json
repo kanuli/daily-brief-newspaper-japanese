@@ -1,0 +1,294 @@
+{
+  "version": 3,
+  "duration": 147.54,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 462,
+  "charactersPerMinute": 187.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.427,
+      "text": "女子ワールドカップ ヨーロッパ地域追加試合の第1ラウンド終了 アイルランド オランダ 各勝 8 ゴール"
+    },
+    {
+      "key": "dek",
+      "start": 14.427,
+      "end": 23.161,
+      "text": "16回目の試合が終わり、イングランドとスコットランドも優勝。"
+    },
+    {
+      "key": "body-0",
+      "start": 23.161,
+      "end": 116.333,
+      "text": "2027年女子ワールドカップ ヨーロッパ地域追加試合の第1ラウンドは10月9日に16試合を終えた。ヨーロッパサッカー協会は、アイルランドの作家がカザフスタンを8-0で打ち負かし、オランダもハンガリーを8-0で敗北し、イギリスの作家はギリシャを3-1で敗北させ、スコットランドはチェコ共和国を2-0で敗退した。この追加ラウンドには32チームが参加し、2ラウンドの排除システムを採用し、2027年のブラジル女子ワールドカップ決勝の残りの席を獲得する。次のラウンドは10月13日に開催される予定で、まだ2ラウンドの合計比率が昇進チームを確認するまで待っているが、第1ラウンドが先進するのは、決勝週の資格を取得したこととは等しくない。"
+    },
+    {
+      "key": "why",
+      "start": 116.333,
+      "end": 133.928,
+      "text": "最初のラウンドの結果は、各国の次のラウンドでの配布と昇進の機会に直接影響を与える。"
+    },
+    {
+      "key": "watch",
+      "start": 133.928,
+      "end": 147.54,
+      "text": "10月13日のラウンドの結果とその後の追加レースの抽選の予定に注意を払う。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 13.726,
+      "end": 14.427,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "女子ワールドカップ ヨーロッパ地域追加試合の第1ラウンド終了 アイルランド オランダ 各勝 8 ゴール。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.427,
+      "speechEnd": 18.468,
+      "end": 18.698,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "16回目の試合が終わり、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.698,
+      "speechEnd": 22.461,
+      "end": 23.161,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "イングランドとスコットランドも優勝。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 23.161,
+      "speechEnd": 32.776,
+      "end": 32.916,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "2027年女子ワールドカップ ヨーロッパ地域追加試合の第1ラウンドは"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 32.916,
+      "speechEnd": 35.425,
+      "end": 35.565,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "10月9日"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 35.565,
+      "speechEnd": 39.118,
+      "end": 39.618,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "に16試合を終えた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.618,
+      "speechEnd": 42.893,
+      "end": 43.123,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ヨーロッパサッカー協会は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.123,
+      "speechEnd": 50.091,
+      "end": 50.321,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "アイルランドの作家がカザフスタンを8-0で打ち負かし、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.321,
+      "speechEnd": 55.407,
+      "end": 55.638,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "オランダもハンガリーを8-0で敗北し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.638,
+      "speechEnd": 62.048,
+      "end": 62.278,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "イギリスの作家はギリシャを3-1で敗北させ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.278,
+      "speechEnd": 68.619,
+      "end": 69.119,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "スコットランドはチェコ共和国を2-0で敗退した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.119,
+      "speechEnd": 74.693,
+      "end": 74.923,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この追加ラウンドには32チームが参加し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.923,
+      "speechEnd": 79.313,
+      "end": 79.543,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "2ラウンドの排除システムを採用し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 79.543,
+      "speechEnd": 88.601,
+      "end": 89.101,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "2027年のブラジル女子ワールドカップ決勝の残りの席を獲得する。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 89.101,
+      "speechEnd": 96.069,
+      "end": 96.299,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "次のラウンドは10月13日に開催される予定で、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 96.299,
+      "speechEnd": 100.27,
+      "end": 100.55,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "まだ2ラウンドの合計比率が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 100.55,
+      "speechEnd": 105.219,
+      "end": 105.449,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "昇進チームを確認するまで待っているが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 105.449,
+      "speechEnd": 109.629,
+      "end": 109.859,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "第1ラウンドが先進するのは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 109.859,
+      "speechEnd": 115.712,
+      "end": 116.333,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "決勝週の資格を取得したこととは等しくない。"
+    },
+    {
+      "parentKey": "why",
+      "start": 116.333,
+      "speechEnd": 120.304,
+      "end": 120.804,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 120.804,
+      "speechEnd": 124.358,
+      "end": 124.588,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "最初のラウンドの結果は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 124.588,
+      "speechEnd": 133.228,
+      "end": 133.928,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "各国の次のラウンドでの配布と昇進の機会に直接影響を与える。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 133.928,
+      "speechEnd": 136.018,
+      "end": 136.248,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 136.248,
+      "speechEnd": 146.839,
+      "end": 147.54,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "10月13日のラウンドの結果とその後の追加レースの抽選の予定に注意を払う。"
+    }
+  ]
+}

@@ -1,0 +1,390 @@
+{
+  "version": 3,
+  "duration": 162.168,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 456,
+  "charactersPerMinute": 168.7,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 13.893,
+      "text": "食品安全センターは、法執行機関を支援するために、違法な食品検疫犬の港湾傍受を強化します"
+    },
+    {
+      "key": "dek",
+      "start": 13.893,
+      "end": 28.821,
+      "text": "黄崗港はまもなく開港し、当局は調理されていない肉や卵は輸入規制の対象となることを指摘した。"
+    },
+    {
+      "key": "body-0",
+      "start": 28.821,
+      "end": 88.895,
+      "text": "黄崗港が10月12日に開港を準備している中、食品安全センターは10月10日に旅行者に、どの入国口を使用しているかにかかわらず、未調理の野菜、肉、鶏肉、卵を違法に持ち帰らないように促した。当局は、食品が真空バッグまたはスズ箔で包装されていても、関連する法律を遵守する必要があると指摘しました。沸騰した水でのみ処理された肉は、徹底的に調理されたものとは異なります。"
+    },
+    {
+      "key": "body-1",
+      "start": 88.895,
+      "end": 130.627,
+      "text": "CFSは、陸上国境検問所の法執行機関を支援するために、肉を検出できる特別に訓練された検疫犬を手配していると述べた。センターは、規制に違反して食品を運ぶと起訴される可能性があり、旅行中の不適切な保管も食品安全上のリスクを高める可能性があると警告しました。"
+    },
+    {
+      "key": "why",
+      "start": 130.627,
+      "end": 148.625,
+      "text": "これには、港湾執行、公衆衛生、および乗客の入国手配が含まれます。"
+    },
+    {
+      "key": "watch",
+      "start": 148.625,
+      "end": 162.168,
+      "text": "港の開港後の法執行機関と旅行者のプロモーションの取り決めに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.066,
+      "end": 3.346,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "食品安全センターは、"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.346,
+      "speechEnd": 7.178,
+      "end": 7.458,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "法執行機関を支援するために、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.458,
+      "speechEnd": 13.032,
+      "end": 13.893,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "違法な食品検疫犬の港湾傍受を強化します。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.893,
+      "speechEnd": 17.516,
+      "end": 17.796,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "黄崗港はまもなく開港し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.796,
+      "speechEnd": 22.464,
+      "end": 22.804,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "当局は調理されていない肉や卵は"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.804,
+      "speechEnd": 27.961,
+      "end": 28.821,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "輸入規制の対象となることを指摘した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 28.821,
+      "speechEnd": 35.44,
+      "end": 35.72,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "黄崗港が10月12日に開港を準備している中、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 35.72,
+      "speechEnd": 42.061,
+      "end": 42.341,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "食品安全センターは10月10日に旅行者に、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.341,
+      "speechEnd": 48.124,
+      "end": 48.404,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "どの入国口を使用しているかにかかわらず、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.404,
+      "speechEnd": 50.982,
+      "end": 51.262,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "未調理の野菜、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.262,
+      "speechEnd": 53.213,
+      "end": 53.493,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "肉、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.493,
+      "speechEnd": 55.514,
+      "end": 55.794,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "鶏肉、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.794,
+      "speechEnd": 60.602,
+      "end": 61.222,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "卵を違法に持ち帰らないように促した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.222,
+      "speechEnd": 63.312,
+      "end": 63.592,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "当局は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.592,
+      "speechEnd": 70.212,
+      "end": 70.492,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "食品が真空バッグまたはスズ箔で包装されていても、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.492,
+      "speechEnd": 77.111,
+      "end": 77.731,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "関連する法律を遵守する必要があると指摘しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 77.731,
+      "speechEnd": 82.818,
+      "end": 83.098,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "沸騰した水でのみ処理された肉は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 83.098,
+      "speechEnd": 88.115,
+      "end": 88.895,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "徹底的に調理されたものとは異なります。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.895,
+      "speechEnd": 90.985,
+      "end": 91.265,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "CFSは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.265,
+      "speechEnd": 97.676,
+      "end": 97.956,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "陸上国境検問所の法執行機関を支援するために、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.956,
+      "speechEnd": 103.53,
+      "end": 103.87,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "肉を検出できる特別に訓練された検疫犬を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.87,
+      "speechEnd": 106.936,
+      "end": 107.556,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "手配していると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.556,
+      "speechEnd": 109.716,
+      "end": 109.996,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "センターは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.996,
+      "speechEnd": 117.66,
+      "end": 117.941,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "規制に違反して食品を運ぶと起訴される可能性があり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.941,
+      "speechEnd": 124.839,
+      "end": 125.179,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "旅行中の不適切な保管も食品安全上のリスクを"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 125.179,
+      "speechEnd": 129.847,
+      "end": 130.627,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "高める可能性があると警告しました。"
+    },
+    {
+      "parentKey": "why",
+      "start": 130.627,
+      "speechEnd": 134.599,
+      "end": 135.219,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 135.219,
+      "speechEnd": 137.379,
+      "end": 137.659,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "これには、"
+    },
+    {
+      "parentKey": "why",
+      "start": 137.659,
+      "speechEnd": 139.749,
+      "end": 140.03,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "港湾執行、"
+    },
+    {
+      "parentKey": "why",
+      "start": 140.03,
+      "speechEnd": 142.19,
+      "end": 142.47,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "公衆衛生、"
+    },
+    {
+      "parentKey": "why",
+      "start": 142.47,
+      "speechEnd": 147.765,
+      "end": 148.625,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "および乗客の入国手配が含まれます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 148.625,
+      "speechEnd": 150.716,
+      "end": 150.996,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 150.996,
+      "speechEnd": 161.308,
+      "end": 162.168,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "港の開港後の法執行機関と旅行者のプロモーションの取り決めに注意してください。"
+    }
+  ]
+}

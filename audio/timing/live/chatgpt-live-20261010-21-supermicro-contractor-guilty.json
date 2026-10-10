@@ -1,0 +1,370 @@
+{
+  "version": 3,
+  "duration": 160.418,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 485,
+  "charactersPerMinute": 181.4,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 9.153,
+      "text": "スーパーマイクロコントラクター、AIサーバー輸出事件で有罪を認める"
+    },
+    {
+      "key": "dek",
+      "start": 9.153,
+      "end": 25.712,
+      "text": "米国の裁判所の文書は、請負業者が4つの罪状を認め、残りの被告事件は別々に処理されることを示しています。"
+    },
+    {
+      "key": "body-0",
+      "start": 25.712,
+      "end": 74.274,
+      "text": "マンハッタンの連邦裁判所の文書によると、スーパーコンピュータ関連の請負業者であるTing - Wei Sun氏は10月8日、輸出管理、密輸、米国政府に対する詐欺、司法妨害を含む4件の罪状で有罪を認めた。この有罪認知は、NVIDIAの高度なAIチップを搭載したサーバーに関する10月9日の裁判所文書で明らかになった。"
+    },
+    {
+      "key": "body-1",
+      "start": 74.274,
+      "end": 127.446,
+      "text": "3月、米国司法省は、約25億ドルのサーバー取引を手配し、3番目の場所の移転を通じて最終目的地を偽装したとされる3人を起訴した。その金額は起訴状に記載されている取引の規模であり、すべての被告の有罪判決とみなすことはできません。Supermicroは、同社自体は被告ではなく、事件に関与した請負業者との協力を終了したと述べた。"
+    },
+    {
+      "key": "why",
+      "start": 127.446,
+      "end": 148.687,
+      "text": "この訴訟には、AIサプライチェーンのコンプライアンスと、国境を越えた高性能コンピューティング機器の流れが関与しています。"
+    },
+    {
+      "key": "watch",
+      "start": 148.687,
+      "end": 160.418,
+      "text": "裁判所のフォローアップ手順と企業の輸出管理措置に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.414,
+      "end": 3.644,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "スーパーマイクロコントラクター、"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.644,
+      "speechEnd": 8.452,
+      "end": 9.153,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "AIサーバー輸出事件で有罪を認める。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 9.153,
+      "speechEnd": 12.915,
+      "end": 13.145,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国の裁判所の文書は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.145,
+      "speechEnd": 17.814,
+      "end": 18.044,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "請負業者が4つの罪状を認め、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.044,
+      "speechEnd": 25.012,
+      "end": 25.712,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "残りの被告事件は別々に処理されることを示しています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 25.712,
+      "speechEnd": 31.008,
+      "end": 31.238,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "マンハッタンの連邦裁判所の文書によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 31.238,
+      "speechEnd": 41.133,
+      "end": 41.363,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "スーパーコンピュータ関連の請負業者であるTing - Wei Sun氏は10月8日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.363,
+      "speechEnd": 43.523,
+      "end": 43.753,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "輸出管理、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.753,
+      "speechEnd": 45.774,
+      "end": 46.004,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "密輸、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.004,
+      "speechEnd": 49.627,
+      "end": 49.858,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国政府に対する詐欺、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.858,
+      "speechEnd": 56.547,
+      "end": 57.047,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "司法妨害を含む4件の罪状で有罪を認めた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.047,
+      "speechEnd": 59.834,
+      "end": 60.064,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この有罪認知は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.064,
+      "speechEnd": 66.545,
+      "end": 66.685,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "NVIDIAの高度なAIチップを搭載したサーバーに関する"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.685,
+      "speechEnd": 69.193,
+      "end": 69.333,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "10月9日"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.333,
+      "speechEnd": 73.654,
+      "end": 74.274,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "の裁判所文書で明らかになった。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 74.274,
+      "speechEnd": 76.294,
+      "end": 76.525,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "3月、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 76.525,
+      "speechEnd": 79.172,
+      "end": 79.402,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国司法省は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 79.402,
+      "speechEnd": 84.838,
+      "end": 85.068,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "約25億ドルのサーバー取引を手配し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 85.068,
+      "speechEnd": 91.827,
+      "end": 92.107,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "3番目の場所の移転を通じて最終目的地を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.107,
+      "speechEnd": 96.984,
+      "end": 97.485,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "偽装したとされる3人を起訴した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.485,
+      "speechEnd": 104.453,
+      "end": 104.683,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "その金額は起訴状に記載されている取引の規模であり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.683,
+      "speechEnd": 111.512,
+      "end": 112.012,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "すべての被告の有罪判決とみなすことはできません。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.012,
+      "speechEnd": 114.59,
+      "end": 114.82,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Supermicroは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.82,
+      "speechEnd": 118.722,
+      "end": 118.952,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同社自体は被告ではなく、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.952,
+      "speechEnd": 126.826,
+      "end": 127.446,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "事件に関与した請負業者との協力を終了したと述べた。"
+    },
+    {
+      "parentKey": "why",
+      "start": 127.446,
+      "speechEnd": 131.418,
+      "end": 131.918,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 131.918,
+      "speechEnd": 134.427,
+      "end": 134.657,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この訴訟には、"
+    },
+    {
+      "parentKey": "why",
+      "start": 134.657,
+      "speechEnd": 138.698,
+      "end": 138.928,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "AIサプライチェーンのコンプライアンスと、"
+    },
+    {
+      "parentKey": "why",
+      "start": 138.928,
+      "speechEnd": 147.987,
+      "end": 148.687,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "国境を越えた高性能コンピューティング機器の流れが関与しています。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 148.687,
+      "speechEnd": 150.778,
+      "end": 151.008,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 151.008,
+      "speechEnd": 159.718,
+      "end": 160.418,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "裁判所のフォローアップ手順と企業の輸出管理措置に注意してください。"
+    }
+  ]
+}

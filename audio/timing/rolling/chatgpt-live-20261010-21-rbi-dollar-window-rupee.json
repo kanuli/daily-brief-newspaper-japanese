@@ -1,0 +1,304 @@
+{
+  "version": 3,
+  "duration": 131.474,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 384,
+  "charactersPerMinute": 175.2,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 11.525,
+      "text": "インド中央銀行、ドルの供給窓を開き、石油企業の外貨需要を緩和"
+    },
+    {
+      "key": "dek",
+      "start": 11.525,
+      "end": 30.088,
+      "text": "3つの国営石油会社は来週、指定された銀行を通じてドルを取得することができ、当局は同時に引き出しツールの規則を強化する。"
+    },
+    {
+      "key": "body-0",
+      "start": 30.088,
+      "end": 96.516,
+      "text": "インド準備銀行は10月10日に、インド石油会社、インド油会社、バラト石油会社に12月12日からドルを提供し、3つの州の石油会社の日々の需要を満たすことを発表し、現金市場から直接ドルを購入する企業の圧力を減らし、別々の通知を継続することを目的とした措置を発表し、中央銀行はまた、特定の契約のリスク準備要件を増加させ、関連するリスクを証明する必要がない貿易制限を低下させることなど、いくつかの外国為替衍生品のルールを強化する。"
+    },
+    {
+      "key": "why",
+      "start": 96.516,
+      "end": 116.536,
+      "text": "外国為替介入の計画は、通貨市場の流動性、エネルギー企業のコスト、投資家の期待に影響を及ぼす。"
+    },
+    {
+      "key": "watch",
+      "start": 116.536,
+      "end": 131.474,
+      "text": "10月12日の措置が施行された後のルービーの動きと中央銀行の継続指示を観察する。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.718,
+      "end": 2.998,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インド中央銀行、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.998,
+      "speechEnd": 6.134,
+      "end": 6.414,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ドルの供給窓を開き、"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.414,
+      "speechEnd": 10.664,
+      "end": 11.525,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "石油企業の外貨需要を緩和。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 11.525,
+      "speechEnd": 16.124,
+      "end": 16.404,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "3つの国営石油会社は来週、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.404,
+      "speechEnd": 23.163,
+      "end": 23.443,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "指定された銀行を通じてドルを取得することができ、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.443,
+      "speechEnd": 29.227,
+      "end": 30.088,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "当局は同時に引き出しツールの規則を強化する。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 30.088,
+      "speechEnd": 34.617,
+      "end": 34.897,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インド準備銀行は10月10日に、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.897,
+      "speechEnd": 37.685,
+      "end": 37.965,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インド石油会社、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.965,
+      "speechEnd": 40.334,
+      "end": 40.614,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インド油会社、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.614,
+      "speechEnd": 48.14,
+      "end": 48.42,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "バラト石油会社に12月12日からドルを提供し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.42,
+      "speechEnd": 56.921,
+      "end": 57.202,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "3つの州の石油会社の日々の需要を満たすことを発表し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.202,
+      "speechEnd": 64.17,
+      "end": 64.45,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "現金市場から直接ドルを購入する企業の圧力を減らし、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.45,
+      "speechEnd": 71.837,
+      "end": 72.117,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "別々の通知を継続することを目的とした措置を発表し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.117,
+      "speechEnd": 74.834,
+      "end": 75.115,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "中央銀行はまた、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.115,
+      "speechEnd": 80.201,
+      "end": 80.482,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "特定の契約のリスク準備要件を増加させ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 80.482,
+      "speechEnd": 84.732,
+      "end": 85.072,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "関連するリスクを証明する必要が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 85.072,
+      "speechEnd": 89.881,
+      "end": 90.161,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ない貿易制限を低下させることなど、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 90.161,
+      "speechEnd": 95.735,
+      "end": 96.516,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "いくつかの外国為替衍生品のルールを強化する。"
+    },
+    {
+      "parentKey": "why",
+      "start": 96.516,
+      "speechEnd": 100.488,
+      "end": 101.108,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 101.108,
+      "speechEnd": 104.453,
+      "end": 104.733,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "外国為替介入の計画は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 104.733,
+      "speechEnd": 107.799,
+      "end": 108.079,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "通貨市場の流動性、"
+    },
+    {
+      "parentKey": "why",
+      "start": 108.079,
+      "speechEnd": 111.285,
+      "end": 111.565,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "エネルギー企業のコスト、"
+    },
+    {
+      "parentKey": "why",
+      "start": 111.565,
+      "speechEnd": 115.676,
+      "end": 116.536,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "投資家の期待に影響を及ぼす。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 116.536,
+      "speechEnd": 118.627,
+      "end": 118.907,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 118.907,
+      "speechEnd": 130.614,
+      "end": 131.474,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "10月12日の措置が施行された後のルービーの動きと中央銀行の継続指示を観察する。"
+    }
+  ]
+}

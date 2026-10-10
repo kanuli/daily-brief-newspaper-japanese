@@ -1,0 +1,300 @@
+{
+  "version": 3,
+  "duration": 147.67,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 471,
+  "charactersPerMinute": 191.4,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 8.295,
+      "text": "Dr.STONEが続編『TERRAFORMING』の製作を発表"
+    },
+    {
+      "key": "dek",
+      "start": 8.295,
+      "end": 22.742,
+      "text": "横浜のイベントは一般公開されており、オリジナル作品の第27巻のフォローアップストーリーから適応されます。"
+    },
+    {
+      "key": "body-0",
+      "start": 22.742,
+      "end": 71.447,
+      "text": "10月10日に横浜で開催された「STONE FES.2026」イベントで、アニメ「Dr.STONE」が新作映画「Dr.STONE TERRAFORMING」の製作を発表しました。この新作は、この記事の最後以降に発生したオリジナルコミックの第27巻から「地球化」ストーリーを適応させ、関連するプロモーションビデオもイベントで公開されました。"
+    },
+    {
+      "key": "body-1",
+      "start": 71.447,
+      "end": 116.352,
+      "text": "原作は稲垣利一郎の物語と坊一の絵画であり、アニメーションの最終章は以前に放映されたことがある。この発表は、アニメーション化されるストーリーがまだまだあることを意味します。制作チームは、関連するレポートで新作の正式な発売日を確認しておらず、オーディエンスはまだ公式発表からの詳細情報を待つ必要があります。"
+    },
+    {
+      "key": "why",
+      "start": 116.352,
+      "end": 133.181,
+      "text": "有名なコミック本のアニメーション化を後日延長し、新しい放送計画を作品にもたらします。"
+    },
+    {
+      "key": "watch",
+      "start": 133.181,
+      "end": 147.67,
+      "text": "プロダクションラインナップ、放送プラットフォーム、発売時期の正式発表をお見逃しなく。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.595,
+      "end": 8.295,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "Dr.STONEが続編『TERRAFORMING』の製作を発表。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 8.295,
+      "speechEnd": 13.59,
+      "end": 13.82,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "横浜のイベントは一般公開されており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.82,
+      "speechEnd": 22.042,
+      "end": 22.742,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "オリジナル作品の第27巻のフォローアップストーリーから適応されます。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 22.742,
+      "speechEnd": 33.473,
+      "end": 33.703,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "10月10日に横浜で開催された「STONE FES.2026」イベントで、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 33.703,
+      "speechEnd": 37.186,
+      "end": 37.467,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "アニメ「Dr.STONE」が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.467,
+      "speechEnd": 47.291,
+      "end": 47.791,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "新作映画「Dr.STONE TERRAFORMING」の製作を発表しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.791,
+      "speechEnd": 50.299,
+      "end": 50.529,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この新作は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.529,
+      "speechEnd": 63.838,
+      "end": 64.068,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この記事の最後以降に発生したオリジナルコミックの第27巻から「地球化」ストーリーを適応させ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.068,
+      "speechEnd": 70.826,
+      "end": 71.447,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "関連するプロモーションビデオもイベントで公開されました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 71.447,
+      "speechEnd": 77.648,
+      "end": 77.878,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "原作は稲垣利一郎の物語と坊一の絵画であり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 77.878,
+      "speechEnd": 84.706,
+      "end": 85.206,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "アニメーションの最終章は以前に放映されたことがある。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 85.206,
+      "speechEnd": 87.645,
+      "end": 87.875,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この発表は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 87.875,
+      "speechEnd": 91.568,
+      "end": 91.848,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "アニメーション化されるストーリーが"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.848,
+      "speechEnd": 95.959,
+      "end": 96.459,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "まだまだあることを意味します。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 96.459,
+      "speechEnd": 98.828,
+      "end": 99.058,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "制作チームは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.058,
+      "speechEnd": 107.21,
+      "end": 107.44,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "関連するレポートで新作の正式な発売日を確認しておらず、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.44,
+      "speechEnd": 115.732,
+      "end": 116.352,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "オーディエンスはまだ公式発表からの詳細情報を待つ必要があります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 116.352,
+      "speechEnd": 120.323,
+      "end": 120.824,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 120.824,
+      "speechEnd": 127.164,
+      "end": 127.394,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "有名なコミック本のアニメーション化を後日延長し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 127.394,
+      "speechEnd": 132.481,
+      "end": 133.181,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "新しい放送計画を作品にもたらします。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 133.181,
+      "speechEnd": 135.271,
+      "end": 135.501,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 135.501,
+      "speechEnd": 138.567,
+      "end": 138.797,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "プロダクションラインナップ、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 138.797,
+      "speechEnd": 141.584,
+      "end": 141.814,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "放送プラットフォーム、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 141.814,
+      "speechEnd": 146.97,
+      "end": 147.67,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "発売時期の正式発表をお見逃しなく。"
+    }
+  ]
+}

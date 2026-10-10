@@ -1,0 +1,360 @@
+{
+  "version": 3,
+  "duration": 144.692,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 416,
+  "charactersPerMinute": 172.5,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 15.505,
+      "text": "警察は、大阪の2つの祭りでジェットコースター事故で2人の男性が死亡したことを確認"
+    },
+    {
+      "key": "dek",
+      "start": 15.505,
+      "end": 26.261,
+      "text": "佐野泉と大津泉でジェットコースター事故が発生し、警察が捜査した。"
+    },
+    {
+      "key": "body-0",
+      "start": 26.261,
+      "end": 67.316,
+      "text": "10月10日に大阪府で開催された秋祭りでは、泉佐野市のジェットコースターが転倒し、参加した男性が車体と舗装の間に挟まれ、病院に運ばれた後、死亡を確認した。地元メディアは、事件発生時にジェットコースターが急旋回しており、別の参加者が現場で負傷したと警察に伝えた。"
+    },
+    {
+      "key": "body-1",
+      "start": 67.316,
+      "end": 109.119,
+      "text": "同日、和泉大津市でも、進行中のジェットコースターに接触した男性が死亡する事故が発生しました。関西放送もデイリーブロードキャスティングも両地で死傷者が報告されているが、各時点での負傷者数の統計は異なっていた。警察は別途事件を捜査しており、祭りの安全対策が注目されている。"
+    },
+    {
+      "key": "why",
+      "start": 109.119,
+      "end": 131.356,
+      "text": "同日に連続して発生した致命的な事故は、大規模な従来のイベントの現場での安全上のリスクを浮き彫りにしています。"
+    },
+    {
+      "key": "watch",
+      "start": 131.356,
+      "end": 144.692,
+      "text": "警察の捜査、主催者による安全審査、怪我などにご注目ください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.021,
+      "end": 2.301,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "警察は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.301,
+      "speechEnd": 8.014,
+      "end": 8.194,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "before-key-number",
+      "text": "大阪の2つの祭りでジェットコースター事故で"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.194,
+      "speechEnd": 10.215,
+      "end": 10.395,
+      "pause": 0.18,
+      "intendedPause": 0.18,
+      "reason": "key-number",
+      "text": "2人"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.395,
+      "speechEnd": 14.645,
+      "end": 15.505,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "の男性が死亡したことを確認。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.505,
+      "speechEnd": 22.612,
+      "end": 22.892,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "佐野泉と大津泉でジェットコースター事故が発生し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.892,
+      "speechEnd": 25.401,
+      "end": 26.261,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "警察が捜査した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 26.261,
+      "speechEnd": 33.229,
+      "end": 33.509,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "10月10日に大阪府で開催された秋祭りでは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 33.509,
+      "speechEnd": 38.386,
+      "end": 38.666,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "泉佐野市のジェットコースターが転倒し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.666,
+      "speechEnd": 44.449,
+      "end": 44.729,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "参加した男性が車体と舗装の間に挟まれ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.729,
+      "speechEnd": 47.656,
+      "end": 47.936,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "病院に運ばれた後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.936,
+      "speechEnd": 50.653,
+      "end": 51.274,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "死亡を確認した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.274,
+      "speechEnd": 53.782,
+      "end": 54.062,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "地元メディアは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.062,
+      "speechEnd": 60.194,
+      "end": 60.474,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "事件発生時にジェットコースターが急旋回しており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.474,
+      "speechEnd": 66.535,
+      "end": 67.316,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "別の参加者が現場で負傷したと警察に伝えた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 67.316,
+      "speechEnd": 69.406,
+      "end": 69.686,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同日、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 69.686,
+      "speechEnd": 72.961,
+      "end": 73.241,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "和泉大津市でも、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 73.241,
+      "speechEnd": 78.815,
+      "end": 79.155,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "進行中のジェットコースターに接触した男性が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 79.155,
+      "speechEnd": 83.127,
+      "end": 83.747,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "死亡する事故が発生しました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 83.747,
+      "speechEnd": 92.944,
+      "end": 93.224,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "関西放送もデイリーブロードキャスティングも両地で死傷者が報告されているが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.224,
+      "speechEnd": 98.938,
+      "end": 99.558,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "各時点での負傷者数の統計は異なっていた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.558,
+      "speechEnd": 103.46,
+      "end": 103.74,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "警察は別途事件を捜査しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.74,
+      "speechEnd": 108.339,
+      "end": 109.119,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "祭りの安全対策が注目されている。"
+    },
+    {
+      "parentKey": "why",
+      "start": 109.119,
+      "speechEnd": 113.09,
+      "end": 113.71,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 113.71,
+      "speechEnd": 119.912,
+      "end": 120.192,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "同日に連続して発生した致命的な事故は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 120.192,
+      "speechEnd": 127.299,
+      "end": 127.639,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "大規模な従来のイベントの現場での安全上のリスクを"
+    },
+    {
+      "parentKey": "why",
+      "start": 127.639,
+      "speechEnd": 130.496,
+      "end": 131.356,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "浮き彫りにしています。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 131.356,
+      "speechEnd": 133.446,
+      "end": 133.726,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 133.726,
+      "speechEnd": 135.956,
+      "end": 136.236,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "警察の捜査、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 136.236,
+      "speechEnd": 139.72,
+      "end": 140.0,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "主催者による安全審査、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 140.0,
+      "speechEnd": 143.832,
+      "end": 144.692,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "怪我などにご注目ください。"
+    }
+  ]
+}
