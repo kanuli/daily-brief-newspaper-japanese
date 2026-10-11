@@ -1,0 +1,354 @@
+{
+  "version": 3,
+  "duration": 138.136,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 353,
+  "charactersPerMinute": 153.3,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 7.62,
+      "text": "パナマ地震、緊急事態宣言27人負傷"
+    },
+    {
+      "key": "dek",
+      "start": 7.62,
+      "end": 20.679,
+      "text": "残り100回以上の地震が続いて、住宅、学校、道路が損傷した。"
+    },
+    {
+      "key": "body-0",
+      "start": 20.679,
+      "end": 103.736,
+      "text": "パナマ政府は10月10日に緊急事態を宣言し、9日の2回の強烈地震とその後の残留地震に対応した。米国連合機関は、当局によると、100回以上の残留地震が記録されており、27人が軽度から中度に負傷し、約420軒の住宅と様々な目的の公立学校が損傷し、いくつかの橋、教会、医療施設も影響を受けた。災害は中部のいくつかの省で深刻で、一部のコミュニティは泥の流れや道路の損傷によって一時的にアクセスが困難である。パナマ運河管理局は、航行が正常であると述べ、米国は災害救助支援を提供することを発表した。"
+    },
+    {
+      "key": "why",
+      "start": 103.736,
+      "end": 122.289,
+      "text": "緊急事態や公共施設の損傷は住民の安全に影響を与え、交通や物流にも影響を与える。"
+    },
+    {
+      "key": "watch",
+      "start": 122.289,
+      "end": 138.136,
+      "text": "残りの地震、道路修理、学校再授業、公式被害の更新に注意を払う。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.369,
+      "end": 2.649,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "パナマ地震、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.649,
+      "speechEnd": 6.76,
+      "end": 7.62,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "緊急事態宣言27人負傷。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 7.62,
+      "speechEnd": 12.289,
+      "end": 12.569,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "残り100回以上の地震が続いて、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.569,
+      "speechEnd": 14.59,
+      "end": 14.87,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "住宅、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.87,
+      "speechEnd": 16.891,
+      "end": 17.171,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "学校、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.171,
+      "speechEnd": 19.818,
+      "end": 20.679,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "道路が損傷した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 20.679,
+      "speechEnd": 27.786,
+      "end": 28.066,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "パナマ政府は10月10日に緊急事態を宣言し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 28.066,
+      "speechEnd": 36.497,
+      "end": 37.117,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "9日の2回の強烈地震とその後の残留地震に対応した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.117,
+      "speechEnd": 39.974,
+      "end": 40.254,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "米国連合機関は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.254,
+      "speechEnd": 42.693,
+      "end": 42.973,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "当局によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.973,
+      "speechEnd": 48.547,
+      "end": 48.827,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "100回以上の残留地震が記録されており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.827,
+      "speechEnd": 53.775,
+      "end": 54.055,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "27人が軽度から中度に負傷し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.055,
+      "speechEnd": 61.789,
+      "end": 62.069,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "約420軒の住宅と様々な目的の公立学校が損傷し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.069,
+      "speechEnd": 64.369,
+      "end": 64.649,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "いくつかの橋、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.649,
+      "speechEnd": 66.669,
+      "end": 66.949,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "教会、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.949,
+      "speechEnd": 70.085,
+      "end": 70.705,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "医療施設も影響を受けた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.705,
+      "speechEnd": 76.558,
+      "end": 76.838,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "災害は中部のいくつかの省で深刻で、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.838,
+      "speechEnd": 83.458,
+      "end": 83.798,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "一部のコミュニティは泥の流れや道路の損傷によって"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 83.798,
+      "speechEnd": 87.979,
+      "end": 88.599,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "一時的にアクセスが困難である。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 88.599,
+      "speechEnd": 92.013,
+      "end": 92.293,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "パナマ運河管理局は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 92.293,
+      "speechEnd": 95.986,
+      "end": 96.266,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "航行が正常であると述べ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 96.266,
+      "speechEnd": 102.955,
+      "end": 103.736,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "米国は災害救助支援を提供することを発表した。"
+    },
+    {
+      "parentKey": "why",
+      "start": 103.736,
+      "speechEnd": 107.707,
+      "end": 108.328,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 108.328,
+      "speechEnd": 116.759,
+      "end": 117.039,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "緊急事態や公共施設の損傷は住民の安全に影響を与え、"
+    },
+    {
+      "parentKey": "why",
+      "start": 117.039,
+      "speechEnd": 121.429,
+      "end": 122.289,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "交通や物流にも影響を与える。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 122.289,
+      "speechEnd": 124.379,
+      "end": 124.659,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 124.659,
+      "speechEnd": 127.028,
+      "end": 127.308,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "残りの地震、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 127.308,
+      "speechEnd": 129.608,
+      "end": 129.888,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "道路修理、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 129.888,
+      "speechEnd": 132.257,
+      "end": 132.537,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "学校再授業、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 132.537,
+      "speechEnd": 137.275,
+      "end": 138.136,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "公式被害の更新に注意を払う。"
+    }
+  ]
+}

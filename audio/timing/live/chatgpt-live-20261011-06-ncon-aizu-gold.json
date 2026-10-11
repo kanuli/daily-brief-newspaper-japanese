@@ -1,0 +1,274 @@
+{
+  "version": 3,
+  "duration": 138.501,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 381,
+  "charactersPerMinute": 165.1,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 7.947,
+      "text": "NHK国立学校音楽コンテスト 福島会津高中金賞"
+    },
+    {
+      "key": "dek",
+      "start": 7.947,
+      "end": 18.144,
+      "text": "第93回全国大会が東京で開催され、11の高校が対戦。"
+    },
+    {
+      "key": "body-0",
+      "start": 18.144,
+      "end": 109.454,
+      "text": "第93回NHK全国学校音楽コンテスト高中グループは10月10日に東京NHK会堂で開催され、各地域から11の高校が参加した。日本教育メディア「リセマム」が報じた、福島県立会津高中が最高の金賞を受賞し、専門大学松户高中が銀賞を受賞した。大妻中野高中および知知県立冈崎高中が銅賞を受賞しました。コンテストは小学校、中学校および中学校の3つのグループで構成され、各学校は演奏指名曲以外にも自選作品を演奏しています。小学校グループおよび中高校グループはそれぞれ11日と12日に開催され、結果はそれぞれのコンテストが完了した後に発表される予定です。"
+    },
+    {
+      "key": "why",
+      "start": 109.454,
+      "end": 125.099,
+      "text": "高中グループの成果は、地元の学校の歌唱教育成果を反映しています。"
+    },
+    {
+      "key": "watch",
+      "start": 125.099,
+      "end": 138.501,
+      "text": "11日の小学校グループと12日の初中グループの正式な結果に注目。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.246,
+      "end": 7.947,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "NHK国立学校音楽コンテスト 福島会津高中金賞。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 7.947,
+      "speechEnd": 14.148,
+      "end": 14.378,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "第93回全国大会が東京で開催され、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.378,
+      "speechEnd": 17.444,
+      "end": 18.144,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "11の高校が対戦。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 18.144,
+      "speechEnd": 26.087,
+      "end": 26.367,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "第93回NHK全国学校音楽コンテスト高中グループは"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 26.367,
+      "speechEnd": 32.708,
+      "end": 32.938,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "10月10日に東京NHK会堂で開催され、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 32.938,
+      "speechEnd": 37.955,
+      "end": 38.455,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "各地域から11の高校が参加した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.455,
+      "speechEnd": 43.471,
+      "end": 43.701,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本教育メディア「リセマム」が報じた、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.701,
+      "speechEnd": 50.739,
+      "end": 50.969,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "福島県立会津高中が最高の金賞を受賞し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.969,
+      "speechEnd": 56.543,
+      "end": 57.043,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "専門大学松户高中が銀賞を受賞した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.043,
+      "speechEnd": 66.659,
+      "end": 67.159,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "大妻中野高中および知知県立冈崎高中が銅賞を受賞しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.159,
+      "speechEnd": 70.294,
+      "end": 70.524,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "コンテストは小学校、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.524,
+      "speechEnd": 78.677,
+      "end": 78.907,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中学校および中学校の3つのグループで構成され、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 78.907,
+      "speechEnd": 86.919,
+      "end": 87.42,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "各学校は演奏指名曲以外にも自選作品を演奏しています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 87.42,
+      "speechEnd": 93.69,
+      "end": 93.971,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "小学校グループおよび中高校グループは"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 93.971,
+      "speechEnd": 99.614,
+      "end": 99.844,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "それぞれ11日と12日に開催され、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 99.844,
+      "speechEnd": 103.677,
+      "end": 103.957,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "結果はそれぞれのコンテストが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 103.957,
+      "speechEnd": 108.834,
+      "end": 109.454,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "完了した後に発表される予定です。"
+    },
+    {
+      "parentKey": "why",
+      "start": 109.454,
+      "speechEnd": 113.426,
+      "end": 113.926,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 113.926,
+      "speechEnd": 117.41,
+      "end": 117.64,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "高中グループの成果は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 117.64,
+      "speechEnd": 124.399,
+      "end": 125.099,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "地元の学校の歌唱教育成果を反映しています。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 125.099,
+      "speechEnd": 127.189,
+      "end": 127.419,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 127.419,
+      "speechEnd": 137.801,
+      "end": 138.501,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "11日の小学校グループと12日の初中グループの正式な結果に注目。"
+    }
+  ]
+}

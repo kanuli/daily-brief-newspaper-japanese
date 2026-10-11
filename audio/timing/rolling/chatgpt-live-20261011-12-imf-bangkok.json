@@ -1,0 +1,334 @@
+{
+  "version": 3,
+  "duration": 135.706,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 393,
+  "charactersPerMinute": 173.8,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 15.418,
+      "text": "国際通貨基金(IMF)と世界銀行がバンコクで開催される年次会議は、エネルギー危機と債務に焦点を当てる。"
+    },
+    {
+      "key": "dek",
+      "start": 15.418,
+      "end": 30.986,
+      "text": "国際財務当局者はタイに集まり、エネルギー価格、融資コスト、発展途上国の負担に焦点を当てている。"
+    },
+    {
+      "key": "body-0",
+      "start": 30.986,
+      "end": 95.099,
+      "text": "国際通貨基金(IMF)と世界銀行の年次会議は今週、タイのバンコクで開催されます。ロイター社は10月11日、中東戦争がエネルギー供給を圧迫し、ディーゼルと肥料の価格が上昇し、利率が高い企業とともに、各国の財務大臣と中央銀行の職員は、成長の緩和とインフレのリスクに対応する方法について議論する予定です。世界銀行のペンアンジェ氏は、複数の衝撃が同時に発生し、より脆弱な経済がより大きな圧力を受けることを指摘しました。"
+    },
+    {
+      "key": "why",
+      "start": 95.099,
+      "end": 118.117,
+      "text": "エネルギーと融資のコストが同時に上昇し、インフレ、公共財政、新興市場の資金調達に影響を及ぼす可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 118.117,
+      "end": 135.706,
+      "text": "IMFの最新の成長予測、債務調整措置、および世界銀行の支援プログラムに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.739,
+      "end": 5.079,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "国際通貨基金(IMF)と世界銀行が"
+    },
+    {
+      "parentKey": "title",
+      "start": 5.079,
+      "speechEnd": 9.678,
+      "end": 9.958,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "バンコクで開催される年次会議は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.958,
+      "speechEnd": 14.557,
+      "end": 15.418,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "エネルギー危機と債務に焦点を当てる。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.418,
+      "speechEnd": 19.46,
+      "end": 19.74,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "国際財務当局者はタイに集まり、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.74,
+      "speechEnd": 22.109,
+      "end": 22.389,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "エネルギー価格、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.389,
+      "speechEnd": 24.619,
+      "end": 24.899,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "融資コスト、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.899,
+      "speechEnd": 30.126,
+      "end": 30.986,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "発展途上国の負担に焦点を当てている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 30.986,
+      "speechEnd": 38.512,
+      "end": 38.792,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "国際通貨基金(IMF)と世界銀行の年次会議は今週、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.792,
+      "speechEnd": 42.555,
+      "end": 43.175,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "タイのバンコクで開催されます。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.175,
+      "speechEnd": 47.008,
+      "end": 47.288,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイター社は10月11日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.288,
+      "speechEnd": 52.166,
+      "end": 52.446,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "中東戦争がエネルギー供給を圧迫し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.446,
+      "speechEnd": 56.837,
+      "end": 57.117,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ディーゼルと肥料の価格が上昇し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.117,
+      "speechEnd": 60.531,
+      "end": 60.811,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "利率が高い企業とともに、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.811,
+      "speechEnd": 67.501,
+      "end": 67.781,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "各国の財務大臣と中央銀行の職員は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.781,
+      "speechEnd": 76.631,
+      "end": 77.252,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "成長の緩和とインフレのリスクに対応する方法について議論する予定です。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 77.252,
+      "speechEnd": 81.154,
+      "end": 81.434,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "世界銀行のペンアンジェ氏は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 81.434,
+      "speechEnd": 85.476,
+      "end": 85.756,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "複数の衝撃が同時に発生し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 85.756,
+      "speechEnd": 90.843,
+      "end": 91.183,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "より脆弱な経済がより大きな圧力を受け"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 91.183,
+      "speechEnd": 94.319,
+      "end": 95.099,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "ることを指摘しました。"
+    },
+    {
+      "parentKey": "why",
+      "start": 95.099,
+      "speechEnd": 99.072,
+      "end": 99.692,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 99.692,
+      "speechEnd": 104.918,
+      "end": 105.198,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "エネルギーと融資のコストが同時に上昇し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 105.198,
+      "speechEnd": 107.289,
+      "end": 107.569,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "インフレ、"
+    },
+    {
+      "parentKey": "why",
+      "start": 107.569,
+      "speechEnd": 109.938,
+      "end": 110.218,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "公共財政、"
+    },
+    {
+      "parentKey": "why",
+      "start": 110.218,
+      "speechEnd": 117.257,
+      "end": 118.117,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "新興市場の資金調達に影響を及ぼす可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 118.117,
+      "speechEnd": 120.208,
+      "end": 120.488,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 120.488,
+      "speechEnd": 124.739,
+      "end": 125.019,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "IMFの最新の成長予測、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 125.019,
+      "speechEnd": 127.597,
+      "end": 127.877,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "債務調整措置、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 127.877,
+      "speechEnd": 134.846,
+      "end": 135.706,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "および世界銀行の支援プログラムに注意してください。"
+    }
+  ]
+}

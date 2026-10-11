@@ -1,0 +1,424 @@
+{
+  "version": 3,
+  "duration": 181.447,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 579,
+  "charactersPerMinute": 191.5,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 10.676,
+      "text": "NVIDIAがReflection AIを拡大または買収する交渉はまだ初期です。"
+    },
+    {
+      "key": "dek",
+      "start": 10.676,
+      "end": 22.685,
+      "text": "フィンランド・タイムズによると、両国は多種多様な協力や取引計画について話し合っている。"
+    },
+    {
+      "key": "body-0",
+      "start": 22.685,
+      "end": 142.169,
+      "text": "ファイナンシャル・タイムズによると、NVIDIAは10月10日に引用された情報を得た人々によると、人工知能のスタートアップ「Reflection AI」とのさらなる投資や買収の可能性について議論している。ロイターの転送によると、議論はまだ早いもので、計画には会社の買収、またはチームの雇用、技術的許可が含まれ、取引の形態や条件が適用されていない可能性がある。Reflection AIは、オープン重量モデルとソフトウェア開発自動化技術に焦点を当てています。・The報告書によると、Nvidiaは以前、Reflection AIに投資してきたが、最近、Beamという名のオープン重量モデルを発表した。ReflectionAIは関連する報告についてコメントされず、NvidIAはすぐにReutersの質問に答えなかった。現在の段階では、取引交渉を完成した買収と見なすことはできず、取引価格や完成時刻も定められず、市場はまだ会社の正式発表を待つ必要がある。"
+    },
+    {
+      "key": "why",
+      "start": 142.169,
+      "end": 165.81,
+      "text": "潜在的な取引やAIモデルの開発、クリスタル需要、産業競争に影響を及ぼす可能性があるが、依然として大きな不確実性がある。"
+    },
+    {
+      "key": "watch",
+      "start": 165.81,
+      "end": 181.447,
+      "text": "両社が取引を確認するかどうか、規制、技術許可、評価の順序に注意を払う。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 5.574,
+      "end": 5.914,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "NVIDIAがReflection AIを拡大または"
+    },
+    {
+      "parentKey": "title",
+      "start": 5.914,
+      "speechEnd": 9.816,
+      "end": 10.676,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "買収する交渉はまだ初期です。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 10.676,
+      "speechEnd": 14.16,
+      "end": 14.44,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "フィンランド・タイムズによると、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.44,
+      "speechEnd": 21.825,
+      "end": 22.685,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "両国は多種多様な協力や取引計画について話し合っている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 22.685,
+      "speechEnd": 26.378,
+      "end": 26.658,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ファイナンシャル・タイムズによると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 26.658,
+      "speechEnd": 34.949,
+      "end": 35.229,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "NVIDIAは10月10日に引用された情報を得た人々によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 35.229,
+      "speechEnd": 48.607,
+      "end": 49.227,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "人工知能のスタートアップ「Reflection AI」とのさらなる投資や買収の可能性について議論している。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.227,
+      "speechEnd": 52.432,
+      "end": 52.712,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイターの転送によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.712,
+      "speechEnd": 55.987,
+      "end": 56.267,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "議論はまだ早いもので、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.267,
+      "speechEnd": 59.472,
+      "end": 59.752,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "計画には会社の買収、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.752,
+      "speechEnd": 62.539,
+      "end": 62.819,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "またはチームの雇用、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.819,
+      "speechEnd": 66.094,
+      "end": 66.374,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "技術的許可が含まれ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.374,
+      "speechEnd": 72.853,
+      "end": 73.474,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "取引の形態や条件が適用されていない可能性がある。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.474,
+      "speechEnd": 76.33,
+      "end": 76.61,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Reflection AIは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.61,
+      "speechEnd": 85.11,
+      "end": 85.731,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "オープン重量モデルとソフトウェア開発自動化技術に焦点を当てています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 85.731,
+      "speechEnd": 88.727,
+      "end": 89.007,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "・The報告書によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 89.007,
+      "speechEnd": 91.724,
+      "end": 92.004,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Nvidiaは以前、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 92.004,
+      "speechEnd": 96.463,
+      "end": 96.743,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "Reflection AIに投資してきたが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 96.743,
+      "speechEnd": 98.764,
+      "end": 99.044,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "最近、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 99.044,
+      "speechEnd": 104.896,
+      "end": 105.517,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "Beamという名のオープン重量モデルを発表した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 105.517,
+      "speechEnd": 108.234,
+      "end": 108.574,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ReflectionAIは"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 108.574,
+      "speechEnd": 112.963,
+      "end": 113.243,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "関連する報告についてコメントされず、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 113.243,
+      "speechEnd": 119.375,
+      "end": 119.995,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "NvidIAはすぐにReutersの質問に答えなかった。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 119.995,
+      "speechEnd": 123.061,
+      "end": 123.341,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "現在の段階では、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 123.341,
+      "speechEnd": 129.542,
+      "end": 129.822,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "取引交渉を完成した買収と見なすことはできず、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 129.822,
+      "speechEnd": 134.699,
+      "end": 134.979,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "取引価格や完成時刻も定められず、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 134.979,
+      "speechEnd": 141.389,
+      "end": 142.169,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "市場はまだ会社の正式発表を待つ必要がある。"
+    },
+    {
+      "parentKey": "why",
+      "start": 142.169,
+      "speechEnd": 146.141,
+      "end": 146.761,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 146.761,
+      "speechEnd": 151.359,
+      "end": 151.639,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "潜在的な取引やAIモデルの開発、"
+    },
+    {
+      "parentKey": "why",
+      "start": 151.639,
+      "speechEnd": 154.008,
+      "end": 154.288,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "クリスタル需要、"
+    },
+    {
+      "parentKey": "why",
+      "start": 154.288,
+      "speechEnd": 159.653,
+      "end": 159.933,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "産業競争に影響を及ぼす可能性があるが、"
+    },
+    {
+      "parentKey": "why",
+      "start": 159.933,
+      "speechEnd": 164.95,
+      "end": 165.81,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "依然として大きな不確実性がある。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 165.81,
+      "speechEnd": 167.9,
+      "end": 168.18,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 168.18,
+      "speechEnd": 172.361,
+      "end": 172.641,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "両社が取引を確認するかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 172.641,
+      "speechEnd": 174.661,
+      "end": 174.941,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "規制、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 174.941,
+      "speechEnd": 177.101,
+      "end": 177.381,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "技術許可、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 177.381,
+      "speechEnd": 180.586,
+      "end": 181.447,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "評価の順序に注意を払う。"
+    }
+  ]
+}

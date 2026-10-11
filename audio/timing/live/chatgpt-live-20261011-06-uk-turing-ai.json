@@ -1,0 +1,370 @@
+{
+  "version": 3,
+  "duration": 154.749,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 452,
+  "charactersPerMinute": 175.3,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 12.217,
+      "text": "英国チューリング研究所所長、海外依存を減らす自律型AIの開発を呼びかけ"
+    },
+    {
+      "key": "dek",
+      "start": 12.217,
+      "end": 26.219,
+      "text": "同研究所は、重要インフラのセキュリティ、偽情報、公益アプリケーションに重点を置く計画だ。"
+    },
+    {
+      "key": "body-0",
+      "start": 26.219,
+      "end": 73.78,
+      "text": "英紙「ガーディアン」は10月10日、アラン・チューリング研究所所長ジョージ・ウィリアムソン氏への独占インタビューを掲載し、国防や医療、重要インフラなどで人工知能が徐々に活用されつつあると指摘した。英国は、自国では検査も管理もできず、さらには使用が制限される可能性がある海外のシステムに全面的に依存すべきではない。"
+    },
+    {
+      "key": "body-1",
+      "start": 73.78,
+      "end": 117.021,
+      "text": "同氏は、同研究所が重要なシステムの保護、偽情報の特定、英国が習得できる技術や小規模なモデルの開発など、国家の強靱性を優先することを主張した。これは研究機関の長が打ち出した政策や研究の方向性であり、政府が新たなAI調達制限や関連法案を発表したわけではない。"
+    },
+    {
+      "key": "why",
+      "start": 117.021,
+      "end": 137.961,
+      "text": "AI サプライ チェーンの集中は、政府および公共サービスの長期的な利用可能性に影響を与える可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 137.961,
+      "end": 154.749,
+      "text": "同研究所の実際のプロジェクト、資金調達の取り決め、政府のフォローアップ政策に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.18,
+      "end": 4.411,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "英国チューリング研究所所長、"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.411,
+      "speechEnd": 11.517,
+      "end": 12.217,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "海外依存を減らす自律型AIの開発を呼びかけ。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.217,
+      "speechEnd": 14.726,
+      "end": 14.956,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同研究所は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.956,
+      "speechEnd": 18.021,
+      "end": 18.251,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "重要インフラのセキュリティ、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.251,
+      "speechEnd": 20.272,
+      "end": 20.502,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "偽情報、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.502,
+      "speechEnd": 25.519,
+      "end": 26.219,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "公益アプリケーションに重点を置く計画だ。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 26.219,
+      "speechEnd": 31.584,
+      "end": 31.814,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "英紙「ガーディアン」は10月10日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 31.814,
+      "speechEnd": 42.613,
+      "end": 42.843,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "アラン・チューリング研究所所長ジョージ・ウィリアムソン氏への独占インタビューを掲載し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.843,
+      "speechEnd": 45.212,
+      "end": 45.442,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "国防や医療、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.442,
+      "speechEnd": 49.205,
+      "end": 49.485,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "重要インフラなどで人工知能が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.485,
+      "speechEnd": 54.083,
+      "end": 54.583,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "徐々に活用されつつあると指摘した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.583,
+      "speechEnd": 56.674,
+      "end": 56.904,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "英国は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.904,
+      "speechEnd": 61.154,
+      "end": 61.384,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "自国では検査も管理もできず、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.384,
+      "speechEnd": 66.261,
+      "end": 66.541,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "さらには使用が制限される可能性が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.541,
+      "speechEnd": 73.16,
+      "end": 73.78,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ある海外のシステムに全面的に依存すべきではない。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 73.78,
+      "speechEnd": 75.94,
+      "end": 76.17,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同氏は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 76.17,
+      "speechEnd": 80.978,
+      "end": 81.208,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同研究所が重要なシステムの保護、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 81.208,
+      "speechEnd": 83.646,
+      "end": 83.876,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "偽情報の特定、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 83.876,
+      "speechEnd": 91.053,
+      "end": 91.283,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "英国が習得できる技術や小規模なモデルの開発など、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 91.283,
+      "speechEnd": 97.066,
+      "end": 97.566,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "国家の強靱性を優先することを主張した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.566,
+      "speechEnd": 106.624,
+      "end": 106.854,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "これは研究機関の長が打ち出した政策や研究の方向性であり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 106.854,
+      "speechEnd": 112.985,
+      "end": 113.265,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "政府が新たなAI調達制限や関連法案を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 113.265,
+      "speechEnd": 116.4,
+      "end": 117.021,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "発表したわけではない。"
+    },
+    {
+      "parentKey": "why",
+      "start": 117.021,
+      "speechEnd": 120.992,
+      "end": 121.492,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 121.492,
+      "speechEnd": 125.185,
+      "end": 125.415,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "AI サプライ チェーンの集中は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 125.415,
+      "speechEnd": 133.567,
+      "end": 133.847,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "政府および公共サービスの長期的な利用可能性に影響を"
+    },
+    {
+      "parentKey": "why",
+      "start": 133.847,
+      "speechEnd": 137.261,
+      "end": 137.961,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "与える可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 137.961,
+      "speechEnd": 140.051,
+      "end": 140.281,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 140.281,
+      "speechEnd": 144.671,
+      "end": 144.901,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同研究所の実際のプロジェクト、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 144.901,
+      "speechEnd": 147.827,
+      "end": 148.057,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "資金調達の取り決め、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 148.057,
+      "speechEnd": 154.049,
+      "end": 154.749,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "政府のフォローアップ政策に注目してください。"
+    }
+  ]
+}
