@@ -95,6 +95,12 @@ def deterministic_postedit(source_text: str, target_text: str, field: str = "") 
     source = str(source_text or "")
     value = str(target_text or "")
 
+    # Chairman-approved exact-source terminology (2026-10-11). This is only
+    # a dek translation; numeric/entity/semantic/full-field gates still apply
+    # after postediting, and no changed source or different field can reuse it.
+    if field == "dek" and source == "列斯聯先開紀錄，卡拉費奧利扳平。":
+        return "リーズ・ユナイテッドが先制し、カラフィオーリが同点に追い付いた。"
+
     replacements = (
         ("前期市場", "取引開始前"),
         ("営業時間外の業績", "時間外取引後に発表される決算"),
