@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "assessedAt": "2026-10-12T01:33:43.969Z",
+  "assessedAt": "2026-10-12T01:54:19.427Z",
   "state": "GREEN",
   "summary": "ALL_REQUIRED_NEWS_LAYERS_VOCAB_AND_DELIVERY_VERIFIED_BY_NAS",
   "faultReasons": [],
@@ -33,7 +33,7 @@
       "lagMinutes": 0,
       "relativeCurrent": true,
       "sourceAbsoluteFresh": true,
-      "sourceAgeMinutes": 19,
+      "sourceAgeMinutes": 40,
       "maxAgeHours": 8
     },
     "vocab": {
@@ -59,7 +59,7 @@
       ],
       "publicationFingerprint": "2026-10-10|2026-10-11T04:56:54.000Z|2026-10-11T04:56:54.000Z|2026-10-12T01:14:32.873Z|2026-10-12",
       "attestedFingerprint": "2026-10-10|2026-10-11T04:56:54.000Z|2026-10-11T04:56:54.000Z|2026-10-12T01:14:32.873Z|2026-10-12",
-      "attestedAt": "2026-10-12T01:33:00Z"
+      "attestedAt": "2026-10-12T01:53:37Z"
     }
   },
   "recovery": {
@@ -94,7 +94,7 @@
   },
   "robot": {
     "current": true,
-    "runId": 38192356079,
+    "runId": 38193687053,
     "event": "workflow_dispatch",
     "role": "nas-attestation-auditor",
     "executor": "github-auditor-only",
