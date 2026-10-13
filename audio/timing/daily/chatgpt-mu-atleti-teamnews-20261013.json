@@ -1,0 +1,430 @@
+{
+  "version": 3,
+  "duration": 192.209,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 632,
+  "charactersPerMinute": 197.3,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 17.218,
+      "text": "マンチェスター・ユナイテッドはマンチェスター・ユナイテッドとのアウェイ戦の前に負傷メンバーを更新。ショーとマイヌーはプレーできない"
+    },
+    {
+      "key": "dek",
+      "start": 17.218,
+      "end": 38.698,
+      "text": "キャリック監督は、この戦いの後、身体的な問題を理由に2人がチームとともにマドリードに行かなかったことを認めたが、デ・リフトはチームに戻った。"
+    },
+    {
+      "key": "body-0",
+      "start": 38.698,
+      "end": 94.644,
+      "text": "マンチェスター・ユナイテッドの公式報告によると、チーム監督のマイケル・キャリックは、ヨーロッパリーグのアウェーでのマドリード・アトレティコ戦前の記者会見で、ルーク・ショーとコビー・マイヌーがトッテナム戦の後に身体的問題を抱えていたことを認めたという。 ２人はチームとともにスペインに遠征しておらず、この試合には出場しない。チームはヨーロッパリーグ第1ラウンドでサバ州を4-0で破ったが、今日はさらに激しいテストに臨むことになる。"
+    },
+    {
+      "key": "body-1",
+      "start": 94.644,
+      "end": 147.507,
+      "text": "一方で、主力のマタイス・デ・リフトが主力に復帰し、守備陣にオプションを提供している。マンチェスター・ユナイテッドは現在負傷のため中盤と左サイドの配置を調整する必要があり、対戦相手のアトレティコ・マドリードは強度の高い守備とホームでのパフォーマンスで知られている。したがって、キャリックの先発メンバーと交代選手の層の厚さは試合戦略に直接影響を与えるだろう。"
+    },
+    {
+      "key": "why",
+      "start": 147.507,
+      "end": 170.521,
+      "text": "主力選手2人の欠場とデ・リフトの復帰は、主力メンバー、戦術構成、ヨーロッパリーグ出場権の状況に直接影響を与えるだろう。"
+    },
+    {
+      "key": "watch",
+      "start": 170.521,
+      "end": 192.209,
+      "text": "公式のファーストチョイスリスト、ショーとマイヌーの負傷評価、そしてキャリックが中盤と左ウイングの配置をどのように調整するかに注目してほしい。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.275,
+      "end": 3.615,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "マンチェスター・ユナイテッドは"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.615,
+      "speechEnd": 11.906,
+      "end": 12.526,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "マンチェスター・ユナイテッドとのアウェイ戦の前に負傷メンバーを更新。"
+    },
+    {
+      "parentKey": "title",
+      "start": 12.526,
+      "speechEnd": 16.358,
+      "end": 17.218,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ショーとマイヌーはプレーできない。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.218,
+      "speechEnd": 19.657,
+      "end": 19.937,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "キャリック監督は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.937,
+      "speechEnd": 22.515,
+      "end": 22.795,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "この戦いの後、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.795,
+      "speechEnd": 27.324,
+      "end": 27.664,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "身体的な問題を理由に2人が"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.664,
+      "speechEnd": 34.422,
+      "end": 34.702,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "チームとともにマドリードに行かなかったことを認めたが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 34.702,
+      "speechEnd": 37.838,
+      "end": 38.698,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "デ・リフトはチームに戻った。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.698,
+      "speechEnd": 44.132,
+      "end": 44.412,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "マンチェスター・ユナイテッドの公式報告によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.412,
+      "speechEnd": 48.384,
+      "end": 48.664,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "チーム監督のマイケル・キャリックは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.664,
+      "speechEnd": 57.373,
+      "end": 57.653,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ヨーロッパリーグのアウェーでのマドリード・アトレティコ戦前の記者会見で、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.653,
+      "speechEnd": 61.415,
+      "end": 61.756,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "ルーク・ショーとコビー・マイヌーが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.756,
+      "speechEnd": 69.35,
+      "end": 69.97,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "トッテナム戦の後に身体的問題を抱えていたことを認めたという。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.97,
+      "speechEnd": 75.683,
+      "end": 75.963,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "２人はチームとともにスペインに遠征しておらず、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.963,
+      "speechEnd": 79.377,
+      "end": 79.998,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "この試合には出場しない。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 79.998,
+      "speechEnd": 88.01,
+      "end": 88.29,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "チームはヨーロッパリーグ第1ラウンドでサバ州を4-0で破ったが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 88.29,
+      "speechEnd": 93.864,
+      "end": 94.644,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "今日はさらに激しいテストに臨むことになる。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.644,
+      "speechEnd": 96.734,
+      "end": 97.014,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "一方で、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.014,
+      "speechEnd": 102.797,
+      "end": 103.077,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "主力のマタイス・デ・リフトが主力に復帰し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.077,
+      "speechEnd": 107.188,
+      "end": 107.808,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "守備陣にオプションを提供している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.808,
+      "speechEnd": 111.083,
+      "end": 111.423,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "マンチェスター・ユナイテッドは"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.423,
+      "speechEnd": 119.714,
+      "end": 119.994,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "現在負傷のため中盤と左サイドの配置を調整する必要があり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 119.994,
+      "speechEnd": 125.011,
+      "end": 125.351,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "対戦相手のアトレティコ・マドリードは"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 125.351,
+      "speechEnd": 131.9,
+      "end": 132.52,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "強度の高い守備とホームでのパフォーマンスで知られている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 132.52,
+      "speechEnd": 134.75,
+      "end": 135.03,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "したがって、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 135.03,
+      "speechEnd": 141.51,
+      "end": 141.85,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "キャリックの先発メンバーと交代選手の層の厚さは"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 141.85,
+      "speechEnd": 146.727,
+      "end": 147.507,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "試合戦略に直接影響を与えるだろう。"
+    },
+    {
+      "parentKey": "why",
+      "start": 147.507,
+      "speechEnd": 151.478,
+      "end": 152.098,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 152.098,
+      "speechEnd": 157.463,
+      "end": 157.743,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "主力選手2人の欠場とデ・リフトの復帰は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 157.743,
+      "speechEnd": 160.112,
+      "end": 160.392,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "主力メンバー、"
+    },
+    {
+      "parentKey": "why",
+      "start": 160.392,
+      "speechEnd": 162.622,
+      "end": 162.902,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "戦術構成、"
+    },
+    {
+      "parentKey": "why",
+      "start": 162.902,
+      "speechEnd": 169.66,
+      "end": 170.521,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "ヨーロッパリーグ出場権の状況に直接影響を与えるだろう。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 170.521,
+      "speechEnd": 172.611,
+      "end": 172.891,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 172.891,
+      "speechEnd": 176.514,
+      "end": 176.794,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "公式のファーストチョイスリスト、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 176.794,
+      "speechEnd": 180.138,
+      "end": 180.418,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ショーとマイヌーの負傷評価、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 180.418,
+      "speechEnd": 185.992,
+      "end": 186.332,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "そしてキャリックが中盤と左ウイングの配置を"
+    },
+    {
+      "parentKey": "watch",
+      "start": 186.332,
+      "speechEnd": 191.349,
+      "end": 192.209,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "どのように調整するかに注目してほしい。"
+    }
+  ]
+}

@@ -1,0 +1,370 @@
+{
+  "version": 3,
+  "duration": 182.674,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 523,
+  "charactersPerMinute": 171.8,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 15.065,
+      "text": "9月の日本の企業物価は前年同月比6.8％上昇した。市場は引き続き日銀の利上げ時期に注目"
+    },
+    {
+      "key": "dek",
+      "start": 15.065,
+      "end": 31.692,
+      "text": "法人価格は市場予想を下回ったが、輸入価格は円換算で24.5 ％上昇し、コスト圧力は依然として大きい。"
+    },
+    {
+      "key": "body-0",
+      "start": 31.692,
+      "end": 79.948,
+      "text": "ロイター通信によると、日本の企業物価指数は9月に前年比6.8 ％上昇し、市場予想の7.6 ％を下回り、8月の7.6 ％から減速した。しかしながら、同時期の輸入価格は円換算で24.5 ％上昇しており、為替相場や原材料コストの低迷が依然として企業に大きなプレッシャーを与えていることを示している。"
+    },
+    {
+      "key": "body-1",
+      "start": 79.948,
+      "end": 138.566,
+      "text": "日本銀行は今月の政策会議で経済とインフレの予測を更新し、企業価格はコスト圧力が消費者物価にさらに伝わるかどうかを評価するための重要なデータです。上田和夫社長は、基本インフレ率は2 ％近くであり、政策の焦点は徐々にインフレ率を押し上げることから目標に近いインフレ率を安定させることに移行していると述べたため、今後数カ月間に日本銀行が金利を引き上げるかどうかは依然として懸念されている。"
+    },
+    {
+      "key": "why",
+      "start": 138.566,
+      "end": 164.026,
+      "text": "企業物価と輸入コストは、企業価格、家計消費、日銀の金利決定に影響を与え、円や日本の資産の価格にも直接影響を与えるだろう。"
+    },
+    {
+      "key": "watch",
+      "start": 164.026,
+      "end": 182.674,
+      "text": "今月の日銀政策決定会合や最新のインフレ見通し、さらに企業コストが消費者に転嫁されるかどうかに注目だ。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 8.918,
+      "end": 9.418,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "9月の日本の企業物価は前年同月比6.8％上昇した。"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.418,
+      "speechEnd": 14.365,
+      "end": 15.065,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "市場は引き続き日銀の利上げ時期に注目。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.065,
+      "speechEnd": 19.942,
+      "end": 20.172,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "法人価格は市場予想を下回ったが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.172,
+      "speechEnd": 26.512,
+      "end": 26.742,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "輸入価格は円換算で24.5 ％上昇し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.742,
+      "speechEnd": 30.992,
+      "end": 31.692,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "コスト圧力は依然として大きい。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 31.692,
+      "speechEnd": 34.688,
+      "end": 34.918,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.918,
+      "speechEnd": 43.558,
+      "end": 43.788,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本の企業物価指数は9月に前年比6.8 ％上昇し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.788,
+      "speechEnd": 49.152,
+      "end": 49.382,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "市場予想の7.6 ％を下回り、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.382,
+      "speechEnd": 54.538,
+      "end": 55.038,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "8月の7.6 ％から減速した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.038,
+      "speechEnd": 57.477,
+      "end": 57.707,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "しかしながら、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.707,
+      "speechEnd": 65.789,
+      "end": 66.019,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同時期の輸入価格は円換算で24.5 ％上昇しており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.019,
+      "speechEnd": 70.826,
+      "end": 71.106,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "為替相場や原材料コストの低迷が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.106,
+      "speechEnd": 79.328,
+      "end": 79.948,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "依然として企業に大きなプレッシャーを与えていることを示している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 79.948,
+      "speechEnd": 89.214,
+      "end": 89.444,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本銀行は今月の政策会議で経済とインフレの予測を更新し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 89.444,
+      "speechEnd": 97.665,
+      "end": 97.945,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "企業価格はコスト圧力が消費者物価にさらに伝わるかどうかを"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.945,
+      "speechEnd": 101.917,
+      "end": 102.417,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "評価するための重要なデータです。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.417,
+      "speechEnd": 105.761,
+      "end": 105.991,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "上田和夫社長は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 105.991,
+      "speechEnd": 111.077,
+      "end": 111.307,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "基本インフレ率は2 ％近くであり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.307,
+      "speechEnd": 118.135,
+      "end": 118.415,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "政策の焦点は徐々にインフレ率を押し上げることから"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.415,
+      "speechEnd": 126.706,
+      "end": 126.936,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "目標に近いインフレ率を安定させることに移行していると述べたため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 126.936,
+      "speechEnd": 134.182,
+      "end": 134.462,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "今後数カ月間に日本銀行が金利を引き上げるかどうかは"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 134.462,
+      "speechEnd": 137.946,
+      "end": 138.566,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "依然として懸念されている。"
+    },
+    {
+      "parentKey": "why",
+      "start": 138.566,
+      "speechEnd": 142.537,
+      "end": 143.037,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 143.037,
+      "speechEnd": 146.66,
+      "end": 146.89,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "企業物価と輸入コストは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 146.89,
+      "speechEnd": 149.12,
+      "end": 149.35,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "企業価格、"
+    },
+    {
+      "parentKey": "why",
+      "start": 149.35,
+      "speechEnd": 151.51,
+      "end": 151.74,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "家計消費、"
+    },
+    {
+      "parentKey": "why",
+      "start": 151.74,
+      "speechEnd": 156.129,
+      "end": 156.359,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日銀の金利決定に影響を与え、"
+    },
+    {
+      "parentKey": "why",
+      "start": 156.359,
+      "speechEnd": 163.326,
+      "end": 164.026,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "円や日本の資産の価格にも直接影響を与えるだろう。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 164.026,
+      "speechEnd": 166.117,
+      "end": 166.347,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 166.347,
+      "speechEnd": 174.08,
+      "end": 174.31,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今月の日銀政策決定会合や最新のインフレ見通し、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 174.31,
+      "speechEnd": 181.974,
+      "end": 182.674,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "さらに企業コストが消費者に転嫁されるかどうかに注目だ。"
+    }
+  ]
+}

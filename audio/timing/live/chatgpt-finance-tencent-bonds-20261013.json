@@ -1,0 +1,420 @@
+{
+  "version": 3,
+  "duration": 210.547,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 658,
+  "charactersPerMinute": 187.5,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 16.62,
+      "text": "テンセントの少なくとも45億米ドルの債券調達により、需要はほぼ4倍になった。 AI投資は依然として資金を集める"
+    },
+    {
+      "key": "dek",
+      "start": 16.62,
+      "end": 40.995,
+      "text": "米ドル建て債券の注文は56億米ドルを超え、オフショア人民元建て債券の注文は770億元を超えた。同社はここ数カ月、AIインフラへの投資を増やし続けている。"
+    },
+    {
+      "key": "body-0",
+      "start": 40.995,
+      "end": 90.347,
+      "text": "ロイター通信の報道によると、テンセントは米ドルおよびオフショア人民元建て債券を発行して少なくとも45億ドルを調達する予定で、投資家の申し込み需要は計画額のほぼ4倍となっている。 10年物と20年物の米ドル債の注文は56億米ドルを超え、オフショア人民元建て債券の注文は770億元を超え、需要総額は約171億米ドルとなった。"
+    },
+    {
+      "key": "body-1",
+      "start": 90.347,
+      "end": 159.835,
+      "text": "テンセントは、資金調達による収益は一般的な企業目的に使用されると述べた。この資金調達は、同社が人工知能インフラストラクチャと製品への投資を拡大している時期にも行われた。今年上半期の同社の設備投資は963億元に増加し、前年同期の2倍以上となった。市場は最近、AI投資の収益と借入コストに疑問を持ち始めているが、テンセントの債券需要は、安定したキャッシュフローと明確な商業化能力を備えた大手テクノロジー企業が依然として多額の資金を獲得できることを示している。"
+    },
+    {
+      "key": "why",
+      "start": 159.835,
+      "end": 189.996,
+      "text": "テンセントの資金ニーズは、資本市場が大手テクノロジー企業によるAI投資を受け入れているかを反映しており、アジアのテクノロジー債券市場のリスク選好度を評価するための重要な指標でもある。"
+    },
+    {
+      "key": "watch",
+      "start": 189.996,
+      "end": 210.547,
+      "text": "最終的な発行規模、クーポンと資金の使用状況、およびテンセントのその後の AI 設備投資と商品化の進捗状況に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 6.968,
+      "end": 7.198,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "テンセントの少なくとも45億米ドルの債券調達により、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.198,
+      "speechEnd": 10.612,
+      "end": 11.112,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "需要はほぼ4倍になった。"
+    },
+    {
+      "parentKey": "title",
+      "start": 11.112,
+      "speechEnd": 15.92,
+      "end": 16.62,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "AI投資は依然として資金を集める。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.62,
+      "speechEnd": 23.588,
+      "end": 23.818,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米ドル建て債券の注文は56億米ドルを超え、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.818,
+      "speechEnd": 31.761,
+      "end": 32.261,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "オフショア人民元建て債券の注文は770億元を超えた。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.261,
+      "speechEnd": 35.327,
+      "end": 35.557,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同社はここ数カ月、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 35.557,
+      "speechEnd": 40.295,
+      "end": 40.995,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "AIインフラへの投資を増やし続けている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.995,
+      "speechEnd": 44.618,
+      "end": 44.848,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信の報道によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.848,
+      "speechEnd": 51.607,
+      "end": 51.887,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "テンセントは米ドルおよびオフショア人民元建て債券を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.887,
+      "speechEnd": 59.064,
+      "end": 59.294,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "発行して少なくとも45億ドルを調達する予定で、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.294,
+      "speechEnd": 66.192,
+      "end": 66.692,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "投資家の申し込み需要は計画額のほぼ4倍となっている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.692,
+      "speechEnd": 76.168,
+      "end": 76.398,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "10年物と20年物の米ドル債の注文は56億米ドルを超え、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.398,
+      "speechEnd": 84.062,
+      "end": 84.292,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "オフショア人民元建て債券の注文は770億元を超え、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 84.292,
+      "speechEnd": 89.727,
+      "end": 90.347,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "需要総額は約171億米ドルとなった。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.347,
+      "speechEnd": 92.577,
+      "end": 92.807,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "テンセントは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.807,
+      "speechEnd": 101.098,
+      "end": 101.599,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "資金調達による収益は一般的な企業目的に使用されると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.599,
+      "speechEnd": 104.246,
+      "end": 104.476,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この資金調達は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.476,
+      "speechEnd": 110.817,
+      "end": 111.097,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "同社が人工知能インフラストラクチャと製品への投資を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.097,
+      "speechEnd": 115.278,
+      "end": 115.778,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "拡大している時期にも行われた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.778,
+      "speechEnd": 123.791,
+      "end": 124.021,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今年上半期の同社の設備投資は963億元に増加し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 124.021,
+      "speechEnd": 128.132,
+      "end": 128.632,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "前年同期の2倍以上となった。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 128.632,
+      "speechEnd": 131.07,
+      "end": 131.3,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "市場は最近、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 131.3,
+      "speechEnd": 138.547,
+      "end": 138.777,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "AI投資の収益と借入コストに疑問を持ち始めているが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 138.777,
+      "speechEnd": 141.703,
+      "end": 141.933,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "テンセントの債券需要は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 141.933,
+      "speechEnd": 147.995,
+      "end": 148.275,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "安定したキャッシュフローと明確な商業化能力を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 148.275,
+      "speechEnd": 159.214,
+      "end": 159.835,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "備えた大手テクノロジー企業が依然として多額の資金を獲得できることを示している。"
+    },
+    {
+      "parentKey": "why",
+      "start": 159.835,
+      "speechEnd": 163.806,
+      "end": 164.306,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 164.306,
+      "speechEnd": 167.511,
+      "end": 167.741,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "テンセントの資金ニーズは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 167.741,
+      "speechEnd": 174.291,
+      "end": 174.571,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "資本市場が大手テクノロジー企業によるAI投資を受け"
+    },
+    {
+      "parentKey": "why",
+      "start": 174.571,
+      "speechEnd": 178.473,
+      "end": 178.703,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "入れているかを反映しており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 178.703,
+      "speechEnd": 185.671,
+      "end": 185.951,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "アジアのテクノロジー債券市場のリスク選好度を評価するため"
+    },
+    {
+      "parentKey": "why",
+      "start": 185.951,
+      "speechEnd": 189.295,
+      "end": 189.996,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "の重要な指標でもある。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 189.996,
+      "speechEnd": 192.086,
+      "end": 192.316,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 192.316,
+      "speechEnd": 195.312,
+      "end": 195.542,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "最終的な発行規模、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 195.542,
+      "speechEnd": 198.956,
+      "end": 199.186,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "クーポンと資金の使用状況、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 199.186,
+      "speechEnd": 209.847,
+      "end": 210.547,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "およびテンセントのその後の AI 設備投資と商品化の進捗状況に注目してください。"
+    }
+  ]
+}

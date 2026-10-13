@@ -1,0 +1,410 @@
+{
+  "version": 3,
+  "duration": 208.327,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 588,
+  "charactersPerMinute": 169.3,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 18.063,
+      "text": "金正恩氏が大陸間ミサイル「火星20」を展示するために国防博物館を視察。トランプ大統領「再び会うかもしれない」"
+    },
+    {
+      "key": "dek",
+      "start": 18.063,
+      "end": 36.133,
+      "text": "北朝鮮は米国に到達可能な大陸間弾道ミサイルを公式に実証し、最近戦術弾道ミサイルの発射実験を行ったことも認めた。"
+    },
+    {
+      "key": "body-0",
+      "start": 36.133,
+      "end": 95.539,
+      "text": "ロイター通信は、金正恩朝鮮労働党委員長が、無人機から大陸間弾道ミサイル「火星20」に至るまでの武器を展示する、新たにオープンした国防革命博物館を訪問したとの北朝鮮国営メディアの報道を引用した。アナリストらは、関連デモには米国本土をカバーできる射程を示す内容が含まれており、近年の核兵器とミサイル開発を長期的な軍事成果に形作りたいという北朝鮮の意向を反映していると指摘した。"
+    },
+    {
+      "key": "body-1",
+      "start": 95.539,
+      "end": 153.584,
+      "text": "同時に、トランプ米大統領は、来月予定されているアジア訪問中に金正恩氏と再び会談する可能性があると述べた。北朝鮮はまた、主要部品の更新を確認するために最近戦術弾道ミサイルの発射実験を行ったことを認めた。軍事展示、発射実験活動、そして米朝接触の可能性が同時に出現したことにより、この地域では朝鮮半島の安全保障と外交の見通しが再び注目を集めている。"
+    },
+    {
+      "key": "why",
+      "start": 153.584,
+      "end": 187.358,
+      "text": "この軍事的展示は、潜在的な米朝首脳会談の兆候と一致しており、この地域の抑止政策と制裁政策、そして米国、韓国、日本の間の安全保障協力に影響を与える可能性がある。"
+    },
+    {
+      "key": "watch",
+      "start": 187.358,
+      "end": 208.327,
+      "text": "米朝が会談の取り決めを確認するかどうか、北朝鮮が追加実験を行うかどうか、そして韓日米の軍事的・外交的対応が注目される。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 6.34,
+      "end": 6.62,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "金正恩氏が大陸間ミサイル「火星20」を"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.62,
+      "speechEnd": 11.219,
+      "end": 11.719,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "展示するために国防博物館を視察。"
+    },
+    {
+      "parentKey": "title",
+      "start": 11.719,
+      "speechEnd": 17.363,
+      "end": 18.063,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "トランプ大統領「再び会うかもしれない」。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.063,
+      "speechEnd": 27.33,
+      "end": 27.56,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "北朝鮮は米国に到達可能な大陸間弾道ミサイルを公式に実証し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.56,
+      "speechEnd": 35.433,
+      "end": 36.133,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "最近戦術弾道ミサイルの発射実験を行ったことも認めた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.133,
+      "speechEnd": 38.641,
+      "end": 38.871,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.871,
+      "speechEnd": 43.609,
+      "end": 43.839,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "金正恩朝鮮労働党委員長が、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.839,
+      "speechEnd": 54.012,
+      "end": 54.242,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "無人機から大陸間弾道ミサイル「火星20」に至るまでの武器を展示する、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.242,
+      "speechEnd": 59.885,
+      "end": 60.165,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "新たにオープンした国防革命博物館を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.165,
+      "speechEnd": 66.645,
+      "end": 67.145,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "訪問したとの北朝鮮国営メディアの報道を引用した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.145,
+      "speechEnd": 69.514,
+      "end": 69.744,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "アナリストらは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.744,
+      "speechEnd": 75.876,
+      "end": 76.156,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "関連デモには米国本土をカバーできる射程を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.156,
+      "speechEnd": 79.5,
+      "end": 79.73,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "示す内容が含まれており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 79.73,
+      "speechEnd": 94.919,
+      "end": 95.539,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "近年の核兵器とミサイル開発を長期的な軍事成果に形作りたいという北朝鮮の意向を反映していると指摘した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 95.539,
+      "speechEnd": 97.699,
+      "end": 97.929,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同時に、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.929,
+      "speechEnd": 100.995,
+      "end": 101.225,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "トランプ米大統領は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.225,
+      "speechEnd": 112.373,
+      "end": 112.873,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "来月予定されているアジア訪問中に金正恩氏と再び会談する可能性があると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.873,
+      "speechEnd": 115.381,
+      "end": 115.611,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "北朝鮮はまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.611,
+      "speechEnd": 128.571,
+      "end": 129.071,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "主要部品の更新を確認するために最近戦術弾道ミサイルの発射実験を行ったことを認めた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 129.071,
+      "speechEnd": 131.3,
+      "end": 131.53,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "軍事展示、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 131.53,
+      "speechEnd": 134.178,
+      "end": 134.408,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "発射実験活動、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 134.408,
+      "speechEnd": 141.515,
+      "end": 141.745,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "そして米朝接触の可能性が同時に出現したことにより、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 141.745,
+      "speechEnd": 149.479,
+      "end": 149.759,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "この地域では朝鮮半島の安全保障と外交の見通しが"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 149.759,
+      "speechEnd": 152.964,
+      "end": 153.584,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "再び注目を集めている。"
+    },
+    {
+      "parentKey": "why",
+      "start": 153.584,
+      "speechEnd": 157.555,
+      "end": 158.056,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 158.056,
+      "speechEnd": 161.191,
+      "end": 161.421,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この軍事的展示は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 161.421,
+      "speechEnd": 168.04,
+      "end": 168.27,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "潜在的な米朝首脳会談の兆候と一致しており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 168.27,
+      "speechEnd": 173.705,
+      "end": 173.935,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この地域の抑止政策と制裁政策、"
+    },
+    {
+      "parentKey": "why",
+      "start": 173.935,
+      "speechEnd": 176.234,
+      "end": 176.464,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "そして米国、"
+    },
+    {
+      "parentKey": "why",
+      "start": 176.464,
+      "speechEnd": 178.485,
+      "end": 178.715,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "韓国、"
+    },
+    {
+      "parentKey": "why",
+      "start": 178.715,
+      "speechEnd": 186.658,
+      "end": 187.358,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "日本の間の安全保障協力に影響を与える可能性がある。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 187.358,
+      "speechEnd": 189.448,
+      "end": 189.678,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 189.678,
+      "speechEnd": 195.461,
+      "end": 195.691,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米朝が会談の取り決めを確認するかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 195.691,
+      "speechEnd": 200.499,
+      "end": 200.729,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "北朝鮮が追加実験を行うかどうか、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 200.729,
+      "speechEnd": 207.626,
+      "end": 208.327,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "そして韓日米の軍事的・外交的対応が注目される。"
+    }
+  ]
+}

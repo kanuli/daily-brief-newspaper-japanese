@@ -1,0 +1,394 @@
+{
+  "version": 3,
+  "duration": 182.648,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 340.0,
+  "characters": 571,
+  "charactersPerMinute": 187.6,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.18,
+    "comma": 0.28,
+    "semantic": 0.34,
+    "sentence": 0.62,
+    "paragraph": 0.78,
+    "section": 0.86
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 11.234,
+      "text": "アジアのクリプト株式の急落AI投資の熱潮は利率と資本コストのテストに直面"
+    },
+    {
+      "key": "dek",
+      "start": 11.234,
+      "end": 29.656,
+      "text": "韓国のKOSPIは6パーセント以上下落し、サムスンとSK Hynixは崩壊し、市場はAIベースの巨額資本支出を再評価し始めた。"
+    },
+    {
+      "key": "body-0",
+      "start": 29.656,
+      "end": 135.575,
+      "text": "ロイターによると、アジアの人工知能供給チェーン株は火曜日に大幅に下落し、韓国のKOSPIは6パーセントを超え、サムスン・エレクトロニクスとSK・ハニックスは大幅な下落を記録し、日本のメモリに関連する株も圧迫されている。市場の焦点は単にAIの成長を追跡し、徐々に巨大な資本支出、資金調達コスト、企業が十分な収益を生み出すかどうかを評価することに移ります。アナリティクスによると、過去数年にわたり大量の資金が半導体、データセンター、関連基盤に流れていますが、高利率と債券市場の波動は資金調達の限界を上昇させ始め、AI関連のIPOや債務融資も難しくなっています。国際通貨基金(IMF)は同日、AI資産の価格が調整された場合、影響が世界市場に広がり、AI投資の熱潮がより厳格な資本規律の段階に入る可能性があると警告した。"
+    },
+    {
+      "key": "why",
+      "start": 135.575,
+      "end": 159.974,
+      "text": "クリプト株の急落は、短期株価の波動だけでなく、AI業界の資金調達環境と投資家のリスク優先順位が変化していることを反映している。"
+    },
+    {
+      "key": "watch",
+      "start": 159.974,
+      "end": 182.648,
+      "text": "アメリカの半導体株式のパフォーマンス、AI企業の資金調達コスト、および大手テクノロジー企業の次の資本支出と収益指針に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 5.992,
+      "end": 6.333,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "アジアのクリプト株式の急落AI投資の熱潮は"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.333,
+      "speechEnd": 10.374,
+      "end": 11.234,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "利率と資本コストのテストに直面。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 11.234,
+      "speechEnd": 17.645,
+      "end": 17.925,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "韓国のKOSPIは6パーセント以上下落し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.925,
+      "speechEnd": 21.478,
+      "end": 21.759,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "サムスンとSK Hynixは崩壊し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.759,
+      "speechEnd": 28.796,
+      "end": 29.656,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "市場はAIベースの巨額資本支出を再評価し始めた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 29.656,
+      "speechEnd": 32.235,
+      "end": 32.515,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "ロイターによると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 32.515,
+      "speechEnd": 40.458,
+      "end": 40.738,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アジアの人工知能供給チェーン株は火曜日に大幅に下落し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.738,
+      "speechEnd": 46.382,
+      "end": 46.662,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "韓国のKOSPIは6パーセントを超え、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.662,
+      "speechEnd": 54.327,
+      "end": 54.607,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "サムスン・エレクトロニクスとSK・ハニックスは大幅な下落を記録し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.607,
+      "speechEnd": 59.833,
+      "end": 60.453,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "日本のメモリに関連する株も圧迫されている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.453,
+      "speechEnd": 65.888,
+      "end": 66.168,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "市場の焦点は単にAIの成長を追跡し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.168,
+      "speechEnd": 69.652,
+      "end": 69.933,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "徐々に巨大な資本支出、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.933,
+      "speechEnd": 72.441,
+      "end": 72.721,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "資金調達コスト、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 72.721,
+      "speechEnd": 78.156,
+      "end": 78.496,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "企業が十分な収益を生み出すかどうかを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 78.496,
+      "speechEnd": 81.492,
+      "end": 82.113,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "評価することに移ります。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 82.113,
+      "speechEnd": 85.039,
+      "end": 85.319,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アナリティクスによると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 85.319,
+      "speechEnd": 90.894,
+      "end": 91.174,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "過去数年にわたり大量の資金が半導体、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 91.174,
+      "speechEnd": 93.473,
+      "end": 93.753,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "データセンター、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 93.753,
+      "speechEnd": 97.307,
+      "end": 97.587,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "関連基盤に流れていますが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 97.587,
+      "speechEnd": 105.252,
+      "end": 105.532,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "高利率と債券市場の波動は資金調達の限界を上昇させ始め、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 105.532,
+      "speechEnd": 111.664,
+      "end": 112.284,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "AI関連のIPOや債務融資も難しくなっています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 112.284,
+      "speechEnd": 116.395,
+      "end": 116.675,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "国際通貨基金(IMF)は同日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 116.675,
+      "speechEnd": 121.204,
+      "end": 121.484,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "AI資産の価格が調整された場合、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 121.484,
+      "speechEnd": 124.899,
+      "end": 125.179,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "影響が世界市場に広がり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 125.179,
+      "speechEnd": 134.794,
+      "end": 135.575,
+      "pause": 0.78,
+      "intendedPause": 0.78,
+      "reason": "punctuation-sentence",
+      "text": "AI投資の熱潮がより厳格な資本規律の段階に入る可能性があると警告した。"
+    },
+    {
+      "parentKey": "why",
+      "start": 135.575,
+      "speechEnd": 139.546,
+      "end": 140.167,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 140.167,
+      "speechEnd": 143.093,
+      "end": 143.373,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "クリプト株の急落は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 143.373,
+      "speechEnd": 146.857,
+      "end": 147.137,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "短期株価の波動だけでなく、"
+    },
+    {
+      "parentKey": "why",
+      "start": 147.137,
+      "speechEnd": 154.663,
+      "end": 155.003,
+      "pause": 0.34,
+      "intendedPause": 0.34,
+      "reason": "semantic-boundary",
+      "text": "AI業界の資金調達環境と投資家のリスク優先順位が"
+    },
+    {
+      "parentKey": "why",
+      "start": 155.003,
+      "speechEnd": 159.114,
+      "end": 159.974,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "変化していることを反映している。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 159.974,
+      "speechEnd": 162.064,
+      "end": 162.345,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 162.345,
+      "speechEnd": 167.152,
+      "end": 167.433,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "アメリカの半導体株式のパフォーマンス、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 167.433,
+      "speechEnd": 171.126,
+      "end": 171.406,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "punctuation-comma",
+      "text": "AI企業の資金調達コスト、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 171.406,
+      "speechEnd": 181.788,
+      "end": 182.648,
+      "pause": 0.86,
+      "intendedPause": 0.86,
+      "reason": "punctuation-sentence",
+      "text": "および大手テクノロジー企業の次の資本支出と収益指針に注意してください。"
+    }
+  ]
+}

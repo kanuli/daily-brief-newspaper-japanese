@@ -1,0 +1,410 @@
+{
+  "version": 3,
+  "duration": 176.431,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 527,
+  "charactersPerMinute": 179.2,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 9.779,
+      "text": "ラムティン駅近くの火災で観塘線が一時運休、MTRがシャトルバスを手配"
+    },
+    {
+      "key": "dek",
+      "start": 9.779,
+      "end": 30.799,
+      "text": "観塘からティウケンレンまでの列車サービスは一時的に停止され、林田駅は閉鎖され、黄埔から観塘までの列車サービスは約4分の間隔を維持しました。"
+    },
+    {
+      "key": "body-0",
+      "start": 30.799,
+      "end": 74.311,
+      "text": "香港ラジオテレビは、ラムティン駅付近で火災が発生したと報じた。 MTR公社は観塘線の観塘とティウケンリン間の列車の運行を一時停止し、ラムティン駅も閉鎖する必要があった。事件中、黄埔から観塘までの列車は約4分の運行間隔を維持し、影響を受けた乗客は他の交通手段に乗り換えなければならなかった。"
+    },
+    {
+      "key": "body-1",
+      "start": 74.311,
+      "end": 129.951,
+      "text": "MTR コーポレーションは、乗客の乗り換えを支援するために、観塘、林田、油塘で無料のシャトル バスを手配しています。その後、消防とMTR職員による消火活動と安全点検が行われ、鉄道の運行は徐々に再開された。事故は夕方のラッシュアワー中に発生し、東九龍の通勤に直ちに影響を及ぼした。今後のMTRおよび交通局の事故原因説明と安全検査に注目してください。"
+    },
+    {
+      "key": "why",
+      "start": 129.951,
+      "end": 156.555,
+      "text": "この事故では、乗客の安全と鉄道運行の信頼性に直接関係する、ピーク時間帯の大規模な公共交通機関の中断と線路近くの火災警報器が発生しました。"
+    },
+    {
+      "key": "watch",
+      "start": 156.555,
+      "end": 176.431,
+      "text": "事故の原因、設備の損傷、その後の修理や運用調整が必要かどうかについては、MTR の発表に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 5.435,
+      "end": 5.665,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ラムティン駅近くの火災で観塘線が一時運休、"
+    },
+    {
+      "parentKey": "title",
+      "start": 5.665,
+      "speechEnd": 9.079,
+      "end": 9.779,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "MTRがシャトルバスを手配。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 9.779,
+      "speechEnd": 17.513,
+      "end": 17.743,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "観塘からティウケンレンまでの列車サービスは一時的に停止され、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.743,
+      "speechEnd": 20.6,
+      "end": 20.83,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "林田駅は閉鎖され、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.83,
+      "speechEnd": 25.22,
+      "end": 25.5,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "黄埔から観塘までの列車サービスは"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.5,
+      "speechEnd": 30.099,
+      "end": 30.799,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "約4分の間隔を維持しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 30.799,
+      "speechEnd": 33.934,
+      "end": 34.164,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "香港ラジオテレビは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.164,
+      "speechEnd": 39.32,
+      "end": 39.82,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "ラムティン駅付近で火災が発生したと報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.82,
+      "speechEnd": 48.669,
+      "end": 48.899,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "MTR公社は観塘線の観塘とティウケンリン間の列車の運行を一時停止し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.899,
+      "speechEnd": 52.871,
+      "end": 53.371,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "ラムティン駅も閉鎖する必要があった。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.371,
+      "speechEnd": 55.531,
+      "end": 55.761,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "事件中、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.761,
+      "speechEnd": 59.802,
+      "end": 59.942,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "黄埔から観塘までの列車は約"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.942,
+      "speechEnd": 61.963,
+      "end": 62.103,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "4分"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.103,
+      "speechEnd": 65.657,
+      "end": 65.887,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "の運行間隔を維持し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.887,
+      "speechEnd": 73.69,
+      "end": 74.311,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "影響を受けた乗客は他の交通手段に乗り換えなければならなかった。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 74.311,
+      "speechEnd": 77.585,
+      "end": 77.815,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "MTR コーポレーションは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 77.815,
+      "speechEnd": 81.926,
+      "end": 82.156,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "乗客の乗り換えを支援するために、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.156,
+      "speechEnd": 84.177,
+      "end": 84.407,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "観塘、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.407,
+      "speechEnd": 86.428,
+      "end": 86.658,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "林田、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 86.658,
+      "speechEnd": 92.093,
+      "end": 92.593,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "油塘で無料のシャトル バスを手配しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.593,
+      "speechEnd": 94.683,
+      "end": 94.913,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "その後、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.913,
+      "speechEnd": 102.508,
+      "end": 102.738,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "消防とMTR職員による消火活動と安全点検が行われ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 102.738,
+      "speechEnd": 107.128,
+      "end": 107.628,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "鉄道の運行は徐々に再開された。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.628,
+      "speechEnd": 112.784,
+      "end": 113.014,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "事故は夕方のラッシュアワー中に発生し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 113.014,
+      "speechEnd": 118.379,
+      "end": 118.879,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "東九龍の通勤に直ちに影響を及ぼした。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.879,
+      "speechEnd": 129.33,
+      "end": 129.951,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "今後のMTRおよび交通局の事故原因説明と安全検査に注目してください。"
+    },
+    {
+      "parentKey": "why",
+      "start": 129.951,
+      "speechEnd": 133.922,
+      "end": 134.422,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 134.422,
+      "speechEnd": 137.0,
+      "end": 137.23,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この事故では、"
+    },
+    {
+      "parentKey": "why",
+      "start": 137.23,
+      "speechEnd": 143.71,
+      "end": 143.94,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "乗客の安全と鉄道運行の信頼性に直接関係する、"
+    },
+    {
+      "parentKey": "why",
+      "start": 143.94,
+      "speechEnd": 155.855,
+      "end": 156.555,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "ピーク時間帯の大規模な公共交通機関の中断と線路近くの火災警報器が発生しました。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 156.555,
+      "speechEnd": 158.646,
+      "end": 158.876,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 158.876,
+      "speechEnd": 161.314,
+      "end": 161.544,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "事故の原因、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 161.544,
+      "speechEnd": 163.774,
+      "end": 164.004,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "設備の損傷、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 164.004,
+      "speechEnd": 171.111,
+      "end": 171.341,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "その後の修理や運用調整が必要かどうかについては、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 171.341,
+      "speechEnd": 175.731,
+      "end": 176.431,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "MTR の発表に注意してください。"
+    }
+  ]
+}

@@ -1,0 +1,480 @@
+{
+  "version": 3,
+  "duration": 212.402,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 641,
+  "charactersPerMinute": 181.1,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 17.951,
+      "text": "トランプ大統領、中国とロシアがイランを支援しているとは信じていないと述べ、両国にとっての代償は「大きすぎる」と述べた"
+    },
+    {
+      "key": "dek",
+      "start": 17.951,
+      "end": 42.454,
+      "text": "トランプ米大統領は、中国やロシアがイランに多大な支援を提供しているかどうかを米政府は速やかに把握すると述べ、現時点では両国が支援しているとは考えていないと述べた。"
+    },
+    {
+      "key": "body-0",
+      "start": 42.454,
+      "end": 90.034,
+      "text": "ロイター通信によると、トランプ米大統領は月曜夜、中国とロシアが現在イランに大規模な軍事支援を提供しているとは思わないと述べた。ソーシャルプラットフォーム上の関連コメントに応えて、トランプ大統領は、たとえ両国から何らかの支援があったとしても、その範囲は非常に限定的であり、米国は関連する傾向を非常に迅速に検知できるだろうと述べた。"
+    },
+    {
+      "key": "body-1",
+      "start": 90.034,
+      "end": 152.51,
+      "text": "報告書は、中国とロシアがイランと緊密な関係を維持していると指摘したが、中国は米国のイラン攻撃をイランの主権侵害として非難し、ロシアも中東での戦争が核軍拡競争のリスクを高める可能性があると警告した。トランプ大統領は以前、中国に対しイランを直接支援しないよう警告していた。したがって、中国、ロシア、イランの間の実際の協力の度合いは、依然としてワシントンが引き続き注目している外交・安全保障問題である。"
+    },
+    {
+      "key": "why",
+      "start": 152.51,
+      "end": 190.178,
+      "text": "中国とロシアがイランに直接軍事・諜報支援を提供すれば、中東紛争が拡大し、米中、米ロの関係が変化する可能性がある。したがって、トランプ大統領の今回の声明は外交・安全保障政策上の重要性を持っている。"
+    },
+    {
+      "key": "watch",
+      "start": 190.178,
+      "end": 212.402,
+      "text": "米国政府が具体的な情報、中国とロシアの公式反応、その後のイランの武器取得や諜報支援の証拠を公表するかどうかに注目してほしい。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.648,
+      "end": 2.878,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "トランプ大統領、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.878,
+      "speechEnd": 10.542,
+      "end": 10.772,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中国とロシアがイランを支援しているとは信じていないと述べ、"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.772,
+      "speechEnd": 17.251,
+      "end": 17.951,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "両国にとっての代償は「大きすぎる」と述べた。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.951,
+      "speechEnd": 21.017,
+      "end": 21.247,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "トランプ米大統領は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.247,
+      "speechEnd": 26.264,
+      "end": 26.544,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "中国やロシアがイランに多大な支援を"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.544,
+      "speechEnd": 34.208,
+      "end": 34.438,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "提供しているかどうかを米政府は速やかに把握すると述べ、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 34.438,
+      "speechEnd": 41.753,
+      "end": 42.454,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "現時点では両国が支援しているとは考えていないと述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.454,
+      "speechEnd": 45.449,
+      "end": 45.679,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.679,
+      "speechEnd": 49.721,
+      "end": 49.951,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "トランプ米大統領は月曜夜、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.951,
+      "speechEnd": 56.291,
+      "end": 56.571,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "中国とロシアが現在イランに大規模な軍事支援を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.571,
+      "speechEnd": 61.03,
+      "end": 61.53,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "提供しているとは思わないと述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.53,
+      "speechEnd": 67.034,
+      "end": 67.264,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ソーシャルプラットフォーム上の関連コメントに応えて、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 67.264,
+      "speechEnd": 70.121,
+      "end": 70.351,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "トランプ大統領は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.351,
+      "speechEnd": 76.343,
+      "end": 76.573,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "たとえ両国から何らかの支援があったとしても、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.573,
+      "speechEnd": 80.962,
+      "end": 81.192,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "その範囲は非常に限定的であり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 81.192,
+      "speechEnd": 89.414,
+      "end": 90.034,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "米国は関連する傾向を非常に迅速に検知できるだろうと述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.034,
+      "speechEnd": 92.194,
+      "end": 92.424,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "報告書は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.424,
+      "speechEnd": 97.092,
+      "end": 97.372,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "中国とロシアがイランと緊密な関係を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 97.372,
+      "speechEnd": 100.995,
+      "end": 101.225,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "維持していると指摘したが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 101.225,
+      "speechEnd": 109.237,
+      "end": 109.467,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中国は米国のイラン攻撃をイランの主権侵害として非難し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.467,
+      "speechEnd": 115.459,
+      "end": 115.739,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ロシアも中東での戦争が核軍拡競争のリスクを"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.739,
+      "speechEnd": 119.85,
+      "end": 120.35,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "高める可能性があると警告した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.35,
+      "speechEnd": 123.694,
+      "end": 123.924,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "トランプ大統領は以前、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 123.924,
+      "speechEnd": 130.334,
+      "end": 130.835,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "中国に対しイランを直接支援しないよう警告していた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 130.835,
+      "speechEnd": 133.064,
+      "end": 133.294,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "したがって、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 133.294,
+      "speechEnd": 135.315,
+      "end": 135.545,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中国、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 135.545,
+      "speechEnd": 137.565,
+      "end": 137.795,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロシア、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 137.795,
+      "speechEnd": 142.812,
+      "end": 143.042,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "イランの間の実際の協力の度合いは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 143.042,
+      "speechEnd": 151.89,
+      "end": 152.51,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "依然としてワシントンが引き続き注目している外交・安全保障問題である。"
+    },
+    {
+      "parentKey": "why",
+      "start": 152.51,
+      "speechEnd": 156.482,
+      "end": 156.982,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 156.982,
+      "speechEnd": 164.506,
+      "end": 164.737,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中国とロシアがイランに直接軍事・諜報支援を提供すれば、"
+    },
+    {
+      "parentKey": "why",
+      "start": 164.737,
+      "speechEnd": 167.941,
+      "end": 168.172,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中東紛争が拡大し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 168.172,
+      "speechEnd": 170.192,
+      "end": 170.422,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米中、"
+    },
+    {
+      "parentKey": "why",
+      "start": 170.422,
+      "speechEnd": 175.09,
+      "end": 175.59,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "米ロの関係が変化する可能性がある。"
+    },
+    {
+      "parentKey": "why",
+      "start": 175.59,
+      "speechEnd": 177.82,
+      "end": 178.05,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "したがって、"
+    },
+    {
+      "parentKey": "why",
+      "start": 178.05,
+      "speechEnd": 182.648,
+      "end": 182.928,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "トランプ大統領の今回の声明は"
+    },
+    {
+      "parentKey": "why",
+      "start": 182.928,
+      "speechEnd": 189.478,
+      "end": 190.178,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "外交・安全保障政策上の重要性を持っている。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 190.178,
+      "speechEnd": 192.268,
+      "end": 192.498,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 192.498,
+      "speechEnd": 196.609,
+      "end": 196.839,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国政府が具体的な情報、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 196.839,
+      "speechEnd": 200.949,
+      "end": 201.18,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中国とロシアの公式反応、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 201.18,
+      "speechEnd": 206.893,
+      "end": 207.173,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "その後のイランの武器取得や諜報支援の証拠を"
+    },
+    {
+      "parentKey": "watch",
+      "start": 207.173,
+      "speechEnd": 211.702,
+      "end": 212.402,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "公表するかどうかに注目してほしい。"
+    }
+  ]
+}
