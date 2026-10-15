@@ -1,8 +1,9 @@
 {
   "version": 7,
-  "assessedAt": "2026-10-15T21:21:42.250Z",
-  "state": "RED",
-  "summary": "EDITOR_ORCHESTRATOR_FAILED_BEFORE_ASSESSMENT",
+  "assessedAt": "2026-10-15T21:28:48.079Z",
+  "state": "GREEN",
+  "summary": "ALL_REQUIRED_NEWS_LAYERS_VOCAB_AND_DELIVERY_VERIFIED_BY_NAS",
+  "faultReasons": [],
   "layers": {
     "daily": {
       "current": true,
@@ -32,7 +33,7 @@
       "lagMinutes": 0,
       "relativeCurrent": true,
       "sourceAbsoluteFresh": true,
-      "sourceAgeMinutes": 61,
+      "sourceAgeMinutes": 69,
       "maxAgeHours": 8
     },
     "vocab": {
@@ -58,7 +59,7 @@
       ],
       "publicationFingerprint": "2026-10-13|2026-10-13T11:12:00.000Z|2026-10-13T11:12:00.000Z|2026-10-15T20:19:58.064Z|2026-10-16",
       "attestedFingerprint": "2026-10-13|2026-10-13T11:12:00.000Z|2026-10-13T11:12:00.000Z|2026-10-15T20:19:58.064Z|2026-10-16",
-      "attestedAt": "2026-10-15T21:20:33Z"
+      "attestedAt": "2026-10-15T21:27:59Z"
     }
   },
   "recovery": {
@@ -68,14 +69,13 @@
     "vocabRequired": false,
     "structuralRequired": false
   },
-  "faultReasons": [],
   "maintenance": {
     "owner": "Editor-in-Chief",
     "executor": "Maintenance Robot",
     "incidentKey": "healthy",
     "sourceVersionBound": true,
-    "status": "orchestrator-failed",
-    "decision": "RECHECK_NEXT_PATROL",
+    "status": "resolved",
+    "decision": "NO_REPAIR_REQUIRED",
     "attempts": 0,
     "lastAttemptAt": null,
     "nextEligibleAt": null,
@@ -93,11 +93,11 @@
     "false404ConsumesRepairBudget": false
   },
   "robot": {
-    "current": false,
-    "runId": 38809223311,
+    "current": true,
+    "runId": 38810158299,
     "event": "workflow_dispatch",
-    "role": "editor-in-chief-orchestrator",
-    "executor": "continuous-maintenance-workers",
+    "role": "nas-attestation-auditor",
+    "executor": "github-auditor-only",
     "selfHealingLoop": false
   },
   "policy": {
