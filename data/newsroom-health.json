@@ -1,9 +1,8 @@
 {
   "version": 7,
-  "assessedAt": "2026-10-15T21:21:26.151Z",
-  "state": "GREEN",
-  "summary": "ALL_REQUIRED_NEWS_LAYERS_VOCAB_AND_DELIVERY_VERIFIED_BY_NAS",
-  "faultReasons": [],
+  "assessedAt": "2026-10-15T21:21:42.250Z",
+  "state": "RED",
+  "summary": "EDITOR_ORCHESTRATOR_FAILED_BEFORE_ASSESSMENT",
   "layers": {
     "daily": {
       "current": true,
@@ -69,13 +68,14 @@
     "vocabRequired": false,
     "structuralRequired": false
   },
+  "faultReasons": [],
   "maintenance": {
     "owner": "Editor-in-Chief",
     "executor": "Maintenance Robot",
     "incidentKey": "healthy",
     "sourceVersionBound": true,
-    "status": "resolved",
-    "decision": "NO_REPAIR_REQUIRED",
+    "status": "orchestrator-failed",
+    "decision": "RECHECK_NEXT_PATROL",
     "attempts": 0,
     "lastAttemptAt": null,
     "nextEligibleAt": null,
@@ -93,11 +93,11 @@
     "false404ConsumesRepairBudget": false
   },
   "robot": {
-    "current": true,
-    "runId": 38809218688,
+    "current": false,
+    "runId": 38809223311,
     "event": "workflow_dispatch",
-    "role": "nas-attestation-auditor",
-    "executor": "github-auditor-only",
+    "role": "editor-in-chief-orchestrator",
+    "executor": "continuous-maintenance-workers",
     "selfHealingLoop": false
   },
   "policy": {
