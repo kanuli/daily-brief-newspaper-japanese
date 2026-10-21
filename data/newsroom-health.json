@@ -1,9 +1,11 @@
 {
   "version": 7,
-  "assessedAt": "2026-10-21T09:25:20.303Z",
-  "state": "GREEN",
-  "summary": "ALL_REQUIRED_NEWS_LAYERS_VOCAB_AND_DELIVERY_VERIFIED_BY_NAS",
-  "faultReasons": [],
+  "assessedAt": "2026-10-21T09:45:45.299Z",
+  "state": "RED",
+  "summary": "NOT_GREEN:stocks-relative-lag-minutes=59",
+  "faultReasons": [
+    "stocks-relative-lag-minutes=59"
+  ],
   "layers": {
     "daily": {
       "current": true,
@@ -26,14 +28,14 @@
       "lagMinutes": 0
     },
     "stocks": {
-      "current": true,
+      "current": false,
       "degradedTranslation": false,
-      "upstream": "2026-10-21T08:45:03.552523+00:00",
+      "upstream": "2026-10-21T09:44:07.555645+00:00",
       "japanese": "2026-10-21T08:45:03.552523+00:00",
-      "lagMinutes": 0,
-      "relativeCurrent": true,
+      "lagMinutes": 59,
+      "relativeCurrent": false,
       "sourceAbsoluteFresh": true,
-      "sourceAgeMinutes": 40,
+      "sourceAgeMinutes": 2,
       "maxAgeHours": 8
     },
     "vocab": {
@@ -59,12 +61,12 @@
       ],
       "publicationFingerprint": "2026-10-13|2026-10-13T11:12:00.000Z|2026-10-13T11:12:00.000Z|2026-10-21T08:45:03.552Z|2026-10-21",
       "attestedFingerprint": "2026-10-13|2026-10-13T11:12:00.000Z|2026-10-13T11:12:00.000Z|2026-10-21T08:45:03.552Z|2026-10-21",
-      "attestedAt": "2026-10-21T09:24:26Z"
+      "attestedAt": "2026-10-21T09:44:52Z"
     }
   },
   "recovery": {
     "coreRequired": false,
-    "rollingRequired": false,
+    "rollingRequired": true,
     "upstreamStockRequired": false,
     "vocabRequired": false,
     "structuralRequired": false
@@ -72,10 +74,10 @@
   "maintenance": {
     "owner": "Editor-in-Chief",
     "executor": "Maintenance Robot",
-    "incidentKey": "healthy",
+    "incidentKey": "stocks@2026-10-21T09:44:07.555Z",
     "sourceVersionBound": true,
-    "status": "resolved",
-    "decision": "NO_REPAIR_REQUIRED",
+    "status": "awaiting-nas-repair-dispatch",
+    "decision": "NAS_CONTROLLER_MUST_DISPATCH_REPAIR",
     "attempts": 0,
     "lastAttemptAt": null,
     "nextEligibleAt": null,
@@ -94,7 +96,7 @@
   },
   "robot": {
     "current": true,
-    "runId": 39576803645,
+    "runId": 39579443315,
     "event": "workflow_dispatch",
     "role": "nas-attestation-auditor",
     "executor": "github-auditor-only",
