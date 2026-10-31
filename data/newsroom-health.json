@@ -1,11 +1,9 @@
 {
   "version": 7,
-  "assessedAt": "2026-10-31T16:01:28.174Z",
-  "state": "RED",
-  "summary": "NOT_GREEN:vocab-upstream-date expected=2026-11-01 actual=2026-10-31",
-  "faultReasons": [
-    "vocab-upstream-date expected=2026-11-01 actual=2026-10-31"
-  ],
+  "assessedAt": "2026-10-31T16:32:42.614Z",
+  "state": "GREEN",
+  "summary": "ALL_REQUIRED_NEWS_LAYERS_VOCAB_AND_DELIVERY_VERIFIED_BY_NAS",
+  "faultReasons": [],
   "layers": {
     "daily": {
       "current": true,
@@ -35,16 +33,16 @@
       "lagMinutes": 0,
       "relativeCurrent": true,
       "sourceAbsoluteFresh": true,
-      "sourceAgeMinutes": 16,
+      "sourceAgeMinutes": 47,
       "maxAgeHours": 8
     },
     "vocab": {
-      "current": false,
+      "current": true,
       "expectedHktDate": "2026-11-01",
-      "upstream": "2026-10-31",
-      "japanese": "2026-10-31",
-      "datedArchivePresent": false,
-      "datedArchiveMatchesLatest": false
+      "upstream": "2026-11-01",
+      "japanese": "2026-11-01",
+      "datedArchivePresent": true,
+      "datedArchiveMatchesLatest": true
     },
     "structural": {
       "current": true,
@@ -59,9 +57,9 @@
         "github-f3",
         "github-pages"
       ],
-      "publicationFingerprint": "2026-10-13|2026-10-13T11:12:00.000Z|2026-10-13T11:12:00.000Z|2026-10-31T15:45:22.269Z|2026-10-31",
-      "attestedFingerprint": "2026-10-13|2026-10-13T11:12:00.000Z|2026-10-13T11:12:00.000Z|2026-10-31T15:45:22.269Z|2026-10-31",
-      "attestedAt": "2026-10-31T16:00:34Z"
+      "publicationFingerprint": "2026-10-13|2026-10-13T11:12:00.000Z|2026-10-13T11:12:00.000Z|2026-10-31T15:45:22.269Z|2026-11-01",
+      "attestedFingerprint": "2026-10-13|2026-10-13T11:12:00.000Z|2026-10-13T11:12:00.000Z|2026-10-31T15:45:22.269Z|2026-11-01",
+      "attestedAt": "2026-10-31T16:31:52Z"
     }
   },
   "recovery": {
@@ -74,10 +72,10 @@
   "maintenance": {
     "owner": "Editor-in-Chief",
     "executor": "Maintenance Robot",
-    "incidentKey": "vocab@2026-10-31->2026-10-31",
+    "incidentKey": "healthy",
     "sourceVersionBound": true,
-    "status": "awaiting-nas-delivery-verification",
-    "decision": "NAS_CONTROLLER_MUST_VERIFY_F3_AND_PAGES",
+    "status": "resolved",
+    "decision": "NO_REPAIR_REQUIRED",
     "attempts": 0,
     "lastAttemptAt": null,
     "nextEligibleAt": null,
@@ -96,7 +94,7 @@
   },
   "robot": {
     "current": true,
-    "runId": 41217616284,
+    "runId": 41220178577,
     "event": "workflow_dispatch",
     "role": "nas-attestation-auditor",
     "executor": "github-auditor-only",
