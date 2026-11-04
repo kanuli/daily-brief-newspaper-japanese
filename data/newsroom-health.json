@@ -1,8 +1,9 @@
 {
   "version": 7,
-  "assessedAt": "2026-11-04T09:45:09.753Z",
-  "state": "RED",
-  "summary": "EDITOR_ORCHESTRATOR_FAILED_BEFORE_ASSESSMENT",
+  "assessedAt": "2026-11-04T10:12:11.131Z",
+  "state": "GREEN",
+  "summary": "ALL_REQUIRED_NEWS_LAYERS_VOCAB_AND_DELIVERY_VERIFIED_BY_NAS",
+  "faultReasons": [],
   "layers": {
     "daily": {
       "current": true,
@@ -27,12 +28,12 @@
     "stocks": {
       "current": true,
       "degradedTranslation": false,
-      "upstream": "2026-11-04T08:55:10.768561+00:00",
-      "japanese": "2026-11-04T08:55:10.768561+00:00",
+      "upstream": "2026-11-04T09:51:46.844736+00:00",
+      "japanese": "2026-11-04T09:51:46.844736+00:00",
       "lagMinutes": 0,
       "relativeCurrent": true,
       "sourceAbsoluteFresh": true,
-      "sourceAgeMinutes": 50,
+      "sourceAgeMinutes": 20,
       "maxAgeHours": 8
     },
     "vocab": {
@@ -56,9 +57,9 @@
         "github-f3",
         "github-pages"
       ],
-      "publicationFingerprint": "2026-10-13|2026-10-13T11:12:00.000Z|2026-10-13T11:12:00.000Z|2026-11-04T08:55:10.768Z|2026-11-04",
-      "attestedFingerprint": "2026-10-13|2026-10-13T11:12:00.000Z|2026-10-13T11:12:00.000Z|2026-11-04T08:55:10.768Z|2026-11-04",
-      "attestedAt": "2026-11-04T09:43:53Z"
+      "publicationFingerprint": "2026-10-13|2026-10-13T11:12:00.000Z|2026-10-13T11:12:00.000Z|2026-11-04T09:51:46.844Z|2026-11-04",
+      "attestedFingerprint": "2026-10-13|2026-10-13T11:12:00.000Z|2026-10-13T11:12:00.000Z|2026-11-04T09:51:46.844Z|2026-11-04",
+      "attestedAt": "2026-11-04T10:11:14Z"
     }
   },
   "recovery": {
@@ -68,14 +69,13 @@
     "vocabRequired": false,
     "structuralRequired": false
   },
-  "faultReasons": [],
   "maintenance": {
     "owner": "Editor-in-Chief",
     "executor": "Maintenance Robot",
     "incidentKey": "healthy",
     "sourceVersionBound": true,
-    "status": "orchestrator-failed",
-    "decision": "RECHECK_NEXT_PATROL",
+    "status": "resolved",
+    "decision": "NO_REPAIR_REQUIRED",
     "attempts": 0,
     "lastAttemptAt": null,
     "nextEligibleAt": null,
@@ -93,11 +93,11 @@
     "false404ConsumesRepairBudget": false
   },
   "robot": {
-    "current": false,
-    "runId": 41809656179,
+    "current": true,
+    "runId": 41812577602,
     "event": "workflow_dispatch",
-    "role": "editor-in-chief-orchestrator",
-    "executor": "continuous-maintenance-workers",
+    "role": "nas-attestation-auditor",
+    "executor": "github-auditor-only",
     "selfHealingLoop": false
   },
   "policy": {
