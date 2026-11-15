@@ -1,0 +1,270 @@
+{
+  "version": 3,
+  "duration": 131.589,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 402,
+  "charactersPerMinute": 183.3,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 10.264,
+      "text": "日本、海外のAI企業にソフトウェアの脆弱性情報を要請予定"
+    },
+    {
+      "key": "dek",
+      "start": 10.264,
+      "end": 36.085,
+      "text": "日本経済新聞は先に、日本政府が政府や重要インフラの保護を強化するため、海外のAI企業に対し未公開のソフトウェア脆弱性情報の事前提供を義務付ける計画であると報じた。"
+    },
+    {
+      "key": "body-0",
+      "start": 36.085,
+      "end": 61.826,
+      "text": "日本経済新聞は先に、日本政府が政府や重要インフラの保護を強化するため、海外のAI企業に対し未公開のソフトウェア脆弱性情報の事前提供を義務付ける計画であると報じた。"
+    },
+    {
+      "key": "body-1",
+      "start": 61.826,
+      "end": 89.021,
+      "text": "政府はシステムの脆弱性を早期に発見するため、サイバー攻撃をシミュレートするAIの利用も研究している。脆弱性データの国境を越えた共有の範囲と実施時期はまだ正式に確認されていません。"
+    },
+    {
+      "key": "why",
+      "start": 89.021,
+      "end": 120.767,
+      "text": "政府はシステムの脆弱性を早期に発見するため、サイバー攻撃をシミュレートするAIの利用も研究している。脆弱性データの国境を越えた共有の範囲と実施時期はまだ正式に確認されていません。"
+    },
+    {
+      "key": "watch",
+      "start": 120.767,
+      "end": 131.589,
+      "text": "信頼できる情報源からのさらなる最新情報に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.02,
+      "end": 2.25,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.25,
+      "speechEnd": 9.564,
+      "end": 10.264,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "海外のAI企業にソフトウェアの脆弱性情報を要請予定。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 10.264,
+      "speechEnd": 13.747,
+      "end": 13.977,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本経済新聞は先に、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.977,
+      "speechEnd": 21.64,
+      "end": 21.87,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本政府が政府や重要インフラの保護を強化するため、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.87,
+      "speechEnd": 31.344,
+      "end": 31.624,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "海外のAI企業に対し未公開のソフトウェア脆弱性情報の事前提供を"
+    },
+    {
+      "parentKey": "dek",
+      "start": 31.624,
+      "speechEnd": 35.385,
+      "end": 36.085,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "義務付ける計画であると報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.085,
+      "speechEnd": 39.568,
+      "end": 39.798,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本経済新聞は先に、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.798,
+      "speechEnd": 47.461,
+      "end": 47.691,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本政府が政府や重要インフラの保護を強化するため、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.691,
+      "speechEnd": 57.165,
+      "end": 57.445,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "海外のAI企業に対し未公開のソフトウェア脆弱性情報の事前提供を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.445,
+      "speechEnd": 61.206,
+      "end": 61.826,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "義務付ける計画であると報じた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 61.826,
+      "speechEnd": 68.235,
+      "end": 68.465,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "政府はシステムの脆弱性を早期に発見するため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 68.465,
+      "speechEnd": 75.501,
+      "end": 76.001,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "サイバー攻撃をシミュレートするAIの利用も研究している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 76.001,
+      "speechEnd": 83.942,
+      "end": 84.222,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "脆弱性データの国境を越えた共有の範囲と実施時期は"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.222,
+      "speechEnd": 88.401,
+      "end": 89.021,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "まだ正式に確認されていません。"
+    },
+    {
+      "parentKey": "why",
+      "start": 89.021,
+      "speechEnd": 92.992,
+      "end": 93.492,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 93.492,
+      "speechEnd": 99.901,
+      "end": 100.131,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "政府はシステムの脆弱性を早期に発見するため、"
+    },
+    {
+      "parentKey": "why",
+      "start": 100.131,
+      "speechEnd": 107.166,
+      "end": 107.666,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "サイバー攻撃をシミュレートするAIの利用も研究している。"
+    },
+    {
+      "parentKey": "why",
+      "start": 107.666,
+      "speechEnd": 115.608,
+      "end": 115.888,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "脆弱性データの国境を越えた共有の範囲と実施時期は"
+    },
+    {
+      "parentKey": "why",
+      "start": 115.888,
+      "speechEnd": 120.067,
+      "end": 120.767,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "まだ正式に確認されていません。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 120.767,
+      "speechEnd": 122.857,
+      "end": 123.087,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 123.087,
+      "speechEnd": 130.889,
+      "end": 131.589,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "信頼できる情報源からのさらなる最新情報に注目してください。"
+    }
+  ]
+}

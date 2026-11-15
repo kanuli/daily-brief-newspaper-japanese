@@ -1,0 +1,350 @@
+{
+  "version": 3,
+  "duration": 133.15,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 439,
+  "charactersPerMinute": 197.8,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 13.608,
+      "text": "Microsoftは、世界的なMicrosoft 365サービスの停止は修正されたと発表"
+    },
+    {
+      "key": "dek",
+      "start": 13.608,
+      "end": 36.476,
+      "text": "AP通信は、Microsoftが数時間続いた世界的な障害の後、Outlook、Teams、Copilotなどのサービスが復旧したことを確認したと報じた。"
+    },
+    {
+      "key": "body-0",
+      "start": 36.476,
+      "end": 59.263,
+      "text": "AP通信は、Microsoftが数時間続いた世界的な障害の後、Outlook、Teams、Copilotなどのサービスが復旧したことを確認したと報じた。"
+    },
+    {
+      "key": "body-1",
+      "start": 59.263,
+      "end": 88.521,
+      "text": "Microsoftは、この問題はサイバー攻撃ではなく、アップグレード後のネットワーク容量の変化に関連していると述べた。この事件は、公的機関や企業におけるクラウド サービスのバックアップの必要性を改めて浮き彫りにしました。"
+    },
+    {
+      "key": "why",
+      "start": 88.521,
+      "end": 122.329,
+      "text": "Microsoftは、この問題はサイバー攻撃ではなく、アップグレード後のネットワーク容量の変化に関連していると述べた。この事件は、公的機関や企業におけるクラウド サービスのバックアップの必要性を改めて浮き彫りにしました。"
+    },
+    {
+      "key": "watch",
+      "start": 122.329,
+      "end": 133.15,
+      "text": "信頼できる情報源からのさらなる最新情報に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.508,
+      "end": 2.738,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Microsoftは、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.738,
+      "speechEnd": 12.908,
+      "end": 13.608,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "世界的なMicrosoft 365サービスの停止は修正されたと発表。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.608,
+      "speechEnd": 15.837,
+      "end": 16.067,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "AP通信は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.067,
+      "speechEnd": 22.615,
+      "end": 22.845,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Microsoftが数時間続いた世界的な障害の後、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.845,
+      "speechEnd": 25.074,
+      "end": 25.304,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Outlook、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.304,
+      "speechEnd": 27.394,
+      "end": 27.624,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Teams、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.624,
+      "speechEnd": 30.968,
+      "end": 31.248,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "Copilotなどのサービスが"
+    },
+    {
+      "parentKey": "dek",
+      "start": 31.248,
+      "speechEnd": 35.776,
+      "end": 36.476,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "復旧したことを確認したと報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.476,
+      "speechEnd": 38.705,
+      "end": 38.935,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "AP通信は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.935,
+      "speechEnd": 45.483,
+      "end": 45.713,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Microsoftが数時間続いた世界的な障害の後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.713,
+      "speechEnd": 47.942,
+      "end": 48.172,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Outlook、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.172,
+      "speechEnd": 50.262,
+      "end": 50.492,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Teams、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.492,
+      "speechEnd": 53.835,
+      "end": 54.115,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "Copilotなどのサービスが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.115,
+      "speechEnd": 58.643,
+      "end": 59.263,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "復旧したことを確認したと報じた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 59.263,
+      "speechEnd": 61.771,
+      "end": 62.001,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Microsoftは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 62.001,
+      "speechEnd": 66.041,
+      "end": 66.271,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この問題はサイバー攻撃ではなく、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 66.271,
+      "speechEnd": 73.446,
+      "end": 73.946,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "アップグレード後のネットワーク容量の変化に関連していると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 73.946,
+      "speechEnd": 76.245,
+      "end": 76.475,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この事件は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 76.475,
+      "speechEnd": 84.347,
+      "end": 84.627,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "公的機関や企業におけるクラウド サービスのバックアップの必要性を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.627,
+      "speechEnd": 87.901,
+      "end": 88.521,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "改めて浮き彫りにしました。"
+    },
+    {
+      "parentKey": "why",
+      "start": 88.521,
+      "speechEnd": 92.491,
+      "end": 92.991,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 92.991,
+      "speechEnd": 95.499,
+      "end": 95.729,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Microsoftは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 95.729,
+      "speechEnd": 99.769,
+      "end": 99.999,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この問題はサイバー攻撃ではなく、"
+    },
+    {
+      "parentKey": "why",
+      "start": 99.999,
+      "speechEnd": 107.174,
+      "end": 107.674,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "アップグレード後のネットワーク容量の変化に関連していると述べた。"
+    },
+    {
+      "parentKey": "why",
+      "start": 107.674,
+      "speechEnd": 109.973,
+      "end": 110.203,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この事件は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 110.203,
+      "speechEnd": 118.075,
+      "end": 118.355,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "公的機関や企業におけるクラウド サービスのバックアップの必要性を"
+    },
+    {
+      "parentKey": "why",
+      "start": 118.355,
+      "speechEnd": 121.629,
+      "end": 122.329,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "改めて浮き彫りにしました。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 122.329,
+      "speechEnd": 124.418,
+      "end": 124.648,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 124.648,
+      "speechEnd": 132.45,
+      "end": 133.15,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "信頼できる情報源からのさらなる最新情報に注目してください。"
+    }
+  ]
+}

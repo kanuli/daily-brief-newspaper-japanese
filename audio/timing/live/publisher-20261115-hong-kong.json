@@ -1,0 +1,320 @@
+{
+  "version": 3,
+  "duration": 125.104,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 350,
+  "charactersPerMinute": 167.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 6.621,
+      "text": "銅鑼湾の日曜パレードのため一時通行止め"
+    },
+    {
+      "key": "dek",
+      "start": 6.621,
+      "end": 29.934,
+      "text": "運輸省は、日中のパレードを促進するため、銅鑼湾の一部の道路を11月15日午後2時15分から午後4時30分まで通行止めにすると発表した。"
+    },
+    {
+      "key": "body-0",
+      "start": 29.934,
+      "end": 53.167,
+      "text": "運輸省は、日中のパレードを促進するため、銅鑼湾の一部の道路を11月15日午後2時15分から午後4時30分まで通行止めにすると発表した。"
+    },
+    {
+      "key": "body-1",
+      "start": 53.167,
+      "end": 81.45,
+      "text": "関連する活動としては、前夜の道路閉鎖や交通の迂回も行われた。一般の皆様は、移動に十分な時間を確保し、現場の警察の指示や運輸局からの最新の発表を参照する必要があります。"
+    },
+    {
+      "key": "why",
+      "start": 81.45,
+      "end": 114.282,
+      "text": "関連する活動としては、前夜の道路閉鎖や交通の迂回も行われた。一般の皆様は、移動に十分な時間を確保し、現場の警察の指示や運輸局からの最新の発表を参照する必要があります。"
+    },
+    {
+      "key": "watch",
+      "start": 114.282,
+      "end": 125.104,
+      "text": "信頼できる情報源からのさらなる最新情報に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 5.921,
+      "end": 6.621,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "銅鑼湾の日曜パレードのため一時通行止め。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 6.621,
+      "speechEnd": 8.781,
+      "end": 9.011,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "運輸省は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 9.011,
+      "speechEnd": 13.747,
+      "end": 13.977,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日中のパレードを促進するため、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.977,
+      "speechEnd": 17.321,
+      "end": 17.461,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "銅鑼湾の一部の道路を"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.461,
+      "speechEnd": 20.178,
+      "end": 20.318,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "11月15日"
+    },
+    {
+      "parentKey": "dek",
+      "start": 20.318,
+      "speechEnd": 29.234,
+      "end": 29.934,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "午後2時15分から午後4時30分まで通行止めにすると発表した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 29.934,
+      "speechEnd": 32.094,
+      "end": 32.324,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "運輸省は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 32.324,
+      "speechEnd": 37.061,
+      "end": 37.291,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日中のパレードを促進するため、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.291,
+      "speechEnd": 40.634,
+      "end": 40.774,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "銅鑼湾の一部の道路を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.774,
+      "speechEnd": 43.491,
+      "end": 43.631,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "11月15日"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.631,
+      "speechEnd": 52.547,
+      "end": 53.167,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "午後2時15分から午後4時30分まで通行止めにすると発表した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 53.167,
+      "speechEnd": 56.372,
+      "end": 56.602,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "関連する活動としては、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 56.602,
+      "speechEnd": 62.662,
+      "end": 63.162,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "前夜の道路閉鎖や交通の迂回も行われた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 63.162,
+      "speechEnd": 65.74,
+      "end": 65.97,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "一般の皆様は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 65.97,
+      "speechEnd": 70.358,
+      "end": 70.588,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "移動に十分な時間を確保し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 70.588,
+      "speechEnd": 77.276,
+      "end": 77.556,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "現場の警察の指示や運輸局からの最新の発表を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 77.556,
+      "speechEnd": 80.83,
+      "end": 81.45,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "参照する必要があります。"
+    },
+    {
+      "parentKey": "why",
+      "start": 81.45,
+      "speechEnd": 85.42,
+      "end": 85.92,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 85.92,
+      "speechEnd": 89.125,
+      "end": 89.355,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "関連する活動としては、"
+    },
+    {
+      "parentKey": "why",
+      "start": 89.355,
+      "speechEnd": 95.415,
+      "end": 95.915,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "前夜の道路閉鎖や交通の迂回も行われた。"
+    },
+    {
+      "parentKey": "why",
+      "start": 95.915,
+      "speechEnd": 98.492,
+      "end": 98.722,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "一般の皆様は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 98.722,
+      "speechEnd": 103.111,
+      "end": 103.341,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "移動に十分な時間を確保し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 103.341,
+      "speechEnd": 110.028,
+      "end": 110.308,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "現場の警察の指示や運輸局からの最新の発表を"
+    },
+    {
+      "parentKey": "why",
+      "start": 110.308,
+      "speechEnd": 113.582,
+      "end": 114.282,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "参照する必要があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 114.282,
+      "speechEnd": 116.372,
+      "end": 116.602,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 116.602,
+      "speechEnd": 124.404,
+      "end": 125.104,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "信頼できる情報源からのさらなる最新情報に注目してください。"
+    }
+  ]
+}

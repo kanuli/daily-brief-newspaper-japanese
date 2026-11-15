@@ -1,0 +1,250 @@
+{
+  "version": 3,
+  "duration": 115.256,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 373,
+  "charactersPerMinute": 194.2,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 10.055,
+      "text": "米AIコンセプト株は再び下落、半導体指数は5％以上下落"
+    },
+    {
+      "key": "dek",
+      "start": 10.055,
+      "end": 31.09,
+      "text": "ロイター通信によると、米国の人工知能関連株は金曜日に圧迫され、ナスダック100指数は約2%下落し、半導体指数は5.1%下落した。"
+    },
+    {
+      "key": "body-0",
+      "start": 31.09,
+      "end": 52.044,
+      "text": "ロイター通信によると、米国の人工知能関連株は金曜日に圧迫を受け、ナスダック100指数は約2%下落し、半導体指数は5.1%下落した。"
+    },
+    {
+      "key": "body-1",
+      "start": 52.044,
+      "end": 76.242,
+      "text": "市場はNvidiaの経営陣とAIインフラの資金調達の仕組みを懸念しており、CoreWeaveやNebiusなどの株式も大幅に下落しています。投資家は設備投資とリターンのリスクを再評価している。"
+    },
+    {
+      "key": "why",
+      "start": 76.242,
+      "end": 104.434,
+      "text": "市場はエヌビディアのリーダーシップやAIインフラの資金調達取り決めを懸念しており、コアウィーブやネビウスなどの銘柄も大幅に下落した。投資家は設備投資と収益のリスクを再評価しています。"
+    },
+    {
+      "key": "watch",
+      "start": 104.434,
+      "end": 115.256,
+      "text": "信頼できる情報源からのさらなる最新情報に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.389,
+      "end": 4.619,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米AIコンセプト株は再び下落、"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.619,
+      "speechEnd": 9.355,
+      "end": 10.055,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "半導体指数は5％以上下落。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 10.055,
+      "speechEnd": 13.051,
+      "end": 13.281,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信によると、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.281,
+      "speechEnd": 19.272,
+      "end": 19.502,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国の人工知能関連株は金曜日に圧迫され、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.502,
+      "speechEnd": 25.074,
+      "end": 25.304,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ナスダック100指数は約2%下落し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.304,
+      "speechEnd": 30.39,
+      "end": 31.09,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "半導体指数は5.1%下落した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 31.09,
+      "speechEnd": 34.085,
+      "end": 34.315,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.315,
+      "speechEnd": 40.306,
+      "end": 40.536,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国の人工知能関連株は金曜日に圧迫を受け、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 40.536,
+      "speechEnd": 46.108,
+      "end": 46.338,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ナスダック100指数は約2%下落し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.338,
+      "speechEnd": 51.424,
+      "end": 52.044,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "半導体指数は5.1%下落した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 52.044,
+      "speechEnd": 61.03,
+      "end": 61.26,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "市場はNvidiaの経営陣とAIインフラの資金調達の仕組みを懸念しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 61.26,
+      "speechEnd": 68.853,
+      "end": 69.353,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "CoreWeaveやNebiusなどの株式も大幅に下落しています。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 69.353,
+      "speechEnd": 75.622,
+      "end": 76.242,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "投資家は設備投資とリターンのリスクを再評価している。"
+    },
+    {
+      "parentKey": "why",
+      "start": 76.242,
+      "speechEnd": 80.213,
+      "end": 80.713,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 80.713,
+      "speechEnd": 89.838,
+      "end": 90.068,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "市場はエヌビディアのリーダーシップやAIインフラの資金調達取り決めを懸念しており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 90.068,
+      "speechEnd": 96.755,
+      "end": 97.255,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "コアウィーブやネビウスなどの銘柄も大幅に下落した。"
+    },
+    {
+      "parentKey": "why",
+      "start": 97.255,
+      "speechEnd": 103.734,
+      "end": 104.434,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "投資家は設備投資と収益のリスクを再評価しています。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 104.434,
+      "speechEnd": 106.524,
+      "end": 106.754,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 106.754,
+      "speechEnd": 114.556,
+      "end": 115.256,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "信頼できる情報源からのさらなる最新情報に注目してください。"
+    }
+  ]
+}

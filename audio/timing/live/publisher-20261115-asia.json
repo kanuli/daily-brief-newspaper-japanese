@@ -1,0 +1,260 @@
+{
+  "version": 3,
+  "duration": 124.034,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 372,
+  "charactersPerMinute": 180.0,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.236,
+      "text": "ホワイトハウス、トランプ大統領が中国とロシアの指導者と核軍縮について話し合う予定だと発表"
+    },
+    {
+      "key": "dek",
+      "start": 14.236,
+      "end": 36.037,
+      "text": "ホワイトハウスは、トランプ大統領が深センでの習近平、プーチン両氏との会談で核兵器削減について話し合う予定だが、即時合意は期待していないと述べた。"
+    },
+    {
+      "key": "body-0",
+      "start": 36.037,
+      "end": 57.757,
+      "text": "ホワイトハウスは、トランプ大統領が深センでの習近平、プーチン両氏との会談で核兵器削減について話し合う予定だが、即時合意は期待していないと述べた。"
+    },
+    {
+      "key": "body-1",
+      "start": 57.757,
+      "end": 83.209,
+      "text": "米ロの新戦略兵器削減条約は今年失効するが、中国は米ロ方式の核軍縮交渉に直接参加していない。各当事者が共通の議題を確立できるかどうかは依然として不透明だ。"
+    },
+    {
+      "key": "why",
+      "start": 83.209,
+      "end": 113.212,
+      "text": "米ロの新戦略兵器削減条約は今年失効するが、中国は米ロ方式の核軍縮交渉に直接参加していない。各当事者が共通の議題を確立できるかどうかは依然として不透明だ。"
+    },
+    {
+      "key": "watch",
+      "start": 113.212,
+      "end": 124.034,
+      "text": "信頼できる情報源からのさらなる最新情報に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.229,
+      "end": 2.459,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ホワイトハウス、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.459,
+      "speechEnd": 9.704,
+      "end": 9.984,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "トランプ大統領が中国とロシアの指導者と核軍縮について"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.984,
+      "speechEnd": 13.536,
+      "end": 14.236,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "話し合う予定だと発表。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.236,
+      "speechEnd": 16.605,
+      "end": 16.835,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ホワイトハウスは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.835,
+      "speechEnd": 22.059,
+      "end": 22.289,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "トランプ大統領が深センでの習近平、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.289,
+      "speechEnd": 30.579,
+      "end": 30.809,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "プーチン両氏との会談で核兵器削減について話し合う予定だが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 30.809,
+      "speechEnd": 35.337,
+      "end": 36.037,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "即時合意は期待していないと述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.037,
+      "speechEnd": 38.405,
+      "end": 38.635,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ホワイトハウスは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.635,
+      "speechEnd": 43.86,
+      "end": 44.09,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "トランプ大統領が深センでの習近平、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 44.09,
+      "speechEnd": 52.379,
+      "end": 52.609,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "プーチン両氏との会談で核兵器削減について話し合う予定だが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.609,
+      "speechEnd": 57.137,
+      "end": 57.757,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "即時合意は期待していないと述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 57.757,
+      "speechEnd": 64.862,
+      "end": 65.092,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米ロの新戦略兵器削減条約は今年失効するが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 65.092,
+      "speechEnd": 72.058,
+      "end": 72.558,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "中国は米ロ方式の核軍縮交渉に直接参加していない。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 72.558,
+      "speechEnd": 82.589,
+      "end": 83.209,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "各当事者が共通の議題を確立できるかどうかは依然として不透明だ。"
+    },
+    {
+      "parentKey": "why",
+      "start": 83.209,
+      "speechEnd": 87.18,
+      "end": 87.68,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 87.68,
+      "speechEnd": 94.785,
+      "end": 95.015,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米ロの新戦略兵器削減条約は今年失効するが、"
+    },
+    {
+      "parentKey": "why",
+      "start": 95.015,
+      "speechEnd": 101.981,
+      "end": 102.481,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "中国は米ロ方式の核軍縮交渉に直接参加していない。"
+    },
+    {
+      "parentKey": "why",
+      "start": 102.481,
+      "speechEnd": 112.512,
+      "end": 113.212,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "各当事者が共通の議題を確立できるかどうかは依然として不透明だ。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 113.212,
+      "speechEnd": 115.302,
+      "end": 115.532,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 115.532,
+      "speechEnd": 123.334,
+      "end": 124.034,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "信頼できる情報源からのさらなる最新情報に注目してください。"
+    }
+  ]
+}

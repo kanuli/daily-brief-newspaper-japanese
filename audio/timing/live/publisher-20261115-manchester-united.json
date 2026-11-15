@@ -1,0 +1,310 @@
+{
+  "version": 3,
+  "duration": 126.153,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 421,
+  "charactersPerMinute": 200.2,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 11.588,
+      "text": "プジェッティーノ氏がマンチェスター・ユナイテッドの監督に就任、11月18日に就任予定"
+    },
+    {
+      "key": "dek",
+      "start": 11.588,
+      "end": 38.746,
+      "text": "ロイター通信は、マンチェスター・ユナイテッドがプジェティーノを新監督に任命したと報じた。チームはプレミアリーグシーズンのスタートがうまくいかなかったが、経営陣は競争力を再構築したいと考えている。"
+    },
+    {
+      "key": "body-0",
+      "start": 38.746,
+      "end": 65.824,
+      "text": "ロイター通信は、マンチェスター・ユナイテッドがプジェティーノを新監督に任命したと報じた。チームはプレミアリーグシーズンのスタートがうまくいかなかったが、経営陣は競争力を再構築したいと考えている。"
+    },
+    {
+      "key": "body-1",
+      "start": 65.824,
+      "end": 88.302,
+      "text": "プジェッティーノ氏は以前、米国代表チームを指揮し、トッテナムをヨーロッパリーグ決勝まで導いた。リーグ初戦は11月22日にアウェイでリヴァプールと対戦する予定。"
+    },
+    {
+      "key": "why",
+      "start": 88.302,
+      "end": 115.331,
+      "text": "プジェッティーノ氏は以前、米国代表チームを指揮し、トッテナムをヨーロッパリーグ決勝まで導いた。リーグ初戦は11月22日にアウェイでリヴァプールと対戦する予定。"
+    },
+    {
+      "key": "watch",
+      "start": 115.331,
+      "end": 126.153,
+      "text": "信頼できる情報源からのさらなる最新情報に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 6.548,
+      "end": 6.778,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "プジェッティーノ氏がマンチェスター・ユナイテッドの監督に就任、"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.778,
+      "speechEnd": 10.888,
+      "end": 11.588,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "11月18日に就任予定。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 11.588,
+      "speechEnd": 14.096,
+      "end": 14.326,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.326,
+      "speechEnd": 17.669,
+      "end": 17.949,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "マンチェスター・ユナイテッドが"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.949,
+      "speechEnd": 23.87,
+      "end": 24.37,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "プジェティーノを新監督に任命したと報じた。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.37,
+      "speechEnd": 29.177,
+      "end": 29.457,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "チームはプレミアリーグシーズンのスタートが"
+    },
+    {
+      "parentKey": "dek",
+      "start": 29.457,
+      "speechEnd": 32.313,
+      "end": 32.543,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "うまくいかなかったが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 32.543,
+      "speechEnd": 38.046,
+      "end": 38.746,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "経営陣は競争力を再構築したいと考えている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.746,
+      "speechEnd": 41.254,
+      "end": 41.484,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.484,
+      "speechEnd": 44.828,
+      "end": 45.108,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "マンチェスター・ユナイテッドが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.108,
+      "speechEnd": 51.029,
+      "end": 51.529,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "プジェティーノを新監督に任命したと報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.529,
+      "speechEnd": 56.335,
+      "end": 56.615,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "チームはプレミアリーグシーズンのスタートが"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.615,
+      "speechEnd": 59.471,
+      "end": 59.701,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "うまくいかなかったが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.701,
+      "speechEnd": 65.204,
+      "end": 65.824,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "経営陣は競争力を再構築したいと考えている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 65.824,
+      "speechEnd": 69.307,
+      "end": 69.537,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "プジェッティーノ氏は以前、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 69.537,
+      "speechEnd": 73.299,
+      "end": 73.529,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国代表チームを指揮し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 73.529,
+      "speechEnd": 78.057,
+      "end": 78.557,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "トッテナムをヨーロッパリーグ決勝まで導いた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 78.557,
+      "speechEnd": 87.682,
+      "end": 88.302,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "リーグ初戦は11月22日にアウェイでリヴァプールと対戦する予定。"
+    },
+    {
+      "parentKey": "why",
+      "start": 88.302,
+      "speechEnd": 92.273,
+      "end": 92.773,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 92.773,
+      "speechEnd": 96.256,
+      "end": 96.486,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "プジェッティーノ氏は以前、"
+    },
+    {
+      "parentKey": "why",
+      "start": 96.486,
+      "speechEnd": 100.248,
+      "end": 100.478,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国代表チームを指揮し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 100.478,
+      "speechEnd": 105.006,
+      "end": 105.506,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "トッテナムをヨーロッパリーグ決勝まで導いた。"
+    },
+    {
+      "parentKey": "why",
+      "start": 105.506,
+      "speechEnd": 114.631,
+      "end": 115.331,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "リーグ初戦は11月22日にアウェイでリヴァプールと対戦する予定。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 115.331,
+      "speechEnd": 117.421,
+      "end": 117.651,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 117.651,
+      "speechEnd": 125.453,
+      "end": 126.153,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "信頼できる情報源からのさらなる最新情報に注目してください。"
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "version": 3,
+  "duration": 117.654,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 397,
+  "charactersPerMinute": 202.5,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 7.805,
+      "text": "チェルシー女子がマンチェスター・シティを破って首位に立った"
+    },
+    {
+      "key": "dek",
+      "start": 7.805,
+      "end": 28.331,
+      "text": "イングランド女子スーパーリーグでは、土曜日に首位攻防戦が行われ、チェルシーがサンディ・ボルティモアのゴールでマンチェスター・シティを1-0で破りました。"
+    },
+    {
+      "key": "body-0",
+      "start": 28.331,
+      "end": 45.899,
+      "text": "イングランド女子スーパーリーグは土曜日に頂上決戦を行い、チェルシーがサンディ・ボルティモアのゴールでマンチェスター・シティを１－０で破った。"
+    },
+    {
+      "key": "body-1",
+      "start": 45.899,
+      "end": 74.091,
+      "text": "同じ日、女子サッカーチームのマンチェスター・ユナイテッドはマヤ・ル・ティシエとエリザベス・テルランドの得点でクリスタル・パレスを2-0で破った。マンチェスター・シティが今季初黒星を喫し、首位の状況が一変した。"
+    },
+    {
+      "key": "why",
+      "start": 74.091,
+      "end": 106.833,
+      "text": "同じ日、女子サッカーチームのマンチェスター・ユナイテッドはマヤ・ル・ティシエとエリザベス・テルランドの得点でクリスタル・パレスを2-0で破った。マンチェスター・シティが今季初黒星を喫し、首位の状況が一変した。"
+    },
+    {
+      "key": "watch",
+      "start": 106.833,
+      "end": 117.654,
+      "text": "信頼できる情報源からのさらなる最新情報に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.105,
+      "end": 7.805,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "チェルシー女子がマンチェスター・シティを破って首位に立った。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 7.805,
+      "speechEnd": 12.403,
+      "end": 12.633,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "イングランド女子スーパーリーグでは、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.633,
+      "speechEnd": 17.439,
+      "end": 17.669,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "土曜日に首位攻防戦が行われ、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.669,
+      "speechEnd": 27.631,
+      "end": 28.331,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "チェルシーがサンディ・ボルティモアのゴールでマンチェスター・シティを1-0で破りました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 28.331,
+      "speechEnd": 35.854,
+      "end": 36.084,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "イングランド女子スーパーリーグは土曜日に頂上決戦を行い、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.084,
+      "speechEnd": 45.279,
+      "end": 45.899,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "チェルシーがサンディ・ボルティモアのゴールでマンチェスター・シティを１－０で破った。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 45.899,
+      "speechEnd": 48.128,
+      "end": 48.358,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同じ日、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 48.358,
+      "speechEnd": 53.792,
+      "end": 54.072,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "女子サッカーチームのマンチェスター・ユナイテッドは"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 54.072,
+      "speechEnd": 64.312,
+      "end": 64.812,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "マヤ・ル・ティシエとエリザベス・テルランドの得点でクリスタル・パレスを2-0で破った。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 64.812,
+      "speechEnd": 69.897,
+      "end": 70.127,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "マンチェスター・シティが今季初黒星を喫し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 70.127,
+      "speechEnd": 73.471,
+      "end": 74.091,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "首位の状況が一変した。"
+    },
+    {
+      "parentKey": "why",
+      "start": 74.091,
+      "speechEnd": 78.061,
+      "end": 78.561,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 78.561,
+      "speechEnd": 80.79,
+      "end": 81.02,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同じ日、"
+    },
+    {
+      "parentKey": "why",
+      "start": 81.02,
+      "speechEnd": 86.454,
+      "end": 86.734,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "女子サッカーチームのマンチェスター・ユナイテッドは"
+    },
+    {
+      "parentKey": "why",
+      "start": 86.734,
+      "speechEnd": 96.974,
+      "end": 97.474,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "マヤ・ル・ティシエとエリザベス・テルランドの得点でクリスタル・パレスを2-0で破った。"
+    },
+    {
+      "parentKey": "why",
+      "start": 97.474,
+      "speechEnd": 102.559,
+      "end": 102.789,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "マンチェスター・シティが今季初黒星を喫し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 102.789,
+      "speechEnd": 106.133,
+      "end": 106.833,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "首位の状況が一変した。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 106.833,
+      "speechEnd": 108.922,
+      "end": 109.152,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 109.152,
+      "speechEnd": 116.954,
+      "end": 117.654,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "信頼できる情報源からのさらなる最新情報に注目してください。"
+    }
+  ]
+}

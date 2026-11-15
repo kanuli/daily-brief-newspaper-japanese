@@ -1,0 +1,230 @@
+{
+  "version": 3,
+  "duration": 105.879,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 324,
+  "charactersPerMinute": 183.6,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 9.637,
+      "text": "ウクライナ、ドンバス領土をNATO加盟国と交換することを拒否"
+    },
+    {
+      "key": "dek",
+      "start": 9.637,
+      "end": 29.536,
+      "text": "ゼレンスキー氏は、米国は最近の交渉で領土交換と安全保障の概念を提案したが、ウクライナは直接領土を譲渡するつもりはないと述べた。"
+    },
+    {
+      "key": "body-0",
+      "start": 29.536,
+      "end": 49.354,
+      "text": "ゼレンスキー氏は、米国は最近の交渉で領土交換と安全保障の概念を提案したが、ウクライナは直接領土を譲渡するつもりはないと述べた。"
+    },
+    {
+      "key": "body-1",
+      "start": 49.354,
+      "end": 69.931,
+      "text": "アブダビ交渉では領土問題は解決しなかったが、大規模な捕虜交換については原則的な合意に達した。次期交渉への欧州の参加はまだ調整中である。"
+    },
+    {
+      "key": "why",
+      "start": 69.931,
+      "end": 95.057,
+      "text": "アブダビ交渉では領土問題は解決しなかったが、大規模な捕虜交換については原則的な合意に達した。次期交渉への欧州の参加はまだ調整中である。"
+    },
+    {
+      "key": "watch",
+      "start": 95.057,
+      "end": 105.879,
+      "text": "信頼できる情報源からのさらなる最新情報に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.09,
+      "end": 2.32,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ウクライナ、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.32,
+      "speechEnd": 8.937,
+      "end": 9.637,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "ドンバス領土をNATO加盟国と交換することを拒否。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 9.637,
+      "speechEnd": 12.424,
+      "end": 12.654,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ゼレンスキー氏は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.654,
+      "speechEnd": 21.919,
+      "end": 22.149,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国は最近の交渉で領土交換と安全保障の概念を提案したが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.149,
+      "speechEnd": 28.836,
+      "end": 29.536,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "ウクライナは直接領土を譲渡するつもりはないと述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 29.536,
+      "speechEnd": 32.322,
+      "end": 32.552,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ゼレンスキー氏は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 32.552,
+      "speechEnd": 41.817,
+      "end": 42.047,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国は最近の交渉で領土交換と安全保障の概念を提案したが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.047,
+      "speechEnd": 48.734,
+      "end": 49.354,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ウクライナは直接領土を譲渡するつもりはないと述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 49.354,
+      "speechEnd": 55.136,
+      "end": 55.366,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "アブダビ交渉では領土問題は解決しなかったが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 55.366,
+      "speechEnd": 62.263,
+      "end": 62.763,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "大規模な捕虜交換については原則的な合意に達した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 62.763,
+      "speechEnd": 69.311,
+      "end": 69.931,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "次期交渉への欧州の参加はまだ調整中である。"
+    },
+    {
+      "parentKey": "why",
+      "start": 69.931,
+      "speechEnd": 73.901,
+      "end": 74.401,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 74.401,
+      "speechEnd": 80.183,
+      "end": 80.413,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "アブダビ交渉では領土問題は解決しなかったが、"
+    },
+    {
+      "parentKey": "why",
+      "start": 80.413,
+      "speechEnd": 87.309,
+      "end": 87.809,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "大規模な捕虜交換については原則的な合意に達した。"
+    },
+    {
+      "parentKey": "why",
+      "start": 87.809,
+      "speechEnd": 94.357,
+      "end": 95.057,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "次期交渉への欧州の参加はまだ調整中である。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 95.057,
+      "speechEnd": 97.147,
+      "end": 97.377,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 97.377,
+      "speechEnd": 105.179,
+      "end": 105.879,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "信頼できる情報源からのさらなる最新情報に注目してください。"
+    }
+  ]
+}
