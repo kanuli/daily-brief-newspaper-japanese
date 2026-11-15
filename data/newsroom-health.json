@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "assessedAt": "2026-11-15T15:43:27.390Z",
+  "assessedAt": "2026-11-15T16:47:44.037Z",
   "state": "GREEN",
   "summary": "ALL_REQUIRED_NEWS_LAYERS_VOCAB_AND_DELIVERY_VERIFIED_BY_NAS",
   "faultReasons": [],
@@ -14,8 +14,8 @@
     "live": {
       "current": true,
       "degradedTranslation": false,
-      "upstream": "2026-11-15T23:01:00+08:00",
-      "japanese": "2026-11-15T23:01:00+08:00",
+      "upstream": "2026-11-16T00:02:43+08:00",
+      "japanese": "2026-11-16T00:02:43+08:00",
       "lagMinutes": 0
     },
     "desk": {
@@ -28,19 +28,19 @@
     "stocks": {
       "current": true,
       "degradedTranslation": false,
-      "upstream": "2026-11-15T14:55:00.059236+00:00",
-      "japanese": "2026-11-15T14:55:00.059236+00:00",
+      "upstream": "2026-11-15T16:05:00.081467+00:00",
+      "japanese": "2026-11-15T16:05:00.081467+00:00",
       "lagMinutes": 0,
       "relativeCurrent": true,
       "sourceAbsoluteFresh": true,
-      "sourceAgeMinutes": 48,
+      "sourceAgeMinutes": 43,
       "maxAgeHours": 8
     },
     "vocab": {
       "current": true,
-      "expectedHktDate": "2026-11-15",
-      "upstream": "2026-11-15",
-      "japanese": "2026-11-15",
+      "expectedHktDate": "2026-11-16",
+      "upstream": "2026-11-16",
+      "japanese": "2026-11-16",
       "datedArchivePresent": true,
       "datedArchiveMatchesLatest": true
     },
@@ -57,9 +57,9 @@
         "github-f3",
         "github-pages"
       ],
-      "publicationFingerprint": "2026-10-13|2026-11-15T15:01:00.000Z|2026-10-13T11:12:00.000Z|2026-11-15T14:55:00.059Z|2026-11-15",
-      "attestedFingerprint": "2026-10-13|2026-11-15T15:01:00.000Z|2026-10-13T11:12:00.000Z|2026-11-15T14:55:00.059Z|2026-11-15",
-      "attestedAt": "2026-11-15T15:42:32Z"
+      "publicationFingerprint": "2026-10-13|2026-11-15T16:02:43.000Z|2026-10-13T11:12:00.000Z|2026-11-15T16:05:00.081Z|2026-11-16",
+      "attestedFingerprint": "2026-10-13|2026-11-15T16:02:43.000Z|2026-10-13T11:12:00.000Z|2026-11-15T16:05:00.081Z|2026-11-16",
+      "attestedAt": "2026-11-15T16:46:57Z"
     }
   },
   "recovery": {
@@ -94,7 +94,7 @@
   },
   "robot": {
     "current": true,
-    "runId": 43731439014,
+    "runId": 43737450643,
     "event": "workflow_dispatch",
     "role": "nas-attestation-auditor",
     "executor": "github-auditor-only",
