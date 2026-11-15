@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "assessedAt": "2026-11-15T07:02:42.175Z",
+  "assessedAt": "2026-11-15T07:02:52.260Z",
   "state": "RED",
   "summary": "NOT_GREEN:live-lag-minutes=58",
   "faultReasons": [
@@ -35,7 +35,7 @@
       "lagMinutes": 0,
       "relativeCurrent": true,
       "sourceAbsoluteFresh": true,
-      "sourceAgeMinutes": 17,
+      "sourceAgeMinutes": 18,
       "maxAgeHours": 8
     },
     "vocab": {
@@ -96,7 +96,7 @@
   },
   "robot": {
     "current": true,
-    "runId": 43688140224,
+    "runId": 43688141036,
     "event": "workflow_dispatch",
     "role": "nas-attestation-auditor",
     "executor": "github-auditor-only",
