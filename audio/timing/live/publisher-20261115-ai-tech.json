@@ -1,13 +1,13 @@
 {
   "version": 3,
-  "duration": 133.15,
+  "duration": 261.086,
   "voice": "F3",
   "language": "ja",
   "speed": 0.72,
   "deliveryProfile": "jp-tv-news-semantic-v4",
   "targetMaxCharactersPerMinute": 360.0,
-  "characters": 439,
-  "charactersPerMinute": 197.8,
+  "characters": 781,
+  "charactersPerMinute": 179.5,
   "tempoCalibrationFactor": 1.0,
   "pauseProfile": {
     "micro": 0.14,
@@ -21,246 +21,426 @@
     {
       "key": "title",
       "start": 0.0,
-      "end": 13.608,
-      "text": "Microsoftは、世界的なMicrosoft 365サービスの停止は修正されたと発表"
+      "end": 15.998,
+      "text": "FRB総裁、AIが雇用に影響を与える可能性、生産性の向上が均等に分配されない可能性があると警告"
     },
     {
       "key": "dek",
-      "start": 13.608,
-      "end": 36.476,
-      "text": "AP通信は、Microsoftが数時間続いた世界的な障害の後、Outlook、Teams、Copilotなどのサービスが復旧したことを確認したと報じた。"
+      "start": 15.998,
+      "end": 76.2,
+      "text": "ロイター通信は11月12日、バー米連邦準備制度理事会が、人工知能の普及は短期的には雇用市場、特に若年層や経験の浅い従業員に深刻な影響を与える可能性があると警告したと報じた。同氏は、まだ包括的な大規模失業は発生していないが、一部の産業では人間の労働力を人工知能に置き換える兆候があると指摘した。企業が労働変革よりも早くそれを導入すれば、所得格差が拡大する可能性がある。"
     },
     {
       "key": "body-0",
-      "start": 36.476,
-      "end": 59.263,
-      "text": "AP通信は、Microsoftが数時間続いた世界的な障害の後、Outlook、Teams、Copilotなどのサービスが復旧したことを確認したと報じた。"
+      "start": 76.2,
+      "end": 136.322,
+      "text": "ロイター通信は11月12日、バー米連邦準備制度理事会が、人工知能の普及は短期的には雇用市場、特に若年層や経験の浅い従業員に深刻な影響を与える可能性があると警告したと報じた。同氏は、まだ包括的な大規模失業は発生していないが、一部の産業では人間の労働力を人工知能に置き換える兆候があると指摘した。企業が労働変革よりも早くそれを導入すれば、所得格差が拡大する可能性がある。"
     },
     {
       "key": "body-1",
-      "start": 59.263,
-      "end": 88.521,
-      "text": "Microsoftは、この問題はサイバー攻撃ではなく、アップグレード後のネットワーク容量の変化に関連していると述べた。この事件は、公的機関や企業におけるクラウド サービスのバックアップの必要性を改めて浮き彫りにしました。"
+      "start": 136.322,
+      "end": 210.563,
+      "text": "バー氏はまた、人工知能の長期的な経済的利益はまだ不確実だと強調した。競争により、中小企業はツールを入手し、生産性の向上を共有することが容易になりますが、市場が少数の大手サプライヤーによって支配されている場合、収益が非常に集中する可能性もあります。データセンター、コンピューティングリソース、建設人材に対する需要の増加により、短期的にはコストが上昇するでしょう。政策立案者は職業訓練、競争、インフレの影響を同時に評価する必要があるが、技術進歩が直ちに価格を下げるとは想定できない。"
     },
     {
       "key": "why",
-      "start": 88.521,
-      "end": 122.329,
+      "start": 210.563,
+      "end": 244.371,
       "text": "Microsoftは、この問題はサイバー攻撃ではなく、アップグレード後のネットワーク容量の変化に関連していると述べた。この事件は、公的機関や企業におけるクラウド サービスのバックアップの必要性を改めて浮き彫りにしました。"
     },
     {
       "key": "watch",
-      "start": 122.329,
-      "end": 133.15,
-      "text": "信頼できる情報源からのさらなる最新情報に注目してください。"
+      "start": 244.371,
+      "end": 261.086,
+      "text": "企業の採用、労働者の再教育、人工知能関連の投資がインフレに与える影響に注意してください。"
     }
   ],
   "semanticUnits": [
     {
       "parentKey": "title",
       "start": 0.0,
-      "speechEnd": 2.508,
-      "end": 2.738,
+      "speechEnd": 2.159,
+      "end": 2.389,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
-      "text": "Microsoftは、"
+      "text": "FRB総裁、"
     },
     {
       "parentKey": "title",
-      "start": 2.738,
-      "speechEnd": 12.908,
-      "end": 13.608,
+      "start": 2.389,
+      "speechEnd": 7.057,
+      "end": 7.287,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "AIが雇用に影響を与える可能性、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.287,
+      "speechEnd": 15.298,
+      "end": 15.998,
       "pause": 0.7,
       "intendedPause": 0.7,
       "reason": "punctuation-sentence",
-      "text": "世界的なMicrosoft 365サービスの停止は修正されたと発表。"
+      "text": "生産性の向上が均等に分配されない可能性があると警告。"
     },
     {
       "parentKey": "dek",
-      "start": 13.608,
-      "speechEnd": 15.837,
-      "end": 16.067,
+      "start": 15.998,
+      "speechEnd": 20.595,
+      "end": 20.825,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
-      "text": "AP通信は、"
+      "text": "ロイター通信は11月12日、"
     },
     {
       "parentKey": "dek",
-      "start": 16.067,
-      "speechEnd": 22.615,
-      "end": 22.845,
+      "start": 20.825,
+      "speechEnd": 24.935,
+      "end": 25.165,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
-      "text": "Microsoftが数時間続いた世界的な障害の後、"
+      "text": "バー米連邦準備制度理事会が、"
     },
     {
       "parentKey": "dek",
-      "start": 22.845,
-      "speechEnd": 25.074,
-      "end": 25.304,
+      "start": 25.165,
+      "speechEnd": 30.529,
+      "end": 30.759,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
-      "text": "Outlook、"
+      "text": "人工知能の普及は短期的には雇用市場、"
     },
     {
       "parentKey": "dek",
-      "start": 25.304,
-      "speechEnd": 27.394,
-      "end": 27.624,
-      "pause": 0.23,
-      "intendedPause": 0.23,
-      "reason": "punctuation-comma",
-      "text": "Teams、"
-    },
-    {
-      "parentKey": "dek",
-      "start": 27.624,
-      "speechEnd": 30.968,
-      "end": 31.248,
+      "start": 30.759,
+      "speechEnd": 40.024,
+      "end": 40.304,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "semantic-boundary",
-      "text": "Copilotなどのサービスが"
+      "text": "特に若年層や経験の浅い従業員に深刻な影響を与える可能性が"
     },
     {
       "parentKey": "dek",
-      "start": 31.248,
-      "speechEnd": 35.776,
-      "end": 36.476,
-      "pause": 0.7,
-      "intendedPause": 0.7,
-      "reason": "punctuation-sentence",
-      "text": "復旧したことを確認したと報じた。"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 36.476,
-      "speechEnd": 38.705,
-      "end": 38.935,
-      "pause": 0.23,
-      "intendedPause": 0.23,
-      "reason": "punctuation-comma",
-      "text": "AP通信は、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 38.935,
-      "speechEnd": 45.483,
-      "end": 45.713,
-      "pause": 0.23,
-      "intendedPause": 0.23,
-      "reason": "punctuation-comma",
-      "text": "Microsoftが数時間続いた世界的な障害の後、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 45.713,
-      "speechEnd": 47.942,
-      "end": 48.172,
-      "pause": 0.23,
-      "intendedPause": 0.23,
-      "reason": "punctuation-comma",
-      "text": "Outlook、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 48.172,
-      "speechEnd": 50.262,
-      "end": 50.492,
-      "pause": 0.23,
-      "intendedPause": 0.23,
-      "reason": "punctuation-comma",
-      "text": "Teams、"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 50.492,
-      "speechEnd": 53.835,
-      "end": 54.115,
-      "pause": 0.28,
-      "intendedPause": 0.28,
-      "reason": "semantic-boundary",
-      "text": "Copilotなどのサービスが"
-    },
-    {
-      "parentKey": "body-0",
-      "start": 54.115,
-      "speechEnd": 58.643,
-      "end": 59.263,
-      "pause": 0.62,
-      "intendedPause": 0.62,
-      "reason": "punctuation-sentence",
-      "text": "復旧したことを確認したと報じた。"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 59.263,
-      "speechEnd": 61.771,
-      "end": 62.001,
-      "pause": 0.23,
-      "intendedPause": 0.23,
-      "reason": "punctuation-comma",
-      "text": "Microsoftは、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 62.001,
-      "speechEnd": 66.041,
-      "end": 66.271,
-      "pause": 0.23,
-      "intendedPause": 0.23,
-      "reason": "punctuation-comma",
-      "text": "この問題はサイバー攻撃ではなく、"
-    },
-    {
-      "parentKey": "body-1",
-      "start": 66.271,
-      "speechEnd": 73.446,
-      "end": 73.946,
+      "start": 40.304,
+      "speechEnd": 43.578,
+      "end": 44.078,
       "pause": 0.5,
       "intendedPause": 0.5,
       "reason": "punctuation-sentence",
-      "text": "アップグレード後のネットワーク容量の変化に関連していると述べた。"
+      "text": "あると警告したと報じた。"
     },
     {
-      "parentKey": "body-1",
-      "start": 73.946,
-      "speechEnd": 76.245,
-      "end": 76.475,
+      "parentKey": "dek",
+      "start": 44.078,
+      "speechEnd": 46.237,
+      "end": 46.467,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
-      "text": "この事件は、"
+      "text": "同氏は、"
     },
     {
-      "parentKey": "body-1",
-      "start": 76.475,
-      "speechEnd": 84.347,
-      "end": 84.627,
+      "parentKey": "dek",
+      "start": 46.467,
+      "speechEnd": 52.806,
+      "end": 53.036,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "まだ包括的な大規模失業は発生していないが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 53.036,
+      "speechEnd": 63.485,
+      "end": 63.985,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "一部の産業では人間の労働力を人工知能に置き換える兆候があると指摘した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 63.985,
+      "speechEnd": 70.533,
+      "end": 70.763,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "企業が労働変革よりも早くそれを導入すれば、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 70.763,
+      "speechEnd": 75.5,
+      "end": 76.2,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "所得格差が拡大する可能性がある。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.2,
+      "speechEnd": 80.798,
+      "end": 81.028,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信は11月12日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 81.028,
+      "speechEnd": 85.137,
+      "end": 85.367,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "バー米連邦準備制度理事会が、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 85.367,
+      "speechEnd": 90.731,
+      "end": 90.961,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "人工知能の普及は短期的には雇用市場、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 90.961,
+      "speechEnd": 100.226,
+      "end": 100.506,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "semantic-boundary",
-      "text": "公的機関や企業におけるクラウド サービスのバックアップの必要性を"
+      "text": "特に若年層や経験の浅い従業員に深刻な影響を与える可能性が"
     },
     {
-      "parentKey": "body-1",
-      "start": 84.627,
-      "speechEnd": 87.901,
-      "end": 88.521,
+      "parentKey": "body-0",
+      "start": 100.506,
+      "speechEnd": 103.78,
+      "end": 104.28,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "あると警告したと報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 104.28,
+      "speechEnd": 106.44,
+      "end": 106.67,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同氏は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 106.67,
+      "speechEnd": 113.009,
+      "end": 113.239,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "まだ包括的な大規模失業は発生していないが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 113.239,
+      "speechEnd": 123.688,
+      "end": 124.188,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "一部の産業では人間の労働力を人工知能に置き換える兆候があると指摘した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 124.188,
+      "speechEnd": 130.736,
+      "end": 130.966,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "企業が労働変革よりも早くそれを導入すれば、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 130.966,
+      "speechEnd": 135.702,
+      "end": 136.322,
       "pause": 0.62,
       "intendedPause": 0.62,
       "reason": "punctuation-sentence",
-      "text": "改めて浮き彫りにしました。"
+      "text": "所得格差が拡大する可能性がある。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 136.322,
+      "speechEnd": 138.691,
+      "end": 138.921,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "バー氏はまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 138.921,
+      "speechEnd": 147.21,
+      "end": 147.71,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "人工知能の長期的な経済的利益はまだ不確実だと強調した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 147.71,
+      "speechEnd": 149.94,
+      "end": 150.17,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "競争により、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 150.17,
+      "speechEnd": 154.419,
+      "end": 154.649,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中小企業はツールを入手し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 154.649,
+      "speechEnd": 161.545,
+      "end": 161.775,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "生産性の向上を共有することが容易になりますが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 161.775,
+      "speechEnd": 168.88,
+      "end": 169.11,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "市場が少数の大手サプライヤーによって支配されている場合、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 169.11,
+      "speechEnd": 174.544,
+      "end": 175.044,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "収益が非常に集中する可能性もあります。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 175.044,
+      "speechEnd": 177.343,
+      "end": 177.573,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "データセンター、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 177.573,
+      "speechEnd": 180.638,
+      "end": 180.868,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "コンピューティングリソース、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 180.868,
+      "speechEnd": 185.605,
+      "end": 185.835,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "建設人材に対する需要の増加により、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 185.835,
+      "speechEnd": 190.223,
+      "end": 190.723,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "短期的にはコストが上昇するでしょう。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 190.723,
+      "speechEnd": 194.694,
+      "end": 194.924,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "政策立案者は職業訓練、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 194.924,
+      "speechEnd": 196.944,
+      "end": 197.174,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "競争、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 197.174,
+      "speechEnd": 202.956,
+      "end": 203.186,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "インフレの影響を同時に評価する必要があるが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 203.186,
+      "speechEnd": 209.943,
+      "end": 210.563,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "技術進歩が直ちに価格を下げるとは想定できない。"
     },
     {
       "parentKey": "why",
-      "start": 88.521,
-      "speechEnd": 92.491,
-      "end": 92.991,
+      "start": 210.563,
+      "speechEnd": 214.533,
+      "end": 215.033,
       "pause": 0.5,
       "intendedPause": 0.5,
       "reason": "punctuation-sentence",
@@ -268,9 +448,9 @@
     },
     {
       "parentKey": "why",
-      "start": 92.991,
-      "speechEnd": 95.499,
-      "end": 95.729,
+      "start": 215.033,
+      "speechEnd": 217.541,
+      "end": 217.771,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
@@ -278,9 +458,9 @@
     },
     {
       "parentKey": "why",
-      "start": 95.729,
-      "speechEnd": 99.769,
-      "end": 99.999,
+      "start": 217.771,
+      "speechEnd": 221.811,
+      "end": 222.041,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
@@ -288,9 +468,9 @@
     },
     {
       "parentKey": "why",
-      "start": 99.999,
-      "speechEnd": 107.174,
-      "end": 107.674,
+      "start": 222.041,
+      "speechEnd": 229.216,
+      "end": 229.716,
       "pause": 0.5,
       "intendedPause": 0.5,
       "reason": "punctuation-sentence",
@@ -298,9 +478,9 @@
     },
     {
       "parentKey": "why",
-      "start": 107.674,
-      "speechEnd": 109.973,
-      "end": 110.203,
+      "start": 229.716,
+      "speechEnd": 232.015,
+      "end": 232.245,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
@@ -308,9 +488,9 @@
     },
     {
       "parentKey": "why",
-      "start": 110.203,
-      "speechEnd": 118.075,
-      "end": 118.355,
+      "start": 232.245,
+      "speechEnd": 240.117,
+      "end": 240.397,
       "pause": 0.28,
       "intendedPause": 0.28,
       "reason": "semantic-boundary",
@@ -318,9 +498,9 @@
     },
     {
       "parentKey": "why",
-      "start": 118.355,
-      "speechEnd": 121.629,
-      "end": 122.329,
+      "start": 240.397,
+      "speechEnd": 243.671,
+      "end": 244.371,
       "pause": 0.7,
       "intendedPause": 0.7,
       "reason": "punctuation-sentence",
@@ -328,9 +508,9 @@
     },
     {
       "parentKey": "watch",
-      "start": 122.329,
-      "speechEnd": 124.418,
-      "end": 124.648,
+      "start": 244.371,
+      "speechEnd": 246.46,
+      "end": 246.69,
       "pause": 0.23,
       "intendedPause": 0.23,
       "reason": "punctuation-comma",
@@ -338,13 +518,33 @@
     },
     {
       "parentKey": "watch",
-      "start": 124.648,
-      "speechEnd": 132.45,
-      "end": 133.15,
+      "start": 246.69,
+      "speechEnd": 249.059,
+      "end": 249.289,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "企業の採用、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 249.289,
+      "speechEnd": 252.075,
+      "end": 252.305,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "労働者の再教育、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 252.305,
+      "speechEnd": 260.386,
+      "end": 261.086,
       "pause": 0.7,
       "intendedPause": 0.7,
       "reason": "punctuation-sentence",
-      "text": "信頼できる情報源からのさらなる最新情報に注目してください。"
+      "text": "人工知能関連の投資がインフレに与える影響に注意してください。"
     }
   ]
 }
