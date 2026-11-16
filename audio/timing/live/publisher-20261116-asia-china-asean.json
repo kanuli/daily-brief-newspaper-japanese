@@ -1,0 +1,620 @@
+{
+  "version": 3,
+  "duration": 344.241,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 1025,
+  "charactersPerMinute": 178.7,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 17.719,
+      "text": "李強氏はASEAN首脳会議で自由貿易を主張したが、南シナ海での行動規範については依然として合意が得られていない"
+    },
+    {
+      "key": "dek",
+      "start": 17.719,
+      "end": 91.507,
+      "text": "中国の李強首相は11月16日にマニラで開かれたASEAN首脳会議で、中国とASEANの経済貿易関係は近年拡大を続けており、年間の二国間貿易額は1兆ドルを超え、累計双方向投資は5000億ドルを超えていると述べた。同氏は保護主義と地政学的な緊張が高まる中、すべての当事者に対し多国間協力と自由貿易を維持するよう呼び掛けた。ロイター通信は、ASEANの主要経済国が同時に米国との関係強化を模索しており、地域外交が単一の陣営の選択ではないことを示していると報じた。"
+    },
+    {
+      "key": "body-0",
+      "start": 91.507,
+      "end": 165.214,
+      "text": "中国の李強首相は11月16日にマニラで開かれたASEAN首脳会議で、中国とASEANの経済貿易関係は近年拡大を続けており、年間の二国間貿易額は1兆ドルを超え、累計双方向投資は5000億ドルを超えていると述べた。同氏は保護主義と地政学的な緊張が高まる中、すべての当事者に対し多国間協力と自由貿易を維持するよう呼び掛けた。ロイター通信は、ASEANの主要経済国が同時に米国との関係強化を模索しており、地域外交が単一の陣営の選択ではないことを示していると報じた。"
+    },
+    {
+      "key": "body-1",
+      "start": 165.214,
+      "end": 242.388,
+      "text": "トランプ米大統領は火曜日にマニラを訪問し、ASEAN首脳らと会談し、2年ぶりに開催される四カ国安全保障対話首脳会議に参加する予定だ。高市早苗首相も、自由で開かれたインド太平洋協力を推進すると述べた。首脳会談は、経済貿易の相互依存と海洋安全保障の相違が依然として共存していることを反映し、南シナ海における行動規範について中国政府と合意に達することができなかった。将来的に各国が貿易、市場アクセス、安全保障上の取り組みのバランスをどのように取るかは、地域関係を示す重要な指標となるだろう。"
+    },
+    {
+      "key": "why",
+      "start": 242.388,
+      "end": 324.113,
+      "text": "トランプ米大統領は火曜日にマニラを訪問し、ASEAN首脳らと会談し、2年ぶりに開催される四カ国安全保障対話首脳会議に参加する予定だ。高市早苗首相も、自由で開かれたインド太平洋協力を推進すると述べた。首脳会談は、経済貿易の相互依存と海洋安全保障の相違が依然として共存していることを反映し、南シナ海における行動規範について中国政府と合意に達することができなかった。将来的に各国が貿易、市場アクセス、安全保障上の取り組みのバランスをどのように取るかは、地域関係を示す重要な指標となるだろう。"
+    },
+    {
+      "key": "watch",
+      "start": 324.113,
+      "end": 344.241,
+      "text": "トランプ大統領のマニラ会談、南シナ海行動規範交渉、そしてその後の中国とASEAN間の経済・貿易協定に注目してほしい。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.872,
+      "end": 8.102,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "李強氏はASEAN首脳会議で自由貿易を主張したが、"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.102,
+      "speechEnd": 12.42,
+      "end": 12.7,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "南シナ海での行動規範については"
+    },
+    {
+      "parentKey": "title",
+      "start": 12.7,
+      "speechEnd": 17.019,
+      "end": 17.719,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "依然として合意が得られていない。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.719,
+      "speechEnd": 29.004,
+      "end": 29.234,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中国の李強首相は11月16日にマニラで開かれたASEAN首脳会議で、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 29.234,
+      "speechEnd": 37.036,
+      "end": 37.266,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中国とASEANの経済貿易関係は近年拡大を続けており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 37.266,
+      "speechEnd": 43.675,
+      "end": 43.905,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "年間の二国間貿易額は1兆ドルを超え、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 43.905,
+      "speechEnd": 51.637,
+      "end": 52.137,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "累計双方向投資は5000億ドルを超えていると述べた。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 52.137,
+      "speechEnd": 59.312,
+      "end": 59.542,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同氏は保護主義と地政学的な緊張が高まる中、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 59.542,
+      "speechEnd": 66.369,
+      "end": 66.649,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "すべての当事者に対し多国間協力と自由貿易を"
+    },
+    {
+      "parentKey": "dek",
+      "start": 66.649,
+      "speechEnd": 69.853,
+      "end": 70.353,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "維持するよう呼び掛けた。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 70.353,
+      "speechEnd": 72.861,
+      "end": 73.091,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 73.091,
+      "speechEnd": 81.798,
+      "end": 82.028,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ASEANの主要経済国が同時に米国との関係強化を模索しており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 82.028,
+      "speechEnd": 86.765,
+      "end": 87.045,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "地域外交が単一の陣営の選択では"
+    },
+    {
+      "parentKey": "dek",
+      "start": 87.045,
+      "speechEnd": 90.807,
+      "end": 91.507,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "ないことを示していると報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 91.507,
+      "speechEnd": 102.792,
+      "end": 103.022,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中国の李強首相は11月16日にマニラで開かれたASEAN首脳会議で、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 103.022,
+      "speechEnd": 110.824,
+      "end": 111.054,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中国とASEANの経済貿易関係は近年拡大を続けており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 111.054,
+      "speechEnd": 117.462,
+      "end": 117.692,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "年間の二国間貿易額は1兆ドルを超え、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 117.692,
+      "speechEnd": 125.425,
+      "end": 125.925,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "累計双方向投資は5000億ドルを超えていると述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 125.925,
+      "speechEnd": 133.1,
+      "end": 133.33,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同氏は保護主義と地政学的な緊張が高まる中、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 133.33,
+      "speechEnd": 140.156,
+      "end": 140.436,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "すべての当事者に対し多国間協力と自由貿易を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 140.436,
+      "speechEnd": 143.641,
+      "end": 144.141,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "維持するよう呼び掛けた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 144.141,
+      "speechEnd": 146.648,
+      "end": 146.878,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 146.878,
+      "speechEnd": 155.586,
+      "end": 155.816,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ASEANの主要経済国が同時に米国との関係強化を模索しており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 155.816,
+      "speechEnd": 160.553,
+      "end": 160.833,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "地域外交が単一の陣営の選択では"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 160.833,
+      "speechEnd": 164.594,
+      "end": 165.214,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ないことを示していると報じた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 165.214,
+      "speechEnd": 170.857,
+      "end": 171.087,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "トランプ米大統領は火曜日にマニラを訪問し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 171.087,
+      "speechEnd": 174.848,
+      "end": 175.078,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ASEAN首脳らと会談し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 175.078,
+      "speechEnd": 185.388,
+      "end": 185.888,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "2年ぶりに開催される四カ国安全保障対話首脳会議に参加する予定だ。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 185.888,
+      "speechEnd": 188.953,
+      "end": 189.183,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "高市早苗首相も、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 189.183,
+      "speechEnd": 196.497,
+      "end": 196.997,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "自由で開かれたインド太平洋協力を推進すると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 196.997,
+      "speechEnd": 199.436,
+      "end": 199.666,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "首脳会談は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 199.666,
+      "speechEnd": 206.562,
+      "end": 206.842,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "経済貿易の相互依存と海洋安全保障の相違が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 206.842,
+      "speechEnd": 212.206,
+      "end": 212.436,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "依然として共存していることを反映し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 212.436,
+      "speechEnd": 222.397,
+      "end": 222.897,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "南シナ海における行動規範について中国政府と合意に達することができなかった。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 222.897,
+      "speechEnd": 226.659,
+      "end": 226.889,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "将来的に各国が貿易、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 226.889,
+      "speechEnd": 229.187,
+      "end": 229.417,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "市場アクセス、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 229.417,
+      "speechEnd": 236.314,
+      "end": 236.544,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "安全保障上の取り組みのバランスをどのように取るかは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 236.544,
+      "speechEnd": 241.768,
+      "end": 242.388,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "地域関係を示す重要な指標となるだろう。"
+    },
+    {
+      "parentKey": "why",
+      "start": 242.388,
+      "speechEnd": 246.359,
+      "end": 246.859,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 246.859,
+      "speechEnd": 252.501,
+      "end": 252.731,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "トランプ米大統領は火曜日にマニラを訪問し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 252.731,
+      "speechEnd": 256.493,
+      "end": 256.723,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ASEAN首脳らと会談し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 256.723,
+      "speechEnd": 267.033,
+      "end": 267.533,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "2年ぶりに開催される四カ国安全保障対話首脳会議に参加する予定だ。"
+    },
+    {
+      "parentKey": "why",
+      "start": 267.533,
+      "speechEnd": 270.598,
+      "end": 270.828,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "高市早苗首相も、"
+    },
+    {
+      "parentKey": "why",
+      "start": 270.828,
+      "speechEnd": 278.142,
+      "end": 278.642,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "自由で開かれたインド太平洋協力を推進すると述べた。"
+    },
+    {
+      "parentKey": "why",
+      "start": 278.642,
+      "speechEnd": 281.08,
+      "end": 281.31,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "首脳会談は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 281.31,
+      "speechEnd": 288.206,
+      "end": 288.486,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "経済貿易の相互依存と海洋安全保障の相違が"
+    },
+    {
+      "parentKey": "why",
+      "start": 288.486,
+      "speechEnd": 293.85,
+      "end": 294.08,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "依然として共存していることを反映し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 294.08,
+      "speechEnd": 304.041,
+      "end": 304.541,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "南シナ海における行動規範について中国政府と合意に達することができなかった。"
+    },
+    {
+      "parentKey": "why",
+      "start": 304.541,
+      "speechEnd": 308.303,
+      "end": 308.533,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "将来的に各国が貿易、"
+    },
+    {
+      "parentKey": "why",
+      "start": 308.533,
+      "speechEnd": 310.832,
+      "end": 311.062,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "市場アクセス、"
+    },
+    {
+      "parentKey": "why",
+      "start": 311.062,
+      "speechEnd": 317.958,
+      "end": 318.188,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "安全保障上の取り組みのバランスをどのように取るかは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 318.188,
+      "speechEnd": 323.413,
+      "end": 324.113,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "地域関係を示す重要な指標となるだろう。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 324.113,
+      "speechEnd": 326.203,
+      "end": 326.433,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 326.433,
+      "speechEnd": 330.333,
+      "end": 330.563,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "トランプ大統領のマニラ会談、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 330.563,
+      "speechEnd": 333.907,
+      "end": 334.137,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "南シナ海行動規範交渉、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 334.137,
+      "speechEnd": 343.541,
+      "end": 344.241,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "そしてその後の中国とASEAN間の経済・貿易協定に注目してほしい。"
+    }
+  ]
+}
