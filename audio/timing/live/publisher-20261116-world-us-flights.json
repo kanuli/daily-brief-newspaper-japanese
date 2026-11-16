@@ -1,0 +1,770 @@
+{
+  "version": 3,
+  "duration": 395.333,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 1177,
+  "charactersPerMinute": 178.6,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.076,
+      "text": "米国で1万便を超える航空便が欠航または遅延 FAAのシステム障害の影響が3日連続で続く"
+    },
+    {
+      "key": "dek",
+      "start": 14.076,
+      "end": 99.207,
+      "text": "11月15日、米国の航空交通は3日連続で大規模な混乱に見舞われた。ロイター通信は、フライト追跡サイトFlightAwareのデータを引用し、日曜日には全米で2,300便以上がキャンセルされ、さらに7,700便以上が遅延し、合計で1万便以上が影響を受けたとの報道を行った。この混乱は、金曜日に連邦航空局（FAA）が一時的に全国的な飛行停止措置を実施したことに起因する。当時、ほとんどの便の離陸が約5時間妨げられた。その後数日間、航空会社は引き続き、航空機と乗務員の配置のずれによって引き起こされた連鎖的な影響に対処する必要があった。"
+    },
+    {
+      "key": "body-0",
+      "start": 99.207,
+      "end": 186.837,
+      "text": "11月15日、米国の航空交通は3日連続で大規模な混乱に見舞われた。ロイター通信は、フライト追跡サイトFlightAwareのデータを引用し、日曜日には全米で2,300便以上が欠航し、さらに7,700便以上が遅延し、合計で1万便以上が影響を受けたとの報道を行った。この事態は、金曜日に連邦航空局（FAA）が一時的に全国的な地上待機措置を実施したことに起因する。当時、ほとんどの便の離陸が約5時間にわたって妨げられた。その後数日間、航空会社は依然として、航空機と乗務員の配置のずれによって引き起こされた連鎖的な影響に対処する必要があった。"
+    },
+    {
+      "key": "body-1",
+      "start": 186.837,
+      "end": 278.571,
+      "text": "米国のダフィー運輸長官は、調査員が事故の根本原因をまだ特定しておらず、現時点では故意の破壊行為やサイバー攻撃が関与しているという証拠はないと述べた。当局は、アーカンソー州とテキサス州のFAA施設のメンテナンス後のルーター通信の問題を調査しており、関連機器および約60台の同種の機器を停止している。ダフィー氏は、航空便の運航が月曜日から徐々に正常に戻ると予想しているが、実際の回復の程度は依然として航空会社の運行調整と航空管制システムの安定性に左右される。この事件により、米国の老朽化した航空管制設備と人員不足の問題が改めて議論の俎上に上っており、議会もインフラ整備のための予算を検討している。"
+    },
+    {
+      "key": "why",
+      "start": 278.571,
+      "end": 376.04,
+      "text": "米国のダフィー運輸長官は、調査員が事故の根本原因をまだ特定しておらず、現時点では故意の破壊行為やサイバー攻撃が関与しているという証拠はないと述べた。当局は、アーカンソー州とテキサス州のFAA施設でメンテナンス後に発生したルーターの通信問題を調査しており、関連機器および同様の機器約60台を停止している。ダフィー氏は、航空便の運航が月曜日から徐々に正常に戻ると予想しているが、実際の回復の程度は依然として航空会社の運行調整と航空管制システムの安定性に左右される。この事件により、米国の老朽化した航空管制設備と人員不足の問題が改めて議論の俎上に上っており、議会もインフラ整備のための予算を検討している。"
+    },
+    {
+      "key": "watch",
+      "start": 376.04,
+      "end": 395.333,
+      "text": "FAAの事故原因調査、月曜日の運航再開状況、および航空管制システムの更新に関する手配に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.528,
+      "end": 4.808,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "米国で1万便を超える航空便が"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.808,
+      "speechEnd": 13.376,
+      "end": 14.076,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "欠航または遅延 FAAのシステム障害の影響が3日連続で続く。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.076,
+      "speechEnd": 17.002,
+      "end": 17.232,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "11月15日、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.232,
+      "speechEnd": 25.939,
+      "end": 26.439,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "米国の航空交通は3日連続で大規模な混乱に見舞われた。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 26.439,
+      "speechEnd": 28.947,
+      "end": 29.177,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 29.177,
+      "speechEnd": 34.401,
+      "end": 34.631,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "フライト追跡サイトFlightAwareのデータを引用し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 34.631,
+      "speechEnd": 38.184,
+      "end": 38.414,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日曜日には全米で2,"
+    },
+    {
+      "parentKey": "dek",
+      "start": 38.414,
+      "speechEnd": 42.524,
+      "end": 42.754,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "300便以上がキャンセルされ、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 42.754,
+      "speechEnd": 45.053,
+      "end": 45.283,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "さらに7,"
+    },
+    {
+      "parentKey": "dek",
+      "start": 45.283,
+      "speechEnd": 48.836,
+      "end": 49.066,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "700便以上が遅延し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 49.066,
+      "speechEnd": 55.683,
+      "end": 56.183,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "合計で1万便以上が影響を受けたとの報道を行った。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 56.183,
+      "speechEnd": 58.552,
+      "end": 58.782,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この混乱は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 58.782,
+      "speechEnd": 62.752,
+      "end": 63.032,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "金曜日に連邦航空局（FAA）が"
+    },
+    {
+      "parentKey": "dek",
+      "start": 63.032,
+      "speechEnd": 71.252,
+      "end": 71.752,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "一時的に全国的な飛行停止措置を実施したことに起因する。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 71.752,
+      "speechEnd": 73.772,
+      "end": 74.002,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "当時、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 74.002,
+      "speechEnd": 80.411,
+      "end": 80.911,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "ほとんどの便の離陸が約5時間妨げられた。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 80.911,
+      "speechEnd": 83.558,
+      "end": 83.788,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "その後数日間、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 83.788,
+      "speechEnd": 86.644,
+      "end": 86.874,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "航空会社は引き続き、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 86.874,
+      "speechEnd": 98.507,
+      "end": 99.207,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "航空機と乗務員の配置のずれによって引き起こされた連鎖的な影響に対処する必要があった。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 99.207,
+      "speechEnd": 102.133,
+      "end": 102.363,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "11月15日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 102.363,
+      "speechEnd": 111.07,
+      "end": 111.57,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "米国の航空交通は3日連続で大規模な混乱に見舞われた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 111.57,
+      "speechEnd": 114.078,
+      "end": 114.308,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 114.308,
+      "speechEnd": 119.533,
+      "end": 119.763,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "フライト追跡サイトFlightAwareのデータを引用し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 119.763,
+      "speechEnd": 123.315,
+      "end": 123.545,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日曜日には全米で2,"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 123.545,
+      "speechEnd": 127.028,
+      "end": 127.258,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "300便以上が欠航し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 127.258,
+      "speechEnd": 129.557,
+      "end": 129.787,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "さらに7,"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 129.787,
+      "speechEnd": 133.34,
+      "end": 133.57,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "700便以上が遅延し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 133.57,
+      "speechEnd": 140.187,
+      "end": 140.687,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "合計で1万便以上が影響を受けたとの報道を行った。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 140.687,
+      "speechEnd": 143.056,
+      "end": 143.286,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この事態は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 143.286,
+      "speechEnd": 147.257,
+      "end": 147.537,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "金曜日に連邦航空局（FAA）が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 147.537,
+      "speechEnd": 155.826,
+      "end": 156.326,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "一時的に全国的な地上待機措置を実施したことに起因する。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 156.326,
+      "speechEnd": 158.346,
+      "end": 158.576,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "当時、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 158.576,
+      "speechEnd": 162.129,
+      "end": 162.269,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "ほとんどの便の離陸が約"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 162.269,
+      "speechEnd": 164.289,
+      "end": 164.429,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "5時"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 164.429,
+      "speechEnd": 167.703,
+      "end": 168.203,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "間にわたって妨げられた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 168.203,
+      "speechEnd": 170.85,
+      "end": 171.08,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "その後数日間、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 171.08,
+      "speechEnd": 174.354,
+      "end": 174.584,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "航空会社は依然として、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 174.584,
+      "speechEnd": 186.217,
+      "end": 186.837,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "航空機と乗務員の配置のずれによって引き起こされた連鎖的な影響に対処する必要があった。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 186.837,
+      "speechEnd": 191.226,
+      "end": 191.456,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国のダフィー運輸長官は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 191.456,
+      "speechEnd": 198.491,
+      "end": 198.721,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "調査員が事故の根本原因をまだ特定しておらず、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 198.721,
+      "speechEnd": 204.434,
+      "end": 204.714,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "現時点では故意の破壊行為やサイバー攻撃が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 204.714,
+      "speechEnd": 209.45,
+      "end": 209.95,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "関与しているという証拠はないと述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 209.95,
+      "speechEnd": 212.04,
+      "end": 212.27,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "当局は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 212.27,
+      "speechEnd": 223.764,
+      "end": 223.994,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "アーカンソー州とテキサス州のFAA施設のメンテナンス後のルーター通信の問題を調査しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 223.994,
+      "speechEnd": 232.353,
+      "end": 232.853,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "関連機器および約60台の同種の機器を停止している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 232.853,
+      "speechEnd": 235.152,
+      "end": 235.382,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ダフィー氏は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 235.382,
+      "speechEnd": 243.95,
+      "end": 244.18,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "航空便の運航が月曜日から徐々に正常に戻ると予想しているが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 244.18,
+      "speechEnd": 257.276,
+      "end": 257.776,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "実際の回復の程度は依然として航空会社の運行調整と航空管制システムの安定性に左右される。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 257.776,
+      "speechEnd": 260.423,
+      "end": 260.653,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この事件により、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 260.653,
+      "speechEnd": 267.898,
+      "end": 268.178,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "米国の老朽化した航空管制設備と人員不足の問題が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 268.178,
+      "speechEnd": 272.218,
+      "end": 272.448,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "改めて議論の俎上に上っており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 272.448,
+      "speechEnd": 277.951,
+      "end": 278.571,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "議会もインフラ整備のための予算を検討している。"
+    },
+    {
+      "parentKey": "why",
+      "start": 278.571,
+      "speechEnd": 282.542,
+      "end": 283.042,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 283.042,
+      "speechEnd": 287.431,
+      "end": 287.661,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国のダフィー運輸長官は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 287.661,
+      "speechEnd": 294.696,
+      "end": 294.926,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "調査員が事故の根本原因をまだ特定しておらず、"
+    },
+    {
+      "parentKey": "why",
+      "start": 294.926,
+      "speechEnd": 300.638,
+      "end": 300.918,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "現時点では故意の破壊行為やサイバー攻撃が"
+    },
+    {
+      "parentKey": "why",
+      "start": 300.918,
+      "speechEnd": 305.655,
+      "end": 306.155,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "関与しているという証拠はないと述べた。"
+    },
+    {
+      "parentKey": "why",
+      "start": 306.155,
+      "speechEnd": 308.245,
+      "end": 308.475,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "当局は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 308.475,
+      "speechEnd": 321.223,
+      "end": 321.453,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "アーカンソー州とテキサス州のFAA施設でメンテナンス後に発生したルーターの通信問題を調査しており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 321.453,
+      "speechEnd": 329.742,
+      "end": 330.242,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "関連機器および同様の機器約60台を停止している。"
+    },
+    {
+      "parentKey": "why",
+      "start": 330.242,
+      "speechEnd": 332.541,
+      "end": 332.771,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ダフィー氏は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 332.771,
+      "speechEnd": 341.339,
+      "end": 341.569,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "航空便の運航が月曜日から徐々に正常に戻ると予想しているが、"
+    },
+    {
+      "parentKey": "why",
+      "start": 341.569,
+      "speechEnd": 354.665,
+      "end": 355.165,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "実際の回復の程度は依然として航空会社の運行調整と航空管制システムの安定性に左右される。"
+    },
+    {
+      "parentKey": "why",
+      "start": 355.165,
+      "speechEnd": 357.812,
+      "end": 358.042,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この事件により、"
+    },
+    {
+      "parentKey": "why",
+      "start": 358.042,
+      "speechEnd": 365.287,
+      "end": 365.567,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "米国の老朽化した航空管制設備と人員不足の問題が"
+    },
+    {
+      "parentKey": "why",
+      "start": 365.567,
+      "speechEnd": 369.607,
+      "end": 369.837,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "改めて議論の俎上に上っており、"
+    },
+    {
+      "parentKey": "why",
+      "start": 369.837,
+      "speechEnd": 375.34,
+      "end": 376.04,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "議会もインフラ整備のための予算を検討している。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 376.04,
+      "speechEnd": 378.13,
+      "end": 378.36,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 378.36,
+      "speechEnd": 381.843,
+      "end": 382.073,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "FAAの事故原因調査、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 382.073,
+      "speechEnd": 385.696,
+      "end": 385.926,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "月曜日の運航再開状況、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 385.926,
+      "speechEnd": 394.633,
+      "end": 395.333,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "および航空管制システムの更新に関する手配に注目してください。"
+    }
+  ]
+}
