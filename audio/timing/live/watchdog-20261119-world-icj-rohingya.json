@@ -1,0 +1,500 @@
+{
+  "version": 3,
+  "duration": 235.263,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 701,
+  "charactersPerMinute": 178.8,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 19.543,
+      "text": "国際司法裁判所は、ミャンマー軍が数千人のロヒンギャ民間人を殺害したとの判決を下した。この事件の判決は引き続き読み上げられる。"
+    },
+    {
+      "key": "dek",
+      "start": 19.543,
+      "end": 48.74,
+      "text": "国際司法裁判所は11月19日、ロヒンギャ事件の判決を読み上げた。判事は、ミャンマー治安部隊が数千人の民間人を殺害し、広範な性暴力と子どもに対する極端な暴力を行ったと指摘した。"
+    },
+    {
+      "key": "body-0",
+      "start": 48.74,
+      "end": 115.353,
+      "text": "11月19日、国際司法裁判所は、オランダのハーグで起きたロヒンギャ民族大量虐殺事件で、ガンビア対ミャンマーの判決を発表した。同日のロイター通信の報道によると、判事は、ミャンマー治安部隊が数千人のロヒンギャ民間人を殺害し、広範な性暴力を行い、子供に対して極端な暴力を行い、バングラデシュに逃亡した多数のロヒンギャを攻撃したと指摘した。法廷による上記の陳述は、同日読み上げられた判決の一部であり、単に原告による未審の告発ではない。"
+    },
+    {
+      "key": "body-1",
+      "start": 115.353,
+      "end": 192.486,
+      "text": "ロイターが関連ニュースを掲載した時点では、裁判所はまだ判決を読み上げていたため、この報道のみに基づいて完全な法的判決、是正命令、執行の取り決めが発表されたと結論付けることはできない。この事件は、2017年のミャンマー・ラカイン州での軍事作戦とロヒンギャ難民の長期避難に関連している。フォローアップ作業は、裁判所が正式に発表した完全な判決に基づいて行われ、判決読み上げプロセスがすべての法的手続きの完了と誤解されることを避けるために、国家の法的責任、具体的な命令、ミャンマーの対応を検証する必要がある。"
+    },
+    {
+      "key": "why",
+      "start": 192.486,
+      "end": 216.876,
+      "text": "軍の行動に関するICJの正式な事実認定は、ミャンマーの国際的な法的責任、ロヒンギャ難民の権利、国際的な責任に直接影響を与える。"
+    },
+    {
+      "key": "watch",
+      "start": 216.876,
+      "end": 235.263,
+      "text": "ICJ の完全な判決、法的責任に関する判決、およびすべての当事者からの正式な対応に注目してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.926,
+      "end": 3.156,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "国際司法裁判所は、"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.156,
+      "speechEnd": 9.216,
+      "end": 9.496,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ミャンマー軍が数千人のロヒンギャ民間人を"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.496,
+      "speechEnd": 13.258,
+      "end": 13.758,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "殺害したとの判決を下した。"
+    },
+    {
+      "parentKey": "title",
+      "start": 13.758,
+      "speechEnd": 18.843,
+      "end": 19.543,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "この事件の判決は引き続き読み上げられる。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.543,
+      "speechEnd": 24.837,
+      "end": 25.067,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "国際司法裁判所は11月19日、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.067,
+      "speechEnd": 29.177,
+      "end": 29.677,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "ロヒンギャ事件の判決を読み上げた。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 29.677,
+      "speechEnd": 31.767,
+      "end": 31.997,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "判事は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 31.997,
+      "speechEnd": 39.45,
+      "end": 39.68,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ミャンマー治安部隊が数千人の民間人を殺害し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 39.68,
+      "speechEnd": 48.04,
+      "end": 48.74,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "広範な性暴力と子どもに対する極端な暴力を行ったと指摘した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.74,
+      "speechEnd": 51.665,
+      "end": 51.895,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "11月19日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.895,
+      "speechEnd": 54.821,
+      "end": 55.051,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "国際司法裁判所は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.051,
+      "speechEnd": 62.226,
+      "end": 62.456,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "オランダのハーグで起きたロヒンギャ民族大量虐殺事件で、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.456,
+      "speechEnd": 67.611,
+      "end": 68.111,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "ガンビア対ミャンマーの判決を発表した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.111,
+      "speechEnd": 72.778,
+      "end": 73.008,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同日のロイター通信の報道によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.008,
+      "speechEnd": 75.098,
+      "end": 75.328,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "判事は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.328,
+      "speechEnd": 83.757,
+      "end": 83.987,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ミャンマー治安部隊が数千人のロヒンギャ民間人を殺害し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 83.987,
+      "speechEnd": 87.052,
+      "end": 87.282,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "広範な性暴力を行い、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 87.282,
+      "speechEnd": 92.019,
+      "end": 92.249,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "子供に対して極端な暴力を行い、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 92.249,
+      "speechEnd": 100.19,
+      "end": 100.69,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "バングラデシュに逃亡した多数のロヒンギャを攻撃したと指摘した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 100.69,
+      "speechEnd": 104.312,
+      "end": 104.542,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "法廷による上記の陳述は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 104.542,
+      "speechEnd": 109.697,
+      "end": 109.927,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同日読み上げられた判決の一部であり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 109.927,
+      "speechEnd": 114.733,
+      "end": 115.353,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "単に原告による未審の告発ではない。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 115.353,
+      "speechEnd": 120.578,
+      "end": 120.808,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイターが関連ニュースを掲載した時点では、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.808,
+      "speechEnd": 125.963,
+      "end": 126.193,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "裁判所はまだ判決を読み上げていたため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 126.193,
+      "speechEnd": 132.044,
+      "end": 132.274,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この報道のみに基づいて完全な法的判決、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 132.274,
+      "speechEnd": 134.573,
+      "end": 134.803,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "是正命令、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 134.803,
+      "speechEnd": 141.908,
+      "end": 142.408,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "執行の取り決めが発表されたと結論付けることはできない。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 142.408,
+      "speechEnd": 144.707,
+      "end": 144.937,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この事件は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 144.937,
+      "speechEnd": 157.754,
+      "end": 158.254,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "2017年のミャンマー・ラカイン州での軍事作戦とロヒンギャ難民の長期避難に関連している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 158.254,
+      "speechEnd": 161.25,
+      "end": 161.48,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "フォローアップ作業は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 161.48,
+      "speechEnd": 169.491,
+      "end": 169.721,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "裁判所が正式に発表した完全な判決に基づいて行われ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 169.721,
+      "speechEnd": 180.1,
+      "end": 180.33,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "判決読み上げプロセスがすべての法的手続きの完了と誤解されることを避けるために、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 180.33,
+      "speechEnd": 183.465,
+      "end": 183.695,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "国家の法的責任、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 183.695,
+      "speechEnd": 186.481,
+      "end": 186.711,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "具体的な命令、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 186.711,
+      "speechEnd": 191.866,
+      "end": 192.486,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ミャンマーの対応を検証する必要がある。"
+    },
+    {
+      "parentKey": "why",
+      "start": 192.486,
+      "speechEnd": 196.457,
+      "end": 196.957,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 196.957,
+      "speechEnd": 203.017,
+      "end": 203.247,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "軍の行動に関するICJの正式な事実認定は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 203.247,
+      "speechEnd": 207.845,
+      "end": 208.075,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ミャンマーの国際的な法的責任、"
+    },
+    {
+      "parentKey": "why",
+      "start": 208.075,
+      "speechEnd": 211.07,
+      "end": 211.3,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロヒンギャ難民の権利、"
+    },
+    {
+      "parentKey": "why",
+      "start": 211.3,
+      "speechEnd": 216.176,
+      "end": 216.876,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "国際的な責任に直接影響を与える。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 216.876,
+      "speechEnd": 218.966,
+      "end": 219.196,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 219.196,
+      "speechEnd": 222.261,
+      "end": 222.491,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ICJ の完全な判決、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 222.491,
+      "speechEnd": 225.974,
+      "end": 226.204,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "法的責任に関する判決、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 226.204,
+      "speechEnd": 234.563,
+      "end": 235.263,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "およびすべての当事者からの正式な対応に注目してください。"
+    }
+  ]
+}
