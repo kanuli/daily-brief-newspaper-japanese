@@ -1,0 +1,520 @@
+{
+  "version": 3,
+  "duration": 227.058,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 658,
+  "charactersPerMinute": 173.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 15.989,
+      "text": "米国はシンガポールとマレーシアに対し、イラン制裁の執行を強化するよう要請。海運業界と金融業界が注目"
+    },
+    {
+      "key": "dek",
+      "start": 15.989,
+      "end": 37.373,
+      "text": "米財務省当局者らは11月20日に両国当局と会談し、海運、航空、調達ネットワークにおける制裁遵守リスクに焦点を当てた。"
+    },
+    {
+      "key": "body-0",
+      "start": 37.373,
+      "end": 106.793,
+      "text": "米財務省当局者らは11月20日、シンガポールとマレーシアの当局と会談し、対イラン制裁の強化を求めた。ロイター通信は、米国が海運、航空、調達ネットワークに特別な注意を払っており、制裁対象のイラン関連ダミー企業を支援すれば制裁のリスクに直面する可能性があると企業や金融機関に警告していると報じた。これは、米国が提案した法執行機関の要請およびリスク警告です。シンガポールやマレーシアのすべての関連企業が違反で有罪判決を受けたことを意味するものではない。"
+    },
+    {
+      "key": "body-1",
+      "start": 106.793,
+      "end": 190.014,
+      "text": "報告書は、マレーシア、シンガポール、インドネシア付近の海域では瀬取り活動が長年懸念されており、イラン産原油の供給源を隠すために関連行為が行われている可能性があると指摘した。マレーシアは法執行を強化し、今年2月に石油タンカー2隻を拿捕したと発表した。シンガポールは、企業構造の悪用を防止し、金融業界や海運業界の監督を強化すると述べた。今後のフォローアップでは、両国の規制当局が発表する具体的な法執行措置、制裁対象リスト、海運会社の開示に注目する必要がある。会談自体は新たな制裁が正式に発効したとはみなせない。"
+    },
+    {
+      "key": "why",
+      "start": 190.014,
+      "end": 209.737,
+      "text": "制裁遵守リスクは、この地域の海運会社、金融会社、貿易会社に影響を与える可能性があります。"
+    },
+    {
+      "key": "watch",
+      "start": 209.737,
+      "end": 227.058,
+      "text": "シンガポールとマレーシアの法執行機関の公式発表と、その後の米国財務省の制裁リストに注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 5.294,
+      "end": 5.524,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国はシンガポールとマレーシアに対し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 5.524,
+      "speechEnd": 10.191,
+      "end": 10.691,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "イラン制裁の執行を強化するよう要請。"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.691,
+      "speechEnd": 15.289,
+      "end": 15.989,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "海運業界と金融業界が注目。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.989,
+      "speechEnd": 19.263,
+      "end": 19.403,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "米財務省当局者らは"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.403,
+      "speechEnd": 22.05,
+      "end": 22.19,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "11月20日"
+    },
+    {
+      "parentKey": "dek",
+      "start": 22.19,
+      "speechEnd": 25.603,
+      "end": 25.833,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "に両国当局と会談し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.833,
+      "speechEnd": 27.853,
+      "end": 28.083,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "海運、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 28.083,
+      "speechEnd": 30.104,
+      "end": 30.334,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "航空、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 30.334,
+      "speechEnd": 36.673,
+      "end": 37.373,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "調達ネットワークにおける制裁遵守リスクに焦点を当てた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.373,
+      "speechEnd": 42.945,
+      "end": 43.175,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米財務省当局者らは11月20日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.175,
+      "speechEnd": 48.539,
+      "end": 48.769,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "シンガポールとマレーシアの当局と会談し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.769,
+      "speechEnd": 52.879,
+      "end": 53.379,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "対イラン制裁の強化を求めた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.379,
+      "speechEnd": 55.887,
+      "end": 56.117,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 56.117,
+      "speechEnd": 58.555,
+      "end": 58.785,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国が海運、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.785,
+      "speechEnd": 60.805,
+      "end": 61.035,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "航空、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 61.035,
+      "speechEnd": 65.493,
+      "end": 65.723,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "調達ネットワークに特別な注意を払っており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.723,
+      "speechEnd": 81.954,
+      "end": 82.454,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "制裁対象のイラン関連ダミー企業を支援すれば制裁のリスクに直面する可能性があると企業や金融機関に警告していると報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 82.454,
+      "speechEnd": 84.544,
+      "end": 84.774,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "これは、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 84.774,
+      "speechEnd": 92.367,
+      "end": 92.867,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "米国が提案した法執行機関の要請およびリスク警告です。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 92.867,
+      "speechEnd": 98.858,
+      "end": 99.138,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "シンガポールやマレーシアのすべての関連企業が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 99.138,
+      "speechEnd": 106.173,
+      "end": 106.793,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "違反で有罪判決を受けたことを意味するものではない。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 106.793,
+      "speechEnd": 108.953,
+      "end": 109.183,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "報告書は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 109.183,
+      "speechEnd": 111.342,
+      "end": 111.572,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "マレーシア、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.572,
+      "speechEnd": 113.941,
+      "end": 114.171,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "シンガポール、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.171,
+      "speechEnd": 117.863,
+      "end": 118.143,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "インドネシア付近の海域では"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.143,
+      "speechEnd": 122.74,
+      "end": 122.97,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "瀬取り活動が長年懸念されており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 122.97,
+      "speechEnd": 129.518,
+      "end": 129.798,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "イラン産原油の供給源を隠すために関連行為が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 129.798,
+      "speechEnd": 134.744,
+      "end": 135.244,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "行われている可能性があると指摘した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 135.244,
+      "speechEnd": 139.215,
+      "end": 139.445,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "マレーシアは法執行を強化し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 139.445,
+      "speechEnd": 146.829,
+      "end": 147.329,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "今年2月に石油タンカー2隻を拿捕したと発表した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 147.329,
+      "speechEnd": 149.906,
+      "end": 150.136,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "シンガポールは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 150.136,
+      "speechEnd": 154.246,
+      "end": 154.476,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "企業構造の悪用を防止し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 154.476,
+      "speechEnd": 161.999,
+      "end": 162.499,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "金融業界や海運業界の監督を強化すると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 162.499,
+      "speechEnd": 165.773,
+      "end": 166.003,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後のフォローアップでは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 166.003,
+      "speechEnd": 173.039,
+      "end": 173.269,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "両国の規制当局が発表する具体的な法執行措置、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 173.269,
+      "speechEnd": 175.777,
+      "end": 176.007,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "制裁対象リスト、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 176.007,
+      "speechEnd": 180.883,
+      "end": 181.383,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "海運会社の開示に注目する必要がある。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 181.383,
+      "speechEnd": 189.394,
+      "end": 190.014,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "会談自体は新たな制裁が正式に発効したとはみなせない。"
+    },
+    {
+      "parentKey": "why",
+      "start": 190.014,
+      "speechEnd": 193.984,
+      "end": 194.484,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 194.484,
+      "speechEnd": 197.271,
+      "end": 197.501,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "制裁遵守リスクは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 197.501,
+      "speechEnd": 200.844,
+      "end": 201.074,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この地域の海運会社、"
+    },
+    {
+      "parentKey": "why",
+      "start": 201.074,
+      "speechEnd": 203.234,
+      "end": 203.464,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "金融会社、"
+    },
+    {
+      "parentKey": "why",
+      "start": 203.464,
+      "speechEnd": 209.037,
+      "end": 209.737,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "貿易会社に影響を与える可能性があります。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 209.737,
+      "speechEnd": 211.826,
+      "end": 212.056,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 212.056,
+      "speechEnd": 219.022,
+      "end": 219.252,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "シンガポールとマレーシアの法執行機関の公式発表と、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 219.252,
+      "speechEnd": 226.358,
+      "end": 227.058,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "その後の米国財務省の制裁リストに注意してください。"
+    }
+  ]
+}
