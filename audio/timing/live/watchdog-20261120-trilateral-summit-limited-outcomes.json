@@ -1,0 +1,510 @@
+{
+  "version": 3,
+  "duration": 233.392,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 689,
+  "charactersPerMinute": 177.1,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 19.571,
+      "text": "米中露の深セン首脳宣言には具体的な約束が欠けており、軍備管理、貿易、エネルギーに関する意見の相違は未解決のまま"
+    },
+    {
+      "key": "dek",
+      "start": 19.571,
+      "end": 28.7,
+      "text": "主人公は「迷惑じゃないよ(泣)」とメソメソしながらメリイを励ます。"
+    },
+    {
+      "key": "body-0",
+      "start": 28.7,
+      "end": 114.255,
+      "text": "ロイターBREAKINGVIEWSの分析によると、11月20日、中国の習近平国家主席、トランプ米大統領、ロシアのプーチン大統領は深センで三者会談を開催し、核戦争のリスク、国連改革、エネルギー供給などの問題について共同宣言を発表した。しかし、この宣言は、ロシア・ウクライナ戦争や米国とイランの紛争に対する具体的な解決策を提案しておらず、また、三国間の軍備管理交渉の日程も発表していなかった。このハイレベル会合は、３カ国が対話を維持する用意があることを示しているが、象徴的なジェスチャーが拘束力のある安全保障協定に到達することに等しいわけではない。"
+    },
+    {
+      "key": "body-1",
+      "start": 114.255,
+      "end": 196.954,
+      "text": "経済レベルでは、米国と中国の間の貿易停戦協定は期限のプレッシャーに直面しており、先端チップの輸出制限は依然として論争の焦点となっている。中国とロシア側では、対外的に懸念されている天然ガスパイプライン「パワー・オブ・シベリア２」について、価格設定やエネルギー依存の問題がまだ解決されていないことを反映し、最終合意を発表していない。今後のフォローアップでは、三国が正式な交渉メカニズム、貿易協定延長計画、天然ガス供給契約などを発表するかどうかに注目すべきである。関連文書が発表される前に、首脳宣言を地政学リスクが沈静化したと解釈するのは適切ではない。"
+    },
+    {
+      "key": "why",
+      "start": 196.954,
+      "end": 216.677,
+      "text": "大国間の外交動向は、アジアの安全保障、チップ貿易、エネルギー市場の期待に影響を与える。"
+    },
+    {
+      "key": "watch",
+      "start": 216.677,
+      "end": 233.392,
+      "text": "三国間軍備管理交渉の取り決め、米中貿易措置、中露天然ガスパイプライン協定を追跡します。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 8.499,
+      "end": 8.729,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米中露の深セン首脳宣言には具体的な約束が欠けており、"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.729,
+      "speechEnd": 10.888,
+      "end": 11.118,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "軍備管理、"
+    },
+    {
+      "parentKey": "title",
+      "start": 11.118,
+      "speechEnd": 13.138,
+      "end": 13.368,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "貿易、"
+    },
+    {
+      "parentKey": "title",
+      "start": 13.368,
+      "speechEnd": 18.871,
+      "end": 19.571,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "エネルギーに関する意見の相違は未解決のまま。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.571,
+      "speechEnd": 28.0,
+      "end": 28.7,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "主人公は「迷惑じゃないよ(泣)」とメソメソしながらメリイを励ます。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 28.7,
+      "speechEnd": 34.482,
+      "end": 34.712,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイターBREAKINGVIEWSの分析によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.712,
+      "speechEnd": 37.429,
+      "end": 37.659,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "11月20日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.659,
+      "speechEnd": 41.769,
+      "end": 41.999,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中国の習近平国家主席、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.999,
+      "speechEnd": 44.855,
+      "end": 45.085,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "トランプ米大統領、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.085,
+      "speechEnd": 52.747,
+      "end": 52.977,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロシアのプーチン大統領は深センで三者会談を開催し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.977,
+      "speechEnd": 55.415,
+      "end": 55.645,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "核戦争のリスク、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.645,
+      "speechEnd": 57.944,
+      "end": 58.174,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "国連改革、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.174,
+      "speechEnd": 65.488,
+      "end": 65.988,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "エネルギー供給などの問題について共同宣言を発表した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.988,
+      "speechEnd": 68.008,
+      "end": 68.238,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "しかし、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.238,
+      "speechEnd": 70.607,
+      "end": 70.837,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この宣言は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.837,
+      "speechEnd": 81.843,
+      "end": 82.073,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロシア・ウクライナ戦争や米国とイランの紛争に対する具体的な解決策を提案しておらず、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 82.073,
+      "speechEnd": 84.093,
+      "end": 84.323,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "また、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 84.323,
+      "speechEnd": 91.22,
+      "end": 91.72,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "三国間の軍備管理交渉の日程も発表していなかった。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 91.72,
+      "speechEnd": 94.924,
+      "end": 95.154,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "このハイレベル会合は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 95.154,
+      "speechEnd": 102.399,
+      "end": 102.629,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "３カ国が対話を維持する用意があることを示しているが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 102.629,
+      "speechEnd": 113.635,
+      "end": 114.255,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "象徴的なジェスチャーが拘束力のある安全保障協定に到達することに等しいわけではない。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 114.255,
+      "speechEnd": 116.972,
+      "end": 117.202,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "経済レベルでは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.202,
+      "speechEnd": 122.705,
+      "end": 122.985,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "米国と中国の間の貿易停戦協定は"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 122.985,
+      "speechEnd": 127.164,
+      "end": 127.394,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "期限のプレッシャーに直面しており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 127.394,
+      "speechEnd": 134.848,
+      "end": 135.348,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "先端チップの輸出制限は依然として論争の焦点となっている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 135.348,
+      "speechEnd": 138.622,
+      "end": 138.852,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中国とロシア側では、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 138.852,
+      "speechEnd": 149.092,
+      "end": 149.322,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "対外的に懸念されている天然ガスパイプライン「パワー・オブ・シベリア２」について、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 149.322,
+      "speechEnd": 153.432,
+      "end": 153.712,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "価格設定やエネルギー依存の問題が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 153.712,
+      "speechEnd": 158.379,
+      "end": 158.609,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "まだ解決されていないことを反映し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 158.609,
+      "speechEnd": 162.371,
+      "end": 162.871,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "最終合意を発表していない。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 162.871,
+      "speechEnd": 166.145,
+      "end": 166.375,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後のフォローアップでは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 166.375,
+      "speechEnd": 170.415,
+      "end": 170.645,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "三国が正式な交渉メカニズム、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 170.645,
+      "speechEnd": 173.989,
+      "end": 174.219,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "貿易協定延長計画、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 174.219,
+      "speechEnd": 182.856,
+      "end": 183.356,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "天然ガス供給契約などを発表するかどうかに注目すべきである。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 183.356,
+      "speechEnd": 187.397,
+      "end": 187.627,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "関連文書が発表される前に、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 187.627,
+      "speechEnd": 196.334,
+      "end": 196.954,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "首脳宣言を地政学リスクが沈静化したと解釈するのは適切ではない。"
+    },
+    {
+      "parentKey": "why",
+      "start": 196.954,
+      "speechEnd": 200.925,
+      "end": 201.425,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 201.425,
+      "speechEnd": 205.117,
+      "end": 205.347,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "大国間の外交動向は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 205.347,
+      "speechEnd": 208.621,
+      "end": 208.851,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "アジアの安全保障、"
+    },
+    {
+      "parentKey": "why",
+      "start": 208.851,
+      "speechEnd": 211.01,
+      "end": 211.24,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "チップ貿易、"
+    },
+    {
+      "parentKey": "why",
+      "start": 211.24,
+      "speechEnd": 215.977,
+      "end": 216.677,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "エネルギー市場の期待に影響を与える。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 216.677,
+      "speechEnd": 218.767,
+      "end": 218.997,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 218.997,
+      "speechEnd": 223.734,
+      "end": 223.964,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "三国間軍備管理交渉の取り決め、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 223.964,
+      "speechEnd": 226.681,
+      "end": 226.911,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米中貿易措置、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 226.911,
+      "speechEnd": 232.692,
+      "end": 233.392,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "中露天然ガスパイプライン協定を追跡します。"
+    }
+  ]
+}
