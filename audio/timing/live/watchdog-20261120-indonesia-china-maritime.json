@@ -1,0 +1,450 @@
+{
+  "version": 3,
+  "duration": 216.909,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 632,
+  "charactersPerMinute": 174.8,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 15.829,
+      "text": "インドネシアと中国の指導者が南シナ海協力について協議。海洋権益をめぐる紛争は依然として注目を集めている"
+    },
+    {
+      "key": "dek",
+      "start": 15.829,
+      "end": 41.502,
+      "text": "インドネシアのプラボウォ大統領と中国の習近平国家主席は南シナ海協力と経済・貿易投資について話し合った。インドネシアは過去に、中国の関連する海洋権益を認めないと述べている。"
+    },
+    {
+      "key": "body-0",
+      "start": 41.502,
+      "end": 106.947,
+      "text": "11月20日のロイター通信の報道によると、インドネシアのプラボウォ大統領は中国の習近平国家主席と会談し、経済・投資関係や共同海洋開発の進展を含む南シナ海における将来の協力について話し合った。両国は包括的経済連携協定についても交渉を開始した。この会談は経済・貿易協力の拡大を目指す両国の意向を反映したものだが、南シナ海の海洋権益問題は依然としてデリケートであり、協力協議を領土・海洋主権紛争の解決とみなすことはできない。"
+    },
+    {
+      "key": "body-1",
+      "start": 106.947,
+      "end": 185.835,
+      "text": "インドネシアが2024年に中国と、主張が重複する海域の共同開発を含む協定に署名した後、ジャカルタが中国の海洋主張を間接的に認めるのではないかとの懸念が生じた。その後、インドネシア外務省は中国の関連する主張を認めないと強調し、プラボウォ氏も国家主権を守ると述べた。会談では鉄道、エネルギー、鉱業、人工知能、デジタル経済における協力にも触れた。今後、両国が発表した正式合意の文言や開発プロジェクトの具体的な場所、排他的経済水域の権益に関するインドネシアの立場に注目する必要がある。"
+    },
+    {
+      "key": "why",
+      "start": 185.835,
+      "end": 203.05,
+      "text": "南シナ海の海洋権益は、地域のエネルギー、海運、投資協力に関連している。"
+    },
+    {
+      "key": "watch",
+      "start": 203.05,
+      "end": 216.909,
+      "text": "正式な共同声明、海洋協力の範囲、経済・貿易交渉の日程を確認する。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.802,
+      "end": 8.302,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "インドネシアと中国の指導者が南シナ海協力について協議。"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.302,
+      "speechEnd": 15.129,
+      "end": 15.829,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "海洋権益をめぐる紛争は依然として注目を集めている。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.829,
+      "speechEnd": 24.048,
+      "end": 24.328,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "インドネシアのプラボウォ大統領と中国の習近平国家主席は"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.328,
+      "speechEnd": 30.946,
+      "end": 31.446,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "南シナ海協力と経済・貿易投資について話し合った。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 31.446,
+      "speechEnd": 34.302,
+      "end": 34.532,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "インドネシアは過去に、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 34.532,
+      "speechEnd": 40.802,
+      "end": 41.502,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "中国の関連する海洋権益を認めないと述べている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.502,
+      "speechEnd": 47.562,
+      "end": 47.792,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "11月20日のロイター通信の報道によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.792,
+      "speechEnd": 51.902,
+      "end": 52.182,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "インドネシアのプラボウォ大統領は"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.182,
+      "speechEnd": 57.546,
+      "end": 57.776,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中国の習近平国家主席と会談し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.776,
+      "speechEnd": 63.836,
+      "end": 64.116,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "経済・投資関係や共同海洋開発の進展を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.116,
+      "speechEnd": 71.361,
+      "end": 71.861,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "含む南シナ海における将来の協力について話し合った。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.861,
+      "speechEnd": 79.384,
+      "end": 79.884,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "両国は包括的経済連携協定についても交渉を開始した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 79.884,
+      "speechEnd": 90.96,
+      "end": 91.19,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この会談は経済・貿易協力の拡大を目指す両国の意向を反映したものだが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 91.19,
+      "speechEnd": 98.086,
+      "end": 98.316,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "南シナ海の海洋権益問題は依然としてデリケートであり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 98.316,
+      "speechEnd": 106.327,
+      "end": 106.947,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "協力協議を領土・海洋主権紛争の解決とみなすことはできない。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 106.947,
+      "speechEnd": 112.311,
+      "end": 112.541,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "インドネシアが2024年に中国と、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.541,
+      "speechEnd": 120.761,
+      "end": 120.991,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "主張が重複する海域の共同開発を含む協定に署名した後、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.991,
+      "speechEnd": 128.375,
+      "end": 128.655,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ジャカルタが中国の海洋主張を間接的に認めるのでは"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 128.655,
+      "speechEnd": 131.998,
+      "end": 132.498,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "ないかとの懸念が生じた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 132.498,
+      "speechEnd": 134.588,
+      "end": 134.818,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "その後、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 134.818,
+      "speechEnd": 143.317,
+      "end": 143.547,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "インドネシア外務省は中国の関連する主張を認めないと強調し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 143.547,
+      "speechEnd": 148.98,
+      "end": 149.48,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "プラボウォ氏も国家主権を守ると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 149.48,
+      "speechEnd": 152.058,
+      "end": 152.288,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "会談では鉄道、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 152.288,
+      "speechEnd": 154.377,
+      "end": 154.607,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "エネルギー、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 154.607,
+      "speechEnd": 156.628,
+      "end": 156.858,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "鉱業、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 156.858,
+      "speechEnd": 159.087,
+      "end": 159.317,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "人工知能、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 159.317,
+      "speechEnd": 163.845,
+      "end": 164.345,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "デジタル経済における協力にも触れた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 164.345,
+      "speechEnd": 166.365,
+      "end": 166.595,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 166.595,
+      "speechEnd": 176.277,
+      "end": 176.507,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "両国が発表した正式合意の文言や開発プロジェクトの具体的な場所、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 176.507,
+      "speechEnd": 185.215,
+      "end": 185.835,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "排他的経済水域の権益に関するインドネシアの立場に注目する必要がある。"
+    },
+    {
+      "parentKey": "why",
+      "start": 185.835,
+      "speechEnd": 189.806,
+      "end": 190.306,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 190.306,
+      "speechEnd": 193.719,
+      "end": 193.949,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "南シナ海の海洋権益は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 193.949,
+      "speechEnd": 196.596,
+      "end": 196.826,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "地域のエネルギー、"
+    },
+    {
+      "parentKey": "why",
+      "start": 196.826,
+      "speechEnd": 198.846,
+      "end": 199.076,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "海運、"
+    },
+    {
+      "parentKey": "why",
+      "start": 199.076,
+      "speechEnd": 202.35,
+      "end": 203.05,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "投資協力に関連している。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 203.05,
+      "speechEnd": 205.14,
+      "end": 205.37,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 205.37,
+      "speechEnd": 208.644,
+      "end": 208.874,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "正式な共同声明、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 208.874,
+      "speechEnd": 211.521,
+      "end": 211.751,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "海洋協力の範囲、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 211.751,
+      "speechEnd": 216.209,
+      "end": 216.909,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "経済・貿易交渉の日程を確認する。"
+    }
+  ]
+}
