@@ -1,0 +1,450 @@
+{
+  "version": 3,
+  "duration": 209.404,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 634,
+  "charactersPerMinute": 181.7,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 13.42,
+      "text": "デンマーク、ロシア国防武官を追放、ロシア国民への不要不急のビザ発給停止"
+    },
+    {
+      "key": "dek",
+      "start": 13.42,
+      "end": 31.299,
+      "text": "デンマーク外相は、ロシアの国防武官に対し７日以内の出国を要求し、ロシアへのビザ手配を厳格化すると発表した。"
+    },
+    {
+      "key": "body-0",
+      "start": 31.299,
+      "end": 98.369,
+      "text": "トルコのアナドル通信が11月21日にまとめた国際ニュースによると、デンマークのラスムセン外相は、デンマークはロシア国防武官に対し7日以内に出国するよう要請し、ロシア国民への不要不急のビザ発給を停止すると述べた。ラスムッセン氏は、この措置はデンマークがウクライナを支援し続けるという強いシグナルをモスクワに送ったと述べた。関連措置はデンマーク政府が発表した外交的決定であり、他のシェンゲン協定諸国が同様の政策を採用していると直接推論することはできない。"
+    },
+    {
+      "key": "body-1",
+      "start": 98.369,
+      "end": 176.65,
+      "text": "報道によると、デンマークもロシア関連船舶の受け入れ義務を見直し、他のシェンゲン協定諸国とビザ制限について話し合う予定だという。デンマーク政府は、ロシアとの連絡経路を維持する必要があるため、ロシア外交官全員を追放するつもりはないと述べた。デンマーク首相はまた、当局が米国とウクライナの二重国籍者に対する暗殺計画をロシア諜報機関と関連付けたと主張した。この申し立ては、証明された司法事実とは依然として区別されなければなりません。ロシア政府の正式な対応や今後のビザ措置の発効日、適用される免除などに注目してください。"
+    },
+    {
+      "key": "why",
+      "start": 176.65,
+      "end": 196.032,
+      "text": "外交官追放やビザ厳格化は欧州の安全保障や国境を越えた交流に影響を与える可能性がある。"
+    },
+    {
+      "key": "watch",
+      "start": 196.032,
+      "end": 209.404,
+      "text": "ロシアの外交的対応、デンマークの公式ビザ規則、シェンゲン協定の調整。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.159,
+      "end": 2.389,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "デンマーク、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.389,
+      "speechEnd": 6.36,
+      "end": 6.59,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロシア国防武官を追放、"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.59,
+      "speechEnd": 12.72,
+      "end": 13.42,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "ロシア国民への不要不急のビザ発給停止。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.42,
+      "speechEnd": 16.207,
+      "end": 16.437,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "デンマーク外相は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.437,
+      "speechEnd": 24.656,
+      "end": 24.886,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロシアの国防武官に対し７日以内の出国を要求し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.886,
+      "speechEnd": 30.599,
+      "end": 31.299,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "ロシアへのビザ手配を厳格化すると発表した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 31.299,
+      "speechEnd": 34.573,
+      "end": 34.713,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "トルコのアナドル通信が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.713,
+      "speechEnd": 37.429,
+      "end": 37.569,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "11月21日"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.569,
+      "speechEnd": 41.47,
+      "end": 41.7,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "にまとめた国際ニュースによると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.7,
+      "speechEnd": 45.531,
+      "end": 45.761,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "デンマークのラスムセン外相は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.761,
+      "speechEnd": 55.166,
+      "end": 55.396,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "デンマークはロシア国防武官に対し7日以内に出国するよう要請し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.396,
+      "speechEnd": 63.197,
+      "end": 63.697,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "ロシア国民への不要不急のビザ発給を停止すると述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.697,
+      "speechEnd": 66.275,
+      "end": 66.505,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ラスムッセン氏は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.505,
+      "speechEnd": 70.893,
+      "end": 71.173,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "この措置はデンマークがウクライナを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.173,
+      "speechEnd": 78.209,
+      "end": 78.709,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "支援し続けるという強いシグナルをモスクワに送ったと述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 78.709,
+      "speechEnd": 86.441,
+      "end": 86.671,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "関連措置はデンマーク政府が発表した外交的決定であり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 86.671,
+      "speechEnd": 92.453,
+      "end": 92.733,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "他のシェンゲン協定諸国が同様の政策を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 92.733,
+      "speechEnd": 97.749,
+      "end": 98.369,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "採用していると直接推論することはできない。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 98.369,
+      "speechEnd": 100.737,
+      "end": 100.967,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "報道によると、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 100.967,
+      "speechEnd": 107.585,
+      "end": 107.815,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "デンマークもロシア関連船舶の受け入れ義務を見直し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 107.815,
+      "speechEnd": 113.388,
+      "end": 113.668,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "他のシェンゲン協定諸国とビザ制限について"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 113.668,
+      "speechEnd": 116.942,
+      "end": 117.442,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "話し合う予定だという。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.442,
+      "speechEnd": 120.298,
+      "end": 120.528,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "デンマーク政府は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.528,
+      "speechEnd": 126.518,
+      "end": 126.748,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロシアとの連絡経路を維持する必要があるため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 126.748,
+      "speechEnd": 133.854,
+      "end": 134.354,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "ロシア外交官全員を追放するつもりはないと述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 134.354,
+      "speechEnd": 137.558,
+      "end": 137.788,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "デンマーク首相はまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 137.788,
+      "speechEnd": 145.729,
+      "end": 146.009,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "当局が米国とウクライナの二重国籍者に対する暗殺計画を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 146.009,
+      "speechEnd": 150.746,
+      "end": 151.246,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "ロシア諜報機関と関連付けたと主張した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 151.246,
+      "speechEnd": 153.893,
+      "end": 154.123,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この申し立ては、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 154.123,
+      "speechEnd": 162.691,
+      "end": 163.191,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "証明された司法事実とは依然として区別されなければなりません。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 163.191,
+      "speechEnd": 170.993,
+      "end": 171.223,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロシア政府の正式な対応や今後のビザ措置の発効日、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 171.223,
+      "speechEnd": 176.03,
+      "end": 176.65,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "適用される免除などに注目してください。"
+    },
+    {
+      "parentKey": "why",
+      "start": 176.65,
+      "speechEnd": 180.62,
+      "end": 181.12,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 181.12,
+      "speechEnd": 189.131,
+      "end": 189.411,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "外交官追放やビザ厳格化は欧州の安全保障や国境を"
+    },
+    {
+      "parentKey": "why",
+      "start": 189.411,
+      "speechEnd": 195.332,
+      "end": 196.032,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "越えた交流に影響を与える可能性がある。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 196.032,
+      "speechEnd": 198.122,
+      "end": 198.352,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 198.352,
+      "speechEnd": 201.487,
+      "end": 201.717,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロシアの外交的対応、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 201.717,
+      "speechEnd": 205.339,
+      "end": 205.569,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "デンマークの公式ビザ規則、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 205.569,
+      "speechEnd": 208.704,
+      "end": 209.404,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "シェンゲン協定の調整。"
+    }
+  ]
+}
