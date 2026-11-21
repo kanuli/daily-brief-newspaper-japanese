@@ -1,0 +1,514 @@
+{
+  "version": 3,
+  "duration": 228.783,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 651,
+  "charactersPerMinute": 170.7,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 16.973,
+      "text": "韓国大統領、人工知能や電子機器による不正行為に対処するため、国家試験制度の包括的な見直しを求める"
+    },
+    {
+      "key": "dek",
+      "start": 16.973,
+      "end": 34.364,
+      "text": "韓国の李在明大統領は、不正行為対策と試験の信頼性を強化するため、約800件の国家試験の見直しを要請した。"
+    },
+    {
+      "key": "body-0",
+      "start": 34.364,
+      "end": 199.214,
+      "text": "アジア記者協会が11月21日にまとめた地域ニュースによると、韓国の尹錫悦大統領は11月20日に開催された高級幕僚会議で、人工知能や先進的な電子機器が不正行為に利用される可能性に対処するため、国家試験制度の全面的な見直しを求めた。報道によると、従来の試験監督の方法では新技術に対応できなくなっており、政府は制度設計から実施の詳細に至るまで、約800種類の国家試験を対象に見直しを行う必要があるという。これは改革の指示であり、すべての試験ですぐに新しい監視技術が採用されることを意味するものではない。\\n\\n報道によると、政府はAI企業と協力して不正行為の検出技術を研究するとともに、試験会場のセキュリティ強化、違反に対する処罰、過去の事例の調査を行うよう求められているという。関連する措置は、受験者のプライバシー、検出の正確性、および試験の公平性とのバランスに関わるものであり、具体的な計画、適用される試験の種類、および実施日は、韓国の主管部門による正式な発表を待つ必要がある。今後は、政府が具体的な法改正を提案するかどうか、また、新しいツールが通常の受験者を誤って判定しないようにするにはどうすればよいか、注目すべきである。"
+    },
+    {
+      "key": "why",
+      "start": 199.214,
+      "end": 211.232,
+      "text": "16人の子育てママは、とても元気です。"
+    },
+    {
+      "key": "watch",
+      "start": 211.232,
+      "end": 228.783,
+      "text": "韓国政府および試験主管機関による公式な改革案、適用範囲、および個人情報の保護。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.508,
+      "end": 2.738,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "韓国大統領、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.738,
+      "speechEnd": 9.773,
+      "end": 10.003,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "人工知能や電子機器による不正行為に対処するため、"
+    },
+    {
+      "parentKey": "title",
+      "start": 10.003,
+      "speechEnd": 16.273,
+      "end": 16.973,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "国家試験制度の包括的な見直しを求める。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.973,
+      "speechEnd": 20.943,
+      "end": 21.173,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "韓国の李在明大統領は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.173,
+      "speechEnd": 27.373,
+      "end": 27.603,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "不正行為対策と試験の信頼性を強化するため、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 27.603,
+      "speechEnd": 33.664,
+      "end": 34.364,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "約800件の国家試験の見直しを要請した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.364,
+      "speechEnd": 42.792,
+      "end": 43.022,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "アジア記者協会が11月21日にまとめた地域ニュースによると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.022,
+      "speechEnd": 46.505,
+      "end": 46.645,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "韓国の尹錫悦大統領は"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.645,
+      "speechEnd": 49.292,
+      "end": 49.432,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "11月20日"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.432,
+      "speechEnd": 53.403,
+      "end": 53.633,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "に開催された高級幕僚会議で、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.633,
+      "speechEnd": 58.579,
+      "end": 58.859,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "人工知能や先進的な電子機器が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.859,
+      "speechEnd": 64.501,
+      "end": 64.731,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "不正行為に利用される可能性に対処するため、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.731,
+      "speechEnd": 71.349,
+      "end": 71.849,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "国家試験制度の全面的な見直しを求めた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.849,
+      "speechEnd": 74.217,
+      "end": 74.447,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "報道によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 74.447,
+      "speechEnd": 82.528,
+      "end": 82.758,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "従来の試験監督の方法では新技術に対応できなくなっており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 82.758,
+      "speechEnd": 88.958,
+      "end": 89.188,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "政府は制度設計から実施の詳細に至るまで、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 89.188,
+      "speechEnd": 95.318,
+      "end": 95.598,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "約800種類の国家試験を対象に見直しを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 95.598,
+      "speechEnd": 98.593,
+      "end": 99.093,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "行う必要があるという。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 99.093,
+      "speechEnd": 102.785,
+      "end": 103.015,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "これは改革の指示であり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 103.015,
+      "speechEnd": 108.17,
+      "end": 108.45,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "すべての試験ですぐに新しい監視技術が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 108.45,
+      "speechEnd": 113.466,
+      "end": 113.966,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "採用されることを意味するものではない。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 113.966,
+      "speechEnd": 116.473,
+      "end": 116.703,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "\\n\\n報道によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 116.703,
+      "speechEnd": 125.898,
+      "end": 126.128,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "政府はAI企業と協力して不正行為の検出技術を研究するとともに、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 126.128,
+      "speechEnd": 129.542,
+      "end": 129.772,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "試験会場のセキュリティ強化、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 129.772,
+      "speechEnd": 132.488,
+      "end": 132.718,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "違反に対する処罰、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 132.718,
+      "speechEnd": 139.406,
+      "end": 139.906,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "過去の事例の調査を行うよう求められているという。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 139.906,
+      "speechEnd": 142.553,
+      "end": 142.783,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "関連する措置は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 142.783,
+      "speechEnd": 145.918,
+      "end": 146.148,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "受験者のプライバシー、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 146.148,
+      "speechEnd": 148.655,
+      "end": 148.885,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "検出の正確性、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 148.885,
+      "speechEnd": 156.339,
+      "end": 156.569,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "および試験の公平性とのバランスに関わるものであり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 156.569,
+      "speechEnd": 159.077,
+      "end": 159.307,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "具体的な計画、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 159.307,
+      "speechEnd": 162.511,
+      "end": 162.741,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "適用される試験の種類、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 162.741,
+      "speechEnd": 165.736,
+      "end": 165.966,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "および実施日は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 165.966,
+      "speechEnd": 173.699,
+      "end": 174.199,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "韓国の主管部門による正式な発表を待つ必要がある。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 174.199,
+      "speechEnd": 176.288,
+      "end": 176.518,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 176.518,
+      "speechEnd": 182.788,
+      "end": 183.018,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "政府が具体的な法改正を提案するかどうか、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 183.018,
+      "speechEnd": 185.038,
+      "end": 185.268,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "また、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 185.268,
+      "speechEnd": 195.578,
+      "end": 195.808,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "新しいツールが通常の受験者を誤って判定しないようにするにはどうすればよいか、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 195.808,
+      "speechEnd": 198.594,
+      "end": 199.214,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "注目すべきである。"
+    },
+    {
+      "parentKey": "why",
+      "start": 199.214,
+      "speechEnd": 203.185,
+      "end": 203.685,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 203.685,
+      "speechEnd": 207.795,
+      "end": 208.025,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "16人の子育てママは、"
+    },
+    {
+      "parentKey": "why",
+      "start": 208.025,
+      "speechEnd": 210.532,
+      "end": 211.232,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "とても元気です。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 211.232,
+      "speechEnd": 213.322,
+      "end": 213.552,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 213.552,
+      "speechEnd": 221.842,
+      "end": 222.072,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "韓国政府および試験主管機関による公式な改革案、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 222.072,
+      "speechEnd": 224.161,
+      "end": 224.391,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "適用範囲、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 224.391,
+      "speechEnd": 228.083,
+      "end": 228.783,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "および個人情報の保護。"
+    }
+  ]
+}
