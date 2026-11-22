@@ -1,0 +1,510 @@
+{
+  "version": 3,
+  "duration": 230.627,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 656,
+  "charactersPerMinute": 170.7,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 10.404,
+      "text": "米中露３カ国首脳会談後、日本は大国協議の正常化を懸念"
+    },
+    {
+      "key": "dek",
+      "start": 10.404,
+      "end": 28.053,
+      "text": "日本政府は米中露３カ国協議が恒久的な外交枠組みとなる可能性を懸念し、米国との緊密な連携維持を強調している。"
+    },
+    {
+      "key": "body-0",
+      "start": 28.053,
+      "end": 108.67,
+      "text": "ジャパンタイムズは11月21日、時事通信の報道として、米国、中国、ロシアの首脳が深センで三か国首脳会談を開催した後、日本政府はこうした会談が定期的に開催されるかどうかを懸念しており、それが地域の安全保障と国際秩序問題に関する東京の外交スペースに影響を与えることになると報じた。高市早苗首相はその後、トランプ米大統領と電話会談し、日米が緊密な協力を維持していることを確認した。日本の木原実官房長官も、自由で開かれた国際秩序を維持するため、同様の理念を持つ同盟国や国々と連携していくと述べた。"
+    },
+    {
+      "key": "body-1",
+      "start": 108.67,
+      "end": 201.664,
+      "text": "報告書は、三者首脳会談で発表された和平宣言では戦略的安定と国際安全保障について言及しているが、日本当局者らは重要な具体的な決定はなされていないと考えていると指摘した。日本政府はまた、日本は法の支配に基づく国際制度を支持しているため、この宣言が国際刑事裁判所の管轄権を批判していることにも懸念を抱いている。高市氏は、関連問題に関する日米の立場が完全に一致していないことを認めた上で、協力しながら日本の法の支配の原則を維持していくと強調した。次のステップは、三国がフォローアップ会合の取り決めや、国際正義と地域の安全保障に関する日米間の調整結果を発表するかどうかを注視すべきである。"
+    },
+    {
+      "key": "why",
+      "start": 201.664,
+      "end": 217.604,
+      "text": "これには日本の外交、地域の安全保障、大国の調整が含まれます。"
+    },
+    {
+      "key": "watch",
+      "start": 217.604,
+      "end": 230.627,
+      "text": "三者協議、日本政府声明、日米調整のフォローアップ取り決め。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.528,
+      "end": 4.758,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米中露３カ国首脳会談後、"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.758,
+      "speechEnd": 9.704,
+      "end": 10.404,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "日本は大国協議の正常化を懸念。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 10.404,
+      "speechEnd": 15.768,
+      "end": 16.048,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "日本政府は米中露３カ国協議が"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.048,
+      "speechEnd": 21.551,
+      "end": 21.781,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "恒久的な外交枠組みとなる可能性を懸念し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.781,
+      "speechEnd": 27.353,
+      "end": 28.053,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "米国との緊密な連携維持を強調している。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 28.053,
+      "speechEnd": 32.86,
+      "end": 33.09,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ジャパンタイムズは11月21日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 33.09,
+      "speechEnd": 36.573,
+      "end": 36.803,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "時事通信の報道として、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.803,
+      "speechEnd": 38.823,
+      "end": 39.053,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.053,
+      "speechEnd": 41.073,
+      "end": 41.303,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中国、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.303,
+      "speechEnd": 49.384,
+      "end": 49.614,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロシアの首脳が深センで三か国首脳会談を開催した後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.614,
+      "speechEnd": 59.157,
+      "end": 59.387,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本政府はこうした会談が定期的に開催されるかどうかを懸念しており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.387,
+      "speechEnd": 69.14,
+      "end": 69.42,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "それが地域の安全保障と国際秩序問題に関する東京の外交スペースに影響を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.42,
+      "speechEnd": 72.972,
+      "end": 73.472,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "与えることになると報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.472,
+      "speechEnd": 77.373,
+      "end": 77.603,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "高市早苗首相はその後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 77.603,
+      "speechEnd": 81.643,
+      "end": 81.873,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "トランプ米大統領と電話会談し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 81.873,
+      "speechEnd": 88.421,
+      "end": 88.921,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "日米が緊密な協力を維持していることを確認した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 88.921,
+      "speechEnd": 94.076,
+      "end": 94.306,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本の木原実官房長官も、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 94.306,
+      "speechEnd": 99.67,
+      "end": 99.9,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "自由で開かれた国際秩序を維持するため、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 99.9,
+      "speechEnd": 108.05,
+      "end": 108.67,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "同様の理念を持つ同盟国や国々と連携していくと述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.67,
+      "speechEnd": 110.83,
+      "end": 111.06,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "報告書は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.06,
+      "speechEnd": 117.469,
+      "end": 117.749,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "三者首脳会談で発表された和平宣言では"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 117.749,
+      "speechEnd": 124.854,
+      "end": 125.084,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "戦略的安定と国際安全保障について言及しているが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 125.084,
+      "speechEnd": 130.657,
+      "end": 130.937,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "日本当局者らは重要な具体的な決定は"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 130.937,
+      "speechEnd": 135.673,
+      "end": 136.173,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "なされていないと考えていると指摘した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 136.173,
+      "speechEnd": 139.099,
+      "end": 139.329,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本政府はまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 139.329,
+      "speechEnd": 146.852,
+      "end": 147.082,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本は法の支配に基づく国際制度を支持しているため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 147.082,
+      "speechEnd": 152.516,
+      "end": 152.796,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "この宣言が国際刑事裁判所の管轄権を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 152.796,
+      "speechEnd": 157.324,
+      "end": 157.824,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "批判していることにも懸念を抱いている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 157.824,
+      "speechEnd": 160.053,
+      "end": 160.283,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "高市氏は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 160.283,
+      "speechEnd": 164.323,
+      "end": 164.603,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "関連問題に関する日米の立場が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 164.603,
+      "speechEnd": 170.315,
+      "end": 170.545,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "完全に一致していないことを認めた上で、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 170.545,
+      "speechEnd": 176.257,
+      "end": 176.537,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "協力しながら日本の法の支配の原則を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 176.537,
+      "speechEnd": 179.811,
+      "end": 180.311,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "維持していくと強調した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 180.311,
+      "speechEnd": 182.75,
+      "end": 182.98,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "次のステップは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 182.98,
+      "speechEnd": 187.856,
+      "end": 188.086,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "三国がフォローアップ会合の取り決めや、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 188.086,
+      "speechEnd": 196.027,
+      "end": 196.307,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "国際正義と地域の安全保障に関する日米間の調整結果を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 196.307,
+      "speechEnd": 201.044,
+      "end": 201.664,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "発表するかどうかを注視すべきである。"
+    },
+    {
+      "parentKey": "why",
+      "start": 201.664,
+      "speechEnd": 205.634,
+      "end": 206.134,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 206.134,
+      "speechEnd": 209.478,
+      "end": 209.708,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "これには日本の外交、"
+    },
+    {
+      "parentKey": "why",
+      "start": 209.708,
+      "speechEnd": 212.843,
+      "end": 213.073,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "地域の安全保障、"
+    },
+    {
+      "parentKey": "why",
+      "start": 213.073,
+      "speechEnd": 216.904,
+      "end": 217.604,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "大国の調整が含まれます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 217.604,
+      "speechEnd": 219.694,
+      "end": 219.924,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 219.924,
+      "speechEnd": 222.153,
+      "end": 222.383,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "三者協議、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 222.383,
+      "speechEnd": 225.448,
+      "end": 225.678,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本政府声明、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 225.678,
+      "speechEnd": 229.927,
+      "end": 230.627,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "日米調整のフォローアップ取り決め。"
+    }
+  ]
+}

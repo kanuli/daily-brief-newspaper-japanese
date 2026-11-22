@@ -1,0 +1,440 @@
+{
+  "version": 3,
+  "duration": 209.663,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 590,
+  "charactersPerMinute": 168.8,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 14.514,
+      "text": "福島県内で吹雪により道路が封鎖され、北塩原村では一時１０００人以上が外界と遮断された。"
+    },
+    {
+      "key": "dek",
+      "start": 14.514,
+      "end": 35.528,
+      "text": "日本の共同通信社は、福島県北塩原村の多くの道路が大雪と倒木の影響で通行止めとなり、住民や観光客のアクセスに影響が出たと報じた。"
+    },
+    {
+      "key": "body-0",
+      "start": 35.528,
+      "end": 113.767,
+      "text": "共同通信社の11月22日朝のニュース概要は、福島県北塩原村の一部の道路が大雪による倒木で通行止めとなり、同地域に住む1000人以上の外部との交通が一時的に遮断されたと日本の地方自治体が発表したと伝えた。被害地域には裏磐梯地域も含まれます。当局は住民約９００人と、ホテルやその他の宿泊施設からの観光客約５００人に言及した。 ２つのカテゴリーの合計人数は約１４００人で、報告書の暫定分類数となっている。閉じ込められた人の実際の総数は、地方自治体によってまだ更新される必要がある。"
+    },
+    {
+      "key": "body-1",
+      "start": 113.767,
+      "end": 180.094,
+      "text": "裏磐梯は山岳観光地です。道路が封鎖されると、住民の生活物資に影響が出るだけでなく、観光客の移動や緊急車両の通行も制限される可能性がある。既存の概要には、通行止めとなったすべての道路の名前、再開時期、死傷者の情報が記載されていないため、道路が再開されたか、あるいは負傷者が発生したかを推測することはできない。今後、福島県や北塩原村から発表される撤去の進捗状況や輸送手配、乗客の安全情報などに注意してください。"
+    },
+    {
+      "key": "why",
+      "start": 180.094,
+      "end": 197.128,
+      "text": "大雪と道路閉鎖は、日本の山岳地帯の住民や旅行者の安全に影響を与えます。"
+    },
+    {
+      "key": "watch",
+      "start": 197.128,
+      "end": 209.663,
+      "text": "福島県の道路再開、障害物の撤去、乗客の宿泊手配。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 6.13,
+      "end": 6.36,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "福島県内で吹雪により道路が封鎖され、"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.36,
+      "speechEnd": 13.814,
+      "end": 14.514,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "北塩原村では一時１０００人以上が外界と遮断された。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 14.514,
+      "speechEnd": 18.066,
+      "end": 18.296,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本の共同通信社は、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.296,
+      "speechEnd": 23.59,
+      "end": 23.87,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "福島県北塩原村の多くの道路が"
+    },
+    {
+      "parentKey": "dek",
+      "start": 23.87,
+      "speechEnd": 28.886,
+      "end": 29.116,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "大雪と倒木の影響で通行止めとなり、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 29.116,
+      "speechEnd": 34.828,
+      "end": 35.528,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "住民や観光客のアクセスに影響が出たと報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 35.528,
+      "speechEnd": 42.564,
+      "end": 42.794,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "共同通信社の11月22日朝のニュース概要は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.794,
+      "speechEnd": 48.227,
+      "end": 48.507,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "福島県北塩原村の一部の道路が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.507,
+      "speechEnd": 53.244,
+      "end": 53.474,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "大雪による倒木で通行止めとなり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.474,
+      "speechEnd": 60.37,
+      "end": 60.65,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "同地域に住む1000人以上の外部との交通が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.65,
+      "speechEnd": 69.497,
+      "end": 69.997,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "一時的に遮断されたと日本の地方自治体が発表したと伝えた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.997,
+      "speechEnd": 75.5,
+      "end": 76.0,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "被害地域には裏磐梯地域も含まれます。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.0,
+      "speechEnd": 79.971,
+      "end": 80.201,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "当局は住民約９００人と、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 80.201,
+      "speechEnd": 89.396,
+      "end": 89.896,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "ホテルやその他の宿泊施設からの観光客約５００人に言及した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 89.896,
+      "speechEnd": 96.862,
+      "end": 97.092,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "２つのカテゴリーの合計人数は約１４００人で、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 97.092,
+      "speechEnd": 100.993,
+      "end": 101.493,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "報告書の暫定分類数となっている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 101.493,
+      "speechEnd": 106.3,
+      "end": 106.53,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "閉じ込められた人の実際の総数は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 106.53,
+      "speechEnd": 113.147,
+      "end": 113.767,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "地方自治体によってまだ更新される必要がある。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 113.767,
+      "speechEnd": 117.947,
+      "end": 118.447,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "裏磐梯は山岳観光地です。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 118.447,
+      "speechEnd": 121.512,
+      "end": 121.742,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "道路が封鎖されると、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.742,
+      "speechEnd": 126.966,
+      "end": 127.196,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "住民の生活物資に影響が出るだけでなく、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 127.196,
+      "speechEnd": 135.764,
+      "end": 136.264,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "観光客の移動や緊急車両の通行も制限される可能性がある。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 136.264,
+      "speechEnd": 138.912,
+      "end": 139.142,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "既存の概要には、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 139.142,
+      "speechEnd": 144.436,
+      "end": 144.666,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "通行止めとなったすべての道路の名前、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 144.666,
+      "speechEnd": 146.895,
+      "end": 147.125,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "再開時期、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 147.125,
+      "speechEnd": 151.931,
+      "end": 152.161,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "死傷者の情報が記載されていないため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 152.161,
+      "speechEnd": 155.366,
+      "end": 155.596,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "道路が再開されたか、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 155.596,
+      "speechEnd": 162.353,
+      "end": 162.853,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "あるいは負傷者が発生したかを推測することはできない。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 162.853,
+      "speechEnd": 164.873,
+      "end": 165.103,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 165.103,
+      "speechEnd": 174.019,
+      "end": 174.249,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "福島県や北塩原村から発表される撤去の進捗状況や輸送手配、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 174.249,
+      "speechEnd": 179.474,
+      "end": 180.094,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "乗客の安全情報などに注意してください。"
+    },
+    {
+      "parentKey": "why",
+      "start": 180.094,
+      "speechEnd": 184.064,
+      "end": 184.564,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 184.564,
+      "speechEnd": 187.56,
+      "end": 187.79,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "大雪と道路閉鎖は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 187.79,
+      "speechEnd": 196.428,
+      "end": 197.128,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "日本の山岳地帯の住民や旅行者の安全に影響を与えます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 197.128,
+      "speechEnd": 199.217,
+      "end": 199.447,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 199.447,
+      "speechEnd": 203.07,
+      "end": 203.3,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "福島県の道路再開、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 203.3,
+      "speechEnd": 205.807,
+      "end": 206.037,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "障害物の撤去、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 206.037,
+      "speechEnd": 208.963,
+      "end": 209.663,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "乗客の宿泊手配。"
+    }
+  ]
+}
