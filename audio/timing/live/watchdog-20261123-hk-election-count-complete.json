@@ -1,0 +1,510 @@
+{
+  "version": 3,
+  "duration": 263.276,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 739,
+  "charactersPerMinute": 168.4,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 16.812,
+      "text": "選挙管理委員会選挙の31の争点での開票が完了し、EACは投票率が98.79%であることを確認した。"
+    },
+    {
+      "key": "dek",
+      "start": 16.812,
+      "end": 33.834,
+      "text": "EACは22日午後10時15分に開票が完了し、争われた31部門の結果が選挙ウェブサイトに掲載されたと発表した。"
+    },
+    {
+      "key": "body-0",
+      "start": 33.834,
+      "end": 119.765,
+      "text": "選挙管理委員会は11月22日午後10時47分にプレスリリースを発表し、2026年選挙委員会の部門別グループの一般選挙における開票作業が同日午後10時15分に完了したことを確認した。当局によると、午後6時に投票が終了した後、投票箱が中央開票所に到着すると開票が開始され、全体の所要時間は約3時間45分であった。争点となる31の部門別グループの選挙結果は、選挙ウェブサイトに既に公開されている。この公式な確認は、以前に開票の開始のみを確認できた情報に取って代わるものであり、開票結果がまだすべて発表されていないとは言えなくなった。"
+    },
+    {
+      "key": "body-1",
+      "start": 119.765,
+      "end": 228.086,
+      "text": "選挙管理委員会の陸啓康委員長は、総計5,640人の有権者が投票に参加し、累積投票率は98.79%に達したと述べ、電子開票手続きが順調に進んだと指摘した。立法会事務局は11月23日午前0時29分に別の声明を発表し、当選した委員を祝福し、今回は856人の候補者が723の議席を争ったことを指摘した。選挙管理委員会が発表したところによると、選挙委員会の正式委員名簿は2027年2月1日に公開される。また、選挙管理委員会は法律に従って、選挙の実施に関する見直し報告書を行政長官に提出する。上記は選挙当局および立法会の発表であり、選挙制度の評価は関連機関に明確に帰属すべきであり、独立した事実判断と混同すべきではない。"
+    },
+    {
+      "key": "why",
+      "start": 228.086,
+      "end": 245.955,
+      "text": "公式に票の集計が完了したことを確認し、前回の「票の集計待ち」のステータスを修正します。"
+    },
+    {
+      "key": "watch",
+      "start": 245.955,
+      "end": 263.276,
+      "text": "選挙ウェブサイトにおける部門別の正式な結果、および2027年2月1日時点の正式な委員名簿。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 8.011,
+      "end": 8.241,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "選挙管理委員会選挙の31の争点での開票が完了し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.241,
+      "speechEnd": 16.112,
+      "end": 16.812,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "EACは投票率が98.79%であることを確認した。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 16.812,
+      "speechEnd": 23.918,
+      "end": 24.148,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "EACは22日午後10時15分に開票が完了し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 24.148,
+      "speechEnd": 33.134,
+      "end": 33.834,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "争われた31部門の結果が選挙ウェブサイトに掲載されたと発表した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 33.834,
+      "speechEnd": 39.407,
+      "end": 39.547,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "選挙管理委員会は11月22日午後"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.547,
+      "speechEnd": 41.636,
+      "end": 41.776,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "10時"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.776,
+      "speechEnd": 46.862,
+      "end": 47.092,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "47分にプレスリリースを発表し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.092,
+      "speechEnd": 58.098,
+      "end": 58.238,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "2026年選挙委員会の部門別グループの一般選挙における開票作業が同日午後"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.238,
+      "speechEnd": 60.328,
+      "end": 60.468,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "10時"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.468,
+      "speechEnd": 65.414,
+      "end": 65.914,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "15分に完了したことを確認した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 65.914,
+      "speechEnd": 68.352,
+      "end": 68.582,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "当局によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 68.582,
+      "speechEnd": 72.97,
+      "end": 73.2,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "午後6時に投票が終了した後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 73.2,
+      "speechEnd": 80.166,
+      "end": 80.396,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "投票箱が中央開票所に到着すると開票が開始され、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 80.396,
+      "speechEnd": 87.362,
+      "end": 87.862,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "全体の所要時間は約3時間45分であった。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 87.862,
+      "speechEnd": 94.062,
+      "end": 94.292,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "争点となる31の部門別グループの選挙結果は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 94.292,
+      "speechEnd": 98.82,
+      "end": 99.32,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "選挙ウェブサイトに既に公開されている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 99.32,
+      "speechEnd": 102.385,
+      "end": 102.615,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この公式な確認は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 102.615,
+      "speechEnd": 111.531,
+      "end": 111.761,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "以前に開票の開始のみを確認できた情報に取って代わるものであり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 111.761,
+      "speechEnd": 119.145,
+      "end": 119.765,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "開票結果がまだすべて発表されていないとは言えなくなった。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 119.765,
+      "speechEnd": 125.268,
+      "end": 125.498,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "選挙管理委員会の陸啓康委員長は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 125.498,
+      "speechEnd": 127.588,
+      "end": 127.818,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "総計5,"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 127.818,
+      "speechEnd": 133.391,
+      "end": 133.621,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "640人の有権者が投票に参加し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 133.621,
+      "speechEnd": 140.935,
+      "end": 141.165,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "累積投票率は98.79%に達したと述べ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 141.165,
+      "speechEnd": 147.226,
+      "end": 147.726,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "電子開票手続きが順調に進んだと指摘した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 147.726,
+      "speechEnd": 153.02,
+      "end": 153.16,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "立法会事務局は11月23日午前"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 153.16,
+      "speechEnd": 155.18,
+      "end": 155.32,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "0時"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 155.32,
+      "speechEnd": 159.917,
+      "end": 160.147,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "29分に別の声明を発表し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 160.147,
+      "speechEnd": 163.979,
+      "end": 164.209,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "当選した委員を祝福し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 164.209,
+      "speechEnd": 171.662,
+      "end": 171.942,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "今回は856人の候補者が723の議席を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 171.942,
+      "speechEnd": 175.007,
+      "end": 175.507,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "争ったことを指摘した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 175.507,
+      "speechEnd": 181.429,
+      "end": 181.659,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "選挙管理委員会が発表したところによると、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 181.659,
+      "speechEnd": 186.256,
+      "end": 186.536,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "選挙委員会の正式委員名簿は"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 186.536,
+      "speechEnd": 192.248,
+      "end": 192.748,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "2027年2月1日に公開される。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 192.748,
+      "speechEnd": 194.768,
+      "end": 194.998,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "また、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 194.998,
+      "speechEnd": 199.457,
+      "end": 199.687,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "選挙管理委員会は法律に従って、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 199.687,
+      "speechEnd": 207.488,
+      "end": 207.988,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "選挙の実施に関する見直し報告書を行政長官に提出する。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 207.988,
+      "speechEnd": 214.327,
+      "end": 214.557,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "上記は選挙当局および立法会の発表であり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 214.557,
+      "speechEnd": 221.732,
+      "end": 221.962,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "選挙制度の評価は関連機関に明確に帰属すべきであり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 221.962,
+      "speechEnd": 227.466,
+      "end": 228.086,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "独立した事実判断と混同すべきではない。"
+    },
+    {
+      "parentKey": "why",
+      "start": 228.086,
+      "speechEnd": 232.056,
+      "end": 232.556,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 232.556,
+      "speechEnd": 238.477,
+      "end": 238.707,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "公式に票の集計が完了したことを確認し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 238.707,
+      "speechEnd": 245.255,
+      "end": 245.955,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "前回の「票の集計待ち」のステータスを修正します。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 245.955,
+      "speechEnd": 248.045,
+      "end": 248.275,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 248.275,
+      "speechEnd": 253.709,
+      "end": 253.939,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "選挙ウェブサイトにおける部門別の正式な結果、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 253.939,
+      "speechEnd": 262.576,
+      "end": 263.276,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "および2027年2月1日時点の正式な委員名簿。"
+    }
+  ]
+}
