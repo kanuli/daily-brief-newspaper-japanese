@@ -1,0 +1,330 @@
+{
+  "version": 3,
+  "duration": 139.387,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 378,
+  "charactersPerMinute": 162.7,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 9.986,
+      "text": "韓国政府省庁移転計画改定、31機関が世宗市に移転へ"
+    },
+    {
+      "key": "dek",
+      "start": 9.986,
+      "end": 27.586,
+      "text": "5,460 人の公務員が関与しており、一部の部門では新しい建物の完成を待たなければなりません。"
+    },
+    {
+      "key": "body-0",
+      "start": 27.586,
+      "end": 73.992,
+      "text": "韓国の行政安全部は、中央行政機関の移転計画を改定し、2031年までに31の機関を世宗市に移転する予定で、これには5,460人の公務員が関与する。そのうち22機関は来年、賃貸オフィスに移転する予定であり、残りの9機関は専用施設を必要とするため、新築の政府庁舎に移転する。"
+    },
+    {
+      "key": "body-1",
+      "start": 73.992,
+      "end": 118.449,
+      "text": "当初発表された44機関のうち、外務省、統一省、国防省など13機関は、移転に法改正が伴うため、今回は対象外となっている。聯合ニュースによると、移転にかかる総費用は約1兆6500億ウォンと見積もられており、行政安全部は関係機関と具体的なスケジュールについて協議する予定である。"
+    },
+    {
+      "key": "why",
+      "start": 118.449,
+      "end": 129.401,
+      "text": "政府の行政資源と公的支出が関係します。"
+    },
+    {
+      "key": "watch",
+      "start": 129.401,
+      "end": 139.387,
+      "text": "関連する改正および段階的な移転のスケジュール。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.807,
+      "end": 5.037,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "韓国政府省庁移転計画改定、"
+    },
+    {
+      "parentKey": "title",
+      "start": 5.037,
+      "speechEnd": 9.286,
+      "end": 9.986,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "31機関が世宗市に移転へ。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 9.986,
+      "speechEnd": 11.936,
+      "end": 12.166,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "5,"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.166,
+      "speechEnd": 17.948,
+      "end": 18.178,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "460 人の公務員が関与しており、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.178,
+      "speechEnd": 26.886,
+      "end": 27.586,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "一部の部門では新しい建物の完成を待たなければなりません。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 27.586,
+      "speechEnd": 31.347,
+      "end": 31.577,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "韓国の行政安全部は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 31.577,
+      "speechEnd": 37.15,
+      "end": 37.38,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中央行政機関の移転計画を改定し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.38,
+      "speechEnd": 45.878,
+      "end": 46.108,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "2031年までに31の機関を世宗市に移転する予定で、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.108,
+      "speechEnd": 48.616,
+      "end": 48.846,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "これには5,"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 48.846,
+      "speechEnd": 53.583,
+      "end": 54.083,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "460人の公務員が関与する。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.083,
+      "speechEnd": 58.123,
+      "end": 58.353,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "そのうち22機関は来年、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 58.353,
+      "speechEnd": 62.881,
+      "end": 63.111,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "賃貸オフィスに移転する予定であり、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.111,
+      "speechEnd": 69.172,
+      "end": 69.402,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "残りの9機関は専用施設を必要とするため、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 69.402,
+      "speechEnd": 73.372,
+      "end": 73.992,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "新築の政府庁舎に移転する。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 73.992,
+      "speechEnd": 79.286,
+      "end": 79.516,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "当初発表された44機関のうち、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 79.516,
+      "speechEnd": 81.606,
+      "end": 81.836,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "外務省、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 81.836,
+      "speechEnd": 83.996,
+      "end": 84.226,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "統一省、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.226,
+      "speechEnd": 88.057,
+      "end": 88.287,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "国防省など13機関は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 88.287,
+      "speechEnd": 91.909,
+      "end": 92.139,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "移転に法改正が伴うため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.139,
+      "speechEnd": 95.483,
+      "end": 95.983,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "今回は対象外となっている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 95.983,
+      "speechEnd": 98.839,
+      "end": 99.069,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "聯合ニュースによると、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.069,
+      "speechEnd": 107.846,
+      "end": 108.076,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "移転にかかる総費用は約1兆6500億ウォンと見積もられており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 108.076,
+      "speechEnd": 117.829,
+      "end": 118.449,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "行政安全部は関係機関と具体的なスケジュールについて協議する予定である。"
+    },
+    {
+      "parentKey": "why",
+      "start": 118.449,
+      "speechEnd": 122.419,
+      "end": 122.919,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 122.919,
+      "speechEnd": 128.701,
+      "end": 129.401,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "政府の行政資源と公的支出が関係します。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 129.401,
+      "speechEnd": 131.491,
+      "end": 131.721,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 131.721,
+      "speechEnd": 138.687,
+      "end": 139.387,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "関連する改正および段階的な移転のスケジュール。"
+    }
+  ]
+}
