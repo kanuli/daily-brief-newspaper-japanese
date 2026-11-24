@@ -1,0 +1,270 @@
+{
+  "version": 3,
+  "duration": 110.722,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 308,
+  "charactersPerMinute": 166.9,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 9.777,
+      "text": "日本、2027年の国際刑事裁判所費用を前払い"
+    },
+    {
+      "key": "dek",
+      "start": 9.777,
+      "end": 18.0,
+      "text": "裁判所は米国の制裁による財政的圧力に直面している。"
+    },
+    {
+      "key": "body-0",
+      "start": 18.0,
+      "end": 53.318,
+      "text": "ロイター通信の報道によると、日本の高市早苗首相は火曜日、日本は2027年の国際刑事裁判所の会費を2026年末までに全額支払うと述べた。同裁判所は、米国の制裁による財政圧力を理由に日本に前払いを求めた。"
+    },
+    {
+      "key": "body-1",
+      "start": 53.318,
+      "end": 92.64,
+      "text": "日本は裁判所への最大の出資国であり、早期支払いにより裁判所は運転資金をより早く入手できるようになる。この取り決めには、発表された会費の増額ではなく、支払いのタイミングが含まれます。また、裁判所が直面している制裁やその他の財政問題も解除されません。"
+    },
+    {
+      "key": "why",
+      "start": 92.64,
+      "end": 103.035,
+      "text": "国際司法機関が関与する資金提供協定。"
+    },
+    {
+      "key": "watch",
+      "start": 103.035,
+      "end": 110.722,
+      "text": "日本における支払いと裁判所の財務。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.02,
+      "end": 2.25,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.25,
+      "speechEnd": 9.077,
+      "end": 9.777,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "2027年の国際刑事裁判所費用を前払い。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 9.777,
+      "speechEnd": 17.3,
+      "end": 18.0,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "裁判所は米国の制裁による財政的圧力に直面している。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 18.0,
+      "speechEnd": 21.622,
+      "end": 21.852,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信の報道によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 21.852,
+      "speechEnd": 26.798,
+      "end": 27.028,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本の高市早苗首相は火曜日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 27.028,
+      "speechEnd": 34.343,
+      "end": 34.623,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "日本は2027年の国際刑事裁判所の会費を"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.623,
+      "speechEnd": 40.753,
+      "end": 41.253,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "2026年末までに全額支払うと述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 41.253,
+      "speechEnd": 43.691,
+      "end": 43.921,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同裁判所は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.921,
+      "speechEnd": 52.698,
+      "end": 53.318,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "米国の制裁による財政圧力を理由に日本に前払いを求めた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 53.318,
+      "speechEnd": 59.239,
+      "end": 59.469,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "日本は裁判所への最大の出資国であり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 59.469,
+      "speechEnd": 64.484,
+      "end": 64.764,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "早期支払いにより裁判所は運転資金を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 64.764,
+      "speechEnd": 68.735,
+      "end": 69.235,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "より早く入手できるようになる。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 69.235,
+      "speechEnd": 72.021,
+      "end": 72.251,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この取り決めには、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 72.251,
+      "speechEnd": 76.501,
+      "end": 76.731,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "発表された会費の増額ではなく、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 76.731,
+      "speechEnd": 80.632,
+      "end": 81.132,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "支払いのタイミングが含まれます。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 81.132,
+      "speechEnd": 83.152,
+      "end": 83.382,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "また、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 83.382,
+      "speechEnd": 92.02,
+      "end": 92.64,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "裁判所が直面している制裁やその他の財政問題も解除されません。"
+    },
+    {
+      "parentKey": "why",
+      "start": 92.64,
+      "speechEnd": 96.61,
+      "end": 97.11,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 97.11,
+      "speechEnd": 102.335,
+      "end": 103.035,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "国際司法機関が関与する資金提供協定。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 103.035,
+      "speechEnd": 105.124,
+      "end": 105.354,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 105.354,
+      "speechEnd": 110.022,
+      "end": 110.722,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "日本における支払いと裁判所の財務。"
+    }
+  ]
+}
