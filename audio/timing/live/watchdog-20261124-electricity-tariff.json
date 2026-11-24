@@ -1,0 +1,320 @@
+{
+  "version": 3,
+  "duration": 151.056,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 449,
+  "charactersPerMinute": 178.3,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 21.156,
+      "text": "ニュースによると、2 つの発電所は来年 1 月に価格を値上げする予定です。 CLPは前年比1.8%上昇。香港電力は7.9％上昇"
+    },
+    {
+      "key": "dek",
+      "start": 21.156,
+      "end": 29.658,
+      "text": "両電力会社は年次電気料金見直し案を立法会に提出する。"
+    },
+    {
+      "key": "body-0",
+      "start": 29.658,
+      "end": 78.823,
+      "text": "香港ラジオテレビは今日午後のニュースを引用し、CLPとHK Electricの来年1月の電気料金が今年の同時期と比べてそれぞれ1.8％、7.9％増加すると報じた。両社の代表は当初、午後の法制審議会環境委員会に出席し、年次電気料金見直しについて説明する予定だった。このニュースはまだ正式に発表され、確認される予定です。"
+    },
+    {
+      "key": "body-1",
+      "start": 78.823,
+      "end": 132.277,
+      "text": "香港の電気料金には、基本電気料金と燃料価格の条件および料金が含まれます。 RTHKの報告によると、今月のCLPの平均正味電力価格は1キロワット時当たり148.6セント、HKエレクトリックの平均正味電力価格は183セントだった。家庭の実支出は電力消費量にも依存します。今後両電力会社が正式に発表する料金スケジュールや効果的な取り決めなどを確認すべきだ。"
+    },
+    {
+      "key": "why",
+      "start": 132.277,
+      "end": 141.836,
+      "text": "ニュースチャンネルは 1 日 書いている,"
+    },
+    {
+      "key": "watch",
+      "start": 141.836,
+      "end": 151.056,
+      "text": "イスラム教の子供たちはグループを忘れません。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.508,
+      "end": 2.738,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ニュースによると、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.738,
+      "speechEnd": 10.818,
+      "end": 11.318,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "2 つの発電所は来年 1 月に価格を値上げする予定です。"
+    },
+    {
+      "parentKey": "title",
+      "start": 11.318,
+      "speechEnd": 15.637,
+      "end": 16.137,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "CLPは前年比1.8%上昇。"
+    },
+    {
+      "parentKey": "title",
+      "start": 16.137,
+      "speechEnd": 20.456,
+      "end": 21.156,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "香港電力は7.9％上昇。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 21.156,
+      "speechEnd": 28.958,
+      "end": 29.658,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "両電力会社は年次電気料金見直し案を立法会に提出する。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 29.658,
+      "speechEnd": 35.927,
+      "end": 36.157,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "香港ラジオテレビは今日午後のニュースを引用し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.157,
+      "speechEnd": 42.148,
+      "end": 42.428,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "CLPとHK Electricの来年1月の電気料金が"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.428,
+      "speechEnd": 48.907,
+      "end": 49.137,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今年の同時期と比べてそれぞれ1.8％、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.137,
+      "speechEnd": 53.246,
+      "end": 53.746,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "7.9％増加すると報じた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 53.746,
+      "speechEnd": 57.229,
+      "end": 57.459,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "両社の代表は当初、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.459,
+      "speechEnd": 62.684,
+      "end": 62.914,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "午後の法制審議会環境委員会に出席し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.914,
+      "speechEnd": 69.532,
+      "end": 70.032,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "年次電気料金見直しについて説明する予定だった。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.032,
+      "speechEnd": 74.908,
+      "end": 75.138,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "このニュースはまだ正式に発表され、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 75.138,
+      "speechEnd": 78.203,
+      "end": 78.823,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "確認される予定です。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 78.823,
+      "speechEnd": 82.236,
+      "end": 82.466,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "香港の電気料金には、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.466,
+      "speechEnd": 90.477,
+      "end": 90.977,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "基本電気料金と燃料価格の条件および料金が含まれます。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.977,
+      "speechEnd": 94.042,
+      "end": 94.272,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "RTHKの報告によると、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.272,
+      "speechEnd": 99.148,
+      "end": 99.428,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "今月のCLPの平均正味電力価格は"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.428,
+      "speechEnd": 105.14,
+      "end": 105.37,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "1キロワット時当たり148.6セント、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 105.37,
+      "speechEnd": 112.963,
+      "end": 113.463,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "HKエレクトリックの平均正味電力価格は183セントだった。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 113.463,
+      "speechEnd": 119.245,
+      "end": 119.745,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "家庭の実支出は電力消費量にも依存します。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 119.745,
+      "speechEnd": 131.657,
+      "end": 132.277,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "今後両電力会社が正式に発表する料金スケジュールや効果的な取り決めなどを確認すべきだ。"
+    },
+    {
+      "parentKey": "why",
+      "start": 132.277,
+      "speechEnd": 136.248,
+      "end": 136.748,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 136.748,
+      "speechEnd": 141.136,
+      "end": 141.836,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-comma",
+      "text": "ニュースチャンネルは 1 日 書いている,"
+    },
+    {
+      "parentKey": "watch",
+      "start": 141.836,
+      "speechEnd": 143.926,
+      "end": 144.156,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 144.156,
+      "speechEnd": 150.356,
+      "end": 151.056,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "イスラム教の子供たちはグループを忘れません。"
+    }
+  ]
+}
