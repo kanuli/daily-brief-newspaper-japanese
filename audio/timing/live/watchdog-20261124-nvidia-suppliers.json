@@ -1,0 +1,250 @@
+{
+  "version": 3,
+  "duration": 103.363,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 337,
+  "charactersPerMinute": 195.6,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 8.175,
+      "text": "Nvidia のアジアのサプライヤー、ジェンスン・ファンの復帰を歓迎"
+    },
+    {
+      "key": "dek",
+      "start": 8.175,
+      "end": 17.791,
+      "text": "製品や投資計画をめぐるサプライチェーンの不確実性は和らぎました。"
+    },
+    {
+      "key": "body-0",
+      "start": 17.791,
+      "end": 44.248,
+      "text": "ロイター通信は午後、韓国と台湾のエヌビディアの顧客とサプライヤーが、製品計画や人工知能スタートアップへの投資における不確実性の軽減に役立つと信じて、黄仁勲氏のCEO復帰を歓迎していると報じた。"
+    },
+    {
+      "key": "body-1",
+      "start": 44.248,
+      "end": 85.49,
+      "text": "報告書はまた、アナリストは結果として国家安全保障への懸念が解消されないと考えていると指摘した。経営陣の交代はサプライチェーンの期待を安定させるのに役立つだろうが、それは規制上の問題が解決されたことを意味するものではなく、実際の注文と投資は依然として監視される必要がある。"
+    },
+    {
+      "key": "why",
+      "start": 85.49,
+      "end": 95.397,
+      "text": "製品サイクルと投資の期待が含まれます。"
+    },
+    {
+      "key": "watch",
+      "start": 95.397,
+      "end": 103.363,
+      "text": "同社の正式な製品と投資の取り決め。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 3.762,
+      "end": 3.992,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "Nvidia のアジアのサプライヤー、"
+    },
+    {
+      "parentKey": "title",
+      "start": 3.992,
+      "speechEnd": 7.475,
+      "end": 8.175,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "ジェンスン・ファンの復帰を歓迎。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 8.175,
+      "speechEnd": 17.091,
+      "end": 17.791,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "製品や投資計画をめぐるサプライチェーンの不確実性は和らぎました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 17.791,
+      "speechEnd": 20.577,
+      "end": 20.807,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信は午後、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 20.807,
+      "speechEnd": 26.38,
+      "end": 26.61,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "韓国と台湾のエヌビディアの顧客とサプライヤーが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 26.61,
+      "speechEnd": 37.756,
+      "end": 37.986,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "製品計画や人工知能スタートアップへの投資における不確実性の軽減に役立つと信じて、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.986,
+      "speechEnd": 43.628,
+      "end": 44.248,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "黄仁勲氏のCEO復帰を歓迎していると報じた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 44.248,
+      "speechEnd": 46.617,
+      "end": 46.847,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "報告書はまた、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 46.847,
+      "speechEnd": 53.395,
+      "end": 53.675,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "アナリストは結果として国家安全保障への懸念が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 53.675,
+      "speechEnd": 58.133,
+      "end": 58.633,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "解消されないと考えていると指摘した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 58.633,
+      "speechEnd": 63.857,
+      "end": 64.137,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "経営陣の交代はサプライチェーンの期待を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 64.137,
+      "speechEnd": 68.456,
+      "end": 68.686,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "安定させるのに役立つだろうが、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 68.686,
+      "speechEnd": 73.911,
+      "end": 74.191,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "それは規制上の問題が解決されたことを"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 74.191,
+      "speechEnd": 77.465,
+      "end": 77.695,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "意味するものではなく、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 77.695,
+      "speechEnd": 84.87,
+      "end": 85.49,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "実際の注文と投資は依然として監視される必要がある。"
+    },
+    {
+      "parentKey": "why",
+      "start": 85.49,
+      "speechEnd": 89.46,
+      "end": 89.96,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 89.96,
+      "speechEnd": 94.697,
+      "end": 95.397,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "製品サイクルと投資の期待が含まれます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 95.397,
+      "speechEnd": 97.487,
+      "end": 97.717,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 97.717,
+      "speechEnd": 102.663,
+      "end": 103.363,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "同社の正式な製品と投資の取り決め。"
+    }
+  ]
+}

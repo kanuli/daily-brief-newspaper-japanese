@@ -1,0 +1,280 @@
+{
+  "version": 3,
+  "duration": 115.201,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 338,
+  "charactersPerMinute": 176.0,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 13.24,
+      "text": "バングラデシュの前首相ハシナ氏が12月に帰国予定 政府は引き渡しが必要と主張"
+    },
+    {
+      "key": "dek",
+      "start": 13.24,
+      "end": 22.529,
+      "text": "報道官が帰国措置を提案したが、政府は同意しなかった。"
+    },
+    {
+      "key": "body-0",
+      "start": 22.529,
+      "end": 57.706,
+      "text": "ロイター通信によると、2年以上インドに亡命しているバングラデシュのハシナ元首相は、報道官を通じて12月16日にバングラデシュに帰国したいと表明した。この日は、バングラデシュが1971年の解放戦争の終結を記念する日である。"
+    },
+    {
+      "key": "body-1",
+      "start": 57.706,
+      "end": 96.701,
+      "text": "バングラデシュ政府は、彼女が帰国できるのはインドの引き渡し手続きを通じた場合のみであると述べた。インドは以前、引き渡し請求を検討していると述べていた。そのため、現時点での帰国日は、両国が確認した日程ではなく、ハシナ側が提案した計画のままである。"
+    },
+    {
+      "key": "why",
+      "start": 96.701,
+      "end": 105.633,
+      "text": "バクはチャネル財団のようなもので"
+    },
+    {
+      "key": "watch",
+      "start": 105.633,
+      "end": 115.201,
+      "text": "インド政府とバングラデシュ政府からの正式な回答。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 4.598,
+      "end": 4.878,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "バングラデシュの前首相ハシナ氏が"
+    },
+    {
+      "parentKey": "title",
+      "start": 4.878,
+      "speechEnd": 12.54,
+      "end": 13.24,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "12月に帰国予定 政府は引き渡しが必要と主張。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.24,
+      "speechEnd": 18.325,
+      "end": 18.555,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "報道官が帰国措置を提案したが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.555,
+      "speechEnd": 21.829,
+      "end": 22.529,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "政府は同意しなかった。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 22.529,
+      "speechEnd": 25.525,
+      "end": 25.755,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ロイター通信によると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 25.755,
+      "speechEnd": 34.114,
+      "end": 34.344,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "2年以上インドに亡命しているバングラデシュのハシナ元首相は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 34.344,
+      "speechEnd": 44.793,
+      "end": 45.293,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "報道官を通じて12月16日にバングラデシュに帰国したいと表明した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 45.293,
+      "speechEnd": 47.522,
+      "end": 47.752,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この日は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.752,
+      "speechEnd": 57.086,
+      "end": 57.706,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "バングラデシュが1971年の解放戦争の終結を記念する日である。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 57.706,
+      "speechEnd": 60.911,
+      "end": 61.141,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "バングラデシュ政府は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 61.141,
+      "speechEnd": 67.341,
+      "end": 67.621,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "彼女が帰国できるのはインドの引き渡し手続きを"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 67.621,
+      "speechEnd": 71.87,
+      "end": 72.37,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "通じた場合のみであると述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 72.37,
+      "speechEnd": 74.738,
+      "end": 74.968,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "インドは以前、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 74.968,
+      "speechEnd": 80.053,
+      "end": 80.553,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "引き渡し請求を検討していると述べていた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 80.553,
+      "speechEnd": 82.713,
+      "end": 82.943,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "そのため、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.943,
+      "speechEnd": 86.356,
+      "end": 86.586,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "現時点での帰国日は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 86.586,
+      "speechEnd": 90.766,
+      "end": 90.996,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "両国が確認した日程ではなく、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.996,
+      "speechEnd": 96.081,
+      "end": 96.701,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "ハシナ側が提案した計画のままである。"
+    },
+    {
+      "parentKey": "why",
+      "start": 96.701,
+      "speechEnd": 100.672,
+      "end": 101.172,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 101.172,
+      "speechEnd": 104.933,
+      "end": 105.633,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "clause",
+      "text": "バクはチャネル財団のようなもので"
+    },
+    {
+      "parentKey": "watch",
+      "start": 105.633,
+      "speechEnd": 107.723,
+      "end": 107.953,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 107.953,
+      "speechEnd": 114.501,
+      "end": 115.201,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "インド政府とバングラデシュ政府からの正式な回答。"
+    }
+  ]
+}

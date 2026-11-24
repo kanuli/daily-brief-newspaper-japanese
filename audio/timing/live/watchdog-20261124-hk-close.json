@@ -1,0 +1,260 @@
+{
+  "version": 3,
+  "duration": 105.446,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 305,
+  "charactersPerMinute": 173.5,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 12.424,
+      "text": "ハンセン指数が164ポイント下落し、6日連続で計1500ポイント以上下落"
+    },
+    {
+      "key": "dek",
+      "start": 12.424,
+      "end": 18.348,
+      "text": "指定メートルどのように API首吊りでラッキー。"
+    },
+    {
+      "key": "body-0",
+      "start": 18.348,
+      "end": 57.19,
+      "text": "香港ラジオ局が午後に報じたところによると、ハンセン指数は164ポイント下落し、22219ポイントで取引を終え、取引額は2126億香港ドルを超えた。指数は序盤に260ポイント以上上昇したが、午後に下落に転じ、6営業日連続で下落した。"
+    },
+    {
+      "key": "body-1",
+      "start": 57.19,
+      "end": 90.429,
+      "text": "ハンセン科技指数は3466ポイントで取引を終え、1.17%下落した。一部の半導体株が相場に逆行して上昇し、テクノロジーセクター内のパフォーマンスの分化を示した。市場全体の序盤の反発は、取引終了まで続かなかった。"
+    },
+    {
+      "key": "why",
+      "start": 90.429,
+      "end": 98.177,
+      "text": "プレイヤー分析で,"
+    },
+    {
+      "key": "watch",
+      "start": 98.177,
+      "end": 105.446,
+      "text": "翌営業日の取引とセクターの傾向。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 5.573,
+      "end": 5.803,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ハンセン指数が164ポイント下落し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 5.803,
+      "speechEnd": 11.724,
+      "end": 12.424,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "6日連続で計1500ポイント以上下落。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.424,
+      "speechEnd": 17.648,
+      "end": 18.348,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "指定メートルどのように API首吊りでラッキー。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 18.348,
+      "speechEnd": 24.06,
+      "end": 24.29,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "香港ラジオ局が午後に報じたところによると、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 24.29,
+      "speechEnd": 30.003,
+      "end": 30.233,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ハンセン指数は164ポイント下落し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 30.233,
+      "speechEnd": 35.527,
+      "end": 35.757,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "22219ポイントで取引を終え、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 35.757,
+      "speechEnd": 42.514,
+      "end": 43.014,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "取引額は2126億香港ドルを超えた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.014,
+      "speechEnd": 48.935,
+      "end": 49.165,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "指数は序盤に260ポイント以上上昇したが、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.165,
+      "speechEnd": 52.16,
+      "end": 52.39,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "午後に下落に転じ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 52.39,
+      "speechEnd": 56.57,
+      "end": 57.19,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "6営業日連続で下落した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 57.19,
+      "speechEnd": 64.922,
+      "end": 65.152,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ハンセン科技指数は3466ポイントで取引を終え、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 65.152,
+      "speechEnd": 68.774,
+      "end": 69.274,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "1.17%下落した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 69.274,
+      "speechEnd": 74.777,
+      "end": 75.007,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "一部の半導体株が相場に逆行して上昇し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 75.007,
+      "speechEnd": 81.695,
+      "end": 82.195,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "テクノロジーセクター内のパフォーマンスの分化を示した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.195,
+      "speechEnd": 86.096,
+      "end": 86.326,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "市場全体の序盤の反発は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 86.326,
+      "speechEnd": 89.809,
+      "end": 90.429,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "取引終了まで続かなかった。"
+    },
+    {
+      "parentKey": "why",
+      "start": 90.429,
+      "speechEnd": 94.399,
+      "end": 94.899,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 94.899,
+      "speechEnd": 97.477,
+      "end": 98.177,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-comma",
+      "text": "プレイヤー分析で,"
+    },
+    {
+      "parentKey": "watch",
+      "start": 98.177,
+      "speechEnd": 100.267,
+      "end": 100.497,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 100.497,
+      "speechEnd": 104.746,
+      "end": 105.446,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "翌営業日の取引とセクターの傾向。"
+    }
+  ]
+}
