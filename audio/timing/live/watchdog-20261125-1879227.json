@@ -1,0 +1,274 @@
+{
+  "version": 3,
+  "duration": 109.663,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 286,
+  "charactersPerMinute": 156.5,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 12.683,
+      "text": "常指数収入21966点 連続下落7日間失敗22000点"
+    },
+    {
+      "key": "dek",
+      "start": 12.683,
+      "end": 22.599,
+      "text": "港株は午後に下落し、テクノロジー指数は11日連続で下落した。"
+    },
+    {
+      "key": "body-0",
+      "start": 22.599,
+      "end": 83.828,
+      "text": "港の株式は今日高開幕後下落し、恒生指数は21966点、下落253点または1.14%、連続第7取引日下落。全日主板の交付は約2300億香港元、恒生テクノロジー指数は3378点、連続下落11日。香港ラジオ局は、市場の注目は、米国が再び多国に関税を課す可能性、クリスタルと人工知能に関連する株式が圧迫され、一部の医薬品および消費株式は逆市場上昇。"
+    },
+    {
+      "key": "why",
+      "start": 83.828,
+      "end": 97.518,
+      "text": "主な指数は全数端を失い、テクノロジー板の下落は続いている。"
+    },
+    {
+      "key": "watch",
+      "start": 97.518,
+      "end": 109.663,
+      "text": "関税政策の正式発表と次の取引日に市場反応を注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 6.687,
+      "end": 6.827,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "常指数収入21966点 連続下落"
+    },
+    {
+      "parentKey": "title",
+      "start": 6.827,
+      "speechEnd": 8.987,
+      "end": 9.127,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "7日間"
+    },
+    {
+      "parentKey": "title",
+      "start": 9.127,
+      "speechEnd": 11.983,
+      "end": 12.683,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "失敗22000点。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.683,
+      "speechEnd": 15.748,
+      "end": 15.978,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "港株は午後に下落し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 15.978,
+      "speechEnd": 21.899,
+      "end": 22.599,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "テクノロジー指数は11日連続で下落した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 22.599,
+      "speechEnd": 27.823,
+      "end": 28.053,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "港の株式は今日高開幕後下落し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 28.053,
+      "speechEnd": 32.999,
+      "end": 33.229,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "恒生指数は21966点、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 33.229,
+      "speechEnd": 38.872,
+      "end": 39.102,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "下落253点または1.14%、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 39.102,
+      "speechEnd": 42.376,
+      "end": 42.876,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "連続第7取引日下落。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.876,
+      "speechEnd": 49.354,
+      "end": 49.584,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "全日主板の交付は約2300億香港元、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.584,
+      "speechEnd": 55.575,
+      "end": 55.805,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "恒生テクノロジー指数は3378点、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 55.805,
+      "speechEnd": 58.731,
+      "end": 59.231,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "連続下落11日。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 59.231,
+      "speechEnd": 61.947,
+      "end": 62.177,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "香港ラジオ局は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 62.177,
+      "speechEnd": 64.615,
+      "end": 64.845,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "市場の注目は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.845,
+      "speechEnd": 70.279,
+      "end": 70.509,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "米国が再び多国に関税を課す可能性、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.509,
+      "speechEnd": 76.43,
+      "end": 76.66,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "クリスタルと人工知能に関連する株式が圧迫され、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 76.66,
+      "speechEnd": 83.208,
+      "end": 83.828,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "一部の医薬品および消費株式は逆市場上昇。"
+    },
+    {
+      "parentKey": "why",
+      "start": 83.828,
+      "speechEnd": 87.799,
+      "end": 88.299,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 88.299,
+      "speechEnd": 92.339,
+      "end": 92.569,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "主な指数は全数端を失い、"
+    },
+    {
+      "parentKey": "why",
+      "start": 92.569,
+      "speechEnd": 96.818,
+      "end": 97.518,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "テクノロジー板の下落は続いている。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 97.518,
+      "speechEnd": 99.608,
+      "end": 99.838,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 99.838,
+      "speechEnd": 108.963,
+      "end": 109.663,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "関税政策の正式発表と次の取引日に市場反応を注意してください。"
+    }
+  ]
+}
