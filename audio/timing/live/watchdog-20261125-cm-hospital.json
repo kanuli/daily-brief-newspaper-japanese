@@ -1,0 +1,260 @@
+{
+  "version": 3,
+  "duration": 134.664,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 382,
+  "charactersPerMinute": 170.2,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 8.363,
+      "text": "名最小化 撮影要求・制 スイートで今年の道民を連名"
+    },
+    {
+      "key": "dek",
+      "start": 8.363,
+      "end": 19.93,
+      "text": "医療保健局長は国際中医学会議でのサービス拡充の方向性について説明した。"
+    },
+    {
+      "key": "body-0",
+      "start": 19.93,
+      "end": 61.886,
+      "text": "ロー・チュンム医療保健長官は香港国際中医学会議の開会時に、香港中医病院が今年末までに全日入院サービスを提供し、中医学と西洋医学の連携を拡大する計画であると述べた。政府はまた、業界交流を促進するために、香港での関連国際会議の開催を支援する予定だ。"
+    },
+    {
+      "key": "body-1",
+      "start": 61.886,
+      "end": 109.198,
+      "text": "盧崇茂氏は、政府が昨年中国医学発展の青写真を発表し、中国医学病院と政府中国医学試験センターも運営を開始したと指摘した。後者は品質検査と標準調査を担当します。この発表には医療サービスと科学研究の発展方向が含まれており、入院患者サービスの具体的な取り決めはまだ病院から発表されていない。"
+    },
+    {
+      "key": "why",
+      "start": 109.198,
+      "end": 124.608,
+      "text": "地元の入院患者サービスと中国医学と西洋医学の連携協定が含まれます。"
+    },
+    {
+      "key": "watch",
+      "start": 124.608,
+      "end": 134.664,
+      "text": "病院が発表する入院サービスの手配に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.663,
+      "end": 8.363,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "名最小化 撮影要求・制 スイートで今年の道民を連名。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 8.363,
+      "speechEnd": 19.23,
+      "end": 19.93,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "医療保健局長は国際中医学会議でのサービス拡充の方向性について説明した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 19.93,
+      "speechEnd": 24.248,
+      "end": 24.528,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "ロー・チュンム医療保健長官は"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 24.528,
+      "speechEnd": 29.753,
+      "end": 29.983,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "香港国際中医学会議の開会時に、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 29.983,
+      "speechEnd": 38.69,
+      "end": 38.92,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "香港中医病院が今年末までに全日入院サービスを提供し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 38.92,
+      "speechEnd": 46.653,
+      "end": 47.153,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "中医学と西洋医学の連携を拡大する計画であると述べた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 47.153,
+      "speechEnd": 49.521,
+      "end": 49.751,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "政府はまた、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.751,
+      "speechEnd": 54.07,
+      "end": 54.3,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "業界交流を促進するために、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.3,
+      "speechEnd": 61.266,
+      "end": 61.886,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "香港での関連国際会議の開催を支援する予定だ。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 61.886,
+      "speechEnd": 64.115,
+      "end": 64.345,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "盧崇茂氏は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 64.345,
+      "speechEnd": 72.077,
+      "end": 72.307,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "政府が昨年中国医学発展の青写真を発表し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 72.307,
+      "speechEnd": 83.105,
+      "end": 83.605,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "中国医学病院と政府中国医学試験センターも運営を開始したと指摘した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 83.605,
+      "speechEnd": 89.177,
+      "end": 89.677,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "後者は品質検査と標準調査を担当します。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 89.677,
+      "speechEnd": 98.873,
+      "end": 99.103,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "この発表には医療サービスと科学研究の発展方向が含まれており、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 99.103,
+      "speechEnd": 104.327,
+      "end": 104.607,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "入院患者サービスの具体的な取り決めは"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.607,
+      "speechEnd": 108.578,
+      "end": 109.198,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "まだ病院から発表されていない。"
+    },
+    {
+      "parentKey": "why",
+      "start": 109.198,
+      "speechEnd": 113.168,
+      "end": 113.668,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 113.668,
+      "speechEnd": 123.908,
+      "end": 124.608,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "地元の入院患者サービスと中国医学と西洋医学の連携協定が含まれます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 124.608,
+      "speechEnd": 126.698,
+      "end": 126.928,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 126.928,
+      "speechEnd": 133.964,
+      "end": 134.664,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "病院が発表する入院サービスの手配に注意してください。"
+    }
+  ]
+}
