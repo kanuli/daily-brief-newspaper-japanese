@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "assessedAt": "2026-11-25T02:06:33.979Z",
+  "assessedAt": "2026-11-25T02:06:44.787Z",
   "state": "RED",
   "summary": "NOT_GREEN:stocks-relative-lag-minutes=57",
   "faultReasons": [
@@ -35,7 +35,7 @@
       "lagMinutes": 57,
       "relativeCurrent": false,
       "sourceAbsoluteFresh": true,
-      "sourceAgeMinutes": 1,
+      "sourceAgeMinutes": 2,
       "maxAgeHours": 8
     },
     "vocab": {
@@ -61,7 +61,7 @@
       ],
       "publicationFingerprint": "2026-10-13|2026-11-25T01:12:02.000Z|2026-11-19T12:15:00.000Z|2026-11-25T01:08:27.187Z|2026-11-25",
       "attestedFingerprint": "2026-10-13|2026-11-25T01:12:02.000Z|2026-11-19T12:15:00.000Z|2026-11-25T01:08:27.187Z|2026-11-25",
-      "attestedAt": "2026-11-25T02:05:46Z"
+      "attestedAt": "2026-11-25T02:05:50Z"
     }
   },
   "recovery": {
@@ -96,7 +96,7 @@
   },
   "robot": {
     "current": true,
-    "runId": 45530554742,
+    "runId": 45530572923,
     "event": "workflow_dispatch",
     "role": "nas-attestation-auditor",
     "executor": "github-auditor-only",
