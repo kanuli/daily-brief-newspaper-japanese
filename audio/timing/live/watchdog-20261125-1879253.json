@@ -1,0 +1,350 @@
+{
+  "version": 3,
+  "duration": 157.235,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 472,
+  "charactersPerMinute": 180.1,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 12.375,
+      "text": "香港電信、来年2月25日に3G利用を停止、通信局が申請を承認"
+    },
+    {
+      "key": "dek",
+      "start": 12.375,
+      "end": 28.073,
+      "text": "元の周波数帯は 5G サービスに移行されるため、古いデバイスのユーザーは移行の取り決めに注意する必要があります。"
+    },
+    {
+      "key": "body-0",
+      "start": 28.073,
+      "end": 82.255,
+      "text": "香港電信は本日、2027 年 2 月 25 日に 3G モバイル通信サービスを終了し、関連周波数を 5G ネットワークに再割り当てすると発表しました。通信局はこの申請を承認し、通信事業者は停止日までにサービスを維持するよう求めている。同社は、今年9月末時点で、モバイル通信顧客に占める3Gユーザーの割合は0.37％だったと発表した。"
+    },
+    {
+      "key": "body-1",
+      "start": 82.255,
+      "end": 135.322,
+      "text": "CA は、影響を受ける人々には、古いバージョンの VoLTE テクノロジーを使用している 4G デバイスのユーザーも含まれる可能性があると指摘しました。 HKT は、デバイスを交換する予定のない顧客に対して、アップグレード サポートとサービス終了の手配を継続して提供します。ユーザーは、無効化する前にデバイスとサービスプランを交換する必要があるかどうかをオペレーターに確認できます。"
+    },
+    {
+      "key": "why",
+      "start": 135.322,
+      "end": 146.692,
+      "text": "古い携帯電話や移動体通信機器のサービス継続。"
+    },
+    {
+      "key": "watch",
+      "start": 146.692,
+      "end": 157.235,
+      "text": "オペレーターによる個人顧客向けの移行手配に注意してください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 2.159,
+      "end": 2.389,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "香港電信、"
+    },
+    {
+      "parentKey": "title",
+      "start": 2.389,
+      "speechEnd": 8.45,
+      "end": 8.68,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "来年2月25日に3G利用を停止、"
+    },
+    {
+      "parentKey": "title",
+      "start": 8.68,
+      "speechEnd": 11.675,
+      "end": 12.375,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "通信局が申請を承認。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.375,
+      "speechEnd": 19.063,
+      "end": 19.293,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "元の周波数帯は 5G サービスに移行されるため、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 19.293,
+      "speechEnd": 27.373,
+      "end": 28.073,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "古いデバイスのユーザーは移行の取り決めに注意する必要があります。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 28.073,
+      "speechEnd": 31.069,
+      "end": 31.299,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "香港電信は本日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 31.299,
+      "speechEnd": 42.165,
+      "end": 42.395,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "2027 年 2 月 25 日に 3G モバイル通信サービスを終了し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 42.395,
+      "speechEnd": 50.337,
+      "end": 50.837,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "関連周波数を 5G ネットワークに再割り当てすると発表しました。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 50.837,
+      "speechEnd": 54.668,
+      "end": 54.898,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "通信局はこの申請を承認し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.898,
+      "speechEnd": 60.54,
+      "end": 60.82,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "通信事業者は停止日までにサービスを"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 60.82,
+      "speechEnd": 64.094,
+      "end": 64.594,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "維持するよう求めている。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 64.594,
+      "speechEnd": 66.684,
+      "end": 66.914,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "同社は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 66.914,
+      "speechEnd": 70.397,
+      "end": 70.627,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今年9月末時点で、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 70.627,
+      "speechEnd": 76.897,
+      "end": 77.177,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "モバイル通信顧客に占める3Gユーザーの割合は"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 77.177,
+      "speechEnd": 81.635,
+      "end": 82.255,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "0.37％だったと発表した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.255,
+      "speechEnd": 84.275,
+      "end": 84.505,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "CA は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.505,
+      "speechEnd": 87.57,
+      "end": 87.8,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "影響を受ける人々には、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 87.8,
+      "speechEnd": 93.094,
+      "end": 93.374,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "古いバージョンの VoLTE テクノロジーを"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 93.374,
+      "speechEnd": 102.918,
+      "end": 103.418,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "使用している 4G デバイスのユーザーも含まれる可能性があると指摘しました。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 103.418,
+      "speechEnd": 105.577,
+      "end": 105.807,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "HKT は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 105.807,
+      "speechEnd": 111.38,
+      "end": 111.61,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "デバイスを交換する予定のない顧客に対して、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 111.61,
+      "speechEnd": 119.83,
+      "end": 120.33,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "アップグレード サポートとサービス終了の手配を継続して提供します。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 120.33,
+      "speechEnd": 122.489,
+      "end": 122.719,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ユーザーは、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 122.719,
+      "speechEnd": 129.267,
+      "end": 129.547,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "無効化する前にデバイスとサービスプランを交換する必要が"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 129.547,
+      "speechEnd": 134.702,
+      "end": 135.322,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "あるかどうかをオペレーターに確認できます。"
+    },
+    {
+      "parentKey": "why",
+      "start": 135.322,
+      "speechEnd": 139.293,
+      "end": 139.793,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 139.793,
+      "speechEnd": 145.992,
+      "end": 146.692,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "古い携帯電話や移動体通信機器のサービス継続。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 146.692,
+      "speechEnd": 148.782,
+      "end": 149.012,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 149.012,
+      "speechEnd": 156.535,
+      "end": 157.235,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "オペレーターによる個人顧客向けの移行手配に注意してください。"
+    }
+  ]
+}
