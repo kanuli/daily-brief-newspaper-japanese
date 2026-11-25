@@ -3,20 +3,20 @@
   "publicationContract": "SCHEDULED_PUBLISHER_LIVE_V1",
   "date": "2026-11-25",
   "editorialStandardVersion": 3,
-  "contentVersion": 65,
-  "lastUpdated": "2026-11-25T18:13:50+08:00",
-  "lastUpdatedLabel": "2026年11月25日 18:13 HKT",
-  "nextUpdateLabel": "次回発行予定 19:00 HKT",
-  "windowLabel": "18:13 HKT 速報版",
+  "contentVersion": 66,
+  "lastUpdated": "2026-11-25T23:12:57+08:00",
+  "lastUpdatedLabel": "2026年11月25日 23:12 HKT",
+  "nextUpdateLabel": "次回発行予定 00:00 HKT",
+  "windowLabel": "23:12 HKT 速報版",
   "newCount": 1,
   "updatedCount": 0,
   "developingCount": 0,
-  "leadId": "watchdog-20261125-1879227",
+  "leadId": "watchdog-20261125-1879253",
   "coverage": {
     "status": "INCOMPLETE",
     "deskFreshnessMet": false,
     "blockingIssues": [
-      "18:13 HKT: market close story verified; remaining desk freshness and downstream publication unverified."
+      "23:12 HKT: one current story verified; other desks and downstream publication not verified."
     ],
     "deskLatestStoryCounts": {
       "world": 234,
@@ -40,50 +40,56 @@
   },
   "items": [
     {
-      "id": "watchdog-20261125-1879227",
-      "desk": "market-economy",
-      "section": "財經",
-      "status": "NEW",
+      "id": "watchdog-20261125-1879253",
+      "desk": "hong-kong",
+      "deskSlugs": [
+        "hong-kong"
+      ],
+      "section": "香港",
+      "sectionLabel": "香港",
+      "title": "香港電信、来年2月25日に3G利用を停止、通信局が申請を承認",
+      "dek": "元の周波数帯は 5G サービスに移行されるため、古いデバイスのユーザーは移行の取り決めに注意する必要があります。",
+      "summary": "元の周波数帯は 5G サービスに移行されるため、古いデバイスのユーザーは移行の取り決めに注意する必要があります。",
+      "body": "香港電信は本日、2027 年 2 月 25 日に 3G モバイル通信サービスを終了し、関連周波数を 5G ネットワークに再割り当てすると発表しました。通信局はこの申請を承認し、通信事業者は停止日までにサービスを維持するよう求めている。同社は、今年9月末時点で、モバイル通信顧客に占める3Gユーザーの割合は0.37％だったと発表した。\n\nCA は、影響を受ける人々には、古いバージョンの VoLTE テクノロジーを使用している 4G デバイスのユーザーも含まれる可能性があると指摘しました。 HKT は、デバイスを交換する予定のない顧客に対して、アップグレード サポートとサービス終了の手配を継続して提供します。ユーザーは、無効化する前にデバイスとサービスプランを交換する必要があるかどうかをオペレーターに確認できます。",
+      "context": "ハーレーを忘れないように、",
+      "why": "古い携帯電話や移動体通信機器のサービス継続。",
+      "watchNext": "オペレーターによる個人顧客向けの移行手配に注意してください。",
       "sourceName": "香港電台",
-      "sourceUrl": "https://news.rthk.hk/rthk/ch/component/k2/1879227-20261125.htm",
+      "sourceUrl": "https://news.rthk.hk/rthk/ch/component/k2/1879253-20261125.htm",
       "sources": [
         {
           "name": "香港電台",
-          "url": "https://news.rthk.hk/rthk/ch/component/k2/1879227-20261125.htm"
+          "url": "https://news.rthk.hk/rthk/ch/component/k2/1879253-20261125.htm"
+        },
+        {
+          "name": "政府新聞處",
+          "url": "https://www.info.gov.hk/gia/general/202611/25/P2026112500189.htm"
+        },
+        {
+          "name": "香港電訊",
+          "url": "https://www.hkt.com/en/about-hkt/press-release/hkt-terminate-3g-services/"
         }
       ],
-      "deskSlugs": [
-        "market-economy"
-      ],
-      "verifiedAt": "2026-11-25T18:13:50+08:00",
-      "publishedAt": "2026-11-25T16:44:00+08:00",
-      "title": "常指数収入21966点 連続下落7日間失敗22000点",
-      "summary": "港株は午後に下落し、テクノロジー指数は11日連続で下落した。",
-      "translationFallbackReason": "RuntimeError",
-      "sourceItemFingerprint": "8d3b57663b4f20a2646515c5723432c14cf67c88b940f87c2063a57dcebed9a8",
-      "audio": "audio/live/watchdog-20261125-1879227.mp3",
-      "timing": "audio/timing/live/watchdog-20261125-1879227.json",
-      "sectionLabel": "財務",
-      "dek": "港株は午後に下落し、テクノロジー指数は11日連続で下落した。",
-      "body": "港の株式は今日高開幕後下落し、恒生指数は21966点、下落253点または1.14%、連続第7取引日下落。全日主板の交付は約2300億香港元、恒生テクノロジー指数は3378点、連続下落11日。香港ラジオ局は、市場の注目は、米国が再び多国に関税を課す可能性、クリスタルと人工知能に関連する株式が圧迫され、一部の医薬品および消費株式は逆市場上昇。",
-      "context": "午後の市場上昇が逆転し、今日の全日収市への新たな進歩。",
-      "why": "主な指数は全数端を失い、テクノロジー板の下落は続いている。",
-      "watchNext": "関税政策の正式発表と次の取引日に市場反応を注意してください。",
-      "timeLabel": "11月25日 16:44 HKT 報告; 18:13 HKT 確認",
+      "publishedAt": "2026-11-25T20:13:00+08:00",
+      "verifiedAt": "2026-11-25T23:12:57+08:00",
+      "timeLabel": "11月25日 20:13 HKT報道・23:12 HKT確認済み",
+      "status": "NEW",
+      "sourceItemFingerprint": "a9726c5b0021cf0ab677ac79e410f1a7ba5d84b801cd8c6680abf86a4fa828a0",
+      "audio": "audio/live/watchdog-20261125-1879253.mp3",
+      "timing": "audio/timing/live/watchdog-20261125-1879253.json",
       "furigana": {
-        "section": "<ruby>財<rt>ざい</rt></ruby><ruby>經<rt>へ</rt></ruby>",
-        "title": "<ruby>常<rt>つね</rt></ruby><ruby>指数<rt>しすう</rt></ruby><ruby>収入<rt>しゅうにゅう</rt></ruby>21966<ruby>点<rt>てん</rt></ruby> <ruby>連続<rt>れんぞく</rt></ruby><ruby>下落<rt>げらく</rt></ruby><ruby>7日間<rt>なのかかん</rt></ruby><ruby>失敗<rt>しっぱい</rt></ruby>22000<ruby>点<rt>てん</rt></ruby>",
-        "dek": "<ruby>港<rt>みなと</rt></ruby><ruby>株<rt>かぶ</rt></ruby>は<ruby>午後<rt>ごご</rt></ruby>に<ruby>下落<rt>げらく</rt></ruby>し、テクノロジー<ruby>指数<rt>しすう</rt></ruby>は11<ruby>日連<rt>にちれん</rt></ruby><ruby>続<rt>ぞく</rt></ruby>で<ruby>下落<rt>げらく</rt></ruby>した。",
-        "summary": "<ruby>港<rt>みなと</rt></ruby><ruby>株<rt>かぶ</rt></ruby>は<ruby>午後<rt>ごご</rt></ruby>に<ruby>下落<rt>げらく</rt></ruby>し、テクノロジー<ruby>指数<rt>しすう</rt></ruby>は11<ruby>日連<rt>にちれん</rt></ruby><ruby>続<rt>ぞく</rt></ruby>で<ruby>下落<rt>げらく</rt></ruby>した。",
-        "context": "<ruby>午後<rt>ごご</rt></ruby>の<ruby>市場<rt>しじょう</rt></ruby><ruby>上昇<rt>じょうしょう</rt></ruby>が<ruby>逆転<rt>ぎゃくてん</rt></ruby>し、<ruby>今日<rt>きょう</rt></ruby>の<ruby>全日<rt>ぜんじつ</rt></ruby><ruby>収<rt>しゅう</rt></ruby><ruby>市<rt>し</rt></ruby>への<ruby>新<rt>あら</rt></ruby>たな<ruby>進歩<rt>しんぽ</rt></ruby>。",
-        "why": "<ruby>主<rt>おも</rt></ruby>な<ruby>指数<rt>しすう</rt></ruby>は<ruby>全数<rt>ぜんすう</rt></ruby><ruby>端<rt>たん</rt></ruby>を<ruby>失<rt>うしな</rt></ruby>い、テクノロジー<ruby>板<rt>いた</rt></ruby>の<ruby>下落<rt>げらく</rt></ruby>は<ruby>続<rt>つづ</rt></ruby>いている。",
-        "watchNext": "<ruby>関税<rt>かんぜい</rt></ruby><ruby>政策<rt>せいさく</rt></ruby>の<ruby>正式<rt>せいしき</rt></ruby><ruby>発表<rt>はっぴょう</rt></ruby>と<ruby>次<rt>つぎ</rt></ruby>の<ruby>取引<rt>とりひき</rt></ruby><ruby>日<rt>ひ</rt></ruby>に<ruby>市場<rt>しじょう</rt></ruby><ruby>反応<rt>はんのう</rt></ruby>を<ruby>注意<rt>ちゅうい</rt></ruby>してください。",
+        "section": "<ruby>香港<rt>ほんこん</rt></ruby>",
+        "title": "<ruby>香港<rt>ほんこん</rt></ruby><ruby>電信<rt>でんしん</rt></ruby>、<ruby>来年<rt>らいねん</rt></ruby><ruby>2月<rt>にがつ</rt></ruby><ruby>25日<rt>にじゅうごにち</rt></ruby>に3G<ruby>利用<rt>りよう</rt></ruby>を<ruby>停止<rt>ていし</rt></ruby>、<ruby>通信<rt>つうしん</rt></ruby><ruby>局<rt>きょく</rt></ruby>が<ruby>申請<rt>しんせい</rt></ruby>を<ruby>承認<rt>しょうにん</rt></ruby>",
+        "dek": "<ruby>元<rt>もと</rt></ruby>の<ruby>周波数帯<rt>しゅうはすうたい</rt></ruby>は 5G サービスに<ruby>移行<rt>いこう</rt></ruby>されるため、<ruby>古<rt>ふる</rt></ruby>いデバイスのユーザーは<ruby>移行<rt>いこう</rt></ruby>の<ruby>取り決<rt>とりき</rt></ruby>めに<ruby>注意<rt>ちゅうい</rt></ruby>する<ruby>必要<rt>ひつよう</rt></ruby>があります。",
+        "summary": "<ruby>元<rt>もと</rt></ruby>の<ruby>周波数帯<rt>しゅうはすうたい</rt></ruby>は 5G サービスに<ruby>移行<rt>いこう</rt></ruby>されるため、<ruby>古<rt>ふる</rt></ruby>いデバイスのユーザーは<ruby>移行<rt>いこう</rt></ruby>の<ruby>取り決<rt>とりき</rt></ruby>めに<ruby>注意<rt>ちゅうい</rt></ruby>する<ruby>必要<rt>ひつよう</rt></ruby>があります。",
+        "context": "ハーレーを<ruby>忘<rt>わす</rt></ruby>れないように、",
+        "why": "<ruby>古<rt>ふる</rt></ruby>い<ruby>携帯電話<rt>けいたいでんわ</rt></ruby>や<ruby>移動体<rt>いどうたい</rt></ruby><ruby>通信機器<rt>つうしんきき</rt></ruby>のサービス<ruby>継続<rt>けいぞく</rt></ruby>。",
+        "watchNext": "オペレーターによる<ruby>個人<rt>こじん</rt></ruby><ruby>顧客<rt>こきゃく</rt></ruby><ruby>向<rt>む</rt></ruby>けの<ruby>移行<rt>いこう</rt></ruby><ruby>手配<rt>てはい</rt></ruby>に<ruby>注意<rt>ちゅうい</rt></ruby>してください。",
         "bodyParagraphs": [
-          "<ruby>港<rt>みなと</rt></ruby>の<ruby>株式<rt>かぶしき</rt></ruby>は<ruby>今日<rt>きょう</rt></ruby><ruby>高<rt>たか</rt></ruby><ruby>開幕後<rt>かいまくご</rt></ruby><ruby>下落<rt>げらく</rt></ruby>し、<ruby>恒生<rt>つねお</rt></ruby><ruby>指数<rt>しすう</rt></ruby>は21966<ruby>点<rt>てん</rt></ruby>、<ruby>下落<rt>げらく</rt></ruby>253<ruby>点<rt>てん</rt></ruby>または1.14%、<ruby>連続<rt>れんぞく</rt></ruby><ruby>第<rt>だい</rt></ruby>7<ruby>取引<rt>とりひき</rt></ruby><ruby>日下<rt>くさか</rt></ruby><ruby>落<rt>らく</rt></ruby>。<ruby>全日<rt>ぜんじつ</rt></ruby><ruby>主<rt>しゅ</rt></ruby><ruby>板<rt>いた</rt></ruby>の<ruby>交付<rt>こうふ</rt></ruby>は<ruby>約<rt>やく</rt></ruby>2300<ruby>億<rt>おく</rt></ruby><ruby>香港<rt>ほんこん</rt></ruby><ruby>元<rt>もと</rt></ruby>、<ruby>恒生<rt>つねお</rt></ruby>テクノロジー<ruby>指数<rt>しすう</rt></ruby>は3378<ruby>点<rt>てん</rt></ruby>、<ruby>連続<rt>れんぞく</rt></ruby><ruby>下落<rt>げらく</rt></ruby>11<ruby>日<rt>にち</rt></ruby>。<ruby>香港<rt>ほんこん</rt></ruby>ラジオ<ruby>局<rt>きょく</rt></ruby>は、<ruby>市場<rt>しじょう</rt></ruby>の<ruby>注目<rt>ちゅうもく</rt></ruby>は、<ruby>米国<rt>べいこく</rt></ruby>が<ruby>再<rt>ふたた</rt></ruby>び<ruby>多国<rt>たこく</rt></ruby>に<ruby>関税<rt>かんぜい</rt></ruby>を<ruby>課<rt>か</rt></ruby>す<ruby>可能性<rt>かのうせい</rt></ruby>、クリスタルと<ruby>人工知能<rt>じんこうちのう</rt></ruby>に<ruby>関連<rt>かんれん</rt></ruby>する<ruby>株式<rt>かぶしき</rt></ruby>が<ruby>圧迫<rt>あっぱく</rt></ruby>され、<ruby>一部<rt>いちぶ</rt></ruby>の<ruby>医薬品<rt>いやくひん</rt></ruby>および<ruby>消費<rt>しょうひ</rt></ruby><ruby>株式<rt>かぶしき</rt></ruby>は<ruby>逆<rt>ぎゃく</rt></ruby><ruby>市場<rt>しじょう</rt></ruby><ruby>上昇<rt>じょうしょう</rt></ruby>。"
+          "<ruby>香港<rt>ほんこん</rt></ruby><ruby>電信<rt>でんしん</rt></ruby>は<ruby>本日<rt>ほんじつ</rt></ruby>、2027 <ruby>年<rt>ねん</rt></ruby> 2 <ruby>月<rt>がつ</rt></ruby> 25 <ruby>日<rt>にち</rt></ruby>に 3G モバイル<ruby>通信<rt>つうしん</rt></ruby>サービスを<ruby>終了<rt>しゅうりょう</rt></ruby>し、<ruby>関連<rt>かんれん</rt></ruby><ruby>周波数<rt>しゅうはすう</rt></ruby>を 5G ネットワークに<ruby>再<rt>さい</rt></ruby><ruby>割り当<rt>わりあ</rt></ruby>てすると<ruby>発表<rt>はっぴょう</rt></ruby>しました。<ruby>通信<rt>つうしん</rt></ruby><ruby>局<rt>きょく</rt></ruby>はこの<ruby>申請<rt>しんせい</rt></ruby>を<ruby>承認<rt>しょうにん</rt></ruby>し、<ruby>通信事業者<rt>つうしんじぎょうしゃ</rt></ruby>は<ruby>停止<rt>ていし</rt></ruby><ruby>日<rt>にち</rt></ruby>までにサービスを<ruby>維持<rt>いじ</rt></ruby>するよう<ruby>求<rt>もと</rt></ruby>めている。<ruby>同社<rt>どうしゃ</rt></ruby>は、<ruby>今年<rt>こんねん</rt></ruby>9<ruby>月末<rt>げつまつ</rt></ruby><ruby>時点<rt>じてん</rt></ruby>で、モバイル<ruby>通信<rt>つうしん</rt></ruby><ruby>顧客<rt>こきゃく</rt></ruby>に<ruby>占<rt>し</rt></ruby>める3Gユーザーの<ruby>割合<rt>わりあい</rt></ruby>は0.37％だったと<ruby>発表<rt>はっぴょう</rt></ruby>した。",
+          "CA は、<ruby>影響<rt>えいきょう</rt></ruby>を<ruby>受<rt>う</rt></ruby>ける<ruby>人々<rt>ひとびと</rt></ruby>には、<ruby>古<rt>ふる</rt></ruby>いバージョンの VoLTE テクノロジーを<ruby>使用<rt>しよう</rt></ruby>している 4G デバイスのユーザーも<ruby>含<rt>ふく</rt></ruby>まれる<ruby>可能性<rt>かのうせい</rt></ruby>があると<ruby>指摘<rt>してき</rt></ruby>しました。 HKT は、デバイスを<ruby>交換<rt>こうかん</rt></ruby>する<ruby>予定<rt>よてい</rt></ruby>のない<ruby>顧客<rt>こきゃく</rt></ruby>に<ruby>対<rt>たい</rt></ruby>して、アップグレード サポートとサービス<ruby>終了<rt>しゅうりょう</rt></ruby>の<ruby>手配<rt>てはい</rt></ruby>を<ruby>継続<rt>けいぞく</rt></ruby>して<ruby>提供<rt>ていきょう</rt></ruby>します。ユーザーは、<ruby>無効化<rt>むこうか</rt></ruby>する<ruby>前<rt>まえ</rt></ruby>にデバイスとサービスプランを<ruby>交換<rt>こうかん</rt></ruby>する<ruby>必要<rt>ひつよう</rt></ruby>があるかどうかをオペレーターに<ruby>確認<rt>かくにん</rt></ruby>できます。"
         ]
-      },
-      "audioSpeed": 0.72,
-      "audioDeliveryProfile": "jp-tv-news-semantic-v4"
+      }
     }
   ],
   "translationDegraded": false,
@@ -93,7 +99,7 @@
   "language": "ja",
   "translationSource": "kanuli/daily-brief-newspaper",
   "sourceFile": "live.json",
-  "sourceFingerprint": "32d52f2d48ec8ff7a1e75bddcc681d9ebbafbc32ddeb2c5f9ebfe9ef9b81af54",
+  "sourceFingerprint": "f0398956bfb9d951aabcb961bc65a0dede663649faf5a1d483ffceeed0560736",
   "translationSchemaVersion": "ja-furigana-v3-context-sensitive",
   "furiganaEngineVersion": "sudachi-core-mode-c+context",
   "newsroomQualityVersion": 1
