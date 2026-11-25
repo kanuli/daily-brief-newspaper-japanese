@@ -1,0 +1,270 @@
+{
+  "version": 3,
+  "duration": 116.014,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 339,
+  "charactersPerMinute": 175.3,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 6.969,
+      "text": "中華人民共和国線装置05 言語会議"
+    },
+    {
+      "key": "dek",
+      "start": 6.969,
+      "end": 18.0,
+      "text": "宇宙船はドッキングを完了し、次の段階は乗組員が客室に入る段階です。"
+    },
+    {
+      "key": "body-0",
+      "start": 18.0,
+      "end": 55.317,
+      "text": "中国有人宇宙工学局は、神舟24号探査機が今朝11時56分に天河炉心モジュールの前方ドッキングポートに到着し、約3時間半のランデブーとドッキング手順を完了したと発表した。これは午前中に軌道投入に成功した後の新たな展開です。"
+    },
+    {
+      "key": "body-1",
+      "start": 55.317,
+      "end": 94.568,
+      "text": "ミッション取り決めによれば、3人の宇宙飛行士はコアモジュールに入り、すでに宇宙ステーションにいる神舟23号の乗組員に加わることになる。当局は、元の乗組員は到着の準備を完了したと述べた。このレポートの時点では、エントリープロセスが完了したことは確認されていません。"
+    },
+    {
+      "key": "why",
+      "start": 94.568,
+      "end": 110.069,
+      "text": "宇宙船はドッキングを完了し、次の段階は乗組員が客室に入る段階です。"
+    },
+    {
+      "key": "watch",
+      "start": 110.069,
+      "end": 116.014,
+      "text": "クーデターのきっかけは―"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 6.269,
+      "end": 6.969,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "中華人民共和国線装置05 言語会議。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 6.969,
+      "speechEnd": 11.149,
+      "end": 11.379,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "宇宙船はドッキングを完了し、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 11.379,
+      "speechEnd": 17.3,
+      "end": 18.0,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "次の段階は乗組員が客室に入る段階です。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 18.0,
+      "speechEnd": 21.901,
+      "end": 22.131,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中国有人宇宙工学局は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 22.131,
+      "speechEnd": 26.311,
+      "end": 26.451,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "神舟24号探査機が今朝"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 26.451,
+      "speechEnd": 28.54,
+      "end": 28.68,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "11時"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 28.68,
+      "speechEnd": 37.736,
+      "end": 37.966,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "56分に天河炉心モジュールの前方ドッキングポートに到着し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.966,
+      "speechEnd": 46.395,
+      "end": 46.895,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "約3時間半のランデブーとドッキング手順を完了したと発表した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 46.895,
+      "speechEnd": 54.697,
+      "end": 55.317,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "これは午前中に軌道投入に成功した後の新たな展開です。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 55.317,
+      "speechEnd": 58.939,
+      "end": 59.169,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "ミッション取り決めによれば、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 59.169,
+      "speechEnd": 65.23,
+      "end": 65.46,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "3人の宇宙飛行士はコアモジュールに入り、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 65.46,
+      "speechEnd": 73.749,
+      "end": 74.249,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "すでに宇宙ステーションにいる神舟23号の乗組員に加わることになる。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 74.249,
+      "speechEnd": 76.339,
+      "end": 76.569,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "当局は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 76.569,
+      "speechEnd": 82.629,
+      "end": 83.129,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "元の乗組員は到着の準備を完了したと述べた。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 83.129,
+      "speechEnd": 86.682,
+      "end": 86.912,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "このレポートの時点では、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 86.912,
+      "speechEnd": 93.948,
+      "end": 94.568,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "エントリープロセスが完了したことは確認されていません。"
+    },
+    {
+      "parentKey": "why",
+      "start": 94.568,
+      "speechEnd": 98.538,
+      "end": 99.038,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 99.038,
+      "speechEnd": 103.218,
+      "end": 103.448,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "宇宙船はドッキングを完了し、"
+    },
+    {
+      "parentKey": "why",
+      "start": 103.448,
+      "speechEnd": 109.369,
+      "end": 110.069,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "次の段階は乗組員が客室に入る段階です。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 110.069,
+      "speechEnd": 112.159,
+      "end": 112.389,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 112.389,
+      "speechEnd": 115.314,
+      "end": 116.014,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "clause",
+      "text": "クーデターのきっかけは―"
+    }
+  ]
+}
