@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "assessedAt": "2026-11-26T07:44:34.960Z",
+  "assessedAt": "2026-11-26T08:20:15.428Z",
   "state": "GREEN",
   "summary": "ALL_REQUIRED_NEWS_LAYERS_VOCAB_AND_DELIVERY_VERIFIED_BY_NAS",
   "faultReasons": [],
@@ -28,12 +28,12 @@
     "stocks": {
       "current": true,
       "degradedTranslation": false,
-      "upstream": "2026-11-26T07:03:53.795011+00:00",
-      "japanese": "2026-11-26T07:03:53.795011+00:00",
+      "upstream": "2026-11-26T08:04:56.487661+00:00",
+      "japanese": "2026-11-26T08:04:56.487661+00:00",
       "lagMinutes": 0,
       "relativeCurrent": true,
       "sourceAbsoluteFresh": true,
-      "sourceAgeMinutes": 41,
+      "sourceAgeMinutes": 15,
       "maxAgeHours": 8
     },
     "vocab": {
@@ -57,9 +57,9 @@
         "github-f3",
         "github-pages"
       ],
-      "publicationFingerprint": "2026-10-13|2026-11-26T05:11:44.000Z|2026-11-19T12:15:00.000Z|2026-11-26T07:03:53.795Z|2026-11-26",
-      "attestedFingerprint": "2026-10-13|2026-11-26T05:11:44.000Z|2026-11-19T12:15:00.000Z|2026-11-26T07:03:53.795Z|2026-11-26",
-      "attestedAt": "2026-11-26T07:43:47Z"
+      "publicationFingerprint": "2026-10-13|2026-11-26T05:11:44.000Z|2026-11-19T12:15:00.000Z|2026-11-26T08:04:56.487Z|2026-11-26",
+      "attestedFingerprint": "2026-10-13|2026-11-26T05:11:44.000Z|2026-11-19T12:15:00.000Z|2026-11-26T08:04:56.487Z|2026-11-26",
+      "attestedAt": "2026-11-26T08:19:35Z"
     }
   },
   "recovery": {
@@ -94,7 +94,7 @@
   },
   "robot": {
     "current": true,
-    "runId": 45777559581,
+    "runId": 45782283964,
     "event": "workflow_dispatch",
     "role": "nas-attestation-auditor",
     "executor": "github-auditor-only",
