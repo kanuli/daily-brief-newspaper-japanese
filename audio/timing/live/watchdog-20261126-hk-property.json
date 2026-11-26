@@ -1,0 +1,330 @@
+{
+  "version": 3,
+  "duration": 156.954,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 456,
+  "charactersPerMinute": 174.3,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 13.608,
+      "text": "10月の香港の民間住宅の販売価格が下落し、賃料指数が再び過去最高を更新"
+    },
+    {
+      "key": "dek",
+      "start": 13.608,
+      "end": 29.815,
+      "text": "差価評定署の暫定データによると、住宅の販売価格は約0.6%月次下落しましたが、賃料は引き続き上昇しています。"
+    },
+    {
+      "key": "body-0",
+      "start": 29.815,
+      "end": 78.819,
+      "text": "地価評価署が10月の暫定データを発表したところ、民間住宅の販売価格指数は319に低下し、9月比で約0.6%下落した。これにより、過去2か月の上昇傾向に終止符が打たれた。今年の最初の10か月間の販売価格は依然として約6.48%の上昇を記録しており、10月には面積の異なる住宅が軒並み下落を記録した。"
+    },
+    {
+      "key": "body-1",
+      "start": 78.819,
+      "end": 132.999,
+      "text": "賃貸市場の動向は売買市場とは異なり、10月の住宅賃料指数は213.2に上昇し、前月比で0.47%の上昇となり、12か月連続で上昇した。売買価格と賃料の乖離は、2つの市場の価格動向が一致していないことを示している。引き続きその後の取引および賃貸のデータを観察する必要があり、1か月分の数値のみで不動産市場の長期的な方向性を判断することはできない。"
+    },
+    {
+      "key": "why",
+      "start": 132.999,
+      "end": 147.665,
+      "text": "販売価格と賃料の動向は、住宅購入と賃貸のコストに影響を与えます。"
+    },
+    {
+      "key": "watch",
+      "start": 147.665,
+      "end": 156.954,
+      "text": "来月の指数と暫定データの改訂にご注目ください。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 7.245,
+      "end": 7.475,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "10月の香港の民間住宅の販売価格が下落し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.475,
+      "speechEnd": 12.908,
+      "end": 13.608,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "賃料指数が再び過去最高を更新。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 13.608,
+      "speechEnd": 17.509,
+      "end": 17.739,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "差価評定署の暫定データによると、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 17.739,
+      "speechEnd": 25.193,
+      "end": 25.423,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "住宅の販売価格は約0.6%月次下落しましたが、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 25.423,
+      "speechEnd": 29.115,
+      "end": 29.815,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "賃料は引き続き上昇しています。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 29.815,
+      "speechEnd": 36.293,
+      "end": 36.523,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "地価評価署が10月の暫定データを発表したところ、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 36.523,
+      "speechEnd": 43.419,
+      "end": 43.649,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "民間住宅の販売価格指数は319に低下し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.649,
+      "speechEnd": 48.595,
+      "end": 49.095,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "9月比で約0.6%下落した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 49.095,
+      "speechEnd": 51.324,
+      "end": 51.554,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "これにより、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.554,
+      "speechEnd": 57.406,
+      "end": 57.906,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "過去2か月の上昇傾向に終止符が打たれた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.906,
+      "speechEnd": 63.479,
+      "end": 63.759,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "今年の最初の10か月間の販売価格は"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 63.759,
+      "speechEnd": 71.073,
+      "end": 71.303,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "依然として約6.48%の上昇を記録しており、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 71.303,
+      "speechEnd": 78.199,
+      "end": 78.819,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "10月には面積の異なる住宅が軒並み下落を記録した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 78.819,
+      "speechEnd": 83.765,
+      "end": 83.995,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "賃貸市場の動向は売買市場とは異なり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 83.995,
+      "speechEnd": 90.752,
+      "end": 90.982,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "10月の住宅賃料指数は213.2に上昇し、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 90.982,
+      "speechEnd": 96.346,
+      "end": 96.576,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "前月比で0.47%の上昇となり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 96.576,
+      "speechEnd": 100.198,
+      "end": 100.698,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "12か月連続で上昇した。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 100.698,
+      "speechEnd": 104.251,
+      "end": 104.481,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "売買価格と賃料の乖離は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 104.481,
+      "speechEnd": 112.004,
+      "end": 112.504,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "2つの市場の価格動向が一致していないことを示している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 112.504,
+      "speechEnd": 120.863,
+      "end": 121.093,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "引き続きその後の取引および賃貸のデータを観察する必要があり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 121.093,
+      "speechEnd": 128.825,
+      "end": 129.105,
+      "pause": 0.28,
+      "intendedPause": 0.28,
+      "reason": "semantic-boundary",
+      "text": "1か月分の数値のみで不動産市場の長期的な方向性を"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 129.105,
+      "speechEnd": 132.379,
+      "end": 132.999,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "判断することはできない。"
+    },
+    {
+      "parentKey": "why",
+      "start": 132.999,
+      "speechEnd": 136.97,
+      "end": 137.47,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 137.47,
+      "speechEnd": 141.301,
+      "end": 141.531,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "販売価格と賃料の動向は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 141.531,
+      "speechEnd": 146.965,
+      "end": 147.665,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "住宅購入と賃貸のコストに影響を与えます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 147.665,
+      "speechEnd": 149.755,
+      "end": 149.985,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 149.985,
+      "speechEnd": 156.254,
+      "end": 156.954,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "来月の指数と暫定データの改訂にご注目ください。"
+    }
+  ]
+}

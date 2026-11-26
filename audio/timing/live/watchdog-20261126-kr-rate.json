@@ -1,0 +1,340 @@
+{
+  "version": 3,
+  "duration": 136.235,
+  "voice": "F3",
+  "language": "ja",
+  "speed": 0.72,
+  "deliveryProfile": "jp-tv-news-semantic-v4",
+  "targetMaxCharactersPerMinute": 360.0,
+  "characters": 360,
+  "charactersPerMinute": 158.5,
+  "tempoCalibrationFactor": 1.0,
+  "pauseProfile": {
+    "micro": 0.14,
+    "comma": 0.23,
+    "semantic": 0.28,
+    "sentence": 0.5,
+    "paragraph": 0.62,
+    "section": 0.7
+  },
+  "segments": [
+    {
+      "key": "title",
+      "start": 0.0,
+      "end": 12.494,
+      "text": "韓国銀行がさらに0.25％の利上げを実施し、基準金利が3.25％に上昇"
+    },
+    {
+      "key": "dek",
+      "start": 12.494,
+      "end": 24.012,
+      "text": "韓国銀行は今年3回目の利上げを行い、経済成長率の予測を引き上げた。"
+    },
+    {
+      "key": "body-0",
+      "start": 24.012,
+      "end": 64.857,
+      "text": "韓国銀行は木曜日、基準金利を3％から3.25％に引き上げることを決定した。これは今年3回目の利上げとなる。金融政策委員7人のうち5人が利上げに賛成し、2人が反対した。中央銀行は、物価上昇率が当面目標を上回ると予想している。"
+    },
+    {
+      "key": "body-1",
+      "start": 64.857,
+      "end": 112.559,
+      "text": "半導体輸出と投資は、中央銀行が経済予測を引き上げた重要な背景となっている。今年と来年の成長率予測はそれぞれ3.9%と4.1%に上方修正された。中央銀行は、インフレ、経済、金融の安定性に基づいて次回金利決定を評価する予定であり、金利引き上げの具体的なスケジュールを約束していない。"
+    },
+    {
+      "key": "why",
+      "start": 112.559,
+      "end": 127.991,
+      "text": "金利の変動は、韓国の借入コストとアジアの金融市場に影響を与えます。"
+    },
+    {
+      "key": "watch",
+      "start": 127.991,
+      "end": 136.235,
+      "text": "留意次回通脹數據及央行政策指引。"
+    }
+  ],
+  "semanticUnits": [
+    {
+      "parentKey": "title",
+      "start": 0.0,
+      "speechEnd": 6.966,
+      "end": 7.196,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "韓国銀行がさらに0.25％の利上げを実施し、"
+    },
+    {
+      "parentKey": "title",
+      "start": 7.196,
+      "speechEnd": 11.794,
+      "end": 12.494,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "基準金利が3.25％に上昇。"
+    },
+    {
+      "parentKey": "dek",
+      "start": 12.494,
+      "speechEnd": 18.484,
+      "end": 18.714,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "韓国銀行は今年3回目の利上げを行い、"
+    },
+    {
+      "parentKey": "dek",
+      "start": 18.714,
+      "speechEnd": 23.312,
+      "end": 24.012,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "経済成長率の予測を引き上げた。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 24.012,
+      "speechEnd": 27.147,
+      "end": 27.377,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "韓国銀行は木曜日、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 27.377,
+      "speechEnd": 30.581,
+      "end": 30.721,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "基準金利を3％から"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 30.721,
+      "speechEnd": 33.368,
+      "end": 33.508,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "3.25％"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 33.508,
+      "speechEnd": 37.339,
+      "end": 37.839,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "に引き上げることを決定した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 37.839,
+      "speechEnd": 42.855,
+      "end": 43.355,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "これは今年3回目の利上げとなる。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 43.355,
+      "speechEnd": 51.226,
+      "end": 51.456,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "金融政策委員7人のうち5人が利上げに賛成し、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 51.456,
+      "speechEnd": 54.312,
+      "end": 54.812,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "2人が反対した。"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 54.812,
+      "speechEnd": 57.181,
+      "end": 57.411,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中央銀行は、"
+    },
+    {
+      "parentKey": "body-0",
+      "start": 57.411,
+      "speechEnd": 64.237,
+      "end": 64.857,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "物価上昇率が当面目標を上回ると予想している。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 64.857,
+      "speechEnd": 67.992,
+      "end": 68.222,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "半導体輸出と投資は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 68.222,
+      "speechEnd": 75.745,
+      "end": 76.245,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "中央銀行が経済予測を引き上げた重要な背景となっている。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 76.245,
+      "speechEnd": 81.958,
+      "end": 82.098,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "before-key-number",
+      "text": "今年と来年の成長率予測はそれぞれ"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 82.098,
+      "speechEnd": 84.466,
+      "end": 84.606,
+      "pause": 0.14,
+      "intendedPause": 0.14,
+      "reason": "key-number",
+      "text": "3.9%"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 84.606,
+      "speechEnd": 89.134,
+      "end": 89.634,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "と4.1%に上方修正された。"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 89.634,
+      "speechEnd": 92.002,
+      "end": 92.232,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "中央銀行は、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 92.232,
+      "speechEnd": 94.322,
+      "end": 94.552,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "インフレ、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 94.552,
+      "speechEnd": 96.572,
+      "end": 96.802,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "経済、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 96.802,
+      "speechEnd": 104.952,
+      "end": 105.182,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "金融の安定性に基づいて次回金利決定を評価する予定であり、"
+    },
+    {
+      "parentKey": "body-1",
+      "start": 105.182,
+      "speechEnd": 111.939,
+      "end": 112.559,
+      "pause": 0.62,
+      "intendedPause": 0.62,
+      "reason": "punctuation-sentence",
+      "text": "金利引き上げの具体的なスケジュールを約束していない。"
+    },
+    {
+      "parentKey": "why",
+      "start": 112.559,
+      "speechEnd": 116.53,
+      "end": 117.03,
+      "pause": 0.5,
+      "intendedPause": 0.5,
+      "reason": "punctuation-sentence",
+      "text": "このニュースの重要なポイントです。"
+    },
+    {
+      "parentKey": "why",
+      "start": 117.03,
+      "speechEnd": 119.468,
+      "end": 119.698,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "金利の変動は、"
+    },
+    {
+      "parentKey": "why",
+      "start": 119.698,
+      "speechEnd": 127.291,
+      "end": 127.991,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "韓国の借入コストとアジアの金融市場に影響を与えます。"
+    },
+    {
+      "parentKey": "watch",
+      "start": 127.991,
+      "speechEnd": 130.081,
+      "end": 130.311,
+      "pause": 0.23,
+      "intendedPause": 0.23,
+      "reason": "punctuation-comma",
+      "text": "今後は、"
+    },
+    {
+      "parentKey": "watch",
+      "start": 130.311,
+      "speechEnd": 135.535,
+      "end": 136.235,
+      "pause": 0.7,
+      "intendedPause": 0.7,
+      "reason": "punctuation-sentence",
+      "text": "留意次回通脹數據及央行政策指引。"
+    }
+  ]
+}
