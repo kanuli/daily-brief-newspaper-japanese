@@ -8,10 +8,12 @@ All downstream translation/parity steps then read only these local files.
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import os
 import re
 import subprocess
+import tempfile
 import urllib.error
 import urllib.request
 from pathlib import Path
@@ -33,14 +35,18 @@ def snapshot_dir() -> Path:
     return Path(os.environ.get("CANTONESE_SNAPSHOT_DIR", DEFAULT_DIR))
 
 
-def _get_json(url: str, optional: bool = False):
+def _get_bytes(url: str, optional: bool = False):
     req = urllib.request.Request(
         url,
         headers={"User-Agent": "daily-brief-newspaper-japanese-snapshot"},
     )
     try:
         with urllib.request.urlopen(req, timeout=30) as response:
-            return json.loads(response.read().decode("utf-8"))
+            data = response.read(33554433)
+            if response.geturl() != url or not 0 < len(data) <= 33554432:
+                raise ValueError("Invalid source snapshot response")
+            json.loads(data)
+            return data
     except urllib.error.HTTPError as exc:
         if optional and exc.code == 404:
             return None
@@ -64,67 +70,88 @@ def resolve_commit() -> str:
     return sha
 
 
-def _write(name: str, payload) -> None:
-    path = snapshot_dir() / name
+def sha(raw):
+    return hashlib.sha256(raw).hexdigest()
+
+
+def write_atomic(path, raw):
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    with tempfile.NamedTemporaryFile(dir=path.parent, delete=False) as temp:
+        stage = Path(temp.name)
+        try:
+            temp.write(raw)
+            temp.flush()
+            os.fsync(temp.fileno())
+            os.replace(stage, path)
+            fd = os.open(path.parent, os.O_RDONLY | os.O_DIRECTORY)
+            try:
+                os.fsync(fd)
+            finally:
+                os.close(fd)
+        finally:
+            stage.unlink(missing_ok=True)
+
+
+def read_remote(revision, name, optional=False):
+    if not re.fullmatch(r"[0-9a-f]{40}", revision) or not (
+            name in BASE_FILES or re.fullmatch(r"topic-more/\d{4}-\d{2}-\d{2}\.json",name)):
+        raise ValueError("Invalid Cantonese snapshot path or revision")
+    return _get_bytes(f"{RAW_BASE}/{revision}/data/{name}", optional=optional)
 
 
 def capture() -> str:
     root = snapshot_dir()
-    root.mkdir(parents=True, exist_ok=True)
-    sha = resolve_commit()
-
-    latest = _get_json(f"{RAW_BASE}/{sha}/data/latest.json")
-    _write("latest.json", latest)
-    date = str((latest or {}).get("date") or "")
-
-    for name in BASE_FILES[1:]:
-        payload = _get_json(f"{RAW_BASE}/{sha}/data/{name}")
-        _write(name, payload)
-
-    optional_files = []
+    revision = resolve_commit()
+    files = {name: read_remote(revision,name) for name in BASE_FILES}
+    date = str(json.loads(files["latest.json"]).get("date") or "")
     if re.fullmatch(r"\d{4}-\d{2}-\d{2}", date):
-        optional_files.append(f"topic-more/{date}.json")
-    for name in optional_files:
-        payload = _get_json(f"{RAW_BASE}/{sha}/data/{name}", optional=True)
-        if payload is not None:
-            _write(name, payload)
+        name = f"topic-more/{date}.json"
+        extra = read_remote(revision,name,optional=True)
+        if extra is not None:
+            files[name] = extra
 
-    meta = {
-        "repository": REPO,
-        "commit": sha,
-        "date": date,
-        "files": [*BASE_FILES, *optional_files],
-    }
-    (root.parent / "snapshot-meta.json").write_text(
-        json.dumps(meta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
-    )
-    print(
-        "CANTONESE_SNAPSHOT_OK",
-        f"commit={sha}",
-        f"date={date}",
-        f"dir={root}",
-    )
-    return sha
+    for name, raw in files.items():
+        write_atomic(root/name, raw)
+    # A reader that sees any interrupted replacement fails its hash check.
+    manifest = {"repository":REPO, "commit":revision, "date":date,
+                "files":sorted(files), "sha256":{name:sha(raw) for name,raw in files.items()}}
+    write_atomic(root.parent/"snapshot-meta.json", json.dumps(manifest,sort_keys=True).encode()+b"\n")
+    print("CANTONESE_SNAPSHOT_OK",f"commit={revision}",f"date={date}",f"dir={root}")
+    return revision
+
+
+def metadata():
+    result = json.loads((snapshot_dir().parent/"snapshot-meta.json").read_bytes())
+    if (result["repository"] != REPO or not re.fullmatch(r"[0-9a-f]{40}",result["commit"])
+            or set(result["files"]) != set(result["sha256"]) or not set(BASE_FILES)<=set(result["files"])):
+        raise ValueError("Invalid snapshot manifest")
+    return result
+
+
+def load_bytes(name, optional=False, *, manifest=None):
+    manifest = metadata() if manifest is None else manifest
+    expected=manifest["sha256"].get(name)
+    if expected is None:
+        if optional:
+            return None
+        raise FileNotFoundError(f"Cantonese snapshot file missing: {name}")
+    if not (name in BASE_FILES or re.fullmatch(r"topic-more/\d{4}-\d{2}-\d{2}\.json",name)):
+        raise ValueError("Invalid snapshot path")
+    raw = (snapshot_dir()/name).read_bytes()
+    if sha(raw)!=expected or manifest != metadata():
+        raise ValueError("Cantonese snapshot changed during read")
+    return raw
 
 
 def load_json(name: str, optional: bool = False):
-    path = snapshot_dir() / name
-    if not path.is_file():
-        if optional:
-            return None
-        raise FileNotFoundError(f"Cantonese snapshot file missing: {path}")
-    return json.loads(path.read_text(encoding="utf-8"))
+    raw = load_bytes(name,optional=optional)
+    return None if raw is None else json.loads(raw)
 
 
 def snapshot_commit() -> str:
-    path = snapshot_dir().parent / "snapshot-meta.json"
-    if not path.is_file():
-        return ""
     try:
-        return str(json.loads(path.read_text(encoding="utf-8")).get("commit") or "")
-    except Exception:
+        return metadata()["commit"]
+    except (OSError, KeyError, ValueError):
         return ""
 
 

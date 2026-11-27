@@ -166,6 +166,11 @@ jobs:
           set -euo pipefail
           git config user.name 'daily-brief-japanese-bot'
           git config user.email 'actions@users.noreply.github.com'
+          mapfile -t lineage_paths < <({ git diff --name-only HEAD -- data/latest.json data/live.json data/archive.json; git ls-files --others --exclude-standard -- data/latest.json data/live.json data/archive.json; } | sort -u)
+          if ((${#lineage_paths[@]})); then
+            python scripts/cantonese_lineage.py seal "${lineage_paths[@]}"
+            for file in "${lineage_paths[@]}"; do git add "data/cantonese-lineage/${file#data/}"; done
+          fi
           git add data/latest.json data/live.json data/archive.json data/translation-cache.json
           latest_changed=false
           live_changed=false
@@ -187,6 +192,7 @@ jobs:
               echo 'Current-news rebase conflict; refusing overwrite.' >&2
               exit 1
             fi
+            if ((${#lineage_paths[@]})); then python scripts/cantonese_lineage.py prepush "${lineage_paths[@]}"; fi
             if git push origin HEAD:main; then
               echo 'JAPANESE_CURRENT_NEWS_PUSH_OK'
               echo 'published=true' >> "$GITHUB_OUTPUT"
@@ -381,6 +387,11 @@ jobs:
           set -euo pipefail
           git config user.name 'daily-brief-japanese-bot'
           git config user.email 'actions@users.noreply.github.com'
+          mapfile -t lineage_paths < <({ git diff --name-only HEAD -- data/latest.json data/live.json data/archive.json; git ls-files --others --exclude-standard -- data/latest.json data/live.json data/archive.json; } | sort -u)
+          if ((${#lineage_paths[@]})); then
+            python scripts/cantonese_lineage.py seal "${lineage_paths[@]}"
+            for file in "${lineage_paths[@]}"; do git add "data/cantonese-lineage/${file#data/}"; done
+          fi
           git add data/latest.json data/live.json data/archive.json data/translation-cache.json
           latest_changed=false
           live_changed=false
@@ -402,6 +413,7 @@ jobs:
               sleep $((attempt * 2))
               continue
             fi
+            if ((${#lineage_paths[@]})); then python scripts/cantonese_lineage.py prepush "${lineage_paths[@]}"; fi
             if git push origin HEAD:main; then
               echo 'EMERGENCY_REMOTE_CORE_RECOVERY_PUSH_OK'
               echo 'published=true' >> "$GITHUB_OUTPUT"
@@ -601,6 +613,11 @@ jobs:
           set -euo pipefail
           git config user.name 'daily-brief-japanese-bot'
           git config user.email 'actions@users.noreply.github.com'
+          mapfile -t lineage_paths < <({ git diff --name-only HEAD -- data/latest.json data/live.json data/archive.json; git ls-files --others --exclude-standard -- data/latest.json data/live.json data/archive.json; } | sort -u)
+          if ((${#lineage_paths[@]})); then
+            python scripts/cantonese_lineage.py seal "${lineage_paths[@]}"
+            for file in "${lineage_paths[@]}"; do git add "data/cantonese-lineage/${file#data/}"; done
+          fi
           git add data/latest.json data/live.json data/archive.json data/translation-cache.json
           if git diff --cached --quiet; then
             echo 'CORE_ALTERNATE_NO_DIFF_AFTER_VERIFICATION'
@@ -615,6 +632,7 @@ jobs:
               sleep $((attempt * 2))
               continue
             fi
+            if ((${#lineage_paths[@]})); then python scripts/cantonese_lineage.py prepush "${lineage_paths[@]}"; fi
             if git push origin HEAD:main; then
               echo 'CORE_ALTERNATE_RECOVERY_PUSH_OK'
               exit 0
@@ -622,4 +640,3 @@ jobs:
             sleep $((attempt * 2))
           done
           exit 1
-
