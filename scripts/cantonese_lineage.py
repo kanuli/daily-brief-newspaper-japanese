@@ -63,8 +63,9 @@ def lineage(name, original, translated, *, quality, strict_core=True):
             if any(item.get(field)!=original_item.get(field) for field in PRESERVED):
                 raise ValueError(f"Article source or category changed in {name}/{key}")
             original_hash=source.sha(canonical(original_item))
-            if item.get("sourceItemFingerprint",original_hash)!=original_hash:
-                raise ValueError(f"Outdated translation in {name}/{key}")
+            recorded_input = item.get("sourceItemFingerprint")
+            if not isinstance(recorded_input,str) or recorded_input != original_hash:
+                raise ValueError(f"Missing or outdated translation input proof in {name}/{key}")
             for field in TEXT:
                 text=original_item.get(field)
                 if isinstance(text,str) and text.strip() and not quality(text,item.get(field),field):

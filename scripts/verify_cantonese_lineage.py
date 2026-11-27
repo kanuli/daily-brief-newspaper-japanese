@@ -67,6 +67,18 @@ class LineageTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.verify(duplicate)
 
+    def test_missing_and_stale_worker_input_proof(self):
+        # The document-level fingerprint cannot replace evidence emitted by the worker.
+        item = self.target["items"][0]
+        saved = item.pop("sourceItemFingerprint")
+        with self.assertRaisesRegex(ValueError,"translation input proof"):
+            self.verify()
+        item["sourceItemFingerprint"] = "0"*64
+        with self.assertRaisesRegex(ValueError,"translation input proof"):
+            self.verify()
+        item["sourceItemFingerprint"] = saved
+        self.assertEqual(self.verify()[0]["cantoneseArticleSha256"],saved)
+
     def test_restart_stale_gate_and_publication_scope(self):
         cwd=Path.cwd()
         with TemporaryDirectory() as tmp,patch.dict(os.environ,{"CANTONESE_SNAPSHOT_DIR":".canto/data"}):
