@@ -306,6 +306,11 @@ jobs:
           set -euo pipefail
           git config user.name 'daily-brief-japanese-bot'
           git config user.email 'actions@users.noreply.github.com'
+          mapfile -t lineage_paths < <({ git diff --name-only HEAD -- data/desk-latest.json data/stocks-latest.json data/topic-more; git ls-files --others --exclude-standard -- data/desk-latest.json data/stocks-latest.json data/topic-more; } | sort -u)
+          if ((${#lineage_paths[@]})); then
+            python scripts/cantonese_lineage.py seal "${lineage_paths[@]}"
+            for file in "${lineage_paths[@]}"; do git add "data/cantonese-lineage/${file#data/}"; done
+          fi
           git add data/desk-latest.json data/stocks-latest.json data/topic-more data/translation-cache.json
           if git diff --cached --quiet; then
             echo 'No rolling Japanese quality repair required.'
@@ -320,6 +325,7 @@ jobs:
               sleep $((attempt * 2))
               continue
             fi
+            if ((${#lineage_paths[@]})); then python scripts/cantonese_lineage.py prepush "${lineage_paths[@]}"; fi
             if git push origin HEAD:main; then
               echo 'FULL_ROLLING_JAPANESE_QUALITY_REPAIR_PUSH_OK'
               exit 0
@@ -327,4 +333,3 @@ jobs:
             sleep $((attempt * 2))
           done
           exit 1
-

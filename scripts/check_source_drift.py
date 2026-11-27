@@ -20,6 +20,7 @@ import urllib.request
 from pathlib import Path
 
 import validate_content_integrity as integrity
+import cantonese_snapshot as snapshot
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_BASE = "https://raw.githubusercontent.com/kanuli/daily-brief-newspaper/main/data"
@@ -33,19 +34,9 @@ def fingerprint(obj):
     return hashlib.sha256(raw.encode("utf-8")).hexdigest()
 
 
-def snapshot_path(name):
-    root = os.environ.get("CANTONESE_SNAPSHOT_DIR")
-    return Path(root) / name if root else None
-
-
 def remote_json(name, optional=False):
-    snap = snapshot_path(name)
-    if snap is not None:
-        if not snap.is_file():
-            if optional:
-                return None
-            raise FileNotFoundError(f"snapshot source missing: {snap}")
-        return json.loads(snap.read_text(encoding="utf-8"))
+    if os.environ.get("CANTONESE_SNAPSHOT_DIR"):
+        return snapshot.load_json(name, optional=optional)
 
     req = urllib.request.Request(
         f"{SOURCE_BASE}/{name}",

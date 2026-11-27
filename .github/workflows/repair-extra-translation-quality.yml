@@ -142,6 +142,11 @@ jobs:
           set -euo pipefail
           git config user.name 'daily-brief-japanese-bot'
           git config user.email 'actions@users.noreply.github.com'
+          mapfile -t lineage_paths < <({ git diff --name-only HEAD -- data/desk-latest.json; git ls-files --others --exclude-standard -- data/desk-latest.json; } | sort -u)
+          if ((${#lineage_paths[@]})); then
+            python scripts/cantonese_lineage.py seal "${lineage_paths[@]}"
+            for file in "${lineage_paths[@]}"; do git add "data/cantonese-lineage/${file#data/}"; done
+          fi
           git add data/desk-latest.json data/translation-cache.json
           if git diff --cached --quiet; then
             echo 'Desk minimum already current.'
@@ -156,6 +161,7 @@ jobs:
               sleep $((attempt * 2))
               continue
             fi
+            if ((${#lineage_paths[@]})); then python scripts/cantonese_lineage.py prepush "${lineage_paths[@]}"; fi
             if git push origin HEAD:main; then
               echo 'JAPANESE_DESK_MINIMUM_PUSH_OK'
               exit 0
@@ -228,6 +234,11 @@ jobs:
           set -euo pipefail
           git config user.name 'daily-brief-japanese-bot'
           git config user.email 'actions@users.noreply.github.com'
+          mapfile -t lineage_paths < <({ git diff --name-only HEAD -- data/stocks-latest.json data/topic-more; git ls-files --others --exclude-standard -- data/stocks-latest.json data/topic-more; } | sort -u)
+          if ((${#lineage_paths[@]})); then
+            python scripts/cantonese_lineage.py seal "${lineage_paths[@]}"
+            for file in "${lineage_paths[@]}"; do git add "data/cantonese-lineage/${file#data/}"; done
+          fi
           git add data/stocks-latest.json data/translation-cache.json
           git add -A data/topic-more
           if git diff --cached --quiet; then
@@ -243,6 +254,7 @@ jobs:
               sleep $((attempt * 2))
               continue
             fi
+            if ((${#lineage_paths[@]})); then python scripts/cantonese_lineage.py prepush "${lineage_paths[@]}"; fi
             if git push origin HEAD:main; then
               echo 'JAPANESE_REMAINING_MINIMUM_PUSH_OK'
               exit 0
