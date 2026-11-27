@@ -1,11 +1,9 @@
 {
   "version": 7,
-  "assessedAt": "2026-11-27T10:14:30.008Z",
-  "state": "RED",
-  "summary": "NOT_GREEN:stocks-relative-lag-minutes=62",
-  "faultReasons": [
-    "stocks-relative-lag-minutes=62"
-  ],
+  "assessedAt": "2026-11-27T10:33:44.144Z",
+  "state": "GREEN",
+  "summary": "ALL_REQUIRED_NEWS_LAYERS_VOCAB_AND_DELIVERY_VERIFIED_BY_NAS",
+  "faultReasons": [],
   "layers": {
     "daily": {
       "current": true,
@@ -28,14 +26,14 @@
       "lagMinutes": 0
     },
     "stocks": {
-      "current": false,
+      "current": true,
       "degradedTranslation": false,
       "upstream": "2026-11-27T10:12:47.725744+00:00",
-      "japanese": "2026-11-27T09:10:41.553399+00:00",
-      "lagMinutes": 62,
-      "relativeCurrent": false,
+      "japanese": "2026-11-27T10:12:47.725744+00:00",
+      "lagMinutes": 0,
+      "relativeCurrent": true,
       "sourceAbsoluteFresh": true,
-      "sourceAgeMinutes": 2,
+      "sourceAgeMinutes": 21,
       "maxAgeHours": 8
     },
     "vocab": {
@@ -59,14 +57,14 @@
         "github-f3",
         "github-pages"
       ],
-      "publicationFingerprint": "2026-10-13|2026-11-26T05:11:44.000Z|2026-11-19T12:15:00.000Z|2026-11-27T09:10:41.553Z|2026-11-27",
-      "attestedFingerprint": "2026-10-13|2026-11-26T05:11:44.000Z|2026-11-19T12:15:00.000Z|2026-11-27T09:10:41.553Z|2026-11-27",
-      "attestedAt": "2026-11-27T10:13:36Z"
+      "publicationFingerprint": "2026-10-13|2026-11-26T05:11:44.000Z|2026-11-19T12:15:00.000Z|2026-11-27T10:12:47.725Z|2026-11-27",
+      "attestedFingerprint": "2026-10-13|2026-11-26T05:11:44.000Z|2026-11-19T12:15:00.000Z|2026-11-27T10:12:47.725Z|2026-11-27",
+      "attestedAt": "2026-11-27T10:32:50Z"
     }
   },
   "recovery": {
     "coreRequired": false,
-    "rollingRequired": true,
+    "rollingRequired": false,
     "upstreamStockRequired": false,
     "vocabRequired": false,
     "structuralRequired": false
@@ -74,10 +72,10 @@
   "maintenance": {
     "owner": "Editor-in-Chief",
     "executor": "Maintenance Robot",
-    "incidentKey": "stocks@2026-11-27T10:12:47.725Z",
+    "incidentKey": "healthy",
     "sourceVersionBound": true,
-    "status": "awaiting-nas-repair-dispatch",
-    "decision": "NAS_CONTROLLER_MUST_DISPATCH_REPAIR",
+    "status": "resolved",
+    "decision": "NO_REPAIR_REQUIRED",
     "attempts": 0,
     "lastAttemptAt": null,
     "nextEligibleAt": null,
@@ -96,7 +94,7 @@
   },
   "robot": {
     "current": true,
-    "runId": 45980381256,
+    "runId": 45983110672,
     "event": "workflow_dispatch",
     "role": "nas-attestation-auditor",
     "executor": "github-auditor-only",
